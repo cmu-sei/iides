@@ -1,0 +1,54 @@
+@startuml
+package "IIDES Enumerations" #DDDDDD {
+
+    enum Suffix <<enumeration>> {
+        Jr
+        Sr
+        III
+        IV
+    }
+    enum OrgRole <<enumeration>> {
+        Beneficiary
+        Victim
+        Trusted Business Partner
+        Other
+    }
+    enum OrgRelationship <<enumeration>> {
+        Competitor
+        Vendor
+        Other
+        Unknown
+    }
+    enum OutcomeType <<enumeration>> {
+        Bankruptcy
+        Data Created
+        Data Deleted
+        Data Read
+        Data Stolen
+        Monetary Damages
+        Monetary Losses
+        Money Stolen
+        No net negative
+        Other
+        Restituion Ordered
+        Safety Impact
+        Unknown
+        Used in Identity Theft
+    }
+    enum Relationship <<enumeration>> {
+        Acquaintance
+        Colleague
+        Friend
+        Relative
+        Significant Other/Legal partner
+        Unknown
+        Other
+    }
+    enum SponsorType <<enumeration>> {
+        Organized Crime
+        State Sponsor
+        Foreign National
+        Criminal Enterprise
+    }
+}
+@enduml
