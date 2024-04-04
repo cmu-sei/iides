@@ -6,30 +6,11 @@
     - Should incident have its own location?
         - Right now, it does
 - Do we need the specific lists of substances and psychological issues?
+- Is it important that we retain the numbering on the observables?
 
 
 ## TO DO
 - Enumerations
-- Incident
-    - prior_planning : TextField
-    - planning_comments : TextField
-    - prior_deception : TextField
-    - before_after_new_pos : CharField(7)
-    - attack_location : MultiSelectField(16)
-    - attack_time : CharField(19)
-- Investigation
-    unavailable_info : TextField
-    interview_obtained : BooleanField
-    investigator : CharField
-- observable
-    - observation_class: CharField
-    - observation_cat : CharField(3)
-    - grouping_id : CharField(3)
-    - begin_date: datetime
-    - end_date: datetime
-    - times: PositiveIntegerField
-    - description: TextField
-    - observed: BooleanField
 - Note handling of inexact dates
 
 ## References

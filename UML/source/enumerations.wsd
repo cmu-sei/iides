@@ -56,5 +56,30 @@ package "IIDES Enumerations" #FFF {
         Foreign National
         Criminal Enterprise
     }
+
+    struct TechControls {}
+    struct Investigation {}
+    struct Predisposition {
+        predisposition : PersonalPredisposition
+        observed : boolean
+    }
+    enum PersonalPredisposition {
+        1.X
+        2.4 Presonal Stressful Events
+    }
+    struct ConcerningBehavior {
+        date : date
+        behavior : ConcerningBehaviorVocab
+        observed : boolean
+    }
+    enum ConcerningBehaviorVocab {
+        3.x
+    }
+    enum StressorVocab {
+        2.1, 2.2, 2.3, 2.5
+    }
+    enum AttackMethods {
+        4.x
+    }
 }
 @enduml

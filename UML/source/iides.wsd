@@ -1,7 +1,7 @@
 @startuml IIDES
 package "IIDES" #fff {
 
-    abstract Person #D4EFDF {
+    abstract Person #b0d0ed {
         + first_name : string
         + middle_name : string
         + last_name : string
@@ -22,7 +22,7 @@ package "IIDES" #fff {
         + comments
     }
 
-    class Insider <<Person>> #009647 {
+    class Insider <<Person>> #043673 {
         * id : insider--<<UUID>>
         * incident_role : InsiderIncidentRole
         --
@@ -30,14 +30,17 @@ package "IIDES" #fff {
         + substance_abuse : InsiderSubstanceAbuse[0..*]
         + substance_use_during_incident : boolean
         + psychological_issues : InsiderPsychIssue
+        + predispositions : Predisposition[0..*]
+        + concerning_behaviors : ConcerningBeahvior[0..*]
         + comments : string
     }
-    class Accomplice <<Person>> #D4EFDF {
+
+    class Accomplice <<Person>> #b0d0ed {
         * id : accomplice--<<UUID>>
         --
         + relationship_to_insider : RelationshipType
     }
-    struct Collusion #D4EFDF {
+    struct Collusion #b0d0ed {
         relationship : RelationshipType
         recruitment : RecruitmentType
         recruitment_direction : (Insider1,Insider2)
@@ -58,14 +61,14 @@ package "IIDES" #fff {
         + parent_company
     }
 
-    class Sponsor #D4EFDF {
+    class Sponsor #b0d0ed {
         * id : sponsor--<<UUID>>
         --
         + sponsor_type : SponsorType
         + name : string
     }
 
-    class Incident #EF3A47 {
+    class Incident #009647 {
         * id : incident--<<UUID>>
         --
         + cia_effect : IncidentCia[0..*]
@@ -75,10 +78,11 @@ package "IIDES" #fff {
         + brief_summary : string
         + begin_date : DateField
         + end_date : DateField
+        + status : IncidentStatus
         + comments
     }
 
-    class Job #008F91 {
+    class Job #33c2C4 {
         * id : job--<<UUID>>
         --
         + job_function
@@ -92,7 +96,7 @@ package "IIDES" #fff {
         + tenure
         + comment
     }
-    class Impact #f9b8bd {
+    class Impact #D4EFDF {
         * id : impact--<<UUID>>
         --
         * high : integer
@@ -101,7 +105,7 @@ package "IIDES" #fff {
         * estimated : boolean
         + comment : string
     }
-    class Target #f9b8bd {
+    class Target #D4EFDF {
         * id : target--<<UUID>>
         --
         * asset_type : TargetAsset
@@ -112,7 +116,7 @@ package "IIDES" #fff {
         * sensitivity : TargetSensitivity
         + description : string
     }
-    class Source {
+    class Source #D4EFDF {
         * id : source--<<UUID>>
         --
         * title : string
@@ -122,7 +126,7 @@ package "IIDES" #fff {
         + public : boolean
         + document : string
     }
-    class CourtCase #FDB515 {
+    class CourtCase #f9b8bd {
         * id : case--<<UUID>>
         --
         + case_number : string
@@ -135,7 +139,7 @@ package "IIDES" #fff {
         + plaintiff : string[0..*]
         + comments : string
     }
-    class Charge #fee6b3 {
+    class Charge #f9b8bd {
         * id : charge--<<UUID>>
         --
         * title : string
@@ -146,7 +150,7 @@ package "IIDES" #fff {
         + plea_bargain : boolean
         + disposition : ChargeDisposition
     }
-    class Sentence #fee6b3 {
+    class Sentence #f9b8bd {
         * id : sentence--<<UUID>>
         --
         * sentence_type : SentenceType
@@ -154,9 +158,65 @@ package "IIDES" #fff {
         + metric : SentenceMetric
         + concurrency : boolean
     }
+    class Detection #FDB515 {
+        * id : detection--<<UUID>>
+        --
+        + first_detected : date
+        + who_detected : DetectionTeam[0..*]
+        + what_detected : DetectionSoftware[0..*]
+        + logs : DetectionLogs[0..*]
+        + comment : string
+    }
+    class Note #D4EFDF {
+        * id : note--<<UUID>>
+        --
+        author : string
+        comment : string
+    }
+    class Response #EF3A47 {
+        * id : response--<<UUID>>
+        --
+        + techical_controls : TechControls[0..*]
+        + hr_controls : 
+        + investigated_by : Investigator[0..*]
+        + investigation_events : Investigation[0..*]
+        + comment : string
+    }
+    class LegalResponse #f9b8bd {
+        * id : legal--<<UUID>>
+        --
+        + law_enforcement_contacted : date
+        + insider_arrested : date
+        + insider_charged : date
+        + insider_pleads : date
+        + insider_judgment : date
+        + insider_sentenced : date
+        + insider_charges_dropped : date
+        + insider_charges_dismissed : date
+        + insider_settled : date
+        + comment : string
+    }
+    class Stressor #b0d0ed {
+        * id : stressor--<<UUID>>
+        --
+        + date : date
+        + stressor : StressorVocab
+    }
+    class AttackTTPs #A456ED {
+        * id : stressor--<<UUID>>
+        --
+        date : date
+        sequence_num : integer
+        observed : boolean
+        number_of_times : integer
+        method : AttackMethods
+        + attack_location : AttackLocation[0..*]
+        + attack_time : AttackTime[0..*]
+        description : string
+    }
 
-    Insider ||--o{ Accomplice : Relationship
-    Incident ||--|{ Insider : commits <
+    Insider --o{ Accomplice : Relationship
+    Incident --|{ Insider : commits <
     Accomplice -- Job : has >
     Job -- Organization : employs <
     Insider -- Job : has >
@@ -167,12 +227,18 @@ package "IIDES" #fff {
     Insider |o--o| Organization : owns >
     Insider -- Collusion : Insider2 <
     Collusion -- Insider : Insider1 <
-    Incident ||--|{ Impact : has >
-    Incident ||--|{ Target : has >
-    Incident ||--o{ Source : has >
-    CourtCase ||--|{ Charge : has >
-    CourtCase |o--|{ Sentence : has >
-    Incident ||--|{ CourtCase : has >
-
+    Incident --|{ Impact
+    Incident --|{ Target
+    Incident --o{ Source
+    Incident --o{ Note
+    CourtCase --|{ Charge
+    CourtCase |o--|{ Sentence
+    Incident -- Detection
+    Incident -- Response
+    Response -- LegalResponse
+    LegalResponse --|{ CourtCase
+    Organization --|{ Stressor
+    Stressor }|-- Insider
+    Incident --o{ AttackTTPs
 }
 @enduml

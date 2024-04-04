@@ -1,23 +1,29 @@
 @startuml IIDES_Entity_Relationships
 package "IIDES Entity Relationships" #FFF {
 
-    abstract Person #D4EFDF {}
-    class Insider <<Person>> #009647 {}
-    class Accomplice <<Person>> #D4EFDF {}
-    struct Collusion #D4EFDF {}
+    abstract Person #b0d0ed {}
+    class Insider <<Person>> #043673 {}
+    class Accomplice <<Person>> #b0d0ed {}
+    struct Collusion #b0d0ed {}
     class Organization #007BC0 {}
-    class Sponsor #D4EFDF {}
-    class Incident #EF3A47 {}
-    class Job #008F91 {}
-    class Impact #f9b8bd {}
-    class Target #f9b8bd {}
-    class Source {}
-    class CourtCase #FDB515 {}
-    class Charge #fee6b3 {}
-    class Sentence #fee6b3 {}
+    class Sponsor #b0d0ed {}
+    class Incident #009647 {}
+    class Job #33c2C4 {}
+    class Impact #D4EFDF {}
+    class Target #D4EFDF {}
+    class Source #D4EFDF {}
+    class Detection #FDB515 {}
+    class Response #EF3A47 {}
+    class LegalResponse #f9b8bd {}
+    class CourtCase #f9b8bd {}
+    class Charge #f9b8bd {}
+    class Sentence #f9b8bd {}
+    class AttackTTPs #A456ED {}
+    class Stressor #b0d0ed {}
+    class Note #D4EFDF {}
 
-    Insider ||--o{ Accomplice : Relationship
-    Incident ||--|{ Insider : commits <
+    Insider --o{ Accomplice : Relationship
+    Incident --|{ Insider : commits <
     Accomplice -- Job : has >
     Job -- Organization : employs <
     Insider -- Job : has >
@@ -28,11 +34,18 @@ package "IIDES Entity Relationships" #FFF {
     Insider |o--o| Organization : owns >
     Insider -- Collusion : Insider2 <
     Collusion -- Insider : Insider1 <
-    Incident ||--|{ Impact : has >
-    Incident ||--|{ Target : has >
-    Incident ||--o{ Source : has >
-    CourtCase ||--|{ Charge : has >
-    CourtCase |o--|{ Sentence : has >
-    Incident ||--|{ CourtCase : has >
+    Incident --|{ Impact
+    Incident --|{ Target
+    Incident --o{ Source
+    Incident --o{ Note
+    CourtCase --|{ Charge
+    CourtCase |o--|{ Sentence
+    Incident -- Detection
+    Incident -- Response
+    Response -- LegalResponse
+    LegalResponse --|{ CourtCase
+    Organization --|{ Stressor
+    Stressor }|-- Insider
+    Incident --o{ AttackTTPs
 }
 @enduml
