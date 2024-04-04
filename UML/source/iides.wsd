@@ -1,0 +1,178 @@
+@startuml IIDES
+package "IIDES" #fff {
+
+    abstract Person #D4EFDF {
+        + first_name : string
+        + middle_name : string
+        + last_name : string
+        + suffix : Suffix
+        + city : string
+        + state : State
+        + country : Country
+        + postalCode : integer
+        + alias : string[0..*]
+        + country_of_citizenship : Country
+        + nationality
+        + residency
+        + gender
+        + age
+        + education
+        + marital_status
+        + number_of_children
+        + comments
+    }
+
+    class Insider <<Person>> #009647 {
+        * id : insider--<<UUID>>
+        * incident_role : InsiderIncidentRole
+        --
+        + motive : InsiderMotive[0..*]
+        + substance_abuse : InsiderSubstanceAbuse[0..*]
+        + substance_use_during_incident : boolean
+        + psychological_issues : InsiderPsychIssue
+        + comments : string
+    }
+    class Accomplice <<Person>> #D4EFDF {
+        * id : accomplice--<<UUID>>
+        --
+        + relationship_to_insider : RelationshipType
+    }
+    struct Collusion #D4EFDF {
+        relationship : RelationshipType
+        recruitment : RecruitmentType
+        recruitment_direction : (Insider1,Insider2)
+    }
+
+    class Organization #007BC0 {
+        * id : org--<<UUID>>
+        --
+        + name : string
+        + city : string
+        + state : StateCode
+        + country : CountryCode
+        + postalCode : integer
+        + small_business : boolean
+        + industry_sector_tier1
+        + industry_sector_tier2
+        + business
+        + parent_company
+    }
+
+    class Sponsor #D4EFDF {
+        * id : sponsor--<<UUID>>
+        --
+        + sponsor_type : SponsorType
+        + name : string
+    }
+
+    class Incident #EF3A47 {
+        * id : incident--<<UUID>>
+        --
+        + cia_effect : IncidentCia[0..*]
+        + incident_type : IncidentType[0..*]
+        + outcome : OutcomeType[0..*]
+        + summary : string
+        + brief_summary : string
+        + begin_date : DateField
+        + end_date : DateField
+        + comments
+    }
+
+    class Job #008F91 {
+        * id : job--<<UUID>>
+        --
+        + job_function
+        + occupation
+        + title
+        + position_technical
+        + access_authorization
+        + employment_type
+        + hire_date
+        + departure_date
+        + tenure
+        + comment
+    }
+    class Impact #f9b8bd {
+        * id : impact--<<UUID>>
+        --
+        * high : integer
+        + low : integer
+        * metric : ImpactMetricType
+        * estimated : boolean
+        + comment : string
+    }
+    class Target #f9b8bd {
+        * id : target--<<UUID>>
+        --
+        * asset_type : TargetAsset
+        * category : TargetCategory
+        * subcategory : TargetSubcategory
+        * format : TargetFormat
+        * owner : TargetOwner
+        * sensitivity : TargetSensitivity
+        + description : string
+    }
+    class Source {
+        * id : source--<<UUID>>
+        --
+        * title : string
+        + source_type : SourceType
+        + file_type : SourceFileType
+        + date : DateField
+        + public : boolean
+        + document : string
+    }
+    class CourtCase #FDB515 {
+        * id : case--<<UUID>>
+        --
+        + case_number : string
+        + case_title : string
+        + court_country : Country
+        + court_state : State
+        + court_district : string
+        + case_type : CourtCaseType
+        + defendant : string[0..*]
+        + plaintiff : string[0..*]
+        + comments : string
+    }
+    class Charge #fee6b3 {
+        * id : charge--<<UUID>>
+        --
+        * title : string
+        + section : string
+        + nature_of_offense : string
+        + count : integer
+        + plea : ChargePlea
+        + plea_bargain : boolean
+        + disposition : ChargeDisposition
+    }
+    class Sentence #fee6b3 {
+        * id : sentence--<<UUID>>
+        --
+        * sentence_type : SentenceType
+        + quantity : integer
+        + metric : SentenceMetric
+        + concurrency : boolean
+    }
+
+    Insider ||--o{ Accomplice : Relationship
+    Incident ||--|{ Insider : commits <
+    Accomplice -- Job : has >
+    Job -- Organization : employs <
+    Insider -- Job : has >
+    Organization }|--|{ Incident : OrgRole
+    Organization }o--o{ Organization : OrgRelationship
+    Insider }o--o| Sponsor : sponsors <
+    Accomplice }o--o| Sponsor : sponsors <
+    Insider |o--o| Organization : owns >
+    Insider -- Collusion : Insider2 <
+    Collusion -- Insider : Insider1 <
+    Incident ||--|{ Impact : has >
+    Incident ||--|{ Target : has >
+    Incident ||--o{ Source : has >
+    CourtCase ||--|{ Charge : has >
+    CourtCase |o--|{ Sentence : has >
+    Incident ||--|{ CourtCase : has >
+
+}
+@enduml

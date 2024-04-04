@@ -1,7 +1,13 @@
-@startuml
-package "IIDES Enumerations" #DDDDDD {
+@startuml IIDES_Enumerations
+package "IIDES Enumerations" #FFF {
 
-    enum Suffix <<enumeration>> {
+    enum IncidentType {
+        Fraud
+        Sabotage
+        Theft of IP
+        Misuse
+    }
+    enum Suffix <<enumeration>> #D4EFDF {
         Jr
         Sr
         III
@@ -35,7 +41,7 @@ package "IIDES Enumerations" #DDDDDD {
         Unknown
         Used in Identity Theft
     }
-    enum Relationship <<enumeration>> {
+    enum Relationship <<enumeration>> #D4EFDF {
         Acquaintance
         Colleague
         Friend
@@ -44,7 +50,7 @@ package "IIDES Enumerations" #DDDDDD {
         Unknown
         Other
     }
-    enum SponsorType <<enumeration>> {
+    enum SponsorType <<enumeration>> #D4EFDF {
         Organized Crime
         State Sponsor
         Foreign National

@@ -1,0 +1,38 @@
+@startuml IIDES_Entity_Relationships
+package "IIDES Entity Relationships" #FFF {
+
+    abstract Person #D4EFDF {}
+    class Insider <<Person>> #009647 {}
+    class Accomplice <<Person>> #D4EFDF {}
+    struct Collusion #D4EFDF {}
+    class Organization #007BC0 {}
+    class Sponsor #D4EFDF {}
+    class Incident #EF3A47 {}
+    class Job #008F91 {}
+    class Impact #f9b8bd {}
+    class Target #f9b8bd {}
+    class Source {}
+    class CourtCase #FDB515 {}
+    class Charge #fee6b3 {}
+    class Sentence #fee6b3 {}
+
+    Insider ||--o{ Accomplice : Relationship
+    Incident ||--|{ Insider : commits <
+    Accomplice -- Job : has >
+    Job -- Organization : employs <
+    Insider -- Job : has >
+    Organization }|--|{ Incident : OrgRole
+    Organization }o--o{ Organization : OrgRelationship
+    Insider }o--o| Sponsor : sponsors <
+    Accomplice }o--o| Sponsor : sponsors <
+    Insider |o--o| Organization : owns >
+    Insider -- Collusion : Insider2 <
+    Collusion -- Insider : Insider1 <
+    Incident ||--|{ Impact : has >
+    Incident ||--|{ Target : has >
+    Incident ||--o{ Source : has >
+    CourtCase ||--|{ Charge : has >
+    CourtCase |o--|{ Sentence : has >
+    Incident ||--|{ CourtCase : has >
+}
+@enduml
