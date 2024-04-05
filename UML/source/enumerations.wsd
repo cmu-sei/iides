@@ -1,31 +1,62 @@
 @startuml IIDES_Enumerations
 package "IIDES Enumerations" #FFF {
 
-    enum IncidentType {
-        Fraud
-        Sabotage
-        Theft of IP
-        Misuse
-    }
-    enum Suffix <<enumeration>> #D4EFDF {
+    enum SuffixVocab <<enumeration>> #b0d0ed {
         Jr
         Sr
         III
         IV
     }
-    enum OrgRole <<enumeration>> {
-        Beneficiary
-        Victim
-        Trusted Business Partner
-        Other
+    enum ResidencyVocab <<enumeration>> #b0d0ed {}
+    enum GenderVocab <<enumeration>> #b0d0ed {}
+    enum EducationVocab <<enumeration>> #b0d0ed {}
+    enum MaritalStatusVocab <<enumeration>> #b0d0ed {}
+    struct Predisposition <<enumeration>> #b0d0ed {
+        predisposition : PredispositionVocab
+        observed : boolean
     }
-    enum OrgRelationship <<enumeration>> {
-        Competitor
-        Vendor
-        Other
+    enum PredispositionVocab <<enumeration>> #b0d0ed {
+        1.X
+        2.4 Presonal Stressful Events
+    }
+    Predisposition *-- PredispositionVocab
+    struct ConcerningBehavior #b0d0ed {
+        date : date
+        behavior : ConcerningBehaviorVocab
+        observed : boolean
+    }
+    enum ConcerningBehaviorVocab <<enumeration>> #b0d0ed {
+        3.x
+    }
+    ConcerningBehavior *-- ConcerningBehaviorVocab
+    enum RelationshipVocab <<enumeration>> #b0d0ed {
+        Acquaintance
+        Colleague
+        Friend
+        Relative
+        Significant Other/Legal partner
         Unknown
+        Other
     }
-    enum OutcomeType <<enumeration>> {
+    enum RecruitmentVocab <<enumeration>> #b0d0ed {}
+    enum IndustrySectorTier1Vocab <<enumeration>> #b0d0ed {}
+    enum IndustrySectorTier2Vocab <<enumeration>> #b0d0ed {}
+    enum SponsorVocab <<enumeration>> #b0d0ed {
+        Organized Crime
+        State Sponsor
+        Foreign National
+        Criminal Enterprise
+        ==
+        ..Used By..
+        Sponsor()
+    }
+    enum IncidentTypeVocab #b0d0ed {
+        Fraud
+        Sabotage
+        Theft of IP
+        Misuse
+    }
+    enum OutcomeTypeVocab <<enumeration>> #b0d0ed {
         Bankruptcy
         Data Created
         Data Deleted
@@ -41,44 +72,57 @@ package "IIDES Enumerations" #FFF {
         Unknown
         Used in Identity Theft
     }
-    enum Relationship <<enumeration>> #D4EFDF {
-        Acquaintance
-        Colleague
-        Friend
-        Relative
-        Significant Other/Legal partner
-        Unknown
+    enum CIAVocab <<enumeration>> #b0d0ed {}
+    enum IncidentStatusVocab <<enumeration>> #b0d0ed {}
+    enum JobFunctionVocab <<enumeration>> #b0d0ed {}
+    enum OccupationVocab <<enumeration>> #b0d0ed {}
+    enum AccessAuthVocab <<enumeration>> #b0d0ed {}
+    enum EmploymentTypeVocab <<enumeration>> #b0d0ed {}
+    enum OrgRoleVocab <<enumeration>> #b0d0ed {
+        Beneficiary
+        Victim
+        Trusted Business Partner
         Other
     }
-    enum SponsorType <<enumeration>> #D4EFDF {
-        Organized Crime
-        State Sponsor
-        Foreign National
-        Criminal Enterprise
+    enum OrgRelationshipVocab <<enumeration>> #b0d0ed {
+        Competitor
+        Vendor
+        Other
+        Unknown
     }
-
-    struct TechControls {}
-    struct Investigation {}
-    struct Predisposition {
-        predisposition : PersonalPredisposition
-        observed : boolean
-    }
-    enum PersonalPredisposition {
-        1.X
-        2.4 Presonal Stressful Events
-    }
-    struct ConcerningBehavior {
-        date : date
-        behavior : ConcerningBehaviorVocab
-        observed : boolean
-    }
-    enum ConcerningBehaviorVocab {
-        3.x
-    }
-    enum StressorVocab {
+    enum StressorVocab #b0d0ed {
         2.1, 2.2, 2.3, 2.5
     }
-    enum AttackMethods {
+
+    enum ImpactMetricVocab <<enumeration>> #D4EFDF {}
+    enum TargetAssetVocab <<enumeration>> #D4EFDF {}
+    enum TargetCategoryVocab <<enumeration>> #D4EFDF {}
+    enum TargetSubcategoryVocab <<enumeration>> #D4EFDF {}
+    enum TargetFormatVocab <<enumeration>> #D4EFDF {}
+    enum TargetOwnerVocab <<enumeration>> #D4EFDF {}
+    enum TargetSensitivityVocab <<enumeration>> #D4EFDF {}
+    enum SourceTypeVocab <<enumeration>> #D4EFDF {}
+    enum SourceFileTypeVocab <<enumeration>> #D4EFDF {}
+
+    enum CaseTypeVocab <<enumeration>> #f9b8bd {}
+    enum ChargePleaVocab <<enumeration>> #f9b8bd {}
+    enum ChargeDispositionVocab <<enumeration>> #f9b8bd {}
+
+    enum DetectionTeamVocab <<enumeration>> #FFFF94 {}
+    enum DetectionSoftwareVocab <<enumeration>> #FFFF94 {}
+    enum DetectionLogVocab <<enumeration>> #FFFF94 {}
+
+    struct TechControls #f9b8bd {}
+    enum TechControlsVocab #f9b8bd {}
+    TechControls *-- TechControlsVocab
+    struct HRControls #f9b8bd {}
+    enum HRControlsVocab #f9b8bd {}
+    HRControls *-- HRControlsVocab
+    struct Investigation #f9b8bd {}
+    enum InvestigationVocab #f9b8bd {}
+    Investigation *-- InvestigationVocab
+
+    enum AttackMethodVocab #FFBCFF {
         4.x
     }
 }

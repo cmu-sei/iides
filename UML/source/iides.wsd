@@ -5,31 +5,31 @@ package "IIDES" #fff {
         + first_name : string
         + middle_name : string
         + last_name : string
-        + suffix : Suffix
+        + suffix : SuffixVocab
         + city : string
-        + state : State
-        + country : Country
+        + state : StateVocab
+        + country : CountryVocab
         + postalCode : integer
         + alias : string[0..*]
-        + country_of_citizenship : Country
-        + nationality
-        + residency
-        + gender
-        + age
-        + education
-        + marital_status
-        + number_of_children
-        + comments
+        + country_of_citizenship : CountryVocab[0..*]
+        + nationality : CountryVocab[0..*]
+        + residency : ResidencyVocab
+        + gender : GenderVocab
+        + age : integer
+        + education : EducationVocab
+        + marital_status : MaritalStatusVocab
+        + number_of_children : integer
+        + comment : string
     }
 
     class Insider <<Person>> #043673 {
         * id : insider--<<UUID>>
         * incident_role : InsiderIncidentRole
         --
-        + motive : InsiderMotive[0..*]
-        + substance_abuse : InsiderSubstanceAbuse[0..*]
+        + motive : MotiveVocab[0..*]
+        + substance_abuse : SubstanceVocab[0..*]
         + substance_use_during_incident : boolean
-        + psychological_issues : InsiderPsychIssue
+        + psychological_issues : PsychVocab
         + predispositions : Predisposition[0..*]
         + concerning_behaviors : ConcerningBeahvior[0..*]
         + comments : string
@@ -38,12 +38,13 @@ package "IIDES" #fff {
     class Accomplice <<Person>> #b0d0ed {
         * id : accomplice--<<UUID>>
         --
-        + relationship_to_insider : RelationshipType
+        + relationship_to_insider : RelationshipVocab
     }
+
     struct Collusion #b0d0ed {
-        relationship : RelationshipType
-        recruitment : RecruitmentType
-        recruitment_direction : (Insider1,Insider2)
+        * relationship : RelationshipVocab
+        * recruitment : RecruitmentVocab
+        * recruitment_direction : (Insider1,Insider2)
     }
 
     class Organization #007BC0 {
@@ -51,78 +52,77 @@ package "IIDES" #fff {
         --
         + name : string
         + city : string
-        + state : StateCode
-        + country : CountryCode
+        + state : StateVocab
+        + country : CountryVocab
         + postalCode : integer
         + small_business : boolean
-        + industry_sector_tier1
-        + industry_sector_tier2
-        + business
-        + parent_company
+        + industry_sector_tier1 : IndustrySectorTier1Vocab
+        + industry_sector_tier2 : IndustrySectorTier2Vocab
+        + business : string
+        + parent_company : string
     }
 
     class Sponsor #b0d0ed {
         * id : sponsor--<<UUID>>
         --
-        + sponsor_type : SponsorType
+        + sponsor_type : SponsorVocab
         + name : string
     }
-
     class Incident #009647 {
         * id : incident--<<UUID>>
         --
-        + cia_effect : IncidentCia[0..*]
-        + incident_type : IncidentType[0..*]
-        + outcome : OutcomeType[0..*]
+        + cia_effect : CIAVocab[0..*]
+        + incident_type : IncidentTypeVocab[0..*]
+        + outcome : OutcomeTypeVocab[0..*]
         + summary : string
         + brief_summary : string
         + begin_date : DateField
         + end_date : DateField
-        + status : IncidentStatus
-        + comments
+        + status : IncidentStatusVocab
+        + comments : string
     }
 
     class Job #33c2C4 {
         * id : job--<<UUID>>
         --
-        + job_function
-        + occupation
-        + title
-        + position_technical
-        + access_authorization
-        + employment_type
-        + hire_date
-        + departure_date
-        + tenure
-        + comment
+        + job_function : JobFunctionVocab
+        + occupation : OccupationVocab
+        + title : string
+        + position_technical : boolean
+        + access_authorization : AccessAuthVocab
+        + employment_type : EmploymentTypeVocab
+        + hire_date : date
+        + departure_date : date
+        + tenure : timeDelta
+        + comment : string
     }
     class Impact #D4EFDF {
         * id : impact--<<UUID>>
         --
         * high : integer
         + low : integer
-        * metric : ImpactMetricType
+        * metric : ImpactMetricVocab
         * estimated : boolean
         + comment : string
     }
     class Target #D4EFDF {
         * id : target--<<UUID>>
         --
-        * asset_type : TargetAsset
-        * category : TargetCategory
-        * subcategory : TargetSubcategory
-        * format : TargetFormat
-        * owner : TargetOwner
-        * sensitivity : TargetSensitivity
+        * asset_type : TargetAssetVocab
+        * category : TargetCategoryVocav
+        * subcategory : TargetSubcategoryVocab
+        * format : TargetFormatVocab
+        * owner : TargetOwnerVocab
+        * sensitivity : TargetSensitivityVocab
         + description : string
     }
     class Source #D4EFDF {
         * id : source--<<UUID>>
         --
         * title : string
-        + source_type : SourceType
-        + file_type : SourceFileType
-        + date : DateField
+        + source_type : SourceTypeVocab
+        + file_type : SourceFileTypeVocab
+        + date : date
         + public : boolean
         + document : string
     }
@@ -131,10 +131,10 @@ package "IIDES" #fff {
         --
         + case_number : string
         + case_title : string
-        + court_country : Country
-        + court_state : State
+        + court_country : CountryVocab
+        + court_state : StateVocab
         + court_district : string
-        + case_type : CourtCaseType
+        + case_type : CaseTypeVocab
         + defendant : string[0..*]
         + plaintiff : string[0..*]
         + comments : string
@@ -146,9 +146,9 @@ package "IIDES" #fff {
         + section : string
         + nature_of_offense : string
         + count : integer
-        + plea : ChargePlea
+        + plea : ChargePleaVocab
         + plea_bargain : boolean
-        + disposition : ChargeDisposition
+        + disposition : ChargeDispositionVocab
     }
     class Sentence #f9b8bd {
         * id : sentence--<<UUID>>
@@ -162,9 +162,9 @@ package "IIDES" #fff {
         * id : detection--<<UUID>>
         --
         + first_detected : date
-        + who_detected : DetectionTeam[0..*]
-        + what_detected : DetectionSoftware[0..*]
-        + logs : DetectionLogs[0..*]
+        + who_detected : DetectionTeamVocab[0..*]
+        + what_detected : DetectionSoftwareVocab[0..*]
+        + logs : DetectionLogVocab[0..*]
         + comment : string
     }
     class Note #D4EFDF {
@@ -177,8 +177,8 @@ package "IIDES" #fff {
         * id : response--<<UUID>>
         --
         + techical_controls : TechControls[0..*]
-        + hr_controls : 
-        + investigated_by : Investigator[0..*]
+        + hr_controls :  HRControls[0..*]
+        + investigated_by : InvestigatorVocab[0..*]
         + investigation_events : Investigation[0..*]
         + comment : string
     }
@@ -202,17 +202,17 @@ package "IIDES" #fff {
         + date : date
         + stressor : StressorVocab
     }
-    class AttackTTPs #A456ED {
+    class AttackTTP #A456ED {
         * id : stressor--<<UUID>>
         --
-        date : date
-        sequence_num : integer
-        observed : boolean
-        number_of_times : integer
-        method : AttackMethods
-        + attack_location : AttackLocation[0..*]
-        + attack_time : AttackTime[0..*]
-        description : string
+        + date : date
+        + sequence_num : integer
+        + observed : boolean
+        + number_of_times : integer
+        + method : AttackMethodVocab
+        + attack_location : AttackLocationVocab[0..*]
+        + attack_time : AttackTimeVocab[0..*]
+        + description : string
     }
 
     Insider --o{ Accomplice : Relationship
@@ -239,6 +239,6 @@ package "IIDES" #fff {
     LegalResponse --|{ CourtCase
     Organization --|{ Stressor
     Stressor }|-- Insider
-    Incident --o{ AttackTTPs
+    Incident --o{ AttackTTP
 }
 @enduml

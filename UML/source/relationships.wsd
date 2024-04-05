@@ -18,7 +18,7 @@ package "IIDES Entity Relationships" #FFF {
     class CourtCase #f9b8bd {}
     class Charge #f9b8bd {}
     class Sentence #f9b8bd {}
-    class AttackTTPs #A456ED {}
+    class AttackTTP #A456ED {}
     class Stressor #b0d0ed {}
     class Note #D4EFDF {}
 
@@ -46,6 +46,6 @@ package "IIDES Entity Relationships" #FFF {
     LegalResponse --|{ CourtCase
     Organization --|{ Stressor
     Stressor }|-- Insider
-    Incident --o{ AttackTTPs
+    Incident --o{ AttackTTP
 }
 @enduml
