@@ -24,16 +24,16 @@ package "IIDES Entity Relationships" #FFF {
 
     Insider --o{ Accomplice : Relationship
     Incident --|{ Insider : commits <
-    Accomplice -- Job : has >
+    Accomplice -- Job
     Job -- Organization : employs <
-    Insider -- Job : has >
+    Insider -- Job
     Organization }|--|{ Incident : OrgRole
     Organization }o--o{ Organization : OrgRelationship
-    Insider }o--o| Sponsor : sponsors <
-    Accomplice }o--o| Sponsor : sponsors <
+    Insider }o--o| Sponsor
+    Accomplice }o--o| Sponsor
     Insider |o--o| Organization : owns >
-    Insider -- Collusion : Insider2 <
-    Collusion -- Insider : Insider1 <
+    Insider -- Collusion
+    Collusion -- Insider
     Incident --|{ Impact
     Incident --|{ Target
     Incident --o{ Source

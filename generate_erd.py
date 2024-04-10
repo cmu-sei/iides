@@ -26,7 +26,7 @@ color_map = {
 }
 
 file_lines = []
-file_lines.append("@startuml IIDES_TEST\npackage \"IIDES TEST\" #fff {\n\n")
+file_lines.append("@startuml IIDES\npackage \"IIDES\" #fff {\n\n")
 
 # iterate through all json object files
 for object in listdir("json/objects"):

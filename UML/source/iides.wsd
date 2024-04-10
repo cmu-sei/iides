@@ -1,232 +1,111 @@
 @startuml IIDES
 package "IIDES" #fff {
 
-    abstract Person #b0d0ed {
-        + first_name : string
-        + middle_name : string
-        + last_name : string
-        + suffix : SuffixVocab
-        + city : string
-        + state : StateVocab
-        + country : CountryVocab
-        + postalCode : integer
-        + alias : string[0..*]
-        + country_of_citizenship : CountryVocab[0..*]
-        + nationality : CountryVocab[0..*]
-        + residency : ResidencyVocab
-        + gender : GenderVocab
-        + age : integer
-        + education : EducationVocab
-        + marital_status : MaritalStatusVocab
-        + number_of_children : integer
-        + comment : string
-    }
 
-    class Insider <<Person>> #043673 {
-        * id : insider--<<UUID>>
-        * incident_role : InsiderIncidentRole
-        --
-        + motive : MotiveVocab[0..*]
-        + substance_abuse : SubstanceVocab[0..*]
-        + substance_use_during_incident : boolean
-        + psychological_issues : PsychVocab
-        + predispositions : Predisposition[0..*]
-        + concerning_behaviors : ConcerningBeahvior[0..*]
-        + comments : string
-    }
-
-    class Accomplice <<Person>> #b0d0ed {
-        * id : accomplice--<<UUID>>
-        --
-        + relationship_to_insider : RelationshipVocab
-    }
-
-    struct Collusion #b0d0ed {
-        * relationship : RelationshipVocab
-        * recruitment : RecruitmentVocab
-        * recruitment_direction : (Insider1,Insider2)
-    }
-
-    class Organization #007BC0 {
-        * id : org--<<UUID>>
-        --
-        + name : string
-        + city : string
-        + state : StateVocab
-        + country : CountryVocab
-        + postalCode : integer
-        + small_business : boolean
-        + industry_sector_tier1 : IndustrySectorTier1Vocab
-        + industry_sector_tier2 : IndustrySectorTier2Vocab
-        + business : string
-        + parent_company : string
-    }
-
-    class Sponsor #b0d0ed {
-        * id : sponsor--<<UUID>>
-        --
-        + sponsor_type : SponsorVocab
-        + name : string
-    }
-    class Incident #009647 {
-        * id : incident--<<UUID>>
-        --
-        + cia_effect : CIAVocab[0..*]
-        + incident_type : IncidentTypeVocab[0..*]
-        + outcome : OutcomeTypeVocab[0..*]
-        + summary : string
-        + brief_summary : string
-        + begin_date : DateField
-        + end_date : DateField
-        + status : IncidentStatusVocab
-        + comments : string
-    }
-
-    class Job #33c2C4 {
-        * id : job--<<UUID>>
-        --
-        + job_function : JobFunctionVocab
-        + occupation : OccupationVocab
-        + title : string
-        + position_technical : boolean
-        + access_authorization : AccessAuthVocab
-        + employment_type : EmploymentTypeVocab
-        + hire_date : date
-        + departure_date : date
-        + tenure : timeDelta
-        + comment : string
-    }
-    class Impact #D4EFDF {
-        * id : impact--<<UUID>>
-        --
-        * high : integer
-        + low : integer
-        * metric : ImpactMetricVocab
-        * estimated : boolean
-        + comment : string
-    }
-    class Target #D4EFDF {
-        * id : target--<<UUID>>
-        --
-        * asset_type : TargetAssetVocab
-        * category : TargetCategoryVocav
-        * subcategory : TargetSubcategoryVocab
-        * format : TargetFormatVocab
-        * owner : TargetOwnerVocab
-        * sensitivity : TargetSensitivityVocab
-        + description : string
-    }
-    class Source #D4EFDF {
-        * id : source--<<UUID>>
-        --
-        * title : string
-        + source_type : SourceTypeVocab
-        + file_type : SourceFileTypeVocab
-        + date : date
-        + public : boolean
-        + document : string
-    }
-    class CourtCase #f9b8bd {
-        * id : case--<<UUID>>
-        --
-        + case_number : string
-        + case_title : string
-        + court_country : CountryVocab
-        + court_state : StateVocab
-        + court_district : string
-        + case_type : CaseTypeVocab
-        + defendant : string[0..*]
-        + plaintiff : string[0..*]
-        + comments : string
-    }
-    class Charge #f9b8bd {
-        * id : charge--<<UUID>>
-        --
-        * title : string
-        + section : string
-        + nature_of_offense : string
-        + count : integer
-        + plea : ChargePleaVocab
-        + plea_bargain : boolean
-        + disposition : ChargeDispositionVocab
-    }
-    class Sentence #f9b8bd {
-        * id : sentence--<<UUID>>
-        --
-        * sentence_type : SentenceType
-        + quantity : integer
-        + metric : SentenceMetric
-        + concurrency : boolean
-    }
-    class Detection #FDB515 {
-        * id : detection--<<UUID>>
-        --
-        + first_detected : date
-        + who_detected : DetectionTeamVocab[0..*]
-        + what_detected : DetectionSoftwareVocab[0..*]
-        + logs : DetectionLogVocab[0..*]
-        + comment : string
-    }
-    class Note #D4EFDF {
-        * id : note--<<UUID>>
-        --
-        author : string
-        comment : string
-    }
-    class Response #EF3A47 {
-        * id : response--<<UUID>>
-        --
-        + techical_controls : TechControls[0..*]
-        + hr_controls :  HRControls[0..*]
-        + investigated_by : InvestigatorVocab[0..*]
-        + investigation_events : Investigation[0..*]
-        + comment : string
-    }
-    class LegalResponse #f9b8bd {
-        * id : legal--<<UUID>>
-        --
-        + law_enforcement_contacted : date
-        + insider_arrested : date
-        + insider_charged : date
-        + insider_pleads : date
-        + insider_judgment : date
-        + insider_sentenced : date
-        + insider_charges_dropped : date
-        + insider_charges_dismissed : date
-        + insider_settled : date
-        + comment : string
-    }
-    class Stressor #b0d0ed {
-        * id : stressor--<<UUID>>
-        --
-        + date : date
-        + stressor : StressorVocab
-    }
-    class AttackTTP #A456ED {
-        * id : stressor--<<UUID>>
-        --
-        + date : date
-        + sequence_num : integer
-        + observed : boolean
-        + number_of_times : integer
-        + method : AttackMethodVocab
-        + attack_location : AttackLocationVocab[0..*]
-        + attack_time : AttackTimeVocab[0..*]
-        + description : string
-    }
+class Stressor #b0d0ed {
+	* id : string 
+	+ date : date 
+	+ category : stressor-category-vocab 
+	+ subcategory : stressor-subcategory-vocab 
+}
+class Target #D4EFDF {
+	* id : string 
+	* asset_type : target-asset-vocab 
+	* category : target-category-vocab 
+	* subcategory : target-subcategory-vocab 
+	* format : target-format-vocab 
+	* owner : target-owner-vocab 
+	* sensitivity : target-sensitivity-vocab 
+	+ description : string 
+}
+class Incident #009647 {
+	* id : string 
+	+ cia_effect : cia-vocab[1...*] 
+	+ incident_type : incident-type-vocab[1...*] 
+	+ outcome : outcome-type-vocab[1...*] 
+	+ status : incident-status-vocab 
+	+ summary : string 
+	+ brief_summary : string 
+	+ comment : string 
+}
+class Source #D4EFDF {
+	* id : string 
+	* title : date 
+	+ source_type : source-type-vocab 
+	+ file_type : source-file-type-vocab 
+	+ date : date 
+	+ public : boolean 
+	+ document : string 
+}
+class Note #D4EFDF {
+	* id : string 
+	* author : string 
+	* date : datetime 
+	* comment : string 
+}
+class Sentence #f9b8bd {
+	* id : string 
+	* sentence_type : sentence-type-vocab 
+	+ quantity : integer 
+	+ metric : sentence-metric-vocab 
+	+ concurrency : boolean 
+}
+class Job #33c2C4 {
+	* id : string 
+	+ job_function : job-function-vocab 
+	+ occupation : occupation-vocab 
+	+ title : string 
+	+ position_technical : boolean 
+	+ access_authorization : access-auth-vocab 
+	+ employment_type : employment-type-vocab 
+	+ hire_date : date 
+	+ departure_date : date 
+	+ tenure : timedelta 
+	+ comment : string 
+}
+class Impact #D4EFDF {
+	* id : string 
+	* high : integer 
+	+ low : integer 
+	* metric : impact-metric-vocab 
+	* estimated : boolean 
+	+ comment : string 
+}
+class Organization #007BC0 {
+	* id : string 
+	+ name : string 
+	+ city : string 
+	+ state : string 
+	+ country : country-vocab 
+	+ postal_code : integer 
+	+ small_business : boolean 
+	+ industry_sector_tier1 : industry-sector-tier1-vocab 
+	+ industry_sector_tier2 : industry-sector-tier2-vocab 
+	+ business : string 
+	+ parent_company : string 
+	+ incident_role : org-role-vocab 
+}
+class Detection #FDB515 {
+	* id : string 
+	+ first_detected : date 
+	+ who_detected : detection-team-vocab[1...*] 
+	+ what_detected : detection-method-vocab[1...*] 
+	+ logs : detection-log-vocab[1...*] 
+	+ comment : string 
+}
 
     Insider --o{ Accomplice : Relationship
     Incident --|{ Insider : commits <
-    Accomplice -- Job : has >
+    Accomplice -- Job
     Job -- Organization : employs <
-    Insider -- Job : has >
-    Organization }|--|{ Incident : OrgRole
+    Insider -- Job
+    Organization }|--|{ Incident
     Organization }o--o{ Organization : OrgRelationship
-    Insider }o--o| Sponsor : sponsors <
-    Accomplice }o--o| Sponsor : sponsors <
+    Insider }o--o| Sponsor
+    Accomplice }o--o| Sponsor
     Insider |o--o| Organization : owns >
-    Insider -- Collusion : Insider2 <
-    Collusion -- Insider : Insider1 <
+    Insider -- Collusion
+    Collusion -- Insider
     Incident --|{ Impact
     Incident --|{ Target
     Incident --o{ Source
