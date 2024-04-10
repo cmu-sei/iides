@@ -1,0 +1,32 @@
+{
+    "$id": "[REPLACE with full github url to this json file]",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "note",
+    "description": "TODO",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "TODO . Uses pattern 'note--[UUIDv4]'",
+        "pattern": "^note--[UUIDv4]"
+      },
+      "author": {
+        "type": "string",
+        "description": "TODO"
+      },
+      "date": {
+        "type": "datetime",
+        "description": "TODO"
+      },
+      "comment": {
+        "type": "string",
+        "description": "TODO"
+      }
+    },
+    "required": [
+        "id",
+        "author",
+        "date",
+        "comment"
+    ]
+}
