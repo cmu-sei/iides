@@ -1,0 +1,165 @@
+{
+    "$id": "[REPLACE with full github url to this json file]",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "sentence",
+    "description": "TODO",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "TODO . Uses pattern 'sentence--[UUIDv4]'",
+        "pattern": "^sentence--[UUIDv4]"
+      },
+      "sentence_type": {
+        "type": "string",
+        "description": "TODO",
+        "items": {
+            "$ref": "#/$defs/sentence-type-vocab"
+        }
+      },
+      "quantity": {
+        "type": "integer",
+        "description": "TODO"
+      },
+      "metric": {
+        "type": "string",
+        "description": "TODO",
+        "items": {
+            "$ref": "#/$defs/sentence-metric-vocab"
+        }
+      },
+      "concurrency": {
+        "type": "boolean",
+        "description": "TODO"
+      }
+    },
+    "required": [
+        "id",
+        "sentence_type"
+    ],
+    "$defs": {
+        "sentence-type-vocab": {
+            "anyOf": [
+              {
+                "const": "01",
+                "title": "Assessment",
+                "description": "TODO"
+              },
+              {
+                "const": "02",
+                "title": "Community Service",
+                "description": "TODO"
+              },
+              {
+                "const": "03",
+                "title": "Damages",
+                "description": "TODO"
+              },
+              {
+                "const": "04",
+                "title": "Deportation",
+                "description": "TODO"
+              },
+              {
+                "const": "05",
+                "title": "Drug Testing",
+                "description": "TODO"
+              },
+              {
+                "const": "06",
+                "title": "Fine",
+                "description": "TODO"
+              },
+              {
+                "const": "07",
+                "title": "Forfeiture",
+                "description": "TODO"
+              },
+              {
+                "const": "08",
+                "title": "House Arrest",
+                "description": "TODO"
+              },
+              {
+                "const": "09",
+                "title": "Incarceration",
+                "description": "TODO"
+              },
+              {
+                "const": "10",
+                "title": "Injunction",
+                "description": "TODO"
+              },
+              {
+                "const": "11",
+                "title": "Mental Health Treatment",
+                "description": "TODO"
+              },
+              {
+                "const": "12",
+                "title": "No Internet Access",
+                "description": "TODO"
+              },
+              {
+                "const": "13",
+                "title": "Probation",
+                "description": "TODO"
+              },
+              {
+                "const": "14",
+                "title": "Restitution",
+                "description": "TODO"
+              },
+              {
+                "const": "15",
+                "title": "Restraining Order",
+                "description": "TODO"
+              },
+              {
+                "const": "16",
+                "title": "Special Assessment",
+                "description": "TODO"
+              },
+              {
+                "const": "17",
+                "title": "Substance Abuse Treatment",
+                "description": "TODO"
+              },
+              {
+                "const": "18",
+                "title": "Supervised Release",
+                "description": "TODO"
+              }   
+            ]
+        },
+        "sentence-metric-vocab": {
+          "anyOf": [
+            {
+              "const": "H",
+              "title": "Hour(s)",
+              "description": "TODO"
+            },
+            {
+              "const": "D",
+              "title": "Day(s)",
+              "description": "TODO"
+            },
+            {
+              "const": "M",
+              "title": "Month(s)",
+              "description": "TODO"
+            },
+            {
+              "const": "Y",
+              "title": "Year(s)",
+              "description": "TODO"
+            },
+            {
+              "const": "D",
+              "title": "Dollar(s)",
+              "description": "TODO"
+            }
+          ]
+      }
+    }
+}
