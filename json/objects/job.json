@@ -1,0 +1,1022 @@
+{
+    "$id": "[REPLACE with full github url to this json file]",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "job",
+    "description": "TODO",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "TODO . Uses pattern 'job--[UUIDv4]'",
+            "pattern": "^job--[UUIDv4]"
+        },
+        "job_function": {
+            "type": "string",
+            "description": "TODO",
+            "items": {
+                "$ref": "#/$defs/job-function-vocab"
+            }
+        },
+        "occupation": {
+            "type": "string",
+            "description": "TODO",
+            "items": {
+                "$ref": "#/$defs/occupation-vocab"
+            }
+        },
+        "title": {
+            "type": "string",
+            "description": "TODO"
+        },
+        "position_technical": {
+            "type": "boolean",
+            "description": "TODO"
+        },
+        "access_authorization": {
+            "type": "string",
+            "description": "TODO",
+            "items": {
+                "$ref": "#/$defs/access-auth-vocab"
+            }
+        },
+        "employment_type": {
+            "type": "string",
+            "description": "TODO",
+            "items": {
+                "$ref": "#/$defs/employment-type-vocab"
+            }
+        },
+        "hire_date": {
+            "type": "date",
+            "description": "TODO"
+        },
+        "departure_date": {
+            "type": "date",
+            "description": "TODO"
+        },
+        "tenure": {
+            "type": "timedelta",
+            "description": "TODO"
+        },
+        "comment": {
+            "type": "string",
+            "description": "TODO"
+        }
+    },
+    "required": [
+        "id"
+    ],
+    "$defs": {
+        "job-function-vocab": {
+            "anyOf": [
+                {
+                    "const": "1",
+                    "title": "Accounting Service",
+                    "description": "TODO"
+                },
+                {
+                    "const": "2",
+                    "title": "Architecture and Engineering",
+                    "description": "TODO"
+                },
+                {
+                    "const": "3",
+                    "title": "Arts, Design, Entertainment, Sports, and Media",
+                    "description": "TODO"
+                },
+                {
+                    "const": "4",
+                    "title": "Building and Grounds Cleaning and Maintenance",
+                    "description": "TODO"
+                },
+                {
+                    "const": "5",
+                    "title": "Business and Financial Operations",
+                    "description": "TODO"
+                },
+                {
+                    "const": "6",
+                    "title": "Community and Social Service",
+                    "description": "TODO"
+                },
+                {
+                    "const": "7",
+                    "title": "Computer",
+                    "description": "TODO"
+                },
+                {
+                    "const": "8",
+                    "title": "Educational Instruction",
+                    "description": "TODO"
+                },
+                {
+                    "const": "9",
+                    "title": "Food Preparation and Serving Related",
+                    "description": "TODO"
+                },
+                {
+                    "const": "10",
+                    "title": "Healthcare Practitioner",
+                    "description": "TODO"
+                },
+                {
+                    "const": "11",
+                    "title": "Healthcare Support",
+                    "description": "TODO"
+                },
+                {
+                    "const": "12",
+                    "title": "Installation, Maintenance, and Repair",
+                    "description": "TODO"
+                },
+                {
+                    "const": "13",
+                    "title": "Legal",
+                    "description": "TODO"
+                },
+                {
+                    "const": "14",
+                    "title": "Life, Physical, and Social Science",
+                    "description": "TODO"
+                },
+                {
+                    "const": "15",
+                    "title": "Management",
+                    "description": "TODO"
+                },
+                {
+                    "const": "16",
+                    "title": "Military Specific",
+                    "description": "TODO"
+                },
+                {
+                    "const": "17",
+                    "title": "None",
+                    "description": "TODO"
+                },
+                {
+                    "const": "18",
+                    "title": "Office and Administrative Support",
+                    "description": "TODO"
+                },
+                {
+                    "const": "19",
+                    "title": "Production",
+                    "description": "TODO"
+                },
+                {
+                    "const": "20",
+                    "title": "Protective Service",
+                    "description": "TODO"
+                },
+                {
+                    "const": "21",
+                    "title": "Sales and Related",
+                    "description": "TODO"
+                },
+                {
+                    "const": "22",
+                    "title": "Student",
+                    "description": "TODO"
+                },
+                {
+                    "const": "23",
+                    "title": "Transportation and Material Moving",
+                    "description": "TODO"
+                },
+                {
+                    "const": "25",
+                    "title": "Other",
+                    "description": "TODO"
+                }
+            ]
+        },
+        "occupation-vocab": {
+            "anyOf": [
+                {
+                    "const": "1.1",
+                    "title": "Accountants",
+                    "description": "TODO"
+                },
+                {
+                    "const": "1.2",
+                    "title": "Accounting Clerks",
+                    "description": "TODO"
+                },
+                {
+                    "const": "1.3",
+                    "title": "Accounts Payable Clerks",
+                    "description": "TODO"
+                },
+                {
+                    "const": "1.4",
+                    "title": "Bookkeepers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "2.1",
+                    "title": "Chemical Engineering",
+                    "description": "TODO"
+                },
+                {
+                    "const": "2.2",
+                    "title": "Electrical and Electronic Engineering",
+                    "description": "TODO"
+                },
+                {
+                    "const": "2.3",
+                    "title": "Electrical Engineers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "2.4",
+                    "title": "Engineers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "2.5",
+                    "title": "Hardware Engineers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "2.6",
+                    "title": "Mechanical Engineers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "3.1",
+                    "title": "Communications",
+                    "description": "TODO"
+                },
+                {
+                    "const": "3.2",
+                    "title": "Editors",
+                    "description": "TODO"
+                },
+                {
+                    "const": "3.3",
+                    "title": "Graphic Designers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "3.4",
+                    "title": "Lighting Technicians",
+                    "description": "TODO"
+                },
+                {
+                    "const": "3.5",
+                    "title": "News Analysts, Reporters, and Journalists",
+                    "description": "TODO"
+                },
+                {
+                    "const": "4.1",
+                    "title": "Building Cleaning Workers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "4.2",
+                    "title": "Grounds Maintenance Workers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "5.1",
+                    "title": "Auditors",
+                    "description": "TODO"
+                },
+                {
+                    "const": "5.2",
+                    "title": "Budget Analysts",
+                    "description": "TODO"
+                },
+                {
+                    "const": "5.3",
+                    "title": "Claims Adjuster, Examiners, and Investigators",
+                    "description": "TODO"
+                },
+                {
+                    "const": "5.4",
+                    "title": "Compliance Officers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "5.5",
+                    "title": "Consumer Lending",
+                    "description": "TODO"
+                },
+                {
+                    "const": "5.6",
+                    "title": "Credit Analysts",
+                    "description": "TODO"
+                },
+                {
+                    "const": "5.7",
+                    "title": "Financial Advisors",
+                    "description": "TODO"
+                },
+                {
+                    "const": "5.8",
+                    "title": "Financial and Investment Analysts",
+                    "description": "TODO"
+                },
+                {
+                    "const": "5.9",
+                    "title": "Financial  Specialists",
+                    "description": "TODO"
+                },
+                {
+                    "const": "5.10",
+                    "title": "Human Resources Specialists",
+                    "description": "TODO"
+                },
+                {
+                    "const": "5.11",
+                    "title": "Loan Officers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "5.12",
+                    "title": "Management Analysts",
+                    "description": "TODO"
+                },
+                {
+                    "const": "5.13",
+                    "title": "Marketing Specialists",
+                    "description": "TODO"
+                },
+                {
+                    "const": "5.14",
+                    "title": "Payroll and Timekeeping Clerks",
+                    "description": "TODO"
+                },
+                {
+                    "const": "5.15",
+                    "title": "Personal Financial Advisors",
+                    "description": "TODO"
+                },
+                {
+                    "const": "5.16",
+                    "title": "Project Management Specialists",
+                    "description": "TODO"
+                },
+                {
+                    "const": "5.17",
+                    "title": "Revenue Agents",
+                    "description": "TODO"
+                },
+                {
+                    "const": "5.18",
+                    "title": "Tax Preparers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "6.1",
+                    "title": "Child, Family, and Social Workers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "6.2",
+                    "title": "Clergy",
+                    "description": "TODO"
+                },
+                {
+                    "const": "6.3",
+                    "title": "Counselors",
+                    "description": "TODO"
+                },
+                {
+                    "const": "6.4",
+                    "title": "Educational Advisors",
+                    "description": "TODO"
+                },
+                {
+                    "const": "6.5",
+                    "title": "Probation Officers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "7.1",
+                    "title": "Computer Network Architects",
+                    "description": "TODO"
+                },
+                {
+                    "const": "7.2",
+                    "title": "Computer Network Support Specialists",
+                    "description": "TODO"
+                },
+                {
+                    "const": "7.3",
+                    "title": "Computer Programmers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "7.4",
+                    "title": "Computer Systems Analyst",
+                    "description": "TODO"
+                },
+                {
+                    "const": "7.5",
+                    "title": "Computer User Support Specialists",
+                    "description": "TODO"
+                },
+                {
+                    "const": "7.6",
+                    "title": "Data Scientists",
+                    "description": "TODO"
+                },
+                {
+                    "const": "7.7",
+                    "title": "Database Administrators",
+                    "description": "TODO"
+                },
+                {
+                    "const": "7.8",
+                    "title": "Database Specialists",
+                    "description": "TODO"
+                },
+                {
+                    "const": "7.9",
+                    "title": "Information Technology",
+                    "description": "TODO"
+                },
+                {
+                    "const": "7.10",
+                    "title": "Network and Computer Systems Administrators",
+                    "description": "TODO"
+                },
+                {
+                    "const": "7.11",
+                    "title": "Network Engineer",
+                    "description": "TODO"
+                },
+                {
+                    "const": "7.12",
+                    "title": "Software Developers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "7.13",
+                    "title": "Website and Digital Interface Designers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "8.1",
+                    "title": "Computer Science Professors",
+                    "description": "TODO"
+                },
+                {
+                    "const": "8.2",
+                    "title": "Educational Teachers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "9.1",
+                    "title": "Food Preparation",
+                    "description": "TODO"
+                },
+                {
+                    "const": "9.2",
+                    "title": "Food Servers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "9.3",
+                    "title": "Servers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "10.1",
+                    "title": "Diagnostic Medical Sonographers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "10.2",
+                    "title": "Gynecologists",
+                    "description": "TODO"
+                },
+                {
+                    "const": "10.3",
+                    "title": "Medical Records Specialists",
+                    "description": "TODO"
+                },
+                {
+                    "const": "10.4",
+                    "title": "Medical Technicians",
+                    "description": "TODO"
+                },
+                {
+                    "const": "10.5",
+                    "title": "Nursing",
+                    "description": "TODO"
+                },
+                {
+                    "const": "10.6",
+                    "title": "Occupational Therapists",
+                    "description": "TODO"
+                },
+                {
+                    "const": "10.7",
+                    "title": "Optometrists",
+                    "description": "TODO"
+                },
+                {
+                    "const": "10.8",
+                    "title": "Pharmacists",
+                    "description": "TODO"
+                },
+                {
+                    "const": "10.9",
+                    "title": "Physicians",
+                    "description": "TODO"
+                },
+                {
+                    "const": "10.10",
+                    "title": "Radiologists",
+                    "description": "TODO"
+                },
+                {
+                    "const": "10.11",
+                    "title": "Respiratory Therapists",
+                    "description": "TODO"
+                },
+                {
+                    "const": "10.12",
+                    "title": "Speech Language Pathologists",
+                    "description": "TODO"
+                },
+                {
+                    "const": "11.1",
+                    "title": "Healthcare Support Workers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "12.1",
+                    "title": "First-Line Supervisors of Mechanics, Installers, and Repairers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "12.2",
+                    "title": "Installations, Maintenance, and Repair Helpers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "13.1",
+                    "title": "Administrative Law Judges",
+                    "description": "TODO"
+                },
+                {
+                    "const": "13.2",
+                    "title": "Lawyers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "14.1",
+                    "title": "Biological Scientists",
+                    "description": "TODO"
+                },
+                {
+                    "const": "14.2",
+                    "title": "Chemists",
+                    "description": "TODO"
+                },
+                {
+                    "const": "14.3",
+                    "title": "Hydrologists",
+                    "description": "TODO"
+                },
+                {
+                    "const": "14.4",
+                    "title": "Political Scientists",
+                    "description": "TODO"
+                },
+                {
+                    "const": "14.5",
+                    "title": "Psychologists",
+                    "description": "TODO"
+                },
+                {
+                    "const": "14.6",
+                    "title": "Scientists",
+                    "description": "TODO"
+                },
+                {
+                    "const": "14.7",
+                    "title": "Social Scientists",
+                    "description": "TODO"
+                },
+                {
+                    "const": "15.1",
+                    "title": "Administrative Services Manager",
+                    "description": "TODO"
+                },
+                {
+                    "const": "15.2",
+                    "title": "Architectural and Engineering Managers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "15.3",
+                    "title": "Chief Executives",
+                    "description": "TODO"
+                },
+                {
+                    "const": "15.4",
+                    "title": "Computer and Information Systems Managers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "15.5",
+                    "title": "Construction Managers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "15.6",
+                    "title": "Financial Managers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "15.7",
+                    "title": "Food Service Managers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "15.8",
+                    "title": "General and Operations Managers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "15.9",
+                    "title": "Human Resources Managers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "15.10",
+                    "title": "Industrial Production Managers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "15.11",
+                    "title": "Legislators",
+                    "description": "TODO"
+                },
+                {
+                    "const": "15.12",
+                    "title": "Management",
+                    "description": "TODO"
+                },
+                {
+                    "const": "15.13",
+                    "title": "Marketing Managers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "15.14",
+                    "title": "Medical and Health Services Manager",
+                    "description": "TODO"
+                },
+                {
+                    "const": "15.15",
+                    "title": "Office Managers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "15.16",
+                    "title": "Property, Real Estate, and Community Association Managers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "15.17",
+                    "title": "Public Relations Managers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "15.18",
+                    "title": "Purchasing Managers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "15.19",
+                    "title": "Sales Managers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "15.20",
+                    "title": "Training and Development Managers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "15.21",
+                    "title": "Transportation Managers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "16.1",
+                    "title": "Intelligence",
+                    "description": "TODO"
+                },
+                {
+                    "const": "16.2",
+                    "title": "Special Forces",
+                    "description": "TODO"
+                },
+                {
+                    "const": "18.1",
+                    "title": "Administrative Workers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "18.2",
+                    "title": "Bank Tellers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "18.3",
+                    "title": "Court, Municipal, and License Clerks",
+                    "description": "TODO"
+                },
+                {
+                    "const": "18.4",
+                    "title": "Customer Service Representatives",
+                    "description": "TODO"
+                },
+                {
+                    "const": "18.5",
+                    "title": "Data Entry Workers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "18.6",
+                    "title": "Dispatchers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "18.7",
+                    "title": "Eligibility Interviewers, Government Programs",
+                    "description": "TODO"
+                },
+                {
+                    "const": "18.8",
+                    "title": "File Clerks",
+                    "description": "TODO"
+                },
+                {
+                    "const": "18.9",
+                    "title": "Financial Clerks",
+                    "description": "TODO"
+                },
+                {
+                    "const": "18.10",
+                    "title": "First-Line Supervisors of Office and Administrative Support Workers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "18.11",
+                    "title": "Insurance Claims and Policy Processing Clerks",
+                    "description": "TODO"
+                },
+                {
+                    "const": "18.12",
+                    "title": "Loan Interviewers and Clerks",
+                    "description": "TODO"
+                },
+                {
+                    "const": "18.13",
+                    "title": "Meter Readers, Utilities",
+                    "description": "TODO"
+                },
+                {
+                    "const": "18.14",
+                    "title": "Office Administrative Services",
+                    "description": "TODO"
+                },
+                {
+                    "const": "18.15",
+                    "title": "Office Clerks",
+                    "description": "TODO"
+                },
+                {
+                    "const": "18.16",
+                    "title": "Payroll and Timekeeping Clerks",
+                    "description": "TODO"
+                },
+                {
+                    "const": "18.17",
+                    "title": "Payroll Supervisors",
+                    "description": "TODO"
+                },
+                {
+                    "const": "18.18",
+                    "title": "Postal Service Clerks",
+                    "description": "TODO"
+                },
+                {
+                    "const": "18.19",
+                    "title": "Receptionists",
+                    "description": "TODO"
+                },
+                {
+                    "const": "18.20",
+                    "title": "Secretaries and Administrative Assistants",
+                    "description": "TODO"
+                },
+                {
+                    "const": "18.21",
+                    "title": "Shipping, Receiving and Inventory Clerks",
+                    "description": "TODO"
+                },
+                {
+                    "const": "19.1",
+                    "title": "Computer Numerically Controlled Tool Programmers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "19.2",
+                    "title": "Inspectors, Testers, Sorters, Samplers, and Weighers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "20.1",
+                    "title": "Correctional Officers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "20.2",
+                    "title": "Detectives and Criminal Investigators",
+                    "description": "TODO"
+                },
+                {
+                    "const": "20.3",
+                    "title": "Firefighters",
+                    "description": "TODO"
+                },
+                {
+                    "const": "20.4",
+                    "title": "Police and Sheriffs Patrol Officers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "20.5",
+                    "title": "Police Officers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "20.6",
+                    "title": "Security Guards",
+                    "description": "TODO"
+                },
+                {
+                    "const": "20.7",
+                    "title": "Special Agents",
+                    "description": "TODO"
+                },
+                {
+                    "const": "21.1",
+                    "title": "Cashiers",
+                    "description": "TODO"
+                },
+                {
+                    "const": "21.2",
+                    "title": "Financial Service Sales Agents",
+                    "description": "TODO"
+                },
+                {
+                    "const": "21.3",
+                    "title": "Insurance Sales Agents",
+                    "description": "TODO"
+                },
+                {
+                    "const": "21.4",
+                    "title": "Real Estate Agents",
+                    "description": "TODO"
+                },
+                {
+                    "const": "21.1",
+                    "title": "Sales",
+                    "description": "TODO"
+                },
+                {
+                    "const": "22.1",
+                    "title": "Student",
+                    "description": "TODO"
+                },
+                {
+                    "const": "23.1",
+                    "title": "Transportation Inspectors",
+                    "description": "TODO"
+                },
+                {
+                    "const": "23.2",
+                    "title": "Courier",
+                    "description": "TODO"
+                },
+                {
+                    "const": "25.1",
+                    "title": "Other",
+                    "description": "TODO"
+                }
+            ]
+        },
+        "access-auth-vocab": {
+            "anyOf": [
+                {
+                    "const": "REV",
+                    "title": "Access Revoked",
+                    "description": "TODO"
+                },
+                {
+                    "const": "ADM",
+                    "title": "Administrator/Root",
+                    "description": "TODO"
+                },
+                {
+                    "const": "AAD",
+                    "title": "Authorized Account & Data",
+                    "description": "TODO"
+                },
+                {
+                    "const": "AAC",
+                    "title": "Authorized Account Only",
+                    "description": "TODO"
+                },
+                {
+                    "const": "APU",
+                    "title": "Authorized Privileged User",
+                    "description": "TODO"
+                },
+                {
+                    "const": "AUU",
+                    "title": "Authorized Unprivileged User",
+                    "description": "TODO"
+                },
+                {
+                    "const": "FMR",
+                    "title": "Former Employee, Access not Deactivated",
+                    "description": "TODO"
+                },
+                {
+                    "const": "NGA",
+                    "title": "Never Given Access",
+                    "description": "TODO"
+                },
+                {
+                    "const": "UNA",
+                    "title": "Unauthorized",
+                    "description": "TODO"
+                }
+            ]
+        },
+        "employment-type-vocab": {
+            "anyOf": [
+                {
+                    "const": "CCT",
+                    "title": "Current Contractor",
+                    "description": "TODO"
+                },
+                {
+                    "const": "CFT",
+                    "title": "Current Full-time",
+                    "description": "TODO"
+                },
+                {
+                    "const": "CPT",
+                    "title": "Current Part-time",
+                    "description": "TODO"
+                },
+                {
+                    "const": "INT",
+                    "title": "Intern",
+                    "description": "TODO"
+                },
+                {
+                    "const": "FCT",
+                    "title": "Former Contractor",
+                    "description": "TODO"
+                },
+                {
+                    "const": "FFT",
+                    "title": "Former Full Time",
+                    "description": "TODO"
+                },
+                {
+                    "const": "FPT",
+                    "title": "Former Part Time",
+                    "description": "TODO"
+                },
+                {
+                    "const": "TMP",
+                    "title": "Temporary Employee",
+                    "description": "TODO"
+                },
+                {
+                    "const": "VOL",
+                    "title": "Volunteer",
+                    "description": "TODO"
+                },
+                {
+                    "const": "OTH",
+                    "title": "Other",
+                    "description": "TODO"
+                }
+            ]
+        }
+    }
+}
