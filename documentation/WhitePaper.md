@@ -14,6 +14,8 @@ Version: 0.1, Revision 1
 - ISO 3166-1 alpha-2 country codes
 - Indicator Ontology
 - ATT&CK and InT ATT&CK
+- STIX/TAXII
+- MISP
 - RMM
 
 
