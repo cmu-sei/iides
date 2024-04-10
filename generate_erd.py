@@ -52,7 +52,7 @@ for object in listdir("json/objects"):
 
         file_lines.append("}")
 
-f = open("UML/source/iides_auto_gen.wsd", "w")
+f = open("UML/source/iides.wsd", "w")
 f.writelines(file_lines)
 
 # Add relationships
