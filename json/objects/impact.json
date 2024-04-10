@@ -1,0 +1,129 @@
+{
+    "$id": "[REPLACE with full github url to this json file]",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "impact",
+    "description": "TODO",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "TODO . Uses pattern 'impact--[UUIDv4]'",
+        "pattern": "^impact--[UUIDv4]"
+      },
+      "high": {
+        "type": "integer",
+        "description": "TODO"
+      },
+      "low": {
+        "type": "integer",
+        "description": "TODO"
+      },
+      "metric": {
+        "type": "string",
+        "description": "TODO",
+        "items": {
+            "$ref": "#/$defs/impact-metric-vocab"
+        }
+      },
+      "estimated": {
+        "type": "boolean",
+        "description": "TODO"
+      },
+      "comment": {
+        "type": "string",
+        "description": "TODO"
+      }
+    },
+    "required": [
+        "id",
+        "high",
+        "metric",
+        "estimated"
+    ],
+    "$defs": {
+        "impact-metric-vocab": {
+            "anyOf": [
+              {
+                "const": "01",
+                "title": "Accounts",
+                "description": "TODO"
+              },
+              {
+                "const": "02",
+                "title": "Credit card numbers",
+                "description": "TODO"
+              },
+              {
+                "const": "03",
+                "title": "Customers",
+                "description": "TODO"
+              },
+              {
+                "const": "04",
+                "title": "Documents",
+                "description": "TODO"
+              },
+              {
+                "const": "05",
+                "title": "Dollars",
+                "description": "TODO"
+              },
+              {
+                "const": "06",
+                "title": "Employees",
+                "description": "TODO"
+              },
+              {
+                "const": "07",
+                "title": "Files",
+                "description": "TODO"
+              },
+              {
+                "const": "08",
+                "title": "Hours",
+                "description": "TODO"
+              },
+              {
+                "const": "09",
+                "title": "Pages",
+                "description": "TODO"
+              },
+              {
+                "const": "10",
+                "title": "Person-hours",
+                "description": "TODO"
+              },
+              {
+                "const": "11",
+                "title": "Identities",
+                "description": "TODO"
+              },
+              {
+                "const": "12",
+                "title": "Items",
+                "description": "TODO"
+              },
+              {
+                "const": "13",
+                "title": "Systems",
+                "description": "TODO"
+              },
+              {
+                "const": "14",
+                "title": "Records",
+                "description": "TODO"
+              },
+              {
+                "const": "15",
+                "title": "Drugs",
+                "description": "TODO"
+              },
+              {
+                "const": "16",
+                "title": "Trade Secrets",
+                "description": "TODO"
+              }
+            ]
+        }
+    }
+}
