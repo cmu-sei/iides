@@ -10,14 +10,19 @@ Version: 0.1, Revision 1
 - researchers, analysts, risk managers, practitioners, investigators
 
 ## Related Work
+- NAICS
+- ISO 3166-1 alpha-2 country codes
+- Indicator Ontology
+- ATT&CK and InT ATT&CK
+- RMM
+
 
 ## IIDES
 - Guiding principles
 - Architecture
 - Components
 
-- NAICS
-- ISO 3166-1 alpha-2 country codes
+
 
 ## Use Cases
 
