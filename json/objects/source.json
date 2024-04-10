@@ -1,0 +1,119 @@
+{
+    "$id": "[REPLACE with full github url to this json file]",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "source",
+    "description": "TODO",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "TODO . Uses pattern 'source--[UUIDv4]'",
+        "pattern": "^source--[UUIDv4]"
+      },
+      "title": {
+        "type": "date",
+        "description": "TODO"
+      },
+      "source_type": {
+        "type": "string",
+        "description": "TODO",
+        "items": {
+            "$ref": "#/$defs/source-type-vocab"
+        }
+      },
+      "file_type": {
+        "type": "string",
+        "description": "TODO",
+        "items": {
+            "$ref": "#/$defs/source-file-type-vocab"
+        }
+      },
+      "date": {
+        "type": "date",
+        "description": "TODO"
+      },
+      "public": {
+        "type": "boolean",
+        "description": "TODO"
+      },
+      "document": {
+        "type": "string",
+        "description": "TODO"
+      }
+    },
+    "required": [
+        "id",
+        "title"
+    ],
+    "$defs": {
+        "source-type-vocab": {
+            "anyOf": [
+              {
+                "const": "01",
+                "title": "Court Document",
+                "description": "TODO"
+              },
+              {
+                "const": "02",
+                "title": "DOJ Press Release",
+                "description": "TODO"
+              },
+              {
+                "const": "03",
+                "title": "Investigator Notes",
+                "description": "TODO"
+              },
+              {
+                "const": "04",
+                "title": "Letter",
+                "description": "TODO"
+              },
+              {
+                "const": "05",
+                "title": "Lexis CourtLink",
+                "description": "TODO"
+              },
+              {
+                "const": "06",
+                "title": "Logs",
+                "description": "TODO"
+              },
+              {
+                "const": "07",
+                "title": "Media",
+                "description": "TODO"
+              },
+              {
+                "const": "08",
+                "title": "Organization Interview",
+                "description": "TODO"
+              },
+              {
+                "const": "09",
+                "title": "Personal Website",
+                "description": "TODO"
+              },
+              {
+                "const": "10",
+                "title": "Insider Interview",
+                "description": "TODO"
+              },
+              {
+                "const": "99",
+                "title": "Other",
+                "description": "TODO"
+              }
+            ]
+        },
+        "source-file-type-vocab": {
+            "enum": [
+              "log",
+              "pdf",
+              "txt",
+              "docx",
+              "png",
+              "xlsx"
+            ]
+        }
+    }
+}
