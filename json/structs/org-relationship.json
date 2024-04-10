@@ -1,0 +1,63 @@
+{
+	"$id": "[REPLACE with full github url to this json file]",
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "org-relationship",
+	"description": "TODO",
+	"type": "object",
+	"properties": {
+		"id": {
+			"type": "string",
+			"description": "TODO . Uses pattern 'orgrelationship--[UUIDv4]'",
+			"pattern": "^orgrelationship--[UUIDv4]"
+		},
+        "org1": {
+			"type": "string",
+			"description": "TODO . Uses pattern 'orgrelationship--[UUIDv4]'",
+			"pattern": "^organization--[UUIDv4]"
+		},
+        "org2": {
+			"type": "string",
+			"description": "TODO . Uses pattern 'orgrelationship--[UUIDv4]'",
+			"pattern": "^organization--[UUIDv4]"
+		},
+        "relationship": {
+			"type": "string",
+			"description": "TODO",
+			"items": {
+                "$ref": "#/$defs/org-relationship-vocab"
+              }
+		}
+	},
+	"required": [
+		"id",
+        "org1",
+        "org2",
+        "relationship"
+	],
+	"$defs": {
+		"org-relationship-vocab": {
+			"anyOf": [
+				{
+					"const": "C",
+					"title": "Competitor",
+					"description": "TODO"
+				},
+				{
+					"const": "V",
+					"title": "Vendor",
+					"description": "TODO"
+				},
+				{
+					"const": "U",
+					"title": "Unknown",
+					"description": "TODO"
+				},
+				{
+					"const": "O",
+					"title": "Other",
+					"description": "TODO"
+				}
+			]
+		}
+	}
+}

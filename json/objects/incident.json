@@ -1,0 +1,203 @@
+{
+  "$id": "[REPLACE with full github url to this json file]",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "incident",
+  "description": "TODO description of incident",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "TODO . Uses pattern 'incident--[UUIDv4]'",
+      "pattern": "^incident--[UUIDv4]"
+    },
+    "cia_effect": {
+      "type": "array",
+      "description": "TODO",
+      "items": {
+        "$ref": "#/$defs/cia-vocab"
+      },
+      "minItems": 1
+    },
+    "incident_type": {
+      "type": "array",
+      "description": "TODO",
+      "items": {
+        "$ref": "#/$defs/incident-type-vocab"
+      },
+      "minItems": 1
+    },
+    "outcome": {
+      "type": "array",
+      "description": "TODO",
+      "items": {
+        "$ref": "#/$defs/outcome-type-vocab"
+      },
+      "minItems": 1
+    },
+    "status": {
+      "type": "string",
+      "description": "TODO",
+      "items": {
+        "$ref": "#/$defs/incident-status-vocab"
+      }
+    },
+    "summary": {
+      "type": "string",
+      "description": "TODO"
+    },
+    "brief_summary": {
+      "type": "string",
+      "description": "TODO"
+    },
+    "comment": {
+      "type": "string",
+      "description": "TODO"
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "$defs": {
+    "incident-status-vocab": {
+      "anyOf": [
+        {
+          "const": "P",
+          "title": "In Progress",
+          "description": "TODO"
+        },
+        {
+          "const": "I",
+          "title": "Under Investigation",
+          "description": "TODO"
+        },
+        {
+          "const": "L",
+          "title": "In Legal Proceedings",
+          "description": "TODO"
+        },
+        {
+          "const": "C",
+          "title": "Complete",
+          "description": "TODO"
+        }
+      ]
+    },
+    "cia-vocab": {
+      "anyOf": [
+        {
+          "const": "C",
+          "title": "Confidentiality",
+          "description": "TODO"
+        },
+        {
+          "const": "I",
+          "title": "Integrity",
+          "description": "TODO"
+        },
+        {
+          "const": "A",
+          "title": "Availability",
+          "description": "TODO"
+        }
+      ]
+    },
+    "outcome-type-vocab": {
+      "anyOf": [
+        {
+          "const": "BR",
+          "title": "Bankruptcy",
+          "description": "TODO"
+        },
+        {
+          "const": "DC",
+          "title": "Data Created",
+          "description": "TODO"
+        },
+        {
+          "const": "DD",
+          "title": "Data Deleted",
+          "description": "TODO"
+        },
+        {
+          "const": "DR",
+          "title": "Data Read",
+          "description": "TODO"
+        },
+        {
+          "const": "DS",
+          "title": "Data Stolen",
+          "description": "TODO"
+        },
+        {
+          "const": "MD",
+          "title": "Monetary Damages",
+          "description": "TODO"
+        },
+        {
+          "const": "ML",
+          "title": "Monetary Losses",
+          "description": "TODO"
+        },
+        {
+          "const": "MS",
+          "title": "Money Stolen",
+          "description": "TODO"
+        },
+        {
+          "const": "NN",
+          "title": "No net negative",
+          "description": "TODO"
+        },
+        {
+          "const": "OT",
+          "title": "Other",
+          "description": "TODO"
+        },
+        {
+          "const": "RO",
+          "title": "Restituion Ordered",
+          "description": "TODO"
+        },
+        {
+          "const": "SI",
+          "title": "Safety Impact",
+          "description": "TODO"
+        },
+        {
+          "const": "UK",
+          "title": "Unknown",
+          "description": "TODO"
+        },
+        {
+          "const": "IT",
+          "title": "Used in Identity Theft",
+          "description": "TODO"
+        }
+      ]
+    },
+    "incident-type-vocab": {
+      "anyOf": [
+        {
+          "const": "F",
+          "title": "Fraud",
+          "description": "TODO"
+        },
+        {
+          "const": "S",
+          "title": "Sabotage",
+          "description": "TODO"
+        },
+        {
+          "const": "T",
+          "title": "Theft of IP",
+          "description": "TODO"
+        },
+        {
+          "const": "M",
+          "title": "Misuse",
+          "description": "TODO"
+        }
+      ]
+    }
+  }
+}
