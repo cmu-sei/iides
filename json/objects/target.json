@@ -1,0 +1,590 @@
+{
+    "$id": "[REPLACE with full github url to this json file]",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "target",
+    "description": "TODO",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "TODO . Uses pattern 'target--[UUIDv4]'",
+        "pattern": "^target--[UUIDv4]"
+      },
+      "asset_type": {
+        "type": "string",
+        "description": "TODO",
+        "items": {
+            "$ref": "#/$defs/target-asset-vocab"
+        }
+      },
+      "category": {
+        "type": "string",
+        "description": "TODO",
+        "items": {
+            "$ref": "#/$defs/target-category-vocab"
+        }
+      },
+      "subcategory": {
+        "type": "string",
+        "description": "TODO",
+        "items": {
+            "$ref": "#/$defs/target-subcategory-vocab"
+        }
+      },
+      "format": {
+        "type": "string",
+        "description": "TODO",
+        "items": {
+            "$ref": "#/$defs/target-format-vocab"
+        }
+      },
+      "owner": {
+        "type": "string",
+        "description": "TODO",
+        "items": {
+            "$ref": "#/$defs/target-owner-vocab"
+        }
+      },
+      "sensitivity": {
+        "type": "string",
+        "description": "TODO",
+        "items": {
+            "$ref": "#/$defs/target-sensitivity-vocab"
+        }
+      },
+      "description": {
+        "type": "string",
+        "description": "TODO"
+      }
+    },
+    "required": [
+        "id",
+        "asset_type",
+        "category",
+        "subcategory",
+        "format",
+        "owner",
+        "sensitivity"
+    ],
+    "$defs": {
+        "target-asset-vocab": {
+            "anyOf": [
+              {
+                "const": "1",
+                "title": "Facilities",
+                "description": "TODO"
+              },
+              {
+                "const": "2",
+                "title": "Information",
+                "description": "TODO"
+              },
+              {
+                "const": "3",
+                "title": "Money",
+                "description": "TODO"
+              },
+              {
+                "const": "4",
+                "title": "People",
+                "description": "TODO"
+              },
+              {
+                "const": "5",
+                "title": "Technology",
+                "description": "TODO"
+              },
+              {
+                "const": "6",
+                "title": "Other",
+                "description": "TODO"
+              }
+            ]
+        },
+        "target-category-vocab": {
+            "anyOf": [
+              {
+                "const": "1.1",
+                "title": "Physical Property - Non-digital assets",
+                "description": "TODO"
+              },
+              {
+                "const": "2.1",
+                "title": "Product Information",
+                "description": "TODO"
+              },
+              {
+                "const": "2.2",
+                "title": "Business Plans",
+                "description": "TODO"
+              },
+              {
+                "const": "2.3",
+                "title": "Government/Law Enforcement Plans",
+                "description": "TODO"
+              },
+              {
+                "const": "3.1",
+                "title": "Money",
+                "description": "TODO"
+              },
+              {
+                "const": "4.1",
+                "title": "Customer Data",
+                "description": "TODO"
+              },
+              {
+                "const": "4.2",
+                "title": "Employee Data",
+                "description": "TODO"
+              },
+              {
+                "const": "4.3",
+                "title": "Identification",
+                "description": "TODO"
+              },
+              {
+                "const": "4.4",
+                "title": "Medical Information",
+                "description": "TODO"
+              },
+              {
+                "const": "4.5",
+                "title": "Communication Systems",
+                "description": "TODO"
+              },
+              {
+                "const": "5.1",
+                "title": "Network or Systems",
+                "description": "TODO"
+              },
+              {
+                "const": "5.2",
+                "title": "Software",
+                "description": "TODO"
+              },
+              {
+                "const": "5.3",
+                "title": "Passwords",
+                "description": "TODO"
+              },
+              {
+                "const": "6.1",
+                "title": "Unknown",
+                "description": "TODO"
+              }
+            ]
+        },
+        "target-subcategory-vocab": {
+            "anyOf": [
+              {
+                "const": "1.1.1",
+                "title": "Blueprint Plans",
+                "description": "TODO"
+              },
+              {
+                "const": "1.1.2",
+                "title": "Facilities",
+                "description": "TODO"
+              },
+              {
+                "const": "1.1.3",
+                "title": "Physical Products",
+                "description": "TODO"
+              },
+              {
+                "const": "2.1.1",
+                "title": "Product Information",
+                "description": "TODO"
+              },
+              {
+                "const": "2.1.2",
+                "title": "Proprietary Information",
+                "description": "TODO"
+              },
+              {
+                "const": "2.2.1",
+                "title": "Business Plans",
+                "description": "TODO"
+              },
+              {
+                "const": "2.2.2",
+                "title": "Business System",
+                "description": "TODO"
+              },
+              {
+                "const": "2.2.3",
+                "title": "Commerce information",
+                "description": "TODO"
+              },
+              {
+                "const": "2.2.4",
+                "title": "Contract Information",
+                "description": "TODO"
+              },
+              {
+                "const": "2.2.5",
+                "title": "Design and Plans",
+                "description": "TODO"
+              },
+              {
+                "const": "2.2.6",
+                "title": "Payroll Information",
+                "description": "TODO"
+              },
+              {
+                "const": "2.3.1",
+                "title": "Classified Information",
+                "description": "TODO"
+              },
+              {
+                "const": "2.3.2",
+                "title": "Sensitive Information",
+                "description": "TODO"
+              },
+              {
+                "const": "3.1.1",
+                "title": "Accounting Records",
+                "description": "TODO"
+              },
+              {
+                "const": "3.1.2",
+                "title": "ATM Withdrawal",
+                "description": "TODO"
+              },
+              {
+                "const": "3.1.3",
+                "title": "Bank Account Information",
+                "description": "TODO"
+              },
+              {
+                "const": "3.1.4",
+                "title": "Bitcoin",
+                "description": "TODO"
+              },
+              {
+                "const": "3.1.5",
+                "title": "Company Funds",
+                "description": "TODO"
+              },
+              {
+                "const": "3.1.6",
+                "title": "Gift Cards",
+                "description": "TODO"
+              },
+              {
+                "const": "3.1.7",
+                "title": "Invoices",
+                "description": "TODO"
+              },
+              {
+                "const": "3.1.8",
+                "title": "Issued Checks",
+                "description": "TODO"
+              },
+              {
+                "const": "3.1.9",
+                "title": "Loan",
+                "description": "TODO"
+              },
+              {
+                "const": "3.1.10",
+                "title": "Physical Currency",
+                "description": "TODO"
+              },
+              {
+                "const": "3.1.11",
+                "title": "Refunds",
+                "description": "TODO"
+              },
+              {
+                "const": "3.1.12",
+                "title": "Reimbursement Forms",
+                "description": "TODO"
+              },
+              {
+                "const": "3.1.13",
+                "title": "Tax Information",
+                "description": "TODO"
+              },
+              {
+                "const": "3.1.14",
+                "title": "Time Sheets",
+                "description": "TODO"
+              },
+              {
+                "const": "4.1.1",
+                "title": "Client List",
+                "description": "TODO"
+              },
+              {
+                "const": "4.1.2",
+                "title": "Customer Data",
+                "description": "TODO"
+              },
+              {
+                "const": "4.1.3",
+                "title": "Alien Files",
+                "description": "TODO"
+              },
+              {
+                "const": "4.1.4",
+                "title": "Credit Card Information",
+                "description": "TODO"
+              },
+              {
+                "const": "4.1.5",
+                "title": "Insurance Claims",
+                "description": "TODO"
+              },
+              {
+                "const": "4.2.1",
+                "title": "Employee Data",
+                "description": "TODO"
+              },
+              {
+                "const": "4.3.1",
+                "title": "Driver's license",
+                "description": "TODO"
+              },
+              {
+                "const": "4.3.2",
+                "title": "Personal Photos",
+                "description": "TODO"
+              },
+              {
+                "const": "4.3.3",
+                "title": "PII",
+                "description": "TODO"
+              },
+              {
+                "const": "4.4.1",
+                "title": "PHI",
+                "description": "TODO"
+              },
+              {
+                "const": "4.4.2",
+                "title": "Medicare/Medicaid",
+                "description": "TODO"
+              },
+              {
+                "const": "4.4.3",
+                "title": "Prescription Medication",
+                "description": "TODO"
+              },
+              {
+                "const": "4.4.4",
+                "title": "Prescription Pads",
+                "description": "TODO"
+              },
+              {
+                "const": "4.5.1",
+                "title": "Emails",
+                "description": "TODO"
+              },
+              {
+                "const": "4.5.2",
+                "title": "Telecommunication Systems",
+                "description": "TODO"
+              },
+              {
+                "const": "5.1.1",
+                "title": "Access to System",
+                "description": "TODO"
+              },
+              {
+                "const": "5.1.2",
+                "title": "Backup Data",
+                "description": "TODO"
+              },
+              {
+                "const": "5.1.3",
+                "title": "Backup Tapes",
+                "description": "TODO"
+              },
+              {
+                "const": "5.1.4",
+                "title": "Database",
+                "description": "TODO"
+              },
+              {
+                "const": "5.1.5",
+                "title": "Email Servers",
+                "description": "TODO"
+              },
+              {
+                "const": "5.1.6",
+                "title": "FTP Servers",
+                "description": "TODO"
+              },
+              {
+                "const": "5.1.7",
+                "title": "Network Configuration",
+                "description": "TODO"
+              },
+              {
+                "const": "5.1.8",
+                "title": "Network Login Information",
+                "description": "TODO"
+              },
+              {
+                "const": "5.1.9",
+                "title": "Servers",
+                "description": "TODO"
+              },
+              {
+                "const": "5.1.10",
+                "title": "Website Hosting",
+                "description": "TODO"
+              },
+              {
+                "const": "5.2.1",
+                "title": "Backup Software",
+                "description": "TODO"
+              },
+              {
+                "const": "5.2.2",
+                "title": "Software Policy Protocol",
+                "description": "TODO"
+              },
+              {
+                "const": "5.2.3",
+                "title": "Source code",
+                "description": "TODO"
+              },
+              {
+                "const": "5.2.4",
+                "title": "Unreleased Software",
+                "description": "TODO"
+              },
+              {
+                "const": "5.3.1",
+                "title": "Login Information",
+                "description": "TODO"
+              },
+              {
+                "const": "5.3.2",
+                "title": "Passwords",
+                "description": "TODO"
+              }
+            ]
+        },
+        "target-format-vocab": {
+            "anyOf": [
+              {
+                "const": "1",
+                "title": "Electronic",
+                "description": "TODO"
+              },
+              {
+                "const": "2",
+                "title": "Physical",
+                "description": "TODO"
+              },
+              {
+                "const": "3",
+                "title": "Personnel",
+                "description": "TODO"
+              },
+              {
+                "const": "4",
+                "title": "Other",
+                "description": "TODO"
+              },
+              {
+                "const": "5",
+                "title": "Unknown",
+                "description": "TODO"
+              }
+            ]
+        },
+        "target-owner-vocab": {
+            "anyOf": [
+              {
+                "const": "C",
+                "title": "Consumer",
+                "description": "TODO"
+              },
+              {
+                "const": "E",
+                "title": "Employee",
+                "description": "TODO"
+              },
+              {
+                "const": "O",
+                "title": "Organization",
+                "description": "TODO"
+              },
+              {
+                "const": "T",
+                "title": "Third Party",
+                "description": "TODO"
+              },
+              {
+                "const": "Z",
+                "title": "Other",
+                "description": "TODO"
+              }
+            ]
+        },
+        "target-sensitivity-vocab": {
+            "anyOf": [
+              {
+                "const": "CTI",
+                "title": "Controlled Technical Information (CTI)",
+                "description": "TODO"
+              },
+              {
+                "const": "FRP",
+                "title": "FERPA (student education records)",
+                "description": "TODO"
+              },
+              {
+                "const": "FTI",
+                "title": "Federal Tax Information (FTI)",
+                "description": "TODO"
+              },
+              {
+                "const": "GVT",
+                "title": "Government Sensitive",
+                "description": "TODO"
+              },
+              {
+                "const": "ITP",
+                "title": "Intellectual Property (IP)",
+                "description": "TODO"
+              },
+              {
+                "const": "LES",
+                "title": "Law Enforcement Sensitive",
+                "description": "TODO"
+              },
+              {
+                "const": "NPB",
+                "title": "Non-Public",
+                "description": "TODO"
+              },
+              {
+                "const": "PCI",
+                "title": "Credit/Payment Card (PCI)",
+                "description": "TODO"
+              },
+              {
+                "const": "PHI",
+                "title": "Protected Health Information (PHI)",
+                "description": "TODO"
+              },
+              {
+                "const": "PII",
+                "title": "Personally Identifiable Information (PII)",
+                "description": "TODO"
+              },
+              {
+                "const": "NSN",
+                "title": "Not sensitive/Public",
+                "description": "TODO"
+              }
+            ]
+        }
+    }
+}
