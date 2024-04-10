@@ -14,7 +14,9 @@ TODO
 ## Vocabularies
 
 ### org-relationship-vocab
+
 Values: `C`, `V`, `U`, `O`
+
 | Const | Value | Description |
 | --- | --- | --- |
 | C | Competitor | TODO|

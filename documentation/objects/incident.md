@@ -19,7 +19,9 @@ TODO description of incident
 ## Vocabularies
 
 ### incident-status-vocab
+
 Values: `P`, `I`, `L`, `C`
+
 | Const | Value | Description |
 | --- | --- | --- |
 | P | In Progress | TODO|
@@ -28,7 +30,9 @@ Values: `P`, `I`, `L`, `C`
 | C | Complete | TODO|
 
 ### cia-vocab
+
 Values: `C`, `I`, `A`
+
 | Const | Value | Description |
 | --- | --- | --- |
 | C | Confidentiality | TODO|
@@ -36,7 +40,9 @@ Values: `C`, `I`, `A`
 | A | Availability | TODO|
 
 ### outcome-type-vocab
+
 Values: `BR`, `DC`, `DD`, `DR`, `DS`, `MD`, `ML`, `MS`, `NN`, `OT`, `RO`, `SI`, `UK`, `IT`
+
 | Const | Value | Description |
 | --- | --- | --- |
 | BR | Bankruptcy | TODO|
@@ -55,7 +61,9 @@ Values: `BR`, `DC`, `DD`, `DR`, `DS`, `MD`, `ML`, `MS`, `NN`, `OT`, `RO`, `SI`, 
 | IT | Used in Identity Theft | TODO|
 
 ### incident-type-vocab
+
 Values: `F`, `S`, `T`, `M`
+
 | Const | Value | Description |
 | --- | --- | --- |
 | F | Fraud | TODO|

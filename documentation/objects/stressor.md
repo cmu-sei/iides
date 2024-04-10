@@ -13,7 +13,9 @@ TODO
 ## Vocabularies
 
 ### stressor-category-vocab
+
 Values: `2.1`, `2.2`, `2.3`, `2.5`
+
 | Const | Value | Description |
 | --- | --- | --- |
 | 2.1 | Employment Status | TODO|
@@ -22,7 +24,9 @@ Values: `2.1`, `2.2`, `2.3`, `2.5`
 | 2.5 | Consequences for Previous Violations | TODO|
 
 ### stressor-subcategory-vocab
+
 Values: `2.1.1`, `2.1.2`, `2.1.3`, `2.1.4`, `2.1.5`, `2.1.6`, `2.1.7`, `2.1.8`, `2.1.9`, `2.1.10`, `2.1.11`, `2.1.12`, `2.2.1`, `2.2.2`, `2.2.3`, `2.2.4`, `2.2.5`, `2.2.6`, `2.2.7`, `2.2.8`, `2.2.9`, `2.2.10`, `2.2.11`, `2.2.12`, `2.3.1`, `2.3.2`, `2.3.3`, `2.3.4`, `2.5.1`, `2.5.2`, `2.5.3`, `2.5.4`, `2.5.5`, `2.5.6`
+
 | Const | Value | Description |
 | --- | --- | --- |
 | 2.1.1 | Insider Hired | TODO|
