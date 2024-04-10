@@ -64,16 +64,22 @@ for filename in fnames:
             file_lines.append("\n## Vocabularies")
             for definition in data['$defs']:
                 file_lines.append(f"\n### {definition}")
-                values = [f"`{v['const']}`" for v in data['$defs'][definition]['anyOf']]
-                file_lines.append(f"\nValues: {', '.join(values)}\n")
-                file_lines.append("| Const | Value | Description |")
-                file_lines.append("| --- | --- | --- |")
-                for vocab in data['$defs'][definition]['anyOf']:
-                    row = f"| {vocab['const']} | {vocab['title']} |"
-                    if 'description' in vocab.keys():
-                        file_lines.append(f"{row} {vocab['description']}|")
-                    else:
-                        file_lines.append(f"{row} |")
+                if 'enum' in data['$defs'][definition].keys():
+                    # Vocab is specificified as an enumeration
+                    values = [f"`{v}`" for v in data['$defs'][definition]['enum']]
+                    file_lines.append(f"\nValues: {', '.join(values)}\n")
+                else:
+                    # Vocab is specified as anyOf
+                    values = [f"`{v['const']}`" for v in data['$defs'][definition]['anyOf']]
+                    file_lines.append(f"\nValues: {', '.join(values)}\n")
+                    file_lines.append("| Const | Value | Description |")
+                    file_lines.append("| --- | --- | --- |")
+                    for vocab in data['$defs'][definition]['anyOf']:
+                        row = f"| {vocab['const']} | {vocab['title']} |"
+                        if 'description' in vocab.keys():
+                            file_lines.append(f"{row} {vocab['description']}|")
+                        else:
+                            file_lines.append(f"{row} |")
 
     # Write output to markdown file
     f = open(f"{DOCUMENTATION_PATH}{filename[5:-5]}.md", "w")
