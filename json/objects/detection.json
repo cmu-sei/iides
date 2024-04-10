@@ -1,0 +1,198 @@
+{
+    "$id": "[REPLACE with full github url to this json file]",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "detection",
+    "description": "TODO",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "TODO . Uses pattern 'detection--[UUIDv4]'",
+        "pattern": "^detection--[UUIDv4]"
+      },
+      "first_detected": {
+        "type": "date",
+        "description": "TODO"
+      },
+      "who_detected": {
+        "type": "array",
+        "description": "TODO",
+        "items": {
+            "$ref": "#/$defs/detection-team-vocab"
+        },
+        "minItems": 1
+      },
+      "what_detected": {
+        "type": "array",
+        "description": "TODO",
+        "items": {
+            "$ref": "#/$defs/detection-method-vocab"
+        },
+        "minItems": 1
+      },
+      "logs": {
+        "type": "array",
+        "description": "TODO",
+        "items": {
+            "$ref": "#/$defs/detection-log-vocab"
+        },
+        "minItems": 1
+      },
+      "comment": {
+        "type": "string",
+        "description": "TODO"
+      }
+    },
+    "required": [
+        "id"
+    ],
+    "$defs": {
+        "detection-team-vocab": {
+            "anyOf": [
+              {
+                "const": "LE",
+                "title": "Law Enforcement",
+                "description": "TODO"
+              },
+              {
+                "const": "OR",
+                "title": "Organization",
+                "description": "TODO"
+              },
+              {
+                "const": "CU",
+                "title": "Customer",
+                "description": "TODO"
+              },
+              {
+                "const": "CO",
+                "title": "Competitor",
+                "description": "TODO"
+              },
+              {
+                "const": "AU",
+                "title": "Auditor",
+                "description": "TODO"
+              },
+              {
+                "const": "SR",
+                "title": "Self-Reported",
+                "description": "TODO"
+              },
+              {
+                "const": "IR",
+                "title": "Incident Response Team",
+                "description": "TODO"
+              },
+              {
+                "const": "ST",
+                "title": "Security Team",
+                "description": "TODO"
+              },
+              {
+                "const": "MG",
+                "title": "Management",
+                "description": "TODO"
+              },
+              {
+                "const": "II",
+                "title": "Internal Investigators",
+                "description": "TODO"
+              },
+              {
+                "const": "RR",
+                "title": "Researcher",
+                "description": "TODO"
+              }
+            ]
+        },
+        "detection-method-vocab": {
+            "anyOf": [
+                {
+                    "const": "1",
+                    "title": "Audit",
+                    "description": "TODO"
+                },
+                {
+                    "const": "2",
+                    "title": "Information System",
+                    "description": "TODO"
+                },
+                {
+                    "const": "3",
+                    "title": "Non-Technical Means",
+                    "description": "TODO"
+                },
+                {
+                    "const": "4",
+                    "title": "Software",
+                    "description": "TODO"
+                },
+                {
+                    "const": "5",
+                    "title": "System Failure",
+                    "description": "TODO"
+                }
+            ]
+        },
+        "detection-log-vocab": {
+            "anyOf": [
+              {
+                "const": "AC",
+                "title": "Access Logs",
+                "description": "TODO"
+              },
+              {
+                "const": "AU",
+                "title": "Audit Logs",
+                "description": "TODO"
+              },
+              {
+                "const": "BR",
+                "title": "Bank Records",
+                "description": "TODO"
+              },
+              {
+                "const": "DB",
+                "title": "Database Logs",
+                "description": "TODO"
+              },
+              {
+                "const": "EM",
+                "title": "Email Logs",
+                "description": "TODO"
+              },
+              {
+                "const": "FS",
+                "title": "Financial Statements",
+                "description": "TODO"
+              },
+              {
+                "const": "IS",
+                "title": "ISP Logs",
+                "description": "TODO"
+              },
+              {
+                "const": "RA",
+                "title": "Remote Access Logs",
+                "description": "TODO"
+              },
+              {
+                "const": "SF",
+                "title": "System File Logs",
+                "description": "TODO"
+              },
+              {
+                "const": "VD",
+                "title": "Video Logs",
+                "description": "TODO"
+              },
+              {
+                "const": "WB",
+                "title": "Web Logs",
+                "description": "TODO"
+              }
+            ]
+        }
+    }
+}
