@@ -1,13 +1,13 @@
 {
     "$id": "[REPLACE with full github url to this json file]",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "job",
+    "title": "Job",
     "description": "TODO",
     "type": "object",
     "properties": {
         "id": {
             "type": "string",
-            "description": "TODO . Uses pattern 'job--[UUIDv4]'",
+            "description": "TODO",
             "pattern": "^job--[UUIDv4]"
         },
         "job_function": {
@@ -68,7 +68,7 @@
     ],
     "$defs": {
         "job-function-vocab": {
-            "anyOf": [
+            "oneOf": [
                 {
                     "const": "1",
                     "title": "Accounting Service",
@@ -192,7 +192,7 @@
             ]
         },
         "occupation-vocab": {
-            "anyOf": [
+            "oneOf": [
                 {
                     "const": "1.1",
                     "title": "Accountants",
@@ -916,7 +916,7 @@
             ]
         },
         "access-auth-vocab": {
-            "anyOf": [
+            "oneOf": [
                 {
                     "const": "REV",
                     "title": "Access Revoked",
@@ -965,7 +965,7 @@
             ]
         },
         "employment-type-vocab": {
-            "anyOf": [
+            "oneOf": [
                 {
                     "const": "CCT",
                     "title": "Current Contractor",

@@ -2,8 +2,8 @@
 TODO
 
 ## Properties
-- **`id`** (required) *(string)* : TODO . Uses pattern 'stressor--[UUIDv4]'
-	- pattern: ^stressor--[UUIDv4]
+- **`id`** (required) *(string)* : TODO
+	- Uses pattern: ^stressor--[UUIDv4]
 - **`date`** *(date)* : TODO
 - **`category`** *(string)* : TODO
 	- A value from [stressor-category-vocab](#stressor-category-vocab)

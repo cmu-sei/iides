@@ -2,8 +2,8 @@
 TODO
 
 ## Properties
-- **`id`** (required) *(string)* : TODO . Uses pattern 'target--[UUIDv4]'
-	- pattern: ^target--[UUIDv4]
+- **`id`** (required) *(string)* : TODO
+	- Uses pattern: ^target--[UUIDv4]
 - **`asset_type`** (required) *(string)* : TODO
 	- A value from [target-asset-vocab](#target-asset-vocab)
 - **`category`** (required) *(string)* : TODO

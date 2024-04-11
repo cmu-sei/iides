@@ -2,8 +2,8 @@
 TODO
 
 ## Properties
-- **`id`** (required) *(string)* : TODO . Uses pattern 'detection--[UUIDv4]'
-	- pattern: ^detection--[UUIDv4]
+- **`id`** (required) *(string)* : TODO
+	- Uses pattern: ^detection--[UUIDv4]
 - **`first_detected`** *(date)* : TODO
 - **`who_detected`** *(array)* : TODO
 	- One or more values from [detection-team-vocab](#detection-team-vocab)

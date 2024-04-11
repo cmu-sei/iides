@@ -3,26 +3,26 @@ import json
 from os import listdir
 
 color_map = {
-    'person': '#b0d0ed',
-    'insider': '#043673',
-    'incident': '#009647',
+    'Person': '#b0d0ed',
+    'Insider': '#043673',
+    'Incident': '#009647',
     'Accomplice': '#b0d0ed',
-    'collusion': '#b0d0ed',
-    'organization': '#007BC0', 
-    'sponsor': '#b0d0ed',
-    'job': '#33c2C4',
-    'impact': '#D4EFDF',
-    'target': '#D4EFDF',
-    'source': '#D4EFDF',
-    'courtCase': '#f9b8bd',
-    'charge': '#f9b8bd',
-    'sentence': '#f9b8bd',
-    'detection': '#FDB515',
-    'note': '#D4EFDF',
-    'response': '#EF3A47',
-    'legalResponse': '#f9b8bd',
-    'stressor': '#b0d0ed',
-    'attackTTP': '#A456ED'
+    'Collusion': '#b0d0ed',
+    'Organization': '#007BC0', 
+    'Sponsor': '#b0d0ed',
+    'Job': '#33c2C4',
+    'Impact': '#D4EFDF',
+    'Target': '#D4EFDF',
+    'Source': '#D4EFDF',
+    'Court Case': '#f9b8bd',
+    'Charge': '#f9b8bd',
+    'Sentence': '#f9b8bd',
+    'Detection': '#FDB515',
+    'Note': '#D4EFDF',
+    'Response': '#EF3A47',
+    'Legal Response': '#f9b8bd',
+    'Stressor': '#b0d0ed',
+    'Attack TTP': '#A456ED'
 }
 
 file_lines = []
@@ -34,15 +34,19 @@ for object in listdir("json/objects"):
         data = json.load(f)
         print(data['title'])
         file_lines.append(
-            f"\nclass {data['title'].capitalize()} {color_map[data['title']]} {{\n")
+            f"\nclass {data['title'].replace(' ','')} {color_map[data['title']]} {{\n")
         for property in data['properties']:
             print(f"    {property}")
             if 'items' in data['properties'][property].keys():
-                enum = data['properties'][property]['items']['$ref'][8:]
+                # property is an array and/or vocab
+                type_string = ": "
+                if '$ref' in data['properties'][property]['items'].keys():
+                    enum = data['properties'][property]['items']['$ref']
+                    if enum.endswith('.json'):
+                        enum = enum[:-5]
+                    type_string += enum[enum.rfind('/')+1:]
                 if data['properties'][property]['type'] == 'array':
-                    type_string = f": {enum}[{data['properties'][property]['minItems']}...*]"
-                else:
-                    type_string = f": {enum}"
+                    type_string += f"[{data['properties'][property]['minItems']}...*]"
             else:
                 type_string = f": {data['properties'][property]['type']}"
             if property in data['required']:

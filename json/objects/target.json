@@ -1,13 +1,13 @@
 {
     "$id": "[REPLACE with full github url to this json file]",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "target",
+    "title": "Target",
     "description": "TODO",
     "type": "object",
     "properties": {
       "id": {
         "type": "string",
-        "description": "TODO . Uses pattern 'target--[UUIDv4]'",
+        "description": "TODO",
         "pattern": "^target--[UUIDv4]"
       },
       "asset_type": {
@@ -68,7 +68,7 @@
     ],
     "$defs": {
         "target-asset-vocab": {
-            "anyOf": [
+            "oneOf": [
               {
                 "const": "1",
                 "title": "Facilities",
@@ -102,7 +102,7 @@
             ]
         },
         "target-category-vocab": {
-            "anyOf": [
+            "oneOf": [
               {
                 "const": "1.1",
                 "title": "Physical Property - Non-digital assets",
@@ -176,7 +176,7 @@
             ]
         },
         "target-subcategory-vocab": {
-            "anyOf": [
+            "oneOf": [
               {
                 "const": "1.1.1",
                 "title": "Blueprint Plans",
@@ -470,7 +470,7 @@
             ]
         },
         "target-format-vocab": {
-            "anyOf": [
+            "oneOf": [
               {
                 "const": "1",
                 "title": "Electronic",
@@ -499,7 +499,7 @@
             ]
         },
         "target-owner-vocab": {
-            "anyOf": [
+            "oneOf": [
               {
                 "const": "C",
                 "title": "Consumer",
@@ -528,7 +528,7 @@
             ]
         },
         "target-sensitivity-vocab": {
-            "anyOf": [
+            "oneOf": [
               {
                 "const": "CTI",
                 "title": "Controlled Technical Information (CTI)",

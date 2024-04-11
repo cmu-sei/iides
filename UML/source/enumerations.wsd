@@ -160,34 +160,6 @@ package "IIDES Enumerations" #FFF {
         ..Used By..
         Sponsor()
     }
-    enum CaseTypeVocab <<enumeration>> #f9b8bd {
-        Civil
-        Criminal
-    }
-    enum CourtTypeVocab <<enumeration>> #f9b8bd {
-        Federal
-        Foreign
-        State
-    }
-    enum ChargePleaVocab <<enumeration>> #f9b8bd {
-        Guilty
-        No Contest
-        Not Guilty
-        Refused to Enter a Plea
-    }
-    enum ChargeDispositionVocab <<enumeration>> #f9b8bd {
-        Acquitted
-        Convicted
-        Dismissed
-        Diversion/Deferred Prosecution
-        Expunged
-        No charges filed/Charges dropped
-        Pending
-        Pled down
-        Sealed
-        Suspended sentence
-        Vacated
-    }
     struct TechControl #f9b8bd {
         control : TechControlVocab
         date : date

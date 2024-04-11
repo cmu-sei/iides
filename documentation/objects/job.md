@@ -2,8 +2,8 @@
 TODO
 
 ## Properties
-- **`id`** (required) *(string)* : TODO . Uses pattern 'job--[UUIDv4]'
-	- pattern: ^job--[UUIDv4]
+- **`id`** (required) *(string)* : TODO
+	- Uses pattern: ^job--[UUIDv4]
 - **`job_function`** *(string)* : TODO
 	- A value from [job-function-vocab](#job-function-vocab)
 - **`occupation`** *(string)* : TODO

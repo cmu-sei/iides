@@ -2,8 +2,8 @@
 TODO
 
 ## Properties
-- **`id`** (required) *(string)* : TODO . Uses pattern 'sentence--[UUIDv4]'
-	- pattern: ^sentence--[UUIDv4]
+- **`id`** (required) *(string)* : TODO
+	- Uses pattern: ^sentence--[UUIDv4]
 - **`sentence_type`** (required) *(string)* : TODO
 	- A value from [sentence-type-vocab](#sentence-type-vocab)
 - **`quantity`** *(integer)* : TODO

@@ -1,0 +1,104 @@
+{
+    "$id": "[REPLACE with full github url to this json file]",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Court Case",
+    "description": "TODO",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "TODO",
+        "pattern": "^court-case--[UUIDv4]"
+      },
+      "case_number": {
+        "type": "string",
+        "description": "TODO"
+      },
+      "court_country": {
+        "type": "string",
+        "description": "TODO",
+        "items": {
+            "$ref": "../common/country-vocab.json"
+        }
+      },
+      "court_state": {
+        "type": "string",
+        "description": "TODO",
+        "items": {
+            "$ref": "../common/state-vocab.json"
+        }
+      },
+      "court_district": {
+        "type": "string",
+        "description": "TODO"
+      },
+      "court_type": {
+        "type": "string",
+        "description": "TODO",
+        "items": {
+            "$ref": "#/$defs/court-type-vocab"
+        }
+      },
+      "case_type": {
+        "type": "string",
+        "description": "TODO",
+        "items": {
+            "$ref": "#/$defs/case-type-vocab"
+        }
+      },
+      "defendant": {
+        "type": "array",
+        "description": "TODO",
+        "items": { "type": "string" },
+        "minItems": 1
+      },
+      "plaintiff": {
+        "type": "array",
+        "description": "TODO",
+        "items": { "type": "string" },
+        "minItems": 1
+      },
+      "comment": {
+        "type": "string",
+        "description": "TODO"
+      }
+    },
+    "required": [
+        "id"
+    ],
+    "$defs": {
+        "court-type-vocab": {
+            "oneOf": [
+              {
+                "const": "1",
+                "title": "Federal",
+                "description": "TODO"
+              },
+              {
+                "const": "2",
+                "title": "Foreign",
+                "description": "TODO"
+              },
+              {
+                "const": "3",
+                "title": "State",
+                "description": "TODO"
+              }
+            ]
+        },
+        "case-type-vocab": {
+            "oneOf": [
+              {
+                "const": "1",
+                "title": "Civil",
+                "description": "TODO"
+              },
+              {
+                "const": "2",
+                "title": "Criminal",
+                "description": "TODO"
+              }
+            ]
+        }
+    }
+}

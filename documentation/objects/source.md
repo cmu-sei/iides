@@ -2,8 +2,8 @@
 TODO
 
 ## Properties
-- **`id`** (required) *(string)* : TODO . Uses pattern 'source--[UUIDv4]'
-	- pattern: ^source--[UUIDv4]
+- **`id`** (required) *(string)* : TODO
+	- Uses pattern: ^source--[UUIDv4]
 - **`title`** (required) *(date)* : TODO
 - **`source_type`** *(string)* : TODO
 	- A value from [source-type-vocab](#source-type-vocab)

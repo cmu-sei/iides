@@ -1,13 +1,13 @@
 {
     "$id": "[REPLACE with full github url to this json file]",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "sentence",
+    "title": "Sentence",
     "description": "TODO",
     "type": "object",
     "properties": {
       "id": {
         "type": "string",
-        "description": "TODO . Uses pattern 'sentence--[UUIDv4]'",
+        "description": "TODO",
         "pattern": "^sentence--[UUIDv4]"
       },
       "sentence_type": {
@@ -39,7 +39,7 @@
     ],
     "$defs": {
         "sentence-type-vocab": {
-            "anyOf": [
+            "oneOf": [
               {
                 "const": "01",
                 "title": "Assessment",
@@ -133,7 +133,7 @@
             ]
         },
         "sentence-metric-vocab": {
-          "anyOf": [
+          "oneOf": [
             {
               "const": "H",
               "title": "Hour(s)",

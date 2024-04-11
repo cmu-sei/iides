@@ -1,44 +1,48 @@
 {
     "$id": "[REPLACE with full github url to this json file]",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "Source",
+    "title": "Charge",
     "description": "TODO",
     "type": "object",
     "properties": {
       "id": {
         "type": "string",
         "description": "TODO",
-        "pattern": "^source--[UUIDv4]"
+        "pattern": "^charge--[UUIDv4]"
       },
       "title": {
-        "type": "date",
+        "type": "string",
         "description": "TODO"
       },
-      "source_type": {
+      "section": {
+        "type": "string",
+        "description": "TODO"
+      },
+      "nature_of_offense": {
+        "type": "string",
+        "description": "TODO"
+      },
+      "count": {
+        "type": "integer",
+        "description": "TODO"
+      },
+      "plea": {
         "type": "string",
         "description": "TODO",
         "items": {
-            "$ref": "#/$defs/source-type-vocab"
+            "$ref": "#/$defs/charge-plea-vocab"
         }
       },
-      "file_type": {
-        "type": "string",
-        "description": "TODO",
-        "items": {
-            "$ref": "#/$defs/source-file-type-vocab"
-        }
-      },
-      "date": {
-        "type": "date",
-        "description": "TODO"
-      },
-      "public": {
+      "plea_bargain": {
         "type": "boolean",
         "description": "TODO"
       },
-      "document": {
+      "category": {
         "type": "string",
-        "description": "TODO"
+        "description": "TODO",
+        "items": {
+            "$ref": "#/$defs/charge-disposition-vocab"
+        }
       }
     },
     "required": [
@@ -46,73 +50,87 @@
         "title"
     ],
     "$defs": {
-        "source-type-vocab": {
+        "charge-plea-vocab": {
             "oneOf": [
               {
-                "const": "01",
-                "title": "Court Document",
+                "const": "1",
+                "title": "Guilty",
                 "description": "TODO"
               },
               {
-                "const": "02",
-                "title": "DOJ Press Release",
+                "const": "2",
+                "title": "No Contest",
                 "description": "TODO"
               },
               {
-                "const": "03",
-                "title": "Investigator Notes",
+                "const": "3",
+                "title": "Not Guilty",
                 "description": "TODO"
               },
               {
-                "const": "04",
-                "title": "Letter",
-                "description": "TODO"
-              },
-              {
-                "const": "05",
-                "title": "Lexis CourtLink",
-                "description": "TODO"
-              },
-              {
-                "const": "06",
-                "title": "Logs",
-                "description": "TODO"
-              },
-              {
-                "const": "07",
-                "title": "Media",
-                "description": "TODO"
-              },
-              {
-                "const": "08",
-                "title": "Organization Interview",
-                "description": "TODO"
-              },
-              {
-                "const": "09",
-                "title": "Personal Website",
-                "description": "TODO"
-              },
-              {
-                "const": "10",
-                "title": "Insider Interview",
-                "description": "TODO"
-              },
-              {
-                "const": "99",
-                "title": "Other",
+                "const": "4",
+                "title": "Refused to Enter a Plea",
                 "description": "TODO"
               }
             ]
         },
-        "source-file-type-vocab": {
-            "enum": [
-              "log",
-              "pdf",
-              "txt",
-              "docx",
-              "png",
-              "xlsx"
+        "charge-disposition-vocab": {
+            "oneOf": [
+              {
+                "const": "01",
+                "title": "Acquitted",
+                "description": "TODO"
+              },
+              {
+                "const": "02",
+                "title": "Convicted",
+                "description": "TODO"
+              },
+              {
+                "const": "03",
+                "title": "Dismissed",
+                "description": "TODO"
+              },
+              {
+                "const": "04",
+                "title": "Diversion/Deferred Prosecution",
+                "description": "TODO"
+              },
+              {
+                "const": "05",
+                "title": "Expunged",
+                "description": "TODO"
+              },
+              {
+                "const": "06",
+                "title": "No charges filed/Charges dropped",
+                "description": "TODO"
+              },
+              {
+                "const": "07",
+                "title": "Pending",
+                "description": "TODO"
+              },
+              {
+                "const": "08",
+                "title": "Pled down",
+                "description": "TODO"
+              },
+              {
+                "const": "09",
+                "title": "Sealed",
+                "description": "TODO"
+              },
+              {
+                "const": "10",
+                "title": "Suspended sentence",
+                "description": "TODO"
+              },
+              {
+                "const": "11",
+                "title": "Vacated",
+                "description": "TODO"
+              }
             ]
         }
     }

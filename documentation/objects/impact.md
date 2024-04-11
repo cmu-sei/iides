@@ -2,8 +2,8 @@
 TODO
 
 ## Properties
-- **`id`** (required) *(string)* : TODO . Uses pattern 'impact--[UUIDv4]'
-	- pattern: ^impact--[UUIDv4]
+- **`id`** (required) *(string)* : TODO
+	- Uses pattern: ^impact--[UUIDv4]
 - **`high`** (required) *(integer)* : TODO
 - **`low`** *(integer)* : TODO
 - **`metric`** (required) *(string)* : TODO

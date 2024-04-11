@@ -2,8 +2,8 @@
 TODO description of incident
 
 ## Properties
-- **`id`** (required) *(string)* : TODO . Uses pattern 'incident--[UUIDv4]'
-	- pattern: ^incident--[UUIDv4]
+- **`id`** (required) *(string)* : TODO
+	- Uses pattern: ^incident--[UUIDv4]
 - **`cia_effect`** *(array)* : TODO
 	- One or more values from [cia-vocab](#cia-vocab)
 - **`incident_type`** *(array)* : TODO

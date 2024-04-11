@@ -1,13 +1,13 @@
 {
     "$id": "[REPLACE with full github url to this json file]",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "stressor",
+    "title": "Stressor",
     "description": "TODO",
     "type": "object",
     "properties": {
       "id": {
         "type": "string",
-        "description": "TODO . Uses pattern 'stressor--[UUIDv4]'",
+        "description": "TODO",
         "pattern": "^stressor--[UUIDv4]"
       },
       "date": {
@@ -34,7 +34,7 @@
     ],
     "$defs": {
         "stressor-category-vocab": {
-            "anyOf": [
+            "oneOf": [
               {
                 "const": "2.1",
                 "title": "Employment Status",
@@ -58,7 +58,7 @@
             ]
         },
         "stressor-subcategory-vocab": {
-            "anyOf": [
+            "oneOf": [
               {
                 "const": "2.1.1",
                 "title": "Insider Hired",

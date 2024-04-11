@@ -7,7 +7,8 @@ Version: 0.1, Revision 1
 
 ## Background
 
-- researchers, analysts, risk managers, practitioners, investigators
+- researchers, analysts, risk managers, practitioners, investigators, simulations/exercises
+
 
 ## Related Work
 - NAICS
@@ -17,7 +18,8 @@ Version: 0.1, Revision 1
 - STIX/TAXII
 - MISP
 - RMM
-
+- SOFIT: https://ieeexplore.ieee.org/document/8424651
+- SISO CyberDEM
 
 ## IIDES
 - Guiding principles
@@ -28,10 +30,20 @@ Version: 0.1, Revision 1
 
 ## Use Cases
 
+- researchers recreating a database of cases
+- maintaining an internal database of an org's own cases
+- exchanging case data with other entities
+- contributing to a community (ex. OSIT) via semi-open repo
+    - requires anon functionality
+- influenceing what to collect to support further research 
+- recommend COAs based on input
+
 ## Using IIDES
 - Where to send feedback
 - Implementations
 - Using the schema
+
+## Examples
 
 ## Conclusion
 
