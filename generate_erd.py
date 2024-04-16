@@ -61,7 +61,7 @@ for object in listdir("json/objects"):
                 if '$ref' in data['properties'][property]['items'].keys():
                     type_string += get_ref(data['properties'][property]['items']['$ref'])
                 if data['properties'][property]['type'] == 'array':
-                    type_string += f"[{data['properties'][property]['minItems']}...*]"
+                    type_string += f"string[{data['properties'][property]['minItems']}...*]"
             else:
                 if '$ref' in data['properties'][property].keys():
                     type_string = f": {get_ref(data['properties'][property]['$ref'])}"

@@ -48,10 +48,10 @@ def get_properties(properties, required):
             lines.append(vocab_ref)
 
         if properties[p]['type'] == 'array':
-            vocab_ref = "\t- One or more values"
+            vocab_ref = "\t- One or more "
             if 'prefixItems' in properties[p].keys():
                 # An array of tuples
-                vocab_ref += " of the format ("
+                vocab_ref += "values of the format ("
                 for p_item in properties[p]['prefixItems']:
                     if list(p_item.keys())[0] == '$ref':
                         ref = p_item['$ref']
@@ -61,8 +61,10 @@ def get_properties(properties, required):
             else:
                 # An array of strings
                 if '$ref' in properties[p]['items'].keys():
-                    vocab_ref += " from "
+                    vocab_ref += "values from "
                     vocab_ref += get_ref(properties[p]['items']['$ref'])
+                else:
+                    vocab_ref += f"{properties[p]['items']['type']} values"
             lines.append(vocab_ref)
 
         if 'pattern' in properties[p].keys():
