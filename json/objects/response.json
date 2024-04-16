@@ -37,7 +37,8 @@
         "description": "TODO",
         "items": {
             "$ref": "#/$defs/investigator-vocab"
-        }
+        },
+        "minItems": 1
       },
       "investigation_events": {
         "type": "array",

@@ -7,9 +7,9 @@ TODO
 - **`name`** *(string)* : TODO
 - **`city`** *(string)* : TODO
 - **`state`** *(string)* : TODO
-	- A value from [state-](../common/state-.md)
+	- A value from [state-vocab](../common/state-vocab.md)
 - **`country`** *(string)* : TODO
-	- A value from [country-](../common/country-.md)
+	- A value from [country-vocab](../common/country-vocab.md)
 - **`postal_code`** *(integer)* : TODO
 - **`small_business`** *(boolean)* : TODO
 - **`industry_sector_tier1`** *(string)* : TODO

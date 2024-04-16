@@ -23,9 +23,7 @@
         "relationship": {
 			"type": "string",
 			"description": "TODO",
-			"items": {
-                "$ref": "#/$defs/org-relationship-vocab"
-              }
+            "$ref": "#/$defs/org-relationship-vocab"
 		}
 	},
 	"required": [

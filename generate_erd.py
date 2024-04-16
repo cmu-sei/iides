@@ -25,6 +25,16 @@ color_map = {
     'Attack TTP': '#A456ED'
 }
 
+
+def get_ref(ref):
+    if ref.startswith('#'):
+        # internal file reference
+        ref_string = f"{ref[8:]}"
+    else:
+        # reference to other file
+        ref_string = f"{ref[ref.rfind('/')+1:-5]}"
+    return ref_string
+
 file_lines = []
 file_lines.append("@startuml IIDES\npackage \"IIDES\" #fff {\n\n")
 
@@ -37,18 +47,26 @@ for object in listdir("json/objects"):
             f"\nclass {data['title'].replace(' ','')} {color_map[data['title']]} {{\n")
         for property in data['properties']:
             print(f"    {property}")
-            if 'items' in data['properties'][property].keys():
-                # property is an array and/or vocab
+            if 'prefixItems' in data['properties'][property].keys():
+                # property is an array of tuples
+                type_string = ": ("
+                for p_item in data['properties'][property]['prefixItems']:
+                    if list(p_item.keys())[0] == '$ref':
+                        ref = p_item['$ref']
+                        break
+                type_string += f"{{field}} {get_ref(ref)}, date)[1...*]"
+            elif 'items' in data['properties'][property].keys():
+                # property is an array
                 type_string = ": "
                 if '$ref' in data['properties'][property]['items'].keys():
-                    enum = data['properties'][property]['items']['$ref']
-                    if enum.endswith('.json'):
-                        enum = enum[:-5]
-                    type_string += enum[enum.rfind('/')+1:]
+                    type_string += get_ref(data['properties'][property]['items']['$ref'])
                 if data['properties'][property]['type'] == 'array':
                     type_string += f"[{data['properties'][property]['minItems']}...*]"
             else:
-                type_string = f": {data['properties'][property]['type']}"
+                if '$ref' in data['properties'][property].keys():
+                    type_string = f": {get_ref(data['properties'][property]['$ref'])}"
+                else:
+                    type_string = f": {data['properties'][property]['type']}"
             if property in data['required']:
                 file_lines.append(f"\t* {property} {type_string} \n")
             else:
