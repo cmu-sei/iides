@@ -1,0 +1,226 @@
+{
+    "$id": "[REPLACE with full github url to this json file]",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Person",
+    "description": "TODO",
+    "type": "object",
+    "properties": {
+      "first_name": {
+        "type": "string",
+        "description": "TODO"
+      },
+      "middle_name": {
+        "type": "string",
+        "description": "TODO"
+      },
+      "last_name": {
+        "type": "string",
+        "description": "TODO"
+      },
+      "suffix": {
+        "type": "string",
+        "description": "TODO",
+        "$ref": "#/$defs/suffix-vocab"
+      },
+      "alias": {
+        "type": "array",
+        "description": "TODO",
+        "items": { "type": "string" },
+        "minItems": 1
+      },
+      "city": {
+        "type": "string",
+        "description": "TODO"
+      },
+      "state": {
+        "type": "string",
+        "description": "TODO",
+        "$ref": "../common/state-vocab.json"
+      },
+      "country": {
+        "type": "string",
+        "description": "TODO",
+        "$ref": "../common/country-vocab.json"
+      },
+      "postal_code": {
+        "type": "integer",
+        "description": "TODO"
+      },
+      "country_of_citizenship": {
+        "type": "array",
+        "description": "TODO",
+        "items": {
+            "$ref": "../common/country-vocab.json"
+        },
+        "minItems": 1
+      },
+      "nationality": {
+        "type": "array",
+        "description": "TODO",
+        "items": {
+            "$ref": "../common/country-vocab.json"
+        },
+        "minItems": 1
+      },
+      "residency": {
+        "type": "string",
+        "description": "TODO",
+        "$ref": "#/$defs/residency-vocab"
+      },
+      "gender": {
+        "type": "string",
+        "description": "TODO",
+        "$ref": "#/$defs/gender-vocab"
+      },
+      "age": {
+        "type": "integer",
+        "description": "TODO"
+      },
+      "education": {
+        "type": "string",
+        "description": "TODO",
+        "$ref": "#/$defs/education-vocab"
+      },
+      "marital_status": {
+        "type": "string",
+        "description": "TODO",
+        "$ref": "#/$defs/marital-status-vocab"
+      },
+      "number_of_children": {
+        "type": "integer",
+        "description": "TODO"
+      },
+      "comment": {
+        "type": "string",
+        "description": "TODO"
+      }
+    },
+    "required": [
+    ],
+    "$defs": {
+        "suffix-vocab": {
+            "enum": [
+              "Jr",
+              "Sr",
+              "III",
+              "IV"
+            ]
+        },
+        "residency-vocab": {
+            "oneOf": [
+              {
+                "const": "N",
+                "title": "Naturalized",
+                "description": "TODO"
+              },
+              {
+                "const": "P",
+                "title": "Permanent Resident",
+                "description": "TODO"
+              },
+              {
+                "const": "R",
+                "title": "Resident Alien",
+                "description": "TODO"
+              }
+            ]
+        },
+        "gender-vocab": {
+            "oneOf": [
+              {
+                "const": "F",
+                "title": "Female",
+                "description": "TODO"
+              },
+              {
+                "const": "M",
+                "title": "Male",
+                "description": "TODO"
+              },
+              {
+                "const": "N",
+                "title": "Non-binary",
+                "description": "TODO"
+              },
+              {
+                "const": "O",
+                "title": "Other",
+                "description": "TODO"
+              }
+            ]
+        },
+        "education-vocab": {
+            "oneOf": [
+              {
+                "const": "4",
+                "title": "Associates Degree",
+                "description": "TODO"
+              },
+              {
+                "const": "5",
+                "title": "Bachelors Degree",
+                "description": "TODO"
+              },
+              {
+                "const": "8",
+                "title": "Doctorate",
+                "description": "TODO"
+              },
+              {
+                "const": "2",
+                "title": "High School Diploma or GED",
+                "description": "TODO"
+              },
+              {
+                "const": "7",
+                "title": "Masters Degree",
+                "description": "TODO"
+              },
+              {
+                "const": "6",
+                "title": "Professional Degree",
+                "description": "TODO"
+              },
+              {
+                "const": "3",
+                "title": "Some College",
+                "description": "TODO"
+              },
+              {
+                "const": "1",
+                "title": "Some High School",
+                "description": "TODO"
+              }
+            ]
+        },
+        "marital-status-vocab": {
+            "oneOf": [
+              {
+                "const": "1",
+                "title": "Single",
+                "description": "TODO"
+              },
+              {
+                "const": "2",
+                "title": "Married",
+                "description": "TODO"
+              },
+              {
+                "const": "3",
+                "title": "Divorced",
+                "description": "TODO"
+              },
+              {
+                "const": "4",
+                "title": "Separated",
+                "description": "TODO"
+              },
+              {
+                "const": "5",
+                "title": "Widowed/Widower",
+                "description": "TODO"
+              }
+            ]
+        }
+    }
+}
