@@ -4,7 +4,7 @@ TODO
 ## Properties
 - **`id`** (required) *(string)* : TODO
 	- Uses pattern: ^stressor--[UUIDv4]
-- **`date`** *(date)* : TODO
+- **`date`** *(string)* : TODO
 - **`category`** *(string)* : TODO
 	- A value from [stressor-category-vocab](#stressor-category-vocab)
 - **`subcategory`** *(string)* : TODO

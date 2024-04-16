@@ -15,12 +15,23 @@ def get_json_files():
     return fnames
 
 
+def get_ref(ref):
+    if ref.startswith('#'):
+        # internal file reference
+        ref_string = f"[{ref[8:]}](#{ref[8:]})"
+    else:
+        # reference to other file
+        ref_string = f"[{ref[ref.rfind('/')+1:-5]}]({ref[:-5]}.md)"
+    return ref_string
+
+
 def get_properties(properties, required):
     '''Return formatted strings for object properties'''
 
     lines = []
 
     for p in properties:
+        print(p)
         property_string = f"- **`{p}`** "
         if p in required:
             property_string += "(required) "
@@ -30,20 +41,28 @@ def get_properties(properties, required):
         )
         lines.append(property_string)
 
-        if 'items' in properties[p].keys():
-            if properties[p]['type'] == 'array':
-                vocab_ref = "\t- One or more values "
+        if '$ref' in properties[p].keys():
+            # A string that can be one of a list of values
+            vocab_ref = "\t- A value from "
+            vocab_ref += get_ref(properties[p]['$ref'])
+            lines.append(vocab_ref)
+
+        if properties[p]['type'] == 'array':
+            vocab_ref = "\t- One or more values"
+            if 'prefixItems' in properties[p].keys():
+                # An array of tuples
+                vocab_ref += " of the format ("
+                for p_item in properties[p]['prefixItems']:
+                    if list(p_item.keys())[0] == '$ref':
+                        ref = p_item['$ref']
+                        break
+                vocab_ref += get_ref(ref)
+                vocab_ref += ", date)"
             else:
-                vocab_ref = "\t- A value "
-            if '$ref' in properties[p]['items'].keys():
-                vocab_ref += "from ["
-                ref = properties[p]['items']['$ref']
-                if ref.startswith('#'):
-                    # internal file reference
-                    vocab_ref += f"{ref[8:]}](#{ref[8:]})"
-                else:
-                    # reference to other file
-                    vocab_ref += f"{ref[ref.rfind('/')+1:-5]}]({ref[:-5]}.md)"
+                # An array of strings
+                if '$ref' in properties[p]['items'].keys():
+                    vocab_ref += " from "
+                    vocab_ref += get_ref(properties[p]['items']['$ref'])
             lines.append(vocab_ref)
 
         if 'pattern' in properties[p].keys():

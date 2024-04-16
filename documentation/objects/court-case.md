@@ -15,9 +15,9 @@ TODO
 - **`case_type`** *(string)* : TODO
 	- A value from [case-type-vocab](#case-type-vocab)
 - **`defendant`** *(array)* : TODO
-	- One or more values 
+	- One or more values
 - **`plaintiff`** *(array)* : TODO
-	- One or more values 
+	- One or more values
 - **`comment`** *(string)* : TODO
 
 ## Vocabularies

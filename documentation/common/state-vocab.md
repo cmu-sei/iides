@@ -3,7 +3,6 @@ TODO
 
 ## Properties
 - **`country`** *(string)* : TODO
-	- A value from [state-vocab-us](#state-vocab-us)
 
 ## Vocabularies
 
