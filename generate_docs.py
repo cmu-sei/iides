@@ -134,6 +134,13 @@ if __name__ == "__main__":
             file_lines.extend(
                 get_properties(data['properties'], data['required']))
 
+        if '$ref' in data:
+            # class inherits properties from another
+            file_lines.append(
+                f"- **Inherits properties from "
+                f"[{data['$ref'][2:-5].capitalize()}]({data['$ref'][2:-5]})**"
+            )
+
         if '$defs' in data:
             file_lines.append("\n## Vocabularies")
             file_lines.extend(get_vocab(data['$defs']))

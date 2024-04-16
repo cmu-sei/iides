@@ -43,8 +43,14 @@ for object in listdir("json/objects"):
     with open('json/objects/'+object) as f:
         data = json.load(f)
         print(data['title'])
-        file_lines.append(
-            f"\nclass {data['title'].replace(' ','')} {color_map[data['title']]} {{\n")
+
+        class_line = f"\nclass {data['title'].replace(' ','')} "
+        if '$ref' in data.keys():
+            # class inherits from another
+            class_line += f"<<{data['$ref'][2:-5].capitalize()}>> "
+        class_line += f"{color_map[data['title']]} {{\n"
+
+        file_lines.append(class_line)
         for property in data['properties']:
             print(f"    {property}")
             if 'prefixItems' in data['properties'][property].keys():
@@ -80,7 +86,7 @@ f.writelines(file_lines)
 # Add relationships
 relationships = '''
 
-    Insider --o{ Accomplice : Relationship
+    Insider --o{ Accomplice
     Incident --|{ Insider : commits <
     Accomplice -- Job
     Job -- Organization : employs <

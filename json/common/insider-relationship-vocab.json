@@ -1,0 +1,30 @@
+{
+    "$id": "[REPLACE with full github url to this json file]",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Insider Relationship Vocab",
+    "description": "TODO",
+    "type": "object",
+    "properties": {
+        "relationship": {
+            "type": "string",
+            "description": "TODO",
+            "items": {
+                "$ref": "#/$defs/insider-relationship-vocab"
+            }
+        }
+    },
+    "required": [],
+    "$defs": {
+        "insider-relationship-vocab": {
+            "oneOf": [
+                {"const": "A", "title": "Acquaintance", "description": ""},
+                {"const": "C", "title": "Colleague", "description": ""},
+                {"const": "F", "title": "Friend", "description": ""},
+                {"const": "R", "title": "Relative", "description": ""},
+                {"const": "S", "title": "Significant Other/Legal partner", "description": ""},
+                {"const": "U", "title": "Unknown", "description": ""},
+                {"const": "O", "title": "Other", "description": ""}
+            ]
+        }
+    }
+}
