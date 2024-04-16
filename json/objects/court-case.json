@@ -17,16 +17,12 @@
       "court_country": {
         "type": "string",
         "description": "TODO",
-        "items": {
-            "$ref": "../common/country-vocab.json"
-        }
+        "$ref": "../common/country-vocab.json"
       },
       "court_state": {
         "type": "string",
         "description": "TODO",
-        "items": {
-            "$ref": "../common/state-vocab.json"
-        }
+        "$ref": "../common/state-vocab.json"
       },
       "court_district": {
         "type": "string",
@@ -35,16 +31,12 @@
       "court_type": {
         "type": "string",
         "description": "TODO",
-        "items": {
-            "$ref": "#/$defs/court-type-vocab"
-        }
+        "$ref": "#/$defs/court-type-vocab"
       },
       "case_type": {
         "type": "string",
         "description": "TODO",
-        "items": {
-            "$ref": "#/$defs/case-type-vocab"
-        }
+        "$ref": "#/$defs/case-type-vocab"
       },
       "defendant": {
         "type": "array",

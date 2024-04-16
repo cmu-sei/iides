@@ -13,9 +13,7 @@
       "sentence_type": {
         "type": "string",
         "description": "TODO",
-        "items": {
-            "$ref": "#/$defs/sentence-type-vocab"
-        }
+        "$ref": "#/$defs/sentence-type-vocab"
       },
       "quantity": {
         "type": "integer",
@@ -24,9 +22,7 @@
       "metric": {
         "type": "string",
         "description": "TODO",
-        "items": {
-            "$ref": "#/$defs/sentence-metric-vocab"
-        }
+        "$ref": "#/$defs/sentence-metric-vocab"
       },
       "concurrency": {
         "type": "boolean",

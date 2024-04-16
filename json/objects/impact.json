@@ -21,9 +21,7 @@
       "metric": {
         "type": "string",
         "description": "TODO",
-        "items": {
-            "$ref": "#/$defs/impact-metric-vocab"
-        }
+        "$ref": "#/$defs/impact-metric-vocab"
       },
       "estimated": {
         "type": "boolean",

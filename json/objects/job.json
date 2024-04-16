@@ -13,16 +13,12 @@
         "job_function": {
             "type": "string",
             "description": "TODO",
-            "items": {
-                "$ref": "#/$defs/job-function-vocab"
-            }
+            "$ref": "#/$defs/job-function-vocab"
         },
         "occupation": {
             "type": "string",
             "description": "TODO",
-            "items": {
-                "$ref": "#/$defs/occupation-vocab"
-            }
+            "$ref": "#/$defs/occupation-vocab"
         },
         "title": {
             "type": "string",
@@ -35,16 +31,12 @@
         "access_authorization": {
             "type": "string",
             "description": "TODO",
-            "items": {
-                "$ref": "#/$defs/access-auth-vocab"
-            }
+            "$ref": "#/$defs/access-auth-vocab"
         },
         "employment_type": {
             "type": "string",
             "description": "TODO",
-            "items": {
-                "$ref": "#/$defs/employment-type-vocab"
-            }
+            "$ref": "#/$defs/employment-type-vocab"
         },
         "hire_date": {
             "type": "date",

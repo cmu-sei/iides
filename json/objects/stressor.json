@@ -11,22 +11,19 @@
         "pattern": "^stressor--[UUIDv4]"
       },
       "date": {
-        "type": "date",
+        "type": "string",
+        "format": "date",
         "description": "TODO"
       },
       "category": {
         "type": "string",
         "description": "TODO",
-        "items": {
-            "$ref": "#/$defs/stressor-category-vocab"
-        }
+        "$ref": "#/$defs/stressor-category-vocab"
       },
       "subcategory": {
         "type": "string",
         "description": "TODO",
-        "items": {
-            "$ref": "#/$defs/stressor-subcategory-vocab"
-        }
+        "$ref": "#/$defs/stressor-subcategory-vocab"
       }
     },
     "required": [

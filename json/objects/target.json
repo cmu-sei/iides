@@ -13,44 +13,32 @@
       "asset_type": {
         "type": "string",
         "description": "TODO",
-        "items": {
-            "$ref": "#/$defs/target-asset-vocab"
-        }
+        "$ref": "#/$defs/target-asset-vocab"
       },
       "category": {
         "type": "string",
         "description": "TODO",
-        "items": {
-            "$ref": "#/$defs/target-category-vocab"
-        }
+        "$ref": "#/$defs/target-category-vocab"
       },
       "subcategory": {
         "type": "string",
         "description": "TODO",
-        "items": {
-            "$ref": "#/$defs/target-subcategory-vocab"
-        }
+        "$ref": "#/$defs/target-subcategory-vocab"
       },
       "format": {
         "type": "string",
         "description": "TODO",
-        "items": {
-            "$ref": "#/$defs/target-format-vocab"
-        }
+        "$ref": "#/$defs/target-format-vocab"
       },
       "owner": {
         "type": "string",
         "description": "TODO",
-        "items": {
-            "$ref": "#/$defs/target-owner-vocab"
-        }
+        "$ref": "#/$defs/target-owner-vocab"
       },
       "sensitivity": {
         "type": "string",
         "description": "TODO",
-        "items": {
-            "$ref": "#/$defs/target-sensitivity-vocab"
-        }
+        "$ref": "#/$defs/target-sensitivity-vocab"
       },
       "description": {
         "type": "string",

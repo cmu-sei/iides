@@ -29,9 +29,7 @@
       "plea": {
         "type": "string",
         "description": "TODO",
-        "items": {
-            "$ref": "#/$defs/charge-plea-vocab"
-        }
+        "$ref": "#/$defs/charge-plea-vocab"
       },
       "plea_bargain": {
         "type": "boolean",
@@ -40,9 +38,7 @@
       "category": {
         "type": "string",
         "description": "TODO",
-        "items": {
-            "$ref": "#/$defs/charge-disposition-vocab"
-        }
+        "$ref": "#/$defs/charge-disposition-vocab"
       }
     },
     "required": [

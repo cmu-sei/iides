@@ -17,16 +17,12 @@
       "source_type": {
         "type": "string",
         "description": "TODO",
-        "items": {
-            "$ref": "#/$defs/source-type-vocab"
-        }
+        "$ref": "#/$defs/source-type-vocab"
       },
       "file_type": {
         "type": "string",
         "description": "TODO",
-        "items": {
-            "$ref": "#/$defs/source-file-type-vocab"
-        }
+        "$ref": "#/$defs/source-file-type-vocab"
       },
       "date": {
         "type": "date",

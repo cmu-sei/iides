@@ -37,9 +37,7 @@
     "status": {
       "type": "string",
       "description": "TODO",
-      "items": {
-        "$ref": "#/$defs/incident-status-vocab"
-      }
+      "$ref": "#/$defs/incident-status-vocab"
     },
     "summary": {
       "type": "string",

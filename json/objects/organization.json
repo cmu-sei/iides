@@ -21,16 +21,12 @@
       "state": {
         "type": "string",
         "description": "TODO",
-        "items": {
-            "$ref": "../common/state-vocab"
-          }
+        "$ref": "../common/state-vocab"
       },
       "country": {
         "type": "string",
         "description": "TODO",
-        "items": {
-            "$ref": "../common/country-vocab"
-          }
+        "$ref": "../common/country-vocab"
       },
       "postal_code": {
         "type": "integer",
@@ -43,16 +39,12 @@
       "industry_sector_tier1": {
         "type": "string",
         "description": "TODO",
-        "items": {
-            "$ref": "#/$defs/industry-sector-tier1-vocab"
-          }
+        "$ref": "#/$defs/industry-sector-tier1-vocab"
       },
       "industry_sector_tier2": {
         "type": "string",
         "description": "TODO",
-        "items": {
-            "$ref": "#/$defs/industry-sector-tier2-vocab"
-          }
+        "$ref": "#/$defs/industry-sector-tier2-vocab"
       },
       "business": {
         "type": "string",
@@ -65,9 +57,7 @@
       "incident_role": {
         "type": "string",
         "description": "TODO",
-        "items": {
-          "$ref": "#/$defs/org-role-vocab"
-        }
+        "$ref": "#/$defs/org-role-vocab"
       }
     },
     "required": [
