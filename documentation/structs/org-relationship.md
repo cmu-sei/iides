@@ -2,11 +2,11 @@
 TODO
 
 ## Properties
-- **`id`** (required) *(string)* : TODO . Uses pattern 'orgrelationship--[UUIDv4]'
+- **`id`** (required) *(string)* : TODO
 	- Uses pattern: ^orgrelationship--[UUIDv4]
-- **`org1`** (required) *(string)* : TODO . Uses pattern 'orgrelationship--[UUIDv4]'
+- **`org1`** (required) *(string)* : TODO
 	- Uses pattern: ^organization--[UUIDv4]
-- **`org2`** (required) *(string)* : TODO . Uses pattern 'orgrelationship--[UUIDv4]'
+- **`org2`** (required) *(string)* : TODO
 	- Uses pattern: ^organization--[UUIDv4]
 - **`relationship`** (required) *(string)* : TODO
 	- A value from [org-relationship-vocab](#org-relationship-vocab)

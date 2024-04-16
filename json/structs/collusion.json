@@ -1,0 +1,76 @@
+{
+	"$id": "[REPLACE with full github url to this json file]",
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "Collusion",
+	"description": "TODO",
+	"type": "object",
+	"properties": {
+		"id": {
+			"type": "string",
+			"description": "TODO",
+			"pattern": "^collusion--[UUIDv4]"
+		},
+        "insider1": {
+			"type": "string",
+			"description": "TODO",
+			"pattern": "^insider--[UUIDv4]"
+		},
+        "insider2": {
+			"type": "string",
+			"description": "TODO",
+			"pattern": "^insider--[UUIDv4]"
+		},
+        "relationship": {
+			"type": "string",
+			"description": "TODO",
+            "$ref": "../common/insider-relationship-vocab.json"
+		},
+        "recruitment": {
+			"type": "string",
+			"description": "TODO",
+            "$ref": "#/$defs/recruitment-vocab"
+		}
+	},
+	"required": [
+		"id",
+        "insider1",
+        "insider2",
+        "relationship"
+	],
+	"$defs": {
+        "recruitment-vocab": {
+            "oneOf": [
+              {
+                "const": "1",
+                "title": "Avoid Detection",
+                "description": "TODO"
+              },
+              {
+                "const": "2",
+                "title": "Greater Payoff",
+                "description": "TODO"
+              },
+              {
+                "const": "3",
+                "title": "Insider Resigned",
+                "description": "TODO"
+              },
+              {
+                "const": "4",
+                "title": "Separation of Duties",
+                "description": "TODO"
+              },
+              {
+                "const": "5",
+                "title": "Share the Wealth",
+                "description": "TODO"
+              },
+              {
+                "const": "9",
+                "title": "Other",
+                "description": "TODO"
+              }
+            ]
+        }
+	}
+}

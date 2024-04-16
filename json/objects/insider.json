@@ -1,0 +1,589 @@
+{
+    "$id": "[REPLACE with full github url to this json file]",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Insider",
+    "description": "TODO",
+    "type": "object",
+    "$ref": "./person.json",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "TODO",
+        "pattern": "^insider--[UUIDv4]"
+      },
+      "incident_role": {
+        "type": "string",
+        "description": "TODO",
+        "$ref": "#/$defs/incident-role-vocab"
+      },
+      "motive": {
+        "type": "array",
+        "description": "TODO",
+        "items": {
+            "$ref": "#/$defs/motive-vocab"
+        },
+        "minItems": 1
+      },
+      "substance_abuse": {
+        "type": "array",
+        "description": "TODO",
+        "items": {
+            "$ref": "#/$defs/substance-abuse-vocab"
+        },
+        "minItems": 1
+      },
+      "substance_use_during_incident": {
+        "type": "boolean",
+        "description": "TODO"
+      },
+      "psychological_issues": {
+        "type": "array",
+        "description": "TODO",
+        "items": {
+            "$ref": "#/$defs/psych-issues-vocab"
+        },
+        "minItems": 1
+      },
+      "predispositions": {
+        "type": "array",
+        "description": "TODO",
+        "prefixItems": [
+          { "type": "string" },
+          { "type": "string" },
+          { "$ref": "#/$defs/predisposition-type-vocab"},
+          { "$ref": "#/$defs/predisposition-subtype-vocab"}
+        ],
+        "minItems": 2,
+        "items": false
+      },
+      "concerning_behaviors": {
+        "type": "array",
+        "description": "TODO",
+        "prefixItems": [
+          { "type": "string" },
+          { "type": "string" },
+          { "$ref": "#/$defs/cb-type-vocab"},
+          { "$ref": "#/$defs/cb-subtype-vocab"}
+        ],
+        "minItems": 2,
+        "items": false
+      },
+      "comment": {
+        "type": "string",
+        "description": "TODO"
+      }
+    },
+    "required": [
+        "id",
+        "incident_role"
+    ],
+    "$defs": {
+        "incident-role-vocab": {
+            "oneOf": [
+              {
+                "const": "1",
+                "title": "Primary",
+                "description": "TODO"
+              },
+              {
+                "const": "2",
+                "title": "Co-Conspirator",
+                "description": "TODO"
+              },
+              {
+                "const": "3",
+                "title": "Looked the other way",
+                "description": "TODO"
+              },
+              {
+                "const": "4",
+                "title": "Approved primary insider's actions",
+                "description": "TODO"
+              }
+            ]
+        },
+        "motive-vocab": {
+            "oneOf": [
+              {
+                "const": "",
+                "title": "benefit_foreign_entity",
+                "description": "TODO"
+              },
+              {
+                "const": "",
+                "title": "benefit_new_employer",
+                "description": "TODO"
+              },
+              {
+                "const": "",
+                "title": "competitive_bus_adv",
+                "description": "TODO"
+              },
+              {
+                "const": "",
+                "title": "curiosity",
+                "description": "TODO"
+              },
+              {
+                "const": "",
+                "title": "financial_gain",
+                "description": "TODO"
+              },
+              {
+                "const": "",
+                "title": "freedom_of_info",
+                "description": "TODO"
+              },
+              {
+                "const": "",
+                "title": "recognition",
+                "description": "TODO"
+              },
+              {
+                "const": "",
+                "title": "revenge",
+                "description": "TODO"
+              },
+              {
+                "const": "",
+                "title": "other",
+                "description": "TODO"
+              }
+            ]
+        },
+        "substance-abuse-vocab": {
+            "oneOf": [
+              {
+                "const": "",
+                "title": "alcohol",
+                "description": "TODO"
+              },
+              {
+                "const": "",
+                "title": "marijuana",
+                "description": "TODO"
+              },
+              {
+                "const": "",
+                "title": "legal_perscription_opiate",
+                "description": "TODO"
+              },
+              {
+                "const": "",
+                "title": "illegal_perscription_opiate",
+                "description": "TODO"
+              },
+              {
+                "const": "",
+                "title": "non_perscription_opiate",
+                "description": "TODO"
+              },
+              {
+                "const": "",
+                "title": "opiate_unknown",
+                "description": "TODO"
+              },
+              {
+                "const": "",
+                "title": "non_opiate_perscription",
+                "description": "TODO"
+              },
+              {
+                "const": "",
+                "title": "stimulant",
+                "description": "TODO"
+              },
+              {
+                "const": "",
+                "title": "Street Drugs",
+                "description": "TODO"
+              },
+              {
+                "const": "",
+                "title": "Other",
+                "description": "TODO"
+              }
+            ]
+        },
+        "psych-issues-vocab": {
+            "oneOf": [
+              {
+                "const": "",
+                "title": "outpatient_treatment",
+                "description": "TODO"
+              },
+              {
+                "const": "",
+                "title": "inpatient_treatment",
+                "description": "TODO"
+              },
+              {
+                "const": "",
+                "title": "medication_noncompliance",
+                "description": "TODO"
+              },
+              {
+                "const": "",
+                "title": "experienced_acted_on_delusions",
+                "description": "TODO"
+              },
+              {
+                "const": "",
+                "title": "threatened_attempted_suicide",
+                "description": "TODO"
+              },
+              {
+                "const": "",
+                "title": "other",
+                "description": "TODO"
+              }
+            ]
+        },
+        "predisposition-type-vocab": {
+            "oneOf": [
+              {
+                "const": "1.1",
+                "title": "Social and Mental Health Issues",
+                "description": "TODO"
+              },
+              {
+                "const": "1.2",
+                "title": "A History of Rule Violations",
+                "description": "TODO"
+              },
+              {
+                "const": "1.3",
+                "title": "Suspicious Associations",
+                "description": "TODO"
+              },
+              {
+                "const": "2.4",
+                "title": "Personal Stressful Events",
+                "description": "TODO"
+              }
+            ]
+        },
+        "predisposition-subtype-vocab": {
+            "oneOf": [
+              {
+                "const": "1.1.1",
+                "title": "Possible Psychological Issues",
+                "description": "TODO"
+              },
+              {
+                "const": "1.1.2",
+                "title": "Diagnosed Psychological Issues",
+                "description": "TODO"
+              },
+              {
+                "const": "1.1.3",
+                "title": "Gambling Problems",
+                "description": "TODO"
+              },
+              {
+                "const": "1.1.4",
+                "title": "Substance Abuse",
+                "description": "TODO"
+              },
+              {
+                "const": "1.1.5",
+                "title": "A History Of Financial Problems",
+                "description": "TODO"
+              },
+              {
+                "const": "1.1.6",
+                "title": "Poor Hygiene",
+                "description": "TODO"
+              },
+              {
+                "const": "1.1.7",
+                "title": "Risk Taker",
+                "description": "TODO"
+              },
+              {
+                "const": "1.2.1",
+                "title": "Previous Arrest/Conviction For Related Crime",
+                "description": "TODO"
+              },
+              {
+                "const": "1.2.2",
+                "title": "Previous Arrest/Conviction for Unrelated Crime",
+                "description": "TODO"
+              },
+              {
+                "const": "1.2.3",
+                "title": "Previous Perpetrator of Domestic Violence",
+                "description": "TODO"
+              },
+              {
+                "const": "1.2.4",
+                "title": "Hacking Related Activities",
+                "description": "TODO"
+              },
+              {
+                "const": "1.2.5",
+                "title": "Previous Attempts to Disclose Through Illegitimate Means",
+                "description": "TODO"
+              },
+              {
+                "const": "1.2.6",
+                "title": "Pending or Previous Defendant in Civil Action",
+                "description": "TODO"
+              },
+              {
+                "const": "1.3.1",
+                "title": "Criminal Association",
+                "description": "TODO"
+              },
+              {
+                "const": "1.3.2",
+                "title": "Internet Underground Association",
+                "description": "TODO"
+              },
+              {
+                "const": "2.4.1",
+                "title": "Medical Problems",
+                "description": "TODO"
+              },
+              {
+                "const": "2.4.2",
+                "title": "Relationship Problems",
+                "description": "TODO"
+              },
+              {
+                "const": "2.4.3",
+                "title": "Emerging Financial Problems",
+                "description": "TODO"
+              },
+              {
+                "const": "2.4.4",
+                "title": "Family Health Issues",
+                "description": "TODO"
+              }
+            ]
+        },
+        "cb-type-vocab": {
+            "oneOf": [
+              {
+                "const": "3.1",
+                "title": "Misuse of Company Resources",
+                "description": "TODO"
+              },
+              {
+                "const": "3.2",
+                "title": "Technical Policy Abuse",
+                "description": "TODO"
+              },
+              {
+                "const": "3.3",
+                "title": "Interpersonal Issues",
+                "description": "TODO"
+              },
+              {
+                "const": "3.4",
+                "title": "Financial",
+                "description": "TODO"
+              },
+              {
+                "const": "3.5",
+                "title": "Organizational Conflict",
+                "description": "TODO"
+              },
+              {
+                "const": "3.6",
+                "title": "Suspicious Contact",
+                "description": "TODO"
+              },
+              {
+                "const": "3.7",
+                "title": "Relocation",
+                "description": "TODO"
+              }
+            ]
+        },
+        "cb-subtype-vocab": {
+            "oneOf": [
+              {
+                "const": "3.1.1",
+                "title": "Theft Of Physical Company Property",
+                "description": "TODO"
+              },
+              {
+                "const": "3.1.2",
+                "title": "Insider Expressed Ownership Of Work",
+                "description": "TODO"
+              },
+              {
+                "const": "3.1.3",
+                "title": "Repeated Security Violations - Non-Technical",
+                "description": "TODO"
+              },
+              {
+                "const": "3.2.1",
+                "title": "Other Unauthorized Software Acquisition",
+                "description": "TODO"
+              },
+              {
+                "const": "3.2.2",
+                "title": "Repeated Security Violations - Technical",
+                "description": "TODO"
+              },
+              {
+                "const": "3.2.3",
+                "title": "Unauthorized Download - Remotely",
+                "description": "TODO"
+              },
+              {
+                "const": "3.2.4",
+                "title": "Unauthorized Download - On Site",
+                "description": "TODO"
+              },
+              {
+                "const": "3.2.5",
+                "title": "IP Policy Violation",
+                "description": "TODO"
+              },
+              {
+                "const": "3.2.6",
+                "title": "Violation of Need to Know",
+                "description": "TODO"
+              },
+              {
+                "const": "3.3.1",
+                "title": "Employee Extortion, Threats, or Legal Demands",
+                "description": "TODO"
+              },
+              {
+                "const": "3.3.2",
+                "title": "Conflict With Supervisor",
+                "description": "TODO"
+              },
+              {
+                "const": "3.3.3",
+                "title": "Conflict With Coworker(s)",
+                "description": "TODO"
+              },
+              {
+                "const": "3.3.4",
+                "title": "Work Attendance Problems",
+                "description": "TODO"
+              },
+              {
+                "const": "3.3.5",
+                "title": "Human Resource Policy Violations or Complaints",
+                "description": "TODO"
+              },
+              {
+                "const": "3.3.6",
+                "title": "Disgruntled Employee",
+                "description": "TODO"
+              },
+              {
+                "const": "3.3.7",
+                "title": "Bragging",
+                "description": "TODO"
+              },
+              {
+                "const": "3.3.8",
+                "title": "Concurrent Crimes",
+                "description": "TODO"
+              },
+              {
+                "const": "3.3.9",
+                "title": "Formal Complaint",
+                "description": "TODO"
+              },
+              {
+                "const": "3.3.10",
+                "title": "Informal Complaint",
+                "description": "TODO"
+              },
+              {
+                "const": "3.3.11",
+                "title": "Insubordination",
+                "description": "TODO"
+              },
+              {
+                "const": "3.3.12",
+                "title": "Physical Abuse/Harassment",
+                "description": "TODO"
+              },
+              {
+                "const": "3.3.13",
+                "title": "Sexual Harassment",
+                "description": "TODO"
+              },
+              {
+                "const": "3.4.1",
+                "title": "Unexplained Wealth",
+                "description": "TODO"
+              },
+              {
+                "const": "3.4.2",
+                "title": "Employee Forms New Competing Business",
+                "description": "TODO"
+              },
+              {
+                "const": "3.4.3",
+                "title": "Financial Conflict of Interest",
+                "description": "TODO"
+              },
+              {
+                "const": "3.5.1",
+                "title": "Planning/Contact with Competing Organization",
+                "description": "TODO"
+              },
+              {
+                "const": "3.5.2",
+                "title": "Employee Went To Work For A Competing Organization",
+                "description": "TODO"
+              },
+              {
+                "const": "3.5.3",
+                "title": "Employee Sought Other Employment",
+                "description": "TODO"
+              },
+              {
+                "const": "3.5.4",
+                "title": "Group Resignation",
+                "description": "TODO"
+              },
+              {
+                "const": "3.5.5",
+                "title": "Insider Creates Legal Entity for Illegitimate Purpose",
+                "description": "TODO"
+              },
+              {
+                "const": "3.5.6",
+                "title": "Falsified Background Information",
+                "description": "TODO"
+              },
+              {
+                "const": "3.6.1",
+                "title": "Suspicious Foreign Contact",
+                "description": "TODO"
+              },
+              {
+                "const": "3.6.2",
+                "title": "Suspicious Foreign Travel",
+                "description": "TODO"
+              },
+              {
+                "const": "3.6.3",
+                "title": "Foreign Travel - Work Related",
+                "description": "TODO"
+              },
+              {
+                "const": "3.6.4",
+                "title": "Planning/Contact with Conspirator",
+                "description": "TODO"
+              },
+              {
+                "const": "3.7.1",
+                "title": "Geographic Relocation",
+                "description": "TODO"
+              }
+            ]
+        }
+    }
+}

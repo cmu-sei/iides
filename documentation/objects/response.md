@@ -5,13 +5,13 @@ TODO
 - **`id`** (required) *(string)* : TODO
 	- Uses pattern: ^reponse--[UUIDv4]
 - **`technical_controls`** *(array)* : TODO
-	- One or more values of the format ([technical-control-vocab](#technical-control-vocab), date)
+	- One or more tuple values of the format ([technical-control-vocab](#technical-control-vocab), date)
 - **`behavioral_controls`** *(array)* : TODO
-	- One or more values of the format ([behavioral-control-vocab](#behavioral-control-vocab), date)
+	- One or more tuple values of the format ([behavioral-control-vocab](#behavioral-control-vocab), date)
 - **`investigated_by`** *(array)* : TODO
 	- One or more values from [investigator-vocab](#investigator-vocab)
 - **`investigation_events`** *(array)* : TODO
-	- One or more values of the format ([investigation-vocab](#investigation-vocab), date)
+	- One or more tuple values of the format ([investigation-vocab](#investigation-vocab), date)
 - **`comment`** *(string)* : TODO
 
 ## Vocabularies
