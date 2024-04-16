@@ -1,0 +1,184 @@
+{
+    "$id": "[REPLACE with full github url to this json file]",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Response",
+    "description": "TODO",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "TODO",
+        "pattern": "^reponse--[UUIDv4]"
+      },
+      "technical_controls": {
+        "type": "array",
+        "description": "TODO",
+        "prefixItems": [
+          { "type": "string" },
+          { "type": "date" },
+          { "$ref": "#/$defs/technical-control-vocab"}
+        ],
+        "minItems": 2,
+        "items": false
+      },
+      "behavioral_controls": {
+        "type": "array",
+        "description": "TODO",
+        "prefixItems": [
+          { "type": "string" },
+          { "type": "date" },
+          { "$ref": "#/$defs/behavioral-control-vocab"}
+        ],
+        "minItems": 2,
+        "items": false
+      },
+      "investigated_by": {
+        "type": "array",
+        "description": "TODO",
+        "items": {
+            "$ref": "#/$defs/investigator-vocab"
+        }
+      },
+      "investigation_events": {
+        "type": "array",
+        "description": "TODO",
+        "prefixItems": [
+            { "type": "string" },
+            { "type": "date" },
+            { "$ref": "#/$defs/investigation-vocab"}
+        ],
+        "minItems": 2,
+        "items": false
+      },
+      "comment": {
+        "type": "string",
+        "description": "TODO"
+      }
+    },
+    "required": [
+        "id"
+    ],
+    "$defs": {
+        "technical-control-vocab": {
+          "oneOf": [
+            {
+              "const": "01",
+              "title": "Access to Technical System(s) Restricted",
+              "description": "TODO"
+            },
+            {
+              "const": "02",
+              "title": "Access to Technical System(s) Terminated",
+              "description": "TODO"
+            }
+          ]
+        },
+        "beahvioral-control-vocab": {
+          "oneOf": [
+            {
+              "const": "01",
+              "title": "Demoted",
+              "description": "TODO"
+            },
+            {
+              "const": "02",
+              "title": "Suspended",
+              "description": "TODO"
+            },
+            {
+              "const": "03",
+              "title": "Put on Paid/Unpaid Leave",
+              "description": "TODO"
+            },
+            {
+              "const": "04",
+              "title": "Terminated",
+              "description": "TODO"
+            },
+            {
+              "const": "05",
+              "title": "Poor Performance Review",
+              "description": "TODO"
+            },
+            {
+              "const": "06",
+              "title": "Passed Over For Promotion",
+              "description": "TODO"
+            },
+            {
+              "const": "07",
+              "title": "Counseling",
+              "description": "TODO"
+            },
+            {
+              "const": "08",
+              "title": "Referred to Employee Assistance Program",
+              "description": "TODO"
+            },
+            {
+              "const": "09",
+              "title": "Reported to HR",
+              "description": "TODO"
+            },
+            {
+              "const": "10",
+              "title": "Transferred",
+              "description": "TODO"
+            },
+            {
+              "const": "11",
+              "title": "Verbal Reprimand",
+              "description": "TODO"
+            },
+            {
+              "const": "12",
+              "title": "Written Reprimand",
+              "description": "TODO"
+            }
+          ]
+        },
+        "investigation-vocab": {
+            "oneOf": [
+              {
+                "const": "01",
+                "title": "Insider's Residence/Workplace Searched",
+                "description": "TODO"
+              },
+              {
+                "const": "02",
+                "title": "Evidence Found",
+                "description": "TODO"
+              },
+              {
+                "const": "03",
+                "title": "Insider Admits to Activity in Interview",
+                "description": "TODO"
+              } 
+            ]
+        },
+        "investigator-vocab": {
+          "oneOf": [
+            {
+              "const": "IR",
+              "title": "Incident Response Team",
+              "description": "TODO"
+            },
+            {
+              "const": "MM",
+              "title": "Management",
+              "description": "TODO"
+            },
+            {
+              "const": "LE",
+              "title": "Law Enforcement",
+              "description": "TODO"
+            },
+            {
+              "const": "II",
+              "title": "Internal Investigators",
+              "description": "TODO"
+            } 
+          ]
+      }
+    }
+}
