@@ -51,13 +51,15 @@ def get_properties(properties, required):
             vocab_ref = "\t- One or more "
             if 'prefixItems' in properties[p].keys():
                 # An array of tuples
-                vocab_ref += "values of the format ("
+                vocab_ref += "tuple values of the format ("
+                refs = []
                 for p_item in properties[p]['prefixItems']:
                     if list(p_item.keys())[0] == '$ref':
-                        ref = p_item['$ref']
-                        break
-                vocab_ref += get_ref(ref)
-                vocab_ref += ", date)"
+                        refs.append(get_ref(p_item['$ref']))
+                if len(refs) == 1:
+                    vocab_ref += f"{refs[0]}, date)"
+                else:
+                    vocab_ref += f"{', '.join(refs)})"
             else:
                 # An array of strings
                 if '$ref' in properties[p]['items'].keys():

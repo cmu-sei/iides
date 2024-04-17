@@ -2,11 +2,20 @@
 package "IIDES" #fff {
 
 
+class Sponsor #b0d0ed {
+	* id : string 
+	+ name : string 
+	+ sponsor_type : sponsor-type-vocab 
+}
 class Stressor #b0d0ed {
 	* id : string 
-	+ date : date 
+	+ date : string 
 	+ category : stressor-category-vocab 
 	+ subcategory : stressor-subcategory-vocab 
+}
+class Accomplice <<Person>> #b0d0ed {
+	* id : string 
+	+ relationship_to_insider : insider-relationship-vocab 
 }
 class Target #D4EFDF {
 	* id : string 
@@ -36,6 +45,39 @@ class Source #D4EFDF {
 	+ date : date 
 	+ public : boolean 
 	+ document : string 
+}
+class LegalResponse #f9b8bd {
+	* id : string 
+	+ law_enforcement_contacted : date 
+	+ insider_arrested : date 
+	+ insider_charged : date 
+	+ insider_pleads : date 
+	+ insider_judgment : date 
+	+ insider_sentenced : date 
+	+ insider_charges_dropped : date 
+	+ insider_charges_dismissed : date 
+	+ insider_settled : date 
+	+ comment : string 
+}
+class Person #b0d0ed {
+	+ first_name : string 
+	+ middle_name : string 
+	+ last_name : string 
+	+ suffix : suffix-vocab 
+	+ alias : string[1...*] 
+	+ city : string 
+	+ state : state-vocab 
+	+ country : country-vocab 
+	+ postal_code : integer 
+	+ country_of_citizenship : country-vocab[1...*] 
+	+ nationality : country-vocab[1...*] 
+	+ residency : residency-vocab 
+	+ gender : gender-vocab 
+	+ age : integer 
+	+ education : education-vocab 
+	+ marital_status : marital-status-vocab 
+	+ number_of_children : integer 
+	+ comment : string 
 }
 class Note #D4EFDF {
 	* id : string 
@@ -103,8 +145,27 @@ class CourtCase #f9b8bd {
 	+ court_district : string 
 	+ court_type : court-type-vocab 
 	+ case_type : case-type-vocab 
-	+ defendant : [1...*] 
-	+ plaintiff : [1...*] 
+	+ defendant : string[1...*] 
+	+ plaintiff : string[1...*] 
+	+ comment : string 
+}
+class Insider <<Person>> #043673 {
+	* id : string 
+	* incident_role : incident-role-vocab 
+	+ motive : motive-vocab[1...*] 
+	+ substance_abuse : substance-abuse-vocab[1...*] 
+	+ substance_use_during_incident : boolean 
+	+ psychological_issues : psych-issues-vocab[1...*] 
+	+ predispositions : ({field} predisposition-type-vocab, predisposition-subtype-vocab)[1...*] 
+	+ concerning_behaviors : ({field} cb-type-vocab, cb-subtype-vocab)[1...*] 
+	+ comment : string 
+}
+class Response #EF3A47 {
+	* id : string 
+	+ technical_controls : ({field} technical-control-vocab, date)[1...*] 
+	+ behavioral_controls : ({field} behavioral-control-vocab, date)[1...*] 
+	+ investigated_by : investigator-vocab[1...*] 
+	+ investigation_events : ({field} investigation-vocab, date)[1...*] 
 	+ comment : string 
 }
 class Detection #FDB515 {
@@ -115,14 +176,37 @@ class Detection #FDB515 {
 	+ logs : detection-log-vocab[1...*] 
 	+ comment : string 
 }
+class StateVocab #FFFFFF {
+	+ country : state-vocab-us 
+}
+class InsiderRelationshipVocab #FFFFFF {
+	+ relationship : insider-relationship-vocab 
+}
+class CountryVocab #FFFFFF {
+	+ country : country-vocab 
+}
+class OrgRelationship #FFFFFF {
+	* id : string 
+	* org1 : string 
+	* org2 : string 
+	* relationship : org-relationship-vocab 
+}
+class Collusion #b0d0ed {
+	* id : string 
+	* insider1 : string 
+	* insider2 : string 
+	* relationship : insider-relationship-vocab 
+	+ recruitment : recruitment-vocab 
+}
 
-    Insider --o{ Accomplice : Relationship
+    Insider --o{ Accomplice
     Incident --|{ Insider : commits <
     Accomplice -- Job
     Job -- Organization : employs <
     Insider -- Job
     Organization }|--|{ Incident
-    Organization }o--o{ Organization : OrgRelationship
+    Organization -- OrgRelationship
+    OrgRelationship -- Organization
     Insider }o--o| Sponsor
     Accomplice }o--o| Sponsor
     Insider |o--o| Organization : owns >

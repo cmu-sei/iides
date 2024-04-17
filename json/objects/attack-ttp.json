@@ -1,0 +1,375 @@
+{
+    "$id": "[REPLACE with full github url to this json file]",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Attack TTP",
+    "description": "TODO",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "TODO",
+        "pattern": "^attack-ttp--[UUIDv4]"
+      },
+      "date": {
+        "type": "string",
+        "format": "date",
+        "description": "TODO"
+      },
+      "sequence_num": {
+        "type": "integer",
+        "description": "TODO"
+      },
+      "observed": {
+        "type": "boolean",
+        "description": "TODO"
+      },
+      "number_of_times": {
+        "type": "integer",
+        "description": "TODO"
+      },
+      "ttp_vocab": {
+        "type": "string",
+        "default": "IIDES Attack Methods",
+        "description": "att&ck, capec, etc."
+      },
+      "tactic": {
+        "type": "string",
+        "description": "TODO",
+        "$ref": "#/$defs/tactic-vocab"
+      },
+      "technique": {
+        "type": "string",
+        "description": "TODO",
+        "$ref": "#/$defs/technique-vocab"
+      },
+      "location": {
+        "type": "string",
+        "description": "TODO",
+        "items": {
+            "$ref": "#/$defs/attack-location-vocab"
+        },
+        "minItems": 1
+      },
+      "hours": {
+        "type": "string",
+        "description": "TODO",
+        "items": {
+            "$ref": "#/$defs/attack-hours-vocab"
+        },
+        "minItems": 1
+      },
+      "device": {
+        "type": "string",
+        "description": "TODO. Affected device",
+        "items": {
+            "$ref": "#/$defs/device-vocab"
+        },
+        "minItems": 1
+      },
+      "description": {
+        "type": "string",
+        "format": "date",
+        "description": "TODO"
+      }
+    },
+    "required": [
+        "id"
+    ],
+    "$defs": {
+        "tactic-vocab": {
+            "oneOf": [
+              {
+                "const": "4.1",
+                "title": "Access",
+                "description": "TODO"
+              },
+              {
+                "const": "4.4",
+                "title": "Recruitment",
+                "description": "TODO"
+              },
+              {
+                "const": "4.7",
+                "title": "Financial Transaction",
+                "description": "TODO"
+              },
+              {
+                "const": "4.8",
+                "title": "Concealment",
+                "description": "TODO"
+              },
+            ]
+        },
+        "technique-vocab": {
+            "oneOf": [
+              {
+                "const": "4.1.1",
+                "title": "Own account",
+                "description": "TODO"
+              },
+              {
+                "const": "4.1.2",
+                "title": "Privileged Access Abuse",
+                "description": "TODO"
+              },
+              {
+                "const": "4.1.3",
+                "title": "Insider Used Shared Account",
+                "description": "TODO"
+              },
+              {
+                "const": "4.1.4",
+                "title": "Insider Used Dormant or Expired Account",
+                "description": "TODO"
+              },
+              {
+                "const": "4.1.5",
+                "title": "Insider Used Unattended Workstation (Unsecured)",
+                "description": "TODO"
+              },
+              {
+                "const": "4.1.6",
+                "title": "Insider Used Their Account After Termination/Resignation",
+                "description": "TODO"
+              },
+              {
+                "const": "4.1.7",
+                "title": "Insider Used Compromised Account",
+                "description": "TODO"
+              },
+              {
+                "const": "4.1.8",
+                "title": "Used Unauthorized Access Path",
+                "description": "TODO"
+              },
+              {
+                "const": "4.1.9",
+                "title": "Authorized Third-Party Account",
+                "description": "TODO"
+              },
+              {
+                "const": "4.1.10",
+                "title": "Coworker's Account",
+                "description": "TODO"
+              },
+              {
+                "const": "4.1.11",
+                "title": "Customer's Account",
+                "description": "TODO"
+              },
+              {
+                "const": "4.1.12",
+                "title": "Database Administrator Account",
+                "description": "TODO"
+              },
+              {
+                "const": "4.1.13",
+                "title": "Supervisor's Account",
+                "description": "TODO"
+              },
+              {
+                "const": "4.1.14",
+                "title": "System Administrator Account",
+                "description": "TODO"
+              },
+              {
+                "const": "4.4.",
+                "title": "Outsider Recruits Insider",
+                "description": "TODO"
+              },
+              {
+                "const": "4.4.",
+                "title": "Insider Recruited Outside Aid",
+                "description": "TODO"
+              },
+              {
+                "const": "4.4.",
+                "title": "Insider Recruited Coworker(s)",
+                "description": "TODO"
+              },
+              {
+                "const": "4.4.",
+                "title": "Insider Recruited by Coworker(s)",
+                "description": "TODO"
+              },
+              {
+                "const": "4.7.1",
+                "title": "Attempt to Sell Organization Information/Data/IP",
+                "description": "TODO"
+              },
+              {
+                "const": "4.7.2",
+                "title": "Payoffs From Insider",
+                "description": "TODO"
+              },
+              {
+                "const": "4.7.3",
+                "title": "Payoffs to Insider",
+                "description": "TODO"
+              },
+              {
+                "const": "4.7.4",
+                "title": "Insider Received/Transferred Fraudulent Funds",
+                "description": "TODO"
+              },
+              {
+                "const": "4.7.5",
+                "title": "Insider Made Fraudulent Purchases",
+                "description": "TODO"
+              },
+              {
+                "const": "4.7.6",
+                "title": "Insider Filed Fraudulent Tax Return",
+                "description": "TODO"
+              },
+              {
+                "const": "4.7.7",
+                "title": "Insider Created/Used Fraudulent Asset",
+                "description": "TODO"
+              },
+              {
+                "const": "4.8.1",
+                "title": "Insider Falsified Information",
+                "description": "TODO"
+              },
+              {
+                "const": "4.8.2",
+                "title": "Insider Omitted Information",
+                "description": "TODO"
+              },
+              {
+                "const": "4.8.3",
+                "title": "Insider Modified/Deleted Logs/Activity",
+                "description": "TODO"
+              },
+              {
+                "const": "4.8.4",
+                "title": "Insider Physically Destroyed/Hid Evidence",
+                "description": "TODO"
+              },
+              {
+                "const": "4.8.5",
+                "title": "Insider Fled or Attempted to Flee",
+                "description": "TODO"
+              },
+              {
+                "const": "4.8.6",
+                "title": "Insider Created/Used an Alias",
+                "description": "TODO"
+              },
+              {
+                "const": "4.8.7",
+                "title": "Insider Framed another Individual",
+                "description": "TODO"
+              },
+              {
+                "const": "4.8.8",
+                "title": "Insider Made False Statements/Denied Involvement",
+                "description": "TODO"
+              },
+              {
+                "const": "4.8.9",
+                "title": "Concealment of Current Illicit Activity - Other Technical",
+                "description": "TODO"
+              },
+              {
+                "const": "4.8.10",
+                "title": "Concealment of Current Illicit Activity - Other Non-Technical",
+                "description": "TODO"
+              }
+            ]
+        },
+        "attack-location-vocab": {
+            "oneOf": [
+              {
+                "const": "1",
+                "title": "On-site",
+                "description": "TODO"
+              },
+              {
+                "const": "2",
+                "title": "Remotely",
+                "description": "TODO"
+              },
+              {
+                "const": "3",
+                "title": "Remotely from home",
+                "description": "TODO"
+              },
+              {
+                "const": "4",
+                "title": "Remotely while traveling",
+                "description": "TODO"
+              }
+            ]
+        },
+        "attack-hours-vocab": {
+            "oneOf": [
+              {
+                "const": "1",
+                "title": "During Work Hours",
+                "description": "TODO"
+              },
+              {
+                "const": "2",
+                "title": "Outside of Work Hours",
+                "description": "TODO"
+              }
+            ]
+        },
+        "device-vocab": {
+            "oneOf": [
+              {
+                "const": "1",
+                "title": "Company Desktop",
+                "description": "TODO"
+              },
+              {
+                "const": "2",
+                "title": "Company Laptop",
+                "description": "TODO"
+              },
+              {
+                "const": "3",
+                "title": "Company Mobile Device",
+                "description": "TODO"
+              },
+              {
+                "const": "4",
+                "title": "Database Server",
+                "description": "TODO"
+              },
+              {
+                "const": "5",
+                "title": "Email Server",
+                "description": "TODO"
+              },
+              {
+                "const": "6",
+                "title": "File Server",
+                "description": "TODO"
+              },
+              {
+                "const": "7",
+                "title": "Personal Computer",
+                "description": "TODO"
+              },
+              {
+                "const": "8",
+                "title": "Personal Mobile Device",
+                "description": "TODO"
+              },
+              {
+                "const": "9",
+                "title": "Printer/Copier/Fax",
+                "description": "TODO"
+              },
+              {
+                "const": "10",
+                "title": "Web Server",
+                "description": "TODO"
+              }
+            ]
+        }
+    }
+}

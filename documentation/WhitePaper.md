@@ -15,11 +15,21 @@ Version: 0.1, Revision 1
 - ISO 3166-1 alpha-2 country codes
 - Indicator Ontology
 - ATT&CK and InT ATT&CK
+- NIST Risk framework and/or incident framework
 - STIX/TAXII
 - MISP
 - RMM
 - SOFIT: https://ieeexplore.ieee.org/document/8424651
 - SISO CyberDEM
+
+- https://ieeexplore.ieee.org/abstract/document/9311246
+- https://dl.acm.org/doi/abs/10.1145/3465481.3470024
+
+Legal
+- Coding Case Law for Public Health Evaluation (Hall)
+- Supreme court database codebook (http://scdb.wustl.edu/_brickFiles/2019_01/SCDB_2019_01_codebook.pdf)
+- Measuring law for evaluation research (https://journals.sagepub.com/doi/epdf/10.1177/0193841X10370018
+
 
 ## IIDES
 - Guiding principles

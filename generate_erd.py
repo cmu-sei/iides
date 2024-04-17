@@ -1,7 +1,9 @@
 '''Generates UML wsd file for full ERD'''
 import json
-from os import listdir
+import os
 
+
+JSON_PATH = "json"
 color_map = {
     'Person': '#b0d0ed',
     'Insider': '#043673',
@@ -22,8 +24,21 @@ color_map = {
     'Response': '#EF3A47',
     'Legal Response': '#f9b8bd',
     'Stressor': '#b0d0ed',
-    'Attack TTP': '#A456ED'
+    'Attack TTP': '#A456ED',
+    'State Vocab': '#FFFFFF',
+    'Insider Relationship Vocab': '#FFFFFF',
+    'Country Vocab': '#FFFFFF',
+    'Org Relationship': '#FFFFFF'
 }
+
+
+def get_json_files():
+    '''Returns json files from which to generate markdown'''
+    fnames = []
+    for root, _, f_names in os.walk(JSON_PATH):
+        for f in f_names:
+            fnames.append(os.path.join(root, f))
+    return fnames
 
 
 def get_ref(ref):
@@ -39,8 +54,12 @@ file_lines = []
 file_lines.append("@startuml IIDES\npackage \"IIDES\" #fff {\n\n")
 
 # iterate through all json object files
-for object in listdir("json/objects"):
-    with open('json/objects/'+object) as f:
+#for object in listdir("json/objects"):
+#   with open('json/objects/'+object) as f:
+json_files = get_json_files()
+for filename in json_files:
+
+    with open(filename) as f:
         data = json.load(f)
         print(data['title'])
 
@@ -56,18 +75,23 @@ for object in listdir("json/objects"):
             if 'prefixItems' in data['properties'][property].keys():
                 # property is an array of tuples
                 type_string = ": ("
+                refs = []
                 for p_item in data['properties'][property]['prefixItems']:
                     if list(p_item.keys())[0] == '$ref':
-                        ref = p_item['$ref']
-                        break
-                type_string += f"{{field}} {get_ref(ref)}, date)[1...*]"
+                        refs.append(get_ref(p_item['$ref']))
+                if len(refs) == 1:
+                    type_string += f"{{field}} {refs[0]}, date)[1...*]"
+                else:
+                    type_string += f"{{field}} {', '.join(refs)})[1...*]"
             elif 'items' in data['properties'][property].keys():
                 # property is an array
                 type_string = ": "
                 if '$ref' in data['properties'][property]['items'].keys():
                     type_string += get_ref(data['properties'][property]['items']['$ref'])
+                else:
+                    type_string += "string"
                 if data['properties'][property]['type'] == 'array':
-                    type_string += f"string[{data['properties'][property]['minItems']}...*]"
+                    type_string += f"[{data['properties'][property]['minItems']}...*]"
             else:
                 if '$ref' in data['properties'][property].keys():
                     type_string = f": {get_ref(data['properties'][property]['$ref'])}"
@@ -92,7 +116,8 @@ relationships = '''
     Job -- Organization : employs <
     Insider -- Job
     Organization }|--|{ Incident
-    Organization }o--o{ Organization : OrgRelationship
+    Organization -- OrgRelationship
+    OrgRelationship -- Organization
     Insider }o--o| Sponsor
     Accomplice }o--o| Sponsor
     Insider |o--o| Organization : owns >
