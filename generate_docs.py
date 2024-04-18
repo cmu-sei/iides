@@ -31,7 +31,7 @@ def get_properties(properties, required):
     lines = []
 
     for p in properties:
-        print(p)
+        print(f"\t{p}")
         property_string = f"- **`{p}`** "
         if p in required:
             property_string += "(required) "
@@ -43,7 +43,7 @@ def get_properties(properties, required):
 
         if '$ref' in properties[p].keys():
             # A string that can be one of a list of values
-            vocab_ref = "\t- A value from "
+            vocab_ref = "\t- A constant from "
             vocab_ref += get_ref(properties[p]['$ref'])
             lines.append(vocab_ref)
 
@@ -92,7 +92,7 @@ def get_vocab(definitions):
             except KeyError:
                 values = [f"`{v['const']}`" for v in definitions[d]['oneOf']]
                 table_data = definitions[d]['oneOf']
-            lines.append(f"\nValues: {', '.join(values)}\n")
+            lines.append(f"\nConstants: {', '.join(values)}\n")
 
             has_descriptions = False
             for row in table_data:
@@ -128,11 +128,11 @@ if __name__ == "__main__":
             print(data['title'])
 
         # Title and description of object
-        file_lines.append(f"# {data['title']}")
+        file_lines.append(f"# {data['title']}\n")
         file_lines.append(f"{data['description']}\n")
 
         if 'properties' in data:
-            file_lines.append("## Properties")
+            file_lines.append("## Properties\n")
             file_lines.extend(
                 get_properties(data['properties'], data['required']))
 

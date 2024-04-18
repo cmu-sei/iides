@@ -2,25 +2,26 @@
     "$id": "[REPLACE with full github url to this json file]",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Note",
-    "description": "TODO",
+    "description": "A freeform text space for holding notes about the incident as it is being investigated, such as current status or a checklist to follow up on. Notes are not intended to be used to hold details about the incident itself.",
     "type": "object",
     "properties": {
       "id": {
         "type": "string",
-        "description": "TODO",
+        "description": "A unique string that begins with \"note--\" and is appended with a UUIDv4.",
         "pattern": "^note--[UUIDv4]"
       },
       "author": {
         "type": "string",
-        "description": "TODO"
+        "description": "Individual, group, or organization that authored the note."
       },
       "date": {
-        "type": "datetime",
-        "description": "TODO"
+        "type": "string",
+        "format": "datetime",
+        "description": "Date and time the note was authored or most recently modified."
       },
       "comment": {
         "type": "string",
-        "description": "TODO"
+        "description": "Notes, comments, details as needed."
       }
     },
     "required": [

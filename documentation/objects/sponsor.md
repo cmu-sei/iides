@@ -1,22 +1,25 @@
 # Sponsor
-TODO
+
+An individual or entity that recruited, instigated, motivated, or otherwise supported the insider's action.
 
 ## Properties
-- **`id`** (required) *(string)* : TODO
+
+- **`id`** (required) *(string)* : A unique string that begins with "sponsor--" and is appended with a UUIDv4.
 	- Uses pattern: ^sponsor--[UUIDv4]
-- **`name`** *(string)* : TODO
-- **`sponsor_type`** *(string)* : TODO
-	- A value from [sponsor-type-vocab](#sponsor-type-vocab)
+- **`name`** *(string)* : The name of the individual or entity sponsoring the insider's actions.
+- **`sponsor_type`** *(string)* : The type of sponsor. If unknown, leave blank.
+	- A constant from [sponsor-type-vocab](#sponsor-type-vocab)
 
 ## Vocabularies
 
-### target-asset-vocab
+### sponsor-type-vocab
 
-Values: `OC`, `SS`, `FN`, `CE`
+Constants: `OC`, `SS`, `FN`, `CE`, `OT`
 
 | Const | Value | Description |
 | --- | --- | --- |
-| OC | Organized Crime | TODO|
-| SS | State Sponsor | TODO|
-| FN | Foreign National | TODO|
-| CE | Criminal Enterprise | TODO|
+| OC | Organized Crime | E.g., terrorist group, mafia, gang.|
+| SS | State Sponsor | Geopolitical, state, or national military with a speciific country of origin.|
+| FN | Foreign National | An individual whose objectives are aligned with either the political, commercial, or military interests of a country other than where the incident originated.|
+| CE | Criminal Enterprise | A group of individuals with an identified hierarchy or structure who engage in significant criminal activity.|
+| OT | Other | A sponsor type not listed in this vocabulary.|

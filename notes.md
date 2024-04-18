@@ -8,30 +8,48 @@
 - Do we need the specific lists of substances and psychological issues?
 - Is it important that we retain the numbering on the observables?
 
-
 ## TO DO
-- add "format" to doc generator
+- add "format" to doc generator (ex. date, datetime)
 
 https://jsonschemalint.com/#!/version/draft-07/markup/json
-- Finish loading objects:
-    - Response
-    - Insider
-    - Accomplice
-    - Collusion
-    - AttackTPP Enumeration
 - Write up intro material for white paper
-- Add definitions
-    - Submit to team as they are completed
-- examples
 - Note handling of inexact dates
-- how to link objects to one another?
 
-## References
-- color palette https://www.cmu.edu/brand/brand-guidelines/visual-identity/colors.html
-- Plant UML: https://plantuml.com/class-diagram
-- https://plantuml.com/json
-- STIX: https://stixproject.github.io/getting-started/whitepaper/#guiding-principles
-- MISP: https://www.misp-project.org/documentation/
+## Status
 
-## Workflow and Editing
+- d - definitions completed
+- r - relationships added
+- c - descriptions and properties confirmed with team
+- j - json formatted, validated and verified
+- x - ready for RRO and licensing
 
+
+### Entities
+
+- [ ] Country vocab
+- [ ] State vocab
+- [ ] Incident
+- [ ] Organization
+- [ ] Org Relationship
+- [ ] Person
+- [ ] Insider
+- [ ] Insider relationship vocab
+- [ ] Job
+- [ ] Collusion
+- [d] Accomplice
+- [d] Sponsor
+- [ ] Stressor
+- [d] Note
+- [ ] Source
+- [ ] Target
+- [ ] Impact
+- [ ] Detection
+- [ ] Response
+- [ ] Legal Response
+- [ ] Court Case
+- [ ] Charge
+- [ ] Sentence
+- [ ] Attack TTP
+
+Json/UML:
+- [ ] Examples in UML and json
