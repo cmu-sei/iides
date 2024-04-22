@@ -8,7 +8,7 @@ Version: 0.1, Revision 1
 ## Background
 
 - bit about MERIT
-- but about our other research
+- bit about our other research
 - users: researchers, analysts, risk managers, practitioners, investigators, simulations/exercises
 
 
@@ -53,6 +53,8 @@ Legal
 
 ## IIDES
 
+IIDES is split into three different 
+
 ### Core Components
 
 The core components of IIDES are Incident, Insider, Organization, Job, Detection, Response, and TTP. Figure X describes the relationships between these core components. 
@@ -65,11 +67,11 @@ An insider threat [Incident](objects/incident.md) can be associated with one or 
 
 When multiple organizations are involved in an incident, they may have relationships to one another, such as a vendor relationship, or a competitor relationship. Organizations may also have different roles within an incident, such as a primary victim, or even a beneficiary of the incident.
 
-A [Detection entity](objects/detection.md) describes...
+A [Detection entity](objects/detection.md) describes details about how, when, and by whom the incident was detected. An incident has only one detection entity.
 
-A [Response entity](objects/response.md) describes...
+A [Response entity](objects/response.md) describes the organization's response to the incident, including technical and behavioral controls, investigation,and legal response. An incident has has only one response entity. 
 
-An incident can have zero, one, or multiple [TTPs](objects/attackTTP.md) TODO detailing the specific actions an insider took over the course of the incident.
+An incident can have zero, one, or multiple [TTPs](objects/attackTTP.md), each of which details a specific action the insider took during the course of the incident.
 
 ### Full Architecture
 
@@ -98,5 +100,7 @@ TODO
 ## Conclusion
 
 ## References
+
+## Licensing and RRO
 
 

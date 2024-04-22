@@ -7,7 +7,7 @@ package "IIDES Core Relationships" #FFF {
     class Job #33c2C4 {}
     class Detection #FDB515 {}
     class Response #EF3A47 {}
-    class AttackTTP #A456ED {}
+    class TTP #A456ED {}
 
     Incident --|{ Insider : commits <
     Job -- Organization : employs <
@@ -18,6 +18,6 @@ package "IIDES Core Relationships" #FFF {
     Insider }|--|{ Insider
     Incident -- Detection
     Incident -- Response
-    Incident --o{ AttackTTP
+    Incident --o{ TTP
 }
 @enduml

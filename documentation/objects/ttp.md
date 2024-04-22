@@ -1,11 +1,11 @@
-# Attack TTP
+# TTP
 
 TODO
 
 ## Properties
 
 - **`id`** (required) *(string)* : TODO
-	- Uses pattern: ^attack-ttp--[UUIDv4]
+	- Uses pattern: ^ttp--[UUIDv4]
 - **`date`** *(string)* : TODO
 - **`sequence_num`** *(integer)* : TODO
 - **`observed`** *(boolean)* : TODO

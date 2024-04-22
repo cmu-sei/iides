@@ -54,7 +54,7 @@ https://jsonschemalint.com/#!/version/draft-07/markup/json
 - [d] Court Case
 - [ ] Charge
 - [ ] Sentence
-- [ ] Attack TTP
+- [ ] TTP
 
 Json/UML:
 - [ ] Examples in UML and json

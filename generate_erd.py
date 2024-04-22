@@ -24,7 +24,7 @@ color_map = {
     'Response': '#EF3A47',
     'Legal Response': '#f9b8bd',
     'Stressor': '#b0d0ed',
-    'Attack TTP': '#A456ED',
+    'TTP': '#A456ED',
     'State Vocab': '#FFFFFF',
     'Insider Relationship Vocab': '#FFFFFF',
     'Country Vocab': '#FFFFFF',
@@ -135,7 +135,7 @@ relationships = '''
     LegalResponse --|{ CourtCase
     Organization --|{ Stressor
     Stressor }|-- Insider
-    Incident --o{ AttackTTP
+    Incident --o{ TTP
 '''
 f.write(relationships)
 
