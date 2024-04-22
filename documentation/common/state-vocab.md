@@ -1,14 +1,16 @@
 # State Vocab
-TODO
+
+United States state vocabulary are provided for reference; replace with or add vocabulary for other countries as needed. The codes provided here are from the ANSI standard.
 
 ## Properties
-- **`country`** *(string)* : TODO
+
+- **`country`** *(string)* : The state.
 
 ## Vocabularies
 
 ### state-vocab-us
 
-Values: `AL`, `AK`, `AS`, `AZ`, `AR`, `CA`, `CO`, `CT`, `DE`, `FL`, `GA`, `GU`, `HI`, `ID`, `IL`, `IN`, `IA`, `KS`, `KY`, `LA`, `ME`, `MD`, `MA`, `MI`, `MN`, `MS`, `MO`, `MT`, `NE`, `NV`, `NH`, `NJ`, `NM`, `NY`, `NC`, `ND`, `MP`, `OH`, `OK`, `OR`, `PA`, `PR`, `RI`, `SC`, `SD`, `TN`, `TX`, `VI`, `UT`, `VT`, `VA`, `WA`, `WV`, `WI`, `WY`
+Constants: `AL`, `AK`, `AS`, `AZ`, `AR`, `CA`, `CO`, `CT`, `DE`, `FL`, `GA`, `GU`, `HI`, `ID`, `IL`, `IN`, `IA`, `KS`, `KY`, `LA`, `ME`, `MD`, `MA`, `MI`, `MN`, `MS`, `MO`, `MT`, `NE`, `NV`, `NH`, `NJ`, `NM`, `NY`, `NC`, `ND`, `MP`, `OH`, `OK`, `OR`, `PA`, `PR`, `RI`, `SC`, `SD`, `TN`, `TX`, `VI`, `UT`, `VT`, `VA`, `WA`, `WV`, `WI`, `WY`
 
 | Const | Value |
 | --- | --- |

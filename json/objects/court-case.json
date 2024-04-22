@@ -2,57 +2,61 @@
     "$id": "[REPLACE with full github url to this json file]",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Court Case",
-    "description": "TODO",
+    "description": "Information about legal procedings related to the incident, whether charges against the insider or their accomplice(s), a civil suit, or a suit against another entity involved in the incident.",
     "type": "object",
     "properties": {
       "id": {
         "type": "string",
-        "description": "TODO",
+        "description": "A unique string that begins with \"court-case--\" and is appended with a UUIDv4.",
         "pattern": "^court-case--[UUIDv4]"
       },
       "case_number": {
         "type": "string",
-        "description": "TODO"
+        "description": "A case number assigned by the court system in which the case is being tried."
+      },
+      "case_title": {
+        "type": "string",
+        "description": "Title provided by the court system (e.g., “USA v. LastName” or “USA v. LastName, et al.”)."
       },
       "court_country": {
         "type": "string",
-        "description": "TODO",
+        "description": "Country where the case was tried.",
         "$ref": "../common/country-vocab.json"
       },
       "court_state": {
         "type": "string",
-        "description": "TODO",
+        "description": "State or region where the case was tried.",
         "$ref": "../common/state-vocab.json"
       },
       "court_district": {
         "type": "string",
-        "description": "TODO"
+        "description": "District where the case was tried, if applicable (e.g., \"CA Central District Court\")."
       },
       "court_type": {
         "type": "string",
-        "description": "TODO",
+        "description": "Type or level of the court where the case is tried.",
         "$ref": "#/$defs/court-type-vocab"
       },
       "case_type": {
         "type": "string",
-        "description": "TODO",
+        "description": "Type of case.",
         "$ref": "#/$defs/case-type-vocab"
       },
       "defendant": {
         "type": "array",
-        "description": "TODO",
+        "description": "The names of all the defendants (or respondants, or appellees) in the case.",
         "items": { "type": "string" },
         "minItems": 1
       },
       "plaintiff": {
         "type": "array",
-        "description": "TODO",
+        "description": "The names of all the plaintiffs (or petitioners, or appellants) in the case.",
         "items": { "type": "string" },
         "minItems": 1
       },
       "comment": {
         "type": "string",
-        "description": "TODO"
+        "description": "Clarifying comments about any of the court case details, or its associated charges and sentences, such as which sentences run concurrently, the structure of a plea deal, or the status of the case."
       }
     },
     "required": [
@@ -64,17 +68,17 @@
               {
                 "const": "1",
                 "title": "Federal",
-                "description": "TODO"
+                "description": "Top level government court."
               },
               {
                 "const": "2",
-                "title": "Foreign",
-                "description": "TODO"
+                "title": "International",
+                "description": "Intergovernmental level court."
               },
               {
                 "const": "3",
                 "title": "State",
-                "description": "TODO"
+                "description": "State or regional level government court."
               }
             ]
         },
@@ -83,12 +87,12 @@
               {
                 "const": "1",
                 "title": "Civil",
-                "description": "TODO"
+                "description": "A case dealing with a dispute between two people or organizations."
               },
               {
                 "const": "2",
                 "title": "Criminal",
-                "description": "TODO"
+                "description": "A case dealing with a violation of criminal law."
               }
             ]
         }

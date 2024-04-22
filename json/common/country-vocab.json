@@ -2,12 +2,12 @@
     "$id": "[REPLACE with full github url to this json file]",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Country Vocab",
-    "description": "TODO",
+    "description": "Country codes are included in IIDES for easy reference and standardization across IIDES instances. The codes provided here are from ISO 3166-1 alpha-2.",
     "type": "object",
     "properties": {
         "country": {
             "type": "string",
-            "description": "TODO",
+            "description": "The country.",
             "items": {
                 "$ref": "#/$defs/country-vocab"
             }

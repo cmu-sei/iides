@@ -2,17 +2,17 @@
   "$id": "[REPLACE with full github url to this json file]",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Incident",
-  "description": "TODO description of incident",
+  "description": "Description and summary details of the incident.",
   "type": "object",
   "properties": {
     "id": {
       "type": "string",
-      "description": "TODO",
+      "description": "A unique string that begins with \"incident--\" and is appended with a UUIDv4.",
       "pattern": "^incident--[UUIDv4]"
     },
     "cia_effect": {
       "type": "array",
-      "description": "TODO",
+      "description": "CIA triad components which were affected.",
       "items": {
         "$ref": "#/$defs/cia-vocab"
       },
@@ -20,7 +20,7 @@
     },
     "incident_type": {
       "type": "array",
-      "description": "TODO",
+      "description": "Categorization of the incident.",
       "items": {
         "$ref": "#/$defs/incident-type-vocab"
       },
@@ -28,7 +28,7 @@
     },
     "outcome": {
       "type": "array",
-      "description": "TODO",
+      "description": "Consequences suffered by the victim organization as a result of the insider's attack. This is NOT the outcome or consequences imposed on the insider.",
       "items": {
         "$ref": "#/$defs/outcome-type-vocab"
       },
@@ -36,20 +36,20 @@
     },
     "status": {
       "type": "string",
-      "description": "TODO",
+      "description": "The current status of the incident.",
       "$ref": "#/$defs/incident-status-vocab"
     },
     "summary": {
       "type": "string",
-      "description": "TODO"
+      "description": "A brief prose explanation of the incident. This summary should serve as a stand-alone explanation of the incident and should include the following information as a general rule: who, what, when, where, why, and how."
     },
     "brief_summary": {
       "type": "string",
-      "description": "TODO"
+      "description": "A shortened version of the summary (2-4 sentences, max 500 characters) with anonymized data."
     },
     "comment": {
       "type": "string",
-      "description": "TODO"
+      "description": "Clarifying details about the incident or any of the above properties."
     }
   },
   "required": [
@@ -60,23 +60,23 @@
       "oneOf": [
         {
           "const": "P",
-          "title": "In Progress",
-          "description": "TODO"
+          "title": "Open",
+          "description": "A case has been opened for the incident."
         },
         {
           "const": "I",
           "title": "Under Investigation",
-          "description": "TODO"
+          "description": "The incident is being investigated."
         },
         {
           "const": "L",
           "title": "In Legal Proceedings",
-          "description": "TODO"
+          "description": "Investigation is complete, but the case is at trial or in appeals."
         },
         {
           "const": "C",
-          "title": "Complete",
-          "description": "TODO"
+          "title": "Closed",
+          "description": "All investigations and legal proceedings are closed."
         }
       ]
     },
@@ -85,17 +85,17 @@
         {
           "const": "C",
           "title": "Confidentiality",
-          "description": "TODO"
+          "description": "The protection of information from unauthorized access or disclosure."
         },
         {
           "const": "I",
           "title": "Integrity",
-          "description": "TODO"
+          "description": "The protection of information from unauthorized modification or destruction."
         },
         {
           "const": "A",
           "title": "Availability",
-          "description": "TODO"
+          "description": "The protection of information and information systems from unauthorized disruption."
         }
       ]
     },
@@ -104,72 +104,67 @@
         {
           "const": "BR",
           "title": "Bankruptcy",
-          "description": "TODO"
+          "description": "One or more victim organizations filed for bankruptcy."
         },
         {
           "const": "DC",
           "title": "Data Created",
-          "description": "TODO"
+          "description": "Newly created data that is a direct result of the insider's attack."
         },
         {
           "const": "DD",
           "title": "Data Deleted",
-          "description": "TODO"
+          "description": "Data was deleted from the victim organization's systems."
         },
         {
           "const": "DR",
           "title": "Data Read",
-          "description": "TODO"
+          "description": "Organizational data was read by the insider."
         },
         {
           "const": "DS",
           "title": "Data Stolen",
-          "description": "TODO"
+          "description": "Any organizational information or assets that are stolen."
         },
         {
           "const": "MD",
           "title": "Monetary Damages",
-          "description": "TODO"
+          "description": "The court ordered a sum of money to be paid by the victim organization for the purpose of replacing the monetary value of property or rights which have been lost or damaged, or to cover expenses, loss, pain and suffering relating to a victim's injury or death."
         },
         {
           "const": "ML",
           "title": "Monetary Losses",
-          "description": "TODO"
+          "description": "Indirect loss of money through damage, detriment, or suffering related to the incident."
         },
         {
           "const": "MS",
           "title": "Money Stolen",
-          "description": "TODO"
+          "description": "The insider directly stole money from the victim organization."
         },
         {
           "const": "NN",
           "title": "No net negative",
-          "description": "TODO"
+          "description": "Though an incident occurred, there were no negative consequences to the victim organization as a result."
         },
         {
           "const": "OT",
           "title": "Other",
-          "description": "TODO"
+          "description": "Other type of outcome not listed in this vocabulary."
         },
         {
           "const": "RO",
           "title": "Restituion Ordered",
-          "description": "TODO"
+          "description": "The organizatiion was ordered by a court to pay restitution to additional victims of the incident."
         },
         {
           "const": "SI",
           "title": "Safety Impact",
-          "description": "TODO"
-        },
-        {
-          "const": "UK",
-          "title": "Unknown",
-          "description": "TODO"
+          "description": "There was an impact, or potential for impact to safety, as a result of the incident."
         },
         {
           "const": "IT",
           "title": "Used in Identity Theft",
-          "description": "TODO"
+          "description": "Identity theft of one or more individuals resulted from the incident. E.g., The insider used stolen PII to file fraudulent tax returns."
         }
       ]
     },
@@ -178,22 +173,22 @@
         {
           "const": "F",
           "title": "Fraud",
-          "description": "TODO"
+          "description": "An insider's use of IT for the unauthorized modification, addition, or deletion of an organization's data (not programs or systems) for personal gain, or the theft of information which could be used to commit fraud (identity theft or credit card fraud). In other words, the insider misrepresents their intent or exceeds their access to protected information in order to commit fraud. Incidents involving fraud often involve attempted or successful identity theft."
         },
         {
           "const": "S",
           "title": "Sabotage",
-          "description": "TODO"
+          "description": "The insider directs specific harm to the organization or an individual. Instances of sabotage may include deployment of malicious code to networks or systems resulting in system downtime. Targets of sabotage may include physical property as well. Common to this category are Denial of Service attacks (DoS) and deletion of critical files."
         },
         {
           "const": "T",
           "title": "Theft of IP",
-          "description": "TODO"
+          "description": "An insider's use of IT to steal intellectual property from the organization, which may be done to benefit individuals or external organizations at the expense of the victim organization(s). This category includes industrial espionage involving insiders as well as insiders who seek to steal intellectual property to start competing organizations. Theft of IP, depending on the organization, may actually include PII if customer information is a source of competitive advantage for the organization (i.e., an insider makes an unauthorized download of customer database in order to create a cold call list)."
         },
         {
           "const": "M",
           "title": "Misuse",
-          "description": "TODO"
+          "description": "The unauthorized use of organizational devices, networks, and resources that is not better classified as theft of IP, sabotage, or fraud. Common examples of other misuse include unauthorized personal use of organizational resources (e.g., harvesting bitcoin), privacy violations (e.g., accessing co-worker's emails), committing a crime (e.g., stalking, purchasing drugs, or accessing child pornography), or other organizational policy violations."
         }
       ]
     }
