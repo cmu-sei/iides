@@ -1,31 +1,33 @@
 # Organization
-TODO
+
+The organization(s) involved in the incident. At least one organization, the victim organization, should be included as part of an incident bundle. There may be other organizations involved, such as a competitor organization that benefitted from stolen data or pass through organization that received kickbacks. The victim organization(s) include all organizations negatively impacted by the incident, not just the organization(s) that employed the insider.
 
 ## Properties
-- **`id`** (required) *(string)* : TODO
+
+- **`id`** (required) *(string)* : A unique string that begins with "organization--" and is appended with a UUIDv4.
 	- Uses pattern: ^organization--[UUIDv4]
-- **`name`** *(string)* : TODO
-- **`city`** *(string)* : TODO
-- **`state`** *(string)* : TODO
-	- A value from [state-vocab](../common/state-vocab.md)
-- **`country`** *(string)* : TODO
-	- A value from [country-vocab](../common/country-vocab.md)
-- **`postal_code`** *(integer)* : TODO
-- **`small_business`** *(boolean)* : TODO
-- **`industry_sector_tier1`** *(string)* : TODO
-	- A value from [industry-sector-tier1-vocab](#industry-sector-tier1-vocab)
-- **`industry_sector_tier2`** *(string)* : TODO
-	- A value from [industry-sector-tier2-vocab](#industry-sector-tier2-vocab)
-- **`business`** *(string)* : TODO
-- **`parent_company`** *(string)* : TODO
-- **`incident_role`** *(string)* : TODO
-	- A value from [org-role-vocab](#org-role-vocab)
+- **`name`** *(string)* : The name of the organization. E.g., "Company XYZ, Inc."
+- **`city`** *(string)* : The city where the organization is located. Use the address of the headquarters if the whole organization was affected or use the address of the local branch if only that local branch was affected.
+- **`state`** *(string)* : The state where the organization is located. Use the address of the headquarters if the whole organization was affected or use the address of the local branch if only that local branch was affected.
+	- A constant from [state-vocab](../common/state-vocab.md)
+- **`country`** *(string)* : The country where the organization is located. Use the address of the headquarters if the whole organization was affected or use the address of the local branch if only that local branch was affected.
+	- A constant from [country-vocab](../common/country-vocab.md)
+- **`postal_code`** *(integer)* : The postal code of the organization. Use the address of the headquarters if the whole organization was affected or use the address of the local branch if only that local branch was affected.
+- **`small_business`** *(boolean)* : TRUE if the organization is a privately owned business with 500 or fewer employees.
+- **`industry_sector_tier1`** *(string)* : Top level category for the economic sector the organization belongs to.
+	- A constant from [industry-sector-tier1-vocab](#industry-sector-tier1-vocab)
+- **`industry_sector_tier2`** *(string)* : Second level category for the economic sector the organization belongs to. This value MUST map back to industry_sector_tier1. E.g., if tier 1 is "9", tier 2 must be "9.x"
+	- A constant from [industry-sector-tier2-vocab](#industry-sector-tier2-vocab)
+- **`business`** *(string)* : Description of the organization's business.
+- **`parent_company`** *(string)* : Name of the organization's parent company, if applicable.
+- **`incident_role`** (required) *(string)* : The organization's role in the incident.
+	- A constant from [org-role-vocab](#org-role-vocab)
 
 ## Vocabularies
 
 ### industry-sector-tier1-vocab
 
-Values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, `14`, `15`, `16`
+Constants: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, `14`, `15`, `16`
 
 | Const | Value | Description |
 | --- | --- | --- |
@@ -48,7 +50,7 @@ Values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, `14
 
 ### industry-sector-tier2-vocab
 
-Values: `1.1`, `1.2`, `1.3`, `1.4`, `2.1`, `2.2`, `2.2`, `2.3`, `2.5`, `3.1`, `3.2`, `3.3`, `3.4`, `4.1`, `4.2`, `4.3`, `4.4`, `4.5`, `5.1`, `5.2`, `5.3`, `6.1`, `6.2`, `6.3`, `6.4`, `6.5`, `6.6`, `6.7`, `6.8`, `7.1`, `7.2`, `7.3`, `8.1`, `8.2`, `8.3`, `9.1`, `9.2`, `9.3`, `10.1`, `10.2`, `10.3`, `10.4`, `10.5`, `10.6`, `11.1`, `11.2`, `11.3`, `12.1`, `12.2`, `12.3`, `12.4`, `12.5`, `12.6`, `12.7`, `12.8`, `13.1`, `13.2`, `13.3`, `13.4`, `14.1`, `14.2`, `14.3`, `14.4`, `15.1`, `15.2`, `15.3`, `15.4`, `15.5`, `15.6`, `15.7`, `15.8`
+Constants: `1.1`, `1.2`, `1.3`, `1.4`, `2.1`, `2.2`, `2.2`, `2.3`, `2.5`, `3.1`, `3.2`, `3.3`, `3.4`, `4.1`, `4.2`, `4.3`, `4.4`, `4.5`, `5.1`, `5.2`, `5.3`, `6.1`, `6.2`, `6.3`, `6.4`, `6.5`, `6.6`, `6.7`, `6.8`, `7.1`, `7.2`, `7.3`, `8.1`, `8.2`, `8.3`, `9.1`, `9.2`, `9.3`, `10.1`, `10.2`, `10.3`, `10.4`, `10.5`, `10.6`, `11.1`, `11.2`, `11.3`, `12.1`, `12.2`, `12.3`, `12.4`, `12.5`, `12.6`, `12.7`, `12.8`, `13.1`, `13.2`, `13.3`, `13.4`, `14.1`, `14.2`, `14.3`, `14.4`, `15.1`, `15.2`, `15.3`, `15.4`, `15.5`, `15.6`, `15.7`, `15.8`
 
 | Const | Value | Description |
 | --- | --- | --- |
@@ -126,11 +128,12 @@ Values: `1.1`, `1.2`, `1.3`, `1.4`, `2.1`, `2.2`, `2.2`, `2.3`, `2.5`, `3.1`, `3
 
 ### org-role-vocab
 
-Values: `B`, `V`, `T`, `O`
+Constants: `B`, `V`, `S`, `T`, `O`
 
 | Const | Value | Description |
 | --- | --- | --- |
-| B | Beneficiary | TODO|
-| V | Victim | TODO|
-| T | Trusted Business Partner | TODO|
-| O | Other | TODO|
+| B | Beneficiary | The organization accepted trade secrets, customer lists, intellectual property, etc. that the insider obtained through the incident.|
+| V | Primary Victim | The organization was the primary victim organization of the insider's actions.|
+| S | Secondary Victim | The organization was a secondary victim to the incident.|
+| T | Trusted Business Partner | The organization has an alliance (contractually, bonded, etc.) with the victim organization.|
+| O | Other | Other role not described by this vocabulary.|

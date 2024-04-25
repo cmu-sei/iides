@@ -1,33 +1,35 @@
 # Person
-TODO
+
+Abstract class for inheritance by the Insider and Accomplice objects. Describes the properties of an individual that MAY be inherited by those classes.
 
 ## Properties
-- **`first_name`** *(string)* : TODO
-- **`middle_name`** *(string)* : TODO
-- **`last_name`** *(string)* : TODO
-- **`suffix`** *(string)* : TODO
-	- A value from [suffix-vocab](#suffix-vocab)
-- **`alias`** *(array)* : TODO
+
+- **`first_name`** *(string)* : The first, or given, name of the individual.
+- **`middle_name`** *(string)* : The middle name of the individual.
+- **`last_name`** *(string)* : The last, or family, name of the individual.
+- **`suffix`** *(string)* : The name suffix of the individual.
+	- A constant from [suffix-vocab](#suffix-vocab)
+- **`alias`** *(array)* : A list of aliases (other names) the individual has used, and/or the anonymized of the individual in court records.
 	- One or more string values
-- **`city`** *(string)* : TODO
-- **`state`** *(string)* : TODO
-	- A value from [state-vocab](../common/state-vocab.md)
-- **`country`** *(string)* : TODO
-	- A value from [country-vocab](../common/country-vocab.md)
-- **`postal_code`** *(integer)* : TODO
+- **`city`** *(string)* : The city (or county/district) that the person resided in at the time of the incident.
+- **`state`** *(string)* : The state (or region) that the person resided in at the time of the incident.
+	- A constant from [state-vocab](../common/state-vocab.md)
+- **`country`** *(string)* : The country that the person resided in at the time of the incident.
+	- A constant from [country-vocab](../common/country-vocab.md)
+- **`postal_code`** *(integer)* : The postal code that the person resided in at the time of the incident.
 - **`country_of_citizenship`** *(array)* : TODO
 	- One or more values from [country-vocab](../common/country-vocab.md)
 - **`nationality`** *(array)* : TODO
 	- One or more values from [country-vocab](../common/country-vocab.md)
 - **`residency`** *(string)* : TODO
-	- A value from [residency-vocab](#residency-vocab)
+	- A constant from [residency-vocab](#residency-vocab)
 - **`gender`** *(string)* : TODO
-	- A value from [gender-vocab](#gender-vocab)
+	- A constant from [gender-vocab](#gender-vocab)
 - **`age`** *(integer)* : TODO
 - **`education`** *(string)* : TODO
-	- A value from [education-vocab](#education-vocab)
+	- A constant from [education-vocab](#education-vocab)
 - **`marital_status`** *(string)* : TODO
-	- A value from [marital-status-vocab](#marital-status-vocab)
+	- A constant from [marital-status-vocab](#marital-status-vocab)
 - **`number_of_children`** *(integer)* : TODO
 - **`comment`** *(string)* : TODO
 
@@ -40,7 +42,7 @@ Values: `Jr`, `Sr`, `III`, `IV`
 
 ### residency-vocab
 
-Values: `N`, `P`, `R`
+Constants: `N`, `P`, `R`
 
 | Const | Value | Description |
 | --- | --- | --- |
@@ -50,7 +52,7 @@ Values: `N`, `P`, `R`
 
 ### gender-vocab
 
-Values: `F`, `M`, `N`, `O`
+Constants: `F`, `M`, `N`, `O`
 
 | Const | Value | Description |
 | --- | --- | --- |
@@ -61,7 +63,7 @@ Values: `F`, `M`, `N`, `O`
 
 ### education-vocab
 
-Values: `4`, `5`, `8`, `2`, `7`, `6`, `3`, `1`
+Constants: `4`, `5`, `8`, `2`, `7`, `6`, `3`, `1`
 
 | Const | Value | Description |
 | --- | --- | --- |
@@ -76,7 +78,7 @@ Values: `4`, `5`, `8`, `2`, `7`, `6`, `3`, `1`
 
 ### marital-status-vocab
 
-Values: `1`, `2`, `3`, `4`, `5`
+Constants: `1`, `2`, `3`, `4`, `5`
 
 | Const | Value | Description |
 | --- | --- | --- |

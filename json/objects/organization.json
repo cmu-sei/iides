@@ -2,67 +2,71 @@
     "$id": "[REPLACE with full github url to this json file]",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Organization",
-    "description": "TODO",
+    "description": "The organization(s) involved in the incident. At least one organization, the victim organization, should be included as part of an incident bundle. There may be other organizations involved, such as a competitor organization that benefitted from stolen data or pass through organization that received kickbacks. The victim organization(s) include all organizations negatively impacted by the incident, not just the organization(s) that employed the insider.",
     "type": "object",
     "properties": {
       "id": {
         "type": "string",
-        "description": "TODO",
+        "description": "A unique string that begins with \"organization--\" and is appended with a UUIDv4.",
         "pattern": "^organization--[UUIDv4]"
       },
       "name": {
         "type": "string",
-        "description": "TODO"
+        "description": "The name of the organization. E.g., \"Company XYZ, Inc.\""
       },
       "city": {
         "type": "string",
-        "description": "TODO"
+        "description": "The city where the organization is located. Use the address of the headquarters if the whole organization was affected or use the address of the local branch if only that local branch was affected."
       },
       "state": {
         "type": "string",
-        "description": "TODO",
+        "description": "The state where the organization is located. Use the address of the headquarters if the whole organization was affected or use the address of the local branch if only that local branch was affected.",
         "$ref": "../common/state-vocab.json"
       },
       "country": {
         "type": "string",
-        "description": "TODO",
+        "description": "The country where the organization is located. Use the address of the headquarters if the whole organization was affected or use the address of the local branch if only that local branch was affected.",
         "$ref": "../common/country-vocab.json"
       },
       "postal_code": {
         "type": "integer",
-        "description": "TODO"
+        "description": "The postal code of the organization. Use the address of the headquarters if the whole organization was affected or use the address of the local branch if only that local branch was affected."
       },
       "small_business": {
         "type": "boolean",
-        "description": "TODO"
+        "description": "TRUE if the organization is a privately owned business with 500 or fewer employees."
       },
       "industry_sector_tier1": {
         "type": "string",
-        "description": "TODO",
+        "description": "Top level category for the economic sector the organization belongs to.",
         "$ref": "#/$defs/industry-sector-tier1-vocab"
       },
       "industry_sector_tier2": {
         "type": "string",
-        "description": "TODO",
+        "description": "Second level category for the economic sector the organization belongs to. This value MUST map back to industry_sector_tier1. E.g., if tier 1 is \"9\", tier 2 must be \"9.x\"",
         "$ref": "#/$defs/industry-sector-tier2-vocab"
       },
       "business": {
         "type": "string",
-        "description": "TODO"
+        "description": "Description of the organization's business."
       },
       "parent_company": {
         "type": "string",
-        "description": "TODO"
+        "description": "Name of the organization's parent company, if applicable."
       },
       "incident_role": {
         "type": "string",
-        "description": "TODO",
+        "description": "The organization's role in the incident.",
         "$ref": "#/$defs/org-role-vocab"
       }
     },
     "required": [
-      "id"
+      "id",
+      "incident_role"
     ],
+    "dependentRequired": {
+        "industry_sector_tier2": ["industry_sector_tier1"]
+      },
     "$defs": {
         "industry-sector-tier1-vocab": {
             "oneOf": [
@@ -512,22 +516,27 @@
             {
               "const": "B",
               "title": "Beneficiary",
-              "description": "TODO"
+              "description": "The organization accepted trade secrets, customer lists, intellectual property, etc. that the insider obtained through the incident."
             },
             {
               "const": "V",
-              "title": "Victim",
-              "description": "TODO"
+              "title": "Primary Victim",
+              "description": "The organization was the primary victim organization of the insider's actions."
+            },
+            {
+                "const": "S",
+                "title": "Secondary Victim",
+                "description": "The organization was a secondary victim to the incident."
             },
             {
               "const": "T",
               "title": "Trusted Business Partner",
-              "description": "TODO"
+              "description": "The organization has an alliance (contractually, bonded, etc.) with the victim organization."
             },
             {
               "const": "O",
               "title": "Other",
-              "description": "TODO"
+              "description": "Other role not described by this vocabulary."
             }
           ]
         }
