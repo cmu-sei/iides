@@ -1,25 +1,26 @@
 # Austin's Random Notes during dev
 
 ## Questions/Concerns
-- How to handle location of incident?
-    - is incident location always the same as the insider and/or organization location?
-    - Should incident have its own location?
-        - Right now, it does
+
+### Others
 - Do we need the specific lists of substances and psychological issues?
 - Is it important that we retain the numbering on the observables?
 - org-relationship vs orgRole: the vocabulatries are identical
 - how well are workplace violence and suicidal ideation handeled by this schema?
+- iron out the zero, one, or more relationships in the erd
 
-## TO DO
-- change attack TTP to TTP or action?
+## TODO
 - add "format" to doc generator (ex. date, datetime)
 - add "dependentRequired" to doc generator
 - handle relationships in the json schema
+- go back through codebook and list missing/skipped fields
+- check relevant entities against STIX
+
+- enum doc generation refers to "constant" --> should be "value"
 
 https://jsonschemalint.com/#!/version/draft-07/markup/json
 - Write up intro material for white paper
 - Note handling of inexact dates
-- determine how tightly to constrain the schema
 
 ## Status
 
@@ -43,12 +44,12 @@ https://jsonschemalint.com/#!/version/draft-07/markup/json
 - [ ] Collusion
 - [d] Accomplice
 - [d] Sponsor
-- [ ] Stressor
+- [d] Stressor
 - [d] Note
-- [ ] Source
+- [d] Source
 - [ ] Target
-- [ ] Impact
-- [ ] Detection
+- [d] Impact
+- [d] Detection
 - [ ] Response
 - [ ] Legal Response
 - [d] Court Case

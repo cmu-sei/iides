@@ -7,7 +7,7 @@
     "properties": {
       "id": {
         "type": "string",
-        "description": "TODO",
+        "description": "A unique string that begins with \"sentence--\" and is appended with a UUIDv4.",
         "pattern": "^sentence--[UUIDv4]"
       },
       "sentence_type": {
@@ -17,22 +17,26 @@
       },
       "quantity": {
         "type": "integer",
-        "description": "TODO"
+        "description": "The quantity of the sentence imposed. MUST be used with the metric property if used."
       },
       "metric": {
         "type": "string",
-        "description": "TODO",
+        "description": "The measurement type of the sentence imposed. MUST be used with the quantity property if used.",
         "$ref": "#/$defs/sentence-metric-vocab"
       },
       "concurrency": {
         "type": "boolean",
-        "description": "TODO"
+        "description": "whether the sentence is to run concurrently (at the same time as) the sentence for other charges"
       }
     },
     "required": [
         "id",
         "sentence_type"
     ],
+    "dependentRequired": {
+      "quantity": ["metric"],
+      "metric": ["quantity"]
+    },
     "$defs": {
         "sentence-type-vocab": {
             "oneOf": [

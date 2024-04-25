@@ -54,8 +54,6 @@ file_lines = []
 file_lines.append("@startuml IIDES\npackage \"IIDES\" #fff {\n\n")
 
 # iterate through all json object files
-#for object in listdir("json/objects"):
-#   with open('json/objects/'+object) as f:
 json_files = get_json_files()
 for filename in json_files:
 
@@ -112,7 +110,7 @@ relationships = '''
 
     Insider --o{ Accomplice
     Incident --|{ Insider : commits <
-    Accomplice -- Job
+    Accomplice |o--o{ Job
     Job -- Organization : employs <
     Insider -- Job
     Organization }|--|{ Incident
@@ -123,16 +121,16 @@ relationships = '''
     Insider |o--o| Organization : owns >
     Insider -- Collusion
     Collusion -- Insider
-    Incident --|{ Impact
+    Incident --o{ Impact
     Incident --|{ Target
     Incident --o{ Source
     Incident --o{ Note
-    CourtCase --|{ Charge
-    CourtCase |o--|{ Sentence
-    Incident -- Detection
-    Incident -- Response
-    Response -- LegalResponse
-    LegalResponse --|{ CourtCase
+    CourtCase ||--o{ Charge
+    CourtCase ||--o{ Sentence
+    Incident --o| Detection
+    Incident --o| Response
+    Response ||--o| LegalResponse
+    LegalResponse ||--o{ CourtCase
     Organization --|{ Stressor
     Stressor }|-- Insider
     Incident --o{ TTP

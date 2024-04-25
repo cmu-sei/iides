@@ -2,49 +2,49 @@
     "$id": "[REPLACE with full github url to this json file]",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Person",
-    "description": "TODO",
+    "description": "Abstract class for inheritance by the Insider and Accomplice objects. Describes the properties of an individual that MAY be inherited by those classes.",
     "type": "object",
     "properties": {
       "first_name": {
         "type": "string",
-        "description": "TODO"
+        "description": "The first, or given, name of the individual."
       },
       "middle_name": {
         "type": "string",
-        "description": "TODO"
+        "description": "The middle name of the individual."
       },
       "last_name": {
         "type": "string",
-        "description": "TODO"
+        "description": "The last, or family, name of the individual."
       },
       "suffix": {
         "type": "string",
-        "description": "TODO",
+        "description": "The name suffix of the individual.",
         "$ref": "#/$defs/suffix-vocab"
       },
       "alias": {
         "type": "array",
-        "description": "TODO",
+        "description": "A list of aliases (other names) the individual has used, and/or the anonymized of the individual in court records.",
         "items": { "type": "string" },
         "minItems": 1
       },
       "city": {
         "type": "string",
-        "description": "TODO"
+        "description": "The city (or county/district) that the person resided in at the time of the incident."
       },
       "state": {
         "type": "string",
-        "description": "TODO",
+        "description": "The state (or region) that the person resided in at the time of the incident.",
         "$ref": "../common/state-vocab.json"
       },
       "country": {
         "type": "string",
-        "description": "TODO",
+        "description": "The country that the person resided in at the time of the incident.",
         "$ref": "../common/country-vocab.json"
       },
       "postal_code": {
         "type": "integer",
-        "description": "TODO"
+        "description": "The postal code that the person resided in at the time of the incident."
       },
       "country_of_citizenship": {
         "type": "array",

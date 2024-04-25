@@ -1,6 +1,6 @@
 # Sponsor
 
-An individual or entity that recruited, instigated, motivated, or otherwise supported the insider's action.
+An individual or entity that recruited, instigated, motivated, or otherwise supported the insider's action. A sponsor MUST be associated with at least one insider or accomplice. It may be associated with multiple insider and/or accomplices.
 
 ## Properties
 

@@ -22,13 +22,14 @@ Description and summary details of the incident.
 
 ### incident-status-vocab
 
-Constants: `P`, `I`, `L`, `C`
+Constants: `P`, `I`, `L`, `R`, `C`
 
 | Const | Value | Description |
 | --- | --- | --- |
 | P | Open | A case has been opened for the incident.|
 | I | Under Investigation | The incident is being investigated.|
 | L | In Legal Proceedings | Investigation is complete, but the case is at trial or in appeals.|
+| R | Referred out | Incident has been referred to another team or organization.|
 | C | Closed | All investigations and legal proceedings are closed.|
 
 ### cia-vocab

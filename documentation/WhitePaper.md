@@ -32,7 +32,7 @@ Legal
 - Measuring law for evaluation research (https://journals.sagepub.com/doi/epdf/10.1177/0193841X10370018
 
 ## Guiding Principles
-
+TODO
 - Don't redo others' work
 - Support the need for flexibility
     - different use cases/needs, different levels of detail/info, different countries (affects vocabularies and titles of constants)
@@ -40,20 +40,21 @@ Legal
 - Lean on our own experience
 - Support orgs who do the real work by providing the tools and language to do their jobs as efficiently as possible
 - trade offs between sharing (strict constraints on the schema) and flexibility (loose or no constraints)
+- implementations can tighten constraints
 
 ## Use Cases
-
+TODO
 - researchers recreating a database of cases
 - maintaining an internal database of an org's own cases
 - exchanging case data with other entities
 - contributing to a community (ex. OSIT) via semi-open repo
     - requires anon functionality
-- influenceing what to collect to support further research 
+- influenceing what to collect to support further research and improve their own metrics and lessons learned
 - recommend COAs based on input
 
 ## IIDES
 
-IIDES is split into three different 
+IIDES is split into four different sections: the seven core components, additional subcomponents, relationshps, and vocabularies. 
 
 ### Core Components
 
@@ -69,19 +70,29 @@ When multiple organizations are involved in an incident, they may have relations
 
 A [Detection entity](objects/detection.md) describes details about how, when, and by whom the incident was detected. An incident has only one detection entity.
 
-A [Response entity](objects/response.md) describes the organization's response to the incident, including technical and behavioral controls, investigation,and legal response. An incident has has only one response entity. 
+A [Response entity](objects/response.md) describes the organization's response to the incident, including technical and behavioral controls, investigation, and legal response. An incident has only one response entity. 
 
-An incident can have zero, one, or multiple [TTPs](objects/attackTTP.md), each of which details a specific action the insider took during the course of the incident.
+An incident can have zero, one, or multiple [TTPs](objects/ttp.md), each of which details a specific action the insider took during the course of the incident.
 
 ### Full Architecture
 
+The full architecture of IIDES includes a number of subcomponents that are associated with one or more of the IIDES core components.
+
+![IIDES Entity Relationships](../UML/out/IIDES_Entity_Relationships.png "IIDES Relationships")
+
+The Incident core component includes the subcomponents [Target](objects/target.md), [Impact](objects/impact.md), [Note](objects/note.md), and [Source](objects/source.md). An incident can have zero, one, or more of each of these subcomponents.
+
+The Response core component can have a [legal response](objects/legal-response.md) subcomponent, which in turn has one or more [court case](objects/court-case.md) components, each of which can have one or more [charge](objects/charge.md) and/or [sentence](objects/sentence.md) components. 
+
+An organization can be connected to one or more employment [stressors](objects/stressor.md) which impact an insider within the organization. These stressors are defined by the stressor vocabularies, and include stressors such as getting passed over for a promotion.
+
 TODO
 
-THe full architecture of IIDES includes a number of subcomponents that are associated with the IIDES core components.
+Insider.... person...
 
-diagram...
+Job...
 
-The Incident core component includes the subcomponents Target, Impact, Note, and Source.
+The Detection and TTP core components do not have any additional subcomponents.
 
 ### Relationships
 
@@ -92,15 +103,18 @@ TODO
 TODO
 
 ## Using IIDES
+TODO
 - Where to send feedback
 - Existing implementations (Termite, pyIides) and advice for implementing
 - Using the schema
 - Examples (link to examples dirs)
 
 ## Conclusion
+TODO
 
 ## References
+TODO
 
 ## Licensing and RRO
-
+TODO
 

@@ -1,6 +1,6 @@
 # Court Case
 
-Information about legal procedings related to the incident, whether charges against the insider or their accomplice(s), a civil suit, or a suit against another entity involved in the incident.
+Information about legal procedings related to the incident, whether charges against the insider or their accomplice(s), a civil suit, or a suit against another entity involved in the incident. A legal response can have one or more court cases, and a court case MUST be tied to only one legal response. Each court case can have one or more charges and one or more sentences.
 
 ## Properties
 

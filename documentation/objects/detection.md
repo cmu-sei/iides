@@ -1,64 +1,66 @@
 # Detection
-TODO
+
+Describes details about how, when, and by whom the incident was detected. An incident may have only one detection entity.
 
 ## Properties
-- **`id`** (required) *(string)* : TODO
+
+- **`id`** (required) *(string)* : A unique string that begins with "detection--" and is appended with a UUIDv4.
 	- Uses pattern: ^detection--[UUIDv4]
-- **`first_detected`** *(date)* : TODO
-- **`who_detected`** *(array)* : TODO
+- **`first_detected`** *(date)* : The date and time the victim organization first became aware of the incident.
+- **`who_detected`** *(array)* : The individual entities or teams that first detected the incident.
 	- One or more values from [detection-team-vocab](#detection-team-vocab)
-- **`what_detected`** *(array)* : TODO
+- **`detected_method`** *(array)* : The system or process that led to the first detection of the incident.
 	- One or more values from [detection-method-vocab](#detection-method-vocab)
-- **`logs`** *(array)* : TODO
+- **`logs`** *(array)* : The type(s) of logs used by the detection team and/or method to first detect the incident.
 	- One or more values from [detection-log-vocab](#detection-log-vocab)
-- **`comment`** *(string)* : TODO
+- **`comment`** *(string)* : Clarifying comments about who, what, when, or how the incident was detected.
 
 ## Vocabularies
 
 ### detection-team-vocab
 
-Values: `LE`, `OR`, `CU`, `CO`, `AU`, `SR`, `IR`, `ST`, `MG`, `II`, `RR`
+Constants: `LE`, `OR`, `CU`, `CO`, `AU`, `SR`, `IR`, `ST`, `MG`, `II`, `RR`
 
 | Const | Value | Description |
 | --- | --- | --- |
-| LE | Law Enforcement | TODO|
-| OR | Organization | TODO|
-| CU | Customer | TODO|
-| CO | Competitor | TODO|
-| AU | Auditor | TODO|
-| SR | Self-Reported | TODO|
-| IR | Incident Response Team | TODO|
-| ST | Security Team | TODO|
-| MG | Management | TODO|
-| II | Internal Investigators | TODO|
-| RR | Researcher | TODO|
+| LE | Law Enforcement | Law enforcement discovered the insider's illegal activity (e.g., Police noticed that the insider was gaining access to the company after hours).|
+| OR | Organization | The victim organization discovered the insider's activity (e.g., IT noticed that the insider had downloaded dozens of company trade secrets to their workstation).|
+| CU | Customer | A customer of the victim organization discovered the insider's activity.|
+| CO | Competitor | An organization competing with the victim organization discovered the insider's activity (e.g., Insider approached a competing organization with company trade secrets, and the competitor alerted the victim organization).|
+| AU | Auditor | Internal or external auditor assigned to assess the organization's security, risk, or threat posture.|
+| SR | Self-Reported | The insider reported their activity to their organization.|
+| IR | Incident Response Team | The incident response team (IRT) discovered the insider's activity.|
+| ST | Security Team | Technical or personnnel security team discovered the insider's activity.|
+| MG | Management | A member of the organization's management or the insider's management chain discovered the insider's activities.|
+| II | Internal Investigators | Investigators internal to the victim organization.|
+| RR | Researcher | Researcher external to the organization.|
 
 ### detection-method-vocab
 
-Values: `1`, `2`, `3`, `4`, `5`
+Constants: `1`, `2`, `3`, `4`, `5`
 
 | Const | Value | Description |
 | --- | --- | --- |
-| 1 | Audit | TODO|
-| 2 | Information System | TODO|
-| 3 | Non-Technical Means | TODO|
-| 4 | Software | TODO|
-| 5 | System Failure | TODO|
+| 1 | Audit | The insider's activity was spotted during an internal or third-party auditing process.|
+| 2 | Technical Means | The insider's activity was detected via analysis or anomalies in technical systems and software.|
+| 3 | Non-Technical Means | The insider's activity was detected in a non-technical fashion (e.g., The insider had personal items purchased with a company credit card sent to the office by accident).|
+| 4 | Security Software | The insider's activity was detected by security software (e.g., The insider tried to download a document with trade secrets and an automatic alert detected the download).|
+| 5 | System Failure | The insider's activity resulted in a system going down within the organization, which led to the detection of the insider's activities.|
 
 ### detection-log-vocab
 
-Values: `AC`, `AU`, `BR`, `DB`, `EM`, `FS`, `IS`, `RA`, `SF`, `VD`, `WB`
+Constants: `AC`, `AU`, `BR`, `DB`, `EM`, `FS`, `IS`, `RA`, `SF`, `VD`, `WB`
 
 | Const | Value | Description |
 | --- | --- | --- |
-| AC | Access Logs | TODO|
-| AU | Audit Logs | TODO|
-| BR | Bank Records | TODO|
-| DB | Database Logs | TODO|
-| EM | Email Logs | TODO|
-| FS | Financial Statements | TODO|
-| IS | ISP Logs | TODO|
-| RA | Remote Access Logs | TODO|
-| SF | System File Logs | TODO|
-| VD | Video Logs | TODO|
-| WB | Web Logs | TODO|
+| AC | Access Logs | File or system access logs.|
+| AU | Audit Logs | Logs generated specifically for auditing purposes.|
+| BR | Bank Records | Financial transaction or account records.|
+| DB | Database Logs | Logs from traditional or non-traditional database servers or services.|
+| EM | Email Logs | Logs from email servers or services.|
+| FS | Financial Statements | Statements or records from an individual's financial account(s).|
+| IS | ISP Logs | Logs from internet service providers (ISPs).|
+| RA | Remote Access Logs | Logs from remote access servers or clients.|
+| SF | System File Logs | File logs (create, delete, modify, etc.) from workstations, servers, and other systems.|
+| VD | Video Logs | Video, security cam, webcam, screen capture recordings.|
+| WB | Web Logs | Logs from web servers or web proxies.|

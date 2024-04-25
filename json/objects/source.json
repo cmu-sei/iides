@@ -2,39 +2,39 @@
     "$id": "[REPLACE with full github url to this json file]",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Source",
-    "description": "TODO",
+    "description": "Document that provides information about one or more aspects of the incident.",
     "type": "object",
     "properties": {
       "id": {
         "type": "string",
-        "description": "TODO",
+        "description": "A unique string that begins with \"source--\" and is appended with a UUIDv4.",
         "pattern": "^source--[UUIDv4]"
       },
       "title": {
         "type": "date",
-        "description": "TODO"
+        "description": "The title of the document."
       },
       "source_type": {
         "type": "string",
-        "description": "TODO",
+        "description": "The \"source\" or author of the source document.",
         "$ref": "#/$defs/source-type-vocab"
       },
       "file_type": {
         "type": "string",
-        "description": "TODO",
+        "description": "File type or extension.",
         "$ref": "#/$defs/source-file-type-vocab"
       },
       "date": {
         "type": "date",
-        "description": "TODO"
+        "description": "The date the document was created or most recently modified."
       },
       "public": {
         "type": "boolean",
-        "description": "TODO"
+        "description": "Whether the document is publicly available."
       },
       "document": {
         "type": "string",
-        "description": "TODO"
+        "description": "File path, location, or document object."
       }
     },
     "required": [
@@ -47,57 +47,42 @@
               {
                 "const": "01",
                 "title": "Court Document",
-                "description": "TODO"
+                "description": "Legal document from a court case."
               },
               {
                 "const": "02",
                 "title": "DOJ Press Release",
-                "description": "TODO"
+                "description": "Press release from the Department of Justice or US Attorneys' Office."
               },
               {
                 "const": "03",
                 "title": "Investigator Notes",
-                "description": "TODO"
+                "description": "Raw notes from an incident investigator."
               },
               {
                 "const": "04",
-                "title": "Letter",
-                "description": "TODO"
+                "title": "Logs",
+                "description": "Technical logs from network, server, or user devices."
               },
               {
                 "const": "05",
-                "title": "Lexis CourtLink",
-                "description": "TODO"
+                "title": "Media",
+                "description": "News, blog, or similar publication."
               },
               {
                 "const": "06",
-                "title": "Logs",
-                "description": "TODO"
+                "title": "Organization Interview",
+                "description": "Direct interview with the victim organization."
               },
               {
                 "const": "07",
-                "title": "Media",
-                "description": "TODO"
-              },
-              {
-                "const": "08",
-                "title": "Organization Interview",
-                "description": "TODO"
-              },
-              {
-                "const": "09",
-                "title": "Personal Website",
-                "description": "TODO"
-              },
-              {
-                "const": "10",
                 "title": "Insider Interview",
-                "description": "TODO"
+                "description": "Direct interview with the insider."
               },
               {
                 "const": "99",
                 "title": "Other",
-                "description": "TODO"
+                "description": "Other type of source not listed in this vocabulary."
               }
             ]
         },
@@ -108,7 +93,8 @@
               "txt",
               "docx",
               "png",
-              "xlsx"
+              "xlsx",
+              "other"
             ]
         }
     }

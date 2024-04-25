@@ -74,6 +74,11 @@
           "description": "Investigation is complete, but the case is at trial or in appeals."
         },
         {
+          "const": "R",
+          "title": "Referred out",
+          "description": "Incident has been referred to another team or organization."
+        },
+        {
           "const": "C",
           "title": "Closed",
           "description": "All investigations and legal proceedings are closed."

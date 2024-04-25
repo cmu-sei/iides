@@ -2,7 +2,7 @@
     "$id": "[REPLACE with full github url to this json file]",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Response",
-    "description": "TODO",
+    "description": "Describes the organization's response to the incident, including technical and behavioral controls, investigation, and legal response. An incident has only one response entity.",
     "type": "object",
     "properties": {
       "id": {

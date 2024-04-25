@@ -2,229 +2,236 @@
     "$id": "[REPLACE with full github url to this json file]",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Stressor",
-    "description": "TODO",
+    "description": "Events that occur after insider's start date at the victim organization and precipitate insider activity.",
     "type": "object",
     "properties": {
       "id": {
         "type": "string",
-        "description": "TODO",
+        "description": "A unique string that begins with \"stressor--\" and is appended with a UUIDv4.",
         "pattern": "^stressor--[UUIDv4]"
       },
       "date": {
         "type": "string",
         "format": "date",
-        "description": "TODO"
+        "description": "The date the stressor first occurred."
       },
       "category": {
         "type": "string",
-        "description": "TODO",
+        "description": "The category to which the stressor belongs.",
         "$ref": "#/$defs/stressor-category-vocab"
       },
       "subcategory": {
         "type": "string",
-        "description": "TODO",
+        "description": "The subcategory to which the stressor belongs. When subcategory is specified, category MUST also be specified. The subcategory constant MUST map to the specified category constant.",
         "$ref": "#/$defs/stressor-subcategory-vocab"
+      },
+      "comment": {
+        "type": "string",
+        "description": "Clarifying comments about the stressor."
       }
     },
     "required": [
         "id"
     ],
+    "dependentRequired": {
+      "subcategory": ["category"]
+    },
     "$defs": {
         "stressor-category-vocab": {
             "oneOf": [
               {
-                "const": "2.1",
+                "const": "S1",
                 "title": "Employment Status",
-                "description": "TODO"
+                "description": "The insider's employment status changed."
               },
               {
-                "const": "2.2",
+                "const": "S2",
                 "title": "Organizational Issues",
-                "description": "TODO"
+                "description": "The insider's employer had problems or changes that directly or indirectly affected the insider."
               },
               {
-                "const": "2.3",
+                "const": "S3",
                 "title": "Unmet Expectations",
-                "description": "TODO"
+                "description": "Insider's expectations of/from their employer were not met."
               },
               {
-                "const": "2.5",
+                "const": "S4",
                 "title": "Consequences for Previous Violations",
-                "description": "TODO"
+                "description": "Consequences resulting from the insider's previous behavior or violations, not resulting from the incident itself."
               }
             ]
         },
         "stressor-subcategory-vocab": {
             "oneOf": [
               {
-                "const": "2.1.1",
+                "const": "S1.1",
                 "title": "Insider Hired",
-                "description": "TODO"
+                "description": "Insider is hired by the victim organization or another organization."
               },
               {
-                "const": "2.1.2",
+                "const": "S1.2",
                 "title": "Insider Promoted",
-                "description": "TODO"
+                "description": "The insider is promoted within any organization, including the victim organization."
               },
               {
-                "const": "2.1.3",
+                "const": "S1.3",
                 "title": "Insider Demoted",
-                "description": "TODO"
+                "description": "The insider is demoted within any organization, including the victim organization."
               },
               {
-                "const": "2.1.4",
+                "const": "S1.4",
                 "title": "Insider Notified of Pending Termination",
-                "description": "TODO"
+                "description": "The insider is informed that they will be terminated from the organization in the near future."
               },
               {
-                "const": "2.1.5",
+                "const": "S1.5",
                 "title": "Insider Suspended",
-                "description": "TODO"
+                "description": "The insider is suspended from work for any reason."
               },
               {
-                "const": "2.1.6",
+                "const": "S1.6",
                 "title": "Insider Laid Off",
-                "description": "TODO"
+                "description": "The insider is laid off from their position within the organization."
               },
               {
-                "const": "2.1.7",
+                "const": "S1.7",
                 "title": "Insider Put on Paid/Unpaid Leave",
-                "description": "TODO"
+                "description": "The insider is put on a temporary leave from a job assignment, with or without pay and benefits."
               },
               {
-                "const": "2.1.8",
+                "const": "S1.8",
                 "title": "Insider Terminated",
-                "description": "TODO"
+                "description": "The insider is fired from any organization, including the victim organization"
               },
               {
-                "const": "2.1.9",
+                "const": "S1.9",
                 "title": "Insider Resigned",
-                "description": "TODO"
+                "description": "The insider resigns from any organization, including the victim organization."
               },
               {
-                "const": "2.1.10",
+                "const": "S1.10",
                 "title": "Change of Employment Status",
-                "description": "TODO"
+                "description": "The insider's status within the organization being changes from what it originally was (e.g., Insider took a full-time position at the organization after graduating college)."
               },
               {
-                "const": "2.1.11",
-                "title": "Insider Changed Positions Internall",
-                "description": "TODO"
+                "const": "S1.11",
+                "title": "Insider Changed Positions Internally",
+                "description": "The insider changes positions within the organization (e.g., Insider transferred to the Accounting department)."
               },
               {
-                "const": "2.1.12",
+                "const": "S1.12",
                 "title": "Insider Submits Resignation Notice",
-                "description": "TODO"
+                "description": "The insider submits notice of resignation to the organization."
               },
               {
-                "const": "2.2.1",
+                "const": "S2.1",
                 "title": "Mergers And Acquisitions",
-                "description": "TODO"
+                "description": "A change in the structure of the insider's employer organization (e.g., The insider's organization was in the process of being bought out by another company)."
               },
               {
-                "const": "2.2.2",
+                "const": "S2.2",
                 "title": "Reorganization Of Organization Or Outsourcing",
-                "description": "TODO"
+                "description": "A change in the internal structure of the insider's employer (e.g., The division of the victim organization that the insider worked in was closing)."
               },
               {
-                "const": "2.2.3",
+                "const": "S2.3",
                 "title": "Significant Financial Stress (non-bankruptcy)",
-                "description": "TODO"
+                "description": "The organization was undergoing significant financial stress, but did not declare bankruptcy."
               },
               {
-                "const": "2.2.4",
+                "const": "S2.4",
                 "title": "Previous Insider Incident",
-                "description": "TODO"
+                "description": "Organization has previously had an insider incident unrelated to this one"
               },
               {
-                "const": "2.2.5",
+                "const": "S2.5",
                 "title": "Layoffs",
-                "description": "TODO"
+                "description": "Temporary suspension or permanent termination of one or more employees."
               },
               {
-                "const": "2.2.6",
+                "const": "S2.6",
                 "title": "Personnel Changes",
-                "description": "TODO"
+                "description": "Staffing changes of employees other than the insider within the employing organization."
               },
               {
-                "const": "2.2.7",
+                "const": "S2.7",
                 "title": "Supervisor Ambiguity",
-                "description": "TODO"
+                "description": "The insider expressed a lack of clarity in the organization's supervisory hierarchy."
               },
               {
-                "const": "2.2.8",
+                "const": "S2.8",
                 "title": "Filed for Bankruptcy",
-                "description": "TODO"
+                "description": "The organization filed for bankruptcy."
               },
               {
-                "const": "2.2.9",
+                "const": "S2.9",
                 "title": "Lack of Background Checks",
-                "description": "TODO"
+                "description": "The organizational failure to sufficiently review the past history of potential candidates."
               },
               {
-                "const": "2.2.10",
+                "const": "S2.10",
                 "title": "Inadequate Training",
-                "description": "TODO"
+                "description": "An organizational failure to administer the proper training for its employees."
               },
               {
-                "const": "2.2.11",
+                "const": "S2.11",
                 "title": "Lax Controls",
-                "description": "TODO"
+                "description": "The organizational failure to restrict access to what is necessary for the insider to perform work related activities."
               },
               {
-                "const": "2.2.12",
+                "const": "S2.12",
                 "title": "Hostile Work Environment",
-                "description": "TODO"
+                "description": "A work environment that is difficult or uncomfortable for another person to work in due to discrimination of any kind."
               },
               {
-                "const": "2.3.1",
+                "const": "S3.1",
                 "title": "Compensation/Benefit Issues",
-                "description": "TODO"
+                "description": "Insider expressed dissatisfaction with current compensation or benefits."
               },
               {
-                "const": "2.3.2",
+                "const": "S3.2",
                 "title": "Poor Performance Review",
-                "description": "TODO"
+                "description": "Insider received a review of their work performance, which is deemed below average."
               },
               {
-                "const": "2.3.3",
+                "const": "S3.3",
                 "title": "Request Denied By Organization",
-                "description": "TODO"
+                "description": "The employing organization refused a request from the insider (e.g., The insider's request to work from home is denied due to unproductivity in past work from home)."
               },
               {
-                "const": "2.3.4",
+                "const": "S3.4",
                 "title": "Passed Over For Promotion",
-                "description": "TODO"
+                "description": "Insider's employer chooses to promote someone other than the insider."
               },
               {
-                "const": "2.5.1",
+                "const": "S4.1",
                 "title": "Counseling",
-                "description": "TODO"
+                "description": "Insider was sent to counseling of any kind as a result of their actions"
               },
               {
-                "const": "2.5.2",
-                "title": "Referred to Employee Assistance Program",
-                "description": "TODO"
+                "const": "S4.2",
+                "title": "Referred to EAP",
+                "description": "Insider was referred to the Employee Assistance Program (EAP) as a result of their actions"
               },
               {
-                "const": "2.5.3",
+                "const": "S4.3",
                 "title": "Reported to HR",
-                "description": "TODO"
+                "description": "Insider was reported to Human Resources as a result of their actions"
               },
               {
-                "const": "2.5.4",
+                "const": "S4.4",
                 "title": "Transferred",
-                "description": "TODO"
+                "description": "Insider was transferred to another location or another team as a result of their actions."
               },
               {
-                "const": "2.5.5",
+                "const": "S4.5",
                 "title": "Verbal Reprimand",
-                "description": "TODO"
+                "description": "Insider received a verbal reprimand from their supervisor as a result of their actions."
               },
               {
-                "const": "2.5.6",
+                "const": "S4.6",
                 "title": "Written Reprimand",
-                "description": "TODO"
+                "description": "Insider received a written reprimand from their supervisor as a result of their actions."
               }
             ]
         }

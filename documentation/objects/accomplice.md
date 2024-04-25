@@ -1,6 +1,6 @@
 # Accomplice
 
-An outsider who conspired with the insider(s) to accomplish the objectives of the incident. An accomplice was not part of the victim organization at the time of the incident.
+An outsider who conspired with the insider(s) to accomplish the objectives of the incident. An accomplice was not part of the victim organization at the time of the incident. An insider may have one or more accomplices. An accomplice may have one or more jobs (job history).
 
 ## Properties
 
