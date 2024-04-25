@@ -2,17 +2,17 @@
     "$id": "[REPLACE with full github url to this json file]",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Charge",
-    "description": "TODO",
+    "description": "The charges or accusations brought against the insider when the incident is pursued in the legal system. E.g., \"2 counts of Unauthorized Access to Company Systems\"",
     "type": "object",
     "properties": {
       "id": {
         "type": "string",
-        "description": "TODO",
+        "description": "A unique string that begins with \"charge--\" and is appended with a UUIDv4.",
         "pattern": "^charge--[UUIDv4]"
       },
       "title": {
         "type": "string",
-        "description": "TODO"
+        "description": "Broad subject matter area of the legal code. For U.S. cases, these are often title “18 U.S.C.”."
       },
       "section": {
         "type": "string",
@@ -20,24 +20,24 @@
       },
       "nature_of_offense": {
         "type": "string",
-        "description": "TODO"
+        "description": "Description of the law being violated. Maps back to the title and section."
       },
       "count": {
         "type": "integer",
-        "description": "TODO"
+        "description": "Number of times the subject is accused of violating the law associated with this charge. Note that multiple violations of a law are often listed as a range of counts (e.g. “Count 2-6” would be 5 counts for this property)."
       },
       "plea": {
         "type": "string",
-        "description": "TODO",
+        "description": "Plea entered by the defendant for this charge.",
         "$ref": "#/$defs/charge-plea-vocab"
       },
       "plea_bargain": {
         "type": "boolean",
-        "description": "TODO"
+        "description": "Whether the charge indicated here is a lesser charge based on a previous plea agreement."
       },
-      "category": {
+      "disposition": {
         "type": "string",
-        "description": "TODO",
+        "description": "The decision in the case or the final result.",
         "$ref": "#/$defs/charge-disposition-vocab"
       }
     },
@@ -75,57 +75,57 @@
               {
                 "const": "01",
                 "title": "Acquitted",
-                "description": "TODO"
+                "description": "Found not guilty by a court of law in a criminal trial."
               },
               {
                 "const": "02",
                 "title": "Convicted",
-                "description": "TODO"
+                "description": "Plead or been found guilty by a court."
               },
               {
                 "const": "03",
                 "title": "Dismissed",
-                "description": "TODO"
+                "description": "The court or prosecutor has decided the charge should not go forward."
               },
               {
                 "const": "04",
                 "title": "Diversion/Deferred Prosecution",
-                "description": "TODO"
+                "description": "The court has delayed prosecution pending the successful completion of a treatment program, at which point the charges will be dismissed."
               },
               {
                 "const": "05",
                 "title": "Expunged",
-                "description": "TODO"
+                "description": "The deletion of non-conviction information (such as arrest data)."
               },
               {
                 "const": "06",
                 "title": "No charges filed/Charges dropped",
-                "description": "TODO"
+                "description": "The prosecutor has declined to pursue the case."
               },
               {
                 "const": "07",
                 "title": "Pending",
-                "description": "TODO"
+                "description": "The case is still being investigated or prosecuted."
               },
               {
                 "const": "08",
                 "title": "Pled down",
-                "description": "TODO"
+                "description": "Pled guilty to a lesser charge."
               },
               {
                 "const": "09",
                 "title": "Sealed",
-                "description": "TODO"
+                "description": "The court has restricted access to all or some of the content of the record; however, the existence of the record will still be public record."
               },
               {
                 "const": "10",
                 "title": "Suspended sentence",
-                "description": "TODO"
+                "description": "The court has delayed the sentencing pending the successful completion of a period of probation and/or treatment program."
               },
               {
                 "const": "11",
                 "title": "Vacated",
-                "description": "TODO"
+                "description": "The court has withdrawn the guilty plea or set aside the guilty verdict, and the defendant may state they have never been convicted of that crime."
               }
             ]
         }

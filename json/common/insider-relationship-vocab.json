@@ -2,12 +2,12 @@
     "$id": "[REPLACE with full github url to this json file]",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Insider Relationship Vocab",
-    "description": "TODO",
+    "description": "Vocabulary for the possible types of relationships between multiple insiders, or between insiders and external accomplices.",
     "type": "object",
     "properties": {
         "relationship": {
             "type": "string",
-            "description": "TODO",
+            "description": "The insider's relationship to the other insider or accomplice at the time of the incident. If multiple, choose the strongest tie (e.g. \"Friend\" over \"Colleague\".",
             "items": {
                 "$ref": "#/$defs/insider-relationship-vocab"
             }
@@ -17,13 +17,13 @@
     "$defs": {
         "insider-relationship-vocab": {
             "oneOf": [
-                {"const": "A", "title": "Acquaintance", "description": ""},
-                {"const": "C", "title": "Colleague", "description": ""},
-                {"const": "F", "title": "Friend", "description": ""},
-                {"const": "R", "title": "Relative", "description": ""},
-                {"const": "S", "title": "Significant Other/Legal partner", "description": ""},
-                {"const": "U", "title": "Unknown", "description": ""},
-                {"const": "O", "title": "Other", "description": ""}
+                {"const": "1", "title": "Acquaintance", "description": "Persons known to each other but not otherwise close TODO"},
+                {"const": "2", "title": "Colleague", "description": "Working together on the same team, department, or organization."},
+                {"const": "3", "title": "Friend", "description": "An ongoing close and/or friendly relationship."},
+                {"const": "4", "title": "Relative", "description": "TODO"},
+                {"const": "5", "title": "Significant Other/Legal partner", "description": "Spouse, boyfriend, girlfriend, common law partner, or similar."},
+                {"const": "8", "title": "Unknown", "description": "The type of relationship is unknown."},
+                {"const": "9", "title": "Other", "description": "The type of relationship is known, but not listed in this vocabulary."}
             ]
         }
     }

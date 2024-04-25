@@ -2,27 +2,27 @@
 	"$id": "[REPLACE with full github url to this json file]",
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "Org Relationship",
-	"description": "TODO",
+	"description": "Describes the relationship between two organizations involved in an incident.",
 	"type": "object",
 	"properties": {
 		"id": {
 			"type": "string",
 			"description": "TODO",
-			"pattern": "^orgrelationship--[UUIDv4]"
+			"pattern": "^org-relationship--[UUIDv4]"
 		},
         "org1": {
 			"type": "string",
-			"description": "TODO",
+			"description": "The id of the first organization object.",
 			"pattern": "^organization--[UUIDv4]"
 		},
         "org2": {
 			"type": "string",
-			"description": "TODO",
+			"description": "The id of the second organization object.",
 			"pattern": "^organization--[UUIDv4]"
 		},
         "relationship": {
 			"type": "string",
-			"description": "TODO",
+			"description": "TODO. Reads as \"Org1 is [relationship] to Org2.\" E.g., \"Org1 is vendor to Org2.\"",
             "$ref": "#/$defs/org-relationship-vocab"
 		}
 	},
@@ -41,19 +41,29 @@
 					"description": "TODO"
 				},
 				{
+					"const": "P",
+					"title": "Parent",
+					"description": "TODO"
+				},
+				{
+					"const": "S",
+					"title": "Subsidiary",
+					"description": "TODO"
+				},
+				{
 					"const": "V",
 					"title": "Vendor",
 					"description": "TODO"
 				},
 				{
-					"const": "U",
-					"title": "Unknown",
-					"description": "TODO"
+					"const": "T",
+					"title": "Trusted Business Partner",
+					"description": "A trusted business partner is an organization or individual that has an alliance (contractually, bonded, etc.) with the victim organization."
 				},
 				{
 					"const": "O",
 					"title": "Other",
-					"description": "TODO"
+					"description": "Other type of relationship not described by this vocabulary."
 				}
 			]
 		}
