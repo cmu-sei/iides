@@ -4,7 +4,6 @@
 
 ### Others
 - Do we need the specific lists of substances and psychological issues?
-- Is it important that we retain the numbering on the observables?
 - org-relationship vs orgRole: the vocabulatries are identical
 - how well are workplace violence and suicidal ideation handeled by this schema?
 - iron out the zero, one, or more relationships in the erd
@@ -35,9 +34,9 @@ https://jsonschemalint.com/#!/version/draft-07/markup/json
 - [d] Country vocab
 - [d] State vocab
 - [d] Incident
-- [ ] Organization
+- [ ] Organization (Marco)
 - [ ] Org Relationship
-- [ ] Person
+- [ ] Person (Marco)
 - [ ] Insider
 - [ ] Insider relationship vocab
 - [ ] Job

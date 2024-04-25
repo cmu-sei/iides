@@ -2,34 +2,34 @@
     "$id": "[REPLACE with full github url to this json file]",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Impact",
-    "description": "TODO",
+    "description": "The quantified impact of the incident on the victim organization. An incident may have one or more impacts. An impact MUST be associated with only one incident.",
     "type": "object",
     "properties": {
       "id": {
         "type": "string",
-        "description": "TODO",
+        "description": "A unique string that begins with \"impact--\" and is appended with a UUIDv4.",
         "pattern": "^impact--[UUIDv4]"
       },
       "high": {
-        "type": "integer",
-        "description": "TODO"
+        "type": "number",
+        "description": "The quantity of the impact being measured. If a range, the high end of the range."
       },
       "low": {
-        "type": "integer",
-        "description": "TODO"
+        "type": "number",
+        "description": "If a range, the low estimate of the range."
       },
       "metric": {
         "type": "string",
-        "description": "TODO",
+        "description": "The type of impact being quantified.",
         "$ref": "#/$defs/impact-metric-vocab"
       },
       "estimated": {
         "type": "boolean",
-        "description": "TODO"
+        "description": "True if the impact low and/or high is an estimated number or range."
       },
       "comment": {
         "type": "string",
-        "description": "TODO"
+        "description": "Clarifying comments."
       }
     },
     "required": [
@@ -44,82 +44,82 @@
               {
                 "const": "01",
                 "title": "Accounts",
-                "description": "TODO"
+                "description": "Computer, network, financial, user accounts."
               },
               {
                 "const": "02",
                 "title": "Credit card numbers",
-                "description": "TODO"
+                "description": "Physical or digital credit or debit card numbers."
               },
               {
                 "const": "03",
                 "title": "Customers",
-                "description": "TODO"
+                "description": "The number of customers effected (e.g., through stolen accounts, PII, etc.)"
               },
               {
                 "const": "04",
                 "title": "Documents",
-                "description": "TODO"
+                "description": "The number of physical or digital documents effected (stolen, deleted, modified, etc.)."
               },
               {
                 "const": "05",
                 "title": "Dollars",
-                "description": "TODO"
+                "description": "Specific financial impact of money stolen, restitution ordered, etc."
               },
               {
                 "const": "06",
                 "title": "Employees",
-                "description": "TODO"
+                "description": "Number of employees effected."
               },
               {
                 "const": "07",
                 "title": "Files",
-                "description": "TODO"
+                "description": "Number of physical or digital files stolen, read, or compromised."
               },
               {
                 "const": "08",
                 "title": "Hours",
-                "description": "TODO"
+                "description": "Down time or time effected in hours."
               },
               {
                 "const": "09",
                 "title": "Pages",
-                "description": "TODO"
+                "description": "Number of individual pages of a document(s) or file(s)."
               },
               {
                 "const": "10",
                 "title": "Person-hours",
-                "description": "TODO"
+                "description": "Person-hours or work time effected. Often occurs in sabotage incidents."
               },
               {
                 "const": "11",
                 "title": "Identities",
-                "description": "TODO"
+                "description": "PII records, user information, etc."
               },
               {
                 "const": "12",
                 "title": "Items",
-                "description": "TODO"
+                "description": "Generic items, such as merchandise."
               },
               {
                 "const": "13",
                 "title": "Systems",
-                "description": "TODO"
+                "description": "Workstations, servers, virtual machines, etc."
               },
               {
                 "const": "14",
                 "title": "Records",
-                "description": "TODO"
+                "description": "Records or rows. Often refers to database or accounting records."
               },
               {
                 "const": "15",
                 "title": "Drugs",
-                "description": "TODO"
+                "description": "Number of pills, vials, syringes, etc. drugs or medicine taken or effected."
               },
               {
                 "const": "16",
                 "title": "Trade Secrets",
-                "description": "TODO"
+                "description": "Number of trade secrets stolen or effected."
               }
             ]
         }
