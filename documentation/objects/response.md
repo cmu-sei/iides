@@ -1,7 +1,9 @@
 # Response
-TODO
+
+Describes the organization's response to the incident, including technical and behavioral controls, investigation, and legal response. An incident has only one response entity.
 
 ## Properties
+
 - **`id`** (required) *(string)* : TODO
 	- Uses pattern: ^reponse--[UUIDv4]
 - **`technical_controls`** *(array)* : TODO
@@ -18,7 +20,7 @@ TODO
 
 ### technical-control-vocab
 
-Values: `01`, `02`
+Constants: `01`, `02`
 
 | Const | Value | Description |
 | --- | --- | --- |
@@ -27,7 +29,7 @@ Values: `01`, `02`
 
 ### beahvioral-control-vocab
 
-Values: `01`, `02`, `03`, `04`, `05`, `06`, `07`, `08`, `09`, `10`, `11`, `12`
+Constants: `01`, `02`, `03`, `04`, `05`, `06`, `07`, `08`, `09`, `10`, `11`, `12`
 
 | Const | Value | Description |
 | --- | --- | --- |
@@ -46,7 +48,7 @@ Values: `01`, `02`, `03`, `04`, `05`, `06`, `07`, `08`, `09`, `10`, `11`, `12`
 
 ### investigation-vocab
 
-Values: `01`, `02`, `03`
+Constants: `01`, `02`, `03`
 
 | Const | Value | Description |
 | --- | --- | --- |
@@ -56,7 +58,7 @@ Values: `01`, `02`, `03`
 
 ### investigator-vocab
 
-Values: `IR`, `MM`, `LE`, `II`
+Constants: `IR`, `MM`, `LE`, `II`
 
 | Const | Value | Description |
 | --- | --- | --- |

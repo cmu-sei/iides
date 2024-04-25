@@ -1,28 +1,30 @@
 # Target
+
 TODO
 
 ## Properties
+
 - **`id`** (required) *(string)* : TODO
 	- Uses pattern: ^target--[UUIDv4]
 - **`asset_type`** (required) *(string)* : TODO
-	- A value from [target-asset-vocab](#target-asset-vocab)
+	- A constant from [target-asset-vocab](#target-asset-vocab)
 - **`category`** (required) *(string)* : TODO
-	- A value from [target-category-vocab](#target-category-vocab)
+	- A constant from [target-category-vocab](#target-category-vocab)
 - **`subcategory`** (required) *(string)* : TODO
-	- A value from [target-subcategory-vocab](#target-subcategory-vocab)
+	- A constant from [target-subcategory-vocab](#target-subcategory-vocab)
 - **`format`** (required) *(string)* : TODO
-	- A value from [target-format-vocab](#target-format-vocab)
+	- A constant from [target-format-vocab](#target-format-vocab)
 - **`owner`** (required) *(string)* : TODO
-	- A value from [target-owner-vocab](#target-owner-vocab)
+	- A constant from [target-owner-vocab](#target-owner-vocab)
 - **`sensitivity`** (required) *(string)* : TODO
-	- A value from [target-sensitivity-vocab](#target-sensitivity-vocab)
+	- A constant from [target-sensitivity-vocab](#target-sensitivity-vocab)
 - **`description`** *(string)* : TODO
 
 ## Vocabularies
 
 ### target-asset-vocab
 
-Values: `1`, `2`, `3`, `4`, `5`, `6`
+Constants: `1`, `2`, `3`, `4`, `5`, `6`
 
 | Const | Value | Description |
 | --- | --- | --- |
@@ -35,7 +37,7 @@ Values: `1`, `2`, `3`, `4`, `5`, `6`
 
 ### target-category-vocab
 
-Values: `1.1`, `2.1`, `2.2`, `2.3`, `3.1`, `4.1`, `4.2`, `4.3`, `4.4`, `4.5`, `5.1`, `5.2`, `5.3`, `6.1`
+Constants: `1.1`, `2.1`, `2.2`, `2.3`, `3.1`, `4.1`, `4.2`, `4.3`, `4.4`, `4.5`, `5.1`, `5.2`, `5.3`, `6.1`
 
 | Const | Value | Description |
 | --- | --- | --- |
@@ -56,7 +58,7 @@ Values: `1.1`, `2.1`, `2.2`, `2.3`, `3.1`, `4.1`, `4.2`, `4.3`, `4.4`, `4.5`, `5
 
 ### target-subcategory-vocab
 
-Values: `1.1.1`, `1.1.2`, `1.1.3`, `2.1.1`, `2.1.2`, `2.2.1`, `2.2.2`, `2.2.3`, `2.2.4`, `2.2.5`, `2.2.6`, `2.3.1`, `2.3.2`, `3.1.1`, `3.1.2`, `3.1.3`, `3.1.4`, `3.1.5`, `3.1.6`, `3.1.7`, `3.1.8`, `3.1.9`, `3.1.10`, `3.1.11`, `3.1.12`, `3.1.13`, `3.1.14`, `4.1.1`, `4.1.2`, `4.1.3`, `4.1.4`, `4.1.5`, `4.2.1`, `4.3.1`, `4.3.2`, `4.3.3`, `4.4.1`, `4.4.2`, `4.4.3`, `4.4.4`, `4.5.1`, `4.5.2`, `5.1.1`, `5.1.2`, `5.1.3`, `5.1.4`, `5.1.5`, `5.1.6`, `5.1.7`, `5.1.8`, `5.1.9`, `5.1.10`, `5.2.1`, `5.2.2`, `5.2.3`, `5.2.4`, `5.3.1`, `5.3.2`
+Constants: `1.1.1`, `1.1.2`, `1.1.3`, `2.1.1`, `2.1.2`, `2.2.1`, `2.2.2`, `2.2.3`, `2.2.4`, `2.2.5`, `2.2.6`, `2.3.1`, `2.3.2`, `3.1.1`, `3.1.2`, `3.1.3`, `3.1.4`, `3.1.5`, `3.1.6`, `3.1.7`, `3.1.8`, `3.1.9`, `3.1.10`, `3.1.11`, `3.1.12`, `3.1.13`, `3.1.14`, `4.1.1`, `4.1.2`, `4.1.3`, `4.1.4`, `4.1.5`, `4.2.1`, `4.3.1`, `4.3.2`, `4.3.3`, `4.4.1`, `4.4.2`, `4.4.3`, `4.4.4`, `4.5.1`, `4.5.2`, `5.1.1`, `5.1.2`, `5.1.3`, `5.1.4`, `5.1.5`, `5.1.6`, `5.1.7`, `5.1.8`, `5.1.9`, `5.1.10`, `5.2.1`, `5.2.2`, `5.2.3`, `5.2.4`, `5.3.1`, `5.3.2`
 
 | Const | Value | Description |
 | --- | --- | --- |
@@ -121,7 +123,7 @@ Values: `1.1.1`, `1.1.2`, `1.1.3`, `2.1.1`, `2.1.2`, `2.2.1`, `2.2.2`, `2.2.3`, 
 
 ### target-format-vocab
 
-Values: `1`, `2`, `3`, `4`, `5`
+Constants: `1`, `2`, `3`, `4`, `5`
 
 | Const | Value | Description |
 | --- | --- | --- |
@@ -133,7 +135,7 @@ Values: `1`, `2`, `3`, `4`, `5`
 
 ### target-owner-vocab
 
-Values: `C`, `E`, `O`, `T`, `Z`
+Constants: `C`, `E`, `O`, `T`, `Z`
 
 | Const | Value | Description |
 | --- | --- | --- |
@@ -145,7 +147,7 @@ Values: `C`, `E`, `O`, `T`, `Z`
 
 ### target-sensitivity-vocab
 
-Values: `CTI`, `FRP`, `FTI`, `GVT`, `ITP`, `LES`, `NPB`, `PCI`, `PHI`, `PII`, `NSN`
+Constants: `CTI`, `FRP`, `FTI`, `GVT`, `ITP`, `LES`, `NPB`, `PCI`, `PHI`, `PII`, `NSN`
 
 | Const | Value | Description |
 | --- | --- | --- |

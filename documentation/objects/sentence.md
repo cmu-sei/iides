@@ -1,21 +1,23 @@
 # Sentence
+
 TODO
 
 ## Properties
-- **`id`** (required) *(string)* : TODO
+
+- **`id`** (required) *(string)* : A unique string that begins with "sentence--" and is appended with a UUIDv4.
 	- Uses pattern: ^sentence--[UUIDv4]
 - **`sentence_type`** (required) *(string)* : TODO
-	- A value from [sentence-type-vocab](#sentence-type-vocab)
-- **`quantity`** *(integer)* : TODO
-- **`metric`** *(string)* : TODO
-	- A value from [sentence-metric-vocab](#sentence-metric-vocab)
-- **`concurrency`** *(boolean)* : TODO
+	- A constant from [sentence-type-vocab](#sentence-type-vocab)
+- **`quantity`** *(integer)* : The quantity of the sentence imposed. MUST be used with the metric property if used.
+- **`metric`** *(string)* : The measurement type of the sentence imposed. MUST be used with the quantity property if used.
+	- A constant from [sentence-metric-vocab](#sentence-metric-vocab)
+- **`concurrency`** *(boolean)* : whether the sentence is to run concurrently (at the same time as) the sentence for other charges
 
 ## Vocabularies
 
 ### sentence-type-vocab
 
-Values: `01`, `02`, `03`, `04`, `05`, `06`, `07`, `08`, `09`, `10`, `11`, `12`, `13`, `14`, `15`, `16`, `17`, `18`
+Constants: `01`, `02`, `03`, `04`, `05`, `06`, `07`, `08`, `09`, `10`, `11`, `12`, `13`, `14`, `15`, `16`, `17`, `18`
 
 | Const | Value | Description |
 | --- | --- | --- |
@@ -40,7 +42,7 @@ Values: `01`, `02`, `03`, `04`, `05`, `06`, `07`, `08`, `09`, `10`, `11`, `12`, 
 
 ### sentence-metric-vocab
 
-Values: `H`, `D`, `M`, `Y`, `D`
+Constants: `H`, `D`, `M`, `Y`, `D`
 
 | Const | Value | Description |
 | --- | --- | --- |

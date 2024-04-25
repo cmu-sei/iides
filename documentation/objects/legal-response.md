@@ -1,7 +1,9 @@
 # Legal Response
+
 TODO
 
 ## Properties
+
 - **`id`** (required) *(string)* : TODO
 	- Uses pattern: ^legal-response--[UUIDv4]
 - **`law_enforcement_contacted`** *(date)* : TODO

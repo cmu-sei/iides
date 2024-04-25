@@ -1,7 +1,9 @@
 # Collusion
+
 TODO
 
 ## Properties
+
 - **`id`** (required) *(string)* : TODO
 	- Uses pattern: ^collusion--[UUIDv4]
 - **`insider1`** (required) *(string)* : TODO
@@ -9,15 +11,15 @@ TODO
 - **`insider2`** (required) *(string)* : TODO
 	- Uses pattern: ^insider--[UUIDv4]
 - **`relationship`** (required) *(string)* : TODO
-	- A value from [insider-relationship-vocab](../common/insider-relationship-vocab.md)
+	- A constant from [insider-relationship-vocab](../common/insider-relationship-vocab.md)
 - **`recruitment`** *(string)* : TODO
-	- A value from [recruitment-vocab](#recruitment-vocab)
+	- A constant from [recruitment-vocab](#recruitment-vocab)
 
 ## Vocabularies
 
 ### recruitment-vocab
 
-Values: `1`, `2`, `3`, `4`, `5`, `9`
+Constants: `1`, `2`, `3`, `4`, `5`, `9`
 
 | Const | Value | Description |
 | --- | --- | --- |
