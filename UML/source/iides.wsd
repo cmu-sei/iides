@@ -12,6 +12,7 @@ class Stressor #b0d0ed {
 	+ date : string 
 	+ category : stressor-category-vocab 
 	+ subcategory : stressor-subcategory-vocab 
+	+ comment : string 
 }
 class Accomplice <<Person>> #b0d0ed {
 	* id : string 
@@ -131,8 +132,8 @@ class Charge #f9b8bd {
 }
 class Impact #D4EFDF {
 	* id : string 
-	* high : integer 
-	+ low : integer 
+	* high : number 
+	+ low : number 
 	* metric : impact-metric-vocab 
 	* estimated : boolean 
 	+ comment : string 
@@ -187,7 +188,7 @@ class Detection #FDB515 {
 	* id : string 
 	+ first_detected : date 
 	+ who_detected : detection-team-vocab[1...*] 
-	+ what_detected : detection-method-vocab[1...*] 
+	+ detected_method : detection-method-vocab[1...*] 
 	+ logs : detection-log-vocab[1...*] 
 	+ comment : string 
 }
@@ -216,7 +217,7 @@ class Collusion #b0d0ed {
 
     Insider --o{ Accomplice
     Incident --|{ Insider : commits <
-    Accomplice -- Job
+    Accomplice |o--o{ Job
     Job -- Organization : employs <
     Insider -- Job
     Organization }|--|{ Incident
@@ -227,16 +228,16 @@ class Collusion #b0d0ed {
     Insider |o--o| Organization : owns >
     Insider -- Collusion
     Collusion -- Insider
-    Incident --|{ Impact
+    Incident --o{ Impact
     Incident --|{ Target
     Incident --o{ Source
     Incident --o{ Note
-    CourtCase --|{ Charge
-    CourtCase |o--|{ Sentence
-    Incident -- Detection
-    Incident -- Response
-    Response -- LegalResponse
-    LegalResponse --|{ CourtCase
+    CourtCase ||--o{ Charge
+    CourtCase ||--o{ Sentence
+    Incident --o| Detection
+    Incident --o| Response
+    Response ||--o| LegalResponse
+    LegalResponse ||--o{ CourtCase
     Organization --|{ Stressor
     Stressor }|-- Insider
     Incident --o{ TTP

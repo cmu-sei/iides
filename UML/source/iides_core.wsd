@@ -16,8 +16,8 @@ package "IIDES Core Relationships" #FFF {
     Organization }o--o{ Organization : OrgRelationship
     Insider |o--o| Organization : owns >
     Insider }|--|{ Insider
-    Incident -- Detection
-    Incident -- Response
+    Incident --o| Detection
+    Incident --o| Response
     Incident --o{ TTP
 }
 @enduml
