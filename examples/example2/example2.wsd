@@ -192,9 +192,6 @@ class Detection #FDB515 {
 	+ logs : detection-log-vocab[1...*] 
 	+ comment : string 
 }
-class InsiderRelationshipVocab #FFFFFF {
-	+ relationship : insider-relationship-vocab 
-}
 class OrgRelationship #FFFFFF {
 	* id : string 
 	* org1 : string 
