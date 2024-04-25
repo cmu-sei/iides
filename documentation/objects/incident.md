@@ -10,6 +10,8 @@ Description and summary details of the incident.
 	- One or more values from [cia-vocab](#cia-vocab)
 - **`incident_type`** *(array)* : Categorization of the incident.
 	- One or more values from [incident-type-vocab](#incident-type-vocab)
+- **`pattern`** *(array)* : The pattern(s) that the incident fits. MUST match the specified incident_type.
+	- One or more values from [pattern-vocab](#pattern-vocab)
 - **`outcome`** *(array)* : Consequences suffered by the victim organization as a result of the insider's attack. This is NOT the outcome or consequences imposed on the insider.
 	- One or more values from [outcome-type-vocab](#outcome-type-vocab)
 - **`status`** *(string)* : The current status of the incident.
@@ -22,13 +24,12 @@ Description and summary details of the incident.
 
 ### incident-status-vocab
 
-Constants: `P`, `I`, `L`, `R`, `C`
+Constants: `P`, `I`, `R`, `C`
 
 | Const | Value | Description |
 | --- | --- | --- |
 | P | Open | A case has been opened for the incident.|
 | I | Under Investigation | The incident is being investigated.|
-| L | In Legal Proceedings | Investigation is complete, but the case is at trial or in appeals.|
 | R | Referred out | Incident has been referred to another team or organization.|
 | C | Closed | All investigations and legal proceedings are closed.|
 
@@ -64,11 +65,30 @@ Constants: `BR`, `DC`, `DD`, `DR`, `DS`, `MD`, `ML`, `MS`, `NN`, `OT`, `RO`, `SI
 
 ### incident-type-vocab
 
-Constants: `F`, `S`, `T`, `M`
+Constants: `F`, `S`, `E`, `V`, `U`
 
 | Const | Value | Description |
 | --- | --- | --- |
-| F | Fraud | An insider's use of IT for the unauthorized modification, addition, or deletion of an organization's data (not programs or systems) for personal gain, or the theft of information which could be used to commit fraud (identity theft or credit card fraud). In other words, the insider misrepresents their intent or exceeds their access to protected information in order to commit fraud. Incidents involving fraud often involve attempted or successful identity theft.|
-| S | Sabotage | The insider directs specific harm to the organization or an individual. Instances of sabotage may include deployment of malicious code to networks or systems resulting in system downtime. Targets of sabotage may include physical property as well. Common to this category are Denial of Service attacks (DoS) and deletion of critical files.|
-| T | Theft of IP | An insider's use of IT to steal intellectual property from the organization, which may be done to benefit individuals or external organizations at the expense of the victim organization(s). This category includes industrial espionage involving insiders as well as insiders who seek to steal intellectual property to start competing organizations. Theft of IP, depending on the organization, may actually include PII if customer information is a source of competitive advantage for the organization (i.e., an insider makes an unauthorized download of customer database in order to create a cold call list).|
-| M | Misuse | The unauthorized use of organizational devices, networks, and resources that is not better classified as theft of IP, sabotage, or fraud. Common examples of other misuse include unauthorized personal use of organizational resources (e.g., harvesting bitcoin), privacy violations (e.g., accessing co-worker's emails), committing a crime (e.g., stalking, purchasing drugs, or accessing child pornography), or other organizational policy violations.|
+| F | Fraud | Deceiving the organization for personal gain at the organization's expense.|
+| S | Sabotage | Deliberate actions to harm an organization's physical or virtual infrastructure, including noncompliance with maintenance or IT procedures, contaminating clean spaces, physically damaging facilities, or deleting code to prevent regular operations.|
+| E | Espionage | The covert or illicit practice of spying on a foreign government, organization, entity, or person to obtain confidential information for military, political, strategic, or financial advantage.|
+| V | Violence | Includes the threat of violence, as well as other threatening behaviors that create an intimidating, hostile, or abusive environment.|
+| U | Unintentional | The insider unwittingly causes harm or substantially increases the probability of future serious harm to the organization through action or inaction without malicious intent.|
+
+### pattern-vocab
+
+Constants: `F1`, `F2`, `F3`, `S1`, `S2`, `E1`, `E2`, `V1`, `V2`, `U1`, `U2`
+
+| Const | Value | Description |
+| --- | --- | --- |
+| F1 | Embezzlement | The fraudulent appropriation of the organization's property (financial or otherwise) by someone who has been entrusted with its possession.|
+| F2 | Corruption | Conflict of interest, bribery, illegal gratuities, and economic extortion.|
+| F3 | False Statements | Knowingly and willfully making false or fraudulent statements, or concealing information.|
+| S1 | Virtual | Taking malicious actions through technical means to disrupt or stop an organization's normal business operations.|
+| S2 | Physical | Taking deliberate actions aimed at harming an organization's physical infrastructure (e.g., facilities or equipment).|
+| E1 | Intellectual Property Theft | Theft or robbery of an individual's or organization's ideas, inventions, or creative expressions, including trade secrets and proprietary products, even if the concepts or items being stolen originated from the thief.|
+| E2 | Government | Covert intelligence-gathering activities to obtain government or military secrets for the benefit of another government to obtain political or military advantage.|
+| V1 | Workplace Violence | Any action or threat of physical violence, harassment, sexual harassment, intimidation, bullying, offensive jokes, or other threatening behavior by a co-worker or associate that occurs in a person's place of employment or while a person is working.|
+| V2 | Self Harm | An incident where an insider attempts, or indicates a desire to attempt, self harm or suicide.|
+| U1 | Negligence | Threat caused by carelessness. Negligent insiders are generally familiar with security and/or IT policies but choose to ignore them, creating risk for the organization.|
+| U2 | Accidental | An incident of this type results from an insider mistakenly causing an unintended risk to an organization.|

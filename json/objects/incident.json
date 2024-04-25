@@ -26,6 +26,14 @@
       },
       "minItems": 1
     },
+    "pattern": {
+      "type": "array",
+      "description": "The pattern(s) that the incident fits. MUST match the specified incident_type.",
+      "items": {
+        "$ref": "#/$defs/pattern-vocab"
+      },
+      "minItems": 1
+    },
     "outcome": {
       "type": "array",
       "description": "Consequences suffered by the victim organization as a result of the insider's attack. This is NOT the outcome or consequences imposed on the insider.",
@@ -55,6 +63,9 @@
   "required": [
     "id"
   ],
+  "dependentRequired": {
+    "pattern": ["incident_type"]
+  },
   "$defs": {
     "incident-status-vocab": {
       "oneOf": [
@@ -67,11 +78,6 @@
           "const": "I",
           "title": "Under Investigation",
           "description": "The incident is being investigated."
-        },
-        {
-          "const": "L",
-          "title": "In Legal Proceedings",
-          "description": "Investigation is complete, but the case is at trial or in appeals."
         },
         {
           "const": "R",
@@ -178,22 +184,86 @@
         {
           "const": "F",
           "title": "Fraud",
-          "description": "An insider's use of IT for the unauthorized modification, addition, or deletion of an organization's data (not programs or systems) for personal gain, or the theft of information which could be used to commit fraud (identity theft or credit card fraud). In other words, the insider misrepresents their intent or exceeds their access to protected information in order to commit fraud. Incidents involving fraud often involve attempted or successful identity theft."
+          "description": "Deceiving the organization for personal gain at the organization's expense."
         },
         {
           "const": "S",
           "title": "Sabotage",
-          "description": "The insider directs specific harm to the organization or an individual. Instances of sabotage may include deployment of malicious code to networks or systems resulting in system downtime. Targets of sabotage may include physical property as well. Common to this category are Denial of Service attacks (DoS) and deletion of critical files."
+          "description": "Deliberate actions to harm an organization's physical or virtual infrastructure, including noncompliance with maintenance or IT procedures, contaminating clean spaces, physically damaging facilities, or deleting code to prevent regular operations."
         },
         {
-          "const": "T",
-          "title": "Theft of IP",
-          "description": "An insider's use of IT to steal intellectual property from the organization, which may be done to benefit individuals or external organizations at the expense of the victim organization(s). This category includes industrial espionage involving insiders as well as insiders who seek to steal intellectual property to start competing organizations. Theft of IP, depending on the organization, may actually include PII if customer information is a source of competitive advantage for the organization (i.e., an insider makes an unauthorized download of customer database in order to create a cold call list)."
+          "const": "E",
+          "title": "Espionage",
+          "description": "The covert or illicit practice of spying on a foreign government, organization, entity, or person to obtain confidential information for military, political, strategic, or financial advantage."
         },
         {
-          "const": "M",
-          "title": "Misuse",
-          "description": "The unauthorized use of organizational devices, networks, and resources that is not better classified as theft of IP, sabotage, or fraud. Common examples of other misuse include unauthorized personal use of organizational resources (e.g., harvesting bitcoin), privacy violations (e.g., accessing co-worker's emails), committing a crime (e.g., stalking, purchasing drugs, or accessing child pornography), or other organizational policy violations."
+          "const": "V",
+          "title": "Violence",
+          "description": "Includes the threat of violence, as well as other threatening behaviors that create an intimidating, hostile, or abusive environment."
+        },
+        {
+          "const": "U",
+          "title": "Unintentional",
+          "description": "The insider unwittingly causes harm or substantially increases the probability of future serious harm to the organization through action or inaction without malicious intent."
+        }
+      ]
+    },
+    "pattern-vocab": {
+      "anyOf": [
+        {
+          "const": "F1",
+          "title": "Embezzlement",
+          "description": "The fraudulent appropriation of the organization's property (financial or otherwise) by someone who has been entrusted with its possession."
+        },
+        {
+          "const": "F2",
+          "title": "Corruption",
+          "description": "Conflict of interest, bribery, illegal gratuities, and economic extortion."
+        },
+        {
+          "const": "F3",
+          "title": "False Statements",
+          "description": "Knowingly and willfully making false or fraudulent statements, or concealing information."
+        },
+        {
+          "const": "S1",
+          "title": "Virtual",
+          "description": "Taking malicious actions through technical means to disrupt or stop an organization's normal business operations."
+        },
+        {
+          "const": "S2",
+          "title": "Physical",
+          "description": "Taking deliberate actions aimed at harming an organization's physical infrastructure (e.g., facilities or equipment)."
+        },
+        {
+          "const": "E1",
+          "title": "Intellectual Property Theft",
+          "description": "Theft or robbery of an individual's or organization's ideas, inventions, or creative expressions, including trade secrets and proprietary products, even if the concepts or items being stolen originated from the thief."
+        },
+        {
+          "const": "E2",
+          "title": "Government",
+          "description": "Covert intelligence-gathering activities to obtain government or military secrets for the benefit of another government to obtain political or military advantage."
+        },
+        {
+          "const": "V1",
+          "title": "Workplace Violence",
+          "description": "Any action or threat of physical violence, harassment, sexual harassment, intimidation, bullying, offensive jokes, or other threatening behavior by a co-worker or associate that occurs in a person's place of employment or while a person is working."
+        },
+        {
+          "const": "V2",
+          "title": "Self Harm",
+          "description": "An incident where an insider attempts, or indicates a desire to attempt, self harm or suicide."
+        },
+        {
+          "const": "U1",
+          "title": "Negligence",
+          "description": "Threat caused by carelessness. Negligent insiders are generally familiar with security and/or IT policies but choose to ignore them, creating risk for the organization."
+        },
+        {
+          "const": "U2",
+          "title": "Accidental",
+          "description": "An incident of this type results from an insider mistakenly causing an unintended risk to an organization."
         }
       ]
     }
