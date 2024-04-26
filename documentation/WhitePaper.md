@@ -118,18 +118,28 @@ TODO - relationships description
 
 ### Vocabularies
 
-TODO - vocabulary description
+Many of the components in IIDES include properties which require values from specific vocabularies (enumerations) included with IIDES. For example, the `incident_type` property of the [Incident](objects/incident.md) component requires a value from the [incident-type-vocab](objects/incident.md#incident-type-vocab), which lists Fraud, Sabotage, Espionage, Violence, and Unintentional as the options for `incident_type`.  The vocabularies in IIDES are based on our own extensive experience working with insider incidents as well as on a large collection of incident data.
+
+Most vocabularies in the IIDES schema are specified as subschemas with a mapping of constants to their titles and description, as opposed to a simple list of values (i.e., an enumeration). For example, the allowed values for the `incident_type` propertiy are only "F", "S", "E", "V", and "U". This specification of constants is intended to keep the stored data as small as possible, as well as to provide consistent definitions of the vocabulary terms across the IIDES user base and insider threat community at large. 
+
+Using subschemas also provides flexibility for local implementations that may wish to use different value titles without breaking the schema requirements or affecting shareability. For example, an organization wishing to use the term "non-malicious" instead of "unintentional" may swap out the mapping of the title to the constant "U" from "Unintentional" to "non-malicious" without invalidating their implementation. Another organization may use a translation of the titles and descriptions to another language, while keeping the constants as is. Organizations may also clarify descriptions for their own internal purposes in the same way, e.g., by adding guidance for analysts deciding which value to use.
+
+It is diffult to provide full coverage for all possible vocabulary terms across all use cases of a data standard. We request that organizations which find that the necessary vocabulary terms are missing for their use case, provide feedback via the IIDES GitHub page before considering making internal changes to the vocabularies. This way, new terms may be considered for inclusion in an updated version of IIDES and be made available for other organizations with similar use cases.
 
 ## Using IIDES
 TODO - using IIDES
 
-- Existing implementations (Termite, pyIides) and advice for implementing
+We recognize that not all components of IIDES will be useful to all users. ...
+
 - Using the schema
+  - gotchas with json schemas
 
-To assist with implementation and testing, we also provide a set of [examples](../examples/) that cover several incident types and use cases.
+To assist with understanding the json schema, we provide a set of [examples](../examples/) which cover several incident types and use cases. The examples are not intended to be exhaustive of all possible use cases, but to provide insight into how to provide valid data to the schema, as well as to assit with testing alternative implementations of the schema.
 
-We welcome community feedback and suggestions for enhancement, which can be submitted via the IIDES GitHub page 
-TODO - link to github
+- Existing implementations (Termite, pyIides)
+- advice for implementing
+
+We welcome community feedback and suggestions for enhancement, which can be submitted via the IIDES GitHub page as issues, discussions, or pull requests.
 
 ## Conclusion
 TODO - conclusion

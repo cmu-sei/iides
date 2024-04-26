@@ -49,10 +49,10 @@
 - [d] Impact
 - [d] Detection
 - [ ] Response
-- [ ] Legal Response
-- [d] Court Case
-- [ ] Charge
-- [ ] Sentence
+- [ ] Legal Response (Josh)
+- [d] Court Case 
+- [ ] Charge (Josh)
+- [ ] Sentence (Josh)
 - [ ] TTP
 
 Json/UML:
