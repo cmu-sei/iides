@@ -9,12 +9,12 @@ TODO
 - **`incident_role`** (required) *(string)* : TODO
 	- A constant from [incident-role-vocab](#incident-role-vocab)
 - **`motive`** *(array)* : TODO
-	- One or more values from [motive-vocab](#motive-vocab)
+	- One or more constants from [motive-vocab](#motive-vocab)
 - **`substance_abuse`** *(array)* : TODO
-	- One or more values from [substance-abuse-vocab](#substance-abuse-vocab)
+	- One or more constants from [substance-abuse-vocab](#substance-abuse-vocab)
 - **`substance_use_during_incident`** *(boolean)* : TODO
 - **`psychological_issues`** *(array)* : TODO
-	- One or more values from [psych-issues-vocab](#psych-issues-vocab)
+	- One or more constants from [psych-issues-vocab](#psych-issues-vocab)
 - **`predispositions`** *(array)* : TODO
 	- One or more tuple values of the format ([predisposition-type-vocab](#predisposition-type-vocab), [predisposition-subtype-vocab](#predisposition-subtype-vocab))
 - **`concerning_behaviors`** *(array)* : TODO

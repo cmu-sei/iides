@@ -11,7 +11,7 @@ Describes the organization's response to the incident, including technical and b
 - **`behavioral_controls`** *(array)* : TODO
 	- One or more tuple values of the format ([behavioral-control-vocab](#behavioral-control-vocab), date)
 - **`investigated_by`** *(array)* : TODO
-	- One or more values from [investigator-vocab](#investigator-vocab)
+	- One or more constants from [investigator-vocab](#investigator-vocab)
 - **`investigation_events`** *(array)* : TODO
 	- One or more tuple values of the format ([investigation-vocab](#investigation-vocab), date)
 - **`comment`** *(string)* : TODO

@@ -72,8 +72,9 @@ def get_properties(properties, required):
                     vocab_ref += f"{', '.join(refs)})"
             else:
                 # An array of strings
+                print("HERE")
                 if '$ref' in properties[p]['items'].keys():
-                    vocab_ref += "values from "
+                    vocab_ref += "constants from "
                     vocab_ref += get_ref(properties[p]['items']['$ref'])
                 else:
                     vocab_ref += f"{properties[p]['items']['type']} values"

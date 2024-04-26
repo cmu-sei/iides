@@ -7,14 +7,14 @@ Description and summary details of the incident.
 - **`id`** (required) *(string)* : A unique string that begins with "incident--" and is appended with a UUIDv4.
 	- Uses pattern: ^incident--[UUIDv4]
 - **`cia_effect`** *(array)* : CIA triad components which were affected.
-	- One or more values from [cia-vocab](#cia-vocab)
+	- One or more constants from [cia-vocab](#cia-vocab)
 - **`incident_type`** *(array)* : Categorization of the incident.
-	- One or more values from [incident-type-vocab](#incident-type-vocab)
+	- One or more constants from [incident-type-vocab](#incident-type-vocab)
 	- Required if `incident_subtype` exists.
 - **`incident_subtype`** *(array)* : The subtype that the incident fits. MUST match the specified incident_type.
-	- One or more values from [incident-subtype-vocab](#incident-subtype-vocab)
+	- One or more constants from [incident-subtype-vocab](#incident-subtype-vocab)
 - **`outcome`** *(array)* : Consequences suffered by the victim organization as a result of the insider's attack. This is NOT the outcome or consequences imposed on the insider.
-	- One or more values from [outcome-type-vocab](#outcome-type-vocab)
+	- One or more constants from [outcome-type-vocab](#outcome-type-vocab)
 - **`status`** *(string)* : The current status of the incident.
 	- A constant from [incident-status-vocab](#incident-status-vocab)
 - **`summary`** *(string)* : A brief prose explanation of the incident. This summary should serve as a stand-alone explanation of the incident and should include the following information as a general rule: who, what, when, where, why, and how.
