@@ -1,0 +1,29 @@
+{
+	"$id": "[REPLACE with full github url to this json file]",
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "Relationship",
+	"description": "TODO",
+	"type": "object",
+	"properties": {
+		"id": {
+			"type": "string",
+			"description": "TODO",
+			"pattern": "^relationship--[UUIDv4]"
+		},
+      "object1": {
+			"type": "string",
+			"description": "TODO",
+			"pattern": "^XXXX--[UUIDv4]"
+		},
+      "object2": {
+			"type": "string",
+			"description": "TODO",
+			"pattern": "^XXXX--[UUIDv4]"
+		}
+	},
+	"required": [
+		"id",
+        "object1",
+        "object2"
+	]
+}

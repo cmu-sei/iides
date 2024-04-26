@@ -28,7 +28,8 @@ color_map = {
     'State Vocab': '#FFFFFF',
     'Insider Relationship Vocab': '#FFFFFF',
     'Country Vocab': '#FFFFFF',
-    'Org Relationship': '#FFFFFF'
+    'Org Relationship': '#FFFFFF',
+    'Relationship': '#FFFFFF'
 }
 
 
@@ -37,7 +38,8 @@ def get_json_files():
     fnames = []
     for root, _, f_names in os.walk(JSON_PATH):
         for f in f_names:
-            fnames.append(os.path.join(root, f))
+            if "common" not in root:
+                fnames.append(os.path.join(root, f))
     return fnames
 
 

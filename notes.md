@@ -32,6 +32,7 @@
 - [d] Country vocab
 - [d] State vocab
 - [c] Incident
+- [ ] Relationship struct
 - [ ] Organization (Marco)
 - [ ] Org Relationship
 - [ ] Person (Marco)

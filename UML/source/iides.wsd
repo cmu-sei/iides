@@ -193,20 +193,16 @@ class Detection #FDB515 {
 	+ logs : detection-log-vocab[1...*] 
 	+ comment : string 
 }
-class StateVocab #FFFFFF {
-	+ country : state-vocab-us 
-}
-class InsiderRelationshipVocab #FFFFFF {
-	+ relationship : insider-relationship-vocab 
-}
-class CountryVocab #FFFFFF {
-	+ country : country-vocab 
-}
 class OrgRelationship #FFFFFF {
 	* id : string 
 	* org1 : string 
 	* org2 : string 
 	* relationship : org-relationship-vocab 
+}
+class Relationship #FFFFFF {
+	* id : string 
+	* object1 : string 
+	* object2 : string 
 }
 class Collusion #b0d0ed {
 	* id : string 
