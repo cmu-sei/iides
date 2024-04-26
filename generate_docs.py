@@ -44,10 +44,11 @@ def get_properties(properties, required):
         property_string = f"- **`{p}`** "
         if p in required:
             property_string += "(required) "
-        property_string += (
-            f"*({properties[p]['type']})* "
-            f": {properties[p]['description']}"
-        )
+        if "format" in properties[p]:
+            property_string += f"*({properties[p]['format']})* "
+        else:
+            property_string += f"*({properties[p]['type']})* "
+        property_string += f": {properties[p]['description']}"
         lines.append(property_string)
 
         if '$ref' in properties[p].keys():

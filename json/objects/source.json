@@ -11,7 +11,7 @@
         "pattern": "^source--[UUIDv4]"
       },
       "title": {
-        "type": "date",
+        "type": "string",
         "description": "The title of the document."
       },
       "source_type": {
@@ -25,7 +25,8 @@
         "$ref": "#/$defs/source-file-type-vocab"
       },
       "date": {
-        "type": "date",
+        "type": "string",
+        "format": "date-time",
         "description": "The date the document was created or most recently modified."
       },
       "public": {

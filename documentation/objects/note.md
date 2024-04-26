@@ -7,5 +7,5 @@ A freeform text space for holding notes about the incident as it is being invest
 - **`id`** (required) *(string)* : A unique string that begins with "note--" and is appended with a UUIDv4.
 	- Uses pattern: ^note--[UUIDv4]
 - **`author`** (required) *(string)* : Individual, group, or organization that authored the note.
-- **`date`** (required) *(string)* : Date and time the note was authored or most recently modified.
+- **`date`** (required) *(date-time)* : Date and time the note was authored or most recently modified.
 - **`comment`** (required) *(string)* : Notes, comments, details as needed.

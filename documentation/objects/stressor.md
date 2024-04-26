@@ -6,7 +6,7 @@ Events that occur after insider's start date at the victim organization and prec
 
 - **`id`** (required) *(string)* : A unique string that begins with "stressor--" and is appended with a UUIDv4.
 	- Uses pattern: ^stressor--[UUIDv4]
-- **`date`** *(string)* : The date the stressor first occurred.
+- **`date`** *(date)* : The date the stressor first occurred.
 - **`category`** *(string)* : The category to which the stressor belongs.
 	- A constant from [stressor-category-vocab](#stressor-category-vocab)
 	- Required if `subcategory` exists.

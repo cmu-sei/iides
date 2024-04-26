@@ -6,12 +6,12 @@ Document that provides information about one or more aspects of the incident.
 
 - **`id`** (required) *(string)* : A unique string that begins with "source--" and is appended with a UUIDv4.
 	- Uses pattern: ^source--[UUIDv4]
-- **`title`** (required) *(date)* : The title of the document.
+- **`title`** (required) *(string)* : The title of the document.
 - **`source_type`** *(string)* : The "source" or author of the source document.
 	- A constant from [source-type-vocab](#source-type-vocab)
 - **`file_type`** *(string)* : File type or extension.
 	- A constant from [source-file-type-vocab](#source-file-type-vocab)
-- **`date`** *(date)* : The date the document was created or most recently modified.
+- **`date`** *(date-time)* : The date the document was created or most recently modified.
 - **`public`** *(boolean)* : Whether the document is publicly available.
 - **`document`** *(string)* : File path, location, or document object.
 

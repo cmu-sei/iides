@@ -11,39 +11,48 @@
         "pattern": "^legal-response--[UUIDv4]"
       },
       "law_enforcement_contacted": {
-        "type": "date",
+        "type": "string",
+        "format": "date",
         "description": "TODO"
       },
       "insider_arrested": {
-        "type": "date",
+        "type": "string",
+        "format": "date",
         "description": "TODO"
       },
       "insider_charged": {
-        "type": "date",
+        "type": "string",
+        "format": "date",
         "description": "TODO"
       },
       "insider_pleads": {
-        "type": "date",
+        "type": "string",
+        "format": "date",
         "description": "TODO"
       },
       "insider_judgment": {
-        "type": "date",
+        "type": "string",
+        "format": "date",
         "description": "TODO"
       },
       "insider_sentenced": {
-        "type": "date",
+        "type": "string",
+        "format": "date",
         "description": "TODO"
       },
       "insider_charges_dropped": {
-        "type": "date",
+        "type": "string",
+        "format": "date",
         "description": "TODO"
       },
       "insider_charges_dismissed": {
-        "type": "date",
+        "type": "string",
+        "format": "date",
         "description": "TODO"
       },
       "insider_settled": {
-        "type": "date",
+        "type": "string",
+        "format": "date",
         "description": "TODO"
       },
       "comment": {

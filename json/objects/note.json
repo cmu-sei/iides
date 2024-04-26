@@ -16,7 +16,7 @@
       },
       "date": {
         "type": "string",
-        "format": "datetime",
+        "format": "date-time",
         "description": "Date and time the note was authored or most recently modified."
       },
       "comment": {

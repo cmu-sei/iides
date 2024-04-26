@@ -11,7 +11,6 @@
 - iron out the zero, one, or more relationships in the erd
 
 ## TODO
-- add "format" to doc generator (ex. date, datetime)
 - handle relationships in the json schema
 - go back through codebook and list missing/skipped fields
 - enum doc generation refers to "constant" --> should be "value"
@@ -32,7 +31,7 @@
 
 - [d] Country vocab
 - [d] State vocab
-- [c] Incident (under review with team)
+- [c] Incident
 - [ ] Organization (Marco)
 - [ ] Org Relationship
 - [ ] Person (Marco)
