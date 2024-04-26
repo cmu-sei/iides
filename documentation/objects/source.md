@@ -13,7 +13,7 @@ Document that provides information about one or more aspects of the incident.
 	- A constant from [source-file-type-vocab](#source-file-type-vocab)
 - **`date`** *(date-time)* : The date the document was created or most recently modified.
 - **`public`** *(boolean)* : Whether the document is publicly available.
-- **`document`** *(string)* : File path, location, or document object.
+- **`document`** *(string)* : A pointer to the document itself, whether a file path, location, url, or document object.
 
 ## Vocabularies
 
@@ -34,5 +34,5 @@ Constants: `01`, `02`, `03`, `04`, `05`, `06`, `07`, `99`
 
 ### source-file-type-vocab
 
-Values: `log`, `pdf`, `txt`, `docx`, `png`, `xlsx`, `other`
+Values: `html`, `log`, `pdf`, `txt`, `docx`, `png`, `xlsx`, `video`, `other`
 

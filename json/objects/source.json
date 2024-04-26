@@ -35,7 +35,7 @@
       },
       "document": {
         "type": "string",
-        "description": "File path, location, or document object."
+        "description": "A pointer to the document itself, whether a file path, location, url, or document object."
       }
     },
     "required": [
@@ -89,12 +89,14 @@
         },
         "source-file-type-vocab": {
             "enum": [
+              "html",
               "log",
               "pdf",
               "txt",
               "docx",
               "png",
               "xlsx",
+              "video",
               "other"
             ]
         }
