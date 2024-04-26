@@ -166,7 +166,7 @@ class CourtCase #f9b8bd {
 	+ plaintiff : string[1...*] 
 	+ comment : string 
 }
-class Insider <<Person>> #043673 {
+class Insider <<Person>> #043673;text:white {
 	* id : string 
 	* incident_role : incident-role-vocab 
 	+ motive : motive-vocab[1...*] 
@@ -193,18 +193,18 @@ class Detection #FDB515 {
 	+ logs : detection-log-vocab[1...*] 
 	+ comment : string 
 }
-class OrgRelationship #FFFFFF {
+class OrgRelationship #F5F5F5 {
 	* id : string 
 	* org1 : string 
 	* org2 : string 
 	* relationship : org-relationship-vocab 
 }
-class Relationship #FFFFFF {
+class Relationship #F5F5F5 {
 	* id : string 
 	* object1 : string 
 	* object2 : string 
 }
-class Collusion #b0d0ed {
+class Collusion #F5F5F5 {
 	* id : string 
 	* insider1 : string 
 	* insider2 : string 

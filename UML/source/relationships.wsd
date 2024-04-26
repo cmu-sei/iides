@@ -2,9 +2,9 @@
 package "IIDES Entity Relationships" #FFF {
 
     abstract Person #b0d0ed {}
-    class Insider <<Person>> #043673 {}
+    class Insider <<Person>> #043673;text:white {}
     class Accomplice <<Person>> #b0d0ed {}
-    struct Collusion #b0d0ed {}
+    struct Collusion #F5F5F5 {}
     class Organization #007BC0 {}
     class Sponsor #b0d0ed {}
     class Incident #009647 {}
@@ -21,6 +21,7 @@ package "IIDES Entity Relationships" #FFF {
     class TTP #A456ED {}
     class Stressor #b0d0ed {}
     class Note #D4EFDF {}
+    struct Relationship #F5F5F5 {}
 
     Insider --o{ Accomplice : Relationship
     Incident --|{ Insider : commits <

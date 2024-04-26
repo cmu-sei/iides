@@ -1,7 +1,7 @@
 @startuml IIDES_Core
 package "IIDES Core Relationships" #FFF {
 
-    class Insider <<Person>> #043673 {}
+    class Insider <<Person>> #043673;text:white {}
     class Organization #007BC0 {}
     class Incident #009647 {}
     class Job #33c2C4 {}

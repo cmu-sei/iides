@@ -6,10 +6,10 @@ import os
 JSON_PATH = "json"
 color_map = {
     'Person': '#b0d0ed',
-    'Insider': '#043673',
+    'Insider': '#043673;text:white',
     'Incident': '#009647',
     'Accomplice': '#b0d0ed',
-    'Collusion': '#b0d0ed',
+    'Collusion': '#F5F5F5',
     'Organization': '#007BC0', 
     'Sponsor': '#b0d0ed',
     'Job': '#33c2C4',
@@ -25,11 +25,8 @@ color_map = {
     'Legal Response': '#f9b8bd',
     'Stressor': '#b0d0ed',
     'TTP': '#A456ED',
-    'State Vocab': '#FFFFFF',
-    'Insider Relationship Vocab': '#FFFFFF',
-    'Country Vocab': '#FFFFFF',
-    'Org Relationship': '#FFFFFF',
-    'Relationship': '#FFFFFF'
+    'Org Relationship': '#F5F5F5',
+    'Relationship': '#F5F5F5'
 }
 
 
