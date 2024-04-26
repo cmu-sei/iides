@@ -1,6 +1,6 @@
 # Source
 
-Document that provides information about one or more aspects of the incident.
+Document that provides information about one or more aspects of the incident or its investigation.
 
 ## Properties
 

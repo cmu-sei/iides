@@ -6,7 +6,7 @@ TODO
 
 - **`id`** (required) *(string)* : TODO
 	- Uses pattern: ^ttp--[UUIDv4]
-- **`date`** *(string)* : TODO
+- **`date`** *(date)* : TODO
 - **`sequence_num`** *(integer)* : TODO
 - **`observed`** *(boolean)* : TODO
 - **`number_of_times`** *(integer)* : TODO
@@ -18,7 +18,7 @@ TODO
 - **`location`** *(string)* : TODO
 - **`hours`** *(string)* : TODO
 - **`device`** *(string)* : TODO. Affected device
-- **`description`** *(string)* : TODO
+- **`description`** *(date)* : TODO
 
 ## Vocabularies
 

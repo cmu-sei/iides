@@ -113,7 +113,7 @@ relationships = '''
     Accomplice |o--o{ Job
     Job -- Organization : employs <
     Insider -- Job
-    Organization }|--|{ Incident
+    Organization }o--o| Incident
     Organization -- OrgRelationship
     OrgRelationship -- Organization
     Insider }o--o| Sponsor
@@ -122,7 +122,7 @@ relationships = '''
     Insider -- Collusion
     Collusion -- Insider
     Incident --o{ Impact
-    Incident --|{ Target
+    Incident --o{ Target
     Incident --o{ Source
     Incident --o{ Note
     CourtCase ||--o{ Charge
@@ -131,8 +131,8 @@ relationships = '''
     Incident --o| Response
     Response ||--o| LegalResponse
     LegalResponse ||--o{ CourtCase
-    Organization --|{ Stressor
-    Stressor }|-- Insider
+    Organization --o{ Stressor
+    Stressor }o-- Insider
     Incident --o{ TTP
 '''
 f.write(relationships)

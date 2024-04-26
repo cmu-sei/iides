@@ -1,13 +1,19 @@
 # Insider Incident Data Exchange Standard
+
 Author: [TEAM]
-Date: April 3, 2024
+
+Date: April 26, 2024
+
 Version: 0.1, Revision 1
 
 ## Introduction
 
+TODO - Intro
 
 
 ## Background
+
+TODO - Background
 
 - bit about MERIT
 - bit about our other research
@@ -33,8 +39,13 @@ Be aware of related work and, when possible, allow for compatibility and interop
 
 ## Related Standards
 
+TODO - Related standards
+
+We believe IIDES fills a need... Insider threat is nichee, but it touches a variety of other domains... 
+
 Insider Threat
 - Indicator Ontology
+- SOFIT: https://ieeexplore.ieee.org/document/8424651
 
 Cyber:
 - ATT&CK and InT ATT&CK
@@ -45,22 +56,18 @@ Cyber:
 Risk:
 - NIST Risk framework and/or incident framework
 - RMM
-- SOFIT: https://ieeexplore.ieee.org/document/8424651
-
-
-- https://ieeexplore.ieee.org/abstract/document/9311246
-- https://dl.acm.org/doi/abs/10.1145/3465481.3470024
 
 Other General Standards
-Insider threat is nichee, but it touches a variety of other domains... 
 - NIACS, ANSI, ISO
 
 ## Benefits
-TODO
+TODO - Benefits
 
 IIDES is designed to provide a range of beneifts across a broad array of potential users in both research and operational environments.
 
-- Supports efficient sharing of incident data among practioners, organizations, and researchers by providing a standard... . Sharing insider incident data is useful for ... 
+- Support efficient sharing of incident data among practioners, organizations, and researchers by providing standard naming and data types for fields and entities that may be included in incident data.
+- Guide data collection efforts... 
+- Provide a basic incident case management option for .... 
 
 - researchers recreating a database of cases
 - maintaining an internal database of an org's own cases
@@ -95,40 +102,40 @@ The full architecture of IIDES includes a number of subcomponents that are assoc
 
 ![IIDES Entity Relationships](../UML/out/IIDES_Entity_Relationships.png "IIDES Relationships")
 
-The Incident core component includes the subcomponents [Target](objects/target.md), [Impact](objects/impact.md), [Note](objects/note.md), and [Source](objects/source.md). An incident can have zero, one, or more of each of these subcomponents.
+The Incident core component includes the subcomponents [Target](objects/target.md), [Impact](objects/impact.md), [Note](objects/note.md), and [Source](objects/source.md). An incident can have zero, one, or more of each of these subcomponents. A target is the system, data, person, or physical property that was targeted by the insider. An impact is a quantitative measurement of the impact of the incident on the victim organization. A note is used for keeping details unrelated to the incident, such as case management notes or research references. Sources are documents and files related to the incident or its investigation.
 
-The Response core component can have a [legal response](objects/legal-response.md) subcomponent, which in turn has one or more [court case](objects/court-case.md) components, each of which can have one or more [charge](objects/charge.md) and/or [sentence](objects/sentence.md) components. 
+The Response core component can have a [legal response](objects/legal-response.md) subcomponent, which in turn has one or more [court case](objects/court-case.md) components, each of which can have one or more [charge](objects/charge.md) and/or [sentence](objects/sentence.md) components. These subcomponents are intended to capture specific details about incidents that go through the legal system.
 
-An organization can be connected to one or more employment [stressors](objects/stressor.md) which impact an insider within the organization. These stressors are defined by the stressor vocabularies, and include stressors such as getting passed over for a promotion.
+An Organization can be connected to one or more employment [stressors](objects/stressor.md) which impact an insider within the organization. These stressors are defined by the stressor vocabularies, and include stressors such as getting passed over for a promotion.
 
-TODO
-
-Insider.... person...
-
-Job...
+An Insider can be connected to one or more other insiders through the [collusion](structs/collusion.md) structure, and may have one or more [accomplices](objects/accomplice.md) external to the organization. An Accomplice may be tied to an organization through a Job entity when relavant to the incident. Both accomplice and insider inherit many of their properties, such as name, gender, and location, from the [Person](objects/person.md) subcomponent. Accomplices and/or insiders may have a [Sponsor](objects/sponsor.md) such as a foreign government or corporate competitor.
 
 The Detection and TTP core components do not have any additional subcomponents.
 
 ### Relationships
 
-TODO
+TODO - relationships description
 
 ### Vocabularies
 
-TODO
+TODO - vocabulary description
 
 ## Using IIDES
-TODO
-- Where to send feedback
+TODO - using IIDES
+
 - Existing implementations (Termite, pyIides) and advice for implementing
 - Using the schema
-- Examples (link to examples dirs)
+
+To assist with implementation and testing, we also provide a set of [examples](../examples/) that cover several incident types and use cases.
+
+We welcome community feedback and suggestions for enhancement, which can be submitted via the IIDES GitHub page 
+TODO - link to github
 
 ## Conclusion
-TODO
+TODO - conclusion
 
 ## References
-TODO
+TODO - references
 - https://www.cisa.gov/topics/physical-security/insider-threat-mitigation/defining-insider-threats
 - https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6758854
 Legal
@@ -136,6 +143,9 @@ Legal
 - Supreme court database codebook (http://scdb.wustl.edu/_brickFiles/2019_01/SCDB_2019_01_codebook.pdf)
 - Measuring law for evaluation research (https://journals.sagepub.com/doi/epdf/10.1177/0193841X10370018
 
+
+- https://dl.acm.org/doi/abs/10.1145/3465481.3470024
+
 ## Licensing and RRO
-TODO
+TODO - RRO
 
