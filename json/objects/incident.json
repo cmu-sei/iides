@@ -26,11 +26,11 @@
       },
       "minItems": 1
     },
-    "pattern": {
+    "incident_subtype": {
       "type": "array",
-      "description": "The pattern(s) that the incident fits. MUST match the specified incident_type.",
+      "description": "The subtype that the incident fits. MUST match the specified incident_type.",
       "items": {
-        "$ref": "#/$defs/pattern-vocab"
+        "$ref": "#/$defs/incident-subtype-vocab"
       },
       "minItems": 1
     },
@@ -64,7 +64,7 @@
     "id"
   ],
   "dependentRequired": {
-    "pattern": ["incident_type"]
+    "incident_subtype": ["incident_type"]
   },
   "$defs": {
     "incident-status-vocab": {
@@ -208,7 +208,7 @@
         }
       ]
     },
-    "pattern-vocab": {
+    "incident-subtype-vocab": {
       "anyOf": [
         {
           "const": "F1",

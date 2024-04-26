@@ -32,7 +32,7 @@ class Incident #009647 {
 	* id : string 
 	+ cia_effect : cia-vocab[1...*] 
 	+ incident_type : incident-type-vocab[1...*] 
-	+ pattern : pattern-vocab[1...*] 
+	+ incident_subtype : incident-subtype-vocab[1...*] 
 	+ outcome : outcome-type-vocab[1...*] 
 	+ status : incident-status-vocab 
 	+ summary : string 

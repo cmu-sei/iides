@@ -10,8 +10,8 @@ Description and summary details of the incident.
 	- One or more values from [cia-vocab](#cia-vocab)
 - **`incident_type`** *(array)* : Categorization of the incident.
 	- One or more values from [incident-type-vocab](#incident-type-vocab)
-- **`pattern`** *(array)* : The pattern(s) that the incident fits. MUST match the specified incident_type.
-	- One or more values from [pattern-vocab](#pattern-vocab)
+- **`incident_subtype`** *(array)* : The subtype that the incident fits. MUST match the specified incident_type.
+	- One or more values from [incident-subtype-vocab](#incident-subtype-vocab)
 - **`outcome`** *(array)* : Consequences suffered by the victim organization as a result of the insider's attack. This is NOT the outcome or consequences imposed on the insider.
 	- One or more values from [outcome-type-vocab](#outcome-type-vocab)
 - **`status`** *(string)* : The current status of the incident.
@@ -75,7 +75,7 @@ Constants: `F`, `S`, `E`, `V`, `U`
 | V | Violence | Includes the threat of violence, as well as other threatening behaviors that create an intimidating, hostile, or abusive environment.|
 | U | Unintentional | The insider unwittingly causes harm or substantially increases the probability of future serious harm to the organization through action or inaction without malicious intent.|
 
-### pattern-vocab
+### incident-subtype-vocab
 
 Constants: `F1`, `F2`, `F3`, `S1`, `S2`, `E1`, `E2`, `V1`, `V2`, `U1`, `U2`
 
