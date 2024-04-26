@@ -5,54 +5,69 @@ Version: 0.1, Revision 1
 
 ## Introduction
 
+
+
 ## Background
 
 - bit about MERIT
 - bit about our other research
 - users: researchers, analysts, risk managers, practitioners, investigators, simulations/exercises
+- general happenings in the InT world
 
 
-## Related Work
-- NIACS, ANSI, ISO
+## Guiding Principles
+
+The development of IIDES, as with the development of many standards, required a trade off between a fully articulated, tightly constrained schema and a language flexible enough to be useful across a range of potential applications. We balanced these trade offs by adhering to the following set of guidelines when deciding on each particular element of IIDES.
+
+**Simplicity** - 
+Support the individuals and organizations who do the hard work of analyzing insider incidents by providing the tools and language to do their work as efficiently as possible, without unncessary constraints, abstractions, or requirements.
+
+**Expertise** - 
+The elements that make up the standard should be based on a mix of direct experience, emprical data, analysis, and theoretical observations. The standard should be directly applicable to current operational practice but also support the advancement of the state of the art.
+
+**Flexibility** - 
+Support different users, use cases, and needs by not overconstraining the schema and limiting requirements. Allow for different users to facilitate their use cases by adding their own constraints, fields, or  vocabularies in local implementations. Respond to and incorporate community feedback regarding changes to the standard or the schema.
+
+**Interoperability** - 
+Be aware of related work and, when possible, allow for compatibility and interoperability with existing standards. Support referencing of other standards rather than redefining existing work within the schema.
+
+## Related Standards
+
+Insider Threat
 - Indicator Ontology
+
+Cyber:
 - ATT&CK and InT ATT&CK
-- NIST Risk framework and/or incident framework
 - STIX/TAXII
 - MISP
+- SISO CyberDEM
+
+Risk:
+- NIST Risk framework and/or incident framework
 - RMM
 - SOFIT: https://ieeexplore.ieee.org/document/8424651
-- SISO CyberDEM
+
 
 - https://ieeexplore.ieee.org/abstract/document/9311246
 - https://dl.acm.org/doi/abs/10.1145/3465481.3470024
 
-Legal
-- Coding Case Law for Public Health Evaluation (Hall)
-- Supreme court database codebook (http://scdb.wustl.edu/_brickFiles/2019_01/SCDB_2019_01_codebook.pdf)
-- Measuring law for evaluation research (https://journals.sagepub.com/doi/epdf/10.1177/0193841X10370018
+Other General Standards
+Insider threat is nichee, but it touches a variety of other domains... 
+- NIACS, ANSI, ISO
 
-## Guiding Principles
+## Benefits
 TODO
-- Don't redo others' work
-- Support the need for flexibility
-    - different use cases/needs, different levels of detail/info, different countries (affects vocabularies and titles of constants)
-- Compatibility and interoperability
-- Lean on our own experience
-- Support orgs who do the real work by providing the tools and language to do their jobs as efficiently as possible
-- trade offs between sharing (strict constraints on the schema) and flexibility (loose or no constraints)
-- implementations can tighten constraints
 
-## Use Cases
-TODO
+IIDES is designed to provide a range of beneifts across a broad array of potential users in both research and operational environments.
+
+- Supports efficient sharing of incident data among practioners, organizations, and researchers by providing a standard... . Sharing insider incident data is useful for ... 
+
 - researchers recreating a database of cases
 - maintaining an internal database of an org's own cases
-- exchanging case data with other entities
-- contributing to a community (ex. OSIT) via semi-open repo
-    - requires anon functionality
 - influenceing what to collect to support further research and improve their own metrics and lessons learned
-- recommend COAs based on input
+- Map recommended best practices for response, detection, and mitigation to incidents... 
 
-## IIDES
+## IIDES Architecture
 
 IIDES is split into four different sections: the seven core components, additional subcomponents, relationshps, and vocabularies. 
 
@@ -114,6 +129,12 @@ TODO
 
 ## References
 TODO
+- https://www.cisa.gov/topics/physical-security/insider-threat-mitigation/defining-insider-threats
+- https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6758854
+Legal
+- Coding Case Law for Public Health Evaluation (Hall)
+- Supreme court database codebook (http://scdb.wustl.edu/_brickFiles/2019_01/SCDB_2019_01_codebook.pdf)
+- Measuring law for evaluation research (https://journals.sagepub.com/doi/epdf/10.1177/0193841X10370018
 
 ## Licensing and RRO
 TODO

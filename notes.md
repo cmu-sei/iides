@@ -14,6 +14,7 @@
 - handle relationships in the json schema
 - go back through codebook and list missing/skipped fields
 - check relevant entities against STIX
+- leverage SISO for targeting vocab?
 
 - enum doc generation refers to "constant" --> should be "value"
 
@@ -33,7 +34,7 @@ https://jsonschemalint.com/#!/version/draft-07/markup/json
 
 - [d] Country vocab
 - [d] State vocab
-- [d] Incident
+- [d] Incident (under review with team)
 - [ ] Organization (Marco)
 - [ ] Org Relationship
 - [ ] Person (Marco)
