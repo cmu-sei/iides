@@ -25,6 +25,15 @@ def get_ref(ref):
     return ref_string
 
 
+def is_dependent(property):
+    dependent = None
+    if "dependentRequired" in data:
+        for present_property in data['dependentRequired'].items():
+            if property in present_property[1]:
+                dependent = present_property[0]
+    return dependent
+
+
 def get_properties(properties, required):
     '''Return formatted strings for object properties'''
 
@@ -71,6 +80,9 @@ def get_properties(properties, required):
 
         if 'pattern' in properties[p].keys():
             lines.append(f"\t- Uses pattern: {properties[p]['pattern']}")
+        
+        if is_dependent(p):
+            lines.append(f"\t- Required if `{is_dependent(p)}` exists.")
 
     return lines
 

@@ -9,8 +9,10 @@ TODO
 - **`sentence_type`** (required) *(string)* : TODO
 	- A constant from [sentence-type-vocab](#sentence-type-vocab)
 - **`quantity`** *(integer)* : The quantity of the sentence imposed. MUST be used with the metric property if used.
+	- Required if `metric` exists.
 - **`metric`** *(string)* : The measurement type of the sentence imposed. MUST be used with the quantity property if used.
 	- A constant from [sentence-metric-vocab](#sentence-metric-vocab)
+	- Required if `quantity` exists.
 - **`concurrency`** *(boolean)* : whether the sentence is to run concurrently (at the same time as) the sentence for other charges
 
 ## Vocabularies

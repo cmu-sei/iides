@@ -10,6 +10,7 @@ Description and summary details of the incident.
 	- One or more values from [cia-vocab](#cia-vocab)
 - **`incident_type`** *(array)* : Categorization of the incident.
 	- One or more values from [incident-type-vocab](#incident-type-vocab)
+	- Required if `incident_subtype` exists.
 - **`incident_subtype`** *(array)* : The subtype that the incident fits. MUST match the specified incident_type.
 	- One or more values from [incident-subtype-vocab](#incident-subtype-vocab)
 - **`outcome`** *(array)* : Consequences suffered by the victim organization as a result of the insider's attack. This is NOT the outcome or consequences imposed on the insider.

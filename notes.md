@@ -3,22 +3,19 @@
 ## Questions/Concerns
 
 ### Others
+- Target:
+  - People vs money: we're defining money to include things are converted (ex. time sheets) make sense?
+  - Leverage Cyber DEM for this?
 - Do we need the specific lists of substances and psychological issues?
 - org-relationship vs orgRole: the vocabulatries are identical
-- how well are workplace violence and suicidal ideation handeled by this schema?
 - iron out the zero, one, or more relationships in the erd
 
 ## TODO
 - add "format" to doc generator (ex. date, datetime)
-- add "dependentRequired" to doc generator
 - handle relationships in the json schema
 - go back through codebook and list missing/skipped fields
-- check relevant entities against STIX
-- leverage SISO for targeting vocab?
-
 - enum doc generation refers to "constant" --> should be "value"
 
-https://jsonschemalint.com/#!/version/draft-07/markup/json
 - Write up intro material for white paper
 - Note handling of inexact dates
 
@@ -27,6 +24,7 @@ https://jsonschemalint.com/#!/version/draft-07/markup/json
 - d - definitions completed
 - c - descriptions and properties confirmed with team
 - j - json formatted, validated and verified
+  - https://jsonschemalint.com/#!/version/draft-07/markup/json
 - x - ready for RRO and licensing
 
 
@@ -34,7 +32,7 @@ https://jsonschemalint.com/#!/version/draft-07/markup/json
 
 - [d] Country vocab
 - [d] State vocab
-- [d] Incident (under review with team)
+- [c] Incident (under review with team)
 - [ ] Organization (Marco)
 - [ ] Org Relationship
 - [ ] Person (Marco)

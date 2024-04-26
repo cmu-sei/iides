@@ -16,6 +16,7 @@ The organization(s) involved in the incident. At least one organization, the vic
 - **`small_business`** *(boolean)* : TRUE if the organization is a privately owned business with 500 or fewer employees.
 - **`industry_sector_tier1`** *(string)* : Top level category for the economic sector the organization belongs to.
 	- A constant from [industry-sector-tier1-vocab](#industry-sector-tier1-vocab)
+	- Required if `industry_sector_tier2` exists.
 - **`industry_sector_tier2`** *(string)* : Second level category for the economic sector the organization belongs to. This value MUST map back to industry_sector_tier1. E.g., if tier 1 is "9", tier 2 must be "9.x"
 	- A constant from [industry-sector-tier2-vocab](#industry-sector-tier2-vocab)
 - **`business`** *(string)* : Description of the organization's business.
