@@ -13,7 +13,6 @@
 ## TODO
 - handle relationships in the json schema
 - go back through codebook and list missing/skipped fields
-- enum doc generation refers to "constant" --> should be "value"
 
 - Write up intro material for white paper
 - Note handling of inexact dates
@@ -32,6 +31,9 @@
 - [d] Country vocab
 - [d] State vocab
 - [c] Incident
+- [c] Note
+- [c] Source
+
 - [ ] Relationship struct
 - [ ] Organization (Marco)
 - [ ] Org Relationship
@@ -43,8 +45,6 @@
 - [d] Accomplice
 - [d] Sponsor
 - [d] Stressor
-- [d] Note
-- [d] Source
 - [ ] Target
 - [d] Impact
 - [d] Detection
