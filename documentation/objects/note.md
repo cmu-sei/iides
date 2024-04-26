@@ -1,6 +1,6 @@
 # Note
 
-A freeform text space for holding notes about the incident as it is being investigated, such as current status or a checklist to follow up on. Notes are not intended to be used to hold details about the incident itself. An incident may have one or more notes.
+A freeform text space for holding notes related to the case management of the incident as it is being investigated, such as a checklist to follow up on or comments related the current status. Notes are not intended to be used to hold details about the incident itself. An incident may have one or more notes.
 
 ## Properties
 
