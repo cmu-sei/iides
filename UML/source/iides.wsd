@@ -41,24 +41,24 @@ class Incident #009647 {
 }
 class Source #D4EFDF {
 	* id : string 
-	* title : date 
+	* title : string 
 	+ source_type : source-type-vocab 
 	+ file_type : source-file-type-vocab 
-	+ date : date 
+	+ date : string 
 	+ public : boolean 
 	+ document : string 
 }
 class LegalResponse #f9b8bd {
 	* id : string 
-	+ law_enforcement_contacted : date 
-	+ insider_arrested : date 
-	+ insider_charged : date 
-	+ insider_pleads : date 
-	+ insider_judgment : date 
-	+ insider_sentenced : date 
-	+ insider_charges_dropped : date 
-	+ insider_charges_dismissed : date 
-	+ insider_settled : date 
+	+ law_enforcement_contacted : string 
+	+ insider_arrested : string 
+	+ insider_charged : string 
+	+ insider_pleads : string 
+	+ insider_judgment : string 
+	+ insider_sentenced : string 
+	+ insider_charges_dropped : string 
+	+ insider_charges_dismissed : string 
+	+ insider_settled : string 
 	+ comment : string 
 }
 class Person #b0d0ed {
@@ -187,7 +187,7 @@ class Response #EF3A47 {
 }
 class Detection #FDB515 {
 	* id : string 
-	+ first_detected : date 
+	+ first_detected : string 
 	+ who_detected : detection-team-vocab[1...*] 
 	+ detected_method : detection-method-vocab[1...*] 
 	+ logs : detection-log-vocab[1...*] 
@@ -221,7 +221,7 @@ class Collusion #b0d0ed {
     Accomplice |o--o{ Job
     Job -- Organization : employs <
     Insider -- Job
-    Organization }|--|{ Incident
+    Organization }o--o| Incident
     Organization -- OrgRelationship
     OrgRelationship -- Organization
     Insider }o--o| Sponsor
@@ -230,7 +230,7 @@ class Collusion #b0d0ed {
     Insider -- Collusion
     Collusion -- Insider
     Incident --o{ Impact
-    Incident --|{ Target
+    Incident --o{ Target
     Incident --o{ Source
     Incident --o{ Note
     CourtCase ||--o{ Charge
@@ -239,8 +239,8 @@ class Collusion #b0d0ed {
     Incident --o| Response
     Response ||--o| LegalResponse
     LegalResponse ||--o{ CourtCase
-    Organization --|{ Stressor
-    Stressor }|-- Insider
+    Organization --o{ Stressor
+    Stressor }o-- Insider
     Incident --o{ TTP
 }
 @enduml

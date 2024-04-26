@@ -12,7 +12,7 @@ package "IIDES Core Relationships" #FFF {
     Incident --|{ Insider : commits <
     Job -- Organization : employs <
     Insider -- Job : has >
-    Organization }|--|{ Incident : OrgRole
+    Organization }o--o| Incident : OrgRole
     Organization }o--o{ Organization : OrgRelationship
     Insider |o--o| Organization : owns >
     Insider }|--|{ Insider
