@@ -2,7 +2,7 @@
     "$id": "[REPLACE with full github url to this json file]",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Sentence",
-    "description": "TODO",
+    "description": "Sentence of the court action including any jail time, court fees, restitution, probation, supervised release, damages (for civil cases), etc.",
     "type": "object",
     "properties": {
       "id": {
@@ -12,7 +12,7 @@
       },
       "sentence_type": {
         "type": "string",
-        "description": "TODO",
+        "description": "What the court ordered in the sentence.",
         "$ref": "#/$defs/sentence-type-vocab"
       },
       "quantity": {
@@ -137,27 +137,27 @@
             {
               "const": "H",
               "title": "Hour(s)",
-              "description": "TODO"
+              "description": "For how many hours the sentence type will take."
             },
             {
               "const": "D",
               "title": "Day(s)",
-              "description": "TODO"
+              "description": "For how many days the sentence type will take."
             },
             {
               "const": "M",
               "title": "Month(s)",
-              "description": "TODO"
+              "description": "For how many months the sentence type will take."
             },
             {
               "const": "Y",
               "title": "Year(s)",
-              "description": "TODO"
+              "description": "For how many years the sentence type will take."
             },
             {
               "const": "D",
               "title": "Dollar(s)",
-              "description": "TODO"
+              "description": "For how much the sentence type will cost."
             }
           ]
       }

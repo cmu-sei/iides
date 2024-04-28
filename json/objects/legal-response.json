@@ -13,47 +13,47 @@
       "law_enforcement_contacted": {
         "type": "string",
         "format": "date",
-        "description": "TODO"
+        "description": "The organization contacting law enforcement to aid in the investigation of the incident (e.g., Police are called to respond to the Insider’s violent behavior in the workplace)."
       },
       "insider_arrested": {
         "type": "string",
         "format": "date",
-        "description": "TODO"
+        "description": "The insider being taken into custody (e.g., Police arrested the Insider in their home in Pennsylvania)."
       },
       "insider_charged": {
         "type": "string",
         "format": "date",
-        "description": "TODO"
+        "description": "The insider being formally charged. Charges must relate to the incident. This category also covers a waiver of indictment and subsequent filing of information (e.g., Insider was indicted on computer fraud charges)."
       },
       "insider_pleads": {
         "type": "string",
         "format": "date",
-        "description": "TODO"
+        "description": "The insider putting forth a plea to the court, including guilty, not guilty, nolo contendere (no contest) (e.g., Insider pleads guilty to the computer intrusion)."
       },
       "insider_judgment": {
         "type": "string",
         "format": "date",
-        "description": "TODO"
+        "description": "The insider has been found guilty, not guilty, or liable or not liable in a court of law (e.g., Insider found guilty in jury trial)."
       },
       "insider_sentenced": {
         "type": "string",
         "format": "date",
-        "description": "TODO"
+        "description": "The insider’s legally mandated punishment (e.g., Insider sentenced to 5 months in jail, then supervised release, community service, and restitution)."
       },
       "insider_charges_dropped": {
         "type": "string",
         "format": "date",
-        "description": "TODO"
+        "description": "The plaintiff dropping their case against the Insider (e.g., Upon discovery of further evidence, the judge decided to drop the charges against the Insider)."
       },
       "insider_charges_dismissed": {
         "type": "string",
         "format": "date",
-        "description": "TODO"
+        "description": "The plaintiff dismiss their case against the Insider (e.g., Upon discovery of further evidence, the judge decided to drop the charges against the Insider)."
       },
       "insider_settled": {
         "type": "string",
         "format": "date",
-        "description": "TODO"
+        "description": "The case against the Insider being settled outside of the courtroom (e.g., The victim organization reached an agreement with the Insider to not file formal charges in return for financial compensation)."
       },
       "comment": {
         "type": "string",

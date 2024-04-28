@@ -16,7 +16,7 @@
       },
       "section": {
         "type": "string",
-        "description": "TODO"
+        "description": "Section of the US Code the subject is accused of violating."
       },
       "nature_of_offense": {
         "type": "string",
@@ -51,22 +51,22 @@
               {
                 "const": "1",
                 "title": "Guilty",
-                "description": "TODO"
+                "description": "The defendant pleaed guilty to a charge."
               },
               {
                 "const": "2",
                 "title": "No Contest",
-                "description": "TODO"
+                "description": "The defendant didn't contest to a charge."
               },
               {
                 "const": "3",
                 "title": "Not Guilty",
-                "description": "TODO"
+                "description": "The defendant pleaed not guilty to a charge."
               },
               {
                 "const": "4",
                 "title": "Refused to Enter a Plea",
-                "description": "TODO"
+                "description": "The defendant refused to enter into a plea to a charge."
               }
             ]
         },
