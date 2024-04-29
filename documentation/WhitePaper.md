@@ -116,6 +116,25 @@ The Detection and TTP core components do not have any additional subcomponents.
 
 TODO - relationships description
 
+IIDES components are connected to one another through relationships. Some relationships are specifically defined in IIDES, some are loosely defined, and others are left up to each implementation. The idea behind not over specifying goes back to our guideing principles...Trying to keep this thing as simple to use as possible, while still being useful and flexible.
+
+A group of components all related to one another through a particular incident is an incident package. Though we understand that it is theoretically possible to have an insider or organization connected to more than one incident, e.g., an organization that has an incident in one year, then a separate incident the next year, we recommend that implementations should only include one incident in an incident package. This simplifies the technical implemenation of the schema and ensures the data remains readable by human analysts. 
+
+not using the incident entity...
+
+- specified relationships in the scehma/uml
+  - implementations can more tightly constrain the relationships should they have a need to do so, for example by requiring every incident has at least one insider, organization, and target. Implementations should not more loosely define the relationships, for example by allowing an incident to have multiple detection components.
+
+- relatiionship structs and vocabularies
+- the generic relationship struct
+  - ex. notes referencing each other
+  - or impact referencing a specific TTP
+  - recommend only using the generic relationship struct when absolutely necessary to meet the use case requirements 
+
+We welcome feedback... 
+
+
+
 ### Vocabularies
 
 Many of the components in IIDES include properties which require values from specific vocabularies (enumerations) included with IIDES. For example, the `incident_type` property of the [Incident](objects/incident.md) component requires a value from the [incident-type-vocab](objects/incident.md#incident-type-vocab), which lists Fraud, Sabotage, Espionage, Violence, and Unintentional as the options for `incident_type`.  The vocabularies in IIDES are based on our own extensive experience working with insider incidents as well as on a large collection of incident data.
@@ -129,7 +148,7 @@ It is diffult to provide full coverage for all possible vocabulary terms across 
 ## Using IIDES
 TODO - using IIDES
 
-We recognize that not all components of IIDES will be useful to all users. ...
+We recognize that not all components of IIDES will be useful to all users. To that end, ...
 
 - Using the schema
   - gotchas with json schemas

@@ -1,20 +1,22 @@
 # Target
 
-TODO
+The system, data, person, or physical property that was targeted by the insider. An incident may have many targets.
 
 ## Properties
 
-- **`id`** (required) *(string)* : TODO
+- **`id`** (required) *(string)* : A unique string that begins with "target--" and is appended with a UUIDv4.
 	- Uses pattern: ^target--[UUIDv4]
 - **`asset_type`** (required) *(string)* : TODO
 	- A constant from [target-asset-vocab](#target-asset-vocab)
+	- Required if `category` exists.
 - **`category`** (required) *(string)* : TODO
 	- A constant from [target-category-vocab](#target-category-vocab)
+	- Required if `subcategory` exists.
 - **`subcategory`** (required) *(string)* : TODO
 	- A constant from [target-subcategory-vocab](#target-subcategory-vocab)
-- **`format`** (required) *(string)* : TODO
+- **`format`** (required) *(string)* : The data type of the target.
 	- A constant from [target-format-vocab](#target-format-vocab)
-- **`owner`** (required) *(string)* : TODO
+- **`owner`** (required) *(string)* : Who the data is about. For assets, the owner of the asset. In cases where the owner and subject of the data/asset is unclear, pick the person/group most responsible for safeguarding the data/asset.
 	- A constant from [target-owner-vocab](#target-owner-vocab)
 - **`sensitivity`** (required) *(string)* : TODO
 	- A constant from [target-sensitivity-vocab](#target-sensitivity-vocab)
@@ -28,12 +30,12 @@ Constants: `1`, `2`, `3`, `4`, `5`, `6`
 
 | Const | Value | Description |
 | --- | --- | --- |
-| 1 | Facilities | TODO|
-| 2 | Information | TODO|
-| 3 | Money | TODO|
-| 4 | People | TODO|
-| 5 | Technology | TODO|
-| 6 | Other | TODO|
+| 1 | Facilities | Buildings, offices, areas of buildings, or functions of buildings (such as disabling a door).|
+| 2 | Information | Data/business material based, which contain important details belonging to a specific target owner.|
+| 3 | Money | Currency, digital or physical, or materials, goods, or data that will be converted to currency or are currency equivalent.|
+| 4 | People | Employees, customers, individuals.|
+| 5 | Technology | Hardware, software, or firmware intended for the storage or transmission of data or the operation of equipment (as in computers running a manufacturing line).|
+| 6 | Other | Other asset type not listed in this vocabulary.|
 
 ### target-category-vocab
 
