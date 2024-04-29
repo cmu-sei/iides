@@ -33,7 +33,14 @@
 - [c] Incident
 - [c] Note
 - [c] Source
+- [d] Impact
 
+- [d] Response
+- [d] Detection
+- [d] Accomplice
+- [d] Sponsor
+- [d] Stressor
+- [d] Court Case 
 - [ ] Relationship struct
 - [ ] Organization (Marco)
 - [ ] Org Relationship
@@ -42,15 +49,8 @@
 - [ ] Insider relationship vocab
 - [ ] Job
 - [ ] Collusion
-- [d] Accomplice
-- [d] Sponsor
-- [d] Stressor
 - [ ] Target
-- [d] Impact
-- [d] Detection
-- [ ] Response
 - [ ] Legal Response (Josh)
-- [d] Court Case 
 - [ ] Charge (Josh)
 - [ ] Sentence (Josh)
 - [ ] TTP
