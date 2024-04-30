@@ -2,33 +2,33 @@
 	"$id": "[REPLACE with full github url to this json file]",
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "Collusion",
-	"description": "TODO",
+	"description": "Represents the relationship between insiders. For the purposes of the `recruitment` property, insider 1 recruited insider 2.",
 	"type": "object",
 	"properties": {
 		"id": {
 			"type": "string",
-			"description": "TODO",
+			"description": "A unique string that begins with \"collusion--\" and is appended with a UUIDv4.",
 			"pattern": "^collusion--[UUIDv4]"
 		},
-        "insider1": {
+      "insider1": {
 			"type": "string",
-			"description": "TODO",
+			"description": "The id of the first insider.",
 			"pattern": "^insider--[UUIDv4]"
 		},
-        "insider2": {
+      "insider2": {
 			"type": "string",
-			"description": "TODO",
+			"description": "The id of the second insider",
 			"pattern": "^insider--[UUIDv4]"
 		},
-        "relationship": {
+      "relationship": {
 			"type": "string",
-			"description": "TODO",
-            "$ref": "../common/insider-relationship-vocab.json"
+			"description": "The type of relationship between insider1 and insider2.",
+      "$ref": "../common/insider-relationship-vocab.json"
 		},
-        "recruitment": {
+      "recruitment": {
 			"type": "string",
-			"description": "TODO",
-            "$ref": "#/$defs/recruitment-vocab"
+			"description": "The reason insider1 recruited insider2.",
+      "$ref": "#/$defs/recruitment-vocab"
 		}
 	},
 	"required": [
@@ -38,39 +38,39 @@
         "relationship"
 	],
 	"$defs": {
-        "recruitment-vocab": {
-            "oneOf": [
-              {
-                "const": "1",
-                "title": "Avoid Detection",
-                "description": "TODO"
-              },
-              {
-                "const": "2",
-                "title": "Greater Payoff",
-                "description": "TODO"
-              },
-              {
-                "const": "3",
-                "title": "Insider Resigned",
-                "description": "TODO"
-              },
-              {
-                "const": "4",
-                "title": "Separation of Duties",
-                "description": "TODO"
-              },
-              {
-                "const": "5",
-                "title": "Share the Wealth",
-                "description": "TODO"
-              },
-              {
-                "const": "9",
-                "title": "Other",
-                "description": "TODO"
-              }
-            ]
+    "recruitment-vocab": {
+      "oneOf": [
+        {
+          "const": "1",
+          "title": "Avoid Detection",
+          "description": "Insider 1 needed insider 2's access or authorization to avoid detection."
+        },
+        {
+          "const": "2",
+          "title": "Greater Payoff",
+          "description": "Insider 1 received a greater payoff by recruiting insider 2."
+        },
+        {
+          "const": "3",
+          "title": "Insider Resigned",
+          "description": "Insider 1 no longer worked at the victim organization and needed insider 2 to finish the incident."
+        },
+        {
+          "const": "4",
+          "title": "Separation of Duties",
+          "description": "Insider 1 could not conduct acheive their goals without insider 2 due to a separationi of duties which limited their access of authorization."
+        },
+        {
+          "const": "5",
+          "title": "Share the Wealth",
+          "description": "Insider 1 recruited insider 2 due to a desire to share the wealth."
+        },
+        {
+          "const": "9",
+          "title": "Other",
+          "description": "Insider 1 recruited insider 2 for unknown reasons."
         }
+      ]
+    }
 	}
 }

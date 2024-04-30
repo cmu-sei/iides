@@ -20,7 +20,7 @@ The system, data, person, or physical property that was targeted by the insider.
 	- A constant from [target-owner-vocab](#target-owner-vocab)
 - **`sensitivity`** (required) *(string)* : TODO
 	- A constant from [target-sensitivity-vocab](#target-sensitivity-vocab)
-- **`description`** *(string)* : TODO
+- **`description`** *(string)* : Brief description of the target.
 
 ## Vocabularies
 
@@ -45,10 +45,10 @@ Constants: `1.1`, `2.1`, `2.2`, `2.3`, `3.1`, `4.1`, `4.2`, `4.3`, `4.4`, `4.5`,
 | --- | --- | --- |
 | 1.1 | Physical Property - Non-digital assets | TODO|
 | 2.1 | Product Information | TODO|
-| 2.2 | Business Plans | TODO|
+| 2.2 | Business Plans | Data or documents having to do with the everyday course of the business.|
 | 2.3 | Government/Law Enforcement Plans | TODO|
 | 3.1 | Money | TODO|
-| 4.1 | Customer Data | TODO|
+| 4.1 | Customer Data | Information provided by customers or describing customers.|
 | 4.2 | Employee Data | TODO|
 | 4.3 | Identification | TODO|
 | 4.4 | Medical Information | TODO|
@@ -156,11 +156,11 @@ Constants: `CTI`, `FRP`, `FTI`, `GVT`, `ITP`, `LES`, `NPB`, `PCI`, `PHI`, `PII`,
 | CTI | Controlled Technical Information (CTI) | TODO|
 | FRP | FERPA (student education records) | TODO|
 | FTI | Federal Tax Information (FTI) | TODO|
-| GVT | Government Sensitive | TODO|
+| GVT | Government Sensitive | Classified or sensitive information used by and only available to the government.|
 | ITP | Intellectual Property (IP) | TODO|
-| LES | Law Enforcement Sensitive | TODO|
+| LES | Law Enforcement Sensitive | Information, software, or device used by and only available to law enforcement.|
 | NPB | Non-Public | TODO|
-| PCI | Credit/Payment Card (PCI) | TODO|
-| PHI | Protected Health Information (PHI) | TODO|
-| PII | Personally Identifiable Information (PII) | TODO|
-| NSN | Not sensitive/Public | TODO|
+| PCI | Credit/Payment Card (PCI) | Credit/payment card information.|
+| PHI | Protected Health Information (PHI) | Individually identifiable health information, held or maintained by a covered entity or its business associates acting for the covered entity, that is transmitted or maintained in any form or medium. This includes identifiable demographic and other information relating to the past, present, or future physical or mental health or condition of an individual, or the provision or payment of health care to an individual that is created or received by a health care provider, health plan, employer, or health care clearinghouse.|
+| PII | Personally Identifiable Information (PII) | Information which can be used to distinguish or trace an individual's identity, such as their name, social security number, biometric records, etc. alone, or when combined with other personal or identifying information which is linked or linkable to a specific individual, such as date and place of birth, mother's maiden name, etc.|
+| NSN | Not sensitive/Public | The target is not sensitive or is already publicly available.|
