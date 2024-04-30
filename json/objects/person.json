@@ -48,7 +48,7 @@
       },
       "country_of_citizenship": {
         "type": "array",
-        "description": "TODO",
+        "description": "Citizenship of the insider (if known). Generally, US Citizenship can be assumed unless court or media reports specify otherwise (e.g., US (Chinese National) or Canadian). US citizens will typically have a SSN that may be referenced in court documents. If an insider is a foreign national, this may be mentioned in media reports related to the incident.",
         "items": {
             "$ref": "../common/country-vocab.json"
         },
@@ -56,7 +56,7 @@
       },
       "nationality": {
         "type": "array",
-        "description": "TODO",
+        "description": "The nationality or nationalities of the person, enter all that apply.",
         "items": {
             "$ref": "../common/country-vocab.json"
         },
@@ -64,31 +64,31 @@
       },
       "residency": {
         "type": "string",
-        "description": "TODO",
+        "description": "If the insider is not a born US citizen, but resides in the United States, the court documents and/or media reports will usually list the residency status (i.e. naturalized, permanent resident, or resident alien).",
         "$ref": "#/$defs/residency-vocab"
       },
       "gender": {
         "type": "string",
-        "description": "TODO",
+        "description": "Sex of the insider (if known) at the time of the incident. Do not make assumptions (e.g., male, female, unknown) about the insider’s sex.",
         "$ref": "#/$defs/gender-vocab"
       },
       "age": {
         "type": "integer",
-        "description": "TODO"
+        "description": "Age of insider at the time that the incident began (e.g., 25)."
       },
       "education": {
         "type": "string",
-        "description": "TODO",
+        "description": "Highest level of education, only input if specifically stated. This information may be stated within court documents or available on insider’s social media profiles.",
         "$ref": "#/$defs/education-vocab"
       },
       "marital_status": {
         "type": "string",
-        "description": "TODO",
+        "description": "The marital status of the insider at the time of the incident (Single, Married, Divorced, Separated, Widowed, Unknown).",
         "$ref": "#/$defs/marital-status-vocab"
       },
       "number_of_children": {
         "type": "integer",
-        "description": "TODO"
+        "description": "The number of children that the insider is responsible for, at the time of the incident."
       },
       "comment": {
         "type": "string",
