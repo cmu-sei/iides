@@ -2,17 +2,17 @@
     "$id": "[REPLACE with full github url to this json file]",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Job",
-    "description": "TODO",
+    "description": "Details of the employment relationship between an individual and an organization.",
     "type": "object",
     "properties": {
         "id": {
             "type": "string",
-            "description": "TODO",
+            "description": "A unique string that begins with \"job--\" and is appended with a UUIDv4.",
             "pattern": "^job--[UUIDv4]"
         },
         "job_function": {
             "type": "string",
-            "description": "TODO",
+            "description": "Functional category of the individual's job.",
             "$ref": "#/$defs/job-function-vocab"
         },
         "occupation": {
@@ -22,11 +22,11 @@
         },
         "title": {
             "type": "string",
-            "description": "TODO"
+            "description": "The individual's job title. If title is specified, occupation should be as well."
         },
         "position_technical": {
             "type": "boolean",
-            "description": "TODO"
+            "description": "The individual had access to technical areas of the organization during the incident (e.g. IT admin, network engineer, help desk associate, etc.)"
         },
         "access_authorization": {
             "type": "string",
@@ -35,29 +35,36 @@
         },
         "employment_type": {
             "type": "string",
-            "description": "TODO",
+            "description": "The individual's employment arangement at the time of the incident.",
             "$ref": "#/$defs/employment-type-vocab"
         },
         "hire_date": {
-            "type": "date",
-            "description": "TODO"
+            "type": "string",
+            "format": "date",
+            "description": "Date the individual is hired into this position."
         },
         "departure_date": {
-            "type": "date",
-            "description": "TODO"
+            "type": "string",
+            "format": "date",
+            "description": "Date the individual departed from this position."
         },
         "tenure": {
-            "type": "timedelta",
-            "description": "TODO"
+            "type": "string",
+            "format": "timedelta",
+            "description": "The amount of time the individual spent in this particular job role."
         },
         "comment": {
             "type": "string",
-            "description": "TODO"
+            "description": "Clarifying comments or details about the job or the individual's employment with the organization."
         }
     },
     "required": [
         "id"
     ],
+    "dependentRequired": {
+        "occupation": ["job_function"],
+        "title": ["occupation"]
+      },
     "$defs": {
         "job-function-vocab": {
             "oneOf": [
@@ -975,7 +982,7 @@
                 },
                 {
                     "const": "INT",
-                    "title": "Intern",
+                    "title": "Intern/Trainee/Aprentice",
                     "description": "TODO"
                 },
                 {
@@ -986,27 +993,27 @@
                 {
                     "const": "FFT",
                     "title": "Former Full Time",
-                    "description": "TODO"
+                    "description": "Individual who used to work for the organization on a full time basis, but is no longer employed by the organization."
                 },
                 {
                     "const": "FPT",
                     "title": "Former Part Time",
-                    "description": "TODO"
+                    "description": "Individual who used to work for the organizaion on a part time basis, but is no longer employed by the organizaion."
                 },
                 {
                     "const": "TMP",
                     "title": "Temporary Employee",
-                    "description": "TODO"
+                    "description": "Individual hired for a brief period of time or until a certain project is completed."
                 },
                 {
                     "const": "VOL",
                     "title": "Volunteer",
-                    "description": "TODO"
+                    "description": "Individual not employed by the organization, but who donates their time to working on projects without receiving pay or benefits."
                 },
                 {
                     "const": "OTH",
                     "title": "Other",
-                    "description": "TODO"
+                    "description": "Other employment type not listed in this vocabulary."
                 }
             ]
         }
