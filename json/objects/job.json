@@ -17,7 +17,7 @@
         },
         "occupation": {
             "type": "string",
-            "description": "TODO",
+            "description": "The subcategory of the individual's job. When present, job_function should also be present.",
             "$ref": "#/$defs/occupation-vocab"
         },
         "title": {
@@ -30,7 +30,7 @@
         },
         "access_authorization": {
             "type": "string",
-            "description": "TODO",
+            "description": "The level of access control given by this job.",
             "$ref": "#/$defs/access-auth-vocab"
         },
         "employment_type": {
@@ -146,11 +146,6 @@
                 {
                     "const": "16",
                     "title": "Military Specific",
-                    "description": "TODO"
-                },
-                {
-                    "const": "17",
-                    "title": "None",
                     "description": "TODO"
                 },
                 {
