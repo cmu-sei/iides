@@ -343,17 +343,17 @@
               {
                 "const": "2.4.1",
                 "title": "Medical Problems",
-                "description": "TODO"
+                "description": "health issues experienced by anyone involved in the event since the Insider’s hire date (e.g., Insider contracted lupus and was put on medication)."
               },
               {
                 "const": "2.4.2",
                 "title": "Relationship Problems",
-                "description": "TODO"
+                "description": "a problem in one of the insider’s relationships which affects the insider, including family and romantic relationships developed after the Insider’s hire date (e.g., Insider was going through a divorce)."
               },
               {
                 "const": "2.4.3",
                 "title": "Emerging Financial Problems",
-                "description": "TODO"
+                "description": "monetary issues experienced by or relevant to the Insider (including medical bills for family members) known to have developed after the Insider’s hire date (e.g., The insider claimed they stole from the organization in order to pay for their child’s education)."
               },
               {
                 "const": "2.4.4",
