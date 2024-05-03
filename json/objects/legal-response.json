@@ -7,7 +7,7 @@
     "properties": {
       "id": {
         "type": "string",
-        "description": "TODO",
+        "description": "A unique string that begins with \"legal-response--\" and is appended with a UUIDv4.",
         "pattern": "^legal-response--[UUIDv4]"
       },
       "law_enforcement_contacted": {
