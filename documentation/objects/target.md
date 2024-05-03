@@ -43,11 +43,11 @@ Constants: `1.1`, `2.1`, `2.2`, `2.3`, `3.1`, `4.1`, `4.2`, `4.3`, `4.4`, `4.5`,
 
 | Const | Value | Description |
 | --- | --- | --- |
-| 1.1 | Physical Property - Non-digital assets | TODO|
+| 1.1 | Physical Property - Non-digital assets | Physical property such as blue prints or material goods.|
 | 2.1 | Product Information | TODO|
 | 2.2 | Business Plans | Data or documents having to do with the everyday course of the business.|
-| 2.3 | Government/Law Enforcement Plans | TODO|
-| 3.1 | Money | TODO|
+| 2.3 | Government/Law Enforcement Plans | Classified or sensitive government or law enforcement information.|
+| 3.1 | Money | Currency, digital or physical, or materials, goods, or data that will be converted to currency or are currency equivalent.|
 | 4.1 | Customer Data | Information provided by customers or describing customers.|
 | 4.2 | Employee Data | TODO|
 | 4.3 | Identification | TODO|

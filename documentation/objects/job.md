@@ -9,12 +9,12 @@ Details of the employment relationship between an individual and an organization
 - **`job_function`** *(string)* : Functional category of the individual's job.
 	- A constant from [job-function-vocab](#job-function-vocab)
 	- Required if `occupation` exists.
-- **`occupation`** *(string)* : TODO
+- **`occupation`** *(string)* : The subcategory of the individual's job. When present, job_function should also be present.
 	- A constant from [occupation-vocab](#occupation-vocab)
 	- Required if `title` exists.
 - **`title`** *(string)* : The individual's job title. If title is specified, occupation should be as well.
 - **`position_technical`** *(boolean)* : The individual had access to technical areas of the organization during the incident (e.g. IT admin, network engineer, help desk associate, etc.)
-- **`access_authorization`** *(string)* : TODO
+- **`access_authorization`** *(string)* : The level of access control given by this job.
 	- A constant from [access-auth-vocab](#access-auth-vocab)
 - **`employment_type`** *(string)* : The individual's employment arangement at the time of the incident.
 	- A constant from [employment-type-vocab](#employment-type-vocab)
@@ -27,7 +27,7 @@ Details of the employment relationship between an individual and an organization
 
 ### job-function-vocab
 
-Constants: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, `14`, `15`, `16`, `17`, `18`, `19`, `20`, `21`, `22`, `23`, `25`
+Constants: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, `14`, `15`, `16`, `18`, `19`, `20`, `21`, `22`, `23`, `25`
 
 | Const | Value | Description |
 | --- | --- | --- |
@@ -47,7 +47,6 @@ Constants: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, 
 | 14 | Life, Physical, and Social Science | TODO|
 | 15 | Management | TODO|
 | 16 | Military Specific | TODO|
-| 17 | None | TODO|
 | 18 | Office and Administrative Support | TODO|
 | 19 | Production | TODO|
 | 20 | Protective Service | TODO|
@@ -234,7 +233,7 @@ Constants: `CCT`, `CFT`, `CPT`, `INT`, `FCT`, `FFT`, `FPT`, `TMP`, `VOL`, `OTH`
 | CPT | Current Part-time | TODO|
 | INT | Intern/Trainee/Aprentice | TODO|
 | FCT | Former Contractor | TODO|
-| FFT | Former Full Time | TODO|
+| FFT | Former Full Time | Individual who used to work for the organization on a full time basis, but is no longer employed by the organization.|
 | FPT | Former Part Time | Individual who used to work for the organizaion on a part time basis, but is no longer employed by the organizaion.|
 | TMP | Temporary Employee | Individual hired for a brief period of time or until a certain project is completed.|
 | VOL | Volunteer | Individual not employed by the organization, but who donates their time to working on projects without receiving pay or benefits.|
