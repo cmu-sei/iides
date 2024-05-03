@@ -1,6 +1,6 @@
 # Stressor
 
-Events that occur after insider's start date at the victim organization and precipitate insider activity.
+Events that occur within the victim organization and precipitate insider activity.
 
 ## Properties
 
@@ -52,7 +52,7 @@ Constants: `S1.1`, `S1.2`, `S1.3`, `S1.4`, `S1.5`, `S1.6`, `S1.7`, `S1.8`, `S1.9
 | S2.5 | Layoffs | Temporary suspension or permanent termination of one or more employees.|
 | S2.6 | Personnel Changes | Staffing changes of employees other than the insider within the employing organization.|
 | S2.7 | Supervisor Ambiguity | The insider expressed a lack of clarity in the organization's supervisory hierarchy.|
-| S2.8 | Filed for Bankruptcy | The organization filed for bankruptcy.|
+| S2.8 | Organization Filed for Bankruptcy | The organization filed for bankruptcy.|
 | S2.9 | Lack of Background Checks | The organizational failure to sufficiently review the past history of potential candidates.|
 | S2.10 | Inadequate Training | An organizational failure to administer the proper training for its employees.|
 | S2.11 | Lax Controls | The organizational failure to restrict access to what is necessary for the insider to perform work related activities.|
