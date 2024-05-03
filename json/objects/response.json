@@ -185,12 +185,12 @@
               "description": "Law enforcement belonging to the military or Department of Defense, such as military police or NCIS. "
             },
             {
-              "const": "LE",
+              "const": "06",
               "title": "Law Enforcement - Government Agency",
               "description": "Law enforcement belonging to a government agency such as DHS, USPS, IRS, etc."
             },
             {
-              "const": "II",
+              "const": "07",
               "title": "Internal Investigators",
               "description": "Other investigators internal to the victim organization."
             },
