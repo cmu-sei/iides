@@ -2,7 +2,7 @@
     "$id": "[REPLACE with full github url to this json file]",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Charge",
-    "description": "The charges or accusations brought against the insider when the incident is pursued in the legal system. E.g., \"2 counts of Unauthorized Access to Company Systems\"",
+    "description": "A charge or accusation brought against the insider when the incident is pursued in the legal system. E.g., \"Two counts of Unauthorized Access to Company Systems.\" A charge must be connected to only one court case. A court case may have one or more charges.",
     "type": "object",
     "properties": {
       "id": {
@@ -16,15 +16,15 @@
       },
       "section": {
         "type": "string",
-        "description": "Section of the US Code the subject is accused of violating."
+        "description": "Section (and subsection) of the law the subject is accused of violating. For U.S. cases for example, Wire Fraud is section 1343 of Title 18."
       },
       "nature_of_offense": {
         "type": "string",
-        "description": "Description of the law being violated. Maps back to the title and section."
+        "description": "Description of the title and section of the law being violated."
       },
       "count": {
         "type": "integer",
-        "description": "Number of times the subject is accused of violating the law associated with this charge. Note that multiple violations of a law are often listed as a range of counts (e.g. “Count 2-6” would be 5 counts for this property)."
+        "description": "Number of times the subject is accused of violating the law associated with this charge. Note that multiple violations of a law are often listed as a range of counts (e.g. “Count 2-6” would have count=5 for this property)."
       },
       "plea": {
         "type": "string",

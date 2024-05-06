@@ -42,11 +42,14 @@
 - [c] Impact
 - [c] Detection
 - [c] Stressor
-- [d] Response
+- [c] Response
+- [c] Legal Response
+- [c] Sentence
+- [c] Charge
+- [c] Court Case
 
 - [d] Accomplice
 - [d] Sponsor
-- [d] Court Case
 - [d] Collusion
 - [d] Relationship struct
 - [ ] Organization (Marco)
@@ -56,9 +59,6 @@
 - [ ] Insider relationship vocab
 - [ ] Job
 - [ ] Target
-- [ ] Legal Response (Josh)
-- [ ] Charge (Josh)
-- [ ] Sentence (Josh)
 - [ ] TTP
 
 Json/UML:
