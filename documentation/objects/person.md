@@ -10,15 +10,15 @@ Abstract class for inheritance by the Insider and Accomplice objects. Describes 
 - **`suffix`** *(string)* : The name suffix of the individual.
 	- A constant from [suffix-vocab](#suffix-vocab)
 - **`alias`** *(array)* : A list of aliases (other names) the individual has used, and/or the anonymized of the individual in court records.
-	- One or more string values
+  - One or more string values
 - **`city`** *(string)* : The city (or county/district) that the person resided in at the time of the incident.
 - **`state`** *(string)* : The state (or region) that the person resided in at the time of the incident.
 - **`country`** *(string)* : The country that the person resided in at the time of the incident. Public implementations should use the standard codes provided by ISO 3166-1 alpha-2.
 - **`postal_code`** *(integer)* : The postal code that the person resided in at the time of the incident.
 - **`country_of_citizenship`** *(array)* : Citizenship(s) of the person. Public implementations should use the standard codes provided by ISO 3166-1 alpha-2.
-	- One or more string values
+  - One or more string values
 - **`nationality`** *(array)* : The nationality or nationalities of the person.
-	- One or more string values
+  - One or more string values
 - **`residency`** *(string)* : Residency status if the person was not a citizen of the country where they resided during the incident.
 	- A constant from [residency-vocab](#residency-vocab)
 - **`gender`** *(string)* : Sex or gender at the time of the incident.

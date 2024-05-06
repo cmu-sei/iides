@@ -5,7 +5,7 @@ A charge or accusation brought against the insider when the incident is pursued 
 ## Properties
 
 - **`id`** (required) *(string)* : A unique string that begins with "charge--" and is appended with a UUIDv4.
-	- Uses pattern: ^charge--[UUIDv4]
+  - Uses pattern: ^charge--[UUIDv4]
 - **`title`** (required) *(string)* : Broad subject matter area of the legal code. For U.S. cases, these are often title “18 U.S.C.”.
 - **`section`** *(string)* : Section (and subsection) of the law the subject is accused of violating. For U.S. cases for example, Wire Fraud is section 1343 of Title 18.
 - **`nature_of_offense`** *(string)* : Description of the title and section of the law being violated.

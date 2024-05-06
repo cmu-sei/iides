@@ -5,14 +5,14 @@ Describes details about how, when, and by whom the incident was detected. An inc
 ## Properties
 
 - **`id`** (required) *(string)* : A unique string that begins with "detection--" and is appended with a UUIDv4.
-	- Uses pattern: ^detection--[UUIDv4]
+  - Uses pattern: ^detection--[UUIDv4]
 - **`first_detected`** *(date-time)* : The date and time the victim organization first became aware of the incident.
 - **`who_detected`** *(array)* : The individual entities or teams that first detected the incident.
-	- One or more constants from [detection-team-vocab](#detection-team-vocab)
+  - One or more constants from [detection-team-vocab](#detection-team-vocab)
 - **`detected_method`** *(array)* : The system or process that led to the first detection of the incident.
-	- One or more constants from [detection-method-vocab](#detection-method-vocab)
+  - One or more constants from [detection-method-vocab](#detection-method-vocab)
 - **`logs`** *(array)* : The type(s) of logs used by the detection team and/or method to first detect the incident.
-	- One or more constants from [detection-log-vocab](#detection-log-vocab)
+  - One or more constants from [detection-log-vocab](#detection-log-vocab)
 - **`comment`** *(string)* : Clarifying comments about who, what, when, or how the incident was detected.
 
 ## Vocabularies

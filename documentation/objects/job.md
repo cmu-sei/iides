@@ -5,13 +5,13 @@ Details of the employment relationship between an individual and an organization
 ## Properties
 
 - **`id`** (required) *(string)* : A unique string that begins with "job--" and is appended with a UUIDv4.
-	- Uses pattern: ^job--[UUIDv4]
+  - Uses pattern: ^job--[UUIDv4]
 - **`job_function`** *(string)* : Functional category of the individual's job.
 	- A constant from [job-function-vocab](#job-function-vocab)
-	- Required if `occupation` exists.
+  - Required if `occupation` exists.
 - **`occupation`** *(string)* : The subcategory of the individual's job. When present, job_function should also be present.
 	- A constant from [occupation-vocab](#occupation-vocab)
-	- Required if `title` exists.
+  - Required if `title` exists.
 - **`title`** *(string)* : The individual's job title. If title is specified, occupation should be as well.
 - **`position_technical`** *(boolean)* : The individual had access to technical areas of the organization during the incident (e.g. IT admin, network engineer, help desk associate, etc.)
 - **`access_authorization`** *(string)* : The level of access control given by this job.
