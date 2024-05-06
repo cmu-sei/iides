@@ -73,82 +73,82 @@
               {
                 "const": "1",
                 "title": "Agriculture and Mining",
-                "description": "TODO"
+                "description": "Growing crops, raising animals, harvesting timber, or extraction of naturally occurring minerals."
               },
               {
                 "const": "2",
                 "title": "Utilities",
-                "description": "TODO"
+                "description": "Provisioning of services for the public (e.g., energy, water, and waste collection)."
               },
               {
                 "const": "3",
                 "title": "Construction",
-                "description": "TODO"
+                "description": "Construction and engineering of buildings and associated support services or trades."
               },
               {
                 "const": "4",
                 "title": "Manufacturing",
-                "description": "TODO"
+                "description": "Mechanical, Chemical, Physical changes to material."
               },
               {
                 "const": "5",
                 "title": "Trade",
-                "description": "TODO"
+                "description": "The exchange of goods and services."
               },
               {
                 "const": "6",
                 "title": "Transportation and Support Services",
-                "description": "TODO"
+                "description": "Services directly or indirectly involved in the movement of people."
               },
               {
                 "const": "7",
                 "title": "Information Technology",
-                "description": "TODO"
+                "description": "Hardware or software systems related to the processing, communications, and accessing of information."
               },
               {
                 "const": "8",
                 "title": "Finance and Insurance",
-                "description": "TODO"
+                "description": "Financial services, payment processors, and insurance."
               },
               {
                 "const": "9",
                 "title": "Real Estate and Rental/Leasing",
-                "description": "TODO"
+                "description": "Property sales and renting/leasing of assets."
               },
               {
                 "const": "10",
                 "title": "Professional Services",
-                "description": "TODO"
+                "description": "Services provided by trained professionals in specialized fields."
               },
               {
                 "const": "11",
                 "title": "Education",
-                "description": "TODO"
+                "description": "Instruction & Training of individuals."
               },
               {
                 "const": "12",
                 "title": "Healthcare and Social Services",
-                "description": "TODO"
+                "description": "Medical care and Social Advocacy/Assistance."
               },
               {
                 "const": "13",
                 "title": "Arts, Entertainment, Recreation, and Hospitality",
-                "description": "TODO"
+                "description": "Industries that meet the entertainment needs of patrons."
               },
               {
                 "const": "14",
                 "title": "Religious Institutions, Charities, and Non-Profits",
-                "description": "TODO"
+                "description": "Any religious organization, charity, or non-profit."
               },
               {
                 "const": "15",
                 "title": "Public Administration",
-                "description": "TODO"
+                "description": "Federal/State/Local administration and the oversight of public programs."
               },
               {
                 "const": "16",
                 "title": "Unknown",
-                "description": "TODO"
+                "description": "Not falling into the aforementioned industrial sectors."
               }
             ]
         },
@@ -157,357 +157,357 @@
                 {
                     "const": "1.1",
                     "title": "Agriculture and Forestry",
-                    "description": "TODO"
+                    "description": "Agriculture and Forestry: Establishments primarily engaged in growing crops, raising animals, and harvesting timber from a farm or natural habitat."
                 },
                 {
                     "const": "1.2",
                     "title": "Fishing and Hunting",
-                    "description": "TODO"
+                    "description": "Fishing and Hunting: Establishments concerned with expediting, guiding, and transporting hunting/fishing adventures, as well as those involved lodging operations, shooting preserves and fishing charters."
                 },
                 {
                     "const": "1.3",
                     "title": "Mining and Quarrying",
-                    "description": "TODO"
+                    "description": "Mining and Quarrying: Establishments that engage in mining, mine site development, and beneficiating metallic and nonmetallic minerals."
                 },
                 {
                     "const": "1.4",
                     "title": "Oil and Gas Extraction",
-                    "description": "TODO"
+                    "description": "Oil and Gas Extraction: Establishments that operate and/or develop oil and gas field properties."
                 },
                 {
                     "const": "2.1",
                     "title": "Energy",
-                    "description": "TODO"
+                    "description": "Providing sources of energy to physical facilities or residences."
                 },
                 {
                     "const": "2.2",
                     "title": "Water (Distribution and Sewage)",
-                    "description": "TODO"
+                    "description": "Providing water to physical faciities or residences, and the extraction of waste water from such locations."
                 },
                 {
                     "const": "2.2",
                     "title": "Waste Collection",
-                    "description": "TODO"
+                    "description": "The collection of disposed materials from physical facilities or residences."
                 },
                 {
                     "const": "2.3",
                     "title": "Nuclear (Power, Materials, and Waste)",
-                    "description": "TODO"
+                    "description": "Provisioning of services for power, materials, and waste disposal related to nuclear facilities."
                 },
                 {
                     "const": "2.5",
                     "title": "Dams",
-                    "description": "TODO"
+                    "description": "Industrial water dam facilities for managing irrigation, drinking water, flood control, etc."
                 },
                 {
                     "const": "3.1",
                     "title": "Residential",
-                    "description": "TODO"
+                    "description": "The construction of physical structures for residential use."
                 },
                 {
                     "const": "3.2",
                     "title": "Non-Residential",
-                    "description": "TODO"
+                    "description": "The construction of physical structures for non-residential commercial or public use."
                 },
                 {
                     "const": "3.3",
                     "title": "Civil",
-                    "description": "TODO"
+                    "description": "The construction of physical infrastructure for the facilitation of societal use (i.e. bridges, roads, dams)."
                 },
                 {
                     "const": "3.4",
                     "title": "Architecture",
-                    "description": "TODO"
+                    "description": "The planning and design of physical structures."
                 },
                 {
                     "const": "4.1",
                     "title": "Food and Beverage",
-                    "description": "TODO"
+                    "description": "The manufacturing of human consumables."
                 },
                 {
                     "const": "4.2",
                     "title": "Chemical",
-                    "description": "TODO"
+                    "description": "The manufacturing of substances used for industrial purposes (i.e. cleaning products, agricultural practices)"
                 },
                 {
                     "const": "4.3",
                     "title": "Aerospace, Auto, Marine, and Machinery",
-                    "description": "TODO"
+                    "description": "The manufacturing of large scale complex technological physical systems (i.e. cars, ships, planes, sattelites)."
                 },
                 {
                     "const": "4.4",
                     "title": "Electronics",
-                    "description": "TODO"
+                    "description": "The construction of small scale complex technological systems (i.e. phones, computers, appliances)"
                 },
                 {
                     "const": "4.5",
                     "title": "General Manufacturing",
-                    "description": "TODO"
+                    "description": "Manufacturing of general products."
                 },
                 {
                     "const": "5.1",
                     "title": "Retail Trade",
-                    "description": "TODO"
+                    "description": "The exchange of individual goods to consumers at merchant store locations."
                 },
                 {
                     "const": "5.2",
                     "title": "Wholesale Trade",
-                    "description": "TODO"
+                    "description": "The exchange of bulk goods to other vendors for downstream retail trade."
                 },
                 {
                     "const": "5.3",
                     "title": "E-Commerce",
-                    "description": "TODO"
+                    "description": "The exchange of individual or bulk goods to consumers or other vendors facilitated by the internet."
                 },
                 {
                     "const": "6.1",
                     "title": "Air",
-                    "description": "TODO"
+                    "description": "Transportation and related services facilitated via air travel (i.e. planes)."
                 },
                 {
                     "const": "6.2",
                     "title": "Rail",
-                    "description": "TODO"
+                    "description": "Transportation and related services facilitated via rail travel (i.e. trains)."
                 },
                 {
                     "const": "6.3",
                     "title": "Water",
-                    "description": "TODO"
+                    "description": "Transportation and related services facilitated via water travel (i.e. ships)."
                 },
                 {
                     "const": "6.4",
                     "title": "Truck",
-                    "description": "TODO"
+                    "description": "Transportation and related services of goods via road travel for supply chains, done with large vehicles."
                 },
                 {
                     "const": "6.5",
                     "title": "Transit",
-                    "description": "TODO"
+                    "description": "Transportation and related services for the movement of people (i.e. metropolitan busses, ferries, subways)."
                 },
                 {
                     "const": "6.6",
                     "title": "Pipeline",
-                    "description": "TODO"
+                    "description": "The transportation of resources via underground pipes (i.e. gas, water, sewage)."
                 },
                 {
                     "const": "6.7",
                     "title": "Courier Services",
-                    "description": "TODO"
+                    "description": "The delivery and related services for the distribution of goods or physical messages."
                 },
                 {
                     "const": "6.8",
                     "title": "Supply Chain Services",
-                    "description": "TODO"
+                    "description": "Services related to the logistics for acquiring, processing, and transporting materials."
                 },
                 {
                     "const": "7.1",
                     "title": "Software Publishers and Web Developers",
-                    "description": "TODO"
+                    "description": "Organizations that create and distribute software products and internet websites."
                 },
                 {
                     "const": "7.2",
                     "title": "Telecommunications",
-                    "description": "TODO"
+                    "description": "Facilitation of the transfer and communication of information via technology (i.e. landline, 5g, ISP)."
                 },
                 {
                     "const": "7.3",
                     "title": "IT, Data Processing, Hosting, Etc.",
-                    "description": "TODO"
+                    "description": "Services that facilitate the operations of information systems."
                 },
                 {
                     "const": "8.1",
                     "title": "Banks and Credit Unions",
-                    "description": "TODO"
+                    "description": "Organizations which provide banking and credit services"
                 },
                 {
                     "const": "8.2",
                     "title": "Insurance",
-                    "description": "TODO"
+                    "description": "Organizations that provide contracts for remediating unforeseen losses."
                 },
                 {
                     "const": "8.3",
                     "title": "Other Financial Services",
-                    "description": "TODO"
+                    "description": "Other organizations that provide financial adjecent services (i.e. accounting, auditing, consulting, advisory)."
                 },
                 {
                     "const": "9.1",
                     "title": "Real Estate Sales/Rentals",
-                    "description": "TODO"
+                    "description": "Facilities that can be permanently or temporarliy made available for residential or commercial use."
                 },
                 {
                     "const": "9.2",
                     "title": "Warehousing & Storage",
-                    "description": "TODO"
+                    "description": "Facilities that are used for the safekeeping of physical assets."
                 },
                 {
                     "const": "9.3",
                     "title": "Automotive & Machinery Rental/Leasing",
-                    "description": "TODO"
+                    "description": "Vehicles and industrial machinery that can be temporarily lent out or leased."
                 },
                 {
                     "const": "10.1",
                     "title": "Legal",
-                    "description": "TODO"
+                    "description": "Legal advice and representation by professionals."
                 },
                 {
                     "const": "10.2",
                     "title": "Consulting",
-                    "description": "TODO"
+                    "description": "Expert advice in a specific field for clients."
                 },
                 {
                     "const": "10.3",
                     "title": "Scientific Research and Development",
-                    "description": "TODO"
+                    "description": "Discovering new science or creating new technology."
                 },
                 {
                     "const": "10.4",
                     "title": "Manual Labor and Related Services",
-                    "description": "TODO"
+                    "description": "Physical work done by hand or with simple tools."
                 },
                 {
                     "const": "10.5",
                     "title": "Business Services (Marketing, PR, etc.)",
-                    "description": "TODO"
+                    "description": " Services that help businesses function (accounting, marketing, etc.)."
                 },
                 {
                     "const": "10.6",
                     "title": "Labor Unions",
-                    "description": "TODO"
+                    "description": "Groups representing workers in bargaining with employers (wages, benefits)."
                 },
                 {
                     "const": "11.1",
                     "title": "Elementary/High Schools",
-                    "description": "TODO"
+                    "description": "Formal education after primary school."
                 },
                 {
                     "const": "11.2",
                     "title": "Colleges/Universities",
-                    "description": "TODO"
+                    "description": "Higher education leading to a degree."
                 },
                 {
                     "const": "11.3",
                     "title": "Technical/Industry Training",
-                    "description": "TODO"
+                    "description": "Job-specific skills training."
                 },
                 {
                     "const": "12.1",
                     "title": "Private Practices, Walk-in Clinics, Etc.",
-                    "description": "TODO"
+                    "description": "Outpatient medical care by individual providers."
                 },
                 {
                     "const": "12.2",
                     "title": "Advocacy Services",
-                    "description": "TODO"
+                    "description": "Support for people's rights in healthcare."
                 },
                 {
                     "const": "12.3",
                     "title": "Psychological Practice",
-                    "description": "TODO"
+                    "description": "Mental health diagnosis and treatment by psychologists."
                 },
                 {
                     "const": "12.4",
                     "title": "Pharmacology",
-                    "description": "TODO"
+                    "description": "Study of drugs and their effects."
                 },
                 {
                     "const": "12.5",
                     "title": "Hospitals",
-                    "description": "TODO"
+                    "description": "Inpatient care facilities providing medical and surgical services."
                 },
                 {
                     "const": "12.6",
                     "title": "Health Network",
-                    "description": "TODO"
+                    "description": "Coalition of healthcare providers working together."
                 },
                 {
                     "const": "12.7",
                     "title": "Healthcare Insurance",
-                    "description": "TODO"
+                    "description": "Financial protection for medical expenses."
                 },
                 {
                     "const": "12.8",
                     "title": "Diagnostics, Support Services, and Medical Manufacturing",
-                    "description": "TODO"
+                    "description": "Tests, equipment, and supplies used in healthcare."
                 },
                 {
                     "const": "13.1",
                     "title": "Performing Arts & SPectator Sports",
-                    "description": "TODO"
+                    "description": "Live entertainment (theater, concerts, sports) for audiences."
                 },
                 {
                     "const": "13.2",
                     "title": "Museums & Historical Sites",
-                    "description": "TODO"
+                    "description": "Places that preserve and exhibit objects or locations of interest."
                 },
                 {
                     "const": "13.3",
                     "title": "Content Publishers",
-                    "description": "TODO"
+                    "description": "Create and distribute information (books, newspapers, websites)."
                 },
                 {
                     "const": "13.4",
                     "title": "Hotels, Amusement, Gambling, and Restaurants",
-                    "description": "TODO"
+                    "description": "Hospitality, entertainment, and leisure services (accommodation, theme parks, casinos, dining)."
                 },
                 {
                     "const": "14.1",
                     "title": "Religious Institutions",
-                    "description": "TODO"
+                    "description": "Places of worship (churches, mosques, etc.)."
                 },
                 {
                     "const": "14.2",
                     "title": "Charities",
-                    "description": "TODO"
+                    "description": " Organizations helping others (donations, volunteering)."
                 },
                 {
                     "const": "14.3",
                     "title": "Non-Profit Organizations",
-                    "description": "TODO"
+                    "description": "Groups focused on social good, not profit."
                 },
                 {
                     "const": "14.4",
                     "title": "Civic Associations",
-                    "description": "TODO"
+                    "description": "Community groups promoting civic engagement."
                 },
                 {
                     "const": "15.1",
                     "title": "Federal Government",
-                    "description": "TODO"
+                    "description": "National government of the United States."
                 },
                 {
                     "const": "15.2",
                     "title": "State Government",
-                    "description": "TODO"
+                    "description": "Government of a particular state in the US."
                 },
                 {
                     "const": "15.3",
                     "title": "Local Government",
-                    "description": "TODO"
+                    "description": "Government of a city, county, etc. in the US."
                 },
                 {
                     "const": "15.4",
                     "title": "Defense Industrial Base",
-                    "description": "TODO"
+                    "description": "Businesses supplying the US military."
                 },
                 {
                     "const": "15.5",
                     "title": "Correctional Facilities",
-                    "description": "TODO"
+                    "description": "Prisons, jails, and other detention centers."
                 },
                 {
                     "const": "15.6",
                     "title": "Emergency Services",
-                    "description": "TODO"
+                    "description": "Police, fire departments, and ambulance services."
                 },
                 {
                     "const": "15.7",
                     "title": "Postal Services",
-                    "description": "TODO"
+                    "description": "Delivery of mail and packages."
                 },
                 {
                     "const": "15.8",
                     "title": "Department of Defense",
-                    "description": "TODO"
+                    "description": "US government agency managing the military."
                 }
             ]
         },
