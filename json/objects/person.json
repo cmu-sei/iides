@@ -48,7 +48,7 @@
       },
       "country_of_citizenship": {
         "type": "array",
-        "description": "Citizenship of the insider (if known). Generally, US Citizenship can be assumed unless court or media reports specify otherwise (e.g., US (Chinese National) or Canadian). US citizens will typically have a SSN that may be referenced in court documents. If an insider is a foreign national, this may be mentioned in media reports related to the incident.",
+        "description": "Citizenship of the accomplice if explicitly stated. Do not make assumptions of the insider’s citizenship (e.g., Canadian) based on their surname or location. Enter all that apply",
         "items": {
             "$ref": "../common/country-vocab.json"
         },
