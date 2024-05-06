@@ -2,23 +2,23 @@
     "$id": "[REPLACE with full github url to this json file]",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Insider",
-    "description": "TODO",
+    "description": "The insider entity contains information about the insider or insiders involved in the incident. Multiple insiders can be connected to an incident, each with their own separate insider entity instance.",
     "type": "object",
     "$ref": "./person.json",
     "properties": {
       "id": {
         "type": "string",
-        "description": "TODO",
+        "description": "A unique string that begins with \"insider--\" and is appended with a UUIDv4.",
         "pattern": "^insider--[UUIDv4]"
       },
       "incident_role": {
         "type": "string",
-        "description": "TODO",
+        "description": "whether the insider was the primary actor, or had a different role in the incident (e.g. co-conspirator, looked the other way, approved insider’s actions).",
         "$ref": "#/$defs/incident-role-vocab"
       },
       "motive": {
         "type": "array",
-        "description": "TODO",
+        "description": "Information about the insider’s motives for the incident.",
         "items": {
             "$ref": "#/$defs/motive-vocab"
         },
@@ -26,7 +26,7 @@
       },
       "substance_abuse": {
         "type": "array",
-        "description": "TODO",
+        "description": "Information about any known substance abuse problems the insider had.",
         "items": {
             "$ref": "#/$defs/substance-abuse-vocab"
         },
@@ -34,11 +34,11 @@
       },
       "substance_use_during_incident": {
         "type": "boolean",
-        "description": "TODO"
+        "description": "Information about any known substance abuse problems the insider had."
       },
       "psychological_issues": {
         "type": "array",
-        "description": "TODO",
+        "description": "Information about any known psychological issues the insider experienced, as mentioned in court documents.",
         "items": {
             "$ref": "#/$defs/psych-issues-vocab"
         },
@@ -70,7 +70,7 @@
       },
       "comment": {
         "type": "string",
-        "description": "TODO"
+        "description": "Any additional comments to clarify responses to any of the fields in the Insider entity."
       }
     },
     "required": [
@@ -83,12 +83,12 @@
               {
                 "const": "1",
                 "title": "Primary",
-                "description": "TODO"
+                "description": "Insider is the primary in the incident"
               },
               {
                 "const": "2",
                 "title": "Co-Conspirator",
-                "description": "TODO"
+                "description": "Insider was a co-conspirator the incident"
               },
               {
                 "const": "3",
@@ -107,47 +107,47 @@
               {
                 "const": "",
                 "title": "benefit_foreign_entity",
-                "description": "TODO"
+                "description": "The insider committing their attack to benefit a foreign entity."
               },
               {
                 "const": "",
                 "title": "benefit_new_employer",
-                "description": "TODO"
+                "description": "The insider committing their attack to benefit their new employer."
               },
               {
                 "const": "",
                 "title": "competitive_bus_adv",
-                "description": "TODO"
+                "description": "The insider committing their attack in order to gain any sort of business advantage."
               },
               {
                 "const": "",
                 "title": "curiosity",
-                "description": "TODO"
+                "description": "The insider committing their crime due to their own curiosity (e.g., Insider accessed medical records of a celebrity because they were curious of that celebrity’s age)."
               },
               {
                 "const": "",
                 "title": "financial_gain",
-                "description": "TODO"
+                "description": "The insider committing their attack to make money."
               },
               {
                 "const": "",
                 "title": "freedom_of_info",
-                "description": "TODO"
+                "description": "The insider holds the belief that it is in the best interest of the public to share the victim organization’s confidential information with the public, regardless of existing commitments they made to the organization. An example would be sharing unfavorable test results of a product or unfavorable information about an organization’s internal practices."
               },
               {
                 "const": "",
                 "title": "recognition",
-                "description": "TODO"
+                "description": "The insider wanting to be recognized as the reason for their attack."
               },
               {
                 "const": "",
                 "title": "revenge",
-                "description": "TODO"
+                "description": "Revenge being the reason that the insider committed the attack."
               },
               {
                 "const": "",
                 "title": "other",
-                "description": "TODO"
+                "description": "Other motive not listed."
               }
             ]
         },
@@ -156,52 +156,52 @@
               {
                 "const": "",
                 "title": "alcohol",
-                "description": "TODO"
+                "description": "Evidence entered into the record that alleges that the insider abused alcohol."
               },
               {
                 "const": "",
                 "title": "marijuana",
-                "description": "TODO"
+                "description": "Evidence entered into the record that alleges that the insider used or abused marijuana."
               },
               {
                 "const": "",
                 "title": "legal_perscription_opiate",
-                "description": "TODO"
+                "description": "Legally prescribed opiate medication taken in excess."
               },
               {
                 "const": "",
                 "title": "illegal_perscription_opiate",
-                "description": "TODO"
+                "description": "Abuse of opiate medications (illegally obtained) such morphine, oxycodone, fentanyl, and hydromorphone or other opiate medications."
               },
               {
                 "const": "",
                 "title": "non_perscription_opiate",
-                "description": "TODO"
+                "description": "Abuse of non-prescription or illegal opiates such as heroin."
               },
               {
                 "const": "",
                 "title": "opiate_unknown",
-                "description": "TODO"
+                "description": "Unspecified opiate abuse."
               },
               {
                 "const": "",
                 "title": "non_opiate_perscription",
-                "description": "TODO"
+                "description": "The misuse/dependence on prescribed non-opiate medications. This frequently includes medication prescribed for ADHD such as Ritalin and Adderall."
               },
               {
                 "const": "",
                 "title": "stimulant",
-                "description": "TODO"
+                "description": "Evidence the insider abused stimulants such as cocaine or methamphetamines."
               },
               {
                 "const": "",
                 "title": "Street Drugs",
-                "description": "TODO"
+                "description": "Evidence the insider abused illicit substances not otherwise specified – may include designer drugs such as Molly, bath salts, and synthetic cannabinoids."
               },
               {
                 "const": "",
                 "title": "Other",
-                "description": "TODO"
+                "description": "Evidence of the insider abusing a substance of a type not listed in the above categories"
               }
             ]
         },
@@ -210,32 +210,32 @@
               {
                 "const": "",
                 "title": "outpatient_treatment",
-                "description": "TODO"
+                "description": "Treatment in which they are not hospitalized overnight, but rather visits a hospital, clinic, or associated facility for diagnosis or treatment."
               },
               {
                 "const": "",
                 "title": "inpatient_treatment",
-                "description": "TODO"
+                "description": "Treatment that involved 24-hour (including overnight) supervision at a hospital or dedicated psychiatric facility."
               },
               {
                 "const": "",
                 "title": "medication_noncompliance",
-                "description": "TODO"
+                "description": "The insider not taking a prescribed medication or following a prescribed course of treatment for a particular medical or mental health condition which, in turn, could have impacted their mental faculties."
               },
               {
                 "const": "",
                 "title": "experienced_acted_on_delusions",
-                "description": "TODO"
+                "description": "The insider experiencing delusions and/or acting on them at some point during their employment within the organization."
               },
               {
                 "const": "",
                 "title": "threatened_attempted_suicide",
-                "description": "TODO"
+                "description": "The insider either threatening or attempting to commit suicide at some point during their employment within the organization."
               },
               {
                 "const": "",
                 "title": "other",
-                "description": "TODO"
+                "description": "The insider experienced specific psychological issues not specified in this list or not specified in the court documents."
               }
             ]
         },
@@ -268,67 +268,67 @@
               {
                 "const": "1.1.1",
                 "title": "Possible Psychological Issues",
-                "description": "TODO"
+                "description": "observed behaviors that indicate the insider may have a mental health condition or psychological problem (e.g., Insider shared they were feeling depressed)"
               },
               {
                 "const": "1.1.2",
                 "title": "Diagnosed Psychological Issues",
-                "description": "TODO"
+                "description": "facts that indicates the insider was diagnosed with a mental health problem (e.g., Insider put on medication for depression and antipsychotics)."
               },
               {
                 "const": "1.1.3",
                 "title": "Gambling Problems",
-                "description": "TODO"
+                "description": "the insider’s gambling negatively affecting other areas of his or her life (e.g., Insider frequently spends multiple hours at the casino every week.)"
               },
               {
                 "const": "1.1.4",
                 "title": "Substance Abuse",
-                "description": "TODO"
+                "description": "facts that indicate that the insider may have a history of alcohol or drugs, either previous or ongoing (e.g., Insider showed up to work intoxicated)."
               },
               {
                 "const": "1.1.5",
                 "title": "A History Of Financial Problems",
-                "description": "TODO"
+                "description": "existing monetary issues experienced by the insider, including medical bills for family members (e.g., Insider had previously filed for bankruptcy)."
               },
               {
                 "const": "1.1.6",
                 "title": "Poor Hygiene",
-                "description": "TODO"
+                "description": "the insider being known for having poor general hygiene"
               },
               {
                 "const": "1.1.7",
                 "title": "Risk Taker",
-                "description": "TODO"
+                "description": "the insider being known as a generally reckless individual"
               },
               {
                 "const": "1.2.1",
                 "title": "Previous Arrest/Conviction For Related Crime",
-                "description": "TODO"
+                "description": "the insider’s involvement or conviction in a previous crime which is similar in nature to the current case (e.g., Insider executed similar fraud six years earlier. Misdemeanor conviction for the same conduct with probation sentence)."
               },
               {
                 "const": "1.2.2",
                 "title": "Previous Arrest/Conviction for Unrelated Crime",
-                "description": "TODO"
+                "description": "the insider’s involvement in a previous crime which is unrelated to the current case (e.g., Insider was previously arrested for assault)."
               },
               {
                 "const": "1.2.3",
                 "title": "Previous Perpetrator of Domestic Violence",
-                "description": "TODO"
+                "description": "the insider previously convicted or charged on a crime involving domestic violence (e.g., Insider was previously arrested for abusing spouse)."
               },
               {
                 "const": "1.2.4",
                 "title": "Hacking Related Activities",
-                "description": "TODO"
+                "description": "insider involvement in activities focused on obtaining unauthorized access to or otherwise harming IT systems (e.g., Insider often discussed their hacking related activities on their website)."
               },
               {
                 "const": "1.2.5",
                 "title": "Previous Attempts to Disclose Through Illegitimate Means",
-                "description": "TODO"
+                "description": "The insider disclosing or attempting to disclose information through illegitimate means (i.e., not legally protected as a whistleblower)"
               },
               {
                 "const": "1.2.6",
                 "title": "Pending or Previous Defendant in Civil Action",
-                "description": "TODO"
+                "description": "The insider was previously found liable in a civil action, outside of the specific incident (i.e. where a insider was sued previously, which may be a motivation for the insider’s actions)."
               },
               {
                 "const": "1.3.1",
@@ -343,17 +343,17 @@
               {
                 "const": "2.4.1",
                 "title": "Medical Problems",
-                "description": "TODO"
+                "description": "health issues experienced by anyone involved in the event since the Insider’s hire date (e.g., Insider contracted lupus and was put on medication)."
               },
               {
                 "const": "2.4.2",
                 "title": "Relationship Problems",
-                "description": "TODO"
+                "description": "a problem in one of the insider’s relationships which affects the insider, including family and romantic relationships developed after the Insider’s hire date (e.g., Insider was going through a divorce)."
               },
               {
                 "const": "2.4.3",
                 "title": "Emerging Financial Problems",
-                "description": "TODO"
+                "description": "monetary issues experienced by or relevant to the Insider (including medical bills for family members) known to have developed after the Insider’s hire date (e.g., The insider claimed they stole from the organization in order to pay for their child’s education)."
               },
               {
                 "const": "2.4.4",
@@ -406,177 +406,177 @@
               {
                 "const": "3.1.1",
                 "title": "Theft Of Physical Company Property",
-                "description": "TODO"
+                "description": "The insider stealing their employer’s physical property (e.g., Insider reported a company laptop as stolen, but had it when they were arrested)."
               },
               {
                 "const": "3.1.2",
                 "title": "Insider Expressed Ownership Of Work",
-                "description": "TODO"
+                "description": "The insider acting as if they had personal right to any work done for the organization, despite knowledge of organizational right to employee work (e.g., Insider refused to return copy of code that they wrote because they felt entitled to it)."
               },
               {
                 "const": "3.1.3",
                 "title": "Repeated Security Violations - Non-Technical",
-                "description": "TODO"
+                "description": "The insider violating organization security policies not related to IT systems (e.g., Insider broke into the school on multiple occasions and was also caught cheating)."
               },
               {
                 "const": "3.2.1",
                 "title": "Other Unauthorized Software Acquisition",
-                "description": "TODO"
+                "description": "A user acquiring any sort of unauthorized software on an organizational system (e.g., The insider downloaded a password recovery tool from a website)."
               },
               {
                 "const": "3.2.2",
                 "title": "Repeated Security Violations - Technical",
-                "description": "TODO"
+                "description": "Multiple instances of security violations related to organizational IT systems, which are committed by the insider (e.g., Insider repeatedly let co-workers use their workstation)."
               },
               {
                 "const": "3.2.3",
                 "title": "Unauthorized Download - Remotely",
-                "description": "TODO"
+                "description": "An unapproved download from a remote distance (e.g., Insider logged into his company account from home on his personal laptop and downloaded torrents)."
               },
               {
                 "const": "3.2.4",
                 "title": "Unauthorized Download - On Site",
-                "description": "TODO"
+                "description": "An unapproved download from within the company’s confines (e.g., Insider used his company-issued workstation to download torrents)."
               },
               {
                 "const": "3.2.5",
                 "title": "IP Policy Violation",
-                "description": "TODO"
+                "description": "An violation of the policies put in place by the company regarding their IP (i.e. trade secrets, patents, copyright, etc.)."
               },
               {
                 "const": "3.2.6",
                 "title": "Violation of Need to Know",
-                "description": "TODO"
+                "description": "The insider accessed organizational information which is not needed for their work, as defined by organizational policy"
               },
               {
                 "const": "3.3.1",
                 "title": "Employee Extortion, Threats, or Legal Demands",
-                "description": "TODO"
+                "description": "An insider action towards the organization that amounts to extortion, threats (physical, technical, legal, etc.) or actual legal demands (e.g., Insider threatened to sue company unless they agreed to the terms of their demands)."
               },
               {
                 "const": "3.3.2",
                 "title": "Conflict With Supervisor",
-                "description": "TODO"
+                "description": "The insider having personal or work-related disputes with their supervisor (e.g., Insider was unhappy with their new boss, because the boss modified the organization’s bonus system)."
               },
               {
                 "const": "3.3.3",
                 "title": "Conflict With Coworker(s)",
-                "description": "TODO"
+                "description": "The insider having personal or work-related disputes with a coworker (e.g., Insider yelled at coworker for repeatedly parking in their spot)."
               },
               {
                 "const": "3.3.4",
                 "title": "Work Attendance Problems",
-                "description": "TODO"
+                "description": "The insider being late for work or having unexcused/unplanned absences from work, generally multiple times (e.g., Insider reports late to work 7 times during the month of April)."
               },
               {
                 "const": "3.3.5",
                 "title": "Human Resource Policy Violations or Complaints",
-                "description": "TODO"
+                "description": "the insider violating the organization’s Human Resource Policy, or the Insider making a formal complaint about something/someone within the organization (e.g., Insider made several complaints to management about their co-worker’s noise level)."
               },
               {
                 "const": "3.3.6",
                 "title": "Disgruntled Employee",
-                "description": "TODO"
+                "description": "an insider who is upset with the organization and desires to get a measure of revenge against the organization (e.g., Insider grew disgruntled because of losing their 'star' status at the organization as it grew larger)."
               },
               {
                 "const": "3.3.7",
                 "title": "Bragging",
-                "description": "TODO"
+                "description": "The insider boasting about a concerning behavior to co-workers or online (e.g., Insider boasted about being able to shut down the organization’s system anytime they wanted)."
               },
               {
                 "const": "3.3.8",
                 "title": "Concurrent Crimes",
-                "description": "TODO"
+                "description": "The insider commits a second illegal action, while committing the unrelated illegal insider incident (e.g., Insider indicted for domestic abuse while Insider committed the insider incident)."
               },
               {
                 "const": "3.3.9",
                 "title": "Formal Complaint",
-                "description": "TODO"
+                "description": "The insider received complaints from a coworker that were officially documented within the organization"
               },
               {
                 "const": "3.3.10",
                 "title": "Informal Complaint",
-                "description": "TODO"
+                "description": "The insider received complaints from a coworker that were not officially documented within the organization"
               },
               {
                 "const": "3.3.11",
                 "title": "Insubordination",
-                "description": "TODO"
+                "description": "The insider was defiant and refused to follow commands or instructions"
               },
               {
                 "const": "3.3.12",
                 "title": "Physical Abuse/Harassment",
-                "description": "TODO"
+                "description": "The insider engaged in any type of physical abuse and/or harassment against another employee"
               },
               {
                 "const": "3.3.13",
                 "title": "Sexual Harassment",
-                "description": "TODO"
+                "description": "The insider engaged in any type of sexual harassment against another employee"
               },
               {
                 "const": "3.4.1",
                 "title": "Unexplained Wealth",
-                "description": "TODO"
+                "description": "A sudden increase in the amount of money the insider appears to have (e.g., Insider purchased $436,000 in personal items even though their annual salary was $50,000)."
               },
               {
                 "const": "3.4.2",
                 "title": "Employee Forms New Competing Business",
-                "description": "TODO"
+                "description": "An insider maintaining a financial stake in another business or scheme that conflicts with their present employer (e.g., Insider invests in stocks of the victim organization’s competitor)."
               },
               {
                 "const": "3.4.3",
                 "title": "Financial Conflict of Interest",
-                "description": "TODO"
+                "description": "The insider starting a business in the same area as his or her previous employer (e.g., Insider left one law firm to start their own law firm)."
               },
               {
                 "const": "3.5.1",
                 "title": "Planning/Contact with Competing Organization",
-                "description": "TODO"
+                "description": "The insider conspiring with a competitor of the current employer in any way, including communication through an IT system (e.g., Insider e-mailed competing organization detailing plans to steal trade secrets)."
               },
               {
                 "const": "3.5.2",
                 "title": "Employee Went To Work For A Competing Organization",
-                "description": "TODO"
+                "description": "the insider leaving his or her current employer and joining a competing organization (e.g., Insider accepted a position at a competing technical firm before resigning from their current position)."
               },
               {
                 "const": "3.5.3",
                 "title": "Employee Sought Other Employment",
-                "description": "TODO"
+                "description": "the insider seeking another job while still employed with their current employer (e.g., Insider sent their resume to another organization)."
               },
               {
                 "const": "3.5.4",
                 "title": "Group Resignation",
-                "description": "TODO"
+                "description": "two or more employees leaving the organization at approximately the same time for similar reasons (e.g., All five insiders resigned simultaneously, then went to work for a competitor)."
               },
               {
                 "const": "3.5.5",
                 "title": "Insider Creates Legal Entity for Illegitimate Purpose",
-                "description": "TODO"
+                "description": "The insider creates a legal entity in order to move forward with scheme, or hide assets as a result of the scheme (e.g., insider creates a shell company to protect assets)."
               },
               {
                 "const": "3.5.6",
                 "title": "Falsified Background Information",
-                "description": "TODO"
+                "description": "the insider having any tie(s) to foreign nation(s) in any way, such as company or independent travel, family members, telephone records, etc. (e.g., Insider consistently calls former co-worker who now works in China)."
               },
               {
                 "const": "3.6.1",
                 "title": "Suspicious Foreign Contact",
-                "description": "TODO"
+                "description": "the insider having any tie(s) to foreign nation(s) in any way, such as company or independent travel, family members, telephone records, etc. (e.g., Insider consistently calls former co-worker who now works in China)."
               },
               {
                 "const": "3.6.2",
                 "title": "Suspicious Foreign Travel",
-                "description": "TODO"
+                "description": "the insider traveling to foreign nations that, if the travel was known, should raise concerns with the organization (e.g., Insider, a government employee, frequently traveled to Russia)."
               },
               {
                 "const": "3.6.3",
                 "title": "Foreign Travel - Work Related",
-                "description": "TODO"
+                "description": "travel undertaken by the insider as required for his or her job (e.g., The insider's job required frequent travel to Middle Eastern countries)."
               },
               {
                 "const": "3.6.4",
                 "title": "Planning/Contact with Conspirator",
-                "description": "TODO"
+                "description": "the insider conspiring with a conspirator in order to begin or further their particular scheme (e.g., Insider calls their partner-in-crime in order to establish attack details)."
               },
               {
                 "const": "3.7.1",
