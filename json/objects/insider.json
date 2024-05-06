@@ -2,7 +2,7 @@
     "$id": "[REPLACE with full github url to this json file]",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Insider",
-    "description": "The insider entity contains information about the insider or insiders involved in the incident. Multiple insiders can be connected to an incident, each with their own separate insider entity instance.",
+    "description": "Information about the insider involved in the incident. An incident can have multiple insiders.",
     "type": "object",
     "$ref": "./person.json",
     "properties": {
@@ -18,7 +18,7 @@
       },
       "motive": {
         "type": "array",
-        "description": "Information about the insider’s motives for the incident.",
+        "description": "The insider's motive(s) for the incident.",
         "items": {
             "$ref": "#/$defs/motive-vocab"
         },
@@ -26,7 +26,7 @@
       },
       "substance_abuse": {
         "type": "array",
-        "description": "Information about any known substance abuse problems the insider had.",
+        "description": "Substances the insider was using or abusing.",
         "items": {
             "$ref": "#/$defs/substance-abuse-vocab"
         },
@@ -34,11 +34,11 @@
       },
       "substance_use_during_incident": {
         "type": "boolean",
-        "description": "Information about any known substance abuse problems the insider had."
+        "description": "Insider was using or abusing substance(s) at the time they took one or more actions during the event."
       },
       "psychological_issues": {
         "type": "array",
-        "description": "Information about any known psychological issues the insider experienced, as mentioned in court documents.",
+        "description": "Psychological issue(s) the insider experienced during or before the incident.",
         "items": {
             "$ref": "#/$defs/psych-issues-vocab"
         },
@@ -46,7 +46,7 @@
       },
       "predispositions": {
         "type": "array",
-        "description": "TODO",
+        "description": "Insider's tendancy toward certain actions or qualities.",
         "prefixItems": [
           { "type": "string" },
           { "type": "string" },
@@ -58,7 +58,7 @@
       },
       "concerning_behaviors": {
         "type": "array",
-        "description": "TODO",
+        "description": "Insider's history of past behavior that could indicate future issues.",
         "prefixItems": [
           { "type": "string" },
           { "type": "string" },
@@ -83,71 +83,71 @@
               {
                 "const": "1",
                 "title": "Primary",
-                "description": "Insider is the primary in the incident"
+                "description": "Insider is the primary perpetrator of the incident."
               },
               {
                 "const": "2",
                 "title": "Co-Conspirator",
-                "description": "Insider was a co-conspirator the incident"
+                "description": "Insider is a co-conspirator in the incident"
               },
               {
                 "const": "3",
                 "title": "Looked the other way",
-                "description": "TODO"
+                "description": "Insider looked the other way while the primary perpetrator conducted the incident."
               },
               {
                 "const": "4",
                 "title": "Approved primary insider's actions",
-                "description": "TODO"
+                "description": "Insider knowingly approved the primary perpetrator's actions, such as by signing off on a fraudulent invoice."
               }
             ]
         },
         "motive-vocab": {
             "oneOf": [
               {
-                "const": "",
-                "title": "benefit_foreign_entity",
-                "description": "The insider committing their attack to benefit a foreign entity."
+                "const": "01",
+                "title": "Benefit Foreign Entity",
+                "description": "Insider committed their attack to benefit a foreign entity, such as a foreign government or military."
               },
               {
-                "const": "",
-                "title": "benefit_new_employer",
-                "description": "The insider committing their attack to benefit their new employer."
+                "const": "02",
+                "title": "Benefit New Employer",
+                "description": "Insider committed their attack to benefit their new employer, such as by stealing a client list when they left the victim organization."
               },
               {
-                "const": "",
-                "title": "competitive_bus_adv",
-                "description": "The insider committing their attack in order to gain any sort of business advantage."
+                "const": "03",
+                "title": "Competitive Business Advantage",
+                "description": "Insider committed their attack in order to gain a business advantage for a competing company. Often, this is the insider starting their own company."
               },
               {
-                "const": "",
-                "title": "curiosity",
-                "description": "The insider committing their crime due to their own curiosity (e.g., Insider accessed medical records of a celebrity because they were curious of that celebrity’s age)."
+                "const": "04",
+                "title": "Curiosity",
+                "description": "Insider committed the incident out of curiosity. E.g., Insider accessed medical records of a celebrity because they were curious of that celebrity's age."
               },
               {
-                "const": "",
-                "title": "financial_gain",
-                "description": "The insider committing their attack to make money."
+                "const": "05",
+                "title": "Financial Gain",
+                "description": "Insider committed their attack to make a profit."
               },
               {
-                "const": "",
-                "title": "freedom_of_info",
-                "description": "The insider holds the belief that it is in the best interest of the public to share the victim organization’s confidential information with the public, regardless of existing commitments they made to the organization. An example would be sharing unfavorable test results of a product or unfavorable information about an organization’s internal practices."
+                "const": "06",
+                "title": "Freedom of Information",
+                "description": "The insider held the belief that it is in the best interest of the public to share the victim organization's confidential information with the public. E.g., sharing unfavorable test results of a product or unfavorable information about an organization's internal practices."
               },
               {
-                "const": "",
-                "title": "recognition",
-                "description": "The insider wanting to be recognized as the reason for their attack."
+                "const": "07",
+                "title": "Recognition",
+                "description": "The insider wanted to be recognized (e.g. for being smart, talented, capable, powerful, etc.)"
               },
               {
-                "const": "",
-                "title": "revenge",
-                "description": "Revenge being the reason that the insider committed the attack."
+                "const": "08",
+                "title": "Revenge",
+                "description": "The insider wanted revenge for an actual or perceived wrong."
               },
               {
-                "const": "",
-                "title": "other",
-                "description": "Other motive not listed."
+                "const": "99",
+                "title": "Other",
+                "description": "Other motive not listed in this vocabulary."
               }
             ]
         },
