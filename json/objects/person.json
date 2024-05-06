@@ -48,7 +48,7 @@
       },
       "country_of_citizenship": {
         "type": "array",
-        "description": "Citizenship of the accomplice if explicitly stated. Do not make assumptions of the insider’s citizenship (e.g., Canadian) based on their surname or location. Enter all that apply",
+        "description": "Citizenship of the insider (if known). Generally, US Citizenship can be assumed unless court or media reports specify otherwise (e.g., US (Chinese National) or Canadian). US citizens will typically have a SSN that may be referenced in court documents. If an insider is a foreign national, this may be mentioned in media reports related to the incident.",
         "items": {
             "$ref": "../common/country-vocab.json"
         },
@@ -111,17 +111,17 @@
               {
                 "const": "N",
                 "title": "Naturalized",
-                "description": "TODO"
+                "description": "A formerly non-citizen that has undergone naturalization and become a citizen"
               },
               {
                 "const": "P",
                 "title": "Permanent Resident",
-                "description": "TODO"
+                "description": "A foreign who is a permitted to live in a country they are not a citizen of indefinitely."
               },
               {
                 "const": "R",
                 "title": "Resident Alien",
-                "description": "TODO"
+                "description": "A foreign citizen who is a resident of a country they are not a citizen of."
               }
             ]
         },
@@ -154,42 +154,42 @@
               {
                 "const": "4",
                 "title": "Associates Degree",
-                "description": "TODO"
+                "description": "Possessing an undergraduate degree at the associates level."
               },
               {
                 "const": "5",
                 "title": "Bachelors Degree",
-                "description": "TODO"
+                "description": "Possessing an undegraduate degree at the bachelors level."
               },
               {
                 "const": "8",
                 "title": "Doctorate",
-                "description": "TODO"
+                "description": "Possesing a graduate degree at the doctoral level."
               },
               {
                 "const": "2",
                 "title": "High School Diploma or GED",
-                "description": "TODO"
+                "description": "Possessing a high school diploma or general education development (GED)."
               },
               {
                 "const": "7",
                 "title": "Masters Degree",
-                "description": "TODO"
+                "description": "Possessing a graduate degree at the masters level."
               },
               {
                 "const": "6",
                 "title": "Professional Degree",
-                "description": "TODO"
+                "description": "Possessing a degree making one qualified for a particular profession."
               },
               {
                 "const": "3",
                 "title": "Some College",
-                "description": "TODO"
+                "description": "Having completed some amount of collegiate coursework but not possessing a degree."
               },
               {
                 "const": "1",
                 "title": "Some High School",
-                "description": "TODO"
+                "description": "Having completed some amount of high school coursework but not possessing a high school diploma."
               }
             ]
         },
@@ -198,27 +198,27 @@
               {
                 "const": "1",
                 "title": "Single",
-                "description": "TODO"
+                "description": "Not currently married."
               },
               {
                 "const": "2",
                 "title": "Married",
-                "description": "TODO"
+                "description": "Currently belonging to a marriage with a spouse who is an intimate partner."
               },
               {
                 "const": "3",
                 "title": "Divorced",
-                "description": "TODO"
+                "description": "Having exited a previous marriage."
               },
               {
                 "const": "4",
                 "title": "Separated",
-                "description": "TODO"
+                "description": "Married to someone but no longer in an intimate partnership with spouse."
               },
               {
                 "const": "5",
                 "title": "Widowed/Widower",
-                "description": "TODO"
+                "description": "Previously in a marriage that ended due to death of spouse."
               }
             ]
         }
