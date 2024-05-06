@@ -2,7 +2,7 @@
     "$id": "[REPLACE with full github url to this json file]",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Legal Response",
-    "description": "TODO",
+    "description": "Information about the legal response to the incident, particularly the dates of important milestones in the legal process. A response may have one legal response. A legal response may have multiple charges, and may have multiple sentences.",
     "type": "object",
     "properties": {
       "id": {
@@ -13,51 +13,51 @@
       "law_enforcement_contacted": {
         "type": "string",
         "format": "date",
-        "description": "The organization contacting law enforcement to aid in the investigation of the incident (e.g., Police are called to respond to the Insider’s violent behavior in the workplace)."
+        "description": "Organization contacts law enforcement to aid in the investigation of the incident. E.g., Police are called to respond to the Insider's violent behavior in the workplace)."
       },
       "insider_arrested": {
         "type": "string",
         "format": "date",
-        "description": "The insider being taken into custody (e.g., Police arrested the Insider in their home in Pennsylvania)."
+        "description": "Insider is taken into custody. E.g., Police arrest insider in their home."
       },
       "insider_charged": {
         "type": "string",
         "format": "date",
-        "description": "The insider being formally charged. Charges must relate to the incident. This category also covers a waiver of indictment and subsequent filing of information (e.g., Insider was indicted on computer fraud charges)."
+        "description": "Insider is formally charged. Charges must relate to the incident. This category also covers a waiver of indictment and subsequent filing of information. E.g., Insider was indicted on computer fraud charges."
       },
       "insider_pleads": {
         "type": "string",
         "format": "date",
-        "description": "The insider putting forth a plea to the court, including guilty, not guilty, nolo contendere (no contest) (e.g., Insider pleads guilty to the computer intrusion)."
+        "description": "Insider puts forth a plea to the court, including guilty, not guilty, nolo contendere (no contest). E.g., Insider pleads guilty to computer intrusion."
       },
       "insider_judgment": {
         "type": "string",
         "format": "date",
-        "description": "The insider has been found guilty, not guilty, or liable or not liable in a court of law (e.g., Insider found guilty in jury trial)."
+        "description": "Insider is found guilty, not guilty, or liable or not liable in a court of law. E.g., Insider is found guilty in a jury trial."
       },
       "insider_sentenced": {
         "type": "string",
         "format": "date",
-        "description": "The insider’s legally mandated punishment (e.g., Insider sentenced to 5 months in jail, then supervised release, community service, and restitution)."
+        "description": "Insider is given a legally mandated punishment. E.g., Insider sentenced to 5 months in jail, then supervised release, community service, and restitution."
       },
       "insider_charges_dropped": {
         "type": "string",
         "format": "date",
-        "description": "The plaintiff dropping their case against the Insider (e.g., Upon discovery of further evidence, the judge decided to drop the charges against the Insider)."
+        "description": "The plaintiff drops their case against the insider. E.g., The organization in a civil suit decides to drop the suit."
       },
       "insider_charges_dismissed": {
         "type": "string",
         "format": "date",
-        "description": "The plaintiff dismiss their case against the Insider (e.g., Upon discovery of further evidence, the judge decided to drop the charges against the Insider)."
+        "description": "The plaintiff dismiss their case against the insider. E.g., Upon discovery of further evidence, the judge decided to drop the charges against the insider."
       },
       "insider_settled": {
         "type": "string",
         "format": "date",
-        "description": "The case against the Insider being settled outside of the courtroom (e.g., The victim organization reached an agreement with the Insider to not file formal charges in return for financial compensation)."
+        "description": "The case against the insider is settled outside of the courtroom. E.g., The victim organization reached an agreement with the insider to not file formal charges in return for financial compensation."
       },
       "comment": {
         "type": "string",
-        "description": "TODO"
+        "description": "Comments clarifying the details or dates of the legal response."
       }
     },
     "required": [

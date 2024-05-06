@@ -1,18 +1,18 @@
 # Legal Response
 
-TODO
+Information about the legal response to the incident, particularly the dates of important milestones in the legal process. A response may have one legal response. A legal response may have multiple charges, and may have multiple sentences.
 
 ## Properties
 
-- **`id`** (required) *(string)* : TODO
+- **`id`** (required) *(string)* : A unique string that begins with "legal-response--" and is appended with a UUIDv4.
 	- Uses pattern: ^legal-response--[UUIDv4]
-- **`law_enforcement_contacted`** *(date)* : TODO
-- **`insider_arrested`** *(date)* : TODO
-- **`insider_charged`** *(date)* : TODO
-- **`insider_pleads`** *(date)* : TODO
-- **`insider_judgment`** *(date)* : TODO
-- **`insider_sentenced`** *(date)* : TODO
-- **`insider_charges_dropped`** *(date)* : TODO
-- **`insider_charges_dismissed`** *(date)* : TODO
-- **`insider_settled`** *(date)* : TODO
-- **`comment`** *(string)* : TODO
+- **`law_enforcement_contacted`** *(date)* : Organization contacts law enforcement to aid in the investigation of the incident. E.g., Police are called to respond to the Insider's violent behavior in the workplace).
+- **`insider_arrested`** *(date)* : Insider is taken into custody. E.g., Police arrest insider in their home.
+- **`insider_charged`** *(date)* : Insider is formally charged. Charges must relate to the incident. This category also covers a waiver of indictment and subsequent filing of information. E.g., Insider was indicted on computer fraud charges.
+- **`insider_pleads`** *(date)* : Insider puts forth a plea to the court, including guilty, not guilty, nolo contendere (no contest). E.g., Insider pleads guilty to computer intrusion.
+- **`insider_judgment`** *(date)* : Insider is found guilty, not guilty, or liable or not liable in a court of law. E.g., Insider is found guilty in a jury trial.
+- **`insider_sentenced`** *(date)* : Insider is given a legally mandated punishment. E.g., Insider sentenced to 5 months in jail, then supervised release, community service, and restitution.
+- **`insider_charges_dropped`** *(date)* : The plaintiff drops their case against the insider. E.g., The organization in a civil suit decides to drop the suit.
+- **`insider_charges_dismissed`** *(date)* : The plaintiff dismiss their case against the insider. E.g., Upon discovery of further evidence, the judge decided to drop the charges against the insider.
+- **`insider_settled`** *(date)* : The case against the insider is settled outside of the courtroom. E.g., The victim organization reached an agreement with the insider to not file formal charges in return for financial compensation.
+- **`comment`** *(string)* : Comments clarifying the details or dates of the legal response.
