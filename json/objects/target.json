@@ -98,7 +98,7 @@
               {
                 "const": "1.1",
                 "title": "Physical Property - Non-digital assets",
-                "description": "TODO"
+                "description": "Physical property such as blue prints or material goods."
               },
               {
                 "const": "2.1",
@@ -113,12 +113,12 @@
               {
                 "const": "2.3",
                 "title": "Government/Law Enforcement Plans",
-                "description": "TODO"
+                "description": "Classified or sensitive government or law enforcement information."
               },
               {
                 "const": "3.1",
                 "title": "Money",
-                "description": "TODO"
+                "description": "Currency, digital or physical, or materials, goods, or data that will be converted to currency or are currency equivalent."
               },
               {
                 "const": "4.1",

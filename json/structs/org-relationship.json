@@ -7,7 +7,7 @@
 	"properties": {
 		"id": {
 			"type": "string",
-			"description": "TODO",
+			"description": "A unique string that begins with \"org-relationship--\" and is appended with a UUIDv4.",
 			"pattern": "^org-relationship--[UUIDv4]"
 		},
         "org1": {
@@ -22,7 +22,7 @@
 		},
         "relationship": {
 			"type": "string",
-			"description": "TODO. Reads as \"Org1 is [relationship] to Org2.\" E.g., \"Org1 is vendor to Org2.\"",
+			"description": "Defines the relationship between the two organizations. Reads as \"Org1 is [relationship] to Org2.\" E.g., \"Org1 is vendor to Org2.\"",
             "$ref": "#/$defs/org-relationship-vocab"
 		}
 	},
@@ -38,22 +38,22 @@
 				{
 					"const": "C",
 					"title": "Competitor",
-					"description": "TODO"
+					"description": "Org1 and Org2 compete with each for the same customers."
 				},
 				{
 					"const": "P",
 					"title": "Parent",
-					"description": "TODO"
+					"description": "Org1 is a parent company to Org2."
 				},
 				{
 					"const": "S",
 					"title": "Subsidiary",
-					"description": "TODO"
+					"description": "Org1 is a subsidiary (child company) to Org2."
 				},
 				{
 					"const": "V",
 					"title": "Vendor",
-					"description": "TODO"
+					"description": "Org1 provides goods, materials, or services to Org2 on a contractual basis."
 				},
 				{
 					"const": "T",

@@ -2,49 +2,49 @@
     "$id": "[REPLACE with full github url to this json file]",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "TTP",
-    "description": "TODO",
+    "description": "Actions taken by the insider during the course of the incident.",
     "type": "object",
     "properties": {
       "id": {
         "type": "string",
-        "description": "TODO",
+        "description": "A unique string that begins with \"ttp--\" and is appended with a UUIDv4.",
         "pattern": "^ttp--[UUIDv4]"
       },
       "date": {
         "type": "string",
-        "format": "date",
-        "description": "TODO"
+        "format": "datetime",
+        "description": "The date and time the action happend. If over a range of time, the start time of the action."
       },
       "sequence_num": {
         "type": "integer",
-        "description": "TODO"
+        "description": "The sequence number of this action in the overall timeline of actions. Helpful if the sequence of events is known, but the dates are unknown."
       },
       "observed": {
         "type": "boolean",
-        "description": "TODO"
+        "description": "Whether the action was observed by the victim organization or investigative team at the time it happend."
       },
       "number_of_times": {
         "type": "integer",
-        "description": "TODO"
+        "description": "The number of times the insider took the particular action. E.g., subject issued \"5\" fraudulent checks over the course of three weeks."
       },
       "ttp_vocab": {
         "type": "string",
-        "default": "IIDES Attack Methods",
-        "description": "att&ck, capec, etc."
+        "default": "IIDES",
+        "description": "A reference to the TTP framework being used by this TTP. Common options are IIDES, ATT&CK, CAPEC, etc."
       },
       "tactic": {
         "type": "string",
-        "description": "TODO",
+        "description": "The high level category or goal of the action.",
         "$ref": "#/$defs/tactic-vocab"
       },
       "technique": {
         "type": "string",
-        "description": "TODO",
+        "description": "The general action taken. If technique exists, `tactic` should as well.",
         "$ref": "#/$defs/technique-vocab"
       },
       "location": {
         "type": "string",
-        "description": "TODO",
+        "description": "Whether the insider conducted the action on-site or remotely.",
         "items": {
             "$ref": "#/$defs/attack-location-vocab"
         },
@@ -52,230 +52,297 @@
       },
       "hours": {
         "type": "string",
-        "description": "TODO",
+        "description": "Whether the action was taken during work hours.",
         "items": {
             "$ref": "#/$defs/attack-hours-vocab"
         },
         "minItems": 1
       },
       "device": {
-        "type": "string",
-        "description": "TODO. Affected device",
+        "type": "array",
+        "description": "The device where this action either took place or a device that was affected by the action. A device where the action could be detected.",
         "items": {
             "$ref": "#/$defs/device-vocab"
+        },
+        "minItems": 1
+      },
+      "channel": {
+        "type": "array",
+        "description": "TODO",
+        "items": {
+            "$ref": "#/$defs/channel-vocab"
         },
         "minItems": 1
       },
       "description": {
         "type": "string",
         "format": "date",
-        "description": "TODO"
+        "description": "Description of the action taken by the insider."
       }
     },
     "required": [
         "id"
     ],
+    "dependentRequired": {
+      "technique": ["tactic", "ttp_vocab"],
+      "tactic": ["ttp_vocab"]
+    },
     "$defs": {
         "tactic-vocab": {
             "oneOf": [
               {
-                "const": "4.1",
+                "const": "A",
                 "title": "Access",
-                "description": "TODO"
+                "description": "Insider uses an account to take an action related to the incident."
               },
               {
-                "const": "4.4",
+                "const": "R",
                 "title": "Recruitment",
-                "description": "TODO"
+                "description": "Insider recruits, or is recruited by others."
               },
               {
-                "const": "4.7",
+                "const": "F",
                 "title": "Financial Transaction",
+                "description": "Insider or colluding outsider makes a financial transaction related to the incident."
+              },
+              {
+                "const": "D",
+                "title": "Data Exfiltration",
                 "description": "TODO"
               },
               {
-                "const": "4.8",
+                "const": "C",
                 "title": "Concealment",
-                "description": "TODO"
+                "description": "Insider or colluding outsider takes an action that conceals, or attempts to conceal, their activity."
               }
             ]
         },
         "technique-vocab": {
             "oneOf": [
               {
-                "const": "4.1.1",
+                "const": "A1",
                 "title": "Own account",
-                "description": "TODO"
+                "description": "Insider uses their granted access in order to commit their attack."
               },
               {
-                "const": "4.1.2",
+                "const": "A2",
                 "title": "Privileged Access Abuse",
-                "description": "TODO"
+                "description": "Insider uses their granted privileged access in order to commit their attack."
               },
               {
-                "const": "4.1.3",
+                "const": "A3",
                 "title": "Insider Used Shared Account",
-                "description": "TODO"
+                "description": "Insider accesses an account they share with other employees."
               },
               {
-                "const": "4.1.4",
+                "const": "A4",
                 "title": "Insider Used Dormant or Expired Account",
-                "description": "TODO"
+                "description": "Insider uses a company account that was either dormant or expired."
               },
               {
-                "const": "4.1.5",
+                "const": "A5",
                 "title": "Insider Used Unattended Workstation (Unsecured)",
-                "description": "TODO"
+                "description": "Insider uses a workstation that was unassigned to an employee or uses a colleague's workstation when the colleague is not at their desk."
               },
               {
-                "const": "4.1.6",
+                "const": "A6",
                 "title": "Insider Used Their Account After Termination/Resignation",
-                "description": "TODO"
+                "description": "Insider gains access to their company account after their termination date."
               },
               {
-                "const": "4.1.7",
+                "const": "A7",
                 "title": "Insider Used Compromised Account",
-                "description": "TODO"
+                "description": "Insider uses the compromised account of another employee. E.g., Insider copied another employee's account and password prior to being terminated."
               },
               {
-                "const": "4.1.8",
+                "const": "A8",
                 "title": "Used Unauthorized Access Path",
-                "description": "TODO"
+                "description": "Insider accesses systems using a previously unknown access path that they created. Ee.g., Insider used a backdoor account in order to gain access to the organization's systems."
               },
               {
-                "const": "4.1.9",
+                "const": "A9",
                 "title": "Authorized Third-Party Account",
-                "description": "TODO"
+                "description": "Insider uses a third party account such as a vendor's account."
               },
               {
-                "const": "4.1.10",
+                "const": "A10",
                 "title": "Coworker's Account",
-                "description": "TODO"
+                "description": "Insider uses a coworker's account."
               },
               {
-                "const": "4.1.11",
+                "const": "A11",
                 "title": "Customer's Account",
-                "description": "TODO"
+                "description": "Insider uses a customer's account."
               },
               {
-                "const": "4.1.12",
+                "const": "A12",
                 "title": "Database Administrator Account",
-                "description": "TODO"
+                "description": "Insider uses a database administrator's account."
               },
               {
-                "const": "4.1.13",
+                "const": "A13",
                 "title": "Supervisor's Account",
-                "description": "TODO"
+                "description": "Insider uses their supervisor's account."
               },
               {
-                "const": "4.1.14",
+                "const": "A14",
                 "title": "System Administrator Account",
-                "description": "TODO"
+                "description": "Insider uses a system administrator's account."
               },
               {
-                "const": "4.4.",
+                "const": "R1",
                 "title": "Outsider Recruits Insider",
-                "description": "TODO"
+                "description": "An outside entity that is not a competing organization encourages the insider to become an insider. E.g., Insider is contacted by known hacking specialist who asks insider to divulge company secrets to the hacker."
               },
               {
-                "const": "4.4.",
+                "const": "R2",
                 "title": "Insider Recruited Outside Aid",
-                "description": "TODO"
+                "description": "The insider recruites people outside of the organization to further their scheme. E.g., Insider recruits their unemployed friend into the scheme."
               },
               {
-                "const": "4.4.",
+                "const": "R3",
                 "title": "Insider Recruited Coworker(s)",
-                "description": "TODO"
+                "description": "Insider recruits fellow employees (other than the insider) to further their scheme."
               },
               {
-                "const": "4.4.",
+                "const": "R4",
                 "title": "Insider Recruited by Coworker(s)",
-                "description": "TODO"
+                "description": "Insider recruits fellow employees (other than the insider) to further their scheme."
               },
               {
-                "const": "4.7.1",
-                "title": "Attempt to Sell Organization Information/Data/IP",
-                "description": "TODO"
+                "const": "F1",
+                "title": "Insider Sells Information",
+                "description": "Insider sells, or attempts to sell, organizational information/data/property. E.g., Insider tried to sell company secrets on an online auction site."
               },
               {
-                "const": "4.7.2",
+                "const": "F2",
                 "title": "Payoffs From Insider",
-                "description": "TODO"
+                "description": "Insider promises or gives other individuals or entities some amount of monetary compensation for aiding their scheme. E.g., Insider promises to give fellow employee $1,000 if they steal confidential information."
               },
               {
-                "const": "4.7.3",
+                "const": "F3",
                 "title": "Payoffs to Insider",
-                "description": "TODO"
+                "description": "Insider benefits financially or is promised compensation from an outside entity. E.g., A competing organization promises insider $500 for every line of code stolen."
               },
               {
-                "const": "4.7.4",
+                "const": "F4",
                 "title": "Insider Received/Transferred Fraudulent Funds",
-                "description": "TODO"
+                "description": "Insider receives or transfers funds that were fraudulently obtained. E.g., Insider took out cashier's checks on behalf of customers and used them for personal gain."
               },
               {
-                "const": "4.7.5",
+                "const": "F5",
                 "title": "Insider Made Fraudulent Purchases",
-                "description": "TODO"
+                "description": "Insider uses fraudulently obtained funds to make purchases. E.g., Insider used general ledger funds from their organization to purchase cashier's checks in the amount of $10,000."
               },
               {
-                "const": "4.7.6",
+                "const": "F6",
                 "title": "Insider Filed Fraudulent Tax Return",
-                "description": "TODO"
+                "description": "Insider files a fraudulent tax return. Often, this is using the identity of another person. E.g., Insider submitted multiple purported U.S. individual tax returns in the name of multiple people."
               },
               {
-                "const": "4.7.7",
+                "const": "F7",
                 "title": "Insider Created/Used Fraudulent Asset",
+                "description": "Insider creates an asset to use for future monetary gain. E.g., Insider defrauded the organization by providing false documentation claiming they wanted $250,000 to expand their business)."
+              },
+              {
+                "const": "D",
+                "title": "Paper",
                 "description": "TODO"
               },
               {
-                "const": "4.8.1",
+                "const": "D",
+                "title": "Removable Media",
+                "description": "TODO"
+              },
+              {
+                "const": "D",
+                "title": "Email",
+                "description": "TODO"
+              },
+              {
+                "const": "D",
+                "title": "Cloud Storage",
+                "description": "TODO"
+              },
+              {
+                "const": "D",
+                "title": "Web-Based",
+                "description": "TODO"
+              },
+              {
+                "const": "D",
+                "title": "Verbal",
+                "description": "Insider exfiltrates data by stating it verbally to someone else."
+              },
+              {
+                "const": "D",
+                "title": "Mobile Device",
+                "description": "Insider exfiltrates data via mobile device."
+              },
+              {
+                "const": "D",
+                "title": "Laptop",
+                "description": "Insider exfiltrates data by taking it out of the organization on a laptop."
+              },
+              {
+                "const": "D",
+                "title": "Other Technical/Digital",
+                "description": "Insider exfiltrates data using other technical or digital means not listed in this vocabulary."
+              },
+              {
+                "const": "D",
+                "title": "Other Non-Technical",
+                "description": "Insider exfiltrates data using other non-technical means not listed in this vocabulary."
+              },
+              {
+                "const": "C1",
                 "title": "Insider Falsified Information",
-                "description": "TODO"
+                "description": "Insider manipulates information or identity falsely, to aid in their attack. E.g., Insider falsely signed a claim stating that they returned all organizational property upon resignation."
               },
               {
-                "const": "4.8.2",
+                "const": "C2",
                 "title": "Insider Omitted Information",
-                "description": "TODO"
+                "description": "Insider manipulates information or identity, through omission to aid in their attack. E.g., Insider omits previous work for a competitor during a background check."
               },
               {
-                "const": "4.8.3",
+                "const": "C3",
                 "title": "Insider Modified/Deleted Logs/Activity",
-                "description": "TODO"
+                "description": "Insider deletes or modifies log files or other information that would connect them to the incident. E.g., Insider tried to conceal their communications with their accomplice by deleting files from their personal email account."
               },
               {
-                "const": "4.8.4",
+                "const": "C4",
                 "title": "Insider Physically Destroyed/Hid Evidence",
-                "description": "TODO"
+                "description": "Insider physically destroys or hides evidence that would connect them to the incident. E.g., Insider shredded papers containing employee PII that they had printed out to commit credit card fraud."
               },
               {
-                "const": "4.8.5",
+                "const": "C5",
                 "title": "Insider Fled or Attempted to Flee",
-                "description": "TODO"
+                "description": "Insider flees, or attempts to flee, their home state in order to avoid detection of their scheme. E.g., Insider fled the country."
               },
               {
-                "const": "4.8.6",
+                "const": "C6",
                 "title": "Insider Created/Used an Alias",
-                "description": "TODO"
+                "description": "Insider uses the identity of another person. E.g., Insider went under the alias \"John Doe\" when conducting business in their startup to cover their tracks."
               },
               {
-                "const": "4.8.7",
+                "const": "C7",
                 "title": "Insider Framed another Individual",
-                "description": "TODO"
+                "description": "Insider takes steps to plant evidence, or otherwise falsely prove, that someone else committed the insider's actions."
               },
               {
-                "const": "4.8.8",
+                "const": "C8",
                 "title": "Insider Made False Statements/Denied Involvement",
-                "description": "TODO"
+                "description": "Insider makes any sort of statement that is false, or denys their involvement in the incident. E.g., Insider lied to their supervisor, saying that they had not taken confidential information from them when they actually did."
               },
               {
-                "const": "4.8.9",
+                "const": "C9",
                 "title": "Concealment of Current Illicit Activity - Other Technical",
-                "description": "TODO"
+                "description": "Any other technical method used by the insider in an attempt to hide malicious activities."
               },
               {
-                "const": "4.8.10",
+                "const": "C10",
                 "title": "Concealment of Current Illicit Activity - Other Non-Technical",
-                "description": "TODO"
+                "description": "any other non-technical method used by the insider in an attempt to hide malicious activities."
               }
             ]
         },
@@ -284,22 +351,22 @@
               {
                 "const": "1",
                 "title": "On-site",
-                "description": "TODO"
+                "description": "Insider took the action while on-site at an organizational facility."
               },
               {
                 "const": "2",
                 "title": "Remotely",
-                "description": "TODO"
+                "description": "Insider took the action while remote (i.e. not at an organizational facility)."
               },
               {
                 "const": "3",
                 "title": "Remotely from home",
-                "description": "TODO"
+                "description": "Insider took the action remotely while at their home."
               },
               {
                 "const": "4",
                 "title": "Remotely while traveling",
-                "description": "TODO"
+                "description": "Insider took the action remotely while traveling."
               }
             ]
         },
@@ -308,12 +375,12 @@
               {
                 "const": "1",
                 "title": "During Work Hours",
-                "description": "TODO"
+                "description": "Insider took the action during their normal working hours."
               },
               {
                 "const": "2",
                 "title": "Outside of Work Hours",
-                "description": "TODO"
+                "description": "Insider took the action outside of their normal working hours."
               }
             ]
         },
@@ -322,54 +389,98 @@
               {
                 "const": "1",
                 "title": "Company Desktop",
-                "description": "TODO"
+                "description": "Organization owned desktop workstation."
               },
               {
                 "const": "2",
                 "title": "Company Laptop",
-                "description": "TODO"
+                "description": "Organization owned laptop workstation."
               },
               {
                 "const": "3",
                 "title": "Company Mobile Device",
-                "description": "TODO"
+                "description": "Organization owned mobile device."
               },
               {
                 "const": "4",
                 "title": "Database Server",
-                "description": "TODO"
+                "description": "Database server."
               },
               {
                 "const": "5",
                 "title": "Email Server",
-                "description": "TODO"
+                "description": "Email server."
               },
               {
                 "const": "6",
                 "title": "File Server",
-                "description": "TODO"
+                "description": "File server."
               },
               {
                 "const": "7",
                 "title": "Personal Computer",
-                "description": "TODO"
+                "description": "Personally owned computer."
               },
               {
                 "const": "8",
                 "title": "Personal Mobile Device",
-                "description": "TODO"
+                "description": "Personally owned moble device."
               },
               {
                 "const": "9",
                 "title": "Printer/Copier/Fax",
-                "description": "TODO"
+                "description": "Printer, copier, or fax machine."
               },
               {
                 "const": "10",
                 "title": "Web Server",
-                "description": "TODO"
+                "description": "Web server."
+              },
+              {
+                "const": "99",
+                "title": "Other",
+                "description": "Other device not in this vocabulary."
               }
             ]
+        },
+        "channel-vocab": {
+          "oneOf": [
+            {
+              "const": "1",
+              "title": "Company Email",
+              "description": "An email account the company controls."
+            },
+            {
+              "const": "2",
+              "title": "Company Phone",
+              "description": "A phone the company controls."
+            },
+            {
+              "const": "3",
+              "title": "Instant Messaging",
+              "description": "TODO"
+            },
+            {
+              "const": "4",
+              "title": "Online Forum",
+              "description": "TODO"
+            },
+            {
+              "const": "5",
+              "title": "Personal Email",
+              "description": "An email account the organization does not control or monitor."
+            },
+            {
+              "const": "6",
+              "title": "Personal Phone",
+              "description": "A phone the organization does not control or monitor."
+            },
+            {
+              "const": "9",
+              "title": "Other",
+              "description": "Other type of channel not listed in this vocabulary."
+            }
+          ]
         }
     }
 }

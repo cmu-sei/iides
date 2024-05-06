@@ -7,7 +7,7 @@
     "properties": {
         "relationship": {
             "type": "string",
-            "description": "The insider's relationship to the other insider or accomplice at the time of the incident. If multiple, choose the strongest tie (e.g. \"Friend\" over \"Colleague\".",
+            "description": "The insider's relationship to the other insider or to the accomplice at the time of the incident. If multiple, choose the strongest tie (e.g. \"Friend\" over \"Colleague\".",
             "items": {
                 "$ref": "#/$defs/insider-relationship-vocab"
             }
@@ -17,11 +17,12 @@
     "$defs": {
         "insider-relationship-vocab": {
             "oneOf": [
-                {"const": "1", "title": "Acquaintance", "description": "Persons known to each other but not otherwise close TODO"},
+                {"const": "1", "title": "Acquaintance", "description": "Persons known to each other but not otherwise close."},
                 {"const": "2", "title": "Colleague", "description": "Working together on the same team, department, or organization."},
-                {"const": "3", "title": "Friend", "description": "An ongoing close and/or friendly relationship."},
-                {"const": "4", "title": "Relative", "description": "TODO"},
-                {"const": "5", "title": "Significant Other/Legal partner", "description": "Spouse, boyfriend, girlfriend, common law partner, or similar."},
+                {"const": "3", "title": "Former Colleague", "description": "Formerly worked together on the same team, department, or organization."},
+                {"const": "4", "title": "Friend", "description": "An ongoing close and/or friendly relationship."},
+                {"const": "5", "title": "Relative", "description": "Members of the same family (immediate or extended)."},
+                {"const": "6", "title": "Significant Other/Legal partner", "description": "Spouse, boyfriend, girlfriend, common law partner, or similar."},
                 {"const": "8", "title": "Unknown", "description": "The type of relationship is unknown."},
                 {"const": "9", "title": "Other", "description": "The type of relationship is known, but not listed in this vocabulary."}
             ]

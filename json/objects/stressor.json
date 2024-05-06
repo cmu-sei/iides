@@ -2,7 +2,7 @@
     "$id": "[REPLACE with full github url to this json file]",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Stressor",
-    "description": "Events that occur after insider's start date at the victim organization and precipitate insider activity.",
+    "description": "Events that occur within the victim organization and precipitate insider activity.",
     "type": "object",
     "properties": {
       "id": {
@@ -160,7 +160,7 @@
               },
               {
                 "const": "S2.8",
-                "title": "Filed for Bankruptcy",
+                "title": "Organization Filed for Bankruptcy",
                 "description": "The organization filed for bankruptcy."
               },
               {
@@ -182,6 +182,11 @@
                 "const": "S2.12",
                 "title": "Hostile Work Environment",
                 "description": "A work environment that is difficult or uncomfortable for another person to work in due to discrimination of any kind."
+              },
+              {
+                "const": "S2.13",
+                "title": "Problematic Leader",
+                "description": "A supervisor or other leader who is abusive or difficult to work with, for example, by ignoring input from subordinates, excessively criticizing, or taking credit for subordinates' work."
               },
               {
                 "const": "S3.1",

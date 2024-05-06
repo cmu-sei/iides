@@ -105,7 +105,8 @@ class TTP #A456ED {
 	+ technique : technique-vocab 
 	+ location : attack-location-vocab 
 	+ hours : attack-hours-vocab 
-	+ device : device-vocab 
+	+ device : device-vocab[1...*] 
+	+ channel : channel-vocab[1...*] 
 	+ description : string 
 }
 class Job #33c2C4 {
@@ -116,9 +117,9 @@ class Job #33c2C4 {
 	+ position_technical : boolean 
 	+ access_authorization : access-auth-vocab 
 	+ employment_type : employment-type-vocab 
-	+ hire_date : date 
-	+ departure_date : date 
-	+ tenure : timedelta 
+	+ hire_date : string 
+	+ departure_date : string 
+	+ tenure : string 
 	+ comment : string 
 }
 class Charge #f9b8bd {
@@ -143,12 +144,12 @@ class Organization #007BC0 {
 	* id : string 
 	+ name : string 
 	+ city : string 
-	+ state : state-vocab 
-	+ country : country-vocab 
+	+ state : string 
+	+ country : string 
 	+ postal_code : integer 
 	+ small_business : boolean 
-	+ industry_sector_tier1 : industry-sector-tier1-vocab 
-	+ industry_sector_tier2 : industry-sector-tier2-vocab 
+	+ industry_sector : industry-sector-vocab 
+	+ industry_subsector : industry-subsector-vocab 
 	+ business : string 
 	+ parent_company : string 
 	* incident_role : org-role-vocab 

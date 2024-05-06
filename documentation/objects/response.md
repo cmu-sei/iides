@@ -58,7 +58,7 @@ Constants: `01`, `02`, `03`
 
 ### investigator-vocab
 
-Constants: `01`, `02`, `03`, `04`, `05`, `LE`, `II`, `99`
+Constants: `01`, `02`, `03`, `04`, `05`, `06`, `07`, `99`
 
 | Const | Value | Description |
 | --- | --- | --- |
@@ -67,6 +67,6 @@ Constants: `01`, `02`, `03`, `04`, `05`, `LE`, `II`, `99`
 | 03 | Law Enforcement - Local/State | State or local law enforcement entity.|
 | 04 | Law Enforcement - Federal | Federal law enforcement entity such as the FBI or USSS.|
 | 05 | Law Enforcement - Military/DoD | Law enforcement belonging to the military or Department of Defense, such as military police or NCIS. |
-| LE | Law Enforcement - Government Agency | Law enforcement belonging to a government agency such as DHS, USPS, IRS, etc.|
-| II | Internal Investigators | Other investigators internal to the victim organization.|
+| 06 | Law Enforcement - Government Agency | Law enforcement belonging to a government agency such as DHS, USPS, IRS, etc.|
+| 07 | Internal Investigators | Other investigators internal to the victim organization.|
 | 99 | Other | Other investigator not lised in this vocabulary.|

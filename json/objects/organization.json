@@ -20,13 +20,11 @@
       },
       "state": {
         "type": "string",
-        "description": "The state where the organization is located. Use the address of the headquarters if the whole organization was affected or use the address of the local branch if only that local branch was affected.",
-        "$ref": "../common/state-vocab.json"
+        "description": "The state where the organization is located. Use the address of the headquarters if the whole organization was affected or use the address of the local branch if only that local branch was affected."
       },
       "country": {
         "type": "string",
-        "description": "The country where the organization is located. Use the address of the headquarters if the whole organization was affected or use the address of the local branch if only that local branch was affected.",
-        "$ref": "../common/country-vocab.json"
+        "description": "The country where the organization is located. Use the address of the headquarters if the whole organization was affected or use the address of the local branch if only that local branch was affected. Public implementations should use the standard codes provided by ISO 3166-1 alpha-2."
       },
       "postal_code": {
         "type": "integer",
@@ -36,15 +34,15 @@
         "type": "boolean",
         "description": "TRUE if the organization is a privately owned business with 500 or fewer employees."
       },
-      "industry_sector_tier1": {
+      "industry_sector": {
         "type": "string",
         "description": "Top level category for the economic sector the organization belongs to.",
-        "$ref": "#/$defs/industry-sector-tier1-vocab"
+        "$ref": "#/$defs/industry-sector-vocab"
       },
-      "industry_sector_tier2": {
+      "industry_subsector": {
         "type": "string",
-        "description": "Second level category for the economic sector the organization belongs to. This value MUST map back to industry_sector_tier1. E.g., if tier 1 is \"9\", tier 2 must be \"9.x\"",
-        "$ref": "#/$defs/industry-sector-tier2-vocab"
+        "description": "Second level category for the economic sector the organization belongs to. This value MUST map back to industry_sector. E.g., if sector is \"9\", subsector must be \"9.x\"",
+        "$ref": "#/$defs/industry-subsector-vocab"
       },
       "business": {
         "type": "string",
@@ -65,10 +63,10 @@
       "incident_role"
     ],
     "dependentRequired": {
-        "industry_sector_tier2": ["industry_sector_tier1"]
+        "industry_subsector": ["industry_sector"]
       },
     "$defs": {
-        "industry-sector-tier1-vocab": {
+        "industry-sector-vocab": {
             "oneOf": [
               {
                 "const": "1",
@@ -123,12 +121,12 @@
               {
                 "const": "11",
                 "title": "Education",
-                "description": "Instruction & Training of individuals."
+                "description": "Instruction and training of individuals."
               },
               {
                 "const": "12",
                 "title": "Healthcare and Social Services",
-                "description": "Medical care and Social Advocacy/Assistance."
+                "description": "Medical care and social advocacy/assistance."
               },
               {
                 "const": "13",
@@ -147,32 +145,32 @@
               },
               {
                 "const": "16",
-                "title": "Unknown",
-                "description": "Not falling into the aforementioned industrial sectors."
+                "title": "Other",
+                "description": "Other sector not listed in this vocabulary."
               }
             ]
         },
-        "industry-sector-tier2-vocab": {
+        "industry-subsector-vocab": {
             "oneOf": [
                 {
                     "const": "1.1",
                     "title": "Agriculture and Forestry",
-                    "description": "Agriculture and Forestry: Establishments primarily engaged in growing crops, raising animals, and harvesting timber from a farm or natural habitat."
+                    "description": "Establishments primarily engaged in growing crops, raising animals, and harvesting timber from a farm or natural habitat."
                 },
                 {
                     "const": "1.2",
                     "title": "Fishing and Hunting",
-                    "description": "Fishing and Hunting: Establishments concerned with expediting, guiding, and transporting hunting/fishing adventures, as well as those involved lodging operations, shooting preserves and fishing charters."
+                    "description": "Establishments concerned with expediting, guiding, and transporting hunting/fishing adventures, as well as those involved lodging operations, shooting preserves and fishing charters."
                 },
                 {
                     "const": "1.3",
                     "title": "Mining and Quarrying",
-                    "description": "Mining and Quarrying: Establishments that engage in mining, mine site development, and beneficiating metallic and nonmetallic minerals."
+                    "description": "Establishments that engage in mining, mine site development, and beneficiating metallic and nonmetallic minerals."
                 },
                 {
                     "const": "1.4",
                     "title": "Oil and Gas Extraction",
-                    "description": "Oil and Gas Extraction: Establishments that operate and/or develop oil and gas field properties."
+                    "description": "Establishments that operate and/or develop oil and gas field properties."
                 },
                 {
                     "const": "2.1",
@@ -477,17 +475,17 @@
                 {
                     "const": "15.2",
                     "title": "State Government",
-                    "description": "Government of a particular state in the US."
+                    "description": "Government of a particular state or region of a country."
                 },
                 {
                     "const": "15.3",
                     "title": "Local Government",
-                    "description": "Government of a city, county, etc. in the US."
+                    "description": "Government of a city, county, etc."
                 },
                 {
                     "const": "15.4",
                     "title": "Defense Industrial Base",
-                    "description": "Businesses supplying the US military."
+                    "description": "Businesses supplying the a military."
                 },
                 {
                     "const": "15.5",
@@ -507,7 +505,7 @@
                 {
                     "const": "15.8",
                     "title": "Department of Defense",
-                    "description": "US government agency managing the military."
+                    "description": "Military or government agency that oversees the military."
                 }
             ]
         },
@@ -526,7 +524,7 @@
             {
                 "const": "S",
                 "title": "Secondary Victim",
-                "description": "The organization was a secondary victim to the incident."
+                "description": "The organization was a secondary victim to the incident. E.g., An organization that relied on the primary victim's services in order to conduct their business."
             },
             {
               "const": "T",

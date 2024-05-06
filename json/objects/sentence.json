@@ -2,7 +2,7 @@
     "$id": "[REPLACE with full github url to this json file]",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Sentence",
-    "description": "TODO",
+    "description": "Term of imprisonment or probation, or amount of fines, imposed on a convicted defendant for criminal wrongdoing, or the amount of damages imposed for civil cases. Generally, the amount of punishment for an offense. A sentence must be connected to only one court case. A court case may have one or more sentences.",
     "type": "object",
     "properties": {
       "id": {
@@ -12,21 +12,21 @@
       },
       "sentence_type": {
         "type": "string",
-        "description": "TODO",
+        "description": "The type of sentence that was ordered.",
         "$ref": "#/$defs/sentence-type-vocab"
       },
       "quantity": {
         "type": "integer",
-        "description": "The quantity of the sentence imposed. MUST be used with the metric property if used."
+        "description": "The quantity of the sentence type imposed. MUST be used with the `metric` property if used."
       },
       "metric": {
         "type": "string",
-        "description": "The measurement type of the sentence imposed. MUST be used with the quantity property if used.",
+        "description": "The measurement type of the sentence imposed. MUST be used with the `quantity` property if used.",
         "$ref": "#/$defs/sentence-metric-vocab"
       },
       "concurrency": {
         "type": "boolean",
-        "description": "whether the sentence is to run concurrently (at the same time as) the sentence for other charges"
+        "description": "Whether the sentence is to run concurrently (at the same time as) other sentences within the same case."
       }
     },
     "required": [
@@ -42,93 +42,83 @@
             "oneOf": [
               {
                 "const": "01",
-                "title": "Assessment",
-                "description": "TODO"
+                "title": "Assessment/Special Assessment",
+                "description": "A type of fine that always applies to each count of a convicted crime."
               },
               {
                 "const": "02",
                 "title": "Community Service",
-                "description": "TODO"
+                "description": "Unpaid work that benefits the community."
               },
               {
                 "const": "03",
                 "title": "Damages",
-                "description": "TODO"
+                "description": "An attempt to measure in financial terms the extent of harm a plaintiff has suffered because of the defendant's actions. Damges can be compensatory, punative, or statutory, and are usually attached to civil cases."
               },
               {
                 "const": "04",
                 "title": "Deportation",
-                "description": "TODO"
+                "description": "Defendant is ordered to leave the country where the case is being tried."
               },
               {
                 "const": "05",
                 "title": "Drug Testing",
-                "description": "TODO"
+                "description": "Regular screening ordered to test for drugs."
               },
               {
                 "const": "06",
                 "title": "Fine",
-                "description": "TODO"
+                "description": "A financial punishment for violating a criminal law. Usually attached to criminal cases rather than civil."
               },
               {
                 "const": "07",
                 "title": "Forfeiture",
-                "description": "TODO"
+                "description": "Loss of property, right, or privilege without compensation."
               },
               {
                 "const": "08",
                 "title": "House Arrest",
-                "description": "TODO"
+                "description": "Confinement to a particular location for the duration of the sentence."
               },
               {
                 "const": "09",
                 "title": "Incarceration",
-                "description": "TODO"
+                "description": "Imprisonment."
               },
               {
                 "const": "10",
-                "title": "Injunction",
-                "description": "TODO"
+                "title": "Injunction/Restraining Order",
+                "description": "Defendant is ordered to cease doing a particular action. E.g., using stolen IP in their business."
               },
               {
                 "const": "11",
                 "title": "Mental Health Treatment",
-                "description": "TODO"
+                "description": "Defendant is ordered to an inpatient or outpatient mental health facility, or is ordered to attend therapy for mental health issues."
               },
               {
                 "const": "12",
                 "title": "No Internet Access",
-                "description": "TODO"
+                "description": "Defendant is not allowed to access the Internet via any type of device."
               },
               {
                 "const": "13",
                 "title": "Probation",
-                "description": "TODO"
+                "description": "Defendant is released into the community in lieu of a prison sentence, but is subject to sepcial conditions and restrictions such as other types of sentences in this vocabulary."
               },
               {
                 "const": "14",
                 "title": "Restitution",
-                "description": "TODO"
+                "description": "An attempt to measure in financial terms the extent of the gains or profits the defendant obtained through harming the victim."
               },
               {
                 "const": "15",
-                "title": "Restraining Order",
-                "description": "TODO"
+                "title": "Substance Abuse Treatment",
+                "description": "Defendant is ordered to attend inpatient or outpatient treatment for substance abuse issues."
               },
               {
                 "const": "16",
-                "title": "Special Assessment",
-                "description": "TODO"
-              },
-              {
-                "const": "17",
-                "title": "Substance Abuse Treatment",
-                "description": "TODO"
-              },
-              {
-                "const": "18",
                 "title": "Supervised Release",
-                "description": "TODO"
+                "description": "Defendant is released into the community, subject to special conditions and restrictions, after the completion of a prison sentence."
               }   
             ]
         },
@@ -137,27 +127,27 @@
             {
               "const": "H",
               "title": "Hour(s)",
-              "description": "TODO"
+              "description": "Imposed sentence is in terms of hours. E.g. 20 hours community service."
             },
             {
               "const": "D",
               "title": "Day(s)",
-              "description": "TODO"
+              "description": "Imposed sentence is in terms of days. E.g. 30 days in a substance abuse treatment facility."
             },
             {
               "const": "M",
               "title": "Month(s)",
-              "description": "TODO"
+              "description": "Imposed sentence is in terms of months. E.g. 18 months imprisonment."
             },
             {
               "const": "Y",
               "title": "Year(s)",
-              "description": "TODO"
+              "description": "Imposed sentence is in terms of years. E.g. 5 years no Internet access."
             },
             {
               "const": "D",
               "title": "Dollar(s)",
-              "description": "TODO"
+              "description": "Imposed sentence is in terms of dollars. E.g. $10,000 in damages."
             }
           ]
       }
