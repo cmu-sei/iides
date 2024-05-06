@@ -9,15 +9,17 @@
   - Leverage Cyber DEM for this?
 - Job:
  - some of the employment types don't make sense now that Job is its own entity
+- TTP:
+  - not loving the techniques, they overlap a lot
 - Do we need the specific lists of substances and psychological issues?
+
 - org-relationship vs orgRole: the vocabulatries are identical
 - iron out the zero, one, or more relationships in the erd
 
 ## TODO
-- handle relationships in the json schema
-  - define owner relationship
+- define owner relationship
 - go back through codebook and list missing/skipped fields
-
+- add "default" to doc generator
 - Write up intro material for white paper
 - Note handling of inexact dates
 
@@ -37,13 +39,13 @@
 - [c] Incident
 - [c] Note
 - [c] Source
-- [d] Impact
-
+- [c] Impact
+- [c] Detection
+- [c] Stressor
 - [d] Response
-- [d] Detection
+
 - [d] Accomplice
 - [d] Sponsor
-- [d] Stressor
 - [d] Court Case
 - [d] Collusion
 - [d] Relationship struct

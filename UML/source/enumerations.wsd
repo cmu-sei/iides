@@ -27,28 +27,6 @@ package "IIDES Enumerations" #FFF {
 4.3.6: Exploited Known Security Vulnerabilities
 4.3.7: Social Engineering of Employees
 4.3.8: Used/Executed Unauthorized Software
-
-4.6 Data Exfiltration
-4.6.1: Data Exfiltration - Paper
-4.6.2: Data Exfiltration - Removable Media
-4.6.3: Data Exfiltration - Email
-4.6.4: Data Exfiltration - Cloud Storage
-4.6.5: Data Exfiltration - Web-Based
-4.6.6: Data Exfiltration - Verbal
-4.6.7: Data Exfiltration - Mobile Device
-4.6.8: Data Exfiltration - Laptop
-4.6.9: Data Exfiltration - Other Technical
-4.6.10: Data Exfiltration - Other Non-Technical
-4.6.11: Data Exfiltration - Unspecified/Unknown
-
-4.9 Communication Channels
-4.9.1: Company Email
-4.9.2: Company Phone
-4.9.3: Instant Messaging
-4.9.4: Online Forum
-4.9.5: Personal Email
-4.9.6: Personal Phone
-4.9.7: Other Type of Communication Channel
     }
 }
 @enduml

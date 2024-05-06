@@ -29,7 +29,7 @@ Constants: `S1`, `S2`, `S3`, `S4`
 
 ### stressor-subcategory-vocab
 
-Constants: `S1.1`, `S1.2`, `S1.3`, `S1.4`, `S1.5`, `S1.6`, `S1.7`, `S1.8`, `S1.9`, `S1.10`, `S1.11`, `S1.12`, `S2.1`, `S2.2`, `S2.3`, `S2.4`, `S2.5`, `S2.6`, `S2.7`, `S2.8`, `S2.9`, `S2.10`, `S2.11`, `S2.12`, `S3.1`, `S3.2`, `S3.3`, `S3.4`, `S4.1`, `S4.2`, `S4.3`, `S4.4`, `S4.5`, `S4.6`
+Constants: `S1.1`, `S1.2`, `S1.3`, `S1.4`, `S1.5`, `S1.6`, `S1.7`, `S1.8`, `S1.9`, `S1.10`, `S1.11`, `S1.12`, `S2.1`, `S2.2`, `S2.3`, `S2.4`, `S2.5`, `S2.6`, `S2.7`, `S2.8`, `S2.9`, `S2.10`, `S2.11`, `S2.12`, `S2.13`, `S3.1`, `S3.2`, `S3.3`, `S3.4`, `S4.1`, `S4.2`, `S4.3`, `S4.4`, `S4.5`, `S4.6`
 
 | Const | Value | Description |
 | --- | --- | --- |
@@ -57,6 +57,7 @@ Constants: `S1.1`, `S1.2`, `S1.3`, `S1.4`, `S1.5`, `S1.6`, `S1.7`, `S1.8`, `S1.9
 | S2.10 | Inadequate Training | An organizational failure to administer the proper training for its employees.|
 | S2.11 | Lax Controls | The organizational failure to restrict access to what is necessary for the insider to perform work related activities.|
 | S2.12 | Hostile Work Environment | A work environment that is difficult or uncomfortable for another person to work in due to discrimination of any kind.|
+| S2.13 | Problematic Leader | A supervisor or other leader who is abusive or difficult to work with, for example, by ignoring input from subordinates, excessively criticizing, or taking credit for subordinates' work.|
 | S3.1 | Compensation/Benefit Issues | Insider expressed dissatisfaction with current compensation or benefits.|
 | S3.2 | Poor Performance Review | Insider received a review of their work performance, which is deemed below average.|
 | S3.3 | Request Denied By Organization | The employing organization refused a request from the insider (e.g., The insider's request to work from home is denied due to unproductivity in past work from home).|

@@ -184,6 +184,11 @@
                 "description": "A work environment that is difficult or uncomfortable for another person to work in due to discrimination of any kind."
               },
               {
+                "const": "S2.13",
+                "title": "Problematic Leader",
+                "description": "A supervisor or other leader who is abusive or difficult to work with, for example, by ignoring input from subordinates, excessively criticizing, or taking credit for subordinates' work."
+              },
+              {
                 "const": "S3.1",
                 "title": "Compensation/Benefit Issues",
                 "description": "Insider expressed dissatisfaction with current compensation or benefits."
