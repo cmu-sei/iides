@@ -13,7 +13,6 @@
  - some of the employment types don't make sense now that Job is its own entity
 - TTP:
   - not loving the techniques, they overlap a lot
-- Do we need the specific lists of substances and psychological issues?
 
 - org-relationship vs orgRole: the vocabulatries are identical
 - iron out the zero, one, or more relationships in the erd
@@ -53,11 +52,11 @@
 - [c] Org Relationship
 - [c] Relationship struct
 - [c] Collusion
-- [d] Organization
-
+- [c] Organization
+- [d] Person
 - [d] Accomplice
 - [d] Sponsor
-- [ ] Person (Marco)
+
 - [ ] Insider
 - [ ] Job
 - [ ] Target
