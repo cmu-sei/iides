@@ -48,15 +48,16 @@
 - [c] Charge
 - [c] Court Case
 
+- [d] Insider relationship vocab
+- [d] Org Relationship
+- [d] Relationship struct
+- [d] Collusion
+
 - [d] Accomplice
 - [d] Sponsor
-- [d] Collusion
-- [d] Relationship struct
 - [ ] Organization (Marco)
-- [d] Org Relationship
 - [ ] Person (Marco)
 - [ ] Insider
-- [ ] Insider relationship vocab
 - [ ] Job
 - [ ] Target
 - [ ] TTP
