@@ -7,6 +7,8 @@
   - People vs money: we're defining money to include things are converted (ex. time sheets) make sense?
   - category/subcategory should be reorganized a bit
   - Leverage Cyber DEM for this?
+- Org:
+  - change industory sector/subsector const to NAICS codes
 - Job:
  - some of the employment types don't make sense now that Job is its own entity
 - TTP:
@@ -47,15 +49,14 @@
 - [c] Sentence
 - [c] Charge
 - [c] Court Case
-
-- [d] Insider relationship vocab
-- [d] Org Relationship
-- [d] Relationship struct
-- [d] Collusion
+- [c] Insider relationship vocab
+- [c] Org Relationship
+- [c] Relationship struct
+- [c] Collusion
+- [d] Organization
 
 - [d] Accomplice
 - [d] Sponsor
-- [ ] Organization (Marco)
 - [ ] Person (Marco)
 - [ ] Insider
 - [ ] Job
