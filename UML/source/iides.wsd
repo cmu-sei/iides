@@ -68,11 +68,11 @@ class Person #b0d0ed {
 	+ suffix : suffix-vocab 
 	+ alias : string[1...*] 
 	+ city : string 
-	+ state : state-vocab 
-	+ country : country-vocab 
+	+ state : string 
+	+ country : string 
 	+ postal_code : integer 
-	+ country_of_citizenship : country-vocab[1...*] 
-	+ nationality : country-vocab[1...*] 
+	+ country_of_citizenship : string[1...*] 
+	+ nationality : string[1...*] 
 	+ residency : residency-vocab 
 	+ gender : gender-vocab 
 	+ age : integer 
@@ -171,7 +171,6 @@ class Insider <<Person>> #043673;text:white {
 	* id : string 
 	* incident_role : incident-role-vocab 
 	+ motive : motive-vocab[1...*] 
-	+ substance_abuse : substance-abuse-vocab[1...*] 
 	+ substance_use_during_incident : boolean 
 	+ psychological_issues : psych-issues-vocab[1...*] 
 	+ predispositions : ({field} predisposition-type-vocab, predisposition-subtype-vocab)[1...*] 
