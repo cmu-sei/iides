@@ -76,8 +76,7 @@
       },
       "description": {
         "type": "string",
-        "format": "date",
-        "description": "Description of the action."
+        "description": "Description of the action/procedure."
       }
     },
     "required": [

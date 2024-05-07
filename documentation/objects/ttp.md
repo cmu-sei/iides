@@ -24,7 +24,7 @@ Action taken by the insider or colluding outsider(s) during the course of the in
   - One or more constants from [device-vocab](#device-vocab)
 - **`channel`** *(array)* : Methods used to transmit information outside, or into, the victim organization.
   - One or more constants from [channel-vocab](#channel-vocab)
-- **`description`** *(date)* : Description of the action.
+- **`description`** *(string)* : Description of the action/procedure.
 
 ## Vocabularies
 
