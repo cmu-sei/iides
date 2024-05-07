@@ -10,17 +10,15 @@
 - Org:
   - change industory sector/subsector const to NAICS codes
 - Job:
- - some of the employment types don't make sense now that Job is its own entity
+  - some of the employment types don't make sense now that Job is its own entity
 - TTP:
   - not loving the techniques, they overlap a lot
-
 - org-relationship vs orgRole: the vocabulatries are identical
 - iron out the zero, one, or more relationships in the erd
 
 ## TODO
 - define owner relationship
 - go back through codebook and list missing/skipped fields
-- add "default" to doc generator
 - Write up intro material for white paper
 - Note handling of inexact dates
 
@@ -53,14 +51,12 @@
 - [c] Relationship struct
 - [c] Collusion
 - [c] Organization
-- [d] Person
-- [d] Accomplice
-- [d] Sponsor
+- [c] Person
+- [c] Accomplice
+- [c] Sponsor
+- [d] TTP
 
 - [ ] Insider
 - [ ] Job
-- [ ] Target
-- [ ] TTP
+- [ ] Target (Marco)
 
-Json/UML:
-- [ ] Examples in UML and json
