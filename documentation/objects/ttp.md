@@ -1,6 +1,6 @@
 # TTP
 
-Action taken by the insider or colluding outsider(s) during the course of the incident. An incident may have multiple TTPs. A TTP must be connected to an incident.
+Action taken by the insider or colluding outsider(s) during the course of the incident, categorized into a tactic, technique, and procedure (TTP). An incident may have multiple TTPs. A TTP must be connected to an incident.
 
 ## Properties
 
