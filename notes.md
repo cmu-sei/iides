@@ -2,7 +2,6 @@
 
 ## Questions/Concerns
 
-### Others
 - Target:
   - People vs money: we're defining money to include things are converted (ex. time sheets) make sense?
   - category/subcategory should be reorganized a bit
