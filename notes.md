@@ -54,8 +54,7 @@
 - [c] Accomplice
 - [c] Sponsor
 - [c] TTP
-- [d] Insider
-
-- [ ] Job
+- [c] Insider
+- [d] Job
 - [ ] Target (Marco)
 
