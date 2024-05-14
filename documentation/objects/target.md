@@ -5,13 +5,13 @@ The system, data, person, or physical property that was targeted by the insider.
 ## Properties
 
 - **`id`** (required) *(string)* : A unique string that begins with "target--" and is appended with a UUIDv4.
-	- Uses pattern: ^target--[UUIDv4]
+  - Uses pattern: ^target--[UUIDv4]
 - **`asset_type`** (required) *(string)* : TODO
 	- A constant from [target-asset-vocab](#target-asset-vocab)
-	- Required if `category` exists.
+  - Required if `category` exists.
 - **`category`** (required) *(string)* : TODO
 	- A constant from [target-category-vocab](#target-category-vocab)
-	- Required if `subcategory` exists.
+  - Required if `subcategory` exists.
 - **`subcategory`** (required) *(string)* : TODO
 	- A constant from [target-subcategory-vocab](#target-subcategory-vocab)
 - **`format`** (required) *(string)* : The data type of the target.

@@ -16,7 +16,7 @@
       },
       "sponsor_type": {
         "type": "string",
-        "description": "The type of sponsor. If unknown, leave blank.",
+        "description": "The type of sponsor.",
         "$ref": "#/$defs/sponsor-type-vocab"
       }
     },

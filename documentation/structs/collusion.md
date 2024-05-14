@@ -5,11 +5,11 @@ Represents the relationship between insiders. For the purposes of the `recruitme
 ## Properties
 
 - **`id`** (required) *(string)* : A unique string that begins with "collusion--" and is appended with a UUIDv4.
-	- Uses pattern: ^collusion--[UUIDv4]
+  - Uses pattern: ^collusion--[UUIDv4]
 - **`insider1`** (required) *(string)* : The id of the first insider.
-	- Uses pattern: ^insider--[UUIDv4]
+  - Uses pattern: ^insider--[UUIDv4]
 - **`insider2`** (required) *(string)* : The id of the second insider
-	- Uses pattern: ^insider--[UUIDv4]
+  - Uses pattern: ^insider--[UUIDv4]
 - **`relationship`** (required) *(string)* : The type of relationship between insider1 and insider2.
 	- A constant from [insider-relationship-vocab](../common/insider-relationship-vocab.md)
 - **`recruitment`** *(string)* : The reason insider1 recruited insider2.

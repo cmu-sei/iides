@@ -63,16 +63,11 @@ Other General Standards
 ## Benefits
 TODO - Benefits
 
-IIDES is designed to provide a range of beneifts across a broad array of potential users in both research and operational environments.
+IIDES is designed to provide a range of beneifts across a broad array of potential users in both research and operational environments. Ideally, IIDES will **support efficient sharing** of incident data among practioners, organizations, and researchers by providing a shared naming convention for details that may be included in incident data. It will provide a **foundational vocabulary** for organizations collecting their own incident data and **ease development** of new data collection and case management systems...[ that can talk to each other]
 
-- Support efficient sharing of incident data among practioners, organizations, and researchers by providing standard naming and data types for fields and entities that may be included in incident data.
-- Guide data collection efforts... 
-- Provide a basic incident case management option for .... 
+We hope that IIDES will also help **guide data collection** efforts for both researchers and organizations to improve... research....
 
-- researchers recreating a database of cases
-- maintaining an internal database of an org's own cases
-- influenceing what to collect to support further research and improve their own metrics and lessons learned
-- Map recommended best practices for response, detection, and mitigation to incidents... 
+Allow for a more consistent mapping of recommendations and best practices for response, detection, and mitigation. 
 
 ## IIDES Architecture
 

@@ -5,9 +5,9 @@ An individual or entity that recruited, instigated, motivated, or otherwise supp
 ## Properties
 
 - **`id`** (required) *(string)* : A unique string that begins with "sponsor--" and is appended with a UUIDv4.
-	- Uses pattern: ^sponsor--[UUIDv4]
+  - Uses pattern: ^sponsor--[UUIDv4]
 - **`name`** *(string)* : The name of the individual or entity sponsoring the insider's actions.
-- **`sponsor_type`** *(string)* : The type of sponsor. If unknown, leave blank.
+- **`sponsor_type`** *(string)* : The type of sponsor.
 	- A constant from [sponsor-type-vocab](#sponsor-type-vocab)
 
 ## Vocabularies

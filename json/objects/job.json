@@ -12,25 +12,25 @@
         },
         "job_function": {
             "type": "string",
-            "description": "Functional category of the individual's job.",
+            "description": "Functional category of the individual's job. job_function and occupation vocabularies are based in large part on the 2018 Standard Occupational Classification system published by the Bureau of Labor Statistics.",
             "$ref": "#/$defs/job-function-vocab"
         },
         "occupation": {
             "type": "string",
-            "description": "The subcategory of the individual's job. When present, job_function should also be present.",
+            "description": "The subcategory of the individual's job. When present, `job_function` should also be present. The chosen for occupation MUST match the constant for job_function.",
             "$ref": "#/$defs/occupation-vocab"
         },
         "title": {
             "type": "string",
-            "description": "The individual's job title. If title is specified, occupation should be as well."
+            "description": "The individual's job title. If title is specified, `occupation` should be as well."
         },
         "position_technical": {
             "type": "boolean",
-            "description": "The individual had access to technical areas of the organization during the incident (e.g. IT admin, network engineer, help desk associate, etc.)"
+            "description": "The individual had access to technical areas of the organization as part of their job role. E.g. IT admin, network engineer, help desk associate, etc."
         },
         "access_authorization": {
             "type": "string",
-            "description": "The level of access control given by this job.",
+            "description": "The level of access control given by this job role.",
             "$ref": "#/$defs/access-auth-vocab"
         },
         "employment_type": {
@@ -69,892 +69,662 @@
         "job-function-vocab": {
             "oneOf": [
                 {
-                    "const": "1",
-                    "title": "Accounting Service",
-                    "description": "TODO"
-                },
-                {
-                    "const": "2",
+                    "const": "17",
                     "title": "Architecture and Engineering",
-                    "description": "TODO"
+                    "description": "Architecture and Engineering"
                 },
                 {
-                    "const": "3",
+                    "const": "27",
                     "title": "Arts, Design, Entertainment, Sports, and Media",
-                    "description": "TODO"
+                    "description": "Arts, Design, Entertainment, Sports, and Media"
                 },
                 {
-                    "const": "4",
+                    "const": "37",
                     "title": "Building and Grounds Cleaning and Maintenance",
-                    "description": "TODO"
-                },
-                {
-                    "const": "5",
-                    "title": "Business and Financial Operations",
-                    "description": "TODO"
-                },
-                {
-                    "const": "6",
-                    "title": "Community and Social Service",
-                    "description": "TODO"
-                },
-                {
-                    "const": "7",
-                    "title": "Computer",
-                    "description": "TODO"
-                },
-                {
-                    "const": "8",
-                    "title": "Educational Instruction",
-                    "description": "TODO"
-                },
-                {
-                    "const": "9",
-                    "title": "Food Preparation and Serving Related",
-                    "description": "TODO"
-                },
-                {
-                    "const": "10",
-                    "title": "Healthcare Practitioner",
-                    "description": "TODO"
-                },
-                {
-                    "const": "11",
-                    "title": "Healthcare Support",
-                    "description": "TODO"
-                },
-                {
-                    "const": "12",
-                    "title": "Installation, Maintenance, and Repair",
-                    "description": "TODO"
+                    "description": "Building and Grounds Cleaning and Maintenance"
                 },
                 {
                     "const": "13",
-                    "title": "Legal",
-                    "description": "TODO"
-                },
-                {
-                    "const": "14",
-                    "title": "Life, Physical, and Social Science",
-                    "description": "TODO"
-                },
-                {
-                    "const": "15",
-                    "title": "Management",
-                    "description": "TODO"
-                },
-                {
-                    "const": "16",
-                    "title": "Military Specific",
-                    "description": "TODO"
-                },
-                {
-                    "const": "18",
-                    "title": "Office and Administrative Support",
-                    "description": "TODO"
-                },
-                {
-                    "const": "19",
-                    "title": "Production",
-                    "description": "TODO"
-                },
-                {
-                    "const": "20",
-                    "title": "Protective Service",
-                    "description": "TODO"
+                    "title": "Business and Financial Operations",
+                    "description": "Business and Financial Operations"
                 },
                 {
                     "const": "21",
+                    "title": "Community and Social Service",
+                    "description": "Community and Social Service"
+                },
+                {
+                    "const": "15",
+                    "title": "Computer and Mathematical",
+                    "description": "Computer and Mathematical"
+                },
+                {
+                    "const": "25",
+                    "title": "Educational Instruction and Library",
+                    "description": "Educational Instruction and Library"
+                },
+                {
+                    "const": "35",
+                    "title": "Food Preparation and Serving Related",
+                    "description": "Food Preparation and Serving Related"
+                },
+                {
+                    "const": "29",
+                    "title": "Healthcare Practitioners and Technical",
+                    "description": "Healthcare Practitioners and Technical"
+                },
+                {
+                    "const": "31",
+                    "title": "Healthcare Support",
+                    "description": "Healthcare Support"
+                },
+                {
+                    "const": "49",
+                    "title": "Installation, Maintenance, and Repair",
+                    "description": "Installation, Maintenance, and Repair"
+                },
+                {
+                    "const": "23",
+                    "title": "Legal",
+                    "description": "Legal"
+                },
+                {
+                    "const": "19",
+                    "title": "Life, Physical, and Social Science",
+                    "description": "Life, Physical, and Social Science"
+                },
+                {
+                    "const": "11",
+                    "title": "Management",
+                    "description": "Management"
+                },
+                {
+                    "const": "55",
+                    "title": "Military Specific",
+                    "description": "Military Specific"
+                },
+                {
+                    "const": "43",
+                    "title": "Office and Administrative Support",
+                    "description": "Office and Administrative Support"
+                },
+                {
+                    "const": "51",
+                    "title": "Production",
+                    "description": "Production"
+                },
+                {
+                    "const": "33",
+                    "title": "Protective Service",
+                    "description": "Protective Service"
+                },
+                {
+                    "const": "41",
                     "title": "Sales and Related",
-                    "description": "TODO"
+                    "description": "Sales and Related"
                 },
                 {
                     "const": "22",
                     "title": "Student",
-                    "description": "TODO"
+                    "description": "Student"
                 },
                 {
-                    "const": "23",
+                    "const": "53",
                     "title": "Transportation and Material Moving",
-                    "description": "TODO"
+                    "description": "Transportation and Material Moving"
                 },
                 {
-                    "const": "25",
+                    "const": "99",
                     "title": "Other",
-                    "description": "TODO"
+                    "description": "Other job function not listed in this vocabulary."
                 }
             ]
         },
         "occupation-vocab": {
             "oneOf": [
                 {
-                    "const": "1.1",
-                    "title": "Accountants",
-                    "description": "TODO"
-                },
-                {
-                    "const": "1.2",
-                    "title": "Accounting Clerks",
-                    "description": "TODO"
-                },
-                {
-                    "const": "1.3",
-                    "title": "Accounts Payable Clerks",
-                    "description": "TODO"
-                },
-                {
-                    "const": "1.4",
-                    "title": "Bookkeepers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "2.1",
-                    "title": "Chemical Engineering",
-                    "description": "TODO"
-                },
-                {
-                    "const": "2.2",
-                    "title": "Electrical and Electronic Engineering",
-                    "description": "TODO"
-                },
-                {
-                    "const": "2.3",
-                    "title": "Electrical Engineers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "2.4",
-                    "title": "Engineers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "2.5",
-                    "title": "Hardware Engineers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "2.6",
-                    "title": "Mechanical Engineers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "3.1",
-                    "title": "Communications",
-                    "description": "TODO"
-                },
-                {
-                    "const": "3.2",
-                    "title": "Editors",
-                    "description": "TODO"
-                },
-                {
-                    "const": "3.3",
-                    "title": "Graphic Designers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "3.4",
-                    "title": "Lighting Technicians",
-                    "description": "TODO"
-                },
-                {
-                    "const": "3.5",
-                    "title": "News Analysts, Reporters, and Journalists",
-                    "description": "TODO"
-                },
-                {
-                    "const": "4.1",
-                    "title": "Building Cleaning Workers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "4.2",
-                    "title": "Grounds Maintenance Workers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "5.1",
-                    "title": "Auditors",
-                    "description": "TODO"
-                },
-                {
-                    "const": "5.2",
-                    "title": "Budget Analysts",
-                    "description": "TODO"
-                },
-                {
-                    "const": "5.3",
-                    "title": "Claims Adjuster, Examiners, and Investigators",
-                    "description": "TODO"
-                },
-                {
-                    "const": "5.4",
-                    "title": "Compliance Officers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "5.5",
-                    "title": "Consumer Lending",
-                    "description": "TODO"
-                },
-                {
-                    "const": "5.6",
-                    "title": "Credit Analysts",
-                    "description": "TODO"
-                },
-                {
-                    "const": "5.7",
-                    "title": "Financial Advisors",
-                    "description": "TODO"
-                },
-                {
-                    "const": "5.8",
-                    "title": "Financial and Investment Analysts",
-                    "description": "TODO"
-                },
-                {
-                    "const": "5.9",
-                    "title": "Financial  Specialists",
-                    "description": "TODO"
-                },
-                {
-                    "const": "5.10",
-                    "title": "Human Resources Specialists",
-                    "description": "TODO"
-                },
-                {
-                    "const": "5.11",
-                    "title": "Loan Officers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "5.12",
-                    "title": "Management Analysts",
-                    "description": "TODO"
-                },
-                {
-                    "const": "5.13",
-                    "title": "Marketing Specialists",
-                    "description": "TODO"
-                },
-                {
-                    "const": "5.14",
-                    "title": "Payroll and Timekeeping Clerks",
-                    "description": "TODO"
-                },
-                {
-                    "const": "5.15",
-                    "title": "Personal Financial Advisors",
-                    "description": "TODO"
-                },
-                {
-                    "const": "5.16",
-                    "title": "Project Management Specialists",
-                    "description": "TODO"
-                },
-                {
-                    "const": "5.17",
-                    "title": "Revenue Agents",
-                    "description": "TODO"
-                },
-                {
-                    "const": "5.18",
-                    "title": "Tax Preparers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "6.1",
-                    "title": "Child, Family, and Social Workers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "6.2",
-                    "title": "Clergy",
-                    "description": "TODO"
-                },
-                {
-                    "const": "6.3",
-                    "title": "Counselors",
-                    "description": "TODO"
-                },
-                {
-                    "const": "6.4",
-                    "title": "Educational Advisors",
-                    "description": "TODO"
-                },
-                {
-                    "const": "6.5",
-                    "title": "Probation Officers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "7.1",
-                    "title": "Computer Network Architects",
-                    "description": "TODO"
-                },
-                {
-                    "const": "7.2",
-                    "title": "Computer Network Support Specialists",
-                    "description": "TODO"
-                },
-                {
-                    "const": "7.3",
-                    "title": "Computer Programmers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "7.4",
-                    "title": "Computer Systems Analyst",
-                    "description": "TODO"
-                },
-                {
-                    "const": "7.5",
-                    "title": "Computer User Support Specialists",
-                    "description": "TODO"
-                },
-                {
-                    "const": "7.6",
-                    "title": "Data Scientists",
-                    "description": "TODO"
-                },
-                {
-                    "const": "7.7",
-                    "title": "Database Administrators",
-                    "description": "TODO"
-                },
-                {
-                    "const": "7.8",
-                    "title": "Database Specialists",
-                    "description": "TODO"
-                },
-                {
-                    "const": "7.9",
-                    "title": "Information Technology",
-                    "description": "TODO"
-                },
-                {
-                    "const": "7.10",
-                    "title": "Network and Computer Systems Administrators",
-                    "description": "TODO"
-                },
-                {
-                    "const": "7.11",
-                    "title": "Network Engineer",
-                    "description": "TODO"
-                },
-                {
-                    "const": "7.12",
-                    "title": "Software Developers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "7.13",
-                    "title": "Website and Digital Interface Designers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "8.1",
-                    "title": "Computer Science Professors",
-                    "description": "TODO"
-                },
-                {
-                    "const": "8.2",
-                    "title": "Educational Teachers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "9.1",
-                    "title": "Food Preparation",
-                    "description": "TODO"
-                },
-                {
-                    "const": "9.2",
-                    "title": "Food Servers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "9.3",
-                    "title": "Servers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "10.1",
-                    "title": "Diagnostic Medical Sonographers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "10.2",
-                    "title": "Gynecologists",
-                    "description": "TODO"
-                },
-                {
-                    "const": "10.3",
-                    "title": "Medical Records Specialists",
-                    "description": "TODO"
-                },
-                {
-                    "const": "10.4",
-                    "title": "Medical Technicians",
-                    "description": "TODO"
-                },
-                {
-                    "const": "10.5",
-                    "title": "Nursing",
-                    "description": "TODO"
-                },
-                {
-                    "const": "10.6",
-                    "title": "Occupational Therapists",
-                    "description": "TODO"
-                },
-                {
-                    "const": "10.7",
-                    "title": "Optometrists",
-                    "description": "TODO"
-                },
-                {
-                    "const": "10.8",
-                    "title": "Pharmacists",
-                    "description": "TODO"
-                },
-                {
-                    "const": "10.9",
-                    "title": "Physicians",
-                    "description": "TODO"
-                },
-                {
-                    "const": "10.10",
-                    "title": "Radiologists",
-                    "description": "TODO"
-                },
-                {
-                    "const": "10.11",
-                    "title": "Respiratory Therapists",
-                    "description": "TODO"
-                },
-                {
-                    "const": "10.12",
-                    "title": "Speech Language Pathologists",
-                    "description": "TODO"
-                },
-                {
                     "const": "11.1",
-                    "title": "Healthcare Support Workers",
-                    "description": "TODO"
+                    "title": "Top Executives",
+                    "description": "Chief Executives, General and Operations Managers, Legislators"
                 },
                 {
-                    "const": "12.1",
-                    "title": "First-Line Supervisors of Mechanics, Installers, and Repairers",
-                    "description": "TODO"
+                    "const": "11.2",
+                    "title": "Advertising, Public Relations, and Sales Managers",
+                    "description": "Advertising and Promotions Managers, Marketing Managers, Sales Managers, Public Relations Managers, Fundraising Managers"
                 },
                 {
-                    "const": "12.2",
-                    "title": "Installations, Maintenance, and Repair Helpers",
-                    "description": "TODO"
+                    "const": "11.3",
+                    "title": "Operations Specialties Managers",
+                    "description": "Administrative Services Managers, Facilities Managers, Computer and Information Systems Managers, Financial Managers, Industrial Production Managers, Purchasing Managers, Transportation and Distribution Managers, Compensation and Benefits Managers, Human Resources Managers, Training and Development Managers"
+                },
+                {
+                    "const": "11.9",
+                    "title": "Other Management Occupations",
+                    "description": "Construction Managers, Education Administrators, Food Service Managers, Entertainment and Recreation Managers, Postmasters, Property and Community Association Managers, Social and Community Service Managers, Emergency Management Directors, Funeral Home Managers, Personal Service Managers, Etc."
                 },
                 {
                     "const": "13.1",
-                    "title": "Administrative Law Judges",
-                    "description": "TODO"
+                    "title": "Business Operations Specialists",
+                    "description": "Agents and Business Managers, Buyers and Purchasing Agents, Claims Adjusters, Compliance Officers, Human Resources Specialists, Project Managers, Management Analysts, Event Planners, Fundraisers, Benefits and Job Analysts, Training and Development Specialists, Market Research Analysts, Etc."
                 },
                 {
                     "const": "13.2",
-                    "title": "Lawyers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "14.1",
-                    "title": "Biological Scientists",
-                    "description": "TODO"
-                },
-                {
-                    "const": "14.2",
-                    "title": "Chemists",
-                    "description": "TODO"
-                },
-                {
-                    "const": "14.3",
-                    "title": "Hydrologists",
-                    "description": "TODO"
-                },
-                {
-                    "const": "14.4",
-                    "title": "Political Scientists",
-                    "description": "TODO"
-                },
-                {
-                    "const": "14.5",
-                    "title": "Psychologists",
-                    "description": "TODO"
-                },
-                {
-                    "const": "14.6",
-                    "title": "Scientists",
-                    "description": "TODO"
-                },
-                {
-                    "const": "14.7",
-                    "title": "Social Scientists",
-                    "description": "TODO"
+                    "title": "Financial Specialists",
+                    "description": "Accountants, Auditors, Appraisers, Credit Analysts, Financial Analysts, Financial Advisors, Insurance Underwriters, Credit Counselors, Loan Officers, Tax Preparers, Etc."
                 },
                 {
                     "const": "15.1",
-                    "title": "Administrative Services Manager",
-                    "description": "TODO"
+                    "title": "Computer Occupations",
+                    "description": "Computer Systems Analysts, Information Security Analysts, Network Support Specialists, User Support Specialists, Network Architects, Systems Administrators, Software Developers, Web Developers, Interface Designers, Etc."
                 },
                 {
                     "const": "15.2",
-                    "title": "Architectural and Engineering Managers",
-                    "description": "TODO"
+                    "title": "Mathematical Science Occupations",
+                    "description": "Actuaries, Mathematicians, Operations Research Analysts, Statisticians, Data Scientists, Etc."
                 },
                 {
-                    "const": "15.3",
-                    "title": "Chief Executives",
-                    "description": "TODO"
+                    "const": "17.1",
+                    "title": "Architects, Surveyors, and Cartographers",
+                    "description": "Architects, Landscape Architects, Cartographers, Surveyors, Etc."
                 },
                 {
-                    "const": "15.4",
-                    "title": "Computer and Information Systems Managers",
-                    "description": "TODO"
+                    "const": "17.2",
+                    "title": "Engineers",
+                    "description": "Aerospace Engineers, Bioengineers Engineers, Chemical Engineers, Civil Engineers, Electrical Engineers, Electronics Engineers, Environmental Engineers, Industrial Engineers, Marine Engineers, Naval Architects, Mechanical Engineers, Geological Engineers, Etc."
                 },
                 {
-                    "const": "15.5",
-                    "title": "Construction Managers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "15.6",
-                    "title": "Financial Managers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "15.7",
-                    "title": "Food Service Managers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "15.8",
-                    "title": "General and Operations Managers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "15.9",
-                    "title": "Human Resources Managers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "15.10",
-                    "title": "Industrial Production Managers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "15.11",
-                    "title": "Legislators",
-                    "description": "TODO"
-                },
-                {
-                    "const": "15.12",
-                    "title": "Management",
-                    "description": "TODO"
-                },
-                {
-                    "const": "15.13",
-                    "title": "Marketing Managers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "15.14",
-                    "title": "Medical and Health Services Manager",
-                    "description": "TODO"
-                },
-                {
-                    "const": "15.15",
-                    "title": "Office Managers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "15.16",
-                    "title": "Property, Real Estate, and Community Association Managers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "15.17",
-                    "title": "Public Relations Managers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "15.18",
-                    "title": "Purchasing Managers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "15.19",
-                    "title": "Sales Managers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "15.20",
-                    "title": "Training and Development Managers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "15.21",
-                    "title": "Transportation Managers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "16.1",
-                    "title": "Intelligence",
-                    "description": "TODO"
-                },
-                {
-                    "const": "16.2",
-                    "title": "Special Forces",
-                    "description": "TODO"
-                },
-                {
-                    "const": "18.1",
-                    "title": "Administrative Workers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "18.2",
-                    "title": "Bank Tellers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "18.3",
-                    "title": "Court, Municipal, and License Clerks",
-                    "description": "TODO"
-                },
-                {
-                    "const": "18.4",
-                    "title": "Customer Service Representatives",
-                    "description": "TODO"
-                },
-                {
-                    "const": "18.5",
-                    "title": "Data Entry Workers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "18.6",
-                    "title": "Dispatchers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "18.7",
-                    "title": "Eligibility Interviewers, Government Programs",
-                    "description": "TODO"
-                },
-                {
-                    "const": "18.8",
-                    "title": "File Clerks",
-                    "description": "TODO"
-                },
-                {
-                    "const": "18.9",
-                    "title": "Financial Clerks",
-                    "description": "TODO"
-                },
-                {
-                    "const": "18.10",
-                    "title": "First-Line Supervisors of Office and Administrative Support Workers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "18.11",
-                    "title": "Insurance Claims and Policy Processing Clerks",
-                    "description": "TODO"
-                },
-                {
-                    "const": "18.12",
-                    "title": "Loan Interviewers and Clerks",
-                    "description": "TODO"
-                },
-                {
-                    "const": "18.13",
-                    "title": "Meter Readers, Utilities",
-                    "description": "TODO"
-                },
-                {
-                    "const": "18.14",
-                    "title": "Office Administrative Services",
-                    "description": "TODO"
-                },
-                {
-                    "const": "18.15",
-                    "title": "Office Clerks",
-                    "description": "TODO"
-                },
-                {
-                    "const": "18.16",
-                    "title": "Payroll and Timekeeping Clerks",
-                    "description": "TODO"
-                },
-                {
-                    "const": "18.17",
-                    "title": "Payroll Supervisors",
-                    "description": "TODO"
-                },
-                {
-                    "const": "18.18",
-                    "title": "Postal Service Clerks",
-                    "description": "TODO"
-                },
-                {
-                    "const": "18.19",
-                    "title": "Receptionists",
-                    "description": "TODO"
-                },
-                {
-                    "const": "18.20",
-                    "title": "Secretaries and Administrative Assistants",
-                    "description": "TODO"
-                },
-                {
-                    "const": "18.21",
-                    "title": "Shipping, Receiving and Inventory Clerks",
-                    "description": "TODO"
+                    "const": "17.3",
+                    "title": "Drafters, Engineering Technicians, and Mapping Technicians",
+                    "description": "Architectural Drafters, Mechanical Drafters, Other Drafters, Aerospace Technicians, Civil Engineering Technicians, Environmental Engineering Technicians, Industrial Engineering Technicians, Mechanical Engineering Technicians, Engineering Technicians, Surveying Technicians, Etc."
                 },
                 {
                     "const": "19.1",
-                    "title": "Computer Numerically Controlled Tool Programmers",
-                    "description": "TODO"
+                    "title": "Life Scientists",
+                    "description": "Food Scientists and Technologists, Microbiologists, Zoologists, Biological Scientists, Conservation Scientists, Epidemiologists, Medical Scientists, Etc."
                 },
                 {
                     "const": "19.2",
-                    "title": "Inspectors, Testers, Sorters, Samplers, and Weighers",
-                    "description": "TODO"
+                    "title": "Physical Scientists",
+                    "description": "Astronomers, Physicists, Atmospheric and Space Scientists, Chemists, Materials Scientists, Environmental Scientists and Specialists, Geoscientists, Hydrologists, Etc."
                 },
                 {
-                    "const": "20.1",
-                    "title": "Correctional Officers",
-                    "description": "TODO"
+                    "const": "19.3",
+                    "title": "Social Scientists and Related Workers",
+                    "description": "Economists, Survey Researchers, Psychologists, Sociologists, Urban Planners, Anthropologists, Archeologists, Geographers, Historians, Political Scientists, Etc."
                 },
                 {
-                    "const": "20.2",
-                    "title": "Detectives and Criminal Investigators",
-                    "description": "TODO"
+                    "const": "19.4",
+                    "title": "Life, Physical, and Social Science Technicians",
+                    "description": "Biological Technicians, Chemical Technicians, Environmental Science Technicians, Geological Technicians, Nuclear Technicians, Social Science Research Assistants, Forest and Conservation Technicians, Forensic Science Technicians, Etc."
                 },
                 {
-                    "const": "20.3",
-                    "title": "Firefighters",
-                    "description": "TODO"
-                },
-                {
-                    "const": "20.4",
-                    "title": "Police and Sheriffs Patrol Officers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "20.5",
-                    "title": "Police Officers",
-                    "description": "TODO"
-                },
-                {
-                    "const": "20.6",
-                    "title": "Security Guards",
-                    "description": "TODO"
-                },
-                {
-                    "const": "20.7",
-                    "title": "Special Agents",
-                    "description": "TODO"
+                    "const": "19.5",
+                    "title": "Occupational Health and Safety Specialists and Technicians",
+                    "description": "Occupational Health and Safety Specialists and Technicians"
                 },
                 {
                     "const": "21.1",
-                    "title": "Cashiers",
-                    "description": "TODO"
+                    "title": "Social Service Specialists",
+                    "description": "Guidance Counselors, Marriage and Family Therapists, Mental Health Counselors, Rehabilitation Counselors, Social Workers, Health Education Specialists, Probation Officers, Social Service Assistants, Community Health Workers, Etc."
                 },
                 {
                     "const": "21.2",
-                    "title": "Financial Service Sales Agents",
-                    "description": "TODO"
-                },
-                {
-                    "const": "21.3",
-                    "title": "Insurance Sales Agents",
-                    "description": "TODO"
-                },
-                {
-                    "const": "21.4",
-                    "title": "Real Estate Agents",
-                    "description": "TODO"
-                },
-                {
-                    "const": "21.1",
-                    "title": "Sales",
-                    "description": "TODO"
-                },
-                {
-                    "const": "22.1",
-                    "title": "Student",
-                    "description": "TODO"
+                    "title": "Religious Workers",
+                    "description": "Clergy, Religious Activities Directors, Religious Education Directors, Etc."
                 },
                 {
                     "const": "23.1",
-                    "title": "Transportation Inspectors",
-                    "description": "TODO"
+                    "title": "Lawyers, Judges, and Related Workers",
+                    "description": "Lawyers, Judicial Law Clerks, Hearing Officers, Arbitrators, Judges, Magistrates, Etc."
                 },
                 {
                     "const": "23.2",
-                    "title": "Courier",
-                    "description": "TODO"
+                    "title": "Legal Support Workers",
+                    "description": "Paralegals, Legal Assistants, Title Examiners, Abstractors, Etc."
                 },
                 {
-                    "const": "25.1",
+                    "const": "25.2",
+                    "title": "K12 and Special Education Teachers",
+                    "description": "Preschool, Elementary, Middle, Secondary, and Special Education Teachers"
+                },
+                {
+                    "const": "25.3",
+                    "title": "Other Teachers and Instructors",
+                    "description": "Adult Education, English as a Second Language Instructors, Self-Enrichment Teachers, Substitute Teachers, Tutors, Etc."
+                },
+                {
+                    "const": "25.4",
+                    "title": "Librarians, Curators, and Archivists",
+                    "description": "Archivists, Curators, Museum Technicians and Conservators,Librarians, Media Collections Specialists, Library Technicians"
+                },
+                {
+                    "const": "25.9",
+                    "title": "Other Educational Instruction and Library Occupations",
+                    "description": "Farm and Home Management Educators, Instructional Coordinators, Teaching Assistants, Library Workers, Etc."
+                },
+                {
+                    "const": "27.1",
+                    "title": "Art and Design Workers",
+                    "description": "Art Directors, Fine Artists, Animators, Fashion Designers, Graphic Designers, Interior Designers, Etc."
+                },
+                {
+                    "const": "27.2",
+                    "title": "Entertainers and Performers, Sports and Related Workers",
+                    "description": "Actors, Producers, Directors, Athletes, Coaches, Scouts, Referees, Dancers, Choreographers, Composers, Musicians, Etc."
+                },
+                {
+                    "const": "27.3",
+                    "title": "Media and Communication Workers",
+                    "description": "Broadcast Announcers, Radio Disc Jockeys, News Analysts, Reporters, Journalists, Public Relations Specialists, Editors, Technical Writers, Writers and Authors, Interpreters and Translators, Court Reporters and Simultaneous Captioners, Etc."
+                },
+                {
+                    "const": "27.4",
+                    "title": "Media and Communication Equipment Workers",
+                    "description": "Audio and Video Technicians, Broadcast Technicians, Sound Engineering Technicians, Lighting Technicians, Photographers, Camera Operators, Film Editors, Etc."
+                },
+                {
+                    "const": "29.1",
+                    "title": "Healthcare Practitioners",
+                    "description": "Chiropractors, Dentists, Dietitians, Pharmacists, Physician Assistants, Physical and Occupational Therapists, Veterinarians, Nurses, Psychiatrists, Radiologists, Physicians, Surgeons, Etc."
+                },
+                {
+                    "const": "29.2",
+                    "title": "Health Technologists and Technicians",
+                    "description": "Laboratory Technicians, Sonographers, Radiologic Technicians, Paramedics, Pharmacy Technicians, Psychiatric Technicians, Veterinary Technicians, Vocational Nurses, Medical Records Specialists, Orthotists and Prosthetists, Etc."
+                },
+                {
+                    "const": "29.9",
+                    "title": "Other Healthcare Practitioners and Technical Occupations",
+                    "description": "Health Information Technologists and Medical Registrars, Athletic Trainers, Genetic Counselors, Surgical Assistants, Etc."
+                },
+                {
+                    "const": "31.1",
+                    "title": "Home Health Aides, Nursing Assistants, and Psychiatric Aides",
+                    "description": "Home Health Aides, Personal Care Aides, Nursing Assistants, Orderlies, Psychiatric Aides, Etc."
+                },
+                {
+                    "const": "31.2",
+                    "title": "Occupational and Physical Therapist Assistants and Aides",
+                    "description": "Occupational Therapy Assistants and Aides, Physical Therapist Assistants Aides"
+                },
+                {
+                    "const": "31.9",
+                    "title": "Other Healthcare Support Occupations",
+                    "description": "Massage Therapists, Dental Assistants, Medical Assistants, Medical Transcriptionists, Pharmacy Aides, Veterinary Assistants and Laboratory Animal Caretakers, Phlebotomists, Etc."
+                },
+                {
+                    "const": "33.1",
+                    "title": "Supervisors of Protective Service Workers",
+                    "description": "First-Line Supervisors of Protective Service Workers"
+                },
+                {
+                    "const": "33.2",
+                    "title": "Firefighting and Prevention Workers",
+                    "description": "Firefighters, Fire Investigators, Forest Fire Prevention Specialists, Etc."
+                },
+                {
+                    "const": "33.3",
+                    "title": "Law Enforcement Workers",
+                    "description": "Bailiffs, Correctional Officers, Detectives and Criminal Investigators, Fish and Game Wardens, Parking Enforcement Workers, Police and Sheriff's Patrol Officers, Etc."
+                },
+                {
+                    "const": "33.9",
+                    "title": "Other Protective Service Workers",
+                    "description": "Animal Control Workers, Private Detectives and Investigators, Security Guards, Lifeguards and Other Recreational Protective Service Workers, Transportation Security Screeners, Etc."
+                },
+                {
+                    "const": "35.1",
+                    "title": "Supervisors of Food Preparation and Serving Workers",
+                    "description": "Chefs and Head Cooks, First-Line Supervisors of Food Preparation and Serving Workers"
+                },
+                {
+                    "const": "35.2",
+                    "title": "Cooks and Food Preparation Workers",
+                    "description": "Cooks and Food Preparation Workers, Etc."
+                },
+                {
+                    "const": "35.3",
+                    "title": "Food and Beverage Serving Workers",
+                    "description": "Bartenders, Fast Food and Counter Workers, Waiters and Waitresses, Food Servers (Nonrestaurant), Etc."
+                },
+                {
+                    "const": "35.9",
+                    "title": "Other Food Preparation and Serving Related Workers",
+                    "description": "Dining Room and Cafeteria Attendants and Bartender Helpers, Dishwashers, Hosts and Hostesses, Etc."
+                },
+                {
+                    "const": "37.1",
+                    "title": "Supervisors of Building and Grounds Cleaning and Maintenance Workers",
+                    "description": "First-Line Supervisors of Housekeeping, Janitorial Workers, and Groundskeeping Workers"
+                },
+                {
+                    "const": "37.2",
+                    "title": "Building Cleaning and Pest Control Workers",
+                    "description": "Janitors and Cleaners, Maids and Housekeeping Cleaners, Building Cleaning Workers, Pest Control Workers, Etc."
+                },
+                {
+                    "const": "37.3",
+                    "title": "Grounds Maintenance Workers",
+                    "description": "Landscaping and Groundskeeping Workers, Tree Trimmers, Etc."
+                },
+                {
+                    "const": "39.1",
+                    "title": "Supervisors of Personal Care and Service Workers",
+                    "description": "First-Line Supervisors of Personal Care and Service Workers"
+                },
+                {
+                    "const": "39.2",
+                    "title": "Animal Care and Service Workers",
+                    "description": "Animal Trainers, Animal Caretakers, Etc."
+                },
+                {
+                    "const": "39.3",
+                    "title": "Entertainment Attendants and Related Workers",
+                    "description": "Gambling Dealers, Sports Book Writers and Runners, Ushers and Ticket Takers, Amusement and Recreation Attendants, Dressing Room Attendants, Etc."
+                },
+                {
+                    "const": "39.4",
+                    "title": "Funeral Service Workers",
+                    "description": "Embalmers, Crematory Operators, Funeral Attendants, Morticians, Undertakers, and Funeral Arrangers, Etc."
+                },
+                {
+                    "const": "39.5",
+                    "title": "Personal Appearance Workers",
+                    "description": "Barbers, Hairdressers, Hairstylists, Cosmetologists, Makeup Artists, Manicurists, Skincare Specialists, Etc."
+                },
+                {
+                    "const": "39.6",
+                    "title": "Baggage Porters, Bellhops, and Concierges",
+                    "description": "Baggage Porters and Bellhops, Concierges, Etc."
+                },
+                {
+                    "const": "39.7",
+                    "title": "Tour and Travel Guides",
+                    "description": "Tour Guides and Escorts, Travel Guides, Etc."
+                },
+                {
+                    "const": "39.9",
+                    "title": "Other Personal Care and Service Workers",
+                    "description": "Childcare Workers, Exercise Trainers and Group Fitness Instructors, Recreation Workers, Residential Advisors, Etc."
+                },
+                {
+                    "const": "41.1",
+                    "title": "Supervisors of Sales Workers",
+                    "description": "First-Line Supervisors of Sales Workers"
+                },
+                {
+                    "const": "41.2",
+                    "title": "Retail Sales Workers",
+                    "description": "Cashiers, Counter and Rental Clerks, Parts Salespersons, Retail Salespersons, Etc."
+                },
+                {
+                    "const": "41.3",
+                    "title": "Sales Representatives, Services",
+                    "description": "Advertising Sales Agents, Insurance Sales Agents, Securities and Commodities Sales Agents, Financial Services Sales Agents, Travel Agents, Etc."
+                },
+                {
+                    "const": "41.4",
+                    "title": "Sales Representatives, Wholesale and Manufacturing",
+                    "description": "Sales Representatives for Wholesale and Manufacturing"
+                },
+                {
+                    "const": "41.9",
+                    "title": "Other Sales and Related Workers",
+                    "description": "Demonstrators and Product Promoters, Real Estate Brokers, Real Estate Sales Agents, Sales Engineers, Telemarketers, Door-to-Door Sales Workers, News and Street Vendors, Etc."
+                },
+                {
+                    "const": "43.1",
+                    "title": "Supervisors of Office and Administrative Support Workers",
+                    "description": "First-Line Supervisors of Office and Administrative Support Workers"
+                },
+                {
+                    "const": "43.2",
+                    "title": "Communications Equipment Operators",
+                    "description": "Telephone Operators, Communications Equipment Operators, Etc."
+                },
+                {
+                    "const": "43.3",
+                    "title": "Financial Clerks",
+                    "description": "Bill Collectors, Bookkeeping and Accounting Clerks, and Auditing Clerks, Payroll and Timekeeping Clerks, Procurement Clerks, Tellers, Financial Clerks, Etc."
+                },
+                {
+                    "const": "43.4",
+                    "title": "Information and Record Clerks",
+                    "description": "Court Clerks, Customer Service Representatives, Eligibility Interviewers, File Clerks, Hotel Desk Clerks, Library Assistants, Accounts Clerks, Order Clerks, Human Resources Assistants, Receptionists, Information Clerks, Ticket Agents and Travel Clerks, Etc."
+                },
+                {
+                    "const": "43.5",
+                    "title": "Material Recording, Scheduling, Dispatching, and Distributing Workers",
+                    "description": "Cargo and Freight Agents, Couriers, Messengers, Dispatchers, Meter Readers, Postal Service Clerks and Carriers, Mail Sorters, Shipping and Receiving Clerks, Inventory Clerks, Etc."
+                },
+                {
+                    "const": "43.6",
+                    "title": "Administrative Assistants",
+                    "description": "Executive Administrative Assistants, Legal Secretaries, Administrative Assistants, Etc."
+                },
+                {
+                    "const": "43.9",
+                    "title": "Other Office and Administrative Support Workers",
+                    "description": "Data Entry Clerks, Insurance Claims Clerks, Mail Clerks, Office Clerks, Proofreaders, Statistical Assistants, Etc."
+                },
+                {
+                    "const": "45.1",
+                    "title": "Supervisors of Farming, Fishing, and Forestry Workers",
+                    "description": "First-Line Supervisors of Farming, Fishing, and Forestry Workers"
+                },
+                {
+                    "const": "45.2",
+                    "title": "Agricultural Workers",
+                    "description": "Agricultural Inspectors, Animal Breeders, Graders and Sorters, Equipment Operators, Farmworkers and Laborers, Etc."
+                },
+                {
+                    "const": "45.3",
+                    "title": "Fishing and Hunting Workers",
+                    "description": "Fishing and Hunting Workers"
+                },
+                {
+                    "const": "45.4",
+                    "title": "Forest, Conservation, and Logging Workers",
+                    "description": "Forest and Conservation Workers, Logging Workers, Etc."
+                },
+                {
+                    "const": "47.1",
+                    "title": "Supervisors of Construction and Extraction Workers",
+                    "description": "First-Line Supervisors of Construction Trades and Extraction Workers "
+                },
+                {
+                    "const": "47.2",
+                    "title": "Construction Trades Workers",
+                    "description": "Masons, Carpenters, Floor Layers, Construction Laborers, Equipment Operators, Drywall Installers, Electricians, Painters, Paperhangers, Plumbers, Pipefitters, Roofers, Etc."
+                },
+                {
+                    "const": "47.3",
+                    "title": "Helpers, Construction Trades",
+                    "description": "Helpers of Masons, Carpenters, Electricians, Painters, Paperhangers, Pipelayers, Plumbers, Pipefitters, and Steamfitters, Roofers, Etc."
+                },
+                {
+                    "const": "47.4",
+                    "title": "Other Construction and Related Workers",
+                    "description": "Construction and Building Inspectors, Elevator and Escalator Installers and Repairers, Fence Erectors, Hazardous Materials Removal Workers, Highway Maintenance Workers, Rail-Track Laying and Maintenance Equipment Operators, Septic Tank Servicers and Sewer Pipe Cleaners, Etc."
+                },
+                {
+                    "const": "47.5",
+                    "title": "Extraction Workers",
+                    "description": "Oil and Gas Operators, Explosives Workers, Ordnance Handling Experts, Blasters, Mining Machine Operators, Quarry Rock Splitters, Extraction Workers, Etc."
+                },
+                {
+                    "const": "49.1",
+                    "title": "Supervisors of Installation, Maintenance, and Repair Workers",
+                    "description": "First-Line Supervisors of Mechanics, Installers, and Repairers"
+                },
+                {
+                    "const": "49.2",
+                    "title": "Electrical and Electronic Equipment Mechanics, Installers, and Repairers",
+                    "description": "Computer and Office Machine Repairers, Radio and Cellular Equipment Installers, Avionics Technicians, Electric Motor and Power Tool Repairers, Electrical and Electronics Repairers and Installers, Audiovisual Equipment Technicicans, Security and Fire Alarm Systems Installers, Etc."
+                },
+                {
+                    "const": "49.3",
+                    "title": "Vehicle and Mobile Equipment Mechanics, Installers, and Repairers",
+                    "description": "Aircraft Mechanics and Service Technicians, Automotive Body Repairers, Automotive Service Technicians and Mechanics, Mobile Heavy Equipment Mechanics, Motorboat Mechanics, Outdoor Power Equipment and Other Small Engine Mechanics, Tire Repairers and Changers, Etc."
+                },
+                {
+                    "const": "49.9",
+                    "title": "Other Installation, Maintenance, and Repair Occupations",
+                    "description": "HVAC and Refrigeration Mechanics, Home Appliance Repairers, Machinery Maintenance Workers, Power-Line Installers and Repairers, Precision Instrument and Equipment Repairers, General Maintenance and Repair Workers, Service Technicians, Signal and Track Switch Repairers, Etc."
+                },
+                {
+                    "const": "51.1",
+                    "title": "Supervisors of Production Workers",
+                    "description": "First-Line Supervisors of Production and Operating Workers"
+                },
+                {
+                    "const": "51.2",
+                    "title": "Assemblers and Fabricators",
+                    "description": "Electrical and Electronic Equipment Assemblers, Engine and Other Machine Assemblers, Structural Metal Fabricators and Fitters, Fiberglass Laminators and Fabricators, Etc."
+                },
+                {
+                    "const": "51.3",
+                    "title": "Food Processing Workers",
+                    "description": "Bakers, Butchers and Meat Cutters, Meat Packers, Machine Operators, Etc."
+                },
+                {
+                    "const": "51.4",
+                    "title": "Metal Workers and Plastic Workers",
+                    "description": "Machinists, Furnace Operators, Casters, Model Makers, Patternmakers, Tool and Die Makers, Welders, Cutters, Solderers, Brazers, Layout Workers, Machine Setters and Operators, Tool Sharpeners, Etc."
+                },
+                {
+                    "const": "51.5",
+                    "title": "Printing Workers",
+                    "description": "Prepress Technicians and Workers, Printing Press Operators, Print Binding and Finishing Workers"
+                },
+                {
+                    "const": "51.6",
+                    "title": "Textile, Apparel, and Furnishings Workers",
+                    "description": "Laundry and Dry-Cleaning Workers, Shoe and Leather Workers, Sewers, Tailors, Dressmakers, Textile Operators and Machine Setters, Patternmakers, Upholsterers, Etc."
+                },
+                {
+                    "const": "51.7",
+                    "title": "Woodworkers",
+                    "description": "Cabinetmakers and Bench Carpenters, Furniture Finishers, Model Makers, Patternmakers, Machine Setters and Operators, Etc."
+                },
+                {
+                    "const": "51.8",
+                    "title": "Plant and System Operators",
+                    "description": "Nuclear Power Reactor Operators, Power Distributors and Dispatchers, Plant Operators, Stationary Engineers and Boiler Operators, Petroleum Pump System Operators, Refinery Operators, Gaugers, Etc."
+                },
+                {
+                    "const": "51.9",
+                    "title": "Other Production Occupations",
+                    "description": "Chemical Equipment Operators, Appliance Technicians, Inspectors, Testers, Sorters, Jewelers, Metal Workers, Laboratory Technicians, Machine Operators, Painting Workers, Production Workers, Etc."
+                },
+                {
+                    "const": "53.1",
+                    "title": "Supervisors of Transportation and Material Moving Workers",
+                    "description": "Aircraft Cargo Handling Supervisors, First-Line Supervisors of Helpers, Laborers, Material Movers, Vehicle Operators, Passenger Attendants, Transportation Workers, Etc."
+                },
+                {
+                    "const": "53.2",
+                    "title": "Air Transportation Workers",
+                    "description": "Pilots, Copilots, Flight Engineers, Air Traffic Controllers, Airfield Operations Specialists, Flight Attendants, Etc."
+                },
+                {
+                    "const": "53.3",
+                    "title": "Motor Vehicle Operators",
+                    "description": "Drivers and other motor vehicle operators."
+                },
+                {
+                    "const": "53.4",
+                    "title": "Rail Transportation Workers",
+                    "description": "Engineers, Operators, Hostlers, Locomotive Firers, Conductors, Yardmasters, Etc."
+                },
+                {
+                    "const": "53.5",
+                    "title": "Water Transportation Workers",
+                    "description": "Sailors and Marine Oilers, Captains, Mates, and Pilots of Water Vessels, Motorboat Operators, Ship Engineers, Etc."
+                },
+                {
+                    "const": "53.6",
+                    "title": "Other Transportation Workers",
+                    "description": "Bridge and Lock Tenders, Parking Attendants, Service Attendants, Traffic Technicians, Transportation Inspectors, Passenger Attendants, Etc."
+                },
+                {
+                    "const": "53.7",
+                    "title": "Material Moving Workers",
+                    "description": "Packers, Stockers, Refuse Collectors, Loaders, Crane Operators, Truck and Tractor Operators, Laborers, Etc."
+                },
+                {
+                    "const": "55.1",
+                    "title": "Military Officer Special and Tactical Operations Leaders",
+                    "description": "Crew Officers, Infantry Officers, Special Forces Officers, All Other Military Officer Special and Tactical Operations Leaders"
+                },
+                {
+                    "const": "55.2",
+                    "title": "First-Line Enlisted Military Supervisors",
+                    "description": "Supervisors of Crew Members, Supervisors of Tactical Operations Specialists, In-Flight Refueling Manager, Superintendent, Intelligence Chief, etc."
+                },
+                {
+                    "const": "55.3",
+                    "title": "Military Enlisted Tactical Operations, Specialists, and Crew Members",
+                    "description": "Crew Members, Specialists, Infantry, Special Forces, etc."
+                },
+                {
+                    "const": "99.1",
+                    "title": "Student",
+                    "description": "Student"
+                },
+                {
+                    "const": "99.9",
                     "title": "Other",
-                    "description": "TODO"
+                    "description": "Other occupation not listed."
                 }
             ]
         },
         "access-auth-vocab": {
             "oneOf": [
                 {
-                    "const": "REV",
+                    "const": "1",
                     "title": "Access Revoked",
-                    "description": "TODO"
+                    "description": "Access was revoked after departing or as a disciplinary action."
                 },
                 {
-                    "const": "ADM",
+                    "const": "2",
                     "title": "Administrator/Root",
-                    "description": "TODO"
+                    "description": "Authorized full administrative access."
                 },
                 {
-                    "const": "AAD",
+                    "const": "3",
                     "title": "Authorized Account & Data",
-                    "description": "TODO"
+                    "description": "Authorized account and access to targeted data."
                 },
                 {
-                    "const": "AAC",
+                    "const": "4",
                     "title": "Authorized Account Only",
-                    "description": "TODO"
+                    "description": "Authorized account but not authorized access to targeted data."
                 },
                 {
-                    "const": "APU",
+                    "const": "5",
                     "title": "Authorized Privileged User",
-                    "description": "TODO"
+                    "description": "Authorized privileged access."
                 },
                 {
-                    "const": "AUU",
+                    "const": "6",
                     "title": "Authorized Unprivileged User",
-                    "description": "TODO"
+                    "description": "Authorized unprivileged access."
                 },
                 {
-                    "const": "FMR",
+                    "const": "7",
                     "title": "Former Employee, Access not Deactivated",
-                    "description": "TODO"
+                    "description": "Access was not properly revoked after departure from the organization."
                 },
                 {
-                    "const": "NGA",
+                    "const": "8",
                     "title": "Never Given Access",
-                    "description": "TODO"
+                    "description": "Never given system access."
                 },
                 {
-                    "const": "UNA",
+                    "const": "9",
                     "title": "Unauthorized",
-                    "description": "TODO"
+                    "description": "Unauthorized access."
                 }
             ]
         },
@@ -963,32 +733,32 @@
                 {
                     "const": "CCT",
                     "title": "Current Contractor",
-                    "description": "TODO"
+                    "description": "Individual not directly employed by the organization whose job responsibilities they filling (self-employed or employed by a different, contracting organization)."
                 },
                 {
                     "const": "CFT",
                     "title": "Current Full-time",
-                    "description": "TODO"
+                    "description": "Individual who is directly employed by the organization and works at least 35 hours per week (or is classified by the organization as a full-time employee)."
                 },
                 {
                     "const": "CPT",
                     "title": "Current Part-time",
-                    "description": "TODO"
+                    "description": "Individual who is directly employed by the organization and works less than 35 hours per week (or is classified by the organization as a part-time employee)."
                 },
                 {
                     "const": "INT",
                     "title": "Intern/Trainee/Aprentice",
-                    "description": "TODO"
+                    "description": "An advanced student or graduate gaining supervised practical experience in a particular field or job role, sometimes without pay."
                 },
                 {
                     "const": "FCT",
                     "title": "Former Contractor",
-                    "description": "TODO"
+                    "description": "Individual not directly employed by the organization whose job responsibilities they previously filled (self-employed or employed by a different, contracting organization)."
                 },
                 {
                     "const": "FFT",
                     "title": "Former Full Time",
-                    "description": "Individual who used to work for the organization on a full time basis, but is no longer employed by the organization."
+                    "description": "Individual who used to work for the organization on a full time basis (35 hours or more per week), but is no longer employed by the organization."
                 },
                 {
                     "const": "FPT",

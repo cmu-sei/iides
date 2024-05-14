@@ -5,11 +5,11 @@ Events that occur within the victim organization and precipitate insider activit
 ## Properties
 
 - **`id`** (required) *(string)* : A unique string that begins with "stressor--" and is appended with a UUIDv4.
-	- Uses pattern: ^stressor--[UUIDv4]
+  - Uses pattern: ^stressor--[UUIDv4]
 - **`date`** *(date)* : The date the stressor first occurred.
 - **`category`** *(string)* : The category to which the stressor belongs.
 	- A constant from [stressor-category-vocab](#stressor-category-vocab)
-	- Required if `subcategory` exists.
+  - Required if `subcategory` exists.
 - **`subcategory`** *(string)* : The subcategory to which the stressor belongs. When subcategory is specified, category MUST also be specified. The subcategory constant MUST map to the specified category constant.
 	- A constant from [stressor-subcategory-vocab](#stressor-subcategory-vocab)
 - **`comment`** *(string)* : Clarifying comments about the stressor.

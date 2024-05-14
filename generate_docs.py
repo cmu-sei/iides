@@ -58,7 +58,7 @@ def get_properties(properties, required):
             lines.append(vocab_ref)
 
         if properties[p]['type'] == 'array':
-            vocab_ref = "\t- One or more "
+            vocab_ref = "  - One or more "
             if 'prefixItems' in properties[p].keys():
                 # An array of tuples
                 vocab_ref += "tuple values of the format ("
@@ -81,10 +81,13 @@ def get_properties(properties, required):
             lines.append(vocab_ref)
 
         if 'pattern' in properties[p].keys():
-            lines.append(f"\t- Uses pattern: {properties[p]['pattern']}")
-        
+            lines.append(f"  - Uses pattern: {properties[p]['pattern']}")
+
+        if 'default' in properties[p].keys():
+            lines.append(f"  - Default: \"{properties[p]['default']}\"")
+
         if is_dependent(p):
-            lines.append(f"\t- Required if `{is_dependent(p)}` exists.")
+            lines.append(f"  - Required if `{is_dependent(p)}` exists.")
 
     return lines
 

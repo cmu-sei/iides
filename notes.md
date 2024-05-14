@@ -2,7 +2,6 @@
 
 ## Questions/Concerns
 
-### Others
 - Target:
   - People vs money: we're defining money to include things are converted (ex. time sheets) make sense?
   - category/subcategory should be reorganized a bit
@@ -10,18 +9,15 @@
 - Org:
   - change industory sector/subsector const to NAICS codes
 - Job:
- - some of the employment types don't make sense now that Job is its own entity
+  - some of the employment types don't make sense now that Job is its own entity
 - TTP:
   - not loving the techniques, they overlap a lot
-- Do we need the specific lists of substances and psychological issues?
-
 - org-relationship vs orgRole: the vocabulatries are identical
 - iron out the zero, one, or more relationships in the erd
 
 ## TODO
 - define owner relationship
 - go back through codebook and list missing/skipped fields
-- add "default" to doc generator
 - Write up intro material for white paper
 - Note handling of inexact dates
 
@@ -53,15 +49,12 @@
 - [c] Org Relationship
 - [c] Relationship struct
 - [c] Collusion
-- [d] Organization
+- [c] Organization
+- [c] Person
+- [c] Accomplice
+- [c] Sponsor
+- [c] TTP
+- [c] Insider
+- [d] Job
+- [ ] Target (Marco)
 
-- [d] Accomplice
-- [d] Sponsor
-- [ ] Person (Marco)
-- [ ] Insider
-- [ ] Job
-- [ ] Target
-- [ ] TTP
-
-Json/UML:
-- [ ] Examples in UML and json

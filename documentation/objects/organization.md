@@ -5,7 +5,7 @@ The organization(s) involved in the incident. At least one organization, the vic
 ## Properties
 
 - **`id`** (required) *(string)* : A unique string that begins with "organization--" and is appended with a UUIDv4.
-	- Uses pattern: ^organization--[UUIDv4]
+  - Uses pattern: ^organization--[UUIDv4]
 - **`name`** *(string)* : The name of the organization. E.g., "Company XYZ, Inc."
 - **`city`** *(string)* : The city where the organization is located. Use the address of the headquarters if the whole organization was affected or use the address of the local branch if only that local branch was affected.
 - **`state`** *(string)* : The state where the organization is located. Use the address of the headquarters if the whole organization was affected or use the address of the local branch if only that local branch was affected.
@@ -14,7 +14,7 @@ The organization(s) involved in the incident. At least one organization, the vic
 - **`small_business`** *(boolean)* : TRUE if the organization is a privately owned business with 500 or fewer employees.
 - **`industry_sector`** *(string)* : Top level category for the economic sector the organization belongs to.
 	- A constant from [industry-sector-vocab](#industry-sector-vocab)
-	- Required if `industry_subsector` exists.
+  - Required if `industry_subsector` exists.
 - **`industry_subsector`** *(string)* : Second level category for the economic sector the organization belongs to. This value MUST map back to industry_sector. E.g., if sector is "9", subsector must be "9.x"
 	- A constant from [industry-subsector-vocab](#industry-subsector-vocab)
 - **`business`** *(string)* : Description of the organization's business.

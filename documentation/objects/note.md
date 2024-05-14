@@ -5,7 +5,7 @@ A freeform text space for holding notes related to the case management of the in
 ## Properties
 
 - **`id`** (required) *(string)* : A unique string that begins with "note--" and is appended with a UUIDv4.
-	- Uses pattern: ^note--[UUIDv4]
+  - Uses pattern: ^note--[UUIDv4]
 - **`author`** (required) *(string)* : Individual, group, or organization that authored the note.
 - **`date`** (required) *(date-time)* : Date and time the note was authored or most recently modified.
 - **`comment`** (required) *(string)* : Notes, comments, details as needed.

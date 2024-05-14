@@ -34,13 +34,11 @@
       },
       "state": {
         "type": "string",
-        "description": "The state (or region) that the person resided in at the time of the incident.",
-        "$ref": "../common/state-vocab.json"
+        "description": "The state (or region) that the person resided in at the time of the incident."
       },
       "country": {
         "type": "string",
-        "description": "The country that the person resided in at the time of the incident.",
-        "$ref": "../common/country-vocab.json"
+        "description": "The country that the person resided in at the time of the incident. Public implementations should use the standard codes provided by ISO 3166-1 alpha-2."
       },
       "postal_code": {
         "type": "integer",
@@ -48,51 +46,47 @@
       },
       "country_of_citizenship": {
         "type": "array",
-        "description": "Citizenship of the insider (if known). Generally, US Citizenship can be assumed unless court or media reports specify otherwise (e.g., US (Chinese National) or Canadian). US citizens will typically have a SSN that may be referenced in court documents. If an insider is a foreign national, this may be mentioned in media reports related to the incident.",
-        "items": {
-            "$ref": "../common/country-vocab.json"
-        },
+        "description": "Citizenship(s) of the person. Public implementations should use the standard codes provided by ISO 3166-1 alpha-2.",
+        "items": {"type": "string"},
         "minItems": 1
       },
       "nationality": {
         "type": "array",
-        "description": "The nationality or nationalities of the person, enter all that apply.",
-        "items": {
-            "$ref": "../common/country-vocab.json"
-        },
+        "description": "The nationality or nationalities of the person.",
+        "items": {"type": "string"},
         "minItems": 1
       },
       "residency": {
         "type": "string",
-        "description": "If the insider is not a born US citizen, but resides in the United States, the court documents and/or media reports will usually list the residency status (i.e. naturalized, permanent resident, or resident alien).",
+        "description": "Residency status if the person was not a citizen of the country where they resided during the incident.",
         "$ref": "#/$defs/residency-vocab"
       },
       "gender": {
         "type": "string",
-        "description": "Sex of the insider (if known) at the time of the incident. Do not make assumptions (e.g., male, female, unknown) about the insider’s sex.",
+        "description": "Sex or gender at the time of the incident.",
         "$ref": "#/$defs/gender-vocab"
       },
       "age": {
         "type": "integer",
-        "description": "Age of insider at the time that the incident began (e.g., 25)."
+        "description": "Age at the time that the incident began."
       },
       "education": {
         "type": "string",
-        "description": "Highest level of education, only input if specifically stated. This information may be stated within court documents or available on insider’s social media profiles.",
+        "description": "Highest level of education at the time the incident began.",
         "$ref": "#/$defs/education-vocab"
       },
       "marital_status": {
         "type": "string",
-        "description": "The marital status of the insider at the time of the incident (Single, Married, Divorced, Separated, Widowed, Unknown).",
+        "description": "The marital status at the time of the incident.",
         "$ref": "#/$defs/marital-status-vocab"
       },
       "number_of_children": {
         "type": "integer",
-        "description": "The number of children that the insider is responsible for, at the time of the incident."
+        "description": "The number of children that the person is responsible for, at the time of the incident."
       },
       "comment": {
         "type": "string",
-        "description": "TODO"
+        "description": "Comments or clarifications regarding any of the Person properties."
       }
     },
     "required": [
@@ -111,12 +105,12 @@
               {
                 "const": "N",
                 "title": "Naturalized",
-                "description": "A formerly non-citizen that has undergone naturalization and become a citizen"
+                "description": "A formerly non-citizen that has undergone naturalization and become a citizen."
               },
               {
                 "const": "P",
                 "title": "Permanent Resident",
-                "description": "A foreign who is a permitted to live in a country they are not a citizen of indefinitely."
+                "description": "A foreign citizen who is a permitted to live in a country they are not a citizen of indefinitely."
               },
               {
                 "const": "R",
@@ -130,22 +124,22 @@
               {
                 "const": "F",
                 "title": "Female",
-                "description": "TODO"
+                "description": "Female"
               },
               {
                 "const": "M",
                 "title": "Male",
-                "description": "TODO"
+                "description": "Male"
               },
               {
                 "const": "N",
                 "title": "Non-binary",
-                "description": "TODO"
+                "description": "Non-binary"
               },
               {
                 "const": "O",
                 "title": "Other",
-                "description": "TODO"
+                "description": "Other"
               }
             ]
         },
@@ -203,22 +197,22 @@
               {
                 "const": "2",
                 "title": "Married",
-                "description": "Currently belonging to a marriage with a spouse who is an intimate partner."
+                "description": "Currently belonging to a marriage or common law partnership with a spouse who is an intimate partner."
               },
               {
                 "const": "3",
                 "title": "Divorced",
-                "description": "Having exited a previous marriage."
+                "description": "Having legally exited a previous marriage."
               },
               {
                 "const": "4",
                 "title": "Separated",
-                "description": "Married to someone but no longer in an intimate partnership with spouse."
+                "description": "Married but no longer in an intimate partnership with a spouse."
               },
               {
                 "const": "5",
                 "title": "Widowed/Widower",
-                "description": "Previously in a marriage that ended due to death of spouse."
+                "description": "Previously in a marriage that ended due to the death of their spouse."
               }
             ]
         }

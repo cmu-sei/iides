@@ -5,7 +5,7 @@ Information about legal procedings related to the incident, whether charges agai
 ## Properties
 
 - **`id`** (required) *(string)* : A unique string that begins with "court-case--" and is appended with a UUIDv4.
-	- Uses pattern: ^court-case--[UUIDv4]
+  - Uses pattern: ^court-case--[UUIDv4]
 - **`case_number`** *(string)* : A case number assigned by the court system in which the case is being tried.
 - **`case_title`** *(string)* : Title provided by the court system (e.g., “USA v. LastName” or “USA v. LastName, et al.”).
 - **`court_country`** *(string)* : Country where the case was tried.
@@ -18,9 +18,9 @@ Information about legal procedings related to the incident, whether charges agai
 - **`case_type`** *(string)* : Type of case.
 	- A constant from [case-type-vocab](#case-type-vocab)
 - **`defendant`** *(array)* : The names of all the defendants (or respondants, or appellees) in the case.
-	- One or more string values
+  - One or more string values
 - **`plaintiff`** *(array)* : The names of all the plaintiffs (or petitioners, or appellants) in the case.
-	- One or more string values
+  - One or more string values
 - **`comment`** *(string)* : Clarifying comments about any of the court case details, or its associated charges and sentences, such as which sentences run concurrently, the structure of a plea deal, or the status of the case.
 
 ## Vocabularies
