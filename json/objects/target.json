@@ -12,17 +12,17 @@
       },
       "asset_type": {
         "type": "string",
-        "description": "TODO",
+        "description": "The form the target as specified.",
         "$ref": "#/$defs/target-asset-vocab"
       },
       "category": {
         "type": "string",
-        "description": "TODO",
+        "description": "The classification group a target belongs to.",
         "$ref": "#/$defs/target-category-vocab"
       },
       "subcategory": {
         "type": "string",
-        "description": "TODO",
+        "description": "The lower-level classification group a target belongs to.",
         "$ref": "#/$defs/target-subcategory-vocab"
       },
       "format": {
@@ -37,7 +37,7 @@
       },
       "sensitivity": {
         "type": "string",
-        "description": "TODO",
+        "description": "The level of sensitivity and controls applied to a target.",
         "$ref": "#/$defs/target-sensitivity-vocab"
       },
       "description": {
@@ -103,7 +103,7 @@
               {
                 "const": "2.1",
                 "title": "Product Information",
-                "description": "TODO"
+                "description": "Insider used technical means to target product information"
               },
               {
                 "const": "2.2",
@@ -128,42 +128,42 @@
               {
                 "const": "4.2",
                 "title": "Employee Data",
-                "description": "TODO"
+                "description": "Information collected from employees or describing employees."
               },
               {
                 "const": "4.3",
                 "title": "Identification",
-                "description": "TODO"
+                "description": "Digital or physical means of verifying identity."
               },
               {
                 "const": "4.4",
                 "title": "Medical Information",
-                "description": "TODO"
+                "description": "Information about an individuals Protected Health Information (PHI), Medicare/Medicaid, prescription medication, etc."
               },
               {
                 "const": "4.5",
                 "title": "Communication Systems",
-                "description": "TODO"
+                "description": "Systems by which messages are transferred."
               },
               {
                 "const": "5.1",
                 "title": "Network or Systems",
-                "description": "TODO"
+                "description": "Platforms in which information is shared or processes are run."
               },
               {
                 "const": "5.2",
                 "title": "Software",
-                "description": "TODO"
+                "description": "Digital systems that operate computers."
               },
               {
                 "const": "5.3",
                 "title": "Passwords",
-                "description": "TODO"
+                "description": "Text strings which authenticate access to a system."
               },
               {
                 "const": "6.1",
                 "title": "Unknown",
-                "description": "TODO"
+                "description": "Unclear from the documentation what was targeted."
               }
             ]
         },
@@ -172,292 +172,292 @@
               {
                 "const": "1.1.1",
                 "title": "Blueprint Plans",
-                "description": "TODO"
+                "description": "The insider targeted schematics for facility layout."
               },
               {
                 "const": "1.1.2",
                 "title": "Facilities",
-                "description": "TODO"
+                "description": "Buildings, offices, areas of buildings, or functions of buildings (such as disabling a door). Federal Government."
               },
               {
                 "const": "1.1.3",
                 "title": "Physical Products",
-                "description": "TODO"
+                "description": "Insider targeted tangible objects owned or managed by the organization"
               },
               {
                 "const": "2.1.1",
                 "title": "Product Information",
-                "description": "TODO"
+                "description": "Insider used technical means to target product information."
               },
               {
                 "const": "2.1.2",
                 "title": "Proprietary Information",
-                "description": "TODO"
+                "description": "The insider targeted information that gives the organization a competitive advantage, such as trade secrets, formulas, designs, or processes, which could be exposed or sold to a competitor."
               },
               {
                 "const": "2.2.1",
                 "title": "Business Plans",
-                "description": "TODO"
+                "description": "Pitches or anything having to do with the everyday course of business."
               },
               {
                 "const": "2.2.2",
                 "title": "Business System",
-                "description": "TODO"
+                "description": "The insider targeted the system which the business ran."
               },
               {
                 "const": "2.2.3",
                 "title": "Commerce information",
-                "description": "TODO"
+                "description": "The insider targeted data related to the organization's business dealings, such as customer lists, pricing strategies, supplier contracts, or marketing plans."
               },
               {
                 "const": "2.2.4",
                 "title": "Contract Information",
-                "description": "TODO"
+                "description": "The insider targeted information related to legal agreements made between the organization and other organizations or individuals such as employees or contractors."
               },
               {
                 "const": "2.2.5",
                 "title": "Design and Plans",
-                "description": "TODO"
+                "description": "The insider targeted product design or information for a business plan."
               },
               {
                 "const": "2.2.6",
                 "title": "Payroll Information",
-                "description": "TODO"
+                "description": "The insider targeted data relating to employee salaries, benefits, and tax information."
               },
               {
                 "const": "2.3.1",
                 "title": "Classified Information",
-                "description": "TODO"
+                "description": "The insider targeted information that is restricted by the government for reasons of national security."
               },
               {
                 "const": "2.3.2",
                 "title": "Sensitive Information",
-                "description": "TODO"
+                "description": "The insider targeted data that could cause harm to the organization or its stakeholders if leaked or misused."
               },
               {
                 "const": "3.1.1",
                 "title": "Accounting Records",
-                "description": "TODO"
+                "description": "The insider targeted records tracking money, inventory, or purchases."
               },
               {
                 "const": "3.1.2",
                 "title": "ATM Withdrawal",
-                "description": "TODO"
+                "description": "The insider targeted money that was withdrawn from an ATM."
               },
               {
                 "const": "3.1.3",
                 "title": "Bank Account Information",
-                "description": "TODO"
+                "description": "The insider targeted bank account information for a peculiar person or entity."
               },
               {
                 "const": "3.1.4",
                 "title": "Bitcoin",
-                "description": "TODO"
+                "description": "The insider targeted money that had been in the form of virtual currency."
               },
               {
                 "const": "3.1.5",
                 "title": "Company Funds",
-                "description": "TODO"
+                "description": "The insider targeted monetary assets used for financing operations and initiatives of the organization."
               },
               {
                 "const": "3.1.6",
                 "title": "Gift Cards",
-                "description": "TODO"
+                "description": "The insider targeted money in the form of prepaid debits cards for use at a specific vendor."
               },
               {
                 "const": "3.1.7",
                 "title": "Invoices",
-                "description": "TODO"
+                "description": "The insider targeted money in the form of receiving funds from fraudulent invoices."
               },
               {
                 "const": "3.1.8",
                 "title": "Issued Checks",
-                "description": "TODO"
+                "description": "The insider targeted money in the form of receiving funds from fraudulent checks."
               },
               {
                 "const": "3.1.9",
                 "title": "Loan",
-                "description": "TODO"
+                "description": "The insider targeted money in the form of temporary funds given with the expectation of being repaid with interest."
               },
               {
                 "const": "3.1.10",
                 "title": "Physical Currency",
-                "description": "TODO"
+                "description": "The insider targeted money in the form of tangible paper bills, coins, or other means of circulation that holds direct monetary value."
               },
               {
                 "const": "3.1.11",
                 "title": "Refunds",
-                "description": "TODO"
+                "description": "The insider targeted money in the form of reimbursements for returend funds."
               },
               {
                 "const": "3.1.12",
                 "title": "Reimbursement Forms",
-                "description": "TODO"
+                "description": "The insider targeted information related to reports of incurred transaction expenses."
               },
               {
                 "const": "3.1.13",
                 "title": "Tax Information",
-                "description": "TODO"
+                "description": "Insider targeted tax information to gain personal identifier information."
               },
               {
                 "const": "3.1.14",
                 "title": "Time Sheets",
-                "description": "TODO"
+                "description": "Insider manipulated time sheets to gain fraudulent funds."
               },
               {
                 "const": "4.1.1",
                 "title": "Client List",
-                "description": "TODO"
+                "description": "The insider targeted information in the form of a listing of organizations or individuals which are provided services by the organization."
               },
               {
                 "const": "4.1.2",
                 "title": "Customer Data",
-                "description": "TODO"
+                "description": "The insider targeted information about customers or provided by customers"
               },
               {
                 "const": "4.1.3",
                 "title": "Alien Files",
-                "description": "TODO"
+                "description": "The insider targeted information that contained records of individuals that were unaturalized immigrants."
               },
               {
                 "const": "4.1.4",
                 "title": "Credit Card Information",
-                "description": "TODO"
+                "description": "The insider targeted information relating to a credit card, such as the card number, the cardholder's name, when the card expires and the card's security code."
               },
               {
                 "const": "4.1.5",
                 "title": "Insurance Claims",
-                "description": "TODO"
+                "description": "The insider targeted information relating to monetary claims made in request to an insurance policy."
               },
               {
                 "const": "4.2.1",
                 "title": "Employee Data",
-                "description": "TODO"
+                "description": "The insider targeted information about employees or belonging to employees of an organization."
               },
               {
                 "const": "4.3.1",
                 "title": "Driver's license",
-                "description": "TODO"
+                "description": "The insider targeted information related to a legal identification that provides a permit to operate a motor vehicle."
               },
               {
                 "const": "4.3.2",
                 "title": "Personal Photos",
-                "description": "TODO"
+                "description": "The insider targeted images taken that are of a personal nature."
               },
               {
                 "const": "4.3.3",
                 "title": "PII",
-                "description": "TODO"
+                "description": "The insider targeted sensitive information that can be used to identify someone."
               },
               {
                 "const": "4.4.1",
                 "title": "PHI",
-                "description": "TODO"
+                "description": "The insider targeted sensitive information that is indicative of someone's health condition."
               },
               {
                 "const": "4.4.2",
                 "title": "Medicare/Medicaid",
-                "description": "TODO"
+                "description": "The insider targeted information related to health insurance provided by the state to the elderly or financially limited populations."
               },
               {
                 "const": "4.4.3",
                 "title": "Prescription Medication",
-                "description": "TODO"
+                "description": "The insider targeted information that relates to doctors notes permiting the purchase of controlled medical substances."
               },
               {
                 "const": "4.4.4",
                 "title": "Prescription Pads",
-                "description": "TODO"
+                "description": "The insider targeted the secured stationery notes that doctors use for writing prescriptions."
               },
               {
                 "const": "4.5.1",
                 "title": "Emails",
-                "description": "TODO"
+                "description": "The insider targeted electronic communications in the form of static messages shared to specified user addresses via a network."
               },
               {
                 "const": "4.5.2",
                 "title": "Telecommunication Systems",
-                "description": "TODO"
+                "description": "The insider targeted hardware or software networks that facilitate communications over a range."
               },
               {
                 "const": "5.1.1",
                 "title": "Access to System",
-                "description": "TODO"
+                "description": "The insider’s target was to gain access to the system. This can be a more general case where the case details do not describe how insider was gaining access but intended to gain access."
               },
               {
                 "const": "5.1.2",
                 "title": "Backup Data",
-                "description": "TODO"
+                "description": "The insider targeted secured copies of the data held on systems that would be used to restore the system if it became compromised."
               },
               {
                 "const": "5.1.3",
                 "title": "Backup Tapes",
-                "description": "TODO"
+                "description": "The insider targeted stored backup data copied to a tape cartridge."
               },
               {
                 "const": "5.1.4",
                 "title": "Database",
-                "description": "TODO"
+                "description": "The insider targeted a structured electronic digital information repository."
               },
               {
                 "const": "5.1.5",
                 "title": "Email Servers",
-                "description": "TODO"
+                "description": "The insider compromised the systems used to host and deliver email services."
               },
               {
                 "const": "5.1.6",
                 "title": "FTP Servers",
-                "description": "TODO"
+                "description": "The insider targeted the FTP server, which allows the exchange of files between two or more computers."
               },
               {
                 "const": "5.1.7",
                 "title": "Network Configuration",
-                "description": "TODO"
+                "description": "Insider targeted the network configuration access in order to create errors."
               },
               {
                 "const": "5.1.8",
                 "title": "Network Login Information",
-                "description": "TODO"
+                "description": "The insider targeted information related to access credentials for a network."
               },
               {
                 "const": "5.1.9",
                 "title": "Servers",
-                "description": "TODO"
+                "description": "Insider used technical methods to target the servers."
               },
               {
                 "const": "5.1.10",
                 "title": "Website Hosting",
-                "description": "TODO"
+                "description": "The insider targeted the means for hosting and delivering website services over the internet."
               },
               {
                 "const": "5.2.1",
                 "title": "Backup Software",
-                "description": "TODO"
+                "description": "The insider's target was software designed to create copies of data for safe storage."
               },
               {
                 "const": "5.2.2",
                 "title": "Software Policy Protocol",
-                "description": "TODO"
+                "description": "The insider's target was the rules developed by an organization for the ideal deployment of a software."
               },
               {
                 "const": "5.2.3",
                 "title": "Source code",
-                "description": "TODO"
+                "description": "The insider targeted the underlying codebase for a product or system."
               },
               {
                 "const": "5.2.4",
                 "title": "Unreleased Software",
-                "description": "TODO"
+                "description": "The insider's target was software that was not yet made available."
               },
               {
                 "const": "5.3.1",
                 "title": "Login Information",
-                "description": "TODO"
+                "description": "The insider targeted credentials used for access to a technological system."
               },
               {
                 "const": "5.3.2",
                 "title": "Passwords",
-                "description": "TODO"
+                "description": "The insider targeted access credentials in the form of a text string."
               }
             ]
         },
@@ -466,27 +466,27 @@
               {
                 "const": "1",
                 "title": "Electronic",
-                "description": "TODO"
+                "description": "Technological digital format."
               },
               {
                 "const": "2",
                 "title": "Physical",
-                "description": "TODO"
+                "description": "Tangible real world format."
               },
               {
                 "const": "3",
                 "title": "Personnel",
-                "description": "TODO"
+                "description": "People or peoples."
               },
               {
                 "const": "4",
                 "title": "Other",
-                "description": "TODO"
+                "description": "Other format."
               },
               {
                 "const": "5",
                 "title": "Unknown",
-                "description": "TODO"
+                "description": "Unclear from the documentation what was targeted."
               }
             ]
         },
@@ -495,27 +495,27 @@
               {
                 "const": "C",
                 "title": "Consumer",
-                "description": "TODO"
+                "description": "An individual that purchases and makes use of a product or service."
               },
               {
                 "const": "E",
                 "title": "Employee",
-                "description": "TODO"
+                "description": "An individual internal to an organization who facilitates the disbursement of products or services."
               },
               {
                 "const": "O",
                 "title": "Organization",
-                "description": "TODO"
+                "description": "A collective of individuals who provide products or services."
               },
               {
                 "const": "T",
                 "title": "Third Party",
-                "description": "TODO"
+                "description": "Parties external to an organization or consumers."
               },
               {
                 "const": "Z",
                 "title": "Other",
-                "description": "TODO"
+                "description": "Other owner."
               }
             ]
         },
@@ -524,17 +524,17 @@
               {
                 "const": "CTI",
                 "title": "Controlled Technical Information (CTI)",
-                "description": "TODO"
+                "description": "Technical information subject to controls to access, use, reproduction, or dissemination."
               },
               {
                 "const": "FRP",
                 "title": "FERPA (student education records)",
-                "description": "TODO"
+                "description": "Information subject to sensitity due to relevance to student educational privacy."
               },
               {
                 "const": "FTI",
                 "title": "Federal Tax Information (FTI)",
-                "description": "TODO"
+                "description": "Information that subject to sensitivty that is derived from tax returns."
               },
               {
                 "const": "GVT",
@@ -544,7 +544,7 @@
               {
                 "const": "ITP",
                 "title": "Intellectual Property (IP)",
-                "description": "TODO"
+                "description": "Information that has been created and is subject to protection of its creativity."
               },
               {
                 "const": "LES",
@@ -554,7 +554,7 @@
               {
                 "const": "NPB",
                 "title": "Non-Public",
-                "description": "TODO"
+                "description": "Information not made available to the public"
               },
               {
                 "const": "PCI",
