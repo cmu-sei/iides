@@ -2,7 +2,7 @@
     "id": "case-name/incident-ID",
     "objects": [
         {
-            "id": "accomplice--",
+            "id": "accomplice--[UUIDv4]",
             "relationship_to_insider": "(1)acquaintance, (2)colleague, (3)former colleague, (4)friend, (5)relative, (6)significant other, (8)Unknown, (9)other"
         },
         {
