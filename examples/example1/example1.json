@@ -1,1 +1,73 @@
-{}
+{
+    "id": "case-name/incident-ID",
+    "objects": [
+        {
+            "$id": "[REPLACE with full github url to this json file]",
+            "$schema": "https://json-schema.org/draft/2020-12/schema",
+            "title": "Insider",
+            "description": "Information about the insider involved in the incident. An incident can have multiple insiders.",
+            "type": "object",
+            "$ref": "./person.json",
+            "properties": {
+                "id": {
+                "type": "string",
+                "description": "A unique string that begins with \"insider--\" and is appended with a UUIDv4.",
+                "pattern": "^insider--[UUIDv4]"
+              },
+              "incident_role": {
+                "type": "string",
+                "description": "Whether the insider was the primary actor, or had a different role in the incident.",
+                "$ref": "#/$defs/incident-role-vocab"
+              },
+              "motive": {
+                "type": "array",
+                "description": "The insider's motive(s) for the incident.",
+                "items": {
+                    "$ref": "#/$defs/motive-vocab"
+                },
+                "minItems": 1
+              },
+              "substance_use_during_incident": {
+                "type": "boolean",
+                "description": "Insider was using or abusing substance(s) at the time they took one or more actions related to the incident."
+              },
+              "psychological_issues": {
+                "type": "array",
+                "description": "Psychological issue(s) the insider experienced during or before the incident.",
+                "items": {
+                    "$ref": "#/$defs/psych-issues-vocab"
+                },
+                "minItems": 1
+              },
+              "predispositions": {
+                "type": "array",
+                "description": "Insider's tendancy toward certain actions or qualities.",
+                "prefixItems": [
+                  { "type": "string" },
+                  { "type": "string" },
+                  { "$ref": "#/$defs/predisposition-type-vocab"},
+                  { "$ref": "#/$defs/predisposition-subtype-vocab"}
+                ],
+                "minItems": 2,
+                "items": false
+              },
+              "concerning_behaviors": {
+                "type": "array",
+                "description": "Insider's history of past behavior that could indicate future issues.",
+                "prefixItems": [
+                  { "type": "string" },
+                  { "type": "string" },
+                  { "$ref": "#/$defs/cb-type-vocab"},
+                  { "$ref": "#/$defs/cb-subtype-vocab"}
+                ],
+                "minItems": 2,
+                "items": false
+              },
+              "comment": {
+                "type": "string",
+                "description": "Comments or clarifications to any of the Insider properties."
+              }
+            }
+        }
+    ]
+}
