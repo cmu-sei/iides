@@ -1,1 +1,197 @@
-{}
+{
+    "id": "case-name/incident-ID",
+    "objects": [
+        {
+            "id": "accomplice--[UUIDv4]",
+            "relationship_to_insider": "(1)acquaintance, (2)colleague, (3)former colleague, (4)friend, (5)relative, (6)significant other, (8)Unknown, (9)other"
+        },
+        {
+            "id": "charge--3fcbf985-f10e-45b7-aacb-e16c89da1105",
+            "title": "18 U.S.C",
+            "section": "1836",
+            "nature_of_offense": "Misappropriation of trade secrets related to self-driving car technology",
+            "count": 1,
+            "plea": "3",
+            "plea_bargain": false,
+            "disposition": "02"
+        },
+        {
+            "id": "court-case--3fcbf985-f10e-45b7-aacb-e16c89da1105",
+            "case_number": "17-cv-00939",
+            "case_title": "Waymo LLC v. Uber Technologies, Inc.",
+            "court_country": "United States",
+            "court_state": "California",
+            "court_district": "United States District Court for the Northern District of California",
+            "court_type": "1",
+            "case_type": "1"
+        },
+        {
+            "id": "detection--[UUIDv4]",
+            "first_detected": "2017-02-23",
+            "who_detected": ["LE", "OR"],
+            "detected_method": ["2", "4"],
+            "logs": ["AC", "EM", "VD"]
+
+        },
+        {
+            "id": "impact--[UUIDv4]-1",
+            "high": 245000000,
+            "low": 245000000,
+            "metric": "05",
+            "estimated": false,
+            "comment": "Financial impact valued at approximately $245 million, which was the settlement amount Uber agreed to give Waymo in equity."
+            },
+            {
+            "id": "impact--[UUIDv4]-2",
+            "high": 14000,
+            "metric": "07",
+            "estimated": true,
+            "comment": "Levandowski downloaded over 14,000 files before leaving the company to found his own startup, that was then bought by Uber"
+            },
+            {
+            "id": "incident--[UUIDv4]",
+            "cia_effect": ["C", "I"],
+            "incident_type": ["E"],
+            "incident_subtype": ["E1"],
+            "outcome": ["02"],
+            "status": "settled",
+            "summary": "The case involved Waymo, a self-driving car company spun off from Google, accusing Uber, through its acquisition of Otto, of stealing trade secrets related to LiDAR technology. The lawsuit claimed that Anthony Levandowski, a former Google engineer, downloaded thousands of files related to Waymo’s self-driving technology before leaving to start Otto, which was soon acquired by Uber.",
+            "brief_summary": "Waymo sued Uber for intellectual property theft, claiming that ex-Google engineer Anthony Levandowski stole LiDAR technology secrets before joining Uber. The case was settled with Uber agreeing to not use Waymo’s technology and paying equity worth approximately $245 million.",
+            "comment": "The case was settled out of court, and no formal determination of guilt was made against Uber, but they agreed to a settlement to avoid the continuation of litigation."
+            },
+            {
+            "id": "insider--[UUIDv4]",
+            "incident_role": "1",
+            "motive": ["03", "05"],
+            "substance_use_during_incident": false,
+            "concerning_behaviors": ["(3.2, 3.2.4)", "(3.2, 3.2.3)", "(3.5, 3.5.1)", "(3.5, 3.5.2)"],
+            "comment": "Anthony Levandowski's actions of transferring confidential files from Waymo to his personal devices sparked the lawsuit. No public evidence of substance use or psychological issues affecting his actions has been documented."
+            },
+            {
+            "id": "job--[UUIDv4]",
+            "job_function": "17",
+            "occupation": "17.2",
+            "title": "Lead Engineer for Autonomous Vehicle Technology",
+            "position_technical": true,
+            "access_authorization": "5",  
+            "employment_type": "FFT",
+            "hire_date": "2007-08-01",
+            "departure_date": "2016-01-27",
+            "tenure": "P8Y5M26D",
+            "comment": "Anthony Levandowski was involved in the development of autonomous vehicle technologies at Waymo, a division of Google, before leaving to start Otto, which was later acquired by Uber."
+            },
+
+            {
+            "id": "legal-response--[UUIDv4]",
+            "law_enforcement_contacted": null, 
+            "insider_arrested": null,  
+            "insider_charged": null, 
+            "insider_pleads": null,  
+            "insider_judgement": null,
+            "insider_sentenced": null, 
+            "insider_charges_dropped": null,  
+            "insider_charges_dismissed": null, 
+            "insider_settled": "2018-02-09",  
+            "comment": "The legal response was primarily civil. The case did not involve law enforcement as it was not a criminal matter. The settlement resolved the dispute without a formal admission of wrongdoing."
+            },
+        {
+            "id": "note--[UUIDv4]",
+            "author": "Example Author",
+            "date": "date and time (format: date-time) that the note was authored",
+            "comment": "This was a civil case, the insider was formally charged through a third party civil court and later filed for bankruptcy"
+        },
+
+        {
+            "id": "organization--[UUIDv4]",
+            "name": "Waymo LLC",
+            "city": "Mountain View",
+            "state": "California",
+            "country": "USA",
+            "postal_code": 94043,
+            "small_business": false,
+            "industry_sector": "6",
+            "industry_subsector": "6.5",
+            "business": "Waymo operates as a self-driving technology company primarily involved in developing autonomous driving systems.",
+            "parent_company": "Alphabet Inc.",
+            "incident_role": "V"
+            },
+            {
+            "id": "organization--[UUIDv4]",
+            "name": "Uber Technologies Inc.",
+            "city": "San Francisco",
+            "state": "California",
+            "country": "USA",
+            "postal_code": 94103,
+            "small_business": false,
+            "industry_sector": "6",
+            "industry_subsector": "6.5",
+            "business": "Uber operates as a technology company offering ridesharing, food delivery, and transportation services globally, with a division focused on developing autonomous vehicle technology.",
+            "parent_company": null,
+            "incident_role": "B"
+            },
+
+        {
+            "id": "response--[UUIDv4]",
+            "investigated_by": ["99", "02"],
+            "investigation_events": ["(02, 2016-11-00)"],
+            "comment": "clarifying comme"
+        },
+        {
+            "id": "sentence--[UUIDv4]",
+            "sentence_type": "14",
+            "quantity": 245000000,
+            "metric": "D",
+            "concurrency": false
+            },
+
+            {
+            "id": "source--[UUIDv4]",
+            "title": "Settlement Agreement",
+            "source_type": "01",
+            "file_type": "pdf",
+            "date": "2017-09-13",
+            "public": true,
+            "document": "https://law.justia.com/cases/federal/appellate-courts/cafc/17-2235/17-2235-2017-09-13.html"
+            }, 
+            {
+            "id": "stressor-[UUIDv4]",
+            "date": "2015-12-01",  
+            "category": "S1",
+            "subcategory": "S1.9",
+            "comment": "Potential stressors could include career ambitions or potential financial gain prompting actions that led to the misappropriation of documents."
+            },
+            {
+            "id": "target--[UUIDv4]",
+            "asset_type": "2",
+            "category": "2.1",
+            "subcategory": "2.1.1",
+            "format": "1",
+            "owner": "O",
+            "sensitivity": "ITP"
+            },
+            {
+            "id": "target--[UUIDv4]",
+            "asset_type": "5",
+            "category": "5.2",
+            "subcategory": "5.2.3",
+            "format": "1",
+            "owner": "O",
+            "sensitivity": "ITP"
+            },
+        {
+            "id": "ttp-[UUIDv4]",
+            "date": "2015-12-11",
+            "sequence_num": 1,
+            "observed": false,
+            "number_of_times": 1,
+            "ttp_vocab": "IIDES",
+            "tactic": "7",
+            "technique": "7.4",
+            "location": "2",
+            "hours": "1",
+            "device": ["2"],
+            "channel": ["9"],
+            "description": "The individual accessed confidential and proprietary engineering databases and downloaded sensitive data onto a personal external storage device, which was then used to transfer the data offsite."
+            }
+    ]
+}
