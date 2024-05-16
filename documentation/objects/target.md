@@ -18,8 +18,8 @@ The system, data, person, or physical property that was targeted by the insider.
 	- A constant from [target-format-vocab](#target-format-vocab)
 - **`owner`** (required) *(string)* : Who the data is about. For assets, the owner of the asset. In cases where the owner and subject of the data/asset is unclear, pick the person/group most responsible for safeguarding the data/asset.
 	- A constant from [target-owner-vocab](#target-owner-vocab)
-- **`sensitivity`** (required) *(string)* : The level of sensitivity and controls applied to a target.
-	- A constant from [target-sensitivity-vocab](#target-sensitivity-vocab)
+- **`sensitivity`** (required) *(array)* : The level of sensitivity and controls applied to a target.
+  - One or more constants from [target-sensitivity-vocab](#target-sensitivity-vocab)
 - **`description`** *(string)* : Brief description of the target.
 
 ## Vocabularies
@@ -148,18 +148,33 @@ Constants: `C`, `E`, `O`, `T`, `Z`
 
 ### target-sensitivity-vocab
 
-Constants: `CTI`, `FRP`, `FTI`, `GVT`, `ITP`, `LES`, `NPB`, `PCI`, `PHI`, `PII`, `NSN`
+Constants: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, `14`, `15`, `16`, `17`, `18`, `19`, `20`, `21`, `22`, `23`, `24`, `25`, `26`
 
 | Const | Value | Description |
 | --- | --- | --- |
-| CTI | Controlled Technical Information (CTI) | Technical information subject to controls to access, use, reproduction, or dissemination.|
-| FRP | FERPA (student education records) | Information subject to sensitity due to relevance to student educational privacy.|
-| FTI | Federal Tax Information (FTI) | Information that subject to sensitivty that is derived from tax returns.|
-| GVT | Government Sensitive | Classified or sensitive information used by and only available to the government.|
-| ITP | Intellectual Property (IP) | Information that has been created and is subject to protection of its creativity.|
-| LES | Law Enforcement Sensitive | Information, software, or device used by and only available to law enforcement.|
-| NPB | Non-Public | Information not made available to the public.|
-| PCI | Credit/Payment Card (PCI) | Credit/payment card information.|
-| PHI | Protected Health Information (PHI) | Individually identifiable health information, held or maintained by a covered entity or its business associates acting for the covered entity, that is transmitted or maintained in any form or medium. This includes identifiable demographic and other information relating to the past, present, or future physical or mental health or condition of an individual, or the provision or payment of health care to an individual that is created or received by a health care provider, health plan, employer, or health care clearinghouse.|
-| PII | Personally Identifiable Information (PII) | Information which can be used to distinguish or trace an individual's identity, such as their name, social security number, biometric records, etc. alone, or when combined with other personal or identifying information which is linked or linkable to a specific individual, such as date and place of birth, mother's maiden name, etc.|
-| NSN | Not sensitive/Public | The target is not sensitive or is already publicly available.|
+| 1 | Unclassified | No classification|
+| 2 | Confidential | Public disclosure would damage national security|
+| 3 | FOUO | For official use only|
+| 4 | Secret | Public disclosure would cause serious damage to national security|
+| 5 | SecretNoForn | Secret / restricted to country of source|
+| 6 | Top Secret (TS) | Top secret, unauthorized disclosure would cause exceptionally grave damage to national security|
+| 7 | TS/SCI | Top secret / Sensitive compartmented information|
+| 8 | NATORestricted | North Atlantic Treaty Organization Restricted|
+| 9 | NATOConfidential | North Atlantic Treaty Organization Confidential|
+| 10 | NATOSecret | North Atlantic Treaty Organization Secret|
+| 11 | CosmicTopSecret | Top Secret documents managed by a COSMIC registry|
+| 12 | FVEYProprietary | Five eyes proprietary|
+| 13 | Proprietary | Information a company wishes to keep confidential (e.g. trade secrets)|
+| 14 | Personal identifiable information (PII) | Information which can be used to distinguish or trace an individual's identity, such as their name, social security number, biometric records, etc. alone, or when combined with other personal or identifying information which is linked or linkable to a specific individual, such as date and place of birth, mother's maiden name, etc.|
+| 15 | HIPPA/Protected Health Information (PHI) | Individually identifiable health information, held or maintained by a covered entity or its business associates acting for the covered entity, that is transmitted or maintained in any form or medium. This includes identifiable demographic and other information relating to the past, present, or future physical or mental health or condition of an individual, or the provision or payment of health care to an individual that is created or received by a health care provider, health plan, employer, or health care clearinghouse.|
+| 16 | GDPR | General data protection regulation|
+| 17 | Public | Unrestricted/open to the public|
+| 18 | CUI | Controlled Unclassified Information|
+| 19 | Controlled Technical Information (CTI) | Technical information subject to controls to access, use, reproduction, or dissemination.|
+| 20 | FERPA (student education records) | Information subject to sensitity due to relevance to student educational privacy.|
+| 21 | Federal Tax Information (FTI) | Information that subject to sensitivty that is derived from tax returns.|
+| 22 | Government Sensitive | Classified or sensitive information used by and only available to the government.|
+| 23 | Intellectual Property (IP) | Information that has been created and is subject to protection of its creativity.|
+| 24 | Law Enforcement Sensitive | Information, software, or device used by and only available to law enforcement.|
+| 25 | Non-Public | Information not made available to the public.|
+| 26 | Credit/Payment Card (PCI) | Credit/payment card information.|
