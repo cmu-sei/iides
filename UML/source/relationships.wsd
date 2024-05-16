@@ -22,17 +22,21 @@ package "IIDES Entity Relationships" #FFF {
     class Stressor #b0d0ed {}
     class Note #D4EFDF {}
     struct Relationship #F5F5F5 {}
+    struct OrgRelationship #F5F5F5 {}
+    struct OrgOwner #F5F5F5 {}
 
     Insider --o{ Accomplice : Relationship
     Incident --|{ Insider : commits <
-    Accomplice -- Job
-    Job -- Organization : employs <
-    Insider -- Job
+    Accomplice |o--o{ Job
+    Job }o--o| Organization : employs <
+    Insider |o--o{ Job
     Organization }o--o| Incident : OrgRole
-    Organization }o--o{ Organization : OrgRelationship
+    Organization }o-- OrgRelationship
+    OrgRelationship --o{ Organization
     Insider }o--o| Sponsor
     Accomplice }o--o| Sponsor
-    Insider |o--o| Organization : owns >
+    Insider }o..o{ Organization : OrgOwner >
+    Accomplice }o..o{ Organization : OrgOwner >
     Insider -- Collusion
     Collusion -- Insider
     Incident --|{ Impact

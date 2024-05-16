@@ -26,6 +26,7 @@ color_map = {
     'Stressor': '#b0d0ed',
     'TTP': '#A456ED',
     'Org Relationship': '#F5F5F5',
+    'Org Owner': '#F5F5F5',
     'Relationship': '#F5F5F5'
 }
 
@@ -49,6 +50,7 @@ def get_ref(ref):
         ref_string = f"{ref[ref.rfind('/')+1:-5]}"
     return ref_string
 
+
 file_lines = []
 file_lines.append("@startuml IIDES\npackage \"IIDES\" #fff {\n\n")
 
@@ -59,8 +61,11 @@ for filename in json_files:
     with open(filename) as f:
         data = json.load(f)
         print(data['title'])
-
-        class_line = f"\nclass {data['title'].replace(' ','')} "
+        print(filename)
+        if filename.startswith('json/structs/'):
+            class_line = f"\nstruct {data['title'].replace(' ','')} "
+        else:
+            class_line = f"\nclass {data['title'].replace(' ','')} "
         if '$ref' in data.keys():
             # class inherits from another
             class_line += f"<<{data['$ref'][2:-5].capitalize()}>> "
@@ -110,14 +115,15 @@ relationships = '''
     Insider --o{ Accomplice
     Incident --|{ Insider : commits <
     Accomplice |o--o{ Job
-    Job -- Organization : employs <
-    Insider -- Job
+    Job }o--o| Organization : employs <
+    Insider |o--o{ Job
     Organization }o--o| Incident
-    Organization -- OrgRelationship
-    OrgRelationship -- Organization
+    Organization }o-- OrgRelationship
+    OrgRelationship --o{ Organization
     Insider }o--o| Sponsor
     Accomplice }o--o| Sponsor
-    Insider |o--o| Organization : owns >
+    Insider }o..o{ Organization : OrgOwner >
+    Accomplice }o..o{ Organization : OrgOwner >
     Insider -- Collusion
     Collusion -- Insider
     Incident --o{ Impact

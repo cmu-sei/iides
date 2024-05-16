@@ -10,11 +10,11 @@ package "IIDES Core Relationships" #FFF {
     class TTP #A456ED {}
 
     Incident --|{ Insider : commits <
-    Job -- Organization : employs <
-    Insider -- Job : has >
+    Job }o--o| Organization : employs <
+    Insider |o--o{ Job
     Organization }o--o| Incident : OrgRole
     Organization }o--o{ Organization : OrgRelationship
-    Insider |o--o| Organization : owns >
+    Insider }o..o{ Organization : OrgOwner >
     Insider }|--|{ Insider
     Incident --o| Detection
     Incident --o| Response
