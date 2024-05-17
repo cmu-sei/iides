@@ -1,5 +1,5 @@
 {
-    "$id": "[REPLACE with full github url to this json file]",
+    "$id": "iides/json/objects/person.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Person",
     "description": "Abstract class for inheritance by the Insider and Accomplice objects. Describes the properties of an individual that MAY be inherited by those classes.",

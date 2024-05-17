@@ -5,7 +5,7 @@ The organization(s) involved in the incident. At least one organization, the vic
 ## Properties
 
 - **`id`** (required) *(string)* : A unique string that begins with "organization--" and is appended with a UUIDv4.
-  - Uses pattern: ^organization--[UUIDv4]
+  - Uses pattern: ^organization--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
 - **`name`** *(string)* : The name of the organization. E.g., "Company XYZ, Inc."
 - **`city`** *(string)* : The city where the organization is located. Use the address of the headquarters if the whole organization was affected or use the address of the local branch if only that local branch was affected.
 - **`state`** *(string)* : The state where the organization is located. Use the address of the headquarters if the whole organization was affected or use the address of the local branch if only that local branch was affected.

@@ -5,7 +5,7 @@ Action taken by the insider or colluding outsider(s) during the course of the in
 ## Properties
 
 - **`id`** (required) *(string)* : A unique string that begins with "ttp--" and is appended with a UUIDv4.
-  - Uses pattern: ^ttp--[UUIDv4]
+  - Uses pattern: ^ttp--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
 - **`date`** *(datetime)* : The date and time the action happend. If over a range of time, the start time of the action.
 - **`sequence_num`** *(integer)* : The sequence number of this action in the overall timeline of actions. Helpful if the sequence of events is known, but the dates are unknown.
 - **`observed`** *(boolean)* : Whether the action was observed by the victim organization or investigative team at the time it happend.

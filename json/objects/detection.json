@@ -1,5 +1,5 @@
 {
-    "$id": "[REPLACE with full github url to this json file]",
+    "$id": "iides/json/objects/detection.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Detection",
     "description": "Describes details about how, when, and by whom the incident was detected. An incident may have only one detection entity.",
@@ -8,7 +8,7 @@
       "id": {
         "type": "string",
         "description": "A unique string that begins with \"detection--\" and is appended with a UUIDv4.",
-        "pattern": "^detection--[UUIDv4]"
+        "pattern": "^detection--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
       },
       "first_detected": {
         "type": "string",

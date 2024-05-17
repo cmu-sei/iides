@@ -1,5 +1,5 @@
 {
-    "$id": "[REPLACE with full github url to this json file]",
+    "$id": "iides/json/objects/target.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Target",
     "description": "The system, data, person, or physical property that was targeted by the insider. An incident may have many targets.",
@@ -8,7 +8,7 @@
       "id": {
         "type": "string",
         "description": "A unique string that begins with \"target--\" and is appended with a UUIDv4.",
-        "pattern": "^target--[UUIDv4]"
+        "pattern": "^target--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
       },
       "asset_type": {
         "type": "string",

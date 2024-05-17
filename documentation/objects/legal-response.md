@@ -5,7 +5,7 @@ Information about the legal response to the incident, particularly the dates of 
 ## Properties
 
 - **`id`** (required) *(string)* : A unique string that begins with "legal-response--" and is appended with a UUIDv4.
-  - Uses pattern: ^legal-response--[UUIDv4]
+  - Uses pattern: ^legal-response--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
 - **`law_enforcement_contacted`** *(date)* : Organization contacts law enforcement to aid in the investigation of the incident. E.g., Police are called to respond to the Insider's violent behavior in the workplace).
 - **`insider_arrested`** *(date)* : Insider is taken into custody. E.g., Police arrest insider in their home.
 - **`insider_charged`** *(date)* : Insider is formally charged. Charges must relate to the incident. This category also covers a waiver of indictment and subsequent filing of information. E.g., Insider was indicted on computer fraud charges.

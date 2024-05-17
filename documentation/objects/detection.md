@@ -5,7 +5,7 @@ Describes details about how, when, and by whom the incident was detected. An inc
 ## Properties
 
 - **`id`** (required) *(string)* : A unique string that begins with "detection--" and is appended with a UUIDv4.
-  - Uses pattern: ^detection--[UUIDv4]
+  - Uses pattern: ^detection--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
 - **`first_detected`** *(date-time)* : The date and time the victim organization first became aware of the incident.
 - **`who_detected`** *(array)* : The individual entities or teams that first detected the incident.
   - One or more constants from [detection-team-vocab](#detection-team-vocab)

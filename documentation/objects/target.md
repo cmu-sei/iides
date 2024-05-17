@@ -5,7 +5,7 @@ The system, data, person, or physical property that was targeted by the insider.
 ## Properties
 
 - **`id`** (required) *(string)* : A unique string that begins with "target--" and is appended with a UUIDv4.
-  - Uses pattern: ^target--[UUIDv4]
+  - Uses pattern: ^target--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
 - **`asset_type`** (required) *(string)* : The type of target.
 	- A constant from [target-asset-vocab](#target-asset-vocab)
   - Required if `category` exists.

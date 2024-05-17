@@ -5,7 +5,7 @@ Term of imprisonment or probation, or amount of fines, imposed on a convicted de
 ## Properties
 
 - **`id`** (required) *(string)* : A unique string that begins with "sentence--" and is appended with a UUIDv4.
-  - Uses pattern: ^sentence--[UUIDv4]
+  - Uses pattern: ^sentence--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
 - **`sentence_type`** (required) *(string)* : The type of sentence that was ordered.
 	- A constant from [sentence-type-vocab](#sentence-type-vocab)
 - **`quantity`** *(integer)* : The quantity of the sentence type imposed. MUST be used with the `metric` property if used.

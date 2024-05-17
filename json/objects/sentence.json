@@ -1,5 +1,5 @@
 {
-    "$id": "[REPLACE with full github url to this json file]",
+    "$id": "iides/json/objects/sentence.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Sentence",
     "description": "Term of imprisonment or probation, or amount of fines, imposed on a convicted defendant for criminal wrongdoing, or the amount of damages imposed for civil cases. Generally, the amount of punishment for an offense. A sentence must be connected to only one court case. A court case may have one or more sentences.",
@@ -8,7 +8,7 @@
       "id": {
         "type": "string",
         "description": "A unique string that begins with \"sentence--\" and is appended with a UUIDv4.",
-        "pattern": "^sentence--[UUIDv4]"
+        "pattern": "^sentence--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
       },
       "sentence_type": {
         "type": "string",

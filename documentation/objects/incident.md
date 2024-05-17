@@ -5,7 +5,7 @@ Description and summary details of the incident.
 ## Properties
 
 - **`id`** (required) *(string)* : A unique string that begins with "incident--" and is appended with a UUIDv4.
-  - Uses pattern: ^incident--[UUIDv4]
+  - Uses pattern: ^incident--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
 - **`cia_effect`** *(array)* : CIA triad components which were affected.
   - One or more constants from [cia-vocab](#cia-vocab)
 - **`incident_type`** *(array)* : Categorization of the incident.

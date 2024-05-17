@@ -1,5 +1,5 @@
 {
-    "$id": "[REPLACE with full github url to this json file]",
+    "$id": "iides/json/objects/stressor.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Stressor",
     "description": "Events that occur within the victim organization and precipitate insider activity.",
@@ -8,7 +8,7 @@
       "id": {
         "type": "string",
         "description": "A unique string that begins with \"stressor--\" and is appended with a UUIDv4.",
-        "pattern": "^stressor--[UUIDv4]"
+        "pattern": "^stressor--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
       },
       "date": {
         "type": "string",

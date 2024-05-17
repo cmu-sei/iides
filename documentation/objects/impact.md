@@ -5,7 +5,7 @@ The quantified impact of the incident on the victim organization. An incident ma
 ## Properties
 
 - **`id`** (required) *(string)* : A unique string that begins with "impact--" and is appended with a UUIDv4.
-  - Uses pattern: ^impact--[UUIDv4]
+  - Uses pattern: ^impact--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
 - **`high`** (required) *(number)* : The quantity of the impact being measured. If a range, the high end of the range.
 - **`low`** *(number)* : If a range, the low estimate of the range.
 - **`metric`** (required) *(string)* : The type of impact being quantified.

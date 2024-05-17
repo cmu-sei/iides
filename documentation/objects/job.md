@@ -5,7 +5,7 @@ Details of the employment relationship between an individual and an organization
 ## Properties
 
 - **`id`** (required) *(string)* : A unique string that begins with "job--" and is appended with a UUIDv4.
-  - Uses pattern: ^job--[UUIDv4]
+  - Uses pattern: ^job--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
 - **`job_function`** *(string)* : Functional category of the individual's job. job_function and occupation vocabularies are based in large part on the 2018 Standard Occupational Classification system published by the Bureau of Labor Statistics.
 	- A constant from [job-function-vocab](#job-function-vocab)
   - Required if `occupation` exists.
