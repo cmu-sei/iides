@@ -1,0 +1,85 @@
+{
+    "description": "Charge Test",
+    "$schema": "../json/objects/charge.json",
+    "tests": [
+        {
+            "data": {
+                "id": "charge--0330e40d-fc95-4e1f-b09c-ec0ed448acab",
+                "title": "test string",
+                "section": "test string",
+                "plea_bargain": false
+            },
+            "description": "incomplete but correct",
+            "valid": true
+        },
+        {
+            "data": {
+                "id": "charge--0330e40d-fc95-4e1f-b09c-ec0ed448acab",
+                "title": "test string",
+                "section": "test string",
+                "nature_of_offense": "test string",
+                "count": 4,
+                "plea": "2",
+                "plea_bargain": false,
+                "disposition": "4"
+            },
+            "description": "complete and correct",
+            "valid": true
+        },
+        {
+            "data": {
+                "id": "chage--0330e40d-fc95-4e1f-b09c-ec0ed448acab",
+                "title": "test string",
+                "section": "test string",
+                "nature_of_offense": "test string",
+                "count": 4,
+                "plea": "2",
+                "plea_bargain": false,
+                "disposition": "4"
+            },
+            "description": "incorrect UUID",
+            "valid": false
+        },
+        {
+            "data": {
+                "id": "chage--0330e40d-fc95-4e1f-b09c-ec0ed448acab",
+                "title": "test string",
+                "section": "test string",
+                "nature_of_offense": "test string",
+                "count": "4",
+                "plea": "2",
+                "plea_bargain": false,
+                "disposition": "4"
+            },
+            "description": "incorrect count type",
+            "valid": false
+        },
+        {
+            "data": {
+                "id": "charge--0330e40d-fc95-4e1f-b09c-ec0ed448acab",
+                "title": "test string",
+                "section": "test string",
+                "nature_of_offense": "test string",
+                "count": 4,
+                "plea": "2",
+                "plea_bargain": false,
+                "disposition": "wrong"
+            },
+            "description": "incorrect disposition",
+            "valid": false
+        },
+        {
+            "data": {
+                "id": "charge--0330e40d-fc95-4e1f-b09c-ec0ed448acab",
+                "section": "test string",
+                "nature_of_offense": "test string",
+                "count": 4,
+                "plea": "2",
+                "plea_bargain": false,
+                "disposition": "4"
+            },
+            "description": "missing required field, title",
+            "valid": false
+        }
+    ]
+}

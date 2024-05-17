@@ -8,10 +8,10 @@
 
 ## Status
 
-json formatted, validated and verified
+json formatted and validated
 
 - [ ] Accomplice
-- [ ] Charge
+- [x] Charge
 - [ ] Court Case
 - [ ] Detection
 - [ ] Impact
