@@ -3,7 +3,7 @@
     "objects": [
         {
             "id": "accomplice--[UUIDv4]",
-            "relationship_to_insider": "(1)acquaintance, (2)colleague, (3)former colleague, (4)friend, (5)relative, (6)significant other, (8)Unknown, (9)other"
+            "relationship_to_insider": "2"
         },
         {
             "id": "charge--3fcbf985-f10e-45b7-aacb-e16c89da1105",
@@ -64,7 +64,7 @@
             "incident_role": "1",
             "motive": ["03", "05"],
             "substance_use_during_incident": false,
-            "concerning_behaviors": ["(3.2, 3.2.4)", "(3.2, 3.2.3)", "(3.5, 3.5.1)", "(3.5, 3.5.2)"],
+            "concerning_behaviors": [["3.2", "3.2.4"], ["3.2", "3.2.3"], ["3.5", "3.5.1"], ["3.5", "3.5.2"]],
             "comment": "Anthony Levandowski's actions of transferring confidential files from Waymo to his personal devices sparked the lawsuit. No public evidence of substance use or psychological issues affecting his actions has been documented."
             },
             {
@@ -97,7 +97,7 @@
         {
             "id": "note--[UUIDv4]",
             "author": "Example Author",
-            "date": "date and time (format: date-time) that the note was authored",
+            "date": "date and time [format: date-time] that the note was authored",
             "comment": "This was a civil case, the insider was formally charged through a third party civil court and later filed for bankruptcy"
         },
 
@@ -133,7 +133,7 @@
         {
             "id": "response--[UUIDv4]",
             "investigated_by": ["99", "02"],
-            "investigation_events": ["(02, 2016-11-00)"],
+            "investigation_events": [["02", "2016-11-00"]],
             "comment": "clarifying comme"
         },
         {

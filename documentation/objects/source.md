@@ -5,7 +5,7 @@ Document that provides information about one or more aspects of the incident.
 ## Properties
 
 - **`id`** (required) *(string)* : A unique string that begins with "source--" and is appended with a UUIDv4.
-  - Uses pattern: ^source--[UUIDv4]
+  - Uses pattern: ^source--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
 - **`title`** (required) *(string)* : The title of the document.
 - **`source_type`** *(string)* : The "source" or author of the source document.
 	- A constant from [source-type-vocab](#source-type-vocab)

@@ -1,5 +1,5 @@
 {
-    "$id": "[REPLACE with full github url to this json file]",
+    "$id": "iides/json/objects/impact.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Impact",
     "description": "The quantified impact of the incident on the victim organization. An incident may have one or more impacts. An impact MUST be associated with only one incident.",
@@ -8,7 +8,7 @@
       "id": {
         "type": "string",
         "description": "A unique string that begins with \"impact--\" and is appended with a UUIDv4.",
-        "pattern": "^impact--[UUIDv4]"
+        "pattern": "^impact--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
       },
       "high": {
         "type": "number",

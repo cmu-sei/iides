@@ -1,5 +1,5 @@
 {
-    "$id": "[REPLACE with full github url to this json file]",
+    "$id": "iides/json/objects/job.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Job",
     "description": "Details of the employment relationship between an individual and an organization.",
@@ -8,7 +8,7 @@
         "id": {
             "type": "string",
             "description": "A unique string that begins with \"job--\" and is appended with a UUIDv4.",
-            "pattern": "^job--[UUIDv4]"
+            "pattern": "^job--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
         },
         "job_function": {
             "type": "string",
@@ -17,7 +17,7 @@
         },
         "occupation": {
             "type": "string",
-            "description": "The subcategory of the individual's job. When present, `job_function` should also be present. The chosen for occupation MUST match the constant for job_function.",
+            "description": "The subcategory of the individual's job. When present, `job_function` should also be present. The chosen constant for occupation MUST match the constant for job_function.",
             "$ref": "#/$defs/occupation-vocab"
         },
         "title": {
@@ -731,39 +731,24 @@
         "employment-type-vocab": {
             "oneOf": [
                 {
-                    "const": "CCT",
-                    "title": "Current Contractor",
+                    "const": "CTR",
+                    "title": "Contractor",
                     "description": "Individual not directly employed by the organization whose job responsibilities they filling (self-employed or employed by a different, contracting organization)."
                 },
                 {
-                    "const": "CFT",
-                    "title": "Current Full-time",
+                    "const": "FLT",
+                    "title": "Full-time",
                     "description": "Individual who is directly employed by the organization and works at least 35 hours per week (or is classified by the organization as a full-time employee)."
                 },
                 {
-                    "const": "CPT",
-                    "title": "Current Part-time",
+                    "const": "PRT",
+                    "title": "Part-time",
                     "description": "Individual who is directly employed by the organization and works less than 35 hours per week (or is classified by the organization as a part-time employee)."
                 },
                 {
                     "const": "INT",
                     "title": "Intern/Trainee/Aprentice",
                     "description": "An advanced student or graduate gaining supervised practical experience in a particular field or job role, sometimes without pay."
-                },
-                {
-                    "const": "FCT",
-                    "title": "Former Contractor",
-                    "description": "Individual not directly employed by the organization whose job responsibilities they previously filled (self-employed or employed by a different, contracting organization)."
-                },
-                {
-                    "const": "FFT",
-                    "title": "Former Full Time",
-                    "description": "Individual who used to work for the organization on a full time basis (35 hours or more per week), but is no longer employed by the organization."
-                },
-                {
-                    "const": "FPT",
-                    "title": "Former Part Time",
-                    "description": "Individual who used to work for the organizaion on a part time basis, but is no longer employed by the organizaion."
                 },
                 {
                     "const": "TMP",

@@ -5,11 +5,11 @@ Details of the employment relationship between an individual and an organization
 ## Properties
 
 - **`id`** (required) *(string)* : A unique string that begins with "job--" and is appended with a UUIDv4.
-  - Uses pattern: ^job--[UUIDv4]
+  - Uses pattern: ^job--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
 - **`job_function`** *(string)* : Functional category of the individual's job. job_function and occupation vocabularies are based in large part on the 2018 Standard Occupational Classification system published by the Bureau of Labor Statistics.
 	- A constant from [job-function-vocab](#job-function-vocab)
   - Required if `occupation` exists.
-- **`occupation`** *(string)* : The subcategory of the individual's job. When present, `job_function` should also be present. The chosen for occupation MUST match the constant for job_function.
+- **`occupation`** *(string)* : The subcategory of the individual's job. When present, `job_function` should also be present. The chosen constant for occupation MUST match the constant for job_function.
 	- A constant from [occupation-vocab](#occupation-vocab)
   - Required if `title` exists.
 - **`title`** *(string)* : The individual's job title. If title is specified, `occupation` should be as well.
@@ -178,17 +178,14 @@ Constants: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`
 
 ### employment-type-vocab
 
-Constants: `CCT`, `CFT`, `CPT`, `INT`, `FCT`, `FFT`, `FPT`, `TMP`, `VOL`, `OTH`
+Constants: `CTR`, `FLT`, `PRT`, `INT`, `TMP`, `VOL`, `OTH`
 
 | Const | Value | Description |
 | --- | --- | --- |
-| CCT | Current Contractor | Individual not directly employed by the organization whose job responsibilities they filling (self-employed or employed by a different, contracting organization).|
-| CFT | Current Full-time | Individual who is directly employed by the organization and works at least 35 hours per week (or is classified by the organization as a full-time employee).|
-| CPT | Current Part-time | Individual who is directly employed by the organization and works less than 35 hours per week (or is classified by the organization as a part-time employee).|
+| CTR | Contractor | Individual not directly employed by the organization whose job responsibilities they filling (self-employed or employed by a different, contracting organization).|
+| FLT | Full-time | Individual who is directly employed by the organization and works at least 35 hours per week (or is classified by the organization as a full-time employee).|
+| PRT | Part-time | Individual who is directly employed by the organization and works less than 35 hours per week (or is classified by the organization as a part-time employee).|
 | INT | Intern/Trainee/Aprentice | An advanced student or graduate gaining supervised practical experience in a particular field or job role, sometimes without pay.|
-| FCT | Former Contractor | Individual not directly employed by the organization whose job responsibilities they previously filled (self-employed or employed by a different, contracting organization).|
-| FFT | Former Full Time | Individual who used to work for the organization on a full time basis (35 hours or more per week), but is no longer employed by the organization.|
-| FPT | Former Part Time | Individual who used to work for the organizaion on a part time basis, but is no longer employed by the organizaion.|
 | TMP | Temporary Employee | Individual hired for a brief period of time or until a certain project is completed.|
 | VOL | Volunteer | Individual not employed by the organization, but who donates their time to working on projects without receiving pay or benefits.|
 | OTH | Other | Other employment type not listed in this vocabulary.|

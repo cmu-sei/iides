@@ -1,5 +1,5 @@
 {
-    "$id": "[REPLACE with full github url to this json file]",
+    "$id": "iides/json/objects/ttp.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "TTP",
     "description": "Action taken by the insider or colluding outsider(s) during the course of the incident, categorized into a tactic, technique, and procedure (TTP). An incident may have multiple TTPs. A TTP must be connected to an incident.",
@@ -8,7 +8,7 @@
       "id": {
         "type": "string",
         "description": "A unique string that begins with \"ttp--\" and is appended with a UUIDv4.",
-        "pattern": "^ttp--[UUIDv4]"
+        "pattern": "^ttp--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
       },
       "date": {
         "type": "string",

@@ -1,5 +1,5 @@
 {
-	"$id": "[REPLACE with full github url to this json file]",
+	"$id": "iides/json/structs/org-relationship.json",
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "Org Relationship",
 	"description": "Describes the relationship between two organizations involved in an incident.",
@@ -8,17 +8,17 @@
 		"id": {
 			"type": "string",
 			"description": "A unique string that begins with \"org-relationship--\" and is appended with a UUIDv4.",
-			"pattern": "^org-relationship--[UUIDv4]"
+			"pattern": "^org-relationship--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
 		},
         "org1": {
 			"type": "string",
 			"description": "The id of the first organization object.",
-			"pattern": "^organization--[UUIDv4]"
+			"pattern": "^organization--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
 		},
         "org2": {
 			"type": "string",
 			"description": "The id of the second organization object.",
-			"pattern": "^organization--[UUIDv4]"
+			"pattern": "^organization--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
 		},
         "relationship": {
 			"type": "string",

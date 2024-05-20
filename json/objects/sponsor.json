@@ -1,5 +1,5 @@
 {
-    "$id": "[REPLACE with full github url to this json file]",
+    "$id": "iides/json/objects/sponsor.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Sponsor",
     "description": "An individual or entity that recruited, instigated, motivated, or otherwise supported the insider's action. A sponsor MUST be associated with at least one insider or accomplice. It may be associated with multiple insider and/or accomplices.",
@@ -8,7 +8,7 @@
       "id": {
         "type": "string",
         "description": "A unique string that begins with \"sponsor--\" and is appended with a UUIDv4.",
-        "pattern": "^sponsor--[UUIDv4]"
+        "pattern": "^sponsor--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
       },
       "name": {
         "type": "string",

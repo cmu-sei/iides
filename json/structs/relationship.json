@@ -1,5 +1,5 @@
 {
-	"$id": "[REPLACE with full github url to this json file]",
+	"$id": "iides/json/structs/relationship.json",
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "Relationship",
 	"description": "A structure for connecting two IIDES objects together.",
@@ -8,17 +8,17 @@
 		"id": {
 			"type": "string",
 			"description": "A unique string that begins with \"relationship--\" and is appended with a UUIDv4.",
-			"pattern": "^relationship--[UUIDv4]"
+			"pattern": "^relationship--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
 		},
       "object1": {
 			"type": "string",
 			"description": "The id of the first object.",
-			"pattern": "^XXXX--[UUIDv4]"
+			"pattern": "^[a-z]*--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
 		},
       "object2": {
 			"type": "string",
 			"description": "The id of the second object.",
-			"pattern": "^XXXX--[UUIDv4]"
+			"pattern": "^[a-z]*--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
 		}
 	},
 	"required": [

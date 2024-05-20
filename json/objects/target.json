@@ -1,5 +1,5 @@
 {
-    "$id": "[REPLACE with full github url to this json file]",
+    "$id": "iides/json/objects/target.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Target",
     "description": "The system, data, person, or physical property that was targeted by the insider. An incident may have many targets.",
@@ -8,11 +8,11 @@
       "id": {
         "type": "string",
         "description": "A unique string that begins with \"target--\" and is appended with a UUIDv4.",
-        "pattern": "^target--[UUIDv4]"
+        "pattern": "^target--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
       },
       "asset_type": {
         "type": "string",
-        "description": "The form the target as specified.",
+        "description": "The type of target.",
         "$ref": "#/$defs/target-asset-vocab"
       },
       "category": {
@@ -36,9 +36,12 @@
         "$ref": "#/$defs/target-owner-vocab"
       },
       "sensitivity": {
-        "type": "string",
+        "type": "array",
         "description": "The level of sensitivity and controls applied to a target.",
-        "$ref": "#/$defs/target-sensitivity-vocab"
+        "items": {
+          "$ref": "#/$defs/target-sensitivity-vocab"
+        },
+      "minItems": 1
       },
       "description": {
         "type": "string",
@@ -69,7 +72,7 @@
               {
                 "const": "2",
                 "title": "Information",
-                "description": "Data/business material based, which contain important details belonging to a specific target owner."
+                "description": "Data/business materials which contain important details belonging to a specific target owner."
               },
               {
                 "const": "3",
@@ -103,7 +106,7 @@
               {
                 "const": "2.1",
                 "title": "Product Information",
-                "description": "Insider used technical means to target product information"
+                "description": "Information about products or services the organization sells"
               },
               {
                 "const": "2.2",
@@ -138,12 +141,12 @@
               {
                 "const": "4.4",
                 "title": "Medical Information",
-                "description": "Information about an individuals Protected Health Information (PHI), Medicare/Medicaid, prescription medication, etc."
+                "description": "Information about an individuals' Protected Health Information (PHI), Medicare/Medicaid, prescription medication, etc."
               },
               {
                 "const": "4.5",
                 "title": "Communication Systems",
-                "description": "Systems by which messages are transferred."
+                "description": "Servers, routers, phone systems, etc. that enable communication within the organization, or between the organization and external entities."
               },
               {
                 "const": "5.1",
@@ -153,7 +156,7 @@
               {
                 "const": "5.2",
                 "title": "Software",
-                "description": "Digital systems that operate computers."
+                "description": "Software or applications running on the organization's devices or systems."
               },
               {
                 "const": "5.3",
@@ -163,7 +166,7 @@
               {
                 "const": "6.1",
                 "title": "Unknown",
-                "description": "Unclear from the documentation what was targeted."
+                "description": "Unclear what was targeted."
               }
             ]
         },
@@ -172,27 +175,27 @@
               {
                 "const": "1.1.1",
                 "title": "Blueprint Plans",
-                "description": "The insider targeted schematics for facility layout."
+                "description": "Schematics for facility layout or products/devices."
               },
               {
                 "const": "1.1.2",
                 "title": "Facilities",
-                "description": "Buildings, offices, areas of buildings, or functions of buildings (such as disabling a door). Federal Government."
+                "description": "Buildings, offices, areas of buildings, or functions of buildings (such as disabling a door)."
               },
               {
                 "const": "1.1.3",
                 "title": "Physical Products",
-                "description": "Insider targeted tangible objects owned or managed by the organization"
+                "description": "Tangible objects owned or managed by the organization."
               },
               {
                 "const": "2.1.1",
                 "title": "Product Information",
-                "description": "Insider used technical means to target product information."
+                "description": "Information about products or services offered by the organization."
               },
               {
                 "const": "2.1.2",
                 "title": "Proprietary Information",
-                "description": "The insider targeted information that gives the organization a competitive advantage, such as trade secrets, formulas, designs, or processes, which could be exposed or sold to a competitor."
+                "description": "Information that gives the organization a competitive advantage, such as trade secrets, formulas, designs, or processes, which could be exposed or sold to a competitor."
               },
               {
                 "const": "2.2.1",
@@ -202,262 +205,257 @@
               {
                 "const": "2.2.2",
                 "title": "Business System",
-                "description": "The insider targeted the system which the business ran."
+                "description": "System which the organization requires to operate the business."
               },
               {
                 "const": "2.2.3",
                 "title": "Commerce information",
-                "description": "The insider targeted data related to the organization's business dealings, such as customer lists, pricing strategies, supplier contracts, or marketing plans."
+                "description": "Data related to the organization's business dealings, such as customer lists, pricing strategies, supplier contracts, or marketing plans."
               },
               {
                 "const": "2.2.4",
                 "title": "Contract Information",
-                "description": "The insider targeted information related to legal agreements made between the organization and other organizations or individuals such as employees or contractors."
+                "description": "Information related to legal agreements made between the organization and other organizations or individuals such as employees or contractors."
               },
               {
                 "const": "2.2.5",
                 "title": "Design and Plans",
-                "description": "The insider targeted product design or information for a business plan."
+                "description": "Product design or information for a business plan."
               },
               {
                 "const": "2.2.6",
                 "title": "Payroll Information",
-                "description": "The insider targeted data relating to employee salaries, benefits, and tax information."
+                "description": "Data relating to employee salaries, benefits, and tax information."
               },
               {
                 "const": "2.3.1",
                 "title": "Classified Information",
-                "description": "The insider targeted information that is restricted by the government for reasons of national security."
+                "description": "Information that is restricted by the government for reasons of national security."
               },
               {
                 "const": "2.3.2",
                 "title": "Sensitive Information",
-                "description": "The insider targeted data that could cause harm to the organization or its stakeholders if leaked or misused."
+                "description": "Data that could cause harm to the organization or its stakeholders if leaked or misused."
               },
               {
                 "const": "3.1.1",
                 "title": "Accounting Records",
-                "description": "The insider targeted records tracking money, inventory, or purchases."
+                "description": "Records tracking money, inventory, or purchases."
               },
               {
                 "const": "3.1.2",
                 "title": "ATM Withdrawal",
-                "description": "The insider targeted money that was withdrawn from an ATM."
+                "description": "Money that withdrawn from an ATM."
               },
               {
                 "const": "3.1.3",
                 "title": "Bank Account Information",
-                "description": "The insider targeted bank account information for a peculiar person or entity."
+                "description": "Bank account information for a peculiar person or entity."
               },
               {
                 "const": "3.1.4",
                 "title": "Bitcoin",
-                "description": "The insider targeted money that had been in the form of virtual currency."
+                "description": "Money in the form of virtual currency."
               },
               {
                 "const": "3.1.5",
                 "title": "Company Funds",
-                "description": "The insider targeted monetary assets used for financing operations and initiatives of the organization."
+                "description": "Monetary assets used for financing operations and initiatives of the organization."
               },
               {
                 "const": "3.1.6",
                 "title": "Gift Cards",
-                "description": "The insider targeted money in the form of prepaid debits cards for use at a specific vendor."
+                "description": "Money in the form of prepaid debit cards for use at a specific vendor."
               },
               {
                 "const": "3.1.7",
                 "title": "Invoices",
-                "description": "The insider targeted money in the form of receiving funds from fraudulent invoices."
+                "description": "Money in the form of receiving funds from fraudulent invoices."
               },
               {
                 "const": "3.1.8",
                 "title": "Issued Checks",
-                "description": "The insider targeted money in the form of receiving funds from fraudulent checks."
+                "description": "Money in the form of receiving funds from fraudulent checks."
               },
               {
                 "const": "3.1.9",
                 "title": "Loan",
-                "description": "The insider targeted money in the form of temporary funds given with the expectation of being repaid with interest."
+                "description": "Money in the form of temporary funds given with the expectation of being repaid with interest."
               },
               {
                 "const": "3.1.10",
                 "title": "Physical Currency",
-                "description": "The insider targeted money in the form of tangible paper bills, coins, or other means of circulation that holds direct monetary value."
+                "description": "Money in the form of tangible paper bills, coins, or other means of circulation that holds direct monetary value."
               },
               {
                 "const": "3.1.11",
                 "title": "Refunds",
-                "description": "The insider targeted money in the form of reimbursements for returend funds."
+                "description": "Money in the form of reimbursements for returend goods or services."
               },
               {
                 "const": "3.1.12",
                 "title": "Reimbursement Forms",
-                "description": "The insider targeted information related to reports of incurred transaction expenses."
+                "description": "Information related to reports of incurred transaction expenses."
               },
               {
                 "const": "3.1.13",
                 "title": "Tax Information",
-                "description": "Insider targeted tax information to gain personal identifier information."
+                "description": "Tax forms, documentation, or identifiers."
               },
               {
                 "const": "3.1.14",
                 "title": "Time Sheets",
-                "description": "Insider manipulated time sheets to gain fraudulent funds."
+                "description": "Digital or analog forms for employees to report hours worked."
               },
               {
                 "const": "4.1.1",
                 "title": "Client List",
-                "description": "The insider targeted information in the form of a listing of organizations or individuals which are provided services by the organization."
+                "description": "Listing of organizations or individuals which are provided services by the organization."
               },
               {
                 "const": "4.1.2",
                 "title": "Customer Data",
-                "description": "The insider targeted information about customers or provided by customers"
+                "description": "Information about customers or provided by customers"
               },
               {
                 "const": "4.1.3",
-                "title": "Alien Files",
-                "description": "The insider targeted information that contained records of individuals that were unaturalized immigrants."
+                "title": "Immigration Records",
+                "description": "Records of individuals who are unaturalized immigrants."
               },
               {
                 "const": "4.1.4",
                 "title": "Credit Card Information",
-                "description": "The insider targeted information relating to a credit card, such as the card number, the cardholder's name, when the card expires and the card's security code."
+                "description": "Information relating to a credit card, such as the card number, the cardholder's name, when the card expires and the card's security code."
               },
               {
                 "const": "4.1.5",
                 "title": "Insurance Claims",
-                "description": "The insider targeted information relating to monetary claims made in request to an insurance policy."
+                "description": "Information relating to monetary claims made in request to an insurance policy."
               },
               {
                 "const": "4.2.1",
                 "title": "Employee Data",
-                "description": "The insider targeted information about employees or belonging to employees of an organization."
+                "description": "Information about employees or belonging to employees of an organization."
               },
               {
                 "const": "4.3.1",
                 "title": "Driver's license",
-                "description": "The insider targeted information related to a legal identification that provides a permit to operate a motor vehicle."
+                "description": "Information related to a legal identification that provides a permit to operate a motor vehicle."
               },
               {
                 "const": "4.3.2",
                 "title": "Personal Photos",
-                "description": "The insider targeted images taken that are of a personal nature."
+                "description": "Images of a personal nature or unrelated to the organization's business."
               },
               {
                 "const": "4.3.3",
                 "title": "PII",
-                "description": "The insider targeted sensitive information that can be used to identify someone."
+                "description": "Sensitive information that can be used to identify an individual."
               },
               {
                 "const": "4.4.1",
                 "title": "PHI",
-                "description": "The insider targeted sensitive information that is indicative of someone's health condition."
+                "description": "Sensitive information that is indicative of an individual's health condition."
               },
               {
                 "const": "4.4.2",
                 "title": "Medicare/Medicaid",
-                "description": "The insider targeted information related to health insurance provided by the state to the elderly or financially limited populations."
+                "description": "Information related to health insurance provided by the state to the elderly or financially limited populations."
               },
               {
                 "const": "4.4.3",
                 "title": "Prescription Medication",
-                "description": "The insider targeted information that relates to doctors notes permiting the purchase of controlled medical substances."
+                "description": "Iinformation that relates to doctors notes permiting the purchase of controlled medical substances."
               },
               {
                 "const": "4.4.4",
                 "title": "Prescription Pads",
-                "description": "The insider targeted the secured stationery notes that doctors use for writing prescriptions."
+                "description": "Secured stationery notes that doctors use for writing prescriptions."
               },
               {
                 "const": "4.5.1",
                 "title": "Emails",
-                "description": "The insider targeted electronic communications in the form of static messages shared to specified user addresses via a network."
+                "description": "Electronic communications in the form of static messages shared to specified user addresses via a network."
               },
               {
                 "const": "4.5.2",
                 "title": "Telecommunication Systems",
-                "description": "The insider targeted hardware or software networks that facilitate communications over a range."
+                "description": "Networks that facilitate digital or voice communications."
               },
               {
                 "const": "5.1.1",
-                "title": "Access to System",
-                "description": "The insider’s target was to gain access to the system. This can be a more general case where the case details do not describe how insider was gaining access but intended to gain access."
+                "title": "Backup Data",
+                "description": "Data that can be used to restore a system or dataset if it becomes compromised."
               },
               {
                 "const": "5.1.2",
-                "title": "Backup Data",
-                "description": "The insider targeted secured copies of the data held on systems that would be used to restore the system if it became compromised."
+                "title": "Backup Tapes",
+                "description": "Stored backup data copied to a tape cartridge."
               },
               {
                 "const": "5.1.3",
-                "title": "Backup Tapes",
-                "description": "The insider targeted stored backup data copied to a tape cartridge."
+                "title": "Database",
+                "description": "Structured electronic digital information repository."
               },
               {
                 "const": "5.1.4",
-                "title": "Database",
-                "description": "The insider targeted a structured electronic digital information repository."
+                "title": "Email Servers",
+                "description": "Systems used to host and deliver email services."
               },
               {
                 "const": "5.1.5",
-                "title": "Email Servers",
-                "description": "The insider compromised the systems used to host and deliver email services."
+                "title": "FTP Servers",
+                "description": "Systems which allow the exchange of files between two or more computers."
               },
               {
                 "const": "5.1.6",
-                "title": "FTP Servers",
-                "description": "The insider targeted the FTP server, which allows the exchange of files between two or more computers."
+                "title": "Network Configuration",
+                "description": "Routing or network access configuration."
               },
               {
                 "const": "5.1.7",
-                "title": "Network Configuration",
-                "description": "Insider targeted the network configuration access in order to create errors."
+                "title": "Network Login Information",
+                "description": "Information related to access credentials for a network."
               },
               {
                 "const": "5.1.8",
-                "title": "Network Login Information",
-                "description": "The insider targeted information related to access credentials for a network."
+                "title": "Servers",
+                "description": "System(s) which host information or digital services for end users."
               },
               {
                 "const": "5.1.9",
-                "title": "Servers",
-                "description": "Insider used technical methods to target the servers."
-              },
-              {
-                "const": "5.1.10",
                 "title": "Website Hosting",
-                "description": "The insider targeted the means for hosting and delivering website services over the internet."
+                "description": "System(s) for delivering websites over the internet."
               },
               {
                 "const": "5.2.1",
                 "title": "Backup Software",
-                "description": "The insider's target was software designed to create copies of data for safe storage."
+                "description": "Software designed to create copies of data for safe storage."
               },
               {
                 "const": "5.2.2",
                 "title": "Software Policy Protocol",
-                "description": "The insider's target was the rules developed by an organization for the ideal deployment of a software."
+                "description": "Rules developed by an organization for the ideal deployment of a software."
               },
               {
                 "const": "5.2.3",
                 "title": "Source code",
-                "description": "The insider targeted the underlying codebase for a product or system."
+                "description": "Underlying codebase for a product or system."
               },
               {
                 "const": "5.2.4",
                 "title": "Unreleased Software",
-                "description": "The insider's target was software that was not yet made available."
+                "description": "Software that has not yet been made available."
               },
               {
                 "const": "5.3.1",
                 "title": "Login Information",
-                "description": "The insider targeted credentials used for access to a technological system."
+                "description": "Credentials used for access to a technological system."
               },
               {
                 "const": "5.3.2",
                 "title": "Passwords",
-                "description": "The insider targeted access credentials in the form of a text string."
+                "description": "Access credentials in the form of a text string."
               }
             ]
         },
@@ -476,17 +474,17 @@
               {
                 "const": "3",
                 "title": "Personnel",
-                "description": "People or peoples."
+                "description": "People or individuals."
               },
               {
                 "const": "4",
                 "title": "Other",
-                "description": "Other format."
+                "description": "Other format not listed in this vocabulary."
               },
               {
                 "const": "5",
                 "title": "Unknown",
-                "description": "Unclear from the documentation what was targeted."
+                "description": "Unclear what was targeted."
               }
             ]
         },
@@ -510,71 +508,146 @@
               {
                 "const": "T",
                 "title": "Third Party",
-                "description": "Parties external to an organization or consumers."
+                "description": "Parties external to an organization and consumers."
               },
               {
                 "const": "Z",
                 "title": "Other",
-                "description": "Other owner."
+                "description": "Other owner not listed in this vocabulary."
               }
             ]
         },
         "target-sensitivity-vocab": {
             "oneOf": [
               {
-                "const": "CTI",
+                "const": "1",
+                "title": "Unclassified",
+                "description": "No classification"
+              },
+              {
+                "const": "2",
+                "title": "Confidential",
+                "description": "Public disclosure would damage national security"
+              },
+              {
+                "const": "3",
+                "title": "FOUO",
+                "description": "For official use only"
+              },
+              {
+                "const": "4",
+                "title": "Secret",
+                "description": "Public disclosure would cause serious damage to national security"
+              },
+              {
+                "const": "5",
+                "title": "SecretNoForn",
+                "description": "Secret / restricted to country of source"
+              },
+              {
+                "const": "6",
+                "title": "Top Secret (TS)",
+                "description": "Top secret, unauthorized disclosure would cause exceptionally grave damage to national security"
+              },
+              {
+                "const": "7",
+                "title": "TS/SCI",
+                "description": "Top secret / Sensitive compartmented information"
+              },
+              {
+                "const": "8",
+                "title": "NATORestricted",
+                "description": "North Atlantic Treaty Organization Restricted"
+              },
+              {
+                "const": "9",
+                "title": "NATOConfidential",
+                "description": "North Atlantic Treaty Organization Confidential"
+              },
+              {
+                "const": "10",
+                "title": "NATOSecret",
+                "description": "North Atlantic Treaty Organization Secret"
+              },
+              {
+                "const": "11",
+                "title": "CosmicTopSecret",
+                "description": "Top Secret documents managed by a COSMIC registry"
+              },
+              {
+                "const": "12",
+                "title": "FVEYProprietary",
+                "description": "Five eyes proprietary"
+              },
+              {
+                "const": "13",
+                "title": "Proprietary",
+                "description": "Information a company wishes to keep confidential (e.g. trade secrets)"
+              },
+              {
+                "const": "14",
+                "title": "Personal identifiable information (PII)",
+                "description": "Information which can be used to distinguish or trace an individual's identity, such as their name, social security number, biometric records, etc. alone, or when combined with other personal or identifying information which is linked or linkable to a specific individual, such as date and place of birth, mother's maiden name, etc."
+              },
+              {
+                "const": "15",
+                "title": "HIPPA/Protected Health Information (PHI)",
+                "description": "Individually identifiable health information, held or maintained by a covered entity or its business associates acting for the covered entity, that is transmitted or maintained in any form or medium. This includes identifiable demographic and other information relating to the past, present, or future physical or mental health or condition of an individual, or the provision or payment of health care to an individual that is created or received by a health care provider, health plan, employer, or health care clearinghouse."
+              },          
+              {
+                "const": "16",
+                "title": "GDPR",
+                "description": "General data protection regulation"
+              },
+              {
+                "const": "17",
+                "title": "Public",
+                "description": "Unrestricted/open to the public"
+              },
+              {
+                "const": "18",
+                "title": "CUI",
+                "description": "Controlled Unclassified Information"
+              },
+              {
+                "const": "19",
                 "title": "Controlled Technical Information (CTI)",
                 "description": "Technical information subject to controls to access, use, reproduction, or dissemination."
               },
               {
-                "const": "FRP",
+                "const": "20",
                 "title": "FERPA (student education records)",
                 "description": "Information subject to sensitity due to relevance to student educational privacy."
               },
               {
-                "const": "FTI",
+                "const": "21",
                 "title": "Federal Tax Information (FTI)",
                 "description": "Information that subject to sensitivty that is derived from tax returns."
               },
               {
-                "const": "GVT",
+                "const": "22",
                 "title": "Government Sensitive",
                 "description": "Classified or sensitive information used by and only available to the government."
               },
               {
-                "const": "ITP",
+                "const": "23",
                 "title": "Intellectual Property (IP)",
                 "description": "Information that has been created and is subject to protection of its creativity."
               },
               {
-                "const": "LES",
+                "const": "24",
                 "title": "Law Enforcement Sensitive",
                 "description": "Information, software, or device used by and only available to law enforcement."
               },
               {
-                "const": "NPB",
+                "const": "25",
                 "title": "Non-Public",
-                "description": "Information not made available to the public"
+                "description": "Information not made available to the public."
               },
               {
-                "const": "PCI",
+                "const": "26",
                 "title": "Credit/Payment Card (PCI)",
                 "description": "Credit/payment card information."
-              },
-              {
-                "const": "PHI",
-                "title": "Protected Health Information (PHI)",
-                "description": "Individually identifiable health information, held or maintained by a covered entity or its business associates acting for the covered entity, that is transmitted or maintained in any form or medium. This includes identifiable demographic and other information relating to the past, present, or future physical or mental health or condition of an individual, or the provision or payment of health care to an individual that is created or received by a health care provider, health plan, employer, or health care clearinghouse."
-              },
-              {
-                "const": "PII",
-                "title": "Personally Identifiable Information (PII)",
-                "description": "Information which can be used to distinguish or trace an individual's identity, such as their name, social security number, biometric records, etc. alone, or when combined with other personal or identifying information which is linked or linkable to a specific individual, such as date and place of birth, mother's maiden name, etc."
-              },
-              {
-                "const": "NSN",
-                "title": "Not sensitive/Public",
-                "description": "The target is not sensitive or is already publicly available."
               }
             ]
         }

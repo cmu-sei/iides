@@ -1,5 +1,5 @@
 {
-	"$id": "[REPLACE with full github url to this json file]",
+	"$id": "iides/json/structs/collusion.json",
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "Collusion",
 	"description": "Represents the relationship between insiders. For the purposes of the `recruitment` property, insider 1 recruited insider 2.",
@@ -8,17 +8,17 @@
 		"id": {
 			"type": "string",
 			"description": "A unique string that begins with \"collusion--\" and is appended with a UUIDv4.",
-			"pattern": "^collusion--[UUIDv4]"
+			"pattern": "^collusion--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
 		},
       "insider1": {
 			"type": "string",
 			"description": "The id of the first insider.",
-			"pattern": "^insider--[UUIDv4]"
+			"pattern": "^insider--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
 		},
       "insider2": {
 			"type": "string",
 			"description": "The id of the second insider",
-			"pattern": "^insider--[UUIDv4]"
+			"pattern": "^insider--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
 		},
       "relationship": {
 			"type": "string",

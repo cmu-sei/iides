@@ -25,7 +25,7 @@ class Target #D4EFDF {
 	* subcategory : target-subcategory-vocab 
 	* format : target-format-vocab 
 	* owner : target-owner-vocab 
-	* sensitivity : target-sensitivity-vocab 
+	* sensitivity : target-sensitivity-vocab[1...*] 
 	+ description : string 
 }
 class Incident #009647 {
@@ -175,7 +175,6 @@ class Insider <<Person>> #043673;text:white {
 	+ psychological_issues : psych-issues-vocab[1...*] 
 	+ predispositions : ({field} predisposition-type-vocab, predisposition-subtype-vocab)[1...*] 
 	+ concerning_behaviors : ({field} cb-type-vocab, cb-subtype-vocab)[1...*] 
-	+ comment : string 
 }
 class Response #EF3A47 {
 	* id : string 
@@ -193,18 +192,23 @@ class Detection #FDB515 {
 	+ logs : detection-log-vocab[1...*] 
 	+ comment : string 
 }
-class OrgRelationship #F5F5F5 {
+struct OrgRelationship #F5F5F5 {
 	* id : string 
 	* org1 : string 
 	* org2 : string 
 	* relationship : org-relationship-vocab 
 }
-class Relationship #F5F5F5 {
+struct Relationship #F5F5F5 {
 	* id : string 
 	* object1 : string 
 	* object2 : string 
 }
-class Collusion #F5F5F5 {
+struct OrgOwner #F5F5F5 {
+	* id : string 
+	* person : string 
+	* org : string 
+}
+struct Collusion #F5F5F5 {
 	* id : string 
 	* insider1 : string 
 	* insider2 : string 
@@ -215,14 +219,15 @@ class Collusion #F5F5F5 {
     Insider --o{ Accomplice
     Incident --|{ Insider : commits <
     Accomplice |o--o{ Job
-    Job -- Organization : employs <
-    Insider -- Job
+    Job }o--o| Organization : employs <
+    Insider |o--o{ Job
     Organization }o--o| Incident
-    Organization -- OrgRelationship
-    OrgRelationship -- Organization
+    Organization }o-- OrgRelationship
+    OrgRelationship --o{ Organization
     Insider }o--o| Sponsor
     Accomplice }o--o| Sponsor
-    Insider |o--o| Organization : owns >
+    Insider }o..o{ Organization : OrgOwner >
+    Accomplice }o..o{ Organization : OrgOwner >
     Insider -- Collusion
     Collusion -- Insider
     Incident --o{ Impact

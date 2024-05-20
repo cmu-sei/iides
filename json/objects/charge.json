@@ -1,5 +1,5 @@
 {
-    "$id": "[REPLACE with full github url to this json file]",
+    "$id": "iides/json/objects/charge.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Charge",
     "description": "A charge or accusation brought against the insider when the incident is pursued in the legal system. E.g., \"Two counts of Unauthorized Access to Company Systems.\" A charge must be connected to only one court case. A court case may have one or more charges.",
@@ -8,7 +8,7 @@
       "id": {
         "type": "string",
         "description": "A unique string that begins with \"charge--\" and is appended with a UUIDv4.",
-        "pattern": "^charge--[UUIDv4]"
+        "pattern": "^charge--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
       },
       "title": {
         "type": "string",
@@ -73,47 +73,47 @@
         "charge-disposition-vocab": {
             "oneOf": [
               {
-                "const": "01",
+                "const": "1",
                 "title": "Acquitted",
                 "description": "Found not guilty by a court of law in a criminal trial."
               },
               {
-                "const": "02",
+                "const": "2",
                 "title": "Convicted",
                 "description": "Plead or been found guilty by a court."
               },
               {
-                "const": "03",
+                "const": "3",
                 "title": "Dismissed",
                 "description": "The court or prosecutor has decided the charge should not go forward."
               },
               {
-                "const": "04",
+                "const": "4",
                 "title": "Diversion/Deferred Prosecution",
                 "description": "The court has delayed prosecution pending the successful completion of a treatment program, at which point the charges will be dismissed."
               },
               {
-                "const": "05",
+                "const": "5",
                 "title": "Expunged",
                 "description": "The deletion of non-conviction information (such as arrest data)."
               },
               {
-                "const": "06",
+                "const": "6",
                 "title": "No charges filed/Charges dropped",
                 "description": "The prosecutor has declined to pursue the case."
               },
               {
-                "const": "07",
+                "const": "7",
                 "title": "Pending",
                 "description": "The case is still being investigated or prosecuted."
               },
               {
-                "const": "08",
+                "const": "8",
                 "title": "Pled down",
                 "description": "Pled guilty to a lesser charge."
               },
               {
-                "const": "09",
+                "const": "9",
                 "title": "Sealed",
                 "description": "The court has restricted access to all or some of the content of the record; however, the existence of the record will still be public record."
               },

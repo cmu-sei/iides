@@ -1,5 +1,5 @@
 {
-    "$id": "[REPLACE with full github url to this json file]",
+    "$id": "iides/json/objects/insider.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Insider",
     "description": "Information about the insider involved in the incident. An incident can have multiple insiders.",
@@ -9,7 +9,7 @@
       "id": {
         "type": "string",
         "description": "A unique string that begins with \"insider--\" and is appended with a UUIDv4.",
-        "pattern": "^insider--[UUIDv4]"
+        "pattern": "^insider--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
       },
       "incident_role": {
         "type": "string",
@@ -59,10 +59,6 @@
         ],
         "minItems": 2,
         "items": false
-      },
-      "comment": {
-        "type": "string",
-        "description": "Comments or clarifications to any of the Insider properties."
       }
     },
     "required": [

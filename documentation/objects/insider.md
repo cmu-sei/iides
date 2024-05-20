@@ -5,7 +5,7 @@ Information about the insider involved in the incident. An incident can have mul
 ## Properties
 
 - **`id`** (required) *(string)* : A unique string that begins with "insider--" and is appended with a UUIDv4.
-  - Uses pattern: ^insider--[UUIDv4]
+  - Uses pattern: ^insider--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
 - **`incident_role`** (required) *(string)* : Whether the insider was the primary actor, or had a different role in the incident.
 	- A constant from [incident-role-vocab](#incident-role-vocab)
 - **`motive`** *(array)* : The insider's motive(s) for the incident.
@@ -17,7 +17,6 @@ Information about the insider involved in the incident. An incident can have mul
   - One or more tuple values of the format ([predisposition-type-vocab](#predisposition-type-vocab), [predisposition-subtype-vocab](#predisposition-subtype-vocab))
 - **`concerning_behaviors`** *(array)* : Insider's history of past behavior that could indicate future issues.
   - One or more tuple values of the format ([cb-type-vocab](#cb-type-vocab), [cb-subtype-vocab](#cb-subtype-vocab))
-- **`comment`** *(string)* : Comments or clarifications to any of the Insider properties.
 - **Inherits properties from [Person](person)**
 
 ## Vocabularies
