@@ -1,0 +1,19 @@
+https://casetext.com/case/united-states-v-winner-9
+
+https://www.cdse.edu/Portals/124/Documents/casestudies/case-study-winner.pdf
+
+https://law.justia.com/cases/federal/appellate-courts/ca11/20-11692/20-11692-2020-12-07.html
+
+https://www.justice.gov/opa/pr/federal-government-contractor-sentenced-removing-and-transmitting-classified-materials-news
+
+https://www.nytimes.com/2017/06/06/us/politics/reality-leigh-winner-leak-nsa.html
+
+https://www.nytimes.com/2018/08/23/us/reality-winner-nsa-sentence.html
+
+https://standwithreality.org/original-court-documents/
+
+Difficult to find fields: List as (object: field)
+  - Detection: first_detected 
+  - job: Hire Date day, departure date day, tenure time
+  - legal-response: unsure of exact judgement date
+  - organization: unsure of exact city and postal code 
