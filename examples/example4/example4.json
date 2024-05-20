@@ -77,6 +77,7 @@
             "estimated":true,
             "comment": ""
         },
+
         {
             "id": "incident--843c85b1-6f2d-4a64-a959-d9880905114f",
             "cia_effect": ["C"],
@@ -88,6 +89,7 @@
             "brief_summary": "The insider was a former CIA officer who began to communicate with Chinese intelligence agents in 2017. They began communicating, and the insider would receive money for trasmitting classified U.S. defense information to Chinese intelligence agents. The insider was later investigated and brought to court, where he was convicted of multiple counts of espionage.",
             "comment": ""
         },
+
         {
             "id": "insider--80fea631-33e6-440b-b86d-2d49c8d7fcd2",
             "incident_role": "1",
@@ -98,6 +100,7 @@
             "concerning_behaviors":[["3.6", "3.6.1"]],
             "comment":""
         },
+        
         {
             "id": "job--ca6321b3-c176-4c2a-af6f-c825c5e1a823",
             "job_function": "99",
