@@ -25,7 +25,7 @@ class Target #D4EFDF {
 	* subcategory : target-subcategory-vocab 
 	* format : target-format-vocab 
 	* owner : target-owner-vocab 
-	* sensitivity : target-sensitivity-vocab 
+	* sensitivity : target-sensitivity-vocab[1...*] 
 	+ description : string 
 }
 class Incident #009647 {
@@ -175,7 +175,6 @@ class Insider <<Person>> #043673;text:white {
 	+ psychological_issues : psych-issues-vocab[1...*] 
 	+ predispositions : ({field} predisposition-type-vocab, predisposition-subtype-vocab)[1...*] 
 	+ concerning_behaviors : ({field} cb-type-vocab, cb-subtype-vocab)[1...*] 
-	+ comment : string 
 }
 class Response #EF3A47 {
 	* id : string 

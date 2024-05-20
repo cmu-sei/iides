@@ -17,7 +17,6 @@ Information about the insider involved in the incident. An incident can have mul
   - One or more tuple values of the format ([predisposition-type-vocab](#predisposition-type-vocab), [predisposition-subtype-vocab](#predisposition-subtype-vocab))
 - **`concerning_behaviors`** *(array)* : Insider's history of past behavior that could indicate future issues.
   - One or more tuple values of the format ([cb-type-vocab](#cb-type-vocab), [cb-subtype-vocab](#cb-subtype-vocab))
-- **`comment`** *(string)* : Comments or clarifications to any of the Insider properties.
 - **Inherits properties from [Person](person)**
 
 ## Vocabularies

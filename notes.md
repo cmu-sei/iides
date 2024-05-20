@@ -5,6 +5,7 @@
 - Write up intro material for white paper
 - Note handling of inexact dates
 - Org: change industory sector/subsector const to NAICS codes (G&N)
+- add deception to TTPs
 
 ## Status
 

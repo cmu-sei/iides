@@ -59,10 +59,6 @@
         ],
         "minItems": 2,
         "items": false
-      },
-      "comment": {
-        "type": "string",
-        "description": "Comments or clarifications to any of the Insider properties."
       }
     },
     "required": [
