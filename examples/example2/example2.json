@@ -15,7 +15,7 @@
         
         {
             "id": "court-case--[85e8998f-080a-4764-8bab-f8e9fa3fc70d]",
-            "case_number": "CR 117-034",
+            "case_number": "1:17-cr-034",
             "case_title": "UNITED STATES of America v. Reality WINNER",
             "court_country": "United States of America",
             "court_state": "Georgia",
@@ -32,7 +32,7 @@
             "first_detected": "2017-04-23T18:25:43.511Z",
             "who_detected": ["LE"],
             "detected_method": ["3"],
-            "logs": ["2"],
+            "logs": ["SF"],
             "comment": ""
         },
         {
