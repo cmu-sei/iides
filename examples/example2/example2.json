@@ -1,9 +1,9 @@
 {
     "type": "bundle",
-    "id": "bundle--[bb60b388-046f-4ff2-8955-5f4316a77f83]",
+    "id": "bundle--bb60b388-046f-4ff2-8955-5f4316a77f83",
     "objects": [
         {
-            "id": "charge--[71ed72fb-9194-40af-8459-17aa881a70dc]",
+            "id": "charge--71ed72fb-9194-40af-8459-17aa881a70dc",
             "title": "18 U.S.C",
             "section": "793(e)",
             "nature_of_offense": "Willful Retention and Transmission of National Defense Information",
@@ -14,7 +14,7 @@
         },
         
         {
-            "id": "court-case--[85e8998f-080a-4764-8bab-f8e9fa3fc70d]",
+            "id": "court-case--85e8998f-080a-4764-8bab-f8e9fa3fc70d",
             "case_number": "1:17-cr-034",
             "case_title": "UNITED STATES of America v. Reality WINNER",
             "court_country": "United States of America",
@@ -28,7 +28,7 @@
 
         },
         {
-            "id": "detection--[7f05c15a-84b2-489d-a3dc-0e3c78d9cbc8]",
+            "id": "detection--7f05c15a-84b2-489d-a3dc-0e3c78d9cbc8",
             "first_detected": "2017-04-23T18:25:43.511Z",
             "who_detected": ["LE"],
             "detected_method": ["3"],
@@ -36,7 +36,7 @@
             "comment": ""
         },
         {
-            "id": "impact--[0e15aa3c-8d6c-4afd-bed4-c45f64c34463]",
+            "id": "impact--0e15aa3c-8d6c-4afd-bed4-c45f64c34463",
             "high":1,
             "low":1,
             "metric": "04",
@@ -44,7 +44,7 @@
             "comment": ""
         },
         {
-            "id": "incident--[0e339a3d-37fa-455c-b818-7aae0e34a2a8]",
+            "id": "incident--0e339a3d-37fa-455c-b818-7aae0e34a2a8",
             "cia_effect": ["C"],
             "incident_type": ["E"],
             "incident_subtype": ["E2"],
@@ -55,7 +55,7 @@
             "comment": ""
         },
         {
-            "id": "insider--[04548271-8e9f-4e40-8bad-9cf77c858070]",
+            "id": "insider--04548271-8e9f-4e40-8bad-9cf77c858070",
             "incident_role": "1",
             "motive": ["06"],
             "substance_use_during_incident":false,
@@ -65,7 +65,7 @@
             "comment":"The insider previously had a very clean record, and was an unlikely suspect. The insider was a 'good kid' who had no apparent history of leaking or any disciplinary proceedings during their military service in the Air Force."
         },
         {
-            "id": "job--[11492807-43a6-4e50-9480-b26ecaca983d]",
+            "id": "job--11492807-43a6-4e50-9480-b26ecaca983d",
             "job_function": "19",
             "occupation": "19.3",
             "title": "Linguist",
@@ -79,7 +79,7 @@
         },
 
         {
-            "id": "legal-response--[87cc68cc-6e06-4131-8732-80995f5e3ca6]",
+            "id": "legal-response--87cc68cc-6e06-4131-8732-80995f5e3ca6",
             "law_enforcement_contacted": "2017-05-01",
             "insider_arrested": "2017-05-03",
             "insider_charged": "2017-05-07",
@@ -93,7 +93,7 @@
         },
 
         {
-            "id": "organization--[3d459486-b1b1-4886-9129-87b3458120b3]",
+            "id": "organization--3d459486-b1b1-4886-9129-87b3458120b3",
             "name": "US National Security Agency",
             "city": "",
             "state": "Georgia",
@@ -108,7 +108,7 @@
         },
 
         {
-            "id": "response--[ab3c9833-1e6a-426a-9e48-6f74bcbc5778]",
+            "id": "response--ab3c9833-1e6a-426a-9e48-6f74bcbc5778",
             "technical_controls": [],
             "behavioral_controls": [],
             "investigated_by": ["04"],
@@ -117,7 +117,7 @@
         },
 
         {
-            "id": "sentence--[73e8e020-5ce6-4acb-94ea-7ff3d6f1bcc5]",
+            "id": "sentence--73e8e020-5ce6-4acb-94ea-7ff3d6f1bcc5",
             "sentence_type": "09",
             "quantity": 10,
             "metric": "Y",
@@ -125,7 +125,7 @@
         },
 
         {
-            "id": "source--[c989a0c4-a559-491a-ac63-2f8b0eaba126]",
+            "id": "source--c989a0c4-a559-491a-ac63-2f8b0eaba126",
             "title": "United States v. Winner",
             "source_type": "01",
             "file_type": "html",
@@ -135,7 +135,7 @@
         },
 
         {
-            "id": "source--[32c2aa75-685a-4af5-ba0f-36921b8d1c18]",
+            "id": "source--32c2aa75-685a-4af5-ba0f-36921b8d1c18",
             "title": "CASE STUDY Unlawful Retention and Transmission of National Defense Information",
             "source_type": "05",
             "file_type": "pdf",
@@ -145,7 +145,7 @@
         },
 
         {
-            "id": "source--[d7fba1ef-193d-4826-a551-ce6aa66150c3]",
+            "id": "source--d7fba1ef-193d-4826-a551-ce6aa66150c3",
             "title": "USA v. Reality Leigh Winner, No. 20-11692 (11th Cir. 2020)",
             "source_type": "01",
             "file_type": "pdf",
@@ -155,7 +155,7 @@
         },
 
         {
-            "id": "source--[5e290802-9738-40a5-bb64-9544d8624995]",
+            "id": "source--5e290802-9738-40a5-bb64-9544d8624995",
             "title": "USA v. Reality Leigh Winner, No. 20-11692 (11th Cir. 2020)",
             "source_type": "02",
             "file_type": "html",
@@ -165,7 +165,7 @@
         },
 
         {
-            "id": "source--[1c8da449-30ed-4b7b-89f7-9c8f272207ab]",
+            "id": "source--1c8da449-30ed-4b7b-89f7-9c8f272207ab",
             "title": "Reality Winner, N.S.A. Contractor Accused of Leak, Was Undone by Trail of Clues",
             "source_type": "05",
             "file_type": "html",
@@ -175,7 +175,7 @@
         },
 
         {
-            "id": "source--[497d1b03-8c71-482f-9156-542d21e99fdf]",
+            "id": "source--497d1b03-8c71-482f-9156-542d21e99fdf",
             "title": "Reality Winner, Former N.S.A. Translator, Gets More Than 5 Years in Leak of Russian Hacking Report",
             "source_type": "05",
             "file_type": "html",
@@ -185,7 +185,7 @@
         },
 
         {
-            "id": "source--[a6e7705d-195f-4617-a2d2-30c84aadadea]",
+            "id": "source--a6e7705d-195f-4617-a2d2-30c84aadadea",
             "title": "Original Court Documents: US v. Reality Leigh Winner",
             "source_type": "01",
             "file_type": "pdf",
@@ -195,7 +195,7 @@
         },
 
         {
-            "id": "target--[c482c487-5bb4-4dee-abdf-2e0c207a81bd]",
+            "id": "target--c482c487-5bb4-4dee-abdf-2e0c207a81bd",
             "asset_type": "2",
             "category": "2.3",
             "subcategory": "2.3.1",
@@ -205,7 +205,7 @@
         },
 
         {
-            "id": "ttp-[aabe47dc-fecb-43f9-bf77-361b06504789]",
+            "id": "ttp-aabe47dc-fecb-43f9-bf77-361b06504789",
             "date": "2017-03-09T12:00:00.000Z",
             "sequence_num": 1,
             "observed": false,
