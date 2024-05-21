@@ -1,134 +1,212 @@
 @startuml IIDES
 package "IIDES" #fff {
 
-class Charge #f9b8bd {
-	* id : charge--760109bb-8521-4fc9-aa30-9e80bd8fbe2e
-	* title : 18 U.S.C
-	+ section : 2339A
-	+ nature_of_offense : Providing and Attempting To Provide Material Support to Terrorists
-	+ count : 1
-	+ plea : 1
-	+ plea_bargain : false
-	+ disposition : 02
-}
 
-class CourtCase #f9b8bd {
-	* id : court-case--760109bb-8521-4fc9-aa30-9e80bd8fbe2e
-	+ case_number : 2:19-MJ-01751-DUTY
-	+ case_title : USA vs Mark Domingo
-	+ court_country : US
-	+ court_state : CA
-	+ court_district : Central District of California
-	+ court_type : 1
-	+ case_type : 2
-	+ defendant : Mark Domingo
-	+ plaintiff : United States of America
-	+ comment : 
+class Sponsor #b0d0ed {
+	* id : string 
+	+ name : string 
+	+ sponsor_type : sponsor-type-vocab 
 }
-
-class Detection #FDB515 {
-	* id : detection--760109bb-8521-4fc9-aa30-9e80bd8fbe2e
-	+ first_detected : March 2019
-	+ who_detected : LE
-	+ detected_method : 2, 3
-	+ logs : WB
-	+ comment : 
-}
-
-class Impact #D4EFDF {
-	* id : impact--760109bb-8521-4fc9-aa30-9e80bd8fbe2e
-	* high : 10
-	+ low : 
-	* metric : 03
-	* estimated : true
-	+ comment : main impact was the threat of violence upon protestors by acquiring an explosive device
-}
-
-class Incident #009647 {
-	* id : incident--760109bb-8521-4fc9-aa30-9e80bd8fbe2e
-	+ cia_effect : A
-	+ incident_type : S
-	+ outcome : SI, NN
-	+ status : C
-	+ summary : summary
-	+ brief_summary : brief_summary
-	+ comment : 
-}
-
-class Insider <<Person>> #043673 {
-	* id : insider--760109bb-8521-4fc9-aa30-9e80bd8fbe2e
-	* incident_role : 1
-	+ motive : 07, 99
-	+ substance_use_during_incident : false
-	+ comment : 
-}
-
-class Job #33c2C4 {
-	* id : job--760109bb-8521-4fc9-aa30-9e80bd8fbe2e
-	+ job_function : 55
-	+ occupation : 55.3
-	+ title : Infantryman
-	+ position_technical : false
-	+ employment_type : FFT
-	+ hire_date : 2011
-	+ departure_date : 2013-1-16
-	+ comment : Domingo worked as a United States Army Infantryman in Afghanistan, he was mocked, disciplined, criticized, and ostracized.
-}
-
-class LegalResponse #f9b8bd {
-	* id : legal-response--760109bb-8521-4fc9-aa30-9e80bd8fbe2e
-	+ law_enforcement_contacted : 2019-3-14
-	+ insider_arrested : 2019-4-26
-	+ insider_charged : 2021-8-12
-	+ insider_judgment : 2021-8-12
-	+ insider_sentenced : 2021-8-12
-}
-
-class Response #EF3A47 {
-	* id : response--760109bb-8521-4fc9-aa30-9e80bd8fbe2e
-	+ behavioral_controls : 04, 2013-1-16
-	+ investigated_by : 04, 2019-3-14, 03, 2019-4-26
-	+ investigation_events : 03, 2019-4-26, 02, 2019-4-26
-	+ comment : Investigated by the FBI, arrested by local LAPD and FBI agents
-}
-
-class Sentence #f9b8bd {
-	* id : sentence--760109bb-8521-4fc9-aa30-9e80bd8fbe2e
-	* sentence_type : 09
-	+ quantity : 25
-	+ metric : Y
-	+ concurrency : true
-}
-
-class Source #D4EFDF {
-	* id : source--760109bb-8521-4fc9-aa30-9e80bd8fbe2e
-	* title : case-study-mark-steven-domingo
-	+ source_type : 02
-	+ file_type : pdf
-	+ public : true
-	+ document : https://securityawareness.usalearning.gov/cdse/case-studies/case.html?Domingo
-}
-
 class Stressor #b0d0ed {
-	* id : stressor--760109bb-8521-4fc9-aa30-9e80bd8fbe2e
-	+ date : 1-16-2013
-	+ category : S1
-	+ subcategory : S1.8
-	+ comment : Domingo was let go after coming back from deployment in Afghanistan due to poor performance
+	* id : string 
+	+ date : string 
+	+ category : stressor-category-vocab 
+	+ subcategory : stressor-subcategory-vocab 
+	+ comment : string 
 }
-
+class Accomplice <<Person>> #b0d0ed {
+	* id : string 
+	+ relationship_to_insider : insider-relationship-vocab 
+}
 class Target #D4EFDF {
-	* id : target--760109bb-8521-4fc9-aa30-9e80bd8fbe2e
-	* asset_type : O
-	* category : 06
-	* subcategory : 06.4
-	* format : 1
-	* owner : 4
-	* sensitivity : 02
-	+ description : Domingo targeted a white nationalist rally in Los Angeles, California.
+	* id : string 
+	* asset_type : target-asset-vocab 
+	* category : target-category-vocab 
+	* subcategory : target-subcategory-vocab 
+	* format : target-format-vocab 
+	* owner : target-owner-vocab 
+	* sensitivity : target-sensitivity-vocab 
+	+ description : string 
+}
+class Incident #009647 {
+	* id : string 
+	+ cia_effect : cia-vocab[1...*] 
+	+ incident_type : incident-type-vocab[1...*] 
+	+ outcome : outcome-type-vocab[1...*] 
+	+ status : incident-status-vocab 
+	+ summary : string 
+	+ brief_summary : string 
+	+ comment : string 
+}
+class Source #D4EFDF {
+	* id : string 
+	* title : date 
+	+ source_type : source-type-vocab 
+	+ file_type : source-file-type-vocab 
+	+ date : date 
+	+ public : boolean 
+	+ document : string 
+}
+class LegalResponse #f9b8bd {
+	* id : string 
+	+ law_enforcement_contacted : date 
+	+ insider_arrested : date 
+	+ insider_charged : date 
+	+ insider_pleads : date 
+	+ insider_judgment : date 
+	+ insider_sentenced : date 
+	+ insider_charges_dropped : date 
+	+ insider_charges_dismissed : date 
+	+ insider_settled : date 
+	+ comment : string 
+}
+class Person #b0d0ed {
+	+ first_name : Bob 
+	+ middle_name : string 
+	+ last_name : string 
+	+ suffix : suffix-vocab 
+	+ alias : string[1...*] 
+	+ city : string 
+	+ state : state-vocab 
+	+ country : country-vocab 
+	+ postal_code : integer 
+	+ country_of_citizenship : country-vocab[1...*] 
+	+ nationality : country-vocab[1...*] 
+	+ residency : residency-vocab 
+	+ gender : gender-vocab 
+	+ age : integer 
+	+ education : education-vocab 
+	+ marital_status : marital-status-vocab 
+	+ number_of_children : integer 
+	+ comment : string 
+}
+class Note #D4EFDF {
+	* id : string 
+	* author : string 
+	* date : string 
+	* comment : string 
+}
+class Sentence #f9b8bd {
+	* id : string 
+	* sentence_type : sentence-type-vocab 
+	+ quantity : integer 
+	+ metric : sentence-metric-vocab 
+	+ concurrency : boolean 
+}
+class TTP #A456ED {
+	* id : string 
+	+ date : string 
+	+ sequence_num : integer 
+	+ observed : boolean 
+	+ number_of_times : integer 
+	+ ttp_vocab : string 
+	+ tactic : tactic-vocab 
+	+ technique : technique-vocab 
+	+ location : attack-location-vocab 
+	+ hours : attack-hours-vocab 
+	+ device : device-vocab 
+	+ description : string 
+}
+class Job #33c2C4 {
+	* id : string 
+	+ job_function : job-function-vocab 
+	+ occupation : occupation-vocab 
+	+ title : string 
+	+ position_technical : boolean 
+	+ access_authorization : access-auth-vocab 
+	+ employment_type : employment-type-vocab 
+	+ hire_date : date 
+	+ departure_date : date 
+	+ tenure : timedelta 
+	+ comment : string 
+}
+class Charge #f9b8bd {
+	* id : string 
+	* title : string 
+	+ section : string 
+	+ nature_of_offense : string 
+	+ count : integer 
+	+ plea : charge-plea-vocab 
+	+ plea_bargain : boolean 
+	+ disposition : charge-disposition-vocab 
+}
+class Impact #D4EFDF {
+	* id : string 
+	* high : number 
+	+ low : number 
+	* metric : impact-metric-vocab 
+	* estimated : boolean 
+	+ comment : string 
+}
+class Organization #007BC0 {
+	* id : string 
+	+ name : string 
+	+ city : string 
+	+ state : state-vocab 
+	+ country : country-vocab 
+	+ postal_code : integer 
+	+ small_business : boolean 
+	+ industry_sector_tier1 : industry-sector-tier1-vocab 
+	+ industry_sector_tier2 : industry-sector-tier2-vocab 
+	+ business : string 
+	+ parent_company : string 
+	* incident_role : org-role-vocab 
+}
+class CourtCase #f9b8bd {
+	* id : string 
+	+ case_number : string 
+	+ case_title : string 
+	+ court_country : country-vocab 
+	+ court_state : state-vocab 
+	+ court_district : string 
+	+ court_type : court-type-vocab 
+	+ case_type : case-type-vocab 
+	+ defendant : string[1...*] 
+	+ plaintiff : string[1...*] 
+	+ comment : string 
+}
+class Insider <<Person>> #043673 {
+	* id : string 
+	* incident_role : incident-role-vocab 
+	+ motive : motive-vocab[1...*] 
+	+ substance_abuse : substance-abuse-vocab[1...*] 
+	+ substance_use_during_incident : boolean 
+	+ psychological_issues : psych-issues-vocab[1...*] 
+	+ predispositions : ({field} predisposition-type-vocab, predisposition-subtype-vocab)[1...*] 
+	+ concerning_behaviors : ({field} cb-type-vocab, cb-subtype-vocab)[1...*] 
+	+ comment : string 
+}
+class Response #EF3A47 {
+	* id : string 
+	+ technical_controls : ({field} technical-control-vocab, date)[1...*] 
+	+ behavioral_controls : ({field} behavioral-control-vocab, date)[1...*] 
+	+ investigated_by : investigator-vocab[1...*] 
+	+ investigation_events : ({field} investigation-vocab, date)[1...*] 
+	+ comment : string 
+}
+class Detection #FDB515 {
+	* id : string 
+	+ first_detected : date 
+	+ who_detected : detection-team-vocab[1...*] 
+	+ detected_method : detection-method-vocab[1...*] 
+	+ logs : detection-log-vocab[1...*] 
+	+ comment : string 
+}
+class OrgRelationship #FFFFFF {
+	* id : string 
+	* org1 : string 
+	* org2 : string 
+	* relationship : org-relationship-vocab 
+}
+class Collusion #b0d0ed {
+	* id : string 
+	* insider1 : string 
+	* insider2 : string 
+	* relationship : insider-relationship-vocab 
+	+ recruitment : recruitment-vocab 
 }
 
-Insider --o{ Accomplice
+    Insider --o{ Accomplice
     Person -- Insider
     Incident --|{ Insider : commits <
     Accomplice |o--o{ Job
