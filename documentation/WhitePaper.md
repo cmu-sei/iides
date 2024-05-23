@@ -109,25 +109,17 @@ The Detection and TTP core components do not have any additional subcomponents.
 
 ### Relationships
 
-TODO - relationships description
+IIDES components are connected to one another through relationships. We have tried not to overspecify the relationships in IIDES, as doing so would be a violation of our guiding principles of simplicity and flexibility. However, we do specify as part of the schema the relationships which we believe are important to facilitating a clear understanding of an insider incident.
 
-IIDES components are connected to one another through relationships. Some relationships are specifically defined in IIDES, some are loosely defined, and others are left up to each implementation. The idea behind not over specifying goes back to our guideing principles...Trying to keep this thing as simple to use as possible, while still being useful and flexible.
+We refer to a group of components all related to one another through a particular incident as an "incident bundle". Though we understand that it is theoretically possible to have an insider or organization connected to more than one incident (e.g., an organization that has an incident in one year, then a separate incident the next year), we recommend that implementations only include one incident in each bundle. This simplifies the technical implemenation of the schema and ensures the data remains readable by human analysts. 
 
-A group of components all related to one another through a particular incident is an incident package. Though we understand that it is theoretically possible to have an insider or organization connected to more than one incident, e.g., an organization that has an incident in one year, then a separate incident the next year, we recommend that implementations should only include one incident in an incident package. This simplifies the technical implemenation of the schema and ensures the data remains readable by human analysts. 
+The schema does not require inclusion of an incident entity. However, we highly recommend including the incident entity, with null fields if necessary (except for `id`), as it provides the connective glue between the other components of IIDES and will allow for consistent sharing of incidents across organizations, should the need arise.
 
-not using the incident entity...
+The relationships specified in IIDES are are detailed in the description of each component, as well as in the IIDES [ERD](../UML/out/) files. Implementations can more tightly constrain the relationships should they have a need to do so, for example by requiring every incident have at least one insider, organization, and target. Implementations should not more loosely define the relationships, for example by allowing an incident to have multiple detection components. Doing so would result in a non-conformant implementation.
 
-- specified relationships in the scehma/uml
-  - implementations can more tightly constrain the relationships should they have a need to do so, for example by requiring every incident has at least one insider, organization, and target. Implementations should not more loosely define the relationships, for example by allowing an incident to have multiple detection components.
+The generic [relationship struct](structs/relationship.md) is provided for connecting entities to one another as specified by the relationships in the schema. For example, the generic relationship struct would be used to connect an insider entity with a job entity. Some relationships have additional properties relevant to the relationship and are therefore specified separately from the generic relationship struct in IIDES. These include [Collusion](structs/collusion.md), organization [ownership](structs/org-owner.md) by an insider, and [relationships between organizations](structs/org-relationship.md).
 
-- relatiionship structs and vocabularies
-- the generic relationship struct
-  - ex. notes referencing each other
-  - or impact referencing a specific TTP
-  - recommend only using the generic relationship struct when absolutely necessary to meet the use case requirements 
-
-We welcome feedback... 
-
+The existing generic relationship struct should not be used for connecting entities that do not have relationships specified by the schema. For example, an implementation may require a way to connect a specific impact to a specific TTP, or to connect a specific source to a specific target. These relationships are not specified in IIDES. Before implementing a custom relationship for such entities, we suggest making a request for inclusion of such a new relationship in IIDES via the IIDES GitHub page.
 
 
 ### Vocabularies
@@ -148,10 +140,12 @@ We recognize that not all components of IIDES will be useful to all users. To th
 - Using the schema
   - gotchas with json schemas
 
-To assist with understanding the json schema, we provide a set of [examples](../examples/) which cover several incident types and use cases. The examples are not intended to be exhaustive of all possible use cases, but to provide insight into how to provide valid data to the schema, as well as to assit with testing alternative implementations of the schema.
+To assist with understanding the json schema, we provide a set of [examples](../examples/) which cover several incident types and use cases. The examples are not intended to be exhaustive of all possible use cases, but to provide insight into how to provide valid data to the schema, as well as to assit with testing alternative implementations of IIDES.
 
 - Existing implementations (Termite, pyIides)
 - advice for implementing
+  - implement as tightly as possible to the schema (reference the ERDs and schema descriptions for relationship specifics; reference pyiides for an existing implemenation of the schema was applied)
+  - request changes directly to IIDES via github, before implementing a non-standard schema
 
 We welcome community feedback and suggestions for enhancement, which can be submitted via the IIDES GitHub page as issues, discussions, or pull requests.
 
