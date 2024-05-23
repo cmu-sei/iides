@@ -133,24 +133,33 @@ Using subschemas also provides flexibility for local implementations that may wi
 It is diffult to provide full coverage for all possible vocabulary terms across all use cases of a data standard. We request that organizations which find that the necessary vocabulary terms are missing for their use case, provide feedback via the IIDES GitHub page before considering making internal changes to the vocabularies. This way, new terms may be considered for inclusion in an updated version of IIDES and be made available for other organizations with similar use cases.
 
 ## Using IIDES
-TODO - using IIDES
 
-We recognize that not all components of IIDES will be useful to all users. To that end, ...
+We recognize that not all components of IIDES will be useful to all users. To that end, we have tried to provide a flexible schema that covers as many use cases as possible without limiting its application in use cases which we have not thought of.
 
-- Using the schema
-  - gotchas with json schemas
+To assist with understanding the JSON schema and IIDES itself, we provide a set of [examples](../examples/) which cover several incident types and use cases. The examples are not intended to be exhaustive of all possible use cases, but to provide insight into what valid IIDES data looks like, and to provide a small set of test cases to assit with testing alternative implementations of IIDES.
 
-To assist with understanding the json schema, we provide a set of [examples](../examples/) which cover several incident types and use cases. The examples are not intended to be exhaustive of all possible use cases, but to provide insight into how to provide valid data to the schema, as well as to assit with testing alternative implementations of IIDES.
+### General Guidance
 
-- Existing implementations (Termite, pyIides)
-- advice for implementing
-  - implement as tightly as possible to the schema (reference the ERDs and schema descriptions for relationship specifics; reference pyiides for an existing implemenation of the schema was applied)
-  - request changes directly to IIDES via github, before implementing a non-standard schema
+No matter how well a standard is defined, there will always be cases where the data does not perfectly match the fields provided by the standard. This section includes some guidance on how to code edge cases where the incident data does not perfectly match IIDES.
 
-We welcome community feedback and suggestions for enhancement, which can be submitted via the IIDES GitHub page as issues, discussions, or pull requests.
+- inexact dates --- sometimes incident coders or analysts do not have an exact date available, but instead have something like "May 2024", "Fall of 2020", or "Early 2023". For these instances, we suggest using the beginning date of the time frame. For example, "May 2024" would be "2024-05-01", "Fall of 2023" would be "2023-09-01", and "Early 2023" would be "2023-01-01". 
+  - Note, those conducting analysis on large incident data sets with a lot of inexact dates will be need to control for any resulting cyclicality in time series data.
+- lifetime sentences --- sentencing information requires a specific numeric quantity which "lifetime" does conform to. To comply with the schema and support quantitative analysis of IIDES-specified incidents, we suggest using the integer "60" as the quantity in the sentencing entity.
+
+### Implementation Guidance
+
+We chose to use JSON to define the IIDES schema, as JSON is one of the most widely used data interchange formats and is arguably eaiser to use than XML. JSON however does have its drawbacks as a language for defining schemas. For example, it is difficult to directly specify many-to-many relationships and it assumes that undefined entities are allowed by default. Explicity stating that additional properties and objects are disallowed would violate our guiding principle of flexibility. For this reason, the IIDES schema is defined only in part by its JSON specification. Additional details for implementation can be found in this white paper, the descriptions of each component, and the entity relationship diagrams (ERDs) located in the [UML](../UML/out/) files.
+
+We also provide a separate reference implementation of IIDES, pyIIDES, written in Python, for those who wish to reference a schema-comformant, complete implementation. PyIIDES is a python package available for download and use in other tools or IIDES implementations. One such example of a tool using pyIIDES is Termite, a lightweight, IIDES-compliant insider threat case management solution.
+
+For those writing implementations of IIDES in other languages, we suggest conforming as tightly as possible to the IIDES schema as specified in these documents and the reference implementations. We request that community memebers requiring a non-standard or non-comformant implementation of IIDES make a request to the IIDES development team via the GitHub page before implementing a custom schema. Doing so provides the team an opportunity to improve IIDES and its associated implementations for use by the community.
+
 
 ## Conclusion
+
 TODO - conclusion
+
+We welcome community feedback and suggestions for enhancement, which can be submitted via the IIDES GitHub page as issues, discussions, or pull requests.
 
 ## References
 
