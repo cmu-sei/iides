@@ -159,16 +159,15 @@ We welcome community feedback and suggestions for enhancement, which can be subm
 TODO - conclusion
 
 ## References
-TODO - references
-- https://www.cisa.gov/topics/physical-security/insider-threat-mitigation/defining-insider-threats
-- https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6758854
-Legal
-- Coding Case Law for Public Health Evaluation (Hall)
-- Supreme court database codebook (http://scdb.wustl.edu/_brickFiles/2019_01/SCDB_2019_01_codebook.pdf)
-- Measuring law for evaluation research (https://journals.sagepub.com/doi/epdf/10.1177/0193841X10370018
 
+The following is a list of references included in this document, as well as those referenced in the IIDES schema files.
 
-- https://dl.acm.org/doi/abs/10.1145/3465481.3470024
+1. Cyber Data Exchange Model (DEM) Product Development Group - Simulation Interoperability Standards Organization (SISO). (2023). Cyber Data Exchange Model (DEM).
+2. Cybersecurity and Infrastructure Security Agency. Defining Insider Threats. Retrieved May 23, 2024 from https://www.cisa.gov/topics/physical-security/insider-threat-mitigation/defining-insider-threats
+3. Greitzer, F.L. (2014). Unintentional Insider Threat: Contributing Factors, Observables, and Mitigation Strategies. *47th Hawaii International Conference on System Science*.
+4. ISO 3166 Maintenance Agency: International Organization for Standardization. ISO 3166 Country Codes. Retrieved May 2024 from https://www.iso.org/obp/ui/.
+5. Merah, Y. Kenaza, T. (2021). Ontology-based Cyber Risk Monitoring Using Cyber Threat Intelligence. *ARES '21: Proceedings of the 16th International Conference on Availability, Reliability and Security, 88, 1–8. doi: 10.1145/3465481.3470024.
+6. Spaeth, H.J., Epstein, L., et al. (2019). Supreme Court Database, Version 2019 Release 1. URL: http://Supremecourtdatabase.org
 
 ## Licensing and RRO
 TODO - RRO
