@@ -144,7 +144,7 @@ No matter how well a standard is defined, there will always be cases where the d
 
 - inexact dates --- sometimes incident coders or analysts do not have an exact date available, but instead have something like "May 2024", "Fall of 2020", or "Early 2023". For these instances, we suggest using the beginning date of the time frame. For example, "May 2024" would be "2024-05-01", "Fall of 2023" would be "2023-09-01", and "Early 2023" would be "2023-01-01". 
   - Note, those conducting analysis on large incident data sets with a lot of inexact dates will be need to control for any resulting cyclicality in time series data.
-- lifetime sentences --- sentencing information requires a specific numeric quantity which "lifetime" does conform to. To comply with the schema and support quantitative analysis of IIDES-specified incidents, we suggest using the integer "60" as the quantity in the sentencing entity.
+- lifetime sentences --- sentencing information requires a specific numeric quantity which "lifetime" does not conform to. To comply with the schema and support quantitative analysis of IIDES-specified incidents, we suggest using the integer "60" as the quantity in the sentencing entity.
 
 ### Implementation Guidance
 
