@@ -18,13 +18,11 @@ White paper
 - [ ] Background (@losterritter)
 - [ ] Related Standards (@mpaes)
 - [ ] Benefits (@mpaes)
-- [ ] Relationships (@abwhisnant)
 - [ ] Using IIDES (@abwhisnant)
   - Include guidance on:
     - handling inexact dates
     - handling lifetime sentences
 - [ ] Conclusion (@abwhisnant)
-- [ ] References (@abwhisnant)
 - [ ] Licensing and RRO (@abwhisnant)
 
 ### Examples
