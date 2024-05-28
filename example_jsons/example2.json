@@ -1,5 +1,4 @@
 {
-    "type": "bundle",
     "id": "bundle--bb60b388-046f-4ff2-8955-5f4316a77f83",
     "objects": [
       {
@@ -36,20 +35,19 @@
           "LE"
         ],
         "detected_method": [
-          "3"
+          "2"
         ],
         "logs": [
-          "SF"
+          "AC", "EM"
         ],
-        "comment": ""
+        "comment": "Reality Winner was caught after the NSA identified that a classified document published by The Intercept had been printed, revealing traceable metadata. Investigators used printer tracking dots to determine the document's print date and reviewed access logs, finding that only six individuals, including Winner, had accessed it. Further evidence included her email communication with The Intercept and her confession when confronted by the FBI."
       },
       {
         "id": "impact--0e15aa3c-8d6c-4afd-bed4-c45f64c34463",
         "high": 1,
         "low": 1,
         "metric": "4",
-        "estimated": false,
-        "comment": ""
+        "estimated": false
       },
       {
         "id": "incident--0e339a3d-37fa-455c-b818-7aae0e34a2a8",
@@ -68,8 +66,7 @@
         ],
         "status": "C",
         "summary": "The insider, an ex-Air Force member, worked as a translater for the National Security Agency in May 2017. During this time, she printed a report from her work computer that detailed hacking attempts by a Russian intelligence service against local election officers and voter registration databases. She then shared this Top Secret information with an online news outlet. This report revealed the sources and methods used to acquire the information contained on the report, which, if disclosed, could be harmful to the United States. The FBI investigated and later arrested the insider in June 2017. The insider pleaded guilty in June 2018 to one felony count of unauthorized transmission of national defense information and was convicted.",
-        "brief_summary": "The insider leaked Top Secret information to an online news outlet. The insider pleaded guilty to one felony count of unauthorized transmission of national defense information in June 2018, and was convicted.",
-        "comment": ""
+        "brief_summary": "The insider leaked Top Secret information to an online news outlet. The insider pleaded guilty to one felony count of unauthorized transmission of national defense information in June 2018, and was convicted."
       },
       {
         "id": "insider--04548271-8e9f-4e40-8bad-9cf77c858070",
@@ -97,8 +94,8 @@
       },
       {
         "id": "job--11492807-43a6-4e50-9480-b26ecaca983d",
-        "job_function": "19",
-        "occupation": "19.3",
+        "job_function": "55",
+        "occupation": "55.3",
         "title": "Linguist",
         "position_technical": false,
         "access_authorization": "4",
@@ -115,30 +112,43 @@
         "insider_charged": "2017-05-07",
         "insider_pleads": "2017-05-21",
         "insider_judgement": "2018-08-07",
-        "insider_sentenced": "2018-08-23",
-        "insider_charges_dropped": "",
-        "insider_charges_dismissed": "",
-        "insider_settled": "",
-        "comment": ""
+        "insider_sentenced": "2018-08-23"
       },
       {
         "id": "organization--3d459486-b1b1-4886-9129-87b3458120b3",
         "name": "US National Security Agency",
         "city": "",
-        "state": "Georgia",
+        "state": "Maryland",
         "country": "United States of America",
         "postal_code": 0,
         "small_business": false,
-        "industry_sector": "54",
-        "industry_subsector": "54.1",
+        "industry_sector": "92",
+        "industry_subsector": "92.811",
         "business": "The National Security Agency (NSA) is a critical player in the U.S. intelligence community. Its primary function is to gather and analyze foreign signals intelligence (SIGINT) to protect national security.",
         "parent_company": "United States Department of Defense",
         "incident_role": "V"
       },
       {
+        "id": "organization--3d459486-b1b1-4886-9129-87b3458120b4",
+        "name": "Pluribus International Corporation",
+        "city": "Alexandria",
+        "state": "Virginia",
+        "country": "United States of America",
+        "postal_code": 22314,
+        "small_business": true,
+        "industry_sector": "54",
+        "industry_subsector": "54.1",
+        "business": "Pluribus International Corporation is a defense and intelligence contractor providing analysis, intelligence, and security services to various U.S. government agencies.",
+        "incident_role": "O"
+      },
+      {
+        "id": "org-relationship--83271b80-b5de-410e-b7ba-3c93ca5cba08",
+        "org2": "organization--3d459486-b1b1-4886-9129-87b3458120b3",
+        "org1": "organization--3d459486-b1b1-4886-9129-87b3458120b4",
+        "relationship": "V"
+      },
+      {
         "id": "response--ab3c9833-1e6a-426a-9e48-6f74bcbc5778",
-        "technical_controls": [],
-        "behavioral_controls": [],
         "investigated_by": [
           "4"
         ],
@@ -157,7 +167,14 @@
       {
         "id": "sentence--73e8e020-5ce6-4acb-94ea-7ff3d6f1bcc5",
         "sentence_type": "9",
-        "quantity": 10,
+        "quantity": 63,
+        "metric": "3",
+        "concurrency": false
+      },
+      {
+        "id": "sentence--73e8e020-5ce6-4acb-94ea-7ff3d6f1bcb6",
+        "sentence_type": "16",
+        "quantity": 3,
         "metric": "4",
         "concurrency": false
       },
@@ -231,7 +248,7 @@
         "subcategory": "2.3.1",
         "format": "2",
         "owner": "O",
-        "sensitivity": ["4"]
+        "sensitivity": ["6"]
       },
       {
         "id": "ttp--aabe47dc-fecb-43f9-bf77-361b06504789",
@@ -240,8 +257,26 @@
         "observed": false,
         "number_of_times": 1,
         "ttp_vocab": "IIDES",
-        "tactic": "1",
-        "technique": "1.2",
+        "tactic": "7",
+        "technique": "7.1",
+        "location": "1",
+        "hours": "1",
+        "device": [
+          "1",
+          "9"
+        ],
+        "channel": ["9"],
+        "description": "Winner printed and improperly removed classified intelligence reporting."
+      },
+      {
+        "id": "ttp--aabe47dc-fecb-43f9-bf77-361b06504789",
+        "date": "2017-03-09T12:00:00.000Z",
+        "sequence_num": 2,
+        "observed": false,
+        "number_of_times": 1,
+        "ttp_vocab": "IIDES",
+        "tactic": "7",
+        "technique": "7.3",
         "location": "on-site",
         "hours": "During work hours",
         "device": [

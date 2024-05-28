@@ -34,6 +34,7 @@
         "items": {
             "$ref": "#/$defs/psych-issues-vocab"
         },
+        "additionalItems": false,
         "minItems": 1
       },
       "predispositions": {
