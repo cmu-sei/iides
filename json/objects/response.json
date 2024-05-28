@@ -20,11 +20,9 @@
             { "type": "string", "format": "date" }
           ],
           "minItems": 2,
-          "maxItems": 2,
-          "additionalItems": false
-        },
-        "additionalItems": false
-        },
+          "maxItems": 2
+          }       
+      },
       "behavioral_controls": {
         "type": "array",
         "description": "Controls put in place to limit, monitor, or correct the insider's behavior within the organization.",
@@ -35,10 +33,8 @@
             { "type": "string", "format": "date" }
           ],
           "minItems": 2,
-          "maxItems": 2,
-          "additionalItems": false
-        },
-        "additionalItems": false
+          "maxItems": 2
+          }
         },
       "investigated_by": {
         "type": "array",
@@ -58,10 +54,8 @@
             { "type": "string", "format": "date" }
           ],
           "minItems": 2,
-          "maxItems": 2,
-          "additionalItems": false
-        },
-        "additionalItems": false
+          "maxItems": 2
+        }
         },
       "comment": {
         "type": "string",

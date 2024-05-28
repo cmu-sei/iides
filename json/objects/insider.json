@@ -34,7 +34,6 @@
         "items": {
             "$ref": "#/$defs/psych-issues-vocab"
         },
-        "additionalItems": false,
         "minItems": 1
       },
       "predispositions": {
@@ -47,10 +46,8 @@
             { "$ref": "#/$defs/predisposition-subtype-vocab" }
           ],
           "minItems": 2,
-          "maxItems": 2,
-          "additionalItems": false
-        },
-        "additionalItems": false
+          "maxItems": 2
+        }
       },
       "concerning_behaviors": {
         "type": "array",
@@ -62,17 +59,14 @@
             { "$ref": "#/$defs/cb-subtype-vocab" }
           ],
           "minItems": 2,
-          "maxItems": 2,
-          "additionalItems": false
-        },
-        "additionalItems": false
+          "maxItems": 2
+        }
         }
       },
     "required": [
         "id",
         "incident_role"
     ],
-    "additionalItems": true,
     "$defs": {
         "incident-role-vocab": {
             "oneOf": [

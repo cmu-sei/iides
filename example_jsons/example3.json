@@ -95,7 +95,6 @@
         ],
         "substance_use_during_incident": false,
         "first_name": "Anthony",
-        "middle_name": "",
         "last_name": "Levandowski",
         "alias": ["Anton Levy", "John Doe"],
         "city": "San Francisco",
@@ -134,7 +133,7 @@
         "job_function": "17",
         "occupation": "17.2",
         "title": "Lead Engineer for Autonomous Vehicle Technology",
-        "position_technical": true,
+        "position_technical": false,
         "access_authorization": "5",
         "employment_type": "FLT",
         "hire_date": "2007-08-01",
@@ -149,8 +148,8 @@
       },
       {
         "id": "note--afc08477-7f6f-4130-a966-f7b1e2188587",
-        "author": "Example Author",
-        "date": "date and time [format: date-time] that the note was authored",
+        "author": "CMU Researcher",
+        "date": "2024-05-28",
         "comment": "This was a civil case, the insider was formally charged through a third party civil court and later filed for bankruptcy"
       },
       {
@@ -181,6 +180,12 @@
         "incident_role": "B"
       },
       {
+        "id": "org-relationship--83271b80-b5de-410e-b7ba-3c93ca5cba99",
+        "org2": "organization--e7fda876-f31b-45a5-a540-7bb514ccecee",
+        "org1": "organization--8ed0c400-fa6a-4bd6-babe-4da40240442d",
+        "relationship": "C"
+      },
+      {
         "id": "response--9923bad0-25bb-474a-bff7-4b23bfb3e240",
         "investigated_by": [
           "99",
@@ -192,7 +197,7 @@
             "2016-11-00"
           ]
         ],
-        "comment": ""
+        "comment": "A third party investigator was hired to look into the matter after an engineer at Waymo found Uber's autonomous vehicle sensors drastically similar to those developed by Waymo."
       },
       {
         "id": "sentence--c67354c2-5619-4ebc-85d0-21ca230c8a1d",
@@ -215,7 +220,7 @@
         "date": "2015-12-01",
         "category": "1",
         "subcategory": "1.9",
-        "comment": "Potential stressors could include career ambitions or potential financial gain prompting actions that led to the misappropriation of documents."
+        "comment": "Insider left Waymo to start his own company."
       },
       {
         "id": "target--831dfcd9-11c5-407b-955e-287d531702b7",
