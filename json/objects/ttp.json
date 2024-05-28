@@ -1,5 +1,5 @@
 {
-    "$id": "iides/json/objects/ttp.json",
+    "$id": "file:///C:/users/nammerman/BitBucket/pyiides/json/objects/ttp.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "TTP",
     "description": "Action taken by the insider or colluding outsider(s) during the course of the incident, categorized into a tactic, technique, and procedure (TTP). An incident may have multiple TTPs. A TTP must be connected to an incident.",

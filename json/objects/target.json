@@ -1,5 +1,5 @@
 {
-    "$id": "iides/json/objects/target.json",
+    "$id": "file:///C:/users/nammerman/BitBucket/pyiides/json/objects/target.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Target",
     "description": "The system, data, person, or physical property that was targeted by the insider. An incident may have many targets.",

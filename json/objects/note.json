@@ -1,5 +1,5 @@
 {
-    "$id": "iides/json/objects/note.json",
+    "$id": "file:///C:/users/nammerman/BitBucket/pyiides/json/objects/note.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Note",
     "description": "A freeform text space for holding notes related to the case management of the incident as it is being investigated, such as a checklist to follow up on or comments related the current status. Notes are not intended to be used to hold details about the incident itself. An incident may have one or more notes.",

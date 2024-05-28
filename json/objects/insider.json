@@ -1,5 +1,5 @@
 {
-    "$id": "iides/json/objects/insider.json",
+    "$id": "file:///C:/users/nammerman/BitBucket/pyiides/json/objects/insider.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Insider",
     "description": "Information about the insider involved in the incident. An incident can have multiple insiders.",
@@ -39,32 +39,39 @@
       "predispositions": {
         "type": "array",
         "description": "Insider's tendancy toward certain actions or qualities.",
-        "prefixItems": [
-          { "type": "string" },
-          { "type": "string" },
-          { "$ref": "#/$defs/predisposition-type-vocab"},
-          { "$ref": "#/$defs/predisposition-subtype-vocab"}
-        ],
-        "minItems": 2,
-        "items": false
+        "items": {
+          "type": "array",
+          "prefixItems": [
+            { "$ref": "#/$defs/predisposition-type-vocab" },
+            { "$ref": "#/$defs/predisposition-subtype-vocab" }
+          ],
+          "minItems": 2,
+          "maxItems": 2,
+          "additionalItems": false
+        },
+        "additionalItems": false
       },
       "concerning_behaviors": {
         "type": "array",
         "description": "Insider's history of past behavior that could indicate future issues.",
-        "prefixItems": [
-          { "type": "string" },
-          { "type": "string" },
-          { "$ref": "#/$defs/cb-type-vocab"},
-          { "$ref": "#/$defs/cb-subtype-vocab"}
-        ],
-        "minItems": 2,
-        "items": false
-      }
-    },
+        "items": {
+          "type": "array",
+          "prefixItems": [
+            { "$ref": "#/$defs/cb-type-vocab" },
+            { "$ref": "#/$defs/cb-subtype-vocab" }
+          ],
+          "minItems": 2,
+          "maxItems": 2,
+          "additionalItems": false
+        },
+        "additionalItems": false
+        }
+      },
     "required": [
         "id",
         "incident_role"
     ],
+    "additionalItems": true,
     "$defs": {
         "incident-role-vocab": {
             "oneOf": [

@@ -1,5 +1,5 @@
 {
-    "$id": "iides/json/objects/detection.json",
+    "$id": "file:///C:/users/nammerman/BitBucket/pyiides/json/objects/detection.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Detection",
     "description": "Describes details about how, when, and by whom the incident was detected. An incident may have only one detection entity.",

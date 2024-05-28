@@ -1,5 +1,5 @@
 {
-    "$id": "iides/json/objects/response.json",
+    "$id": "file:///C:/users/nammerman/BitBucket/pyiides/json/objects/response.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Response",
     "description": "Describes the organization's response to the incident, including technical and behavioral controls, investigation, and legal response. An incident may have only one response entity. A response may have only one legal response entity.",
@@ -8,30 +8,38 @@
       "id": {
         "type": "string",
         "description": "A unique string that begins with \"response--\" and is appended with a UUIDv4.",
-        "pattern": "^reponse--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+        "pattern": "^response--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
       },
       "technical_controls": {
         "type": "array",
         "description": "Controls put in place to limit or monitor the insider's access to devices, data, or the network, or to limit/monitor network/device access for the user population more generally.",
-        "prefixItems": [
-          { "type": "string" },
-          { "type": "string", "format": "date" },
-          { "$ref": "#/$defs/technical-control-vocab"}
-        ],
-        "minItems": 2,
-        "items": false
-      },
+        "items": {
+          "type": "array",
+          "prefixItems": [
+            { "$ref": "#/$defs/technical-control-vocab"},
+            { "type": "string", "format": "date" }
+          ],
+          "minItems": 2,
+          "maxItems": 2,
+          "additionalItems": false
+        },
+        "additionalItems": false
+        },
       "behavioral_controls": {
         "type": "array",
         "description": "Controls put in place to limit, monitor, or correct the insider's behavior within the organization.",
-        "prefixItems": [
-          { "type": "string" },
-          { "type": "string", "format": "date" },
-          { "$ref": "#/$defs/behavioral-control-vocab"}
-        ],
-        "minItems": 2,
-        "items": false
-      },
+        "items": {
+          "type": "array",
+          "prefixItems": [
+            { "$ref": "#/$defs/behavioral-control-vocab"},
+            { "type": "string", "format": "date" }
+          ],
+          "minItems": 2,
+          "maxItems": 2,
+          "additionalItems": false
+        },
+        "additionalItems": false
+        },
       "investigated_by": {
         "type": "array",
         "description": "The organization(s) or entity(s) that investigated the incident.",
@@ -43,14 +51,18 @@
       "investigation_events": {
         "type": "array",
         "description": "Specific events that happend during the course of the investigation into the incident.",
-        "prefixItems": [
-            { "type": "string" },
-            { "type": "string", "format": "date" },
-            { "$ref": "#/$defs/investigation-vocab"}
-        ],
-        "minItems": 2,
-        "items": false
-      },
+        "items": {
+          "type": "array",
+          "prefixItems": [
+            { "$ref": "#/$defs/investigation-vocab"},
+            { "type": "string", "format": "date" }
+          ],
+          "minItems": 2,
+          "maxItems": 2,
+          "additionalItems": false
+        },
+        "additionalItems": false
+        },
       "comment": {
         "type": "string",
         "description": "Clarifying comments or additional details about the organization's response."
@@ -74,7 +86,7 @@
             }
           ]
         },
-        "beahvioral-control-vocab": {
+        "behavioral-control-vocab": {
           "oneOf": [
             {
               "const": "01",

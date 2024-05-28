@@ -1,5 +1,5 @@
 {
-	"$id": "iides/json/structs/relationship.json",
+	"$id": "file:///C:/users/nammerman/BitBucket/pyiides/json/structs/relationship.json",
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "Relationship",
 	"description": "A structure for connecting two IIDES objects together.",

@@ -1,5 +1,5 @@
 {
-    "$id": "iides/json/objects/source.json",
+    "$id": "file:///C:/users/nammerman/BitBucket/pyiides/json/objects/source.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Source",
     "description": "Document that provides information about one or more aspects of the incident.",

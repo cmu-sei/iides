@@ -1,5 +1,5 @@
 {
-    "$id": "iides/json/objects/impact.json",
+    "$id": "file:///C:/users/nammerman/BitBucket/pyiides/json/objects/impact.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Impact",
     "description": "The quantified impact of the incident on the victim organization. An incident may have one or more impacts. An impact MUST be associated with only one incident.",

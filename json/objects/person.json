@@ -1,5 +1,5 @@
 {
-    "$id": "iides/json/objects/person.json",
+    "$id": " file:///C:/users/nammerman/BitBucket/pyiides/json/objects/person.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Person",
     "description": "Abstract class for inheritance by the Insider and Accomplice objects. Describes the properties of an individual that MAY be inherited by those classes.",
@@ -89,8 +89,7 @@
         "description": "Comments or clarifications regarding any of the Person properties."
       }
     },
-    "required": [
-    ],
+    "required": ["first_name", "last_name"],
     "$defs": {
         "suffix-vocab": {
             "enum": [

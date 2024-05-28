@@ -1,5 +1,5 @@
 {
-    "$id": "iides/json/objects/sentence.json",
+    "$id": "file:///C:/users/nammerman/BitBucket/pyiides/json/objects/sentence.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Sentence",
     "description": "Term of imprisonment or probation, or amount of fines, imposed on a convicted defendant for criminal wrongdoing, or the amount of damages imposed for civil cases. Generally, the amount of punishment for an offense. A sentence must be connected to only one court case. A court case may have one or more sentences.",
@@ -125,27 +125,27 @@
         "sentence-metric-vocab": {
           "oneOf": [
             {
-              "const": "H",
+              "const": "1",
               "title": "Hour(s)",
               "description": "Imposed sentence is in terms of hours. E.g. 20 hours community service."
             },
             {
-              "const": "D",
+              "const": "2",
               "title": "Day(s)",
               "description": "Imposed sentence is in terms of days. E.g. 30 days in a substance abuse treatment facility."
             },
             {
-              "const": "M",
+              "const": "3",
               "title": "Month(s)",
               "description": "Imposed sentence is in terms of months. E.g. 18 months imprisonment."
             },
             {
-              "const": "Y",
+              "const": "4",
               "title": "Year(s)",
               "description": "Imposed sentence is in terms of years. E.g. 5 years no Internet access."
             },
             {
-              "const": "D",
+              "const": "5",
               "title": "Dollar(s)",
               "description": "Imposed sentence is in terms of dollars. E.g. $10,000 in damages."
             }
