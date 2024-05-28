@@ -208,7 +208,6 @@
         "postal_code": 10001,
         "country_of_citizenship": ["US"],
         "nationality": ["US"],
-        "residency": "N",
         "gender": "M",
         "age": 35,
         "education": "5",
