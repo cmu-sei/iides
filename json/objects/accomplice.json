@@ -14,7 +14,7 @@
       "relationship_to_insider": {
         "type": "string",
         "description": "The type of relationship between this accomplice and the insider to which it is connected.",
-        "$ref": "iides/json/common/insider-relationship-vocab.json"
+        "$ref": "../common/insider-relationship-vocab.json"
       }
     },
     "required": [
