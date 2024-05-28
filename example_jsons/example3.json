@@ -79,7 +79,7 @@
           "E1"
         ],
         "outcome": [
-          "MD"
+          "DS", "ML"
         ],
         "status": "C",
         "summary": "The case involved Waymo, a self-driving car company spun off from Google, accusing Uber, through its acquisition of Otto, of stealing trade secrets related to LiDAR technology. The lawsuit claimed that Anthony Levandowski, a former Google engineer, downloaded thousands of files related to Waymo’s self-driving technology before leaving to start Otto, which was soon acquired by Uber.",
@@ -248,16 +248,13 @@
         "number_of_times": 1,
         "ttp_vocab": "IIDES",
         "tactic": "7",
-        "technique": "7.4",
+        "technique": "7.8",
         "location": "2",
         "hours": "1",
         "device": [
           "2"
         ],
-        "channel": [
-          "9"
-        ],
-        "description": "The individual accessed confidential and proprietary engineering databases and downloaded sensitive data onto a personal external storage device, which was then used to transfer the data offsite."
+        "description": "The insider locally downloaded files from the company cloud directories to their laptop."
       }
     ]
   }
