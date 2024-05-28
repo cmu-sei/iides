@@ -47,7 +47,7 @@
         "id": "impact--0e15aa3c-8d6c-4afd-bed4-c45f64c34463",
         "high": 1,
         "low": 1,
-        "metric": "04",
+        "metric": "4",
         "estimated": false,
         "comment": ""
       },
@@ -75,7 +75,7 @@
         "id": "insider--04548271-8e9f-4e40-8bad-9cf77c858070",
         "incident_role": "1",
         "motive": [
-          "06"
+          "6"
         ],
         "substance_use_during_incident": false,
         "first_name": "Reality",
@@ -141,15 +141,15 @@
         "technical_controls": [],
         "behavioral_controls": [],
         "investigated_by": [
-          "04"
+          "4"
         ],
         "investigation_events": [
           [
-            "01",
+            "1",
             "2017-05-17"
           ],
           [
-            "03",
+            "3",
             "2017-05-03"
           ]
         ],
@@ -157,7 +157,7 @@
       },
       {
         "id": "sentence--73e8e020-5ce6-4acb-94ea-7ff3d6f1bcc5",
-        "sentence_type": "09",
+        "sentence_type": "9",
         "quantity": 10,
         "metric": "4",
         "concurrency": false
@@ -165,7 +165,7 @@
       {
         "id": "source--c989a0c4-a559-491a-ac63-2f8b0eaba126",
         "title": "United States v. Winner",
-        "source_type": "01",
+        "source_type": "1",
         "file_type": "html",
         "date": "2020-04-24",
         "public": true,
@@ -174,7 +174,7 @@
       {
         "id": "source--32c2aa75-685a-4af5-ba0f-36921b8d1c18",
         "title": "CASE STUDY Unlawful Retention and Transmission of National Defense Information",
-        "source_type": "05",
+        "source_type": "5",
         "file_type": "pdf",
         "date": "",
         "public": true,
@@ -183,7 +183,7 @@
       {
         "id": "source--d7fba1ef-193d-4826-a551-ce6aa66150c3",
         "title": "USA v. Reality Leigh Winner, No. 20-11692 (11th Cir. 2020)",
-        "source_type": "01",
+        "source_type": "1",
         "file_type": "pdf",
         "date": "2020-12-07",
         "public": true,
@@ -192,7 +192,7 @@
       {
         "id": "source--5e290802-9738-40a5-bb64-9544d8624995",
         "title": "USA v. Reality Leigh Winner, No. 20-11692 (11th Cir. 2020)",
-        "source_type": "02",
+        "source_type": "2",
         "file_type": "html",
         "date": "2018-08-23",
         "public": true,
@@ -201,7 +201,7 @@
       {
         "id": "source--1c8da449-30ed-4b7b-89f7-9c8f272207ab",
         "title": "Reality Winner, N.S.A. Contractor Accused of Leak, Was Undone by Trail of Clues",
-        "source_type": "05",
+        "source_type": "5",
         "file_type": "html",
         "date": "2017-05-06",
         "public": true,
@@ -210,7 +210,7 @@
       {
         "id": "source--497d1b03-8c71-482f-9156-542d21e99fdf",
         "title": "Reality Winner, Former N.S.A. Translator, Gets More Than 5 Years in Leak of Russian Hacking Report",
-        "source_type": "05",
+        "source_type": "5",
         "file_type": "html",
         "date": "2018-08-23",
         "public": true,
@@ -219,7 +219,7 @@
       {
         "id": "source--a6e7705d-195f-4617-a2d2-30c84aadadea",
         "title": "Original Court Documents: US v. Reality Leigh Winner",
-        "source_type": "01",
+        "source_type": "1",
         "file_type": "pdf",
         "date": "2018-08-23",
         "public": true,

@@ -132,7 +132,7 @@
         "id": "impact--2d4ed800-002d-4ce5-bbb0-c89acc1f4254",
         "high": 8000,
         "low": 8000,
-        "metric": "07",
+        "metric": "7",
         "estimated": true,
         "comment": "The Vault 7 leak included approximately 8,000 documents detailing CIA hacking tools and techniques."
       },
@@ -140,7 +140,7 @@
         "id": "impact--5f3ee38d-2d4c-4ea9-9857-41f9537477ea",
         "high": 1000000000,
         "low": 100000000,
-        "metric": "05",
+        "metric": "5",
         "estimated": true,
         "comment": "The financial impact of the breach was substantial, with estimates ranging from hundreds of millions to a billion dollars for damage control and security improvements."
       },
@@ -171,7 +171,7 @@
         "id": "insider--5460491c-eacd-4074-aef9-f6f584893a59",
         "incident_role": "1",
         "motive": [
-          "08"
+          "8"
         ],
         "predispositions": [
           [
@@ -272,35 +272,35 @@
         "id": "response--f42fc7ae-48a1-48f9-bf84-0d4b13f7a64c",
         "technical_controls": [
           [
-            "01",
+            "1",
             "2016-11-01"
           ],
           [
-            "02",
+            "2",
             "2016-11-01"
           ]
         ],
         "behavioral_controls": [
           [
-            "04",
+            "4",
             "2016-11-01"
           ]
         ],
         "investigated_by": [
-          "04",
-          "07"
+          "4",
+          "7"
         ],
         "investigation_events": [
           [
-            "01",
+            "1",
             "2017-03-07"
           ],
           [
-            "02",
+            "2",
             "2017-03-07"
           ],
           [
-            "03",
+            "3",
             "2018-06-18"
           ]
         ],
@@ -308,7 +308,7 @@
       },
       {
         "id": "sentence--21e74a96-ba47-46fe-8338-736ab19552ba",
-        "sentence_type": "09",
+        "sentence_type": "9",
         "quantity": 40,
         "metric": "4",
         "concurrency": false
@@ -324,7 +324,7 @@
       {
         "id": "source--5565e706-d762-4b35-b54a-6f22a80badb2",
         "title": "Joshua Adam Schulte Charged with Unauthorized Disclosure of Classified Information and Other Offenses",
-        "source_type": "02",
+        "source_type": "2",
         "file_type": "html",
         "date": "2018-06-18T00:00:00Z",
         "public": true,
@@ -333,7 +333,7 @@
       {
         "id": "source--d6a29cb3-519f-4d62-a1f6-a86439bef53d",
         "title": "Former CIA Officer Joshua Adam Schulte Sentenced to 40 Years in Prison for Espionage and Child Pornography Offenses",
-        "source_type": "02",
+        "source_type": "2",
         "file_type": "html",
         "date": "2023-01-18T00:00:00Z",
         "public": true,
@@ -342,7 +342,7 @@
       {
         "id": "source--7e3ef93e-31b0-4e17-a32a-98540326fd05",
         "title": "CIA Engineer Convicted of Largest Theft of Classified Data in Agency’s History",
-        "source_type": "05",
+        "source_type": "5",
         "file_type": "html",
         "date": "2022-07-13T00:00:00Z",
         "public": true,
@@ -351,7 +351,7 @@
       {
         "id": "source--d36603a3-2510-4617-87eb-10eea6ab672e",
         "title": "USA v. Schulte Docket Information",
-        "source_type": "01",
+        "source_type": "1",
         "file_type": "html",
         "date": "2022-07-13T00:00:00Z",
         "public": true,
@@ -360,8 +360,8 @@
       {
         "id": "stressor--28ecfbf3-5eb1-429f-8a55-c2e16f08ebcd",
         "date": "2016",
-        "category": "S2",
-        "subcategory": "S2.12",
+        "category": "2",
+        "subcategory": "2.12",
         "comment": "Joshua Adam Schulte internal disputes and a hostile work environment at the CIA (self-imposed) contributed to his decision to steal and leak classified information as revenge for mistreatment."
       },
       {

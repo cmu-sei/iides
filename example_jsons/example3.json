@@ -55,14 +55,14 @@
         "id": "impact--d2eb25a4-1293-44ee-b8a6-a984714d8033",
         "high": 245000000,
         "low": 245000000,
-        "metric": "05",
+        "metric": "5",
         "estimated": false,
         "comment": "Financial impact valued at approximately $245 million, which was the settlement amount Uber agreed to give Waymo in equity."
       },
       {
         "id": "impact--ea6f96c7-d4db-4021-b85b-057453ff2292",
         "high": 14000,
-        "metric": "07",
+        "metric": "7",
         "estimated": true,
         "comment": "Levandowski downloaded over 14,000 files before leaving the company to found his own startup, that was then bought by Uber"
       },
@@ -90,8 +90,8 @@
         "id": "insider--2fe80494-c7cf-4d75-85ef-736b55884664",
         "incident_role": "1",
         "motive": [
-          "03",
-          "05"
+          "3",
+          "5"
         ],
         "substance_use_during_incident": false,
         "first_name": "Anthony",
@@ -185,11 +185,11 @@
         "id": "response--9923bad0-25bb-474a-bff7-4b23bfb3e240",
         "investigated_by": [
           "99",
-          "02"
+          "2"
         ],
         "investigation_events": [
           [
-            "02",
+            "2",
             "2016-11-00"
           ]
         ],
@@ -205,7 +205,7 @@
       {
         "id": "source--267d8772-b2e0-4bea-92a6-224f157e6924",
         "title": "Settlement Agreement",
-        "source_type": "01",
+        "source_type": "1",
         "file_type": "pdf",
         "date": "2017-09-13",
         "public": true,
@@ -214,8 +214,8 @@
       {
         "id": "stressor--3a9b7107-9d1c-4c9e-b5c2-e56b0bd408f0",
         "date": "2015-12-01",
-        "category": "S1",
-        "subcategory": "S1.9",
+        "category": "1",
+        "subcategory": "1.9",
         "comment": "Potential stressors could include career ambitions or potential financial gain prompting actions that led to the misappropriation of documents."
       },
       {

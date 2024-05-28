@@ -76,7 +76,7 @@
         "id": "impact--1d3ccef3-2975-4d62-84c9-d798ec888ae6",
         "high": 12,
         "low": 3,
-        "metric": "04",
+        "metric": "4",
         "estimated": true,
         "comment": ""
       },
@@ -104,7 +104,7 @@
         "id": "insider--80fea631-33e6-440b-b86d-2d49c8d7fcd2",
         "incident_role": "1",
         "motive": [
-          "01"
+          "1"
         ],
         "substance_use_during_incident": false,
         "predispositions": [
@@ -181,25 +181,25 @@
         "id": "response--eb4d3760-213c-4f3b-81c2-b7805376c369",
         "technical_controls": [
           [
-            "02",
+            "2",
             "2012-01-01"
           ]
         ],
         "behavioral_controls": [],
         "investigated_by": [
-          "03"
+          "3"
         ],
         "investigation_events": [
           [
-            "01",
+            "1",
             "2017-06-22"
           ],
           [
-            "02",
+            "2",
             "2017-06-22"
           ],
           [
-            "03",
+            "3",
             "2017-05-24"
           ]
         ],
@@ -207,7 +207,7 @@
       },
       {
         "id": "sentence--7b9161b8-ee82-4e11-945a-31af4e284ddd",
-        "sentence_type": "09",
+        "sentence_type": "9",
         "quantity": 20,
         "metric": "4",
         "concurrency": false
@@ -215,7 +215,7 @@
       {
         "id": "source--370b7bf9-46a4-44f4-8229-dce1c0824b62",
         "title": "Former C.I.A. Officer Sentenced to 20 Years After Spying for China",
-        "source_type": "05",
+        "source_type": "5",
         "file_type": "html",
         "date": "2019-05-17",
         "public": true,
@@ -224,7 +224,7 @@
       {
         "id": "source--43dfd29e-60c0-4aaa-933f-a96c2845887e",
         "title": "US v. Kevin Mallory, No. 19-4385 (4th Cir. 2022)",
-        "source_type": "01",
+        "source_type": "1",
         "file_type": "pdf",
         "date": "2022-07-11",
         "public": true,
@@ -233,7 +233,7 @@
       {
         "id": "source--0ae6419b-66e3-4d9f-bcb6-531cc8a4e53a",
         "title": "United States of America v. Kevin Patrick Mallory",
-        "source_type": "01",
+        "source_type": "1",
         "file_type": "pdf",
         "date": "2017-06-21",
         "public": true,
@@ -242,7 +242,7 @@
       {
         "id": "source--ada0e3cc-5048-4509-ad62-c06c7d34594f",
         "title": "United States v. Mallory (2020)",
-        "source_type": "01",
+        "source_type": "1",
         "file_type": "html",
         "date": "2020-10-05",
         "public": true,
@@ -251,7 +251,7 @@
       {
         "id": "source--9fe4a90d-abf1-4db6-a4e1-a30e37b3ffe6",
         "title": "United States v. Mallory (2022)",
-        "source_type": "01",
+        "source_type": "1",
         "file_type": "html",
         "date": "2022-07-11",
         "public": true,
@@ -260,7 +260,7 @@
       {
         "id": "source--265815a9-494f-4034-b2cf-2d28e01b1318",
         "title": "United States v. Mallory, Criminal No. 1:17-CR-154",
-        "source_type": "01",
+        "source_type": "1",
         "file_type": "html",
         "date": "2018-10-15",
         "public": true,
