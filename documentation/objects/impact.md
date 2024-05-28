@@ -17,19 +17,19 @@ The quantified impact of the incident on the victim organization. An incident ma
 
 ### impact-metric-vocab
 
-Constants: `01`, `02`, `03`, `04`, `05`, `06`, `07`, `08`, `09`, `10`, `11`, `12`, `13`, `14`, `15`, `16`
+Constants: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, `14`, `15`, `16`
 
 | Const | Value | Description |
 | --- | --- | --- |
-| 01 | Accounts | Computer, network, financial, user accounts.|
-| 02 | Credit card numbers | Physical or digital credit or debit card numbers.|
-| 03 | Customers | The number of customers effected (e.g., through stolen accounts, PII, etc.)|
-| 04 | Documents | The number of physical or digital documents effected (stolen, deleted, modified, etc.).|
-| 05 | Dollars | Specific financial impact of money stolen, restitution ordered, etc.|
-| 06 | Employees | Number of employees effected.|
-| 07 | Files | Number of physical or digital files stolen, read, or compromised.|
-| 08 | Hours | Down time or time effected in hours.|
-| 09 | Pages | Number of individual pages of a document(s) or file(s).|
+| 1 | Accounts | Computer, network, financial, user accounts.|
+| 2 | Credit card numbers | Physical or digital credit or debit card numbers.|
+| 3 | Customers | The number of customers effected (e.g., through stolen accounts, PII, etc.)|
+| 4 | Documents | The number of physical or digital documents effected (stolen, deleted, modified, etc.).|
+| 5 | Dollars | Specific financial impact of money stolen, restitution ordered, etc.|
+| 6 | Employees | Number of employees effected.|
+| 7 | Files | Number of physical or digital files stolen, read, or compromised.|
+| 8 | Hours | Down time or time effected in hours.|
+| 9 | Pages | Number of individual pages of a document(s) or file(s).|
 | 10 | Person-hours | Person-hours or work time effected. Often occurs in sabotage incidents.|
 | 11 | Identities | PII records, user information, etc.|
 | 12 | Items | Generic items, such as merchandise.|

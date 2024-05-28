@@ -16,7 +16,7 @@
       },
       "case_title": {
         "type": "string",
-        "description": "Title provided by the court system (e.g., “USA v. LastName” or “USA v. LastName, et al.”)."
+        "description": "Title provided by the court system (e.g., 'USA v. LastName' or 'USA v. LastName, et al.')."
       },
       "court_country": {
         "type": "string",

@@ -2,7 +2,7 @@
     "$id": "iides/json/objects/job.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Job",
-    "description": "Details of the employment relationship between an individual and an organization. A job may be connected to only one organization, and may be connected to only one insider or accomplice.",
+    "description": "Details of the employment relationship between an individual and an organization.",
     "type": "object",
     "properties": {
         "id": {

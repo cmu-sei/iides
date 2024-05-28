@@ -1,133 +1,133 @@
 {
-    "$id": "iides/json/objects/charge.json",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "Charge",
-    "description": "A charge or accusation brought against the insider when the incident is pursued in the legal system. E.g., \"Two counts of Unauthorized Access to Company Systems.\" A charge must be connected to only one court case. A court case may have one or more charges.",
-    "type": "object",
-    "properties": {
-      "id": {
-        "type": "string",
-        "description": "A unique string that begins with \"charge--\" and is appended with a UUIDv4.",
-        "pattern": "^charge--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
-      },
-      "title": {
-        "type": "string",
-        "description": "Broad subject matter area of the legal code. For U.S. cases, these are often title “18 U.S.C.”."
-      },
-      "section": {
-        "type": "string",
-        "description": "Section (and subsection) of the law the subject is accused of violating. For U.S. cases for example, Wire Fraud is section 1343 of Title 18."
-      },
-      "nature_of_offense": {
-        "type": "string",
-        "description": "Description of the title and section of the law being violated."
-      },
-      "count": {
-        "type": "integer",
-        "description": "Number of times the subject is accused of violating the law associated with this charge. Note that multiple violations of a law are often listed as a range of counts (e.g. “Count 2-6” would have count=5 for this property)."
-      },
-      "plea": {
-        "type": "string",
-        "description": "Plea entered by the defendant for this charge.",
-        "$ref": "#/$defs/charge-plea-vocab"
-      },
-      "plea_bargain": {
-        "type": "boolean",
-        "description": "Whether the charge indicated here is a lesser charge based on a previous plea agreement."
-      },
-      "disposition": {
-        "type": "string",
-        "description": "The decision in the case or the final result.",
-        "$ref": "#/$defs/charge-disposition-vocab"
-      }
+  "$id": "iides/json/objects/charge.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Charge",
+  "description": "A charge or accusation brought against the insider when the incident is pursued in the legal system. E.g., \"Two counts of Unauthorized Access to Company Systems.\" A charge must be connected to only one court case. A court case may have one or more charges.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "A unique string that begins with \"charge--\" and is appended with a UUIDv4.",
+      "pattern": "^charge--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
     },
-    "required": [
-        "id",
-        "title"
-    ],
-    "$defs": {
-        "charge-plea-vocab": {
-            "oneOf": [
-              {
-                "const": "1",
-                "title": "Guilty",
-                "description": "The defendant pleaed guilty to a charge."
-              },
-              {
-                "const": "2",
-                "title": "No Contest",
-                "description": "The defendant didn't contest to a charge."
-              },
-              {
-                "const": "3",
-                "title": "Not Guilty",
-                "description": "The defendant pleaed not guilty to a charge."
-              },
-              {
-                "const": "4",
-                "title": "Refused to Enter a Plea",
-                "description": "The defendant refused to enter into a plea to a charge."
-              }
-            ]
-        },
-        "charge-disposition-vocab": {
-            "oneOf": [
-              {
-                "const": "1",
-                "title": "Acquitted",
-                "description": "Found not guilty by a court of law in a criminal trial."
-              },
-              {
-                "const": "2",
-                "title": "Convicted",
-                "description": "Plead or been found guilty by a court."
-              },
-              {
-                "const": "3",
-                "title": "Dismissed",
-                "description": "The court or prosecutor has decided the charge should not go forward."
-              },
-              {
-                "const": "4",
-                "title": "Diversion/Deferred Prosecution",
-                "description": "The court has delayed prosecution pending the successful completion of a treatment program, at which point the charges will be dismissed."
-              },
-              {
-                "const": "5",
-                "title": "Expunged",
-                "description": "The deletion of non-conviction information (such as arrest data)."
-              },
-              {
-                "const": "6",
-                "title": "No charges filed/Charges dropped",
-                "description": "The prosecutor has declined to pursue the case."
-              },
-              {
-                "const": "7",
-                "title": "Pending",
-                "description": "The case is still being investigated or prosecuted."
-              },
-              {
-                "const": "8",
-                "title": "Pled down",
-                "description": "Pled guilty to a lesser charge."
-              },
-              {
-                "const": "9",
-                "title": "Sealed",
-                "description": "The court has restricted access to all or some of the content of the record; however, the existence of the record will still be public record."
-              },
-              {
-                "const": "10",
-                "title": "Suspended sentence",
-                "description": "The court has delayed the sentencing pending the successful completion of a period of probation and/or treatment program."
-              },
-              {
-                "const": "11",
-                "title": "Vacated",
-                "description": "The court has withdrawn the guilty plea or set aside the guilty verdict, and the defendant may state they have never been convicted of that crime."
-              }
-            ]
-        }
+    "title": {
+      "type": "string",
+      "description": "Broad subject matter area of the legal code. For U.S. cases, these are often title '18 U.S.C.'."
+    },
+    "section": {
+      "type": "string",
+      "description": "Section (and subsection) of the law the subject is accused of violating. For U.S. cases for example, Wire Fraud is section 1343 of Title 18."
+    },
+    "nature_of_offense": {
+      "type": "string",
+      "description": "Description of the title and section of the law being violated."
+    },
+    "count": {
+      "type": "integer",
+      "description": "Number of times the subject is accused of violating the law associated with this charge. Note that multiple violations of a law are often listed as a range of counts (e.g. 'Count 2-6' would have count=5 for this property)."
+    },
+    "plea": {
+      "type": "string",
+      "description": "Plea entered by the defendant for this charge.",
+      "$ref": "#/$defs/charge-plea-vocab"
+    },
+    "plea_bargain": {
+      "type": "boolean",
+      "description": "Whether the charge indicated here is a lesser charge based on a previous plea agreement."
+    },
+    "disposition": {
+      "type": "string",
+      "description": "The decision in the case or the final result.",
+      "$ref": "#/$defs/charge-disposition-vocab"
     }
+  },
+  "required": [
+    "id",
+    "title"
+  ],
+  "$defs": {
+    "charge-plea-vocab": {
+      "oneOf": [
+        {
+          "const": "1",
+          "title": "Guilty",
+          "description": "The defendant pleaed guilty to a charge."
+        },
+        {
+          "const": "2",
+          "title": "No Contest",
+          "description": "The defendant didn't contest to a charge."
+        },
+        {
+          "const": "3",
+          "title": "Not Guilty",
+          "description": "The defendant pleaed not guilty to a charge."
+        },
+        {
+          "const": "4",
+          "title": "Refused to Enter a Plea",
+          "description": "The defendant refused to enter into a plea to a charge."
+        }
+      ]
+    },
+    "charge-disposition-vocab": {
+      "oneOf": [
+        {
+          "const": "1",
+          "title": "Acquitted",
+          "description": "Found not guilty by a court of law in a criminal trial."
+        },
+        {
+          "const": "2",
+          "title": "Convicted",
+          "description": "Plead or been found guilty by a court."
+        },
+        {
+          "const": "3",
+          "title": "Dismissed",
+          "description": "The court or prosecutor has decided the charge should not go forward."
+        },
+        {
+          "const": "4",
+          "title": "Diversion/Deferred Prosecution",
+          "description": "The court has delayed prosecution pending the successful completion of a treatment program, at which point the charges will be dismissed."
+        },
+        {
+          "const": "5",
+          "title": "Expunged",
+          "description": "The deletion of non-conviction information (such as arrest data)."
+        },
+        {
+          "const": "6",
+          "title": "No charges filed/Charges dropped",
+          "description": "The prosecutor has declined to pursue the case."
+        },
+        {
+          "const": "7",
+          "title": "Pending",
+          "description": "The case is still being investigated or prosecuted."
+        },
+        {
+          "const": "8",
+          "title": "Pled down",
+          "description": "Pled guilty to a lesser charge."
+        },
+        {
+          "const": "9",
+          "title": "Sealed",
+          "description": "The court has restricted access to all or some of the content of the record; however, the existence of the record will still be public record."
+        },
+        {
+          "const": "10",
+          "title": "Suspended sentence",
+          "description": "The court has delayed the sentencing pending the successful completion of a period of probation and/or treatment program."
+        },
+        {
+          "const": "11",
+          "title": "Vacated",
+          "description": "The court has withdrawn the guilty plea or set aside the guilty verdict, and the defendant may state they have never been convicted of that crime."
+        }
+      ]
+    }
+  }
 }

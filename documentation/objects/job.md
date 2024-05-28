@@ -1,6 +1,6 @@
 # Job
 
-Details of the employment relationship between an individual and an organization. A job may be connected to only one organization, and may be connected to only one insider or accomplice.
+Details of the employment relationship between an individual and an organization.
 
 ## Properties
 

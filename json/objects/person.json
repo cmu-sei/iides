@@ -1,5 +1,5 @@
 {
-    "$id": "iides/json/objects/person.json",
+    "$id": " iides/json/objects/person.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Person",
     "description": "Abstract class for inheritance by the Insider and Accomplice objects. Describes the properties of an individual that MAY be inherited by those classes.",
@@ -52,7 +52,7 @@
       },
       "nationality": {
         "type": "array",
-        "description": "The nationality or nationalities of the person.",
+        "description": "The nationality or nationalities of the person. Public implementations should use the standard codes provided by ISO 3166-1 alpha-2.",
         "items": {"type": "string"},
         "minItems": 1
       },
@@ -89,8 +89,7 @@
         "description": "Comments or clarifications regarding any of the Person properties."
       }
     },
-    "required": [
-    ],
+    "required": [],
     "$defs": {
         "suffix-vocab": {
             "enum": [

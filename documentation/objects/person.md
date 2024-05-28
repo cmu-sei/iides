@@ -17,7 +17,7 @@ Abstract class for inheritance by the Insider and Accomplice objects. Describes 
 - **`postal_code`** *(integer)* : The postal code that the person resided in at the time of the incident.
 - **`country_of_citizenship`** *(array)* : Citizenship(s) of the person. Public implementations should use the standard codes provided by ISO 3166-1 alpha-2.
   - One or more string values
-- **`nationality`** *(array)* : The nationality or nationalities of the person.
+- **`nationality`** *(array)* : The nationality or nationalities of the person. Public implementations should use the standard codes provided by ISO 3166-1 alpha-2.
   - One or more string values
 - **`residency`** *(string)* : Residency status if the person was not a citizen of the country where they resided during the incident.
 	- A constant from [residency-vocab](#residency-vocab)
