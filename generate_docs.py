@@ -72,7 +72,6 @@ def get_properties(properties, required):
                     vocab_ref += f"{', '.join(refs)})"
             else:
                 # An array of strings
-                print("HERE")
                 if '$ref' in properties[p]['items'].keys():
                     vocab_ref += "constants from "
                     vocab_ref += get_ref(properties[p]['items']['$ref'])
@@ -138,6 +137,7 @@ if __name__ == "__main__":
     json_files = get_json_files()
 
     for filename in json_files:
+
         file_lines = []  # lines that will be written to the markdown file
 
         with open(filename) as f:

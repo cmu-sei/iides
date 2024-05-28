@@ -3,7 +3,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Insider Relationship Vocab",
     "description": "Vocabulary for the possible types of relationships between multiple insiders, or between insiders and external accomplices.",
-    "type": "object",
+    "type": "string",
     "properties": {
         "relationship": {
             "type": "string",

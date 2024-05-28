@@ -46,37 +46,37 @@
         "source-type-vocab": {
             "oneOf": [
               {
-                "const": "01",
+                "const": "1",
                 "title": "Court Document",
                 "description": "Legal document from a court case."
               },
               {
-                "const": "02",
+                "const": "2",
                 "title": "DOJ Press Release",
                 "description": "Press release from the Department of Justice or US Attorneys' Office."
               },
               {
-                "const": "03",
+                "const": "3",
                 "title": "Investigator Notes",
                 "description": "Raw notes from an incident investigator."
               },
               {
-                "const": "04",
+                "const": "4",
                 "title": "Logs",
                 "description": "Technical logs from network, server, or user devices."
               },
               {
-                "const": "05",
+                "const": "5",
                 "title": "Media",
                 "description": "News, blog, or similar publication."
               },
               {
-                "const": "06",
+                "const": "6",
                 "title": "Organization Interview",
                 "description": "Direct interview with the victim organization."
               },
               {
-                "const": "07",
+                "const": "7",
                 "title": "Insider Interview",
                 "description": "Direct interview with the insider."
               },

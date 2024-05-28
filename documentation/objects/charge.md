@@ -6,10 +6,10 @@ A charge or accusation brought against the insider when the incident is pursued 
 
 - **`id`** (required) *(string)* : A unique string that begins with "charge--" and is appended with a UUIDv4.
   - Uses pattern: ^charge--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
-- **`title`** (required) *(string)* : Broad subject matter area of the legal code. For U.S. cases, these are often title “18 U.S.C.”.
+- **`title`** (required) *(string)* : Broad subject matter area of the legal code. For U.S. cases, these are often title '18 U.S.C.'.
 - **`section`** *(string)* : Section (and subsection) of the law the subject is accused of violating. For U.S. cases for example, Wire Fraud is section 1343 of Title 18.
 - **`nature_of_offense`** *(string)* : Description of the title and section of the law being violated.
-- **`count`** *(integer)* : Number of times the subject is accused of violating the law associated with this charge. Note that multiple violations of a law are often listed as a range of counts (e.g. “Count 2-6” would have count=5 for this property).
+- **`count`** *(integer)* : Number of times the subject is accused of violating the law associated with this charge. Note that multiple violations of a law are often listed as a range of counts (e.g. 'Count 2-6' would have count=5 for this property).
 - **`plea`** *(string)* : Plea entered by the defendant for this charge.
 	- A constant from [charge-plea-vocab](#charge-plea-vocab)
 - **`plea_bargain`** *(boolean)* : Whether the charge indicated here is a lesser charge based on a previous plea agreement.

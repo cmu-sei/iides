@@ -39,28 +39,30 @@
       "predispositions": {
         "type": "array",
         "description": "Insider's tendancy toward certain actions or qualities.",
-        "prefixItems": [
-          { "type": "string" },
-          { "type": "string" },
-          { "$ref": "#/$defs/predisposition-type-vocab"},
-          { "$ref": "#/$defs/predisposition-subtype-vocab"}
-        ],
-        "minItems": 2,
-        "items": false
+        "items": {
+          "type": "array",
+          "prefixItems": [
+            { "$ref": "#/$defs/predisposition-type-vocab" },
+            { "$ref": "#/$defs/predisposition-subtype-vocab" }
+          ],
+          "minItems": 2,
+          "maxItems": 2
+        }
       },
       "concerning_behaviors": {
         "type": "array",
         "description": "Insider's history of past behavior that could indicate future issues.",
-        "prefixItems": [
-          { "type": "string" },
-          { "type": "string" },
-          { "$ref": "#/$defs/cb-type-vocab"},
-          { "$ref": "#/$defs/cb-subtype-vocab"}
-        ],
-        "minItems": 2,
-        "items": false
-      }
-    },
+        "items": {
+          "type": "array",
+          "prefixItems": [
+            { "$ref": "#/$defs/concerning-behavior-vocab" },
+            { "$ref": "#/$defs/cb-subtype-vocab" }
+          ],
+          "minItems": 2,
+          "maxItems": 2
+        }
+        }
+      },
     "required": [
         "id",
         "incident_role"
@@ -93,42 +95,42 @@
         "motive-vocab": {
             "oneOf": [
               {
-                "const": "01",
+                "const": "1",
                 "title": "Benefit Foreign Entity",
                 "description": "Insider committed their attack to benefit a foreign entity, such as a foreign government or military."
               },
               {
-                "const": "02",
+                "const": "2",
                 "title": "Benefit New Employer",
                 "description": "Insider committed their attack to benefit their new employer, such as by stealing a client list when they left the victim organization."
               },
               {
-                "const": "03",
+                "const": "3",
                 "title": "Competitive Business Advantage",
                 "description": "Insider committed their attack in order to gain a business advantage for a competing company. Often, this is the insider starting their own company."
               },
               {
-                "const": "04",
+                "const": "4",
                 "title": "Curiosity",
                 "description": "Insider committed the incident out of curiosity. E.g., Insider accessed medical records of a celebrity because they were curious of that celebrity's age."
               },
               {
-                "const": "05",
+                "const": "5",
                 "title": "Financial Gain",
                 "description": "Insider committed their attack to make a profit."
               },
               {
-                "const": "06",
+                "const": "6",
                 "title": "Freedom of Information",
                 "description": "The insider held the belief that it is in the best interest of the public to share the victim organization's confidential information with the public. E.g., sharing unfavorable test results of a product or unfavorable information about an organization's internal practices."
               },
               {
-                "const": "07",
+                "const": "7",
                 "title": "Recognition",
                 "description": "The insider wanted to be recognized (e.g. for being smart, talented, capable, powerful, etc.)"
               },
               {
-                "const": "08",
+                "const": "8",
                 "title": "Revenge",
                 "description": "The insider wanted revenge for an actual or perceived wrong."
               },
@@ -142,27 +144,27 @@
         "psych-issues-vocab": {
             "oneOf": [
               {
-                "const": "01",
+                "const": "1",
                 "title": "Outpatient Treatment",
                 "description": "Insider received treatment in which they were not hospitalized overnight, but rather visited a hospital, clinic, or associated facility for diagnosis or treatment."
               },
               {
-                "const": "02",
+                "const": "2",
                 "title": "Inpatient Treatment",
                 "description": "Insider received treatment that involved 24-hour (including overnight) supervision at a hospital or dedicated psychiatric facility."
               },
               {
-                "const": "03",
+                "const": "3",
                 "title": "Medication Noncompliance",
                 "description": "The insider stopped taking a prescribed medication or following a prescribed course of treatment for a particular medical or mental health condition which, in turn, could have impacted their mental faculties."
               },
               {
-                "const": "04",
+                "const": "4",
                 "title": "Delusions",
                 "description": "The insider experienced or acted on delusions at some point during their employment within the organization."
               },
               {
-                "const": "05",
+                "const": "5",
                 "title": "Threatened/Attempted Suicide",
                 "description": "Insider threatened or attempted to commit suicide at some point during their employment within the organization."
               },
@@ -301,7 +303,7 @@
               }
             ]
         },
-        "cb-type-vocab": {
+        "concerning-behavior-vocab": {
             "oneOf": [
               {
                 "const": "3.1",

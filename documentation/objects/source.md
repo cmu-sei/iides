@@ -19,17 +19,17 @@ Document that provides information about one or more aspects of the incident.
 
 ### source-type-vocab
 
-Constants: `01`, `02`, `03`, `04`, `05`, `06`, `07`, `99`
+Constants: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `99`
 
 | Const | Value | Description |
 | --- | --- | --- |
-| 01 | Court Document | Legal document from a court case.|
-| 02 | DOJ Press Release | Press release from the Department of Justice or US Attorneys' Office.|
-| 03 | Investigator Notes | Raw notes from an incident investigator.|
-| 04 | Logs | Technical logs from network, server, or user devices.|
-| 05 | Media | News, blog, or similar publication.|
-| 06 | Organization Interview | Direct interview with the victim organization.|
-| 07 | Insider Interview | Direct interview with the insider.|
+| 1 | Court Document | Legal document from a court case.|
+| 2 | DOJ Press Release | Press release from the Department of Justice or US Attorneys' Office.|
+| 3 | Investigator Notes | Raw notes from an incident investigator.|
+| 4 | Logs | Technical logs from network, server, or user devices.|
+| 5 | Media | News, blog, or similar publication.|
+| 6 | Organization Interview | Direct interview with the victim organization.|
+| 7 | Insider Interview | Direct interview with the insider.|
 | 99 | Other | Other type of source not listed in this vocabulary.|
 
 ### source-file-type-vocab

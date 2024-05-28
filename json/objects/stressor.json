@@ -40,22 +40,22 @@
         "stressor-category-vocab": {
             "oneOf": [
               {
-                "const": "S1",
+                "const": "1",
                 "title": "Employment Status",
                 "description": "The insider's employment status changed."
               },
               {
-                "const": "S2",
+                "const": "2",
                 "title": "Organizational Issues",
                 "description": "The insider's employer had problems or changes that directly or indirectly affected the insider."
               },
               {
-                "const": "S3",
+                "const": "3",
                 "title": "Unmet Expectations",
                 "description": "Insider's expectations of/from their employer were not met."
               },
               {
-                "const": "S4",
+                "const": "4",
                 "title": "Consequences for Previous Violations",
                 "description": "Consequences resulting from the insider's previous behavior or violations, not resulting from the incident itself."
               }
@@ -64,177 +64,177 @@
         "stressor-subcategory-vocab": {
             "oneOf": [
               {
-                "const": "S1.1",
+                "const": "1.1",
                 "title": "Insider Hired",
                 "description": "Insider is hired by the victim organization or another organization."
               },
               {
-                "const": "S1.2",
+                "const": "1.2",
                 "title": "Insider Promoted",
                 "description": "The insider is promoted within any organization, including the victim organization."
               },
               {
-                "const": "S1.3",
+                "const": "1.3",
                 "title": "Insider Demoted",
                 "description": "The insider is demoted within any organization, including the victim organization."
               },
               {
-                "const": "S1.4",
+                "const": "1.4",
                 "title": "Insider Notified of Pending Termination",
                 "description": "The insider is informed that they will be terminated from the organization in the near future."
               },
               {
-                "const": "S1.5",
+                "const": "1.5",
                 "title": "Insider Suspended",
                 "description": "The insider is suspended from work for any reason."
               },
               {
-                "const": "S1.6",
+                "const": "1.6",
                 "title": "Insider Laid Off",
                 "description": "The insider is laid off from their position within the organization."
               },
               {
-                "const": "S1.7",
+                "const": "1.7",
                 "title": "Insider Put on Paid/Unpaid Leave",
                 "description": "The insider is put on a temporary leave from a job assignment, with or without pay and benefits."
               },
               {
-                "const": "S1.8",
+                "const": "1.8",
                 "title": "Insider Terminated",
                 "description": "The insider is fired from any organization, including the victim organization"
               },
               {
-                "const": "S1.9",
+                "const": "1.9",
                 "title": "Insider Resigned",
                 "description": "The insider resigns from any organization, including the victim organization."
               },
               {
-                "const": "S1.10",
+                "const": "1.10",
                 "title": "Change of Employment Status",
                 "description": "The insider's status within the organization being changes from what it originally was (e.g., Insider took a full-time position at the organization after graduating college)."
               },
               {
-                "const": "S1.11",
+                "const": "1.11",
                 "title": "Insider Changed Positions Internally",
                 "description": "The insider changes positions within the organization (e.g., Insider transferred to the Accounting department)."
               },
               {
-                "const": "S1.12",
+                "const": "1.12",
                 "title": "Insider Submits Resignation Notice",
                 "description": "The insider submits notice of resignation to the organization."
               },
               {
-                "const": "S2.1",
+                "const": "2.1",
                 "title": "Mergers And Acquisitions",
                 "description": "A change in the structure of the insider's employer organization (e.g., The insider's organization was in the process of being bought out by another company)."
               },
               {
-                "const": "S2.2",
+                "const": "2.2",
                 "title": "Reorganization Of Organization Or Outsourcing",
                 "description": "A change in the internal structure of the insider's employer (e.g., The division of the victim organization that the insider worked in was closing)."
               },
               {
-                "const": "S2.3",
+                "const": "2.3",
                 "title": "Significant Financial Stress (non-bankruptcy)",
                 "description": "The organization was undergoing significant financial stress, but did not declare bankruptcy."
               },
               {
-                "const": "S2.4",
+                "const": "2.4",
                 "title": "Previous Insider Incident",
                 "description": "Organization has previously had an insider incident unrelated to this one"
               },
               {
-                "const": "S2.5",
+                "const": "2.5",
                 "title": "Layoffs",
                 "description": "Temporary suspension or permanent termination of one or more employees."
               },
               {
-                "const": "S2.6",
+                "const": "2.6",
                 "title": "Personnel Changes",
                 "description": "Staffing changes of employees other than the insider within the employing organization."
               },
               {
-                "const": "S2.7",
+                "const": "2.7",
                 "title": "Supervisor Ambiguity",
                 "description": "The insider expressed a lack of clarity in the organization's supervisory hierarchy."
               },
               {
-                "const": "S2.8",
+                "const": "2.8",
                 "title": "Organization Filed for Bankruptcy",
                 "description": "The organization filed for bankruptcy."
               },
               {
-                "const": "S2.9",
+                "const": "2.9",
                 "title": "Lack of Background Checks",
                 "description": "The organizational failure to sufficiently review the past history of potential candidates."
               },
               {
-                "const": "S2.10",
+                "const": "2.10",
                 "title": "Inadequate Training",
                 "description": "An organizational failure to administer the proper training for its employees."
               },
               {
-                "const": "S2.11",
+                "const": "2.11",
                 "title": "Lax Controls",
                 "description": "The organizational failure to restrict access to what is necessary for the insider to perform work related activities."
               },
               {
-                "const": "S2.12",
+                "const": "2.12",
                 "title": "Hostile Work Environment",
                 "description": "A work environment that is difficult or uncomfortable for another person to work in due to discrimination of any kind."
               },
               {
-                "const": "S2.13",
+                "const": "2.13",
                 "title": "Problematic Leader",
                 "description": "A supervisor or other leader who is abusive or difficult to work with, for example, by ignoring input from subordinates, excessively criticizing, or taking credit for subordinates' work."
               },
               {
-                "const": "S3.1",
+                "const": "3.1",
                 "title": "Compensation/Benefit Issues",
                 "description": "Insider expressed dissatisfaction with current compensation or benefits."
               },
               {
-                "const": "S3.2",
+                "const": "3.2",
                 "title": "Poor Performance Review",
                 "description": "Insider received a review of their work performance, which is deemed below average."
               },
               {
-                "const": "S3.3",
+                "const": "3.3",
                 "title": "Request Denied By Organization",
                 "description": "The employing organization refused a request from the insider (e.g., The insider's request to work from home is denied due to unproductivity in past work from home)."
               },
               {
-                "const": "S3.4",
+                "const": "3.4",
                 "title": "Passed Over For Promotion",
                 "description": "Insider's employer chooses to promote someone other than the insider."
               },
               {
-                "const": "S4.1",
+                "const": "4.1",
                 "title": "Counseling",
                 "description": "Insider was sent to counseling of any kind as a result of their actions"
               },
               {
-                "const": "S4.2",
+                "const": "4.2",
                 "title": "Referred to EAP",
                 "description": "Insider was referred to the Employee Assistance Program (EAP) as a result of their actions"
               },
               {
-                "const": "S4.3",
+                "const": "4.3",
                 "title": "Reported to HR",
                 "description": "Insider was reported to Human Resources as a result of their actions"
               },
               {
-                "const": "S4.4",
+                "const": "4.4",
                 "title": "Transferred",
                 "description": "Insider was transferred to another location or another team as a result of their actions."
               },
               {
-                "const": "S4.5",
+                "const": "4.5",
                 "title": "Verbal Reprimand",
                 "description": "Insider received a verbal reprimand from their supervisor as a result of their actions."
               },
               {
-                "const": "S4.6",
+                "const": "4.6",
                 "title": "Written Reprimand",
                 "description": "Insider received a written reprimand from their supervisor as a result of their actions."
               }
