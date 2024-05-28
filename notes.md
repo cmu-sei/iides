@@ -23,27 +23,27 @@ White paper
 ### Examples
 
 Example 1 (@nammerman):
-- [ ] json
+- [X] json
 - [ ] markdown
 - [ ] wsd
 
 Example 2:
-- [ ] json
+- [X] json
 - [ ] markdown
 - [ ] wsd
 
 Example 3:
-- [ ] json
+- [X] json
 - [ ] markdown
 - [ ] wsd
 
 Example 4:
-- [ ] json
+- [X] json
 - [ ] markdown
 - [ ] wsd
 
 
-### Schema updates and issues (@nammerman)
+### Schema updates and issues (@nammerman) - DONE
 
 -  Remove leading zeros from constants in vocabularies:
 	- charge disposition
@@ -60,33 +60,33 @@ Example 4:
 -  stressor cat/subcat vocabs - change constants to digits only (x and x.y)
 -  target category vocab 2.3 title - change “plans” to “information”
 
-### JSON formatting and validation
+### JSON formatting and validation - DONE
 
 Assigned: @nammerman
 
 Ensuring the IIDES json schema docs are valid under the 2020 json schema
 
-- [ ] Accomplice
-- [ ] Charge
-- [ ] Court Case
-- [ ] Detection
-- [ ] Impact
-- [ ] Incident
-- [ ] Insider
-- [ ] Job
-- [ ] Legal Response
-- [ ] Note
-- [ ] Organization
-- [ ] Person
-- [ ] Response
-- [ ] Sentence
-- [ ] Source
-- [ ] Sponsor
-- [ ] Stressor
-- [ ] Target
-- [ ] TTP
-- [ ] Insider relationship vocab
-- [ ] Org Relationship
-- [ ] Collusion
-- [ ] Org Owner
-- [ ] Relationship
+- [X] Accomplice
+- [X] Charge
+- [X] Court Case
+- [X] Detection
+- [X] Impact
+- [X] Incident
+- [X] Insider
+- [X] Job
+- [X] Legal Response
+- [X] Note
+- [X] Organization
+- [X] Person
+- [X] Response
+- [X] Sentence
+- [X] Source
+- [X] Sponsor
+- [X] Stressor
+- [X] Target
+- [X] TTP
+- [X] Insider relationship vocab
+- [X] Org Relationship
+- [X] Collusion
+- [X] Org Owner
+- [X] Relationship
