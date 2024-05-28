@@ -503,7 +503,7 @@
               {
                 "const": "O",
                 "title": "Organization",
-                "description": "A collective of individuals who provide products or services."
+                "description": "The organization, rather than its employees or customers owns the target."
               },
               {
                 "const": "T",

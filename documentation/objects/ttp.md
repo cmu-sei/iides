@@ -30,7 +30,7 @@ Action taken by the insider or colluding outsider(s) during the course of the in
 
 ### tactic-vocab
 
-Constants: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`
+Constants: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`
 
 | Const | Value | Description |
 | --- | --- | --- |
@@ -41,11 +41,12 @@ Constants: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`
 | 5 | Malicous Action | An intentionally malicious action not included in the other tactics.|
 | 6 | Concealment | Insider or colluding outsider takes an action that conceals, or attempts to conceal, their activity.|
 | 7 | Data Exfiltration | Data (or copies of data) is removed from the organization without permission or explicitly against permission to use in an unauthorized way.|
-| 8 | Impact | Harmful action that compromises the organization in some way.|
+| 8 | Data Impact | Harmful action involving the organization's data which compromises the organization in some way.|
+| 9 | Safety Impact | Harmful action involving the organization's personnel that compromises the safety of one or more individuals in the organization.|
 
 ### technique-vocab
 
-Constants: `1.1`, `1.2`, `1.3`, `1.4`, `1.5`, `1.6`, `1.7`, `1.8`, `1.9`, `1.10`, `1.11`, `1.12`, `1.13`, `1.14`, `2.1`, `2.2`, `2.3`, `2.4`, `3.1`, `3.2`, `3.3`, `3.4`, `3.5`, `3.6`, `3.7`, `4.1`, `4.2`, `4.3`, `4.4`, `4.5`, `4.6`, `4.7`, `4.8`, `4.9`, `4.10`, `4.11`, `4.12`, `4.13`, `5.1`, `5.2`, `5.3`, `5.4`, `6.1`, `6.2`, `6.3`, `6.4`, `6.5`, `6.6`, `6.7`, `6.8`, `6.9`, `6.10`, `7.1`, `7.2`, `7.3`, `7.4`, `7.5`, `7.6`, `7.7`, `7.8`, `7.9`, `7.10`, `8.1`, `8.2`, `8.3`, `8.4`
+Constants: `1.1`, `1.2`, `1.3`, `1.4`, `1.5`, `1.6`, `1.7`, `1.8`, `1.9`, `1.10`, `1.11`, `1.12`, `1.13`, `1.14`, `2.1`, `2.2`, `2.3`, `2.4`, `3.1`, `3.2`, `3.3`, `3.4`, `3.5`, `3.6`, `3.7`, `4.1`, `4.2`, `4.3`, `4.4`, `4.5`, `4.6`, `4.7`, `4.8`, `4.9`, `4.10`, `4.11`, `4.12`, `4.13`, `5.1`, `5.2`, `5.3`, `5.4`, `6.1`, `6.2`, `6.3`, `6.4`, `6.5`, `6.6`, `6.7`, `6.8`, `6.9`, `6.10`, `7.1`, `7.2`, `7.3`, `7.4`, `7.5`, `7.6`, `7.7`, `7.8`, `7.9`, `7.10`, `8.1`, `8.2`, `8.3`, `8.4`, `8.5`, `8.6`, `9.1`, `9.2`, `9.3`, `9.4`, `9.5`
 
 | Const | Value | Description |
 | --- | --- | --- |
@@ -115,6 +116,13 @@ Constants: `1.1`, `1.2`, `1.3`, `1.4`, `1.5`, `1.6`, `1.7`, `1.8`, `1.9`, `1.10`
 | 8.2 | Modified Critical Data | Insider or accomplice modifies data that is critical to the victim organization (e.g., The insider was able to remotely access the victim organization's systems, to modify employee information and change passwords).|
 | 8.3 | Deleted Critical Data | Insider or accomplice deletes data that is critical to the victim organization (e.g., The insider was able to remotely access the victim organization's systems to delete files).|
 | 8.4 | Used Data in Identity Theft | Insider or accomplice uses data to pretend to be someone else (e.g., to submit false tax returns, open bank accounts, etc.)|
+| 8.5 | Posted Data Publicly | Posted internal, sensitive, or confidential data in a public forum.|
+| 8.6 | Sold or Gave Away Critical Data | Sold or gave away internal data to an external individual or company.|
+| 9.1 | Doxxed Individuals | Publicly posted information about individuals (customers or employees) online for purpose of instigating outside harassment.|
+| 9.2 | Threatened Violence | Threatened violence or physical harm against other individuals in the organization.|
+| 9.3 | Threated Suicide | Threated physical harm to theirself.|
+| 9.4 | Attempted Violence | Attempted violence or physical harm against other individuals in the organization (successful or unsuccesful).|
+| 9.5 | Attempted Suicide | Attempted physical harm to theirself (successful or unsuccessful).|
 
 ### attack-location-vocab
 

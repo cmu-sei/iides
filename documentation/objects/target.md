@@ -142,7 +142,7 @@ Constants: `C`, `E`, `O`, `T`, `Z`
 | --- | --- | --- |
 | C | Consumer | An individual that purchases and makes use of a product or service.|
 | E | Employee | An individual internal to an organization who facilitates the disbursement of products or services.|
-| O | Organization | A collective of individuals who provide products or services.|
+| O | Organization | The organization, rather than its employees or customers owns the target.|
 | T | Third Party | Parties external to an organization and consumers.|
 | Z | Other | Other owner not listed in this vocabulary.|
 
