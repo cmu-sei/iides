@@ -45,8 +45,6 @@ Example 4:
 
 ### Schema updates and issues
 
-- (@abwhisnant) add deception to TTPs
-- (@abwhisnant) go back through codebook and list missing/skipped fields
 - (??) Remove leading zeros from constants in vocabularies:
 	- charge disposition
 	- impact metric

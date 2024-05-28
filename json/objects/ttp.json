@@ -126,8 +126,13 @@
               },
               {
                 "const": "8",
-                "title": "Impact",
-                "description": "Harmful action that compromises the organization in some way."
+                "title": "Data Impact",
+                "description": "Harmful action involving the organization's data which compromises the organization in some way."
+              },
+              {
+                "const": "9",
+                "title": "Safety Impact",
+                "description": "Harmful action involving the organization's personnel that compromises the safety of one or more individuals in the organization."
               }
             ]
         },
@@ -462,6 +467,41 @@
                 "const": "8.4",
                 "title": "Used Data in Identity Theft",
                 "description": "Insider or accomplice uses data to pretend to be someone else (e.g., to submit false tax returns, open bank accounts, etc.)"
+              },
+              {
+                "const": "8.5",
+                "title": "Posted Data Publicly",
+                "description": "Posted internal, sensitive, or confidential data in a public forum."
+              },
+              {
+                "const": "8.6",
+                "title": "Sold or Gave Away Critical Data",
+                "description": "Sold or gave away internal data to an external individual or company."
+              },
+              {
+                "const": "9.1",
+                "title": "Doxxed Individuals",
+                "description": "Publicly posted information about individuals (customers or employees) online for purpose of instigating outside harassment."
+              },
+              {
+                "const": "9.2",
+                "title": "Threatened Violence",
+                "description": "Threatened violence or physical harm against other individuals in the organization."
+              },
+              {
+                "const": "9.3",
+                "title": "Threated Suicide",
+                "description": "Threated physical harm to theirself."
+              },
+              {
+                "const": "9.4",
+                "title": "Attempted Violence",
+                "description": "Attempted violence or physical harm against other individuals in the organization (successful or unsuccesful)."
+              },
+              {
+                "const": "9.5",
+                "title": "Attempted Suicide",
+                "description": "Attempted physical harm to theirself (successful or unsuccessful)."
               }
             ]
         },
