@@ -12,7 +12,9 @@
         },
         "objects": {
             "type": "array",
+            "description": "Array of IIDES objects",
             "items": {
+                "type": "object",
                 "anyOf": [
                     { "$ref": "accomplice.json" },
                     { "$ref": "charge.json" },

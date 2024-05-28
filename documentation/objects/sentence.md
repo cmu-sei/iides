@@ -19,19 +19,19 @@ Term of imprisonment or probation, or amount of fines, imposed on a convicted de
 
 ### sentence-type-vocab
 
-Constants: `01`, `02`, `03`, `04`, `05`, `06`, `07`, `08`, `09`, `10`, `11`, `12`, `13`, `14`, `15`, `16`
+Constants: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, `14`, `15`, `16`
 
 | Const | Value | Description |
 | --- | --- | --- |
-| 01 | Assessment/Special Assessment | A type of fine that always applies to each count of a convicted crime.|
-| 02 | Community Service | Unpaid work that benefits the community.|
-| 03 | Damages | An attempt to measure in financial terms the extent of harm a plaintiff has suffered because of the defendant's actions. Damges can be compensatory, punative, or statutory, and are usually attached to civil cases.|
-| 04 | Deportation | Defendant is ordered to leave the country where the case is being tried.|
-| 05 | Drug Testing | Regular screening ordered to test for drugs.|
-| 06 | Fine | A financial punishment for violating a criminal law. Usually attached to criminal cases rather than civil.|
-| 07 | Forfeiture | Loss of property, right, or privilege without compensation.|
-| 08 | House Arrest | Confinement to a particular location for the duration of the sentence.|
-| 09 | Incarceration | Imprisonment.|
+| 1 | Assessment/Special Assessment | A type of fine that always applies to each count of a convicted crime.|
+| 2 | Community Service | Unpaid work that benefits the community.|
+| 3 | Damages | An attempt to measure in financial terms the extent of harm a plaintiff has suffered because of the defendant's actions. Damges can be compensatory, punative, or statutory, and are usually attached to civil cases.|
+| 4 | Deportation | Defendant is ordered to leave the country where the case is being tried.|
+| 5 | Drug Testing | Regular screening ordered to test for drugs.|
+| 6 | Fine | A financial punishment for violating a criminal law. Usually attached to criminal cases rather than civil.|
+| 7 | Forfeiture | Loss of property, right, or privilege without compensation.|
+| 8 | House Arrest | Confinement to a particular location for the duration of the sentence.|
+| 9 | Incarceration | Imprisonment.|
 | 10 | Injunction/Restraining Order | Defendant is ordered to cease doing a particular action. E.g., using stolen IP in their business.|
 | 11 | Mental Health Treatment | Defendant is ordered to an inpatient or outpatient mental health facility, or is ordered to attend therapy for mental health issues.|
 | 12 | No Internet Access | Defendant is not allowed to access the Internet via any type of device.|
@@ -42,12 +42,12 @@ Constants: `01`, `02`, `03`, `04`, `05`, `06`, `07`, `08`, `09`, `10`, `11`, `12
 
 ### sentence-metric-vocab
 
-Constants: `H`, `D`, `M`, `Y`, `D`
+Constants: `1`, `2`, `3`, `4`, `5`
 
 | Const | Value | Description |
 | --- | --- | --- |
-| H | Hour(s) | Imposed sentence is in terms of hours. E.g. 20 hours community service.|
-| D | Day(s) | Imposed sentence is in terms of days. E.g. 30 days in a substance abuse treatment facility.|
-| M | Month(s) | Imposed sentence is in terms of months. E.g. 18 months imprisonment.|
-| Y | Year(s) | Imposed sentence is in terms of years. E.g. 5 years no Internet access.|
-| D | Dollar(s) | Imposed sentence is in terms of dollars. E.g. $10,000 in damages.|
+| 1 | Hour(s) | Imposed sentence is in terms of hours. E.g. 20 hours community service.|
+| 2 | Day(s) | Imposed sentence is in terms of days. E.g. 30 days in a substance abuse treatment facility.|
+| 3 | Month(s) | Imposed sentence is in terms of months. E.g. 18 months imprisonment.|
+| 4 | Year(s) | Imposed sentence is in terms of years. E.g. 5 years no Internet access.|
+| 5 | Dollar(s) | Imposed sentence is in terms of dollars. E.g. $10,000 in damages.|

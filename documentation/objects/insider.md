@@ -14,9 +14,9 @@ Information about the insider involved in the incident. An incident can have mul
 - **`psychological_issues`** *(array)* : Psychological issue(s) the insider experienced during or before the incident.
   - One or more constants from [psych-issues-vocab](#psych-issues-vocab)
 - **`predispositions`** *(array)* : Insider's tendancy toward certain actions or qualities.
-  - One or more tuple values of the format ([predisposition-type-vocab](#predisposition-type-vocab), [predisposition-subtype-vocab](#predisposition-subtype-vocab))
+  - One or more array values
 - **`concerning_behaviors`** *(array)* : Insider's history of past behavior that could indicate future issues.
-  - One or more tuple values of the format ([concerning-behavior-vocab](#concerning-behavior-vocab), [cb-subtype-vocab](#cb-subtype-vocab))
+  - One or more array values
 - **Inherits properties from [Person](person)**
 
 ## Vocabularies
@@ -34,31 +34,31 @@ Constants: `1`, `2`, `3`, `4`
 
 ### motive-vocab
 
-Constants: `01`, `02`, `03`, `04`, `05`, `06`, `07`, `08`, `99`
+Constants: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `99`
 
 | Const | Value | Description |
 | --- | --- | --- |
-| 01 | Benefit Foreign Entity | Insider committed their attack to benefit a foreign entity, such as a foreign government or military.|
-| 02 | Benefit New Employer | Insider committed their attack to benefit their new employer, such as by stealing a client list when they left the victim organization.|
-| 03 | Competitive Business Advantage | Insider committed their attack in order to gain a business advantage for a competing company. Often, this is the insider starting their own company.|
-| 04 | Curiosity | Insider committed the incident out of curiosity. E.g., Insider accessed medical records of a celebrity because they were curious of that celebrity's age.|
-| 05 | Financial Gain | Insider committed their attack to make a profit.|
-| 06 | Freedom of Information | The insider held the belief that it is in the best interest of the public to share the victim organization's confidential information with the public. E.g., sharing unfavorable test results of a product or unfavorable information about an organization's internal practices.|
-| 07 | Recognition | The insider wanted to be recognized (e.g. for being smart, talented, capable, powerful, etc.)|
-| 08 | Revenge | The insider wanted revenge for an actual or perceived wrong.|
+| 1 | Benefit Foreign Entity | Insider committed their attack to benefit a foreign entity, such as a foreign government or military.|
+| 2 | Benefit New Employer | Insider committed their attack to benefit their new employer, such as by stealing a client list when they left the victim organization.|
+| 3 | Competitive Business Advantage | Insider committed their attack in order to gain a business advantage for a competing company. Often, this is the insider starting their own company.|
+| 4 | Curiosity | Insider committed the incident out of curiosity. E.g., Insider accessed medical records of a celebrity because they were curious of that celebrity's age.|
+| 5 | Financial Gain | Insider committed their attack to make a profit.|
+| 6 | Freedom of Information | The insider held the belief that it is in the best interest of the public to share the victim organization's confidential information with the public. E.g., sharing unfavorable test results of a product or unfavorable information about an organization's internal practices.|
+| 7 | Recognition | The insider wanted to be recognized (e.g. for being smart, talented, capable, powerful, etc.)|
+| 8 | Revenge | The insider wanted revenge for an actual or perceived wrong.|
 | 99 | Other | Other motive not listed in this vocabulary.|
 
 ### psych-issues-vocab
 
-Constants: `01`, `02`, `03`, `04`, `05`, `99`
+Constants: `1`, `2`, `3`, `4`, `5`, `99`
 
 | Const | Value | Description |
 | --- | --- | --- |
-| 01 | Outpatient Treatment | Insider received treatment in which they were not hospitalized overnight, but rather visited a hospital, clinic, or associated facility for diagnosis or treatment.|
-| 02 | Inpatient Treatment | Insider received treatment that involved 24-hour (including overnight) supervision at a hospital or dedicated psychiatric facility.|
-| 03 | Medication Noncompliance | The insider stopped taking a prescribed medication or following a prescribed course of treatment for a particular medical or mental health condition which, in turn, could have impacted their mental faculties.|
-| 04 | Delusions | The insider experienced or acted on delusions at some point during their employment within the organization.|
-| 05 | Threatened/Attempted Suicide | Insider threatened or attempted to commit suicide at some point during their employment within the organization.|
+| 1 | Outpatient Treatment | Insider received treatment in which they were not hospitalized overnight, but rather visited a hospital, clinic, or associated facility for diagnosis or treatment.|
+| 2 | Inpatient Treatment | Insider received treatment that involved 24-hour (including overnight) supervision at a hospital or dedicated psychiatric facility.|
+| 3 | Medication Noncompliance | The insider stopped taking a prescribed medication or following a prescribed course of treatment for a particular medical or mental health condition which, in turn, could have impacted their mental faculties.|
+| 4 | Delusions | The insider experienced or acted on delusions at some point during their employment within the organization.|
+| 5 | Threatened/Attempted Suicide | Insider threatened or attempted to commit suicide at some point during their employment within the organization.|
 | 99 | Other | Insider experienced specific psychological issues not specified in this vocabulary.|
 
 ### predisposition-type-vocab
