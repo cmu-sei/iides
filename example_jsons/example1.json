@@ -268,6 +268,12 @@
         "incident_role": "B"
       },
       {
+        "id": "org-relationship--83271b80-b5de-410e-b7ba-3c93ca5cba99",
+        "org2": "organization--d1472454-0236-4b66-9013-65d0f916ee48",
+        "org1": "organization--19f19fa9-d96e-4407-901e-06ecaefd71b5",
+        "relationship": "C"
+      },
+      {
         "id": "response--f42fc7ae-48a1-48f9-bf84-0d4b13f7a64c",
         "technical_controls": [
           [

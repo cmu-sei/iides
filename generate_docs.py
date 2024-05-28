@@ -12,7 +12,6 @@ def get_json_files():
     for root, _, f_names in os.walk(JSON_PATH):
         for f in f_names:
             fnames.append(os.path.join(root, f))
-            print(os.path.join(root, f))
     return fnames
 
 
@@ -73,7 +72,6 @@ def get_properties(properties, required):
                     vocab_ref += f"{', '.join(refs)})"
             else:
                 # An array of strings
-                print("HERE")
                 if '$ref' in properties[p]['items'].keys():
                     vocab_ref += "constants from "
                     vocab_ref += get_ref(properties[p]['items']['$ref'])
@@ -139,7 +137,6 @@ if __name__ == "__main__":
     json_files = get_json_files()
 
     for filename in json_files:
-        print(filename)
 
         file_lines = []  # lines that will be written to the markdown file
 
