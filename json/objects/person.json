@@ -52,7 +52,7 @@
       },
       "nationality": {
         "type": "array",
-        "description": "The nationality or nationalities of the person.",
+        "description": "The nationality or nationalities of the person. Public implementations should use the standard codes provided by ISO 3166-1 alpha-2.",
         "items": {"type": "string"},
         "minItems": 1
       },

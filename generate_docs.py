@@ -12,6 +12,7 @@ def get_json_files():
     for root, _, f_names in os.walk(JSON_PATH):
         for f in f_names:
             fnames.append(os.path.join(root, f))
+            print(os.path.join(root, f))
     return fnames
 
 

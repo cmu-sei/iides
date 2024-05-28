@@ -207,14 +207,14 @@
         "country": "US",
         "postal_code": 10001,
         "country_of_citizenship": ["US"],
-        "nationality": ["American"],
+        "nationality": ["US"],
         "residency": "N",
         "gender": "M",
         "age": 35,
         "education": "5",
         "marital_status": "1",
         "number_of_children": 0,
-        "comment": "Joshua Adam Schulte had a history of social and mental health issues. He showed concerning behaviors such as repeated technical policy abuse and conflicts with his supervisor as well as browsing dark web forums."
+        "comment": "Joshua Adam Schulte had a history of social and mental health issues. He showed concerning behaviors such as repeated technical policy abuse and conflicts with his supervisor, as well as browsing dark web forums. The insider had multiple workplace incidents involving the harassment of colleagues, ultimately resulting in the insider being forced to move offices across the building. The insider believed he had been mistreated by staff, leading to a desire for revenge."
       },
       {
         "id": "job--e76248a2-82df-4c7d-b7a0-bf86eb85c570",
@@ -372,7 +372,7 @@
         "format": "1",
         "owner": "O",
         "sensitivity": [
-          "22"
+          "4", "5", "6", "7"
         ],
         "description": "Classified CIA information related to hacking tools and techniques disclosed to WikiLeaks as part of the Vault 7 leaks."
       },
@@ -384,25 +384,63 @@
         "number_of_times": 2,
         "ttp_vocab": "IIDES",
         "tactic": "7",
-        "technique": "7.2",
-        "location": "2",
-        "hours": "2",
+        "technique": "7.3",
+        "location": "1",
+        "hours": "1",
         "device": [
           "1"
         ],
         "channel": [
           "1",
-          "5",
+          "4",
+          "5"
+        ],
+        "description": "Schulte used a personal email account to exfiltrate classified CIA information from the organization's database server to his personal computer."
+      },
+      {
+        "id": "ttp--a154e814-aa3a-411e-ae79-79ceba48e79b",
+        "date": "2016-04-20T14:00:00Z",
+        "sequence_num": 2,
+        "observed": true,
+        "number_of_times": 1,
+        "ttp_vocab": "IIDES",
+        "tactic": "7",
+        "technique": "7.2",
+        "location": "2",
+        "hours": "2",
+        "device": [
+          "7"
+        ],
+        "channel": [
           "9"
         ],
-        "description": "Schulte used a personal email account to exfiltrate classified CIA information from the organization's database server to a removable media device. After leaving the CIA, Schulte hosted a server on the CIA's network to continue accessing and exfiltrating classified data."
+        "description": "Schulte then loaded the data on a removable media disk"
+      },
+      {
+        "id": "ttp--a154e814-aa3a-411e-ae79-79ceba48e77b",
+        "date": "2016-04-20T14:00:00Z",
+        "sequence_num": 2,
+        "observed": true,
+        "number_of_times": 2,
+        "ttp_vocab": "IIDES",
+        "tactic": "4",
+        "technique": "4.1",
+        "location": "1",
+        "hours": "1",
+        "device": [
+          "1"
+        ],
+        "channel": [
+          "9"
+        ],
+        "description": "Before leaving the CIA, Schulte planted a backdoor into the CIA network"
       },
       {
         "id": "ttp--a154e814-aa3a-411e-ae79-79ceba48e76b",
         "date": "2016-04-20T14:00:00Z",
-        "sequence_num": 1,
+        "sequence_num": 3,
         "observed": true,
-        "number_of_times": 2,
+        "number_of_times": 1,
         "ttp_vocab": "IIDES",
         "tactic": "7",
         "technique": "7.9",
@@ -416,7 +454,7 @@
           "5",
           "9"
         ],
-        "description": "Schulte used a personal email account to exfiltrate classified CIA information from the organization's database server to a removable media device. After leaving the CIA, Schulte hosted a server on the CIA's network to continue accessing and exfiltrating classified data."
+        "description": "After leaving the CIA, Schulte hosted a server on the CIA's network to continue accessing and exfiltrating classified data."
       }
     ]
   }
