@@ -43,9 +43,9 @@ Example 4:
 - [ ] wsd
 
 
-### Schema updates and issues
+### Schema updates and issues (@nammerman)
 
-- (??) Remove leading zeros from constants in vocabularies:
+-  Remove leading zeros from constants in vocabularies:
 	- charge disposition
 	- impact metric
 	- insider motive
@@ -55,10 +55,10 @@ Example 4:
 	- response investigated by vocab
 	- sentence type vocab
 	- source type vocab
-- (??) change “cb-type-vocab” to “concerning-behavior-type-vocab”
-- (??) add bundle definition to the schema
-- (??) stressor cat/subcat vocabs - change constants to digits only (x and x.y)
-- (??) target category vocab 2.3 title - change “plans” to “information”
+-  change “cb-type-vocab” to “concerning-behavior-type-vocab”
+-  add bundle definition to the schema
+-  stressor cat/subcat vocabs - change constants to digits only (x and x.y)
+-  target category vocab 2.3 title - change “plans” to “information”
 
 ### JSON formatting and validation
 

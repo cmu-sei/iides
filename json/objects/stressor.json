@@ -1,5 +1,5 @@
 {
-    "$id": "file:///C:/users/nammerman/BitBucket/pyiides/json/objects/stressor.json",
+    "$id": "iides/json/objects/stressor.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Stressor",
     "description": "Events that occur within the victim organization and precipitate insider activity.",

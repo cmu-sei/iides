@@ -1,5 +1,5 @@
 {
-	"$id": "file:///C:/users/nammerman/BitBucket/pyiides/json/structs/org-owner.json",
+	"$id": "iides/json/structs/org-owner.json",
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "Org Owner",
 	"description": "Describes the relationship for a person owning an organization. The person can be either an accomplice or an insider to the incident.",

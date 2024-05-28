@@ -174,7 +174,7 @@ class Insider <<Person>> #043673;text:white {
 	+ substance_use_during_incident : boolean 
 	+ psychological_issues : psych-issues-vocab[1...*] 
 	+ predispositions : ({field} predisposition-type-vocab, predisposition-subtype-vocab)[1...*] 
-	+ concerning_behaviors : ({field} cb-type-vocab, cb-subtype-vocab)[1...*] 
+	+ concerning_behaviors : ({field} concerning-behavior-vocab, cb-subtype-vocab)[1...*] 
 }
 class Response #EF3A47 {
 	* id : string 

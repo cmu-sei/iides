@@ -1,5 +1,5 @@
 {
-    "$id": "file:///C:/users/nammerman/BitBucket/pyiides/json/objects/sponsor.json",
+    "$id": "iides/json/objects/sponsor.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Sponsor",
     "description": "An individual or entity that recruited, instigated, motivated, or otherwise supported the insider's action. A sponsor MUST be associated with at least one insider or accomplice. It may be associated with multiple insider and/or accomplices.",

@@ -1,5 +1,5 @@
 {
-    "$id": "file:///C:/users/nammerman/BitBucket/pyiides/json/objects/sentence.json",
+    "$id": "iides/json/objects/sentence.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Sentence",
     "description": "Term of imprisonment or probation, or amount of fines, imposed on a convicted defendant for criminal wrongdoing, or the amount of damages imposed for civil cases. Generally, the amount of punishment for an offense. A sentence must be connected to only one court case. A court case may have one or more sentences.",
@@ -41,47 +41,47 @@
         "sentence-type-vocab": {
             "oneOf": [
               {
-                "const": "01",
+                "const": "1",
                 "title": "Assessment/Special Assessment",
                 "description": "A type of fine that always applies to each count of a convicted crime."
               },
               {
-                "const": "02",
+                "const": "2",
                 "title": "Community Service",
                 "description": "Unpaid work that benefits the community."
               },
               {
-                "const": "03",
+                "const": "3",
                 "title": "Damages",
                 "description": "An attempt to measure in financial terms the extent of harm a plaintiff has suffered because of the defendant's actions. Damges can be compensatory, punative, or statutory, and are usually attached to civil cases."
               },
               {
-                "const": "04",
+                "const": "4",
                 "title": "Deportation",
                 "description": "Defendant is ordered to leave the country where the case is being tried."
               },
               {
-                "const": "05",
+                "const": "5",
                 "title": "Drug Testing",
                 "description": "Regular screening ordered to test for drugs."
               },
               {
-                "const": "06",
+                "const": "6",
                 "title": "Fine",
                 "description": "A financial punishment for violating a criminal law. Usually attached to criminal cases rather than civil."
               },
               {
-                "const": "07",
+                "const": "7",
                 "title": "Forfeiture",
                 "description": "Loss of property, right, or privilege without compensation."
               },
               {
-                "const": "08",
+                "const": "8",
                 "title": "House Arrest",
                 "description": "Confinement to a particular location for the duration of the sentence."
               },
               {
-                "const": "09",
+                "const": "9",
                 "title": "Incarceration",
                 "description": "Imprisonment."
               },

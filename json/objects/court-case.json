@@ -1,5 +1,5 @@
 {
-    "$id": "file:///C:/users/nammerman/BitBucket/pyiides/json/objects/court-case.json",
+    "$id": "iides/json/objects/court-case.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Court Case",
     "description": "Information about legal procedings related to the incident, whether charges against the insider or their accomplice(s), a civil suit, or a suit against another entity involved in the incident. A legal response can have one or more court cases, and a court case MUST be tied to only one legal response. Each court case can have one or more charges and one or more sentences.",
@@ -21,12 +21,12 @@
       "court_country": {
         "type": "string",
         "description": "Country where the case was tried.",
-        "$ref": "file:///C:/users/nammerman/BitBucket/pyiides/json/common/country-vocab.json"
+        "$ref": "../common/country-vocab.json"
       },
       "court_state": {
         "type": "string",
         "description": "State or region where the case was tried.",
-        "$ref": "file:///C:/users/nammerman/BitBucket/pyiides/json/common/state-vocab.json"
+        "$ref": "../common/state-vocab.json"
       },
       "court_district": {
         "type": "string",

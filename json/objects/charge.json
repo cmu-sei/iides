@@ -1,5 +1,5 @@
 {
-  "$id": "file:///C:/users/nammerman/BitBucket/pyiides/json/objects/charge.json",
+  "$id": "iides/json/objects/charge.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Charge",
   "description": "A charge or accusation brought against the insider when the incident is pursued in the legal system. E.g., \"Two counts of Unauthorized Access to Company Systems.\" A charge must be connected to only one court case. A court case may have one or more charges.",

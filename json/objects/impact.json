@@ -1,5 +1,5 @@
 {
-    "$id": "file:///C:/users/nammerman/BitBucket/pyiides/json/objects/impact.json",
+    "$id": "iides/json/objects/impact.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Impact",
     "description": "The quantified impact of the incident on the victim organization. An incident may have one or more impacts. An impact MUST be associated with only one incident.",
@@ -42,47 +42,47 @@
         "impact-metric-vocab": {
             "oneOf": [
               {
-                "const": "01",
+                "const": "1",
                 "title": "Accounts",
                 "description": "Computer, network, financial, user accounts."
               },
               {
-                "const": "02",
+                "const": "2",
                 "title": "Credit card numbers",
                 "description": "Physical or digital credit or debit card numbers."
               },
               {
-                "const": "03",
+                "const": "3",
                 "title": "Customers",
                 "description": "The number of customers effected (e.g., through stolen accounts, PII, etc.)"
               },
               {
-                "const": "04",
+                "const": "4",
                 "title": "Documents",
                 "description": "The number of physical or digital documents effected (stolen, deleted, modified, etc.)."
               },
               {
-                "const": "05",
+                "const": "5",
                 "title": "Dollars",
                 "description": "Specific financial impact of money stolen, restitution ordered, etc."
               },
               {
-                "const": "06",
+                "const": "6",
                 "title": "Employees",
                 "description": "Number of employees effected."
               },
               {
-                "const": "07",
+                "const": "7",
                 "title": "Files",
                 "description": "Number of physical or digital files stolen, read, or compromised."
               },
               {
-                "const": "08",
+                "const": "8",
                 "title": "Hours",
                 "description": "Down time or time effected in hours."
               },
               {
-                "const": "09",
+                "const": "9",
                 "title": "Pages",
                 "description": "Number of individual pages of a document(s) or file(s)."
               },

@@ -1,5 +1,5 @@
 {
-	"$id": "file:///C:/users/nammerman/BitBucket/pyiides/json/structs/collusion.json",
+	"$id": "iides/json/structs/collusion.json",
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "Collusion",
 	"description": "Represents the relationship between insiders. For the purposes of the `recruitment` property, insider 1 recruited insider 2.",
@@ -23,7 +23,7 @@
       "relationship": {
 			"type": "string",
 			"description": "The type of relationship between insider1 and insider2.",
-      "$ref": ".file:///C:/users/nammerman/BitBucket/pyiides/json//common/insider-relationship-vocab.json"
+      "$ref": "../common/insider-relationship-vocab.json"
 		},
       "recruitment": {
 			"type": "string",

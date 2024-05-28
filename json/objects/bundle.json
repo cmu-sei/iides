@@ -1,5 +1,5 @@
 {
-    "$id": "file:///C:/users/nammerman/BitBucket/pyiides/json/objects/bundle.json",
+    "$id": "iides/json/objects/bundle.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Bundle",
     "description": "A bundle holds the objects relating an incident, i.e. court cases, insider, targets and impacts.",

@@ -16,7 +16,7 @@ Information about the insider involved in the incident. An incident can have mul
 - **`predispositions`** *(array)* : Insider's tendancy toward certain actions or qualities.
   - One or more tuple values of the format ([predisposition-type-vocab](#predisposition-type-vocab), [predisposition-subtype-vocab](#predisposition-subtype-vocab))
 - **`concerning_behaviors`** *(array)* : Insider's history of past behavior that could indicate future issues.
-  - One or more tuple values of the format ([cb-type-vocab](#cb-type-vocab), [cb-subtype-vocab](#cb-subtype-vocab))
+  - One or more tuple values of the format ([concerning-behavior-vocab](#concerning-behavior-vocab), [cb-subtype-vocab](#cb-subtype-vocab))
 - **Inherits properties from [Person](person)**
 
 ## Vocabularies
@@ -99,7 +99,7 @@ Constants: `1.1`, `1.2`, `1.3`, `1.4`, `1.5`, `1.6`, `1.7`, `2.1`, `2.2`, `2.3`,
 | 4.3 | Emerging Financial Problems | Monetary issues experienced by or relevant to the insider (including medical bills for family members) known to have developed after the insider's hire date. E.g., The insider claimed they stole from the organization in order to pay for their child's education.|
 | 4.4 | Family Health Issues | Someone in the insider's family, or otherwise close to the insider, has health or medical issues.|
 
-### cb-type-vocab
+### concerning-behavior-vocab
 
 Constants: `3.1`, `3.2`, `3.3`, `3.4`, `3.5`, `3.6`, `3.7`
 

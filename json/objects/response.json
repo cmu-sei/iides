@@ -1,5 +1,5 @@
 {
-    "$id": "file:///C:/users/nammerman/BitBucket/pyiides/json/objects/response.json",
+    "$id": "iides/json/objects/response.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Response",
     "description": "Describes the organization's response to the incident, including technical and behavioral controls, investigation, and legal response. An incident may have only one response entity. A response may have only one legal response entity.",
@@ -75,12 +75,12 @@
         "technical-control-vocab": {
           "oneOf": [
             {
-              "const": "01",
+              "const": "1",
               "title": "Access to Technical System(s) Restricted",
               "description": "Insider's access to the organization's technical systems is restricted in any capacity E.g., Organization declares that insider could only log onto system if another employee is present."
             },
             {
-              "const": "02",
+              "const": "2",
               "title": "Access to Technical System(s) Terminated",
               "description": "Insider's access to the organization's technical systems is completely terminated E.g., Insider's account is deleted upon termination from the company."
             }
@@ -89,47 +89,47 @@
         "behavioral-control-vocab": {
           "oneOf": [
             {
-              "const": "01",
+              "const": "1",
               "title": "Demoted",
               "description": "Insider is demoted. E.g., lowered their rank, title, or responsbilities."
             },
             {
-              "const": "02",
+              "const": "2",
               "title": "Suspended",
               "description": "Insider is suspended (definitely or indefinitely) and not allowed to conduct normal work for the organization."
             },
             {
-              "const": "03",
+              "const": "3",
               "title": "Put on Paid/Unpaid Leave",
               "description": "Insider is put on temporary leave from a job assignment, with or without pay and benefits."
             },
             {
-              "const": "04",
+              "const": "4",
               "title": "Terminated",
               "description": "Insider is terminated, or fired, from the organization."
             },
             {
-              "const": "05",
+              "const": "5",
               "title": "Poor Performance Review",
               "description": "Insider receives a review of their work performance which is deemed below average"
             },
             {
-              "const": "06",
+              "const": "6",
               "title": "Passed Over For Promotion",
               "description": "Organization chooses to promote someone other than the insider as a result of the insider's actions."
             },
             {
-              "const": "07",
+              "const": "7",
               "title": "Counseling",
               "description": "Insider is sent to counseling of any kind as a result of their actions."
             },
             {
-              "const": "08",
+              "const": "8",
               "title": "Referred to Employee Assistance Program",
               "description": "Insider is referred to the EAP as a result of their actions."
             },
             {
-              "const": "09",
+              "const": "9",
               "title": "Reported to HR",
               "description": "Insider is reported to Human Resources as a result of their actions."
             },
@@ -153,17 +153,17 @@
         "investigation-vocab": {
             "oneOf": [
               {
-                "const": "01",
+                "const": "1",
                 "title": "Insider's Residence/Workplace Searched",
                 "description": "Investigators search the insider's home or workplace for evidence related to the incident."
               },
               {
-                "const": "02",
+                "const": "2",
                 "title": "Evidence Found",
                 "description": "Evidence relevant to the incident is found. E.g., Fellow employee found a USB drive left in the insider's computer that had sensitive company files downloaded on to it."
               },
               {
-                "const": "03",
+                "const": "3",
                 "title": "Insider Admits to Activity in Interview",
                 "description": "Insider admits to involvement in insider incident while being interviewed by investigators about the incident (or related activity)."
               } 
@@ -172,37 +172,37 @@
         "investigator-vocab": {
           "oneOf": [
             {
-              "const": "01",
+              "const": "1",
               "title": "Incident Response Team",
               "description": "Incident Response Team (IRT), whether internal to the organization or provided by an external contract."
             },
             {
-              "const": "02",
+              "const": "2",
               "title": "Management",
               "description": "Management internal to the organization."
             },
             {
-              "const": "03",
+              "const": "3",
               "title": "Law Enforcement - Local/State",
               "description": "State or local law enforcement entity."
             },
             {
-              "const": "04",
+              "const": "4",
               "title": "Law Enforcement - Federal",
               "description": "Federal law enforcement entity such as the FBI or USSS."
             },
             {
-              "const": "05",
+              "const": "5",
               "title": "Law Enforcement - Military/DoD",
               "description": "Law enforcement belonging to the military or Department of Defense, such as military police or NCIS. "
             },
             {
-              "const": "06",
+              "const": "6",
               "title": "Law Enforcement - Government Agency",
               "description": "Law enforcement belonging to a government agency such as DHS, USPS, IRS, etc."
             },
             {
-              "const": "07",
+              "const": "7",
               "title": "Internal Investigators",
               "description": "Other investigators internal to the victim organization."
             },

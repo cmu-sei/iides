@@ -1,5 +1,5 @@
 {
-    "$id": "file:///C:/users/nammerman/BitBucket/pyiides/json/objects/legal-response.json",
+    "$id": "iides/json/objects/legal-response.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Legal Response",
     "description": "Information about the legal response to the incident, particularly the dates of important milestones in the legal process. A response may have one legal response. A legal response may have multiple charges, and may have multiple sentences.",

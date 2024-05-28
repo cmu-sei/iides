@@ -1,5 +1,5 @@
 {
-    "$id": "file:///C:/users/nammerman/BitBucket/pyiides/json/objects/job.json",
+    "$id": "iides/json/objects/job.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Job",
     "description": "Details of the employment relationship between an individual and an organization.",
