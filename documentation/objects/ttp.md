@@ -120,7 +120,7 @@ Constants: `1.1`, `1.2`, `1.3`, `1.4`, `1.5`, `1.6`, `1.7`, `1.8`, `1.9`, `1.10`
 | 8.6 | Sold or Gave Away Critical Data | Sold or gave away internal data to an external individual or company.|
 | 9.1 | Doxxed Individuals | Publicly posted information about individuals (customers or employees) online for purpose of instigating outside harassment.|
 | 9.2 | Threatened Violence | Threatened violence or physical harm against other individuals in the organization.|
-| 9.3 | Threated Suicide | Threated physical harm to theirself.|
+| 9.3 | Threatened Suicide | Threated physical harm to theirself.|
 | 9.4 | Attempted Violence | Attempted violence or physical harm against other individuals in the organization (successful or unsuccesful).|
 | 9.5 | Attempted Suicide | Attempted physical harm to theirself (successful or unsuccessful).|
 
