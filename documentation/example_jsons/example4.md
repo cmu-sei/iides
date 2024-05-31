@@ -1,5 +1,182 @@
 # Example4
 
+## Incident
+
+
+
+- **`Cia effect`**:
+   - *C*: Confidentiality - The protection of information from unauthorized access or disclosure.
+
+- **`Incident type`**:
+   - *E*: Espionage - The covert or illicit practice of spying on a foreign government, organization, entity, or person to obtain confidential information for military, political, strategic, or financial advantage.
+
+- **`Incident subtype`**:
+   - *E2*: Government - Covert intelligence-gathering activities to obtain government or military secrets for the benefit of another government to obtain political or military advantage.
+
+- **`Outcome`**:
+   - *DS*: Data Stolen - Any organizational information or assets that are stolen.
+  - *DR*: Data Read - Organizational data was read by the insider.
+
+- **`Status`**:
+   - *C*: Closed - All investigations and legal proceedings are closed.
+- **`Summary`**:
+   - The insider was a former CIA officer. They were involved in a espionage case where they were convicted of providing classified U.S. Defene information to Chinese intelligence agents, which began in 2017. The insider was motivated by financial gain, the Chinese officials would exchange top secret information for money. Once the FBI became aware, they investigated the insider, and found evidence of espionage in their home. The insider was then tried and found guilty of several espionage charges, and sentences to 20 years of federal prison.
+- **`Brief summary`**:
+   - The insider was a former CIA officer who began to communicate with Chinese intelligence agents in 2017. They began communicating, and the insider would receive money for trasmitting classified U.S. defense information to Chinese intelligence agents. The insider was later investigated and brought to court, where he was convicted of multiple counts of espionage.
+## Insider
+
+
+
+- **`Incident role`**:
+   - *1*: Primary - Insider is the primary perpetrator of the incident.
+- **`Motive`**:
+   - *1*: Benefit Foreign Entity - Insider committed their attack to benefit a foreign entity, such as a foreign government or military.
+
+- **`Substance use during incident`**:
+ False
+- **`Predispositions`**:
+   - *['4', '4.3']*: Personal Stressful Events - Events in the insider's personal life that could lead to additional stress or futher motivate the insider to harm their organization.
+
+- **`Concerning behaviors`**:
+   - *['3.6', '3.6.1']*: Suspicious Contact - Suspicious communication with or travel to entities, areas, or individuals that present a conflict of interest with the organization.
+
+- **`First name`**:
+ Kevin
+- **`Middle name`**:
+ Patrick
+- **`Last name`**:
+ Mallory
+- **`Alias`**:
+ ['Patrick Mallory', 'Kevin P. Mallory']
+- **`City`**:
+ Leesburg
+- **`State`**:
+ VA
+- **`Country`**:
+ US
+- **`Postal code`**:
+ 20175
+- **`Country of citizenship`**:
+ ['US']
+- **`Nationality`**:
+ ['US']
+- **`Gender`**:
+ M
+- **`Age`**:
+ 60
+- **`Education`**:
+ 5
+- **`Marital status`**:
+ 2
+- **`Number of children`**:
+ 3
+## Organization
+
+- **`Name`**:
+   - U.S. Central Intelligence Agency
+- **`City`**:
+   - Washington
+- **`State`**:
+   - D.C.
+- **`Country`**:
+   - Unitsed States
+- **`Postal code`**:
+ 20,505
+- **`Small business`**:
+ False
+- **`Industry sector`**:
+   - *92*: Public Administration - Federal/State/Local administration and the oversight of public programs.
+- **`Industry subsector`**:
+   - *92.811*: National Security - This industry comprises government establishments of the Armed Forces, including the National Guard, primarily engaged in national security and related activities.
+- **`Business`**:
+   - The CIA, or Central Intelligence Agency, is an independent U.S. government agency focused on foreign intelligence and national security. They collect information about other countries, analyze it, and deliver it to policymakers to help them make decisions.
+- **`Parent company`**:
+   - U.S. Intelligence Community
+- **`Incident role`**:
+   - *V*: Primary Victim - The organization was the primary victim organization of the insider's actions.
+## Detection
+
+
+
+- **`First detected`**:
+   - date-time
+- **`Who detected`**:
+   - *LE*: Law Enforcement - Law enforcement discovered the insider's illegal activity (e.g., Police noticed that the insider was gaining access to the company after hours).
+
+- **`Detected method`**:
+   - *2*: Technical Means - The insider's activity was detected via analysis or anomalies in technical systems and software.
+
+- **`Logs`**:
+   - *SF*: System File Logs - File logs (create, delete, modify, etc.) from workstations, servers, and other systems.
+
+## Impact
+
+
+
+- **`High`**:
+ 12
+- **`Low`**:
+ 3
+- **`Metric`**:
+   - *4*: Documents - The number of physical or digital documents effected (stolen, deleted, modified, etc.).
+- **`Estimated`**:
+ True
+## Target
+
+- **`Asset type`**:
+   - *2*: Information - Data/business materials which contain important details belonging to a specific target owner.
+- **`Category`**:
+   - *2.3*: Government/Law Enforcement Information - Classified or sensitive government or law enforcement information.
+- **`Subcategory`**:
+   - *2.3.1*: Classified Information - Information that is restricted by the government for reasons of national security.
+- **`Format`**:
+   - *1*: Electronic - Technological digital format.
+- **`Owner`**:
+   - *O*: Organization - The organization, rather than its employees or customers owns the target.
+- **`Sensitivity`**:
+   - *6*: Top Secret (TS) - Top secret, unauthorized disclosure would cause exceptionally grave damage to national security
+
+## Response
+
+
+
+- **`Technical controls`**:
+   - *['2', '2012-01-01']*: Access to Technical System(s) Terminated - Insider's access to the organization's technical systems is completely terminated E.g., Insider's account is deleted upon termination from the company.
+
+- **`Behavioral controls`**:
+ 
+- **`Investigated by`**:
+   - *3*: Law Enforcement - Local/State - State or local law enforcement entity.
+
+- **`Investigation events`**:
+   - *['1', '2017-06-22']*: Insider's Residence/Workplace Searched - Investigators search the insider's home or workplace for evidence related to the incident.
+  - *['2', '2017-06-22']*: Evidence Found - Evidence relevant to the incident is found. E.g., Fellow employee found a USB drive left in the insider's computer that had sensitive company files downloaded on to it.
+  - *['3', '2017-05-24']*: Insider Admits to Activity in Interview - Insider admits to involvement in insider incident while being interviewed by investigators about the incident (or related activity).
+
+## Court-case
+
+
+
+- **`Case number`**:
+   - 1:17-cr-154
+- **`Case title`**:
+   - United States v. Mallory
+- **`Court country`**:
+   - *United States of America*: 
+- **`Court state`**:
+   - *Virginia*: 
+- **`Court district`**:
+   - Eastern District of Virginia
+- **`Court type`**:
+   - *1*: Federal - Top level government court.
+- **`Case type`**:
+   - *2*: Criminal - A case dealing with a violation of criminal law.
+- **`Defendant`**:
+   - United States of America
+
+- **`Plaintiff`**:
+   - Kevin Patrick Mallory
+
 ## Charge
 
 - **`Title`**:
@@ -64,95 +241,38 @@
  False
 - **`Disposition`**:
    - *2*: Convicted - Plead or been found guilty by a court.
-## Court-case
+## Sentence
 
-
-
-- **`Case number`**:
-   - 1:17-cr-154
-- **`Case title`**:
-   - United States v. Mallory
-- **`Court country`**:
-   - *United States of America*: 
-- **`Court state`**:
-   - *Virginia*: 
-- **`Court district`**:
-   - Eastern District of Virginia
-- **`Court type`**:
-   - *1*: Federal - Top level government court.
-- **`Case type`**:
-   - *2*: Criminal - A case dealing with a violation of criminal law.
-- **`Defendant`**:
-   - United States of America
-
-- **`Plaintiff`**:
-   - Kevin Patrick Mallory
-
-## Detection
-
-
-
-- **`First detected`**:
-   - date-time
-- **`Who detected`**:
-   - *LE*: Law Enforcement - Law enforcement discovered the insider's illegal activity (e.g., Police noticed that the insider was gaining access to the company after hours).
-
-- **`Detected method`**:
-   - *2*: Technical Means - The insider's activity was detected via analysis or anomalies in technical systems and software.
-
-- **`Logs`**:
-   - *SF*: System File Logs - File logs (create, delete, modify, etc.) from workstations, servers, and other systems.
-
-## Impact
-
-
-
-- **`High`**:
- 12
-- **`Low`**:
- 3
+- **`Sentence type`**:
+   - *9*: Incarceration - Imprisonment.
+- **`Quantity`**:
+ 20
 - **`Metric`**:
-   - *4*: Documents - The number of physical or digital documents effected (stolen, deleted, modified, etc.).
-- **`Estimated`**:
- True
-## Incident
-
-
-
-- **`Cia effect`**:
-   - *C*: Confidentiality - The protection of information from unauthorized access or disclosure.
-
-- **`Incident type`**:
-   - *E*: Espionage - The covert or illicit practice of spying on a foreign government, organization, entity, or person to obtain confidential information for military, political, strategic, or financial advantage.
-
-- **`Incident subtype`**:
-   - *E2*: Government - Covert intelligence-gathering activities to obtain government or military secrets for the benefit of another government to obtain political or military advantage.
-
-- **`Outcome`**:
-   - *DS*: Data Stolen - Any organizational information or assets that are stolen.
-  - *DR*: Data Read - Organizational data was read by the insider.
-
-- **`Status`**:
-   - *C*: Closed - All investigations and legal proceedings are closed.
-- **`Summary`**:
-   - The insider was a former CIA officer. They were involved in a espionage case where they were convicted of providing classified U.S. Defene information to Chinese intelligence agents, which began in 2017. The insider was motivated by financial gain, the Chinese officials would exchange top secret information for money. Once the FBI became aware, they investigated the insider, and found evidence of espionage in their home. The insider was then tried and found guilty of several espionage charges, and sentences to 20 years of federal prison.
-- **`Brief summary`**:
-   - The insider was a former CIA officer who began to communicate with Chinese intelligence agents in 2017. They began communicating, and the insider would receive money for trasmitting classified U.S. defense information to Chinese intelligence agents. The insider was later investigated and brought to court, where he was convicted of multiple counts of espionage.
-## Insider
-
-
-
-- **`Incident role`**:
-   - *1*: Primary - Insider is the primary perpetrator of the incident.
-- **`Motive`**:
-   - *1*: Benefit Foreign Entity - Insider committed their attack to benefit a foreign entity, such as a foreign government or military.
-
-- **`Substance use during incident`**:
+   - *4*: Year(s) - Imposed sentence is in terms of years. E.g. 5 years no Internet access.
+- **`Concurrency`**:
  False
-- **`Predispositions`**:
- 
-- **`Concerning behaviors`**:
- 
+## Legal-response
+
+
+
+- **`Law enforcement contacted`**:
+   - 2017-05-12
+- **`Insider arrested`**:
+   - 2017-06-22
+- **`Insider charged`**:
+   - 2017-07-27
+- **`Insider pleads`**:
+   - 2017-07-28
+- **`Insider judgement`**:
+   - 2018-06-08
+- **`Insider sentenced`**:
+   - 2019-05-17
+- **`Insider charges dropped`**:
+   - 
+- **`Insider charges dismissed`**:
+   - 
+- **`Insider settled`**:
+   - 
 ## Job
 
 
@@ -175,64 +295,41 @@
    - 2012-01-01
 - **`Tenure`**:
    - 175200:00:00
-## Legal-response
+## Ttp
 
-
-
-- **`Law enforcement contacted`**:
-   - 2017-05-12
-- **`Insider arrested`**:
-   - 2017-06-22
-- **`Insider charged`**:
-   - 2017-07-27
-- **`Insider pleads`**:
-   - 2017-07-28
-- **`Insider sentenced`**:
-   - 2019-05-17
-- **`Insider charges dropped`**:
-   - 
-- **`Insider charges dismissed`**:
-   - 
-- **`Insider settled`**:
-   - 
-## Organization
-
-- **`Name`**:
-   - U.S. Central Intelligence Agency
-- **`City`**:
-   - Washington
-- **`State`**:
-   - D.C.
-- **`Country`**:
-   - Unitsed States
-- **`Postal code`**:
- 20,505
-- **`Small business`**:
+- **`Date`**:
+   - 2017-02-21
+- **`Sequence num`**:
+ 1
+- **`Observed`**:
  False
-- **`Industry sector`**:
-   - *92*: Public Administration - Federal/State/Local administration and the oversight of public programs.
-- **`Industry subsector`**:
-   - *92.811*: National Security - This industry comprises government establishments of the Armed Forces, including the National Guard, primarily engaged in national security and related activities.
-- **`Business`**:
-   - The CIA, or Central Intelligence Agency, is an independent U.S. government agency focused on foreign intelligence and national security. They collect information about other countries, analyze it, and deliver it to policymakers to help them make decisions.
-- **`Parent company`**:
-   - U.S. Intelligence Community
-- **`Incident role`**:
-   - *V*: Primary Victim - The organization was the primary victim organization of the insider's actions.
-## Response
+- **`Number of times`**:
+ 7
+- **`Ttp vocab`**:
+   - IIDES
+- **`Tactic`**:
+   - *7*: Data Exfiltration - Data (or copies of data) is removed from the organization without permission or explicitly against permission to use in an unauthorized way.
+- **`Technique`**:
+   - *1.6*: Own Account After Termination/Resignation - Insider gains access to their company account after their termination date.
+- **`Location`**:
+   - *r*: 
+  - *e*: 
+  - *m*: 
+  - *o*: 
+  - *t*: 
+  - *e*: 
 
+- **`Hours`**:
+   - *2*: Outside of Work Hours - Insider took the action outside of their normal working hours.
 
+- **`Device`**:
+   - *8*: Personal Mobile Device - Personally owned moble device.
 
-## Sentence
+- **`Channel`**:
+   - *6*: Personal Phone - A phone the organization does not control or monitor.
 
-- **`Sentence type`**:
-   - *9*: Incarceration - Imprisonment.
-- **`Quantity`**:
- 20
-- **`Metric`**:
-   - *4*: Year(s) - Imposed sentence is in terms of years. E.g. 5 years no Internet access.
-- **`Concurrency`**:
- False
+- **`Description`**:
+   - The insider communicated repeatedly with Chinese Intelligence officers to exchange top secret information for money.
 ## Source
 
 - **`Title`**:
@@ -323,46 +420,3 @@
    - Chinese Intelligence Agency
 - **`Sponsor type`**:
    - *FN*: Foreign National - An individual whose objectives are aligned with either the political, commercial, or military interests of a country other than where the incident originated.
-## Target
-
-- **`Asset type`**:
-   - *2*: Information - Data/business materials which contain important details belonging to a specific target owner.
-- **`Category`**:
-   - *2.3*: Government/Law Enforcement Information - Classified or sensitive government or law enforcement information.
-- **`Subcategory`**:
-   - *2.3.1*: Classified Information - Information that is restricted by the government for reasons of national security.
-- **`Format`**:
-   - *1*: Electronic - Technological digital format.
-- **`Owner`**:
-   - *O*: Organization - The organization, rather than its employees or customers owns the target.
-- **`Sensitivity`**:
-   - *6*: Top Secret (TS) - Top secret, unauthorized disclosure would cause exceptionally grave damage to national security
-
-## Ttp
-
-- **`Date`**:
-   - 2017-02-21
-- **`Sequence num`**:
- 1
-- **`Observed`**:
- False
-- **`Number of times`**:
- 7
-- **`Ttp vocab`**:
-   - IIDES
-- **`Tactic`**:
-   - *7*: Data Exfiltration - Data (or copies of data) is removed from the organization without permission or explicitly against permission to use in an unauthorized way.
-- **`Technique`**:
-   - *1.6*: Own Account After Termination/Resignation - Insider gains access to their company account after their termination date.
-- **`Location`**:
-   - remote
-- **`Hours`**:
-   - 2
-- **`Device`**:
-   - *8*: Personal Mobile Device - Personally owned moble device.
-
-- **`Channel`**:
-   - *6*: Personal Phone - A phone the organization does not control or monitor.
-
-- **`Description`**:
-   - The insider communicated repeatedly with Chinese Intelligence officers to exchange top secret information for money.

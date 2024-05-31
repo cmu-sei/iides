@@ -43,7 +43,7 @@
         "$ref": "#/$defs/technique-vocab"
       },
       "location": {
-        "type": "string",
+        "type": "array",
         "description": "Whether the action was taken on-site or remotely.",
         "items": {
             "$ref": "#/$defs/attack-location-vocab"
@@ -51,7 +51,7 @@
         "minItems": 1
       },
       "hours": {
-        "type": "string",
+        "type": "array",
         "description": "Whether the action was taken during work hours.",
         "items": {
             "$ref": "#/$defs/attack-hours-vocab"

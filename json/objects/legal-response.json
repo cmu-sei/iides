@@ -30,7 +30,7 @@
         "format": "date",
         "description": "Insider puts forth a plea to the court, including guilty, not guilty, nolo contendere (no contest). E.g., Insider pleads guilty to computer intrusion."
       },
-      "insider_judgment": {
+      "insider_judgement": {
         "type": "string",
         "format": "date",
         "description": "Insider is found guilty, not guilty, or liable or not liable in a court of law. E.g., Insider is found guilty in a jury trial."

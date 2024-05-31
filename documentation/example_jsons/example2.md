@@ -1,71 +1,5 @@
 # Example2
 
-## Charge
-
-- **`Title`**:
-   - 18 U.S.C
-- **`Section`**:
-   - 793(e)
-- **`Nature of offense`**:
-   - Willful Retention and Transmission of National Defense Information
-- **`Count`**:
- 1
-- **`Plea`**:
-   - *1*: Guilty - The defendant pleaed guilty to a charge.
-- **`Plea bargain`**:
- True
-- **`Disposition`**:
-   - *2*: Convicted - Plead or been found guilty by a court.
-## Court-case
-
-
-
-- **`Case number`**:
-   - 1:17-cr-034
-- **`Case title`**:
-   - UNITED STATES of America v. Reality WINNER
-- **`Court country`**:
-   - *United States of America*: 
-- **`Court state`**:
-   - *Georgia*: 
-- **`Court district`**:
-   - Southern District Court of Georgia
-- **`Court type`**:
-   - *3*: State - State or regional level government court.
-- **`Case type`**:
-   - *2*: Criminal - A case dealing with a violation of criminal law.
-- **`Defendant`**:
-   - Reality Winner
-
-- **`Plaintiff`**:
-   - United States of America
-
-## Detection
-
-Reality Winner was caught after the NSA identified that a classified document published by The Intercept had been printed, revealing traceable metadata. Investigators used printer tracking dots to determine the document's print date and reviewed access logs, finding that only six individuals, including Winner, had accessed it. Further evidence included her email communication with The Intercept and her confession when confronted by the FBI.
-
-- **`First detected`**:
-   - 2017-04-23T18:25:43.511Z
-- **`Who detected`**:
-   - *LE*: Law Enforcement - Law enforcement discovered the insider's illegal activity (e.g., Police noticed that the insider was gaining access to the company after hours).
-
-- **`Detected method`**:
-   - *2*: Technical Means - The insider's activity was detected via analysis or anomalies in technical systems and software.
-
-- **`Logs`**:
-   - *AC*: Access Logs - File or system access logs.
-  - *EM*: Email Logs - Logs from email servers or services.
-
-## Impact
-
-- **`High`**:
- 1
-- **`Low`**:
- 1
-- **`Metric`**:
-   - *4*: Documents - The number of physical or digital documents effected (stolen, deleted, modified, etc.).
-- **`Estimated`**:
- False
 ## Incident
 
 - **`Cia effect`**:
@@ -98,40 +32,36 @@ The insider previously had a very clean record, and was an unlikely suspect. The
 
 - **`Substance use during incident`**:
  False
-## Job
-
-The exact date of hire and departure is unknown, but the month and year are correct.
-
-- **`Job function`**:
-   - *55*: Military Specific - Military Specific
-- **`Occupation`**:
-   - *55.3*: Military Enlisted Tactical Operations, Specialists, and Crew Members - Crew Members, Specialists, Infantry, Special Forces, etc.
-- **`Title`**:
-   - Linguist
-- **`Position technical`**:
- False
-- **`Access authorization`**:
-   - *4*: Authorized Account Only - Authorized account but not authorized access to targeted data.
-- **`Employment type`**:
-   - *CTR*: Contractor - Individual not directly employed by the organization whose job responsibilities they filling (self-employed or employed by a different, contracting organization).
-- **`Hire date`**:
-   - 2017-02-01
-- **`Departure date`**:
-   - 2017-07-01
-- **`Tenure`**:
-   - 2904:00:00
-## Legal-response
-
-- **`Law enforcement contacted`**:
-   - 2017-05-01
-- **`Insider arrested`**:
-   - 2017-05-03
-- **`Insider charged`**:
-   - 2017-05-07
-- **`Insider pleads`**:
-   - 2017-05-21
-- **`Insider sentenced`**:
-   - 2018-08-23
+- **`First name`**:
+ Reality
+- **`Middle name`**:
+ Leigh
+- **`Last name`**:
+ Winner
+- **`Alias`**:
+ ['Sara Winners', 'Jane Doe']
+- **`City`**:
+ Augusta
+- **`State`**:
+ GA
+- **`Country`**:
+ US
+- **`Postal code`**:
+ 30907
+- **`Country of citizenship`**:
+ ['US']
+- **`Nationality`**:
+ ['US']
+- **`Gender`**:
+ F
+- **`Age`**:
+ 25
+- **`Education`**:
+ 5
+- **`Marital status`**:
+ 1
+- **`Number of children`**:
+ 0
 ## Organization
 
 - **`Name`**:
@@ -178,18 +108,98 @@ The exact date of hire and departure is unknown, but the month and year are corr
    - Pluribus International Corporation is a defense and intelligence contractor providing analysis, intelligence, and security services to various U.S. government agencies.
 - **`Incident role`**:
    - *O*: Other - Other role not described by this vocabulary.
-## Org-relationship
+## Detection
 
-- **`Org2`**:
-   - organization--3d459486-b1b1-4886-9129-87b3458120b3
-- **`Org1`**:
-   - organization--3d459486-b1b1-4886-9129-87b3458120b4
-- **`Relationship`**:
-   - *V*: 
+Reality Winner was caught after the NSA identified that a classified document published by The Intercept had been printed, revealing traceable metadata. Investigators used printer tracking dots to determine the document's print date and reviewed access logs, finding that only six individuals, including Winner, had accessed it. Further evidence included her email communication with The Intercept and her confession when confronted by the FBI.
+
+- **`First detected`**:
+   - 2017-04-23T18:25:43.511Z
+- **`Who detected`**:
+   - *LE*: Law Enforcement - Law enforcement discovered the insider's illegal activity (e.g., Police noticed that the insider was gaining access to the company after hours).
+
+- **`Detected method`**:
+   - *2*: Technical Means - The insider's activity was detected via analysis or anomalies in technical systems and software.
+
+- **`Logs`**:
+   - *AC*: Access Logs - File or system access logs.
+  - *EM*: Email Logs - Logs from email servers or services.
+
+## Impact
+
+- **`High`**:
+ 1
+- **`Low`**:
+ 1
+- **`Metric`**:
+   - *4*: Documents - The number of physical or digital documents effected (stolen, deleted, modified, etc.).
+- **`Estimated`**:
+ False
+## Target
+
+- **`Asset type`**:
+   - *2*: Information - Data/business materials which contain important details belonging to a specific target owner.
+- **`Category`**:
+   - *2.3*: Government/Law Enforcement Information - Classified or sensitive government or law enforcement information.
+- **`Subcategory`**:
+   - *2.3.1*: Classified Information - Information that is restricted by the government for reasons of national security.
+- **`Format`**:
+   - *2*: Physical - Tangible real world format.
+- **`Owner`**:
+   - *O*: Organization - The organization, rather than its employees or customers owns the target.
+- **`Sensitivity`**:
+   - *6*: Top Secret (TS) - Top secret, unauthorized disclosure would cause exceptionally grave damage to national security
+
 ## Response
 
 
 
+- **`Investigated by`**:
+   - *4*: Law Enforcement - Federal - Federal law enforcement entity such as the FBI or USSS.
+
+- **`Investigation events`**:
+   - *['1', '2017-05-17']*: Insider's Residence/Workplace Searched - Investigators search the insider's home or workplace for evidence related to the incident.
+  - *['3', '2017-05-03']*: Insider Admits to Activity in Interview - Insider admits to involvement in insider incident while being interviewed by investigators about the incident (or related activity).
+
+## Court-case
+
+
+
+- **`Case number`**:
+   - 1:17-cr-034
+- **`Case title`**:
+   - UNITED STATES of America v. Reality WINNER
+- **`Court country`**:
+   - *United States of America*: 
+- **`Court state`**:
+   - *Georgia*: 
+- **`Court district`**:
+   - Southern District Court of Georgia
+- **`Court type`**:
+   - *3*: State - State or regional level government court.
+- **`Case type`**:
+   - *2*: Criminal - A case dealing with a violation of criminal law.
+- **`Defendant`**:
+   - Reality Winner
+
+- **`Plaintiff`**:
+   - United States of America
+
+## Charge
+
+- **`Title`**:
+   - 18 U.S.C
+- **`Section`**:
+   - 793(e)
+- **`Nature of offense`**:
+   - Willful Retention and Transmission of National Defense Information
+- **`Count`**:
+ 1
+- **`Plea`**:
+   - *1*: Guilty - The defendant pleaed guilty to a charge.
+- **`Plea bargain`**:
+ True
+- **`Disposition`**:
+   - *2*: Convicted - Plead or been found guilty by a court.
 ## Sentence
 
 - **`Sentence type`**:
@@ -210,6 +220,134 @@ The exact date of hire and departure is unknown, but the month and year are corr
    - *4*: Year(s) - Imposed sentence is in terms of years. E.g. 5 years no Internet access.
 - **`Concurrency`**:
  False
+## Legal-response
+
+- **`Law enforcement contacted`**:
+   - 2017-05-01
+- **`Insider arrested`**:
+   - 2017-05-03
+- **`Insider charged`**:
+   - 2017-05-07
+- **`Insider pleads`**:
+   - 2017-05-21
+- **`Insider judgement`**:
+   - 2018-08-07
+- **`Insider sentenced`**:
+   - 2018-08-23
+## Job
+
+The exact date of hire and departure is unknown, but the month and year are correct.
+
+- **`Job function`**:
+   - *55*: Military Specific - Military Specific
+- **`Occupation`**:
+   - *55.3*: Military Enlisted Tactical Operations, Specialists, and Crew Members - Crew Members, Specialists, Infantry, Special Forces, etc.
+- **`Title`**:
+   - Linguist
+- **`Position technical`**:
+ False
+- **`Access authorization`**:
+   - *4*: Authorized Account Only - Authorized account but not authorized access to targeted data.
+- **`Employment type`**:
+   - *CTR*: Contractor - Individual not directly employed by the organization whose job responsibilities they filling (self-employed or employed by a different, contracting organization).
+- **`Hire date`**:
+   - 2017-02-01
+- **`Departure date`**:
+   - 2017-07-01
+- **`Tenure`**:
+   - 2904:00:00
+## Ttp
+
+- **`Date`**:
+   - 2017-03-09T12:00:00.000Z
+- **`Sequence num`**:
+ 1
+- **`Observed`**:
+ False
+- **`Number of times`**:
+ 1
+- **`Ttp vocab`**:
+   - IIDES
+- **`Tactic`**:
+   - *7*: Data Exfiltration - Data (or copies of data) is removed from the organization without permission or explicitly against permission to use in an unauthorized way.
+- **`Technique`**:
+   - *7.1*: Paper - Insider exfiltrates data through printed or hand-written materials (e.g., Insider takes screenshots of important data, prints the screenshots, and walks out of work with them).
+- **`Location`**:
+   - *1*: On-site - Action taken while on-site at an organizational facility.
+
+- **`Hours`**:
+   - *1*: During Work Hours - Insider took the action during their normal working hours.
+
+- **`Device`**:
+   - *1*: Company Desktop - Organization owned desktop workstation.
+  - *9*: Printer/Copier/Fax - Printer, copier, or fax machine.
+
+- **`Channel`**:
+   - *9*: Other - Other type of channel not listed in this vocabulary.
+
+- **`Description`**:
+   - Winner printed and improperly removed classified intelligence reporting.
+## Ttp
+
+- **`Date`**:
+   - 2017-03-09T12:00:00.000Z
+- **`Sequence num`**:
+ 2
+- **`Observed`**:
+ False
+- **`Number of times`**:
+ 1
+- **`Ttp vocab`**:
+   - IIDES
+- **`Tactic`**:
+   - *7*: Data Exfiltration - Data (or copies of data) is removed from the organization without permission or explicitly against permission to use in an unauthorized way.
+- **`Technique`**:
+   - *7.3*: Email - Insider exfiltrates data through electronic mail (e.g., Insider e-mailed confidential information to competitor).
+- **`Location`**:
+   - *o*: 
+  - *n*: 
+  - *-*: 
+  - *s*: 
+  - *i*: 
+  - *t*: 
+  - *e*: 
+
+- **`Hours`**:
+   - *D*: 
+  - *u*: 
+  - *r*: 
+  - *i*: 
+  - *n*: 
+  - *g*: 
+  - * *: 
+  - *w*: 
+  - *o*: 
+  - *r*: 
+  - *k*: 
+  - * *: 
+  - *h*: 
+  - *o*: 
+  - *u*: 
+  - *r*: 
+  - *s*: 
+
+- **`Device`**:
+   - *1*: Company Desktop - Organization owned desktop workstation.
+  - *9*: Printer/Copier/Fax - Printer, copier, or fax machine.
+
+- **`Channel`**:
+   - *9*: Other - Other type of channel not listed in this vocabulary.
+
+- **`Description`**:
+   - Winner printed and improperly removed classified intelligence reporting.
+## Org-relationship
+
+- **`Org2`**:
+   - organization--3d459486-b1b1-4886-9129-87b3458120b3
+- **`Org1`**:
+   - organization--3d459486-b1b1-4886-9129-87b3458120b4
+- **`Relationship`**:
+   - *V*: 
 ## Source
 
 - **`Title`**:
@@ -308,76 +446,3 @@ The exact date of hire and departure is unknown, but the month and year are corr
  True
 - **`Document`**:
    - https://standwithreality.org/original-court-documents/
-## Target
-
-- **`Asset type`**:
-   - *2*: Information - Data/business materials which contain important details belonging to a specific target owner.
-- **`Category`**:
-   - *2.3*: Government/Law Enforcement Information - Classified or sensitive government or law enforcement information.
-- **`Subcategory`**:
-   - *2.3.1*: Classified Information - Information that is restricted by the government for reasons of national security.
-- **`Format`**:
-   - *2*: Physical - Tangible real world format.
-- **`Owner`**:
-   - *O*: Organization - The organization, rather than its employees or customers owns the target.
-- **`Sensitivity`**:
-   - *6*: Top Secret (TS) - Top secret, unauthorized disclosure would cause exceptionally grave damage to national security
-
-## Ttp
-
-- **`Date`**:
-   - 2017-03-09T12:00:00.000Z
-- **`Sequence num`**:
- 1
-- **`Observed`**:
- False
-- **`Number of times`**:
- 1
-- **`Ttp vocab`**:
-   - IIDES
-- **`Tactic`**:
-   - *7*: Data Exfiltration - Data (or copies of data) is removed from the organization without permission or explicitly against permission to use in an unauthorized way.
-- **`Technique`**:
-   - *7.1*: Paper - Insider exfiltrates data through printed or hand-written materials (e.g., Insider takes screenshots of important data, prints the screenshots, and walks out of work with them).
-- **`Location`**:
-   - 1
-- **`Hours`**:
-   - 1
-- **`Device`**:
-   - *1*: Company Desktop - Organization owned desktop workstation.
-  - *9*: Printer/Copier/Fax - Printer, copier, or fax machine.
-
-- **`Channel`**:
-   - *9*: Other - Other type of channel not listed in this vocabulary.
-
-- **`Description`**:
-   - Winner printed and improperly removed classified intelligence reporting.
-## Ttp
-
-- **`Date`**:
-   - 2017-03-09T12:00:00.000Z
-- **`Sequence num`**:
- 2
-- **`Observed`**:
- False
-- **`Number of times`**:
- 1
-- **`Ttp vocab`**:
-   - IIDES
-- **`Tactic`**:
-   - *7*: Data Exfiltration - Data (or copies of data) is removed from the organization without permission or explicitly against permission to use in an unauthorized way.
-- **`Technique`**:
-   - *7.3*: Email - Insider exfiltrates data through electronic mail (e.g., Insider e-mailed confidential information to competitor).
-- **`Location`**:
-   - on-site
-- **`Hours`**:
-   - During work hours
-- **`Device`**:
-   - *1*: Company Desktop - Organization owned desktop workstation.
-  - *9*: Printer/Copier/Fax - Printer, copier, or fax machine.
-
-- **`Channel`**:
-   - *9*: Other - Other type of channel not listed in this vocabulary.
-
-- **`Description`**:
-   - Winner printed and improperly removed classified intelligence reporting.

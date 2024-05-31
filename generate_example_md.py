@@ -22,7 +22,7 @@ def find_schema(schema_paths, target_tag):
     param: target schema path
     """
     for schema in schema_paths:
-        if (schema.endswith(target_tag + '.json')):
+        if (schema[schema.rindex('\\')+1:] == (target_tag + '.json')):
             with open(schema) as f:
                 return json.load(f)
     return None
@@ -32,7 +32,29 @@ def get_vocab(items, field, schema):
     Returns the vocab definition of a given item for the given field, from the given schema
     """
     ret_val = ""
-    print(items)
+
+    #Tuple case
+    if isinstance(items, list):
+        refs = []
+        for elems in schema['properties'][field]['items']['prefixItems']:
+            if '$ref' in elems:
+                refs.append(elems['$ref'])
+        try:
+            for ref in refs:
+                defs = schema['$defs']
+                ref_path = ref
+                vocab_array = defs[ref_path[ref_path.rfind('/')+1:]]['oneOf']
+                count = 0
+                for vocab_object in vocab_array:
+                    if vocab_object['const'] == items[0]:
+                        ret_val = ret_val + f"{vocab_object['title']} - {vocab_object['description']}"
+                        count +=1
+        except:
+            vocab_array = []
+            print(f"Error: could not get vocab: {items}\n")
+        return ret_val
+    
+
     try: #string case
         ref_path = schema['properties'][field]['$ref']
         defs = schema['$defs']
@@ -67,45 +89,31 @@ def get_vocab(items, field, schema):
 
         except:
             print(f"Error: could not get vocab: {items}\n")
-
-
-    # if isinstance(items, list):
-    #     sub_schema_items = sub_schema['items']
-    #     if '$ref' in sub_schema_items:
-    #         mult_refs = False
-    #         if 'prefixItems' in sub_schema_items:
-    #             mult_refs = True
-            
-    #         ref_path = None
-
-    #         if not mult_refs:
-    #             ref_path = sub_schema_items['$ref']
-    #             def_value = ref_path[ref_path.rfind('/')+1:]
-    #             defs = schema['$defs']
-    #             try:
-    #                 vocab_array = defs[def_value]['oneOf']
-    #             except:
-    #                 try: vocab_array = defs[def_value]['anyOf']
-    #                 except: vocab_array = []
-    #             ret_val = "\n"
-    #             for vocab_object in vocab_array:
-    #                 if vocab_object['const'] in items:
-    #                     ret_val = ret_val + (f"  - {vocab_object['title']} - {vocab_object['description']}\n")
-    # elif isinstance(items, str):
-    #     print(items)
-    #     ref_path = schema['properties'][field]['$ref']
-    #     defs = schema['$defs']
-
-    #     try:
-    #         vocab_array = defs[ref_path[ref_path.rfind('/')+1:]]['oneOf']
-    #         for vocab_object in vocab_array:
-    #             if vocab_object['const'] == items:
-    #                 ret_val = f"{vocab_object['title']} - {vocab_object['description']})"
-    #     except:
-    #         vocab_array = []
-    #         print(f"Error: could not get vocab: {items}\n")
     return ret_val
 
+desired_order = [
+    "incident",
+    "insider",
+    "organization",
+    "detection",
+    "impact",
+    "target",
+    "response",
+    "court-case",
+    "charge",
+    "sentence",
+    "legal-response",
+    "job",
+    "stressor",
+    "ttp"
+]
+
+# Function to get the sort index based on the desired order
+def get_sort_index(tag):
+    if tag in desired_order:
+        return desired_order.index(tag)
+    else:
+        return len(desired_order)
 
 if __name__ == "__main__":
 
@@ -120,20 +128,23 @@ if __name__ == "__main__":
 
         with open(filename, 'r') as f:
             example_data = json.load(f)
-            print(example_data['id'])
 
         # Example Number
         file_lines.append(f"# {filename[filename.find('\\example')+1:filename.find('.json')].capitalize()}\n")
 
         if 'objects' in example_data:
             # Iterate through each IIDES object
-            for object in example_data['objects']:
+            objects = example_data['objects']
+            sorted_objects = sorted(objects, key=lambda obj: get_sort_index(obj['id'][0:obj['id'].find("--")].lower()))
+
+            for object in sorted_objects:
                 tag = object['id'][0:object['id'].find("--")]
                 file_lines.append(f"## {tag.capitalize()}\n")
                 if 'comment' in object:
                     file_lines.append(f"{object['comment']}\n")
                 
                 # Find the correlating schema
+                print(tag)
                 schema = find_schema(json_schemas, tag)
                 #need to do something about references to other schema, accomplice and insider
 
@@ -148,8 +159,10 @@ if __name__ == "__main__":
                             schema_field = schema['properties'][field]
                         except:
                             print("Not a default field: " + str(field))
+                            file_lines.append(f"- **`{field.capitalize().replace("_", " ")}`**:\n {items}")
                             continue
-
+                        if field == 'location':
+                            print("Trying to get location vocab")
                         #items is a string
                         if schema_field['type'] == "string":
                             if '$ref' in schema_field: 
@@ -166,10 +179,10 @@ if __name__ == "__main__":
                             else:
                                 for item in items:
                                     items_print = items_print + (f"  - {item}\n")
-                                    print(item)
                         #item is a tuple
-                        elif schema_field['type'] == "array" and items:
-                            print("Not supported... yet ;)")
+                        elif schema_field['type'] == "array" and ('type' in schema_field['items'] and schema_field['items']['type'] == "array"):
+                            for item in items:
+                                items_print= items_print + (f"  - *{item}*: {get_vocab(item, field, schema)}\n")
                         elif schema_field['type'] == 'number' or schema_field['type'] == 'integer':
                             items_print = f"{items:,}"
                         else:
@@ -181,3 +194,4 @@ if __name__ == "__main__":
         f = open(f"{DOCUMENTATION_PATH}{filename[:filename.find('.json')]}.md", "w")
         f.writelines([line + '\n' for line in file_lines])
         f.close()
+        print("Successfuly made markdown: " + str(filename[:filename.find('.json')]))
