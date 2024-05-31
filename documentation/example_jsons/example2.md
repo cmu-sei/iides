@@ -2,6 +2,8 @@
 
 ## Incident
 
+- **`Id`**:
+   - incident--0e339a3d-37fa-455c-b818-7aae0e34a2a8
 - **`Cia effect`**:
    - *C*: Confidentiality - The protection of information from unauthorized access or disclosure.
 
@@ -25,6 +27,8 @@
 
 The insider previously had a very clean record, and was an unlikely suspect. The insider was a 'good kid' who had no apparent history of leaking or any disciplinary proceedings during their military service in the Air Force.
 
+- **`Id`**:
+   - insider--04548271-8e9f-4e40-8bad-9cf77c858070
 - **`Incident role`**:
    - *1*: Primary - Insider is the primary perpetrator of the incident.
 - **`Motive`**:
@@ -64,6 +68,8 @@ The insider previously had a very clean record, and was an unlikely suspect. The
  0
 ## Organization
 
+- **`Id`**:
+   - organization--3d459486-b1b1-4886-9129-87b3458120b3
 - **`Name`**:
    - US National Security Agency
 - **`City`**:
@@ -88,6 +94,8 @@ The insider previously had a very clean record, and was an unlikely suspect. The
    - *V*: Primary Victim - The organization was the primary victim organization of the insider's actions.
 ## Organization
 
+- **`Id`**:
+   - organization--3d459486-b1b1-4886-9129-87b3458120b4
 - **`Name`**:
    - Pluribus International Corporation
 - **`City`**:
@@ -112,6 +120,8 @@ The insider previously had a very clean record, and was an unlikely suspect. The
 
 Reality Winner was caught after the NSA identified that a classified document published by The Intercept had been printed, revealing traceable metadata. Investigators used printer tracking dots to determine the document's print date and reviewed access logs, finding that only six individuals, including Winner, had accessed it. Further evidence included her email communication with The Intercept and her confession when confronted by the FBI.
 
+- **`Id`**:
+   - detection--7f05c15a-84b2-489d-a3dc-0e3c78d9cbc8
 - **`First detected`**:
    - 2017-04-23T18:25:43.511Z
 - **`Who detected`**:
@@ -126,6 +136,8 @@ Reality Winner was caught after the NSA identified that a classified document pu
 
 ## Impact
 
+- **`Id`**:
+   - impact--0e15aa3c-8d6c-4afd-bed4-c45f64c34463
 - **`High`**:
  1
 - **`Low`**:
@@ -136,6 +148,8 @@ Reality Winner was caught after the NSA identified that a classified document pu
  False
 ## Target
 
+- **`Id`**:
+   - target--c482c487-5bb4-4dee-abdf-2e0c207a81bd
 - **`Asset type`**:
    - *2*: Information - Data/business materials which contain important details belonging to a specific target owner.
 - **`Category`**:
@@ -153,6 +167,8 @@ Reality Winner was caught after the NSA identified that a classified document pu
 
 
 
+- **`Id`**:
+   - response--ab3c9833-1e6a-426a-9e48-6f74bcbc5778
 - **`Investigated by`**:
    - *4*: Law Enforcement - Federal - Federal law enforcement entity such as the FBI or USSS.
 
@@ -164,6 +180,8 @@ Reality Winner was caught after the NSA identified that a classified document pu
 
 
 
+- **`Id`**:
+   - court-case--85e8998f-080a-4764-8bab-f8e9fa3fc70d
 - **`Case number`**:
    - 1:17-cr-034
 - **`Case title`**:
@@ -186,6 +204,8 @@ Reality Winner was caught after the NSA identified that a classified document pu
 
 ## Charge
 
+- **`Id`**:
+   - charge--71ed72fb-9194-40af-8459-17aa881a70dc
 - **`Title`**:
    - 18 U.S.C
 - **`Section`**:
@@ -202,6 +222,8 @@ Reality Winner was caught after the NSA identified that a classified document pu
    - *2*: Convicted - Plead or been found guilty by a court.
 ## Sentence
 
+- **`Id`**:
+   - sentence--73e8e020-5ce6-4acb-94ea-7ff3d6f1bcc5
 - **`Sentence type`**:
    - *9*: Incarceration - Imprisonment.
 - **`Quantity`**:
@@ -212,6 +234,8 @@ Reality Winner was caught after the NSA identified that a classified document pu
  False
 ## Sentence
 
+- **`Id`**:
+   - sentence--73e8e020-5ce6-4acb-94ea-7ff3d6f1bcb6
 - **`Sentence type`**:
    - *16*: Supervised Release - Defendant is released into the community, subject to special conditions and restrictions, after the completion of a prison sentence.
 - **`Quantity`**:
@@ -222,6 +246,8 @@ Reality Winner was caught after the NSA identified that a classified document pu
  False
 ## Legal-response
 
+- **`Id`**:
+   - legal-response--87cc68cc-6e06-4131-8732-80995f5e3ca6
 - **`Law enforcement contacted`**:
    - 2017-05-01
 - **`Insider arrested`**:
@@ -238,6 +264,8 @@ Reality Winner was caught after the NSA identified that a classified document pu
 
 The exact date of hire and departure is unknown, but the month and year are correct.
 
+- **`Id`**:
+   - job--11492807-43a6-4e50-9480-b26ecaca983d
 - **`Job function`**:
    - *55*: Military Specific - Military Specific
 - **`Occupation`**:
@@ -258,6 +286,8 @@ The exact date of hire and departure is unknown, but the month and year are corr
    - 2904:00:00
 ## Ttp
 
+- **`Id`**:
+   - ttp--aabe47dc-fecb-43f9-bf77-361b06504789
 - **`Date`**:
    - 2017-03-09T12:00:00.000Z
 - **`Sequence num`**:
@@ -289,6 +319,8 @@ The exact date of hire and departure is unknown, but the month and year are corr
    - Winner printed and improperly removed classified intelligence reporting.
 ## Ttp
 
+- **`Id`**:
+   - ttp--aabe47dc-fecb-43f9-bf77-361b06504789
 - **`Date`**:
    - 2017-03-09T12:00:00.000Z
 - **`Sequence num`**:
@@ -342,6 +374,8 @@ The exact date of hire and departure is unknown, but the month and year are corr
    - Winner printed and improperly removed classified intelligence reporting.
 ## Org-relationship
 
+- **`Id`**:
+   - org-relationship--83271b80-b5de-410e-b7ba-3c93ca5cba08
 - **`Org2`**:
    - organization--3d459486-b1b1-4886-9129-87b3458120b3
 - **`Org1`**:
@@ -350,6 +384,8 @@ The exact date of hire and departure is unknown, but the month and year are corr
    - *V*: 
 ## Source
 
+- **`Id`**:
+   - source--c989a0c4-a559-491a-ac63-2f8b0eaba126
 - **`Title`**:
    - United States v. Winner
 - **`Source type`**:
@@ -364,6 +400,8 @@ The exact date of hire and departure is unknown, but the month and year are corr
    - https://casetext.com/case/united-states-v-winner-9
 ## Source
 
+- **`Id`**:
+   - source--32c2aa75-685a-4af5-ba0f-36921b8d1c18
 - **`Title`**:
    - CASE STUDY Unlawful Retention and Transmission of National Defense Information
 - **`Source type`**:
@@ -378,6 +416,8 @@ The exact date of hire and departure is unknown, but the month and year are corr
    - https://www.cdse.edu/Portals/124/Documents/casestudies/case-study-winner.pdf
 ## Source
 
+- **`Id`**:
+   - source--d7fba1ef-193d-4826-a551-ce6aa66150c3
 - **`Title`**:
    - USA v. Reality Leigh Winner, No. 20-11692 (11th Cir. 2020)
 - **`Source type`**:
@@ -392,6 +432,8 @@ The exact date of hire and departure is unknown, but the month and year are corr
    - https://law.justia.com/cases/federal/appellate-courts/ca11/20-11692/20-11692-2020-12-07.html
 ## Source
 
+- **`Id`**:
+   - source--5e290802-9738-40a5-bb64-9544d8624995
 - **`Title`**:
    - USA v. Reality Leigh Winner, No. 20-11692 (11th Cir. 2020)
 - **`Source type`**:
@@ -406,6 +448,8 @@ The exact date of hire and departure is unknown, but the month and year are corr
    - https://www.justice.gov/opa/pr/federal-government-contractor-sentenced-removing-and-transmitting-classified-materials-news
 ## Source
 
+- **`Id`**:
+   - source--1c8da449-30ed-4b7b-89f7-9c8f272207ab
 - **`Title`**:
    - Reality Winner, N.S.A. Contractor Accused of Leak, Was Undone by Trail of Clues
 - **`Source type`**:
@@ -420,6 +464,8 @@ The exact date of hire and departure is unknown, but the month and year are corr
    - https://www.nytimes.com/2017/06/06/us/politics/reality-leigh-winner-leak-nsa.html
 ## Source
 
+- **`Id`**:
+   - source--497d1b03-8c71-482f-9156-542d21e99fdf
 - **`Title`**:
    - Reality Winner, Former N.S.A. Translator, Gets More Than 5 Years in Leak of Russian Hacking Report
 - **`Source type`**:
@@ -434,6 +480,8 @@ The exact date of hire and departure is unknown, but the month and year are corr
    - https://www.nytimes.com/2018/08/23/us/reality-winner-nsa-sentence.html
 ## Source
 
+- **`Id`**:
+   - source--a6e7705d-195f-4617-a2d2-30c84aadadea
 - **`Title`**:
    - Original Court Documents: US v. Reality Leigh Winner
 - **`Source type`**:

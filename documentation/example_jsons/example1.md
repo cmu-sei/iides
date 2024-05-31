@@ -4,6 +4,8 @@
 
 The leak severely impacted the confidentiality and integrity of CIA operations, exposing sensitive information and tools used for intelligence gathering.
 
+- **`Id`**:
+   - incident--ef88113a-27a0-4a56-8f70-e8a5fd4541e6
 - **`Cia effect`**:
    - *C*: Confidentiality - The protection of information from unauthorized access or disclosure.
 
@@ -30,6 +32,8 @@ The leak severely impacted the confidentiality and integrity of CIA operations, 
 
 Joshua Adam Schulte had a history of social and mental health issues. He showed concerning behaviors such as repeated technical policy abuse and conflicts with his supervisor, as well as browsing dark web forums. The insider had multiple workplace incidents involving the harassment of colleagues, ultimately resulting in the insider being forced to move offices across the building. The insider believed he had been mistreated by staff, leading to a desire for revenge.
 
+- **`Id`**:
+   - insider--5460491c-eacd-4074-aef9-f6f584893a59
 - **`Incident role`**:
    - *1*: Primary - Insider is the primary perpetrator of the incident.
 - **`Motive`**:
@@ -78,6 +82,8 @@ Joshua Adam Schulte had a history of social and mental health issues. He showed 
  0
 ## Organization
 
+- **`Id`**:
+   - organization--d1472454-0236-4b66-9013-65d0f916ee48
 - **`Name`**:
    - Central Intelligence Agency
 - **`City`**:
@@ -102,6 +108,8 @@ Joshua Adam Schulte had a history of social and mental health issues. He showed 
    - United States Government
 ## Organization
 
+- **`Id`**:
+   - organization--19f19fa9-d96e-4407-901e-06ecaefd71b5
 - **`Name`**:
    - WikiLeaks
 - **`Small business`**:
@@ -118,6 +126,8 @@ Joshua Adam Schulte had a history of social and mental health issues. He showed 
 
 Schulte's unauthorized activities were detected by the CIA's security team and subsequently investigated by law enforcement. Detection involved technical means such as monitoring access logs, audit logs, database logs, remote access logs, and system file logs.
 
+- **`Id`**:
+   - detection--bd545866-663f-4d62-a39a-da3672842c9f
 - **`First detected`**:
    - 2017-03-07T00:00:00Z
 - **`Who detected`**:
@@ -139,6 +149,8 @@ Schulte's unauthorized activities were detected by the CIA's security team and s
 
 The Vault 7 leak included approximately 8,000 documents detailing CIA hacking tools and techniques.
 
+- **`Id`**:
+   - impact--2d4ed800-002d-4ce5-bbb0-c89acc1f4254
 - **`High`**:
  8,000
 - **`Low`**:
@@ -151,6 +163,8 @@ The Vault 7 leak included approximately 8,000 documents detailing CIA hacking to
 
 The financial impact of the breach was substantial, with estimates ranging from hundreds of millions to a billion dollars for damage control and security improvements.
 
+- **`Id`**:
+   - impact--5f3ee38d-2d4c-4ea9-9857-41f9537477ea
 - **`High`**:
  1,000,000,000
 - **`Low`**:
@@ -161,6 +175,8 @@ The financial impact of the breach was substantial, with estimates ranging from 
  True
 ## Target
 
+- **`Id`**:
+   - target--2a6f542f-a3e6-43e9-b628-cc9c97765276
 - **`Asset type`**:
    - *2*: Information - Data/business materials which contain important details belonging to a specific target owner.
 - **`Category`**:
@@ -183,6 +199,8 @@ The financial impact of the breach was substantial, with estimates ranging from 
 
 Schulte left the CIA in November of 2016, before departing from the agency planted a service to still allow remote access to government files and databases, which he used to access classified information post departure.
 
+- **`Id`**:
+   - response--f42fc7ae-48a1-48f9-bf84-0d4b13f7a64c
 - **`Technical controls`**:
    - *['1', '2016-11-01']*: Access to Technical System(s) Restricted - Insider's access to the organization's technical systems is restricted in any capacity E.g., Organization declares that insider could only log onto system if another employee is present.
   - *['2', '2016-11-01']*: Access to Technical System(s) Terminated - Insider's access to the organization's technical systems is completely terminated E.g., Insider's account is deleted upon termination from the company.
@@ -203,6 +221,8 @@ Schulte left the CIA in November of 2016, before departing from the agency plant
 
 This case involved multiple charges against Joshua Adam Schulte, including espionage and unauthorized disclosure of classified information to WikiLeaks (known as the Vault 7 leak), computer hacking, unauthorized access to CIA computer systems, causing transmission of harmful computer commands, and receipt, possession, and transportation of child pornography.
 
+- **`Id`**:
+   - court-case--0e430311-72ee-4776-be74-3c1969d141c0
 - **`Case number`**:
    - 17 Cr. 548 (PAC)
 - **`Case title`**:
@@ -225,6 +245,8 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
 
 ## Charge
 
+- **`Id`**:
+   - charge--2bc9e36b-53c3-44fa-8997-ccb5d8ac9418
 - **`Title`**:
    - 18 U.S.C.
 - **`Section`**:
@@ -241,6 +263,8 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
    - *2*: Convicted - Plead or been found guilty by a court.
 ## Charge
 
+- **`Id`**:
+   - charge--0572191b-beef-484c-841f-149a9f17fd8f
 - **`Title`**:
    - 18 U.S.C.
 - **`Section`**:
@@ -257,6 +281,8 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
    - *2*: Convicted - Plead or been found guilty by a court.
 ## Charge
 
+- **`Id`**:
+   - charge--868f7fd1-b492-40a4-b21f-f5a31cd5e219
 - **`Title`**:
    - 18 U.S.C.
 - **`Section`**:
@@ -273,6 +299,8 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
    - *2*: Convicted - Plead or been found guilty by a court.
 ## Charge
 
+- **`Id`**:
+   - charge--d59dd57a-96b5-472f-a788-dcdb30ec5cb6
 - **`Title`**:
    - 18 U.S.C.
 - **`Section`**:
@@ -289,6 +317,8 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
    - *2*: Convicted - Plead or been found guilty by a court.
 ## Charge
 
+- **`Id`**:
+   - charge--cc6be1c8-5c76-4286-84a0-2b456a288c13
 - **`Title`**:
    - 18 U.S.C.
 - **`Section`**:
@@ -305,6 +335,8 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
    - *2*: Convicted - Plead or been found guilty by a court.
 ## Charge
 
+- **`Id`**:
+   - charge--9259e182-5643-4a4d-b078-4bb251fe2595
 - **`Title`**:
    - 18 U.S.C.
 - **`Section`**:
@@ -321,6 +353,8 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
    - *2*: Convicted - Plead or been found guilty by a court.
 ## Charge
 
+- **`Id`**:
+   - charge--10b415ea-7ea6-4068-b394-db1d18349b92
 - **`Title`**:
    - 18 U.S.C.
 - **`Section`**:
@@ -337,6 +371,8 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
    - *2*: Convicted - Plead or been found guilty by a court.
 ## Charge
 
+- **`Id`**:
+   - charge--4ded5348-219f-4d74-851e-f7803b49e35e
 - **`Title`**:
    - 18 U.S.C.
 - **`Section`**:
@@ -353,6 +389,8 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
    - *2*: Convicted - Plead or been found guilty by a court.
 ## Charge
 
+- **`Id`**:
+   - charge--a919f8e3-0674-4269-bc8a-d71a539018e1
 - **`Title`**:
    - 18 U.S.C.
 - **`Section`**:
@@ -369,6 +407,8 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
    - *2*: Convicted - Plead or been found guilty by a court.
 ## Sentence
 
+- **`Id`**:
+   - sentence--21e74a96-ba47-46fe-8338-736ab19552ba
 - **`Sentence type`**:
    - *9*: Incarceration - Imprisonment.
 - **`Quantity`**:
@@ -381,6 +421,8 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
 
 Lifetime supervised release, to run concurrently.
 
+- **`Id`**:
+   - sentence--1141c372-543a-42f5-a640-c88b8ab16ae2
 - **`Sentence type`**:
    - *16*: Supervised Release - Defendant is released into the community, subject to special conditions and restrictions, after the completion of a prison sentence.
 - **`Quantity`**:
@@ -393,6 +435,8 @@ Lifetime supervised release, to run concurrently.
 
 Joshua Adam Schulte was investigated and charged for multiple offenses, including espionage, unauthorized disclosure of classified information (Vault 7 leaks), computer hacking, and possession of child pornography. The judgement date is in relation to the charges specifically related to the dissemination of the Stolen CIA Files.
 
+- **`Id`**:
+   - legal-response--b318c37b-2f76-421f-bf12-0833e836b00c
 - **`Law enforcement contacted`**:
    - 2017-03-07
 - **`Insider arrested`**:
@@ -409,6 +453,8 @@ Joshua Adam Schulte was investigated and charged for multiple offenses, includin
 
 Schulte was employed as a software engineer in the Center for Cyber Intelligence (CCI) at the CIA, where he had access to sensitive and classified information.
 
+- **`Id`**:
+   - job--e76248a2-82df-4c7d-b7a0-bf86eb85c570
 - **`Job function`**:
    - *15*: Computer and Mathematical - Computer and Mathematical
 - **`Occupation`**:
@@ -431,6 +477,8 @@ Schulte was employed as a software engineer in the Center for Cyber Intelligence
 
 Joshua Adam Schulte internal disputes and a hostile work environment at the CIA (self-imposed) contributed to his decision to steal and leak classified information as revenge for mistreatment.
 
+- **`Id`**:
+   - stressor--28ecfbf3-5eb1-429f-8a55-c2e16f08ebcd
 - **`Date`**:
    - 2016
 - **`Category`**:
@@ -439,6 +487,8 @@ Joshua Adam Schulte internal disputes and a hostile work environment at the CIA 
    - *2.12*: Hostile Work Environment - A work environment that is difficult or uncomfortable for another person to work in due to discrimination of any kind.
 ## Ttp
 
+- **`Id`**:
+   - ttp--a181e814-aa3a-411e-ae79-79ceba48e36a
 - **`Date`**:
    - 2016-04-20T14:00:00Z
 - **`Sequence num`**:
@@ -471,6 +521,8 @@ Joshua Adam Schulte internal disputes and a hostile work environment at the CIA 
    - Schulte used a personal email account to exfiltrate classified CIA information from the organization's database server to his personal computer.
 ## Ttp
 
+- **`Id`**:
+   - ttp--a154e814-aa3a-411e-ae79-79ceba48e79b
 - **`Date`**:
    - 2016-04-20T14:00:00Z
 - **`Sequence num`**:
@@ -501,6 +553,8 @@ Joshua Adam Schulte internal disputes and a hostile work environment at the CIA 
    - Schulte then loaded the data on a removable media disk
 ## Ttp
 
+- **`Id`**:
+   - ttp--a154e814-aa3a-411e-ae79-79ceba48e77b
 - **`Date`**:
    - 2016-04-20T14:00:00Z
 - **`Sequence num`**:
@@ -531,6 +585,8 @@ Joshua Adam Schulte internal disputes and a hostile work environment at the CIA 
    - Before leaving the CIA, Schulte planted a backdoor into the CIA network
 ## Ttp
 
+- **`Id`**:
+   - ttp--a154e814-aa3a-411e-ae79-79ceba48e76b
 - **`Date`**:
    - 2016-04-20T14:00:00Z
 - **`Sequence num`**:
@@ -565,12 +621,16 @@ Joshua Adam Schulte internal disputes and a hostile work environment at the CIA 
 
 The child pornography charges were included in the JSON because they are relevant to the overall investigation of Joshua Adam Schulte. Although they do not directly pertain to the insider threat, they were pivotal in leading to his initial arrest and subsequent comprehensive charges.
 
+- **`Id`**:
+   - note--b372b9ad-cb92-4db6-be28-1e3f62605858
 - **`Author`**:
    - CMU Researcher
 - **`Date`**:
    - 2024-05-17T00:00:00Z
 ## Source
 
+- **`Id`**:
+   - source--5565e706-d762-4b35-b54a-6f22a80badb2
 - **`Title`**:
    - Joshua Adam Schulte Charged with Unauthorized Disclosure of Classified Information and Other Offenses
 - **`Source type`**:
@@ -585,6 +645,8 @@ The child pornography charges were included in the JSON because they are relevan
    - https://www.justice.gov/opa/pr/joshua-adam-schulte-charged-unauthorized-disclosure-classified-information-and-other-offenses
 ## Source
 
+- **`Id`**:
+   - source--d6a29cb3-519f-4d62-a1f6-a86439bef53d
 - **`Title`**:
    - Former CIA Officer Joshua Adam Schulte Sentenced to 40 Years in Prison for Espionage and Child Pornography Offenses
 - **`Source type`**:
@@ -599,6 +661,8 @@ The child pornography charges were included in the JSON because they are relevan
    - https://www.justice.gov/usao-sdny/pr/former-cia-officer-joshua-adam-schulte-sentenced-40-years-prison-espionage-and-child
 ## Source
 
+- **`Id`**:
+   - source--7e3ef93e-31b0-4e17-a32a-98540326fd05
 - **`Title`**:
    - CIA Engineer Convicted of Largest Theft of Classified Data in Agency’s History
 - **`Source type`**:
@@ -613,6 +677,8 @@ The child pornography charges were included in the JSON because they are relevan
    - https://www.nytimes.com/2022/07/13/nyregion/cia-engineer-joshua-schulte-theft-convicted.html
 ## Source
 
+- **`Id`**:
+   - source--d36603a3-2510-4617-87eb-10eea6ab672e
 - **`Title`**:
    - USA v. Schulte Docket Information
 - **`Source type`**:

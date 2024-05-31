@@ -10,7 +10,7 @@ Information about the legal response to the incident, particularly the dates of 
 - **`insider_arrested`** *(date)* : Insider is taken into custody. E.g., Police arrest insider in their home.
 - **`insider_charged`** *(date)* : Insider is formally charged. Charges must relate to the incident. This category also covers a waiver of indictment and subsequent filing of information. E.g., Insider was indicted on computer fraud charges.
 - **`insider_pleads`** *(date)* : Insider puts forth a plea to the court, including guilty, not guilty, nolo contendere (no contest). E.g., Insider pleads guilty to computer intrusion.
-- **`insider_judgment`** *(date)* : Insider is found guilty, not guilty, or liable or not liable in a court of law. E.g., Insider is found guilty in a jury trial.
+- **`insider_judgement`** *(date)* : Insider is found guilty, not guilty, or liable or not liable in a court of law. E.g., Insider is found guilty in a jury trial.
 - **`insider_sentenced`** *(date)* : Insider is given a legally mandated punishment. E.g., Insider sentenced to 5 months in jail, then supervised release, community service, and restitution.
 - **`insider_charges_dropped`** *(date)* : The plaintiff drops their case against the insider. E.g., The organization in a civil suit decides to drop the suit.
 - **`insider_charges_dismissed`** *(date)* : The plaintiff dismiss their case against the insider. E.g., Upon discovery of further evidence, the judge decided to drop the charges against the insider.

@@ -4,6 +4,8 @@
 
 
 
+- **`Id`**:
+   - incident--843c85b1-6f2d-4a64-a959-d9880905114f
 - **`Cia effect`**:
    - *C*: Confidentiality - The protection of information from unauthorized access or disclosure.
 
@@ -27,6 +29,8 @@
 
 
 
+- **`Id`**:
+   - insider--80fea631-33e6-440b-b86d-2d49c8d7fcd2
 - **`Incident role`**:
    - *1*: Primary - Insider is the primary perpetrator of the incident.
 - **`Motive`**:
@@ -72,6 +76,8 @@
  3
 ## Organization
 
+- **`Id`**:
+   - organization--9b495e20-ae37-4df3-920e-88338b1298b5
 - **`Name`**:
    - U.S. Central Intelligence Agency
 - **`City`**:
@@ -98,6 +104,8 @@
 
 
 
+- **`Id`**:
+   - detection--28ab62a7-ef29-478d-9fcd-b06bd11dfbc6
 - **`First detected`**:
    - date-time
 - **`Who detected`**:
@@ -113,6 +121,8 @@
 
 
 
+- **`Id`**:
+   - impact--1d3ccef3-2975-4d62-84c9-d798ec888ae6
 - **`High`**:
  12
 - **`Low`**:
@@ -123,6 +133,8 @@
  True
 ## Target
 
+- **`Id`**:
+   - target--54d887da-7f59-47e1-ad5a-d611f78030da
 - **`Asset type`**:
    - *2*: Information - Data/business materials which contain important details belonging to a specific target owner.
 - **`Category`**:
@@ -140,6 +152,8 @@
 
 
 
+- **`Id`**:
+   - response--eb4d3760-213c-4f3b-81c2-b7805376c369
 - **`Technical controls`**:
    - *['2', '2012-01-01']*: Access to Technical System(s) Terminated - Insider's access to the organization's technical systems is completely terminated E.g., Insider's account is deleted upon termination from the company.
 
@@ -157,6 +171,8 @@
 
 
 
+- **`Id`**:
+   - court-case--4715b227-cee7-49b4-95a0-f418ceb31ae5
 - **`Case number`**:
    - 1:17-cr-154
 - **`Case title`**:
@@ -179,6 +195,8 @@
 
 ## Charge
 
+- **`Id`**:
+   - charge--80e9f464-867a-4c2d-a0d5-da3303fef9f8
 - **`Title`**:
    - 18 U.S.C.
 - **`Section`**:
@@ -195,6 +213,8 @@
    - *2*: Convicted - Plead or been found guilty by a court.
 ## Charge
 
+- **`Id`**:
+   - charge--de9ef24e-dd8e-4c1b-b55f-7431c324e2ad
 - **`Title`**:
    - 18 U.S.C
 - **`Section`**:
@@ -211,6 +231,8 @@
    - *2*: Convicted - Plead or been found guilty by a court.
 ## Charge
 
+- **`Id`**:
+   - charge--b5f8ebff-7449-4919-8e83-712df4dbbd28
 - **`Title`**:
    - 18 U.S.C
 - **`Section`**:
@@ -227,6 +249,8 @@
    - *2*: Convicted - Plead or been found guilty by a court.
 ## Charge
 
+- **`Id`**:
+   - charge--8f108155-293c-4c7b-b780-eba524e55c9c
 - **`Title`**:
    - 18 U.S.C
 - **`Section`**:
@@ -243,6 +267,8 @@
    - *2*: Convicted - Plead or been found guilty by a court.
 ## Sentence
 
+- **`Id`**:
+   - sentence--7b9161b8-ee82-4e11-945a-31af4e284ddd
 - **`Sentence type`**:
    - *9*: Incarceration - Imprisonment.
 - **`Quantity`**:
@@ -255,6 +281,8 @@
 
 
 
+- **`Id`**:
+   - legal-response--037be7c2-d741-4153-8c85-1483bc7b2e9d
 - **`Law enforcement contacted`**:
    - 2017-05-12
 - **`Insider arrested`**:
@@ -277,6 +305,8 @@
 
 
 
+- **`Id`**:
+   - job--ca6321b3-c176-4c2a-af6f-c825c5e1a823
 - **`Job function`**:
    - *99*: Other - Other job function not listed in this vocabulary.
 - **`Occupation`**:
@@ -297,6 +327,8 @@
    - 175200:00:00
 ## Ttp
 
+- **`Id`**:
+   - ttp--c130b8ca-6d8f-4696-a835-4d35448e8607
 - **`Date`**:
    - 2017-02-21
 - **`Sequence num`**:
@@ -332,6 +364,8 @@
    - The insider communicated repeatedly with Chinese Intelligence officers to exchange top secret information for money.
 ## Source
 
+- **`Id`**:
+   - source--370b7bf9-46a4-44f4-8229-dce1c0824b62
 - **`Title`**:
    - Former C.I.A. Officer Sentenced to 20 Years After Spying for China
 - **`Source type`**:
@@ -346,6 +380,8 @@
    - https://www.nytimes.com/2019/05/17/us/politics/cia-spying-china.html
 ## Source
 
+- **`Id`**:
+   - source--43dfd29e-60c0-4aaa-933f-a96c2845887e
 - **`Title`**:
    - US v. Kevin Mallory, No. 19-4385 (4th Cir. 2022)
 - **`Source type`**:
@@ -360,6 +396,8 @@
    - https://law.justia.com/cases/federal/appellate-courts/ca4/19-4385/19-4385-2022-07-11.html#:~:text=Kevin%20Mallory%2C%20No.-,19%2D4385%20(4th%20Cir.,2022)&text=A%20jury%20convicted%20Defendant%20of,in%20violation%20of%2018%20U.S.C.
 ## Source
 
+- **`Id`**:
+   - source--0ae6419b-66e3-4d9f-bcb6-531cc8a4e53a
 - **`Title`**:
    - United States of America v. Kevin Patrick Mallory
 - **`Source type`**:
@@ -374,6 +412,8 @@
    - https://www.justice.gov/opa/press-release/file/975671/dl
 ## Source
 
+- **`Id`**:
+   - source--ada0e3cc-5048-4509-ad62-c06c7d34594f
 - **`Title`**:
    - United States v. Mallory (2020)
 - **`Source type`**:
@@ -388,6 +428,8 @@
    - https://caselaw.findlaw.com/court/us-dis-crt-e-d-vir-ale-div/2173526.html
 ## Source
 
+- **`Id`**:
+   - source--9fe4a90d-abf1-4db6-a4e1-a30e37b3ffe6
 - **`Title`**:
    - United States v. Mallory (2022)
 - **`Source type`**:
@@ -402,6 +444,8 @@
    - https://caselaw.findlaw.com/court/us-4th-circuit/2178971.html
 ## Source
 
+- **`Id`**:
+   - source--265815a9-494f-4034-b2cf-2d28e01b1318
 - **`Title`**:
    - United States v. Mallory, Criminal No. 1:17-CR-154
 - **`Source type`**:
@@ -416,6 +460,8 @@
    - https://case-law.vlex.com/vid/united-states-v-mallory-888386269
 ## Sponsor
 
+- **`Id`**:
+   - sponsor--0378da70-22a9-4998-ab9f-3fdd9f690247
 - **`Name`**:
    - Chinese Intelligence Agency
 - **`Sponsor type`**:

@@ -151,7 +151,7 @@ if __name__ == "__main__":
                 # Load the requested field
                 for field in object:
                     # Append the file line with appropriate const, description, vocab
-                    if field not in ['id','comment']:
+                    if field not in ['comment']:
                         items = object[field]
                         items_print = ''
 

@@ -4,6 +4,8 @@
 
 The case was settled out of court, and no formal determination of guilt was made against Uber, but they agreed to a settlement to avoid the continuation of litigation.
 
+- **`Id`**:
+   - incident--6e75f650-c1a5-4c71-8d2f-7e9d2bba0381
 - **`Cia effect`**:
    - *C*: Confidentiality - The protection of information from unauthorized access or disclosure.
   - *I*: Integrity - The protection of information from unauthorized modification or destruction.
@@ -28,6 +30,8 @@ The case was settled out of court, and no formal determination of guilt was made
 
 Anthony Levandowski's actions of transferring confidential files from Waymo to his personal devices sparked the lawsuit. No public evidence of substance use or psychological issues affecting his actions has been documented.
 
+- **`Id`**:
+   - insider--2fe80494-c7cf-4d75-85ef-736b55884664
 - **`Incident role`**:
    - *1*: Primary - Insider is the primary perpetrator of the incident.
 - **`Motive`**:
@@ -72,6 +76,8 @@ Anthony Levandowski's actions of transferring confidential files from Waymo to h
 
 ## Organization
 
+- **`Id`**:
+   - organization--8ed0c400-fa6a-4bd6-babe-4da40240442d
 - **`Name`**:
    - Waymo LLC
 - **`City`**:
@@ -96,6 +102,8 @@ Anthony Levandowski's actions of transferring confidential files from Waymo to h
    - *V*: Primary Victim - The organization was the primary victim organization of the insider's actions.
 ## Organization
 
+- **`Id`**:
+   - organization--e7fda876-f31b-45a5-a540-7bb514ccecee
 - **`Name`**:
    - Uber Technologies Inc.
 - **`City`**:
@@ -118,6 +126,8 @@ Anthony Levandowski's actions of transferring confidential files from Waymo to h
    - *B*: Beneficiary - The organization accepted trade secrets, customer lists, intellectual property, etc. that the insider obtained through the incident.
 ## Detection
 
+- **`Id`**:
+   - detection--a181e814-aa3a-411e-ae79-79ceba48e36a
 - **`First detected`**:
    - 2017-02-23
 - **`Who detected`**:
@@ -137,6 +147,8 @@ Anthony Levandowski's actions of transferring confidential files from Waymo to h
 
 Financial impact valued at approximately $245 million, which was the settlement amount Uber agreed to give Waymo in equity.
 
+- **`Id`**:
+   - impact--d2eb25a4-1293-44ee-b8a6-a984714d8033
 - **`High`**:
  245,000,000
 - **`Low`**:
@@ -149,6 +161,8 @@ Financial impact valued at approximately $245 million, which was the settlement 
 
 Levandowski downloaded over 14,000 files before leaving the company to found his own startup, that was then bought by Uber
 
+- **`Id`**:
+   - impact--ea6f96c7-d4db-4021-b85b-057453ff2292
 - **`High`**:
  14,000
 - **`Metric`**:
@@ -157,6 +171,8 @@ Levandowski downloaded over 14,000 files before leaving the company to found his
  True
 ## Target
 
+- **`Id`**:
+   - target--831dfcd9-11c5-407b-955e-287d531702b7
 - **`Asset type`**:
    - *2*: Information - Data/business materials which contain important details belonging to a specific target owner.
 - **`Category`**:
@@ -172,6 +188,8 @@ Levandowski downloaded over 14,000 files before leaving the company to found his
 
 ## Target
 
+- **`Id`**:
+   - target--a08d89e4-4b16-49e7-bdcc-0eea308a56e6
 - **`Asset type`**:
    - *5*: Technology - Hardware, software, or firmware intended for the storage or transmission of data or the operation of equipment (as in computers running a manufacturing line).
 - **`Category`**:
@@ -189,6 +207,8 @@ Levandowski downloaded over 14,000 files before leaving the company to found his
 
 A third party investigator was hired to look into the matter after an engineer at Waymo found Uber's autonomous vehicle sensors drastically similar to those developed by Waymo.
 
+- **`Id`**:
+   - response--9923bad0-25bb-474a-bff7-4b23bfb3e240
 - **`Investigated by`**:
    - *99*: Other - Other investigator not lised in this vocabulary.
   - *2*: Management - Management internal to the organization.
@@ -198,6 +218,8 @@ A third party investigator was hired to look into the matter after an engineer a
 
 ## Court-case
 
+- **`Id`**:
+   - court-case--3fcbf985-f10e-45b7-aacb-e16c89da1105
 - **`Case number`**:
    - 17-cv-00939
 - **`Case title`**:
@@ -220,6 +242,8 @@ A third party investigator was hired to look into the matter after an engineer a
 
 ## Charge
 
+- **`Id`**:
+   - charge--3fcbf985-f10e-45b7-aacb-e16c89da1105
 - **`Title`**:
    - 18 U.S.C
 - **`Section`**:
@@ -236,6 +260,8 @@ A third party investigator was hired to look into the matter after an engineer a
    - *2*: Convicted - Plead or been found guilty by a court.
 ## Sentence
 
+- **`Id`**:
+   - sentence--c67354c2-5619-4ebc-85d0-21ca230c8a1d
 - **`Sentence type`**:
    - *14*: Restitution - An attempt to measure in financial terms the extent of the gains or profits the defendant obtained through harming the victim.
 - **`Quantity`**:
@@ -248,12 +274,16 @@ A third party investigator was hired to look into the matter after an engineer a
 
 The legal response was primarily civil. The case did not involve law enforcement as it was not a criminal matter. The settlement resolved the dispute without a formal admission of wrongdoing.
 
+- **`Id`**:
+   - legal-response--4dbe427c-8f98-4621-afa6-a20902afb8d2
 - **`Insider settled`**:
    - 2018-02-09
 ## Job
 
 Anthony Levandowski was involved in the development of autonomous vehicle technologies at Waymo, a division of Google, before leaving to start Otto, which was later acquired by Uber.
 
+- **`Id`**:
+   - job--afc08477-7f6f-4130-a966-f7b1e2188587
 - **`Job function`**:
    - *17*: Architecture and Engineering - Architecture and Engineering
 - **`Occupation`**:
@@ -276,6 +306,8 @@ Anthony Levandowski was involved in the development of autonomous vehicle techno
 
 Insider left Waymo to start his own company.
 
+- **`Id`**:
+   - stressor--3a9b7107-9d1c-4c9e-b5c2-e56b0bd408f0
 - **`Date`**:
    - 2015-12-01
 - **`Category`**:
@@ -284,6 +316,8 @@ Insider left Waymo to start his own company.
    - *1.9*: Insider Resigned - The insider resigns from any organization, including the victim organization.
 ## Ttp
 
+- **`Id`**:
+   - ttp--adfa4038-3dec-4d49-9dad-8cc35d41a261
 - **`Date`**:
    - 2015-12-11
 - **`Sequence num`**:
@@ -313,6 +347,8 @@ Insider left Waymo to start his own company.
 
 Co-founder and former chief executive officer of Uber was accused of having conspired with Levandowski, motivating him financially to starting a company using trade secrets from Waymo, that would then be bought by Uber.
 
+- **`Id`**:
+   - accomplice--3426b922-135a-42f9-869d-f8b30e0d483b
 - **`Relationship to insider`**:
    - *2*: 
 - **`First name`**:
@@ -323,12 +359,16 @@ Co-founder and former chief executive officer of Uber was accused of having cons
 
 This was a civil case, the insider was formally charged through a third party civil court and later filed for bankruptcy
 
+- **`Id`**:
+   - note--afc08477-7f6f-4130-a966-f7b1e2188587
 - **`Author`**:
    - CMU Researcher
 - **`Date`**:
    - 2024-05-28
 ## Org-relationship
 
+- **`Id`**:
+   - org-relationship--83271b80-b5de-410e-b7ba-3c93ca5cba99
 - **`Org2`**:
    - organization--e7fda876-f31b-45a5-a540-7bb514ccecee
 - **`Org1`**:
@@ -337,6 +377,8 @@ This was a civil case, the insider was formally charged through a third party ci
    - *C*: 
 ## Source
 
+- **`Id`**:
+   - source--267d8772-b2e0-4bea-92a6-224f157e6924
 - **`Title`**:
    - Settlement Agreement
 - **`Source type`**:
