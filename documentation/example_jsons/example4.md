@@ -2,8 +2,6 @@
 
 ## Incident
 
-
-
 - **`Id`**:
    - incident--843c85b1-6f2d-4a64-a959-d9880905114f
 - **`Cia effect`**:
@@ -22,12 +20,10 @@
 - **`Status`**:
    - *C*: Closed - All investigations and legal proceedings are closed.
 - **`Summary`**:
-   - The insider was a former CIA officer. They were involved in a espionage case where they were convicted of providing classified U.S. Defene information to Chinese intelligence agents, which began in 2017. The insider was motivated by financial gain, the Chinese officials would exchange top secret information for money. Once the FBI became aware, they investigated the insider, and found evidence of espionage in their home. The insider was then tried and found guilty of several espionage charges, and sentences to 20 years of federal prison.
+   - The insider was a former CIA officer. They were involved in a espionage case where they were convicted of providing classified U.S. Defence information to Chinese intelligence agents, which began in 2017. The insider was motivated by financial gain: the Chinese officials would exchange top secret information for money. Once the FBI became aware, they investigated the insider, and found evidence of espionage in their home. The insider was then tried and found guilty of several espionage charges, and sentenced to 20 years of federal prison.
 - **`Brief summary`**:
    - The insider was a former CIA officer who began to communicate with Chinese intelligence agents in 2017. They began communicating, and the insider would receive money for trasmitting classified U.S. defense information to Chinese intelligence agents. The insider was later investigated and brought to court, where he was convicted of multiple counts of espionage.
 ## Insider
-
-
 
 - **`Id`**:
    - insider--80fea631-33e6-440b-b86d-2d49c8d7fcd2
@@ -85,7 +81,7 @@
 - **`State`**:
    - D.C.
 - **`Country`**:
-   - Unitsed States
+   - US
 - **`Postal code`**:
  20,505
 - **`Small business`**:
@@ -100,9 +96,29 @@
    - U.S. Intelligence Community
 - **`Incident role`**:
    - *V*: Primary Victim - The organization was the primary victim organization of the insider's actions.
+## Organization
+
+- **`Id`**:
+   - organization--df77b634-a57b-4654-8e1e-77fd5220fe81
+- **`Name`**:
+   - Chinese Intelligence Agency
+- **`Country`**:
+   - CN
+- **`Small business`**:
+ False
+- **`Industry sector`**:
+   - *92*: Public Administration - Federal/State/Local administration and the oversight of public programs.
+- **`Industry subsector`**:
+   - *92.811*: National Security - This industry comprises government establishments of the Armed Forces, including the National Guard, primarily engaged in national security and related activities.
+- **`Business`**:
+   - The Chinese Intelligence Agency is a Chinese agency focused on foreign intelligence and national security. 
+- **`Parent company`**:
+   - Chinese National Government
+- **`Incident role`**:
+   - *B*: Beneficiary - The organization accepted trade secrets, customer lists, intellectual property, etc. that the insider obtained through the incident.
 ## Detection
 
-
+The insider willingly contacted an acquaintance who worked in the CIA to get in touch with CIA security, indicating to the acquaintance that they had been approached by Chinese intelligence agents. There were CIA and FBI agents present during the interview, and the insider was 'visibly surprised' when secure chat messages showing their espionage appeared on the screen. The FBI agents then realized that something was astray and investigated the insider thoroughly.
 
 - **`Id`**:
    - detection--28ab62a7-ef29-478d-9fcd-b06bd11dfbc6
@@ -112,14 +128,12 @@
    - *LE*: Law Enforcement - Law enforcement discovered the insider's illegal activity (e.g., Police noticed that the insider was gaining access to the company after hours).
 
 - **`Detected method`**:
-   - *2*: Technical Means - The insider's activity was detected via analysis or anomalies in technical systems and software.
+   - *3*: Non-Technical Means - The insider's activity was detected in a non-technical fashion (e.g., The insider had personal items purchased with a company credit card sent to the office by accident).
 
 - **`Logs`**:
-   - *SF*: System File Logs - File logs (create, delete, modify, etc.) from workstations, servers, and other systems.
+   - *EM*: Email Logs - Logs from email servers or services.
 
 ## Impact
-
-
 
 - **`Id`**:
    - impact--1d3ccef3-2975-4d62-84c9-d798ec888ae6
@@ -150,15 +164,11 @@
 
 ## Response
 
-
-
 - **`Id`**:
    - response--eb4d3760-213c-4f3b-81c2-b7805376c369
 - **`Technical controls`**:
    - *['2', '2012-01-01']*: Access to Technical System(s) Terminated - Insider's access to the organization's technical systems is completely terminated E.g., Insider's account is deleted upon termination from the company.
 
-- **`Behavioral controls`**:
- 
 - **`Investigated by`**:
    - *3*: Law Enforcement - Local/State - State or local law enforcement entity.
 
@@ -279,8 +289,6 @@
  False
 ## Legal-response
 
-
-
 - **`Id`**:
    - legal-response--037be7c2-d741-4153-8c85-1483bc7b2e9d
 - **`Law enforcement contacted`**:
@@ -303,10 +311,30 @@
    - 
 ## Job
 
-
-
 - **`Id`**:
    - job--ca6321b3-c176-4c2a-af6f-c825c5e1a823
+- **`Job function`**:
+   - *33*: Protective Service - Protective Service
+- **`Occupation`**:
+   - *33.1*: Supervisors of Protective Service Workers - First-Line Supervisors of Protective Service Workers
+- **`Title`**:
+   - Case Officer/Contractor
+- **`Position technical`**:
+ False
+- **`Access authorization`**:
+   - *5*: Authorized Privileged User - Authorized privileged access.
+- **`Employment type`**:
+   - *FLT*: Full-time - Individual who is directly employed by the organization and works at least 35 hours per week (or is classified by the organization as a full-time employee).
+- **`Hire date`**:
+   - 1992-01-01
+- **`Departure date`**:
+   - 2012-01-01
+- **`Tenure`**:
+   - 175200:00:00
+## Job
+
+- **`Id`**:
+   - job--79bce694-5bd1-4fb3-bcb1-258d09fca301
 - **`Job function`**:
    - *99*: Other - Other job function not listed in this vocabulary.
 - **`Occupation`**:
@@ -316,15 +344,27 @@
 - **`Position technical`**:
  False
 - **`Access authorization`**:
-   - *5*: Authorized Privileged User - Authorized privileged access.
+   - *7*: Former Employee, Access not Deactivated - Access was not properly revoked after departure from the organization.
 - **`Employment type`**:
    - *CTR*: Contractor - Individual not directly employed by the organization whose job responsibilities they filling (self-employed or employed by a different, contracting organization).
 - **`Hire date`**:
-   - 1992-01-01
-- **`Departure date`**:
    - 2012-01-01
+- **`Departure date`**:
+   - 2017-07-01
 - **`Tenure`**:
-   - 175200:00:00
+   - 48192:00:00
+## Stressor
+
+Insider was behind 2 mortgage payments and had debt they wished to pay.
+
+- **`Id`**:
+   - stressor--40650474-f431-4ddb-9e3a-417bab254ac1
+- **`Date`**:
+   - 2017-02-01
+- **`Category`**:
+   - *3*: Unmet Expectations - Insider's expectations of/from their employer were not met.
+- **`Subcategory`**:
+   - *3.1*: Compensation/Benefit Issues - Insider expressed dissatisfaction with current compensation or benefits.
 ## Ttp
 
 - **`Id`**:
@@ -332,7 +372,7 @@
 - **`Date`**:
    - 2017-02-21
 - **`Sequence num`**:
- 1
+ 2
 - **`Observed`**:
  False
 - **`Number of times`**:
@@ -362,6 +402,80 @@
 
 - **`Description`**:
    - The insider communicated repeatedly with Chinese Intelligence officers to exchange top secret information for money.
+## Ttp
+
+- **`Id`**:
+   - ttp--def6dff4-cbf6-4cc5-adf6-a6880c9dc1c2
+- **`Date`**:
+   - 2017-02-01
+- **`Sequence num`**:
+ 1
+- **`Observed`**:
+ False
+- **`Number of times`**:
+ 1
+- **`Ttp vocab`**:
+   - IIDES
+- **`Tactic`**:
+   - *2*: Recruitment - Insider recruits, or is recruited by others.
+- **`Technique`**:
+   - *2.1*: Outsider Recruits Insider - An outside entity that is not a competing organization encourages the insider to become an insider. E.g., Insider is contacted by known hacking specialist who asks insider to divulge company secrets to the hacker.
+- **`Location`**:
+   - *r*: 
+  - *e*: 
+  - *m*: 
+  - *o*: 
+  - *t*: 
+  - *e*: 
+
+- **`Hours`**:
+   - *2*: Outside of Work Hours - Insider took the action outside of their normal working hours.
+
+- **`Device`**:
+   - *7*: Personal Computer - Personally owned computer.
+
+- **`Channel`**:
+   - *4*: Online Forum - Private or public forum accessed via the Internet.
+
+- **`Description`**:
+   - The insider was initially recruited by a Chinese Intelligence Agent reaching out on LinkedIn asking to meet in China.
+## Ttp
+
+- **`Id`**:
+   - ttp--820373f2-e55f-45bf-9a75-6a6b5e38cc3c
+- **`Date`**:
+   - 2017-03-01
+- **`Sequence num`**:
+ 1
+- **`Observed`**:
+ False
+- **`Number of times`**:
+ 1
+- **`Ttp vocab`**:
+   - IIDES
+- **`Tactic`**:
+   - *2*: Recruitment - Insider recruits, or is recruited by others.
+- **`Technique`**:
+   - *2.1*: Outsider Recruits Insider - An outside entity that is not a competing organization encourages the insider to become an insider. E.g., Insider is contacted by known hacking specialist who asks insider to divulge company secrets to the hacker.
+- **`Location`**:
+   - *r*: 
+  - *e*: 
+  - *m*: 
+  - *o*: 
+  - *t*: 
+  - *e*: 
+
+- **`Hours`**:
+   - *2*: Outside of Work Hours - Insider took the action outside of their normal working hours.
+
+- **`Device`**:
+   - *7*: Personal Computer - Personally owned computer.
+
+- **`Channel`**:
+   - *4*: Online Forum - Private or public forum accessed via the Internet.
+
+- **`Description`**:
+   - The insider was initially recruited by a Chinese Intelligence Agent reaching out on LinkedIn asking to meet in China.
 ## Source
 
 - **`Id`**:

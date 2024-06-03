@@ -24,22 +24,22 @@ White paper
 
 Example 1 (@nammerman):
 - [X] json
-- [ ] markdown
+- [X] markdown
 - [ ] wsd
 
 Example 2:
 - [X] json
-- [ ] markdown
+- [X] markdown
 - [ ] wsd
 
 Example 3:
 - [X] json
-- [ ] markdown
+- [X] markdown
 - [ ] wsd
 
 Example 4:
 - [X] json
-- [ ] markdown
+- [X] markdown
 - [ ] wsd
 
 #### Schema changes:
