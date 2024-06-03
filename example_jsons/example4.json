@@ -65,20 +65,19 @@
           "LE"
         ],
         "detected_method": [
-          "2"
+          "3"
         ],
         "logs": [
-          "SF"
+          "EM"
         ],
-        "comment": ""
+        "comment": "The insider willingly contacted an acquaintance who worked in the CIA to get in touch with CIA security, indicating to the acquaintance that they had been approached by Chinese intelligence agents. There were CIA and FBI agents present during the interview, and the insider was 'visibly surprised' when secure chat messages showing their espionage appeared on the screen. The FBI agents then realized that something was astray and investigated the insider thoroughly."
       },
       {
         "id": "impact--1d3ccef3-2975-4d62-84c9-d798ec888ae6",
         "high": 12,
         "low": 3,
         "metric": "4",
-        "estimated": true,
-        "comment": ""
+        "estimated": true
       },
       {
         "id": "incident--843c85b1-6f2d-4a64-a959-d9880905114f",
@@ -96,9 +95,8 @@
           "DR"
         ],
         "status": "C",
-        "summary": "The insider was a former CIA officer. They were involved in a espionage case where they were convicted of providing classified U.S. Defene information to Chinese intelligence agents, which began in 2017. The insider was motivated by financial gain, the Chinese officials would exchange top secret information for money. Once the FBI became aware, they investigated the insider, and found evidence of espionage in their home. The insider was then tried and found guilty of several espionage charges, and sentences to 20 years of federal prison.",
-        "brief_summary": "The insider was a former CIA officer who began to communicate with Chinese intelligence agents in 2017. They began communicating, and the insider would receive money for trasmitting classified U.S. defense information to Chinese intelligence agents. The insider was later investigated and brought to court, where he was convicted of multiple counts of espionage.",
-        "comment": ""
+        "summary": "The insider was a former CIA officer. They were involved in a espionage case where they were convicted of providing classified U.S. Defence information to Chinese intelligence agents, which began in 2017. The insider was motivated by financial gain: the Chinese officials would exchange top secret information for money. Once the FBI became aware, they investigated the insider, and found evidence of espionage in their home. The insider was then tried and found guilty of several espionage charges, and sentenced to 20 years of federal prison.",
+        "brief_summary": "The insider was a former CIA officer who began to communicate with Chinese intelligence agents in 2017. They began communicating, and the insider would receive money for trasmitting classified U.S. defense information to Chinese intelligence agents. The insider was later investigated and brought to court, where he was convicted of multiple counts of espionage."
       },
       {
         "id": "insider--80fea631-33e6-440b-b86d-2d49c8d7fcd2",
@@ -133,21 +131,31 @@
         "age": 60,
         "education": "5",
         "marital_status": "2",
-        "number_of_children": 3,
-        "comment": ""
+        "number_of_children": 3
       },
       {
         "id": "job--ca6321b3-c176-4c2a-af6f-c825c5e1a823",
+        "job_function": "33",
+        "occupation": "33.1",
+        "title": "Case Officer/Contractor",
+        "position_technical": false,
+        "access_authorization": "5",
+        "employment_type": "FLT",
+        "hire_date": "1992-01-01",
+        "departure_date": "2012-01-01",
+        "tenure": "175200:00:00"
+      },
+      {
+        "id": "job--79bce694-5bd1-4fb3-bcb1-258d09fca301",
         "job_function": "99",
         "occupation": "99.9",
         "title": "Consultant",
         "position_technical": false,
-        "access_authorization": "5",
+        "access_authorization": "7",
         "employment_type": "CTR",
-        "hire_date": "1992-01-01",
-        "departure_date": "2012-01-01",
-        "tenure": "175200:00:00",
-        "comment": ""
+        "hire_date": "2012-01-01",
+        "departure_date": "2017-07-01",
+        "tenure": "48192:00:00"
       },
       {
         "id": "legal-response--037be7c2-d741-4153-8c85-1483bc7b2e9d",
@@ -159,15 +167,14 @@
         "insider_sentenced": "2019-05-17",
         "insider_charges_dropped": "",
         "insider_charges_dismissed": "",
-        "insider_settled": "",
-        "comment": ""
+        "insider_settled": ""
       },
       {
         "id": "organization--9b495e20-ae37-4df3-920e-88338b1298b5",
         "name": "U.S. Central Intelligence Agency",
         "city": "Washington",
         "state": "D.C.",
-        "country": "Unitsed States",
+        "country": "US",
         "postal_code": 20505,
         "small_business": false,
         "industry_sector": "92",
@@ -177,6 +184,17 @@
         "incident_role": "V"
       },
       {
+        "id": "organization--df77b634-a57b-4654-8e1e-77fd5220fe81",
+        "name": "Chinese Intelligence Agency",
+        "country": "CN",
+        "small_business": false,
+        "industry_sector": "92",
+        "industry_subsector": "92.811",
+        "business": "The Chinese Intelligence Agency is a Chinese agency focused on foreign intelligence and national security. ",
+        "parent_company": "Chinese National Government",
+        "incident_role": "B"
+      },
+      {
         "id": "response--eb4d3760-213c-4f3b-81c2-b7805376c369",
         "technical_controls": [
           [
@@ -184,7 +202,6 @@
             "2012-01-01"
           ]
         ],
-        "behavioral_controls": [],
         "investigated_by": [
           "3"
         ],
@@ -201,8 +218,7 @@
             "3",
             "2017-05-24"
           ]
-        ],
-        "comment": ""
+        ]
       },
       {
         "id": "sentence--7b9161b8-ee82-4e11-945a-31af4e284ddd",
@@ -266,6 +282,13 @@
         "document": "https://case-law.vlex.com/vid/united-states-v-mallory-888386269"
       },
       {
+        "id": "stressor--40650474-f431-4ddb-9e3a-417bab254ac1",
+        "date": "2017-02-01",
+        "category": "3",
+        "subcategory": "3.1",
+        "comment": "Insider was behind 2 mortgage payments and had debt they wished to pay."
+      },
+      {
         "id": "sponsor--0378da70-22a9-4998-ab9f-3fdd9f690247",
         "name": "Chinese Intelligence Agency",
         "sponsor_type": "FN"
@@ -282,7 +305,7 @@
       {
         "id": "ttp--c130b8ca-6d8f-4696-a835-4d35448e8607",
         "date": "2017-02-21",
-        "sequence_num": 1,
+        "sequence_num": 2,
         "observed": false,
         "number_of_times": 7,
         "ttp_vocab": "IIDES",
@@ -293,6 +316,36 @@
         "device": ["8"],
         "channel": ["6"],
         "description": "The insider communicated repeatedly with Chinese Intelligence officers to exchange top secret information for money."
+      },
+      {
+        "id": "ttp--def6dff4-cbf6-4cc5-adf6-a6880c9dc1c2",
+        "date": "2017-02-01",
+        "sequence_num": 1,
+        "observed": false,
+        "number_of_times": 1,
+        "ttp_vocab": "IIDES",
+        "tactic": "2",
+        "technique": "2.1",
+        "location": "remote",
+        "hours": "2",
+        "device": ["7"],
+        "channel": ["4"],
+        "description": "The insider was initially recruited by a Chinese Intelligence Agent reaching out on LinkedIn asking to meet in China."
+      },
+      {
+        "id": "ttp--820373f2-e55f-45bf-9a75-6a6b5e38cc3c",
+        "date": "2017-03-01",
+        "sequence_num": 1,
+        "observed": false,
+        "number_of_times": 1,
+        "ttp_vocab": "IIDES",
+        "tactic": "2",
+        "technique": "2.1",
+        "location": "remote",
+        "hours": "2",
+        "device": ["7"],
+        "channel": ["4"],
+        "description": "The insider was initially recruited by a Chinese Intelligence Agent reaching out on LinkedIn asking to meet in China."
       }
     ]
   }
