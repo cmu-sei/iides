@@ -18,8 +18,10 @@ Action taken by the insider or colluding outsider(s) during the course of the in
   - Required if `technique` exists.
 - **`technique`** *(string)* : The general action taken. If technique exists, `tactic` should as well.
 	- A constant from [technique-vocab](#technique-vocab)
-- **`location`** *(string)* : Whether the action was taken on-site or remotely.
-- **`hours`** *(string)* : Whether the action was taken during work hours.
+- **`location`** *(array)* : Whether the action was taken on-site or remotely.
+  - One or more constants from [attack-location-vocab](#attack-location-vocab)
+- **`hours`** *(array)* : Whether the action was taken during work hours.
+  - One or more constants from [attack-hours-vocab](#attack-hours-vocab)
 - **`device`** *(array)* : The device where this action either took place or a device that was affected by the action. A device where the action could be detected.
   - One or more constants from [device-vocab](#device-vocab)
 - **`channel`** *(array)* : Methods used to transmit information outside, or into, the victim organization.

@@ -22,25 +22,25 @@ White paper
 
 ### Examples
 
-Example 1 (@nammerman):
+Example 1:
 - [X] json
-- [ ] markdown
-- [ ] wsd
+- [X] markdown
+- [X] wsd
 
 Example 2:
 - [X] json
-- [ ] markdown
-- [ ] wsd
+- [X] markdown
+- [X] wsd
 
 Example 3:
 - [X] json
-- [ ] markdown
-- [ ] wsd
+- [X] markdown
+- [X] wsd
 
 Example 4:
 - [X] json
-- [ ] markdown
-- [ ] wsd
+- [X] markdown
+- [X] wsd
 
 #### Schema changes:
 1. court-case.json, charge.json: changes curly quotes to \" as it was an unsupported character for json parsing
