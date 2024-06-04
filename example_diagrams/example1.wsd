@@ -1,0 +1,382 @@
+@startuml IIDES
+
+Class Charge #f9b8bd {
+* id : charge--2bc9e36b-53c3-44fa-8997-ccb5d8ac9418
+* title : 18 U.S.C.
++ section : 793(e)
++ nature_of_offense : Illegal gathering and transmission of national defense information.
++ count : 3
++ plea : 3
++ plea_bargain : False
++ disposition : 2
+}
+Class Charge #f9b8bd {
+* id : charge--0572191b-beef-484c-841f-149a9f17fd8f
+* title : 18 U.S.C.
++ section : 641
++ nature_of_offense : Theft of government property.
++ count : 1
++ plea : 3
++ plea_bargain : False
++ disposition : 2
+}
+Class Charge #f9b8bd {
+* id : charge--868f7fd1-b492-40a4-b21f-f5a31cd5e219
+* title : 18 U.S.C.
++ section : 1030(a)(1)
++ nature_of_offense : Unauthorized access to a computer to obtain classified information.
++ count : 1
++ plea : 3
++ plea_bargain : False
++ disposition : 2
+}
+Class Charge #f9b8bd {
+* id : charge--d59dd57a-96b5-472f-a788-dcdb30ec5cb6
+* title : 18 U.S.C.
++ section : 1030(a)(2)
++ nature_of_offense : Unauthorized access to a computer to obtain information from a department or agency of the U.S.
++ count : 1
++ plea : 3
++ plea_bargain : False
++ disposition : 2
+}
+Class Charge #f9b8bd {
+* id : charge--cc6be1c8-5c76-4286-84a0-2b456a288c13
+* title : 18 U.S.C.
++ section : 1030(a)(5)(A)
++ nature_of_offense : Causing transmission of harmful computer commands.
++ count : 1
++ plea : 3
++ plea_bargain : False
++ disposition : 2
+}
+Class Charge #f9b8bd {
+* id : charge--9259e182-5643-4a4d-b078-4bb251fe2595
+* title : 18 U.S.C.
++ section : 1519
++ nature_of_offense : Obstruction of justice.
++ count : 1
++ plea : 3
++ plea_bargain : False
++ disposition : 2
+}
+Class Charge #f9b8bd {
+* id : charge--10b415ea-7ea6-4068-b394-db1d18349b92
+* title : 18 U.S.C.
++ section : 2252A(a)(2)(A)
++ nature_of_offense : Receipt of child pornography.
++ count : 1
++ plea : 3
++ plea_bargain : False
++ disposition : 2
+}
+Class Charge #f9b8bd {
+* id : charge--4ded5348-219f-4d74-851e-f7803b49e35e
+* title : 18 U.S.C.
++ section : 2252A(a)(5)(B)
++ nature_of_offense : Possession of child pornography.
++ count : 1
++ plea : 3
++ plea_bargain : False
++ disposition : 2
+}
+Class Charge #f9b8bd {
+* id : charge--a919f8e3-0674-4269-bc8a-d71a539018e1
+* title : 18 U.S.C.
++ section : 2252A(a)(1)
++ nature_of_offense : Transportation of child pornography.
++ count : 1
++ plea : 3
++ plea_bargain : False
++ disposition : 2
+}
+Class CourtCase #f9b8bd {
+* id : court-case--0e430311-72ee-4776-be74-3c1969d141c0
++ case_number : 17 Cr. 548 (PAC)
++ case_title : USA vs. Schulte
++ court_country : United States
++ court_state : New York
++ court_district : Southern District of New York
++ court_type : 1
++ case_type : 2
++ defendant : ['Joshua Adam Schulte']
++ plaintiff : ['United States of America']
++ comment : This case involved multiple charges against Joshua Adam Schulte, including espionage and unauthorized disclosure of classified information to WikiLeaks (known as the Vault 7 leak), computer hacking, unauthorized access to CIA computer systems, causing transmission of harmful computer commands, and receipt, possession, and transportation of child pornography.
+}
+Class Detection #FDB515 {
+* id : detection--bd545866-663f-4d62-a39a-da3672842c9f
++ first_detected : 2017-03-07T00:00:00Z
++ who_detected : ['LE', 'ST']
++ detected_method : ['2', '4']
++ logs : ['AC', 'AU', 'DB', 'RA', 'SF']
++ comment : Schulte's unauthorized activities were detected by the CIA's security team and subsequently investigated by law enforcement. Detection involved technical means such as monitoring access logs, audit logs, database logs, remote access logs, and system file logs.
+}
+Class Impact #D4EFDF {
+* id : impact--2d4ed800-002d-4ce5-bbb0-c89acc1f4254
++ high : 8000
++ low : 8000
++ metric : 7
++ estimated : True
++ comment : The Vault 7 leak included approximately 8,000 documents detailing CIA hacking tools and techniques.
+}
+Class Impact #D4EFDF {
+* id : impact--5f3ee38d-2d4c-4ea9-9857-41f9537477ea
++ high : 1000000000
++ low : 100000000
++ metric : 5
++ estimated : True
++ comment : The financial impact of the breach was substantial, with estimates ranging from hundreds of millions to a billion dollars for damage control and security improvements.
+}
+Class Incident #009647 {
+* id : incident--ef88113a-27a0-4a56-8f70-e8a5fd4541e6
++ cia_effect : ['C']
++ incident_type : ['E']
++ incident_subtype : ['E2']
++ outcome : ['DD', 'ML', 'SI', 'DR', 'DS']
++ status : C
++ summary : Joshua Adam Schulte, a former CIA software engineer, leaked classified CIA documents known as Vault 7 to WikiLeaks. These documents detailed the CIA's hacking tools and techniques, causing severe damage to U.S. national security, exposing CIA operations and personnel, and costing the agency hundreds of millions of dollars. Schulte was charged with espionage, unauthorized access to computer systems, and other related crimes. He was convicted and sentenced to 40 years in prison.
++ brief_summary : Joshua Adam Schulte leaked classified CIA documents to WikiLeaks, detailing CIA hacking tools and techniques. This caused severe national security damage and financial costs. Schulte was convicted of espionage and sentenced to 40 years in prison.
++ comment : The leak severely impacted the confidentiality and integrity of CIA operations, exposing sensitive information and tools used for intelligence gathering.
+}
+Class Insider #043673;text:white {
+* id : insider--5460491c-eacd-4074-aef9-f6f584893a59
++ incident_role : 1
++ motive : ['8']
++ predispositions : [['1', '1.1'], ['2', '2.4'], ['3', '3.2']]
++ concerning_behaviors : [['3.2', '3.2.2'], ['3.3', '3.3.2']]
++ first_name : Joshua
++ middle_name : Adam
++ last_name : Schulte
++ suffix : Jr
++ alias : ['JSchulte', 'Kinetic Panda', 'Nuclear Option', 'Voldemort']
++ city : New York
++ state : NY
++ country : US
++ postal_code : 10001
++ country_of_citizenship : ['US']
++ nationality : ['US']
++ gender : M
++ age : 35
++ education : 5
++ marital_status : 1
++ number_of_children : 0
++ comment : Joshua Adam Schulte had a history of social and mental health issues. He showed concerning behaviors such as repeated technical policy abuse and conflicts with his supervisor, as well as browsing dark web forums. The insider had multiple workplace incidents involving the harassment of colleagues, ultimately resulting in the insider being forced to move offices across the building. The insider believed he had been mistreated by staff, leading to a desire for revenge.
+}
+Class Job #33c2C4 {
+* id : job--e76248a2-82df-4c7d-b7a0-bf86eb85c570
++ job_function : 15
++ occupation : 15.1
+* title : Software Engineer
++ position_technical : True
++ access_authorization : 2
++ employment_type : FLT
++ hire_date : 2010-01-01
++ departure_date : 2016-11-11
++ tenure : P6Y10M10D
++ comment : Schulte was employed as a software engineer in the Center for Cyber Intelligence (CCI) at the CIA, where he had access to sensitive and classified information.
+}
+Class LegalResponse #f9b8bd {
+* id : legal-response--b318c37b-2f76-421f-bf12-0833e836b00c
++ law_enforcement_contacted : 2017-03-07
++ insider_arrested : 2017-08-24
++ insider_charged : 2018-06
++ insider_pleads : 2018-06
++ insider_judgment : 2022-07-13
++ insider_sentenced : 2024-02-01
++ comment : Joshua Adam Schulte was investigated and charged for multiple offenses, including espionage, unauthorized disclosure of classified information (Vault 7 leaks), computer hacking, and possession of child pornography. The judgement date is in relation to the charges specifically related to the dissemination of the Stolen CIA Files.
+}
+Class Note #D4EFDF {
+* id : note--b372b9ad-cb92-4db6-be28-1e3f62605858
++ author : CMU Researcher
++ date : 2024-05-17T00:00:00Z
++ comment : The child pornography charges were included in the JSON because they are relevant to the overall investigation of Joshua Adam Schulte. Although they do not directly pertain to the insider threat, they were pivotal in leading to his initial arrest and subsequent comprehensive charges.
+}
+Class Organization #007BC0 {
+* id : organization--d1472454-0236-4b66-9013-65d0f916ee48
++ name : Central Intelligence Agency
++ city : Langley
++ state : Virginia
++ country : US
++ postal_code : 22101
++ small_business : False
++ industry_sector : 92
++ industry_subsector : 92.811
++ business : The Central Intelligence Agency (CIA) is a civilian foreign intelligence service of the federal government of the United States, tasked with gathering, processing, and analyzing national security information from around the world.
++ incident_role : V
++ parent_company : United States Government
+}
+Class Organization #007BC0 {
+* id : organization--19f19fa9-d96e-4407-901e-06ecaefd71b5
++ name : WikiLeaks
++ small_business : False
++ industry_sector : 51
++ industry_subsector : 51.9
++ business : WikiLeaks is a non-profit organization that publishes news leaks and classified media provided by anonymous sources.
++ incident_role : B
+}
+Class Response #EF3A47 {
+* id : response--f42fc7ae-48a1-48f9-bf84-0d4b13f7a64c
++ technical_controls : [['1', '2016-11-01'], ['2', '2016-11-01']]
++ behavioral_controls : [['4', '2016-11-01']]
++ investigated_by : ['4', '7']
++ investigation_events : [['1', '2017-03-07'], ['2', '2017-03-07'], ['3', '2018-06-18']]
++ comment : Schulte left the CIA in November of 2016, before departing from the agency planted a service to still allow remote access to government files and databases, which he used to access classified information post departure.
+}
+Class Sentence #f9b8bd {
+* id : sentence--21e74a96-ba47-46fe-8338-736ab19552ba
++ sentence_type : 9
++ quantity : 40
++ metric : 4
++ concurrency : False
+}
+Class Sentence #f9b8bd {
+* id : sentence--1141c372-543a-42f5-a640-c88b8ab16ae2
++ sentence_type : 16
++ quantity : 60
++ metric : 4
++ concurrency : True
++ comment : Lifetime supervised release, to run concurrently.
+}
+Class Source #D4EFDF {
+* id : source--5565e706-d762-4b35-b54a-6f22a80badb2
+* title : Joshua Adam Schulte Charged with Unauthorized Disclosure of Classified Information and Other Offenses
++ source_type : 2
++ file_type : html
++ date : 2018-06-18T00:00:00Z
++ public : True
++ document : https://www.justice.gov/opa/pr/joshua-adam-schulte-charged-unauthorized-disclosure-classified-information-and-other-offenses
+}
+Class Source #D4EFDF {
+* id : source--d6a29cb3-519f-4d62-a1f6-a86439bef53d
+* title : Former CIA Officer Joshua Adam Schulte Sentenced to 40 Years in Prison for Espionage and Child Pornography Offenses
++ source_type : 2
++ file_type : html
++ date : 2023-01-18T00:00:00Z
++ public : True
++ document : https://www.justice.gov/usao-sdny/pr/former-cia-officer-joshua-adam-schulte-sentenced-40-years-prison-espionage-and-child
+}
+Class Source #D4EFDF {
+* id : source--7e3ef93e-31b0-4e17-a32a-98540326fd05
+* title : CIA Engineer Convicted of Largest Theft of Classified Data in Agency’s History
++ source_type : 5
++ file_type : html
++ date : 2022-07-13T00:00:00Z
++ public : True
++ document : https://www.nytimes.com/2022/07/13/nyregion/cia-engineer-joshua-schulte-theft-convicted.html
+}
+Class Source #D4EFDF {
+* id : source--d36603a3-2510-4617-87eb-10eea6ab672e
+* title : USA v. Schulte Docket Information
++ source_type : 1
++ file_type : html
++ date : 2022-07-13T00:00:00Z
++ public : True
++ document : https://www.courtlistener.com/docket/6359557/united-states-v-schulte/
+}
+Class Stressor #b0d0ed {
+* id : stressor--28ecfbf3-5eb1-429f-8a55-c2e16f08ebcd
++ date : 2016
++ category : 2
++ subcategory : 2.12
++ comment : Joshua Adam Schulte internal disputes and a hostile work environment at the CIA (self-imposed) contributed to his decision to steal and leak classified information as revenge for mistreatment.
+}
+Class Target #D4EFDF {
+* id : target--2a6f542f-a3e6-43e9-b628-cc9c97765276
++ asset_type : 2
++ category : 2.3
++ subcategory : 2.3.1
++ format : 1
++ owner : O
++ sensitivity : ['4', '5', '6', '7']
++ description : Classified CIA information related to hacking tools and techniques disclosed to WikiLeaks as part of the Vault 7 leaks.
+}
+Class TTP #A456ED {
+* id : ttp--a181e814-aa3a-411e-ae79-79ceba48e36a
++ date : 2016-04-20T14:00:00Z
++ sequence_num : 1
++ observed : True
++ number_of_times : 2
++ ttp_vocab : IIDES
++ tactic : 7
++ technique : 7.3
++ location : 1
++ hours : 1
++ device : ['1']
++ channel : ['1', '4', '5']
++ description : Schulte used a personal email account to exfiltrate classified CIA information from the organization's database server to his personal computer.
+}
+Class TTP #A456ED {
+* id : ttp--a154e814-aa3a-411e-ae79-79ceba48e79b
++ date : 2016-04-20T14:00:00Z
++ sequence_num : 2
++ observed : True
++ number_of_times : 1
++ ttp_vocab : IIDES
++ tactic : 7
++ technique : 7.2
++ location : 2
++ hours : 2
++ device : ['7']
++ channel : ['9']
++ description : Schulte then loaded the data on a removable media disk
+}
+Class TTP #A456ED {
+* id : ttp--a154e814-aa3a-411e-ae79-79ceba48e77b
++ date : 2016-04-20T14:00:00Z
++ sequence_num : 2
++ observed : True
++ number_of_times : 2
++ ttp_vocab : IIDES
++ tactic : 4
++ technique : 4.1
++ location : 1
++ hours : 1
++ device : ['1']
++ channel : ['9']
++ description : Before leaving the CIA, Schulte planted a backdoor into the CIA network
+}
+Class TTP #A456ED {
+* id : ttp--a154e814-aa3a-411e-ae79-79ceba48e76b
++ date : 2016-04-20T14:00:00Z
++ sequence_num : 3
++ observed : True
++ number_of_times : 1
++ ttp_vocab : IIDES
++ tactic : 7
++ technique : 7.9
++ location : 2
++ hours : 2
++ device : ['4']
++ channel : ['1', '5', '9']
++ description : After leaving the CIA, Schulte hosted a server on the CIA's network to continue accessing and exfiltrating classified data.
+}
+
+
+    Insider --o{ Accomplice
+    Incident --|{ Insider : commits <
+    Accomplice |o--o{ Job
+    Job }o--o| Organization : employs <
+    Insider |o--o{ Job
+    Organization }o--o| Incident
+    Organization }o-- OrgRelationship
+    OrgRelationship --o{ Organization
+    Insider }o--o| Sponsor
+    Accomplice }o--o| Sponsor
+    Insider }o..o{ Organization : OrgOwner >
+    Accomplice }o..o{ Organization : OrgOwner >
+    Insider -- Collusion
+    Collusion -- Insider
+    Incident --o{ Impact
+    Incident --o{ Target
+    Incident --o{ Source
+    Incident --o{ Note
+    CourtCase ||--o{ Charge
+    CourtCase ||--o{ Sentence
+    Incident --o| Detection
+    Incident --o| Response
+    Response ||--o| LegalResponse
+    LegalResponse ||--o{ CourtCase
+    Organization --o{ Stressor
+    Stressor }o-- Insider
+    Incident --o{ TTP
+@enduml
