@@ -1,9 +1,13 @@
 '''Generates markdown files from json schema'''
 import json
 import os
+import sys
 
-DOCUMENTATION_PATH = "documentation/"
-JSON_PATH = "json"
+
+script_directory = os.path.dirname(os.path.abspath(sys.argv[0]))
+iides_directory = os.path.dirname(script_directory)
+DOCUMENTATION_PATH = os.path.join(iides_directory, 'documentation')
+JSON_PATH = os.path.join(iides_directory, 'json')
 
 
 def get_json_files():
@@ -16,6 +20,8 @@ def get_json_files():
 
 
 def get_ref(ref):
+    '''Parse json $ref string'''
+
     if ref.startswith('#'):
         # internal file reference
         ref_string = f"[{ref[8:]}](#{ref[8:]})"
@@ -165,6 +171,6 @@ if __name__ == "__main__":
             file_lines.extend(get_vocab(data['$defs']))
 
         # Write output to markdown file
-        f = open(f"{DOCUMENTATION_PATH}{filename[5:-5]}.md", "w")
+        f = open(f"{DOCUMENTATION_PATH}/{filename[filename.rfind('/json/')+5:-5]}.md", "w")
         f.writelines([line + '\n' for line in file_lines])
         f.close()

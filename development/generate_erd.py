@@ -1,9 +1,13 @@
 '''Generates UML wsd file for full ERD'''
 import json
 import os
+import sys
 
 
-JSON_PATH = "json"
+script_directory = os.path.dirname(os.path.abspath(sys.argv[0]))
+iides_directory = os.path.dirname(script_directory)
+JSON_PATH = os.path.join(iides_directory, 'json')
+
 color_map = {
     'Person': '#b0d0ed',
     'Insider': '#043673;text:white',
@@ -43,6 +47,8 @@ def get_json_files():
 
 
 def get_ref(ref):
+    '''Parse json $ref string'''
+
     if ref.startswith('#'):
         # internal file reference
         ref_string = f"{ref[8:]}"
@@ -63,7 +69,7 @@ for filename in json_files:
         data = json.load(f)
         print(data['title'])
         print(filename)
-        if filename.startswith('json/structs/'):
+        if 'json/structs/' in filename:
             class_line = f"\nstruct {data['title'].replace(' ','')} "
         else:
             class_line = f"\nclass {data['title'].replace(' ','')} "
@@ -107,7 +113,8 @@ for filename in json_files:
 
         file_lines.append("}")
 
-f = open("UML/source/iides.wsd", "w")
+new_file = os.path.join(iides_directory, 'UML/source/iides.wsd')
+f = open(new_file, "w")
 f.writelines(file_lines)
 
 # Add relationships
