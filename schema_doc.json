@@ -1,5 +1,5 @@
 {
-    "$id": "schema_doc.json",
+    "$id": "iides/json/schema_doc.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Schema Doc",
     "description": "A combined schema including all schemas.",
@@ -8,13 +8,13 @@
         "country-vocab": {
             "title": "Country Vocabulary",
             "description": "Vocabulary for the possible countries",
-            "type": "object",
+            "type": "string",
             "properties": {
                 "country": {
                     "type": "string",
                     "description": "The country code and name.",
                     "items": {
-                        "$ref": "#/$defs/country-vocab"
+                        "$ref": "#/properties/country-vocab/$defs/country-vocab"
                     }
                 }
             },
@@ -1025,13 +1025,13 @@
         "insider-relationship-vocab": {
             "title": "Insider Relationship Vocab",
             "description": "Vocabulary for the possible types of relationships between multiple insiders, or between insiders and external accomplices.",
-            "type": "object",
+            "type": "string",
             "properties": {
                 "relationship": {
                     "type": "string",
                     "description": "The insider's relationship to the other insider or to the accomplice at the time of the incident. If multiple, choose the strongest tie (e.g. \"Friend\" over \"Colleague\".",
                     "items": {
-                        "$ref": "#/$defs/insider-relationship-vocab"
+                        "$ref": "#/properties/insider-relationship-vocab/$defs/insider-relationship-vocab"
                     }
                 }
             },
@@ -1086,13 +1086,13 @@
         "state-vocab": {
             "title": "States Vocabulary",
             "description": "Vocabulary for the possible states",
-            "type": "object",
+            "type": "string",
             "properties": {
                 "state": {
                     "type": "string",
                     "description": "The state code and name.",
                     "items": {
-                        "$ref": "#/$defs/state-vocab-us"
+                        "$ref": "#/properties/state-vocab/$defs/state-vocab-us"
                     }
                 }
             },
@@ -1345,88 +1345,6 @@
                 "id"
             ]
         },
-        "bundle": {
-            "title": "Bundle",
-            "description": "A bundle holds the objects relating an incident, i.e. court cases, insider, targets and impacts.",
-            "type": "object",
-            "properties": {
-                "id": {
-                    "type": "string",
-                    "description": "A unique identifier for the bundle",
-                    "pattern": "^bundle--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
-                },
-                "objects": {
-                    "type": "array",
-                    "description": "Array of IIDES objects",
-                    "items": {
-                        "type": "object",
-                        "anyOf": [
-                            {
-                                "$ref": "accomplice.json"
-                            },
-                            {
-                                "$ref": "charge.json"
-                            },
-                            {
-                                "$ref": "court-case.json"
-                            },
-                            {
-                                "$ref": "detection.json"
-                            },
-                            {
-                                "$ref": "impact.json"
-                            },
-                            {
-                                "$ref": "incident.json"
-                            },
-                            {
-                                "$ref": "insider.json"
-                            },
-                            {
-                                "$ref": "job.json"
-                            },
-                            {
-                                "$ref": "legal-response.json"
-                            },
-                            {
-                                "$ref": "note.json"
-                            },
-                            {
-                                "$ref": "organization.json"
-                            },
-                            {
-                                "$ref": "person.json"
-                            },
-                            {
-                                "$ref": "response.json"
-                            },
-                            {
-                                "$ref": "sentence.json"
-                            },
-                            {
-                                "$ref": "source.json"
-                            },
-                            {
-                                "$ref": "sponsor.json"
-                            },
-                            {
-                                "$ref": "stressor.json"
-                            },
-                            {
-                                "$ref": "target.json"
-                            },
-                            {
-                                "$ref": "ttp.json"
-                            }
-                        ]
-                    }
-                }
-            },
-            "required": [
-                "id",
-                "objects"
-            ]
-        },
         "charge": {
             "title": "Charge",
             "description": "A charge or accusation brought against the insider when the incident is pursued in the legal system. E.g., \"Two counts of Unauthorized Access to Company Systems.\" A charge must be connected to only one court case. A court case may have one or more charges.",
@@ -1456,7 +1374,7 @@
                 "plea": {
                     "type": "string",
                     "description": "Plea entered by the defendant for this charge.",
-                    "$ref": "#/$defs/charge-plea-vocab"
+                    "$ref": "#/properties/charge/$defs/charge-plea-vocab"
                 },
                 "plea_bargain": {
                     "type": "boolean",
@@ -1465,7 +1383,7 @@
                 "disposition": {
                     "type": "string",
                     "description": "The decision in the case or the final result.",
-                    "$ref": "#/$defs/charge-disposition-vocab"
+                    "$ref": "#/properties/charge/$defs/charge-disposition-vocab"
                 }
             },
             "required": [
@@ -1593,12 +1511,12 @@
                 "court_type": {
                     "type": "string",
                     "description": "Type or level of the court where the case is tried.",
-                    "$ref": "#/$defs/court-type-vocab"
+                    "$ref": "#/properties/court-case/$defs/court-type-vocab"
                 },
                 "case_type": {
                     "type": "string",
                     "description": "Type of case.",
-                    "$ref": "#/$defs/case-type-vocab"
+                    "$ref": "#/properties/court-case/$defs/case-type-vocab"
                 },
                 "defendant": {
                     "type": "array",
@@ -1679,7 +1597,7 @@
                     "type": "array",
                     "description": "The individual entities or teams that first detected the incident.",
                     "items": {
-                        "$ref": "#/$defs/detection-team-vocab"
+                        "$ref": "#/properties/detection/$defs/detection-team-vocab"
                     },
                     "minItems": 1
                 },
@@ -1687,7 +1605,7 @@
                     "type": "array",
                     "description": "The system or process that led to the first detection of the incident.",
                     "items": {
-                        "$ref": "#/$defs/detection-method-vocab"
+                        "$ref": "#/properties/detection/$defs/detection-method-vocab"
                     },
                     "minItems": 1
                 },
@@ -1695,7 +1613,7 @@
                     "type": "array",
                     "description": "The type(s) of logs used by the detection team and/or method to first detect the incident.",
                     "items": {
-                        "$ref": "#/$defs/detection-log-vocab"
+                        "$ref": "#/properties/detection/$defs/detection-log-vocab"
                     },
                     "minItems": 1
                 },
@@ -1878,7 +1796,7 @@
                 "metric": {
                     "type": "string",
                     "description": "The type of impact being quantified.",
-                    "$ref": "#/$defs/impact-metric-vocab"
+                    "$ref": "#/properties/impact/$defs/impact-metric-vocab"
                 },
                 "estimated": {
                     "type": "boolean",
@@ -1996,7 +1914,7 @@
                     "type": "array",
                     "description": "CIA triad components which were affected.",
                     "items": {
-                        "$ref": "#/$defs/cia-vocab"
+                        "$ref": "#/properties/incident/$defs/cia-vocab"
                     },
                     "minItems": 1
                 },
@@ -2004,7 +1922,7 @@
                     "type": "array",
                     "description": "Categorization of the incident.",
                     "items": {
-                        "$ref": "#/$defs/incident-type-vocab"
+                        "$ref": "#/properties/incident/$defs/incident-type-vocab"
                     },
                     "minItems": 1
                 },
@@ -2012,7 +1930,7 @@
                     "type": "array",
                     "description": "The subtype that the incident fits. MUST match the specified incident_type.",
                     "items": {
-                        "$ref": "#/$defs/incident-subtype-vocab"
+                        "$ref": "#/properties/incident/$defs/incident-subtype-vocab"
                     },
                     "minItems": 1
                 },
@@ -2020,14 +1938,14 @@
                     "type": "array",
                     "description": "Consequences suffered by the victim organization as a result of the insider's attack. This is NOT the outcome or consequences imposed on the insider.",
                     "items": {
-                        "$ref": "#/$defs/outcome-type-vocab"
+                        "$ref": "#/properties/incident/$defs/outcome-type-vocab"
                     },
                     "minItems": 1
                 },
                 "status": {
                     "type": "string",
                     "description": "The current status of the incident.",
-                    "$ref": "#/$defs/incident-status-vocab"
+                    "$ref": "#/properties/incident/$defs/incident-status-vocab"
                 },
                 "summary": {
                     "type": "string",
@@ -2267,13 +2185,13 @@
                 "incident_role": {
                     "type": "string",
                     "description": "Whether the insider was the primary actor, or had a different role in the incident.",
-                    "$ref": "#/$defs/incident-role-vocab"
+                    "$ref": "#/properties/insider/$defs/incident-role-vocab"
                 },
                 "motive": {
                     "type": "array",
                     "description": "The insider's motive(s) for the incident.",
                     "items": {
-                        "$ref": "#/$defs/motive-vocab"
+                        "$ref": "#/properties/insider/$defs/motive-vocab"
                     },
                     "minItems": 1
                 },
@@ -2285,7 +2203,7 @@
                     "type": "array",
                     "description": "Psychological issue(s) the insider experienced during or before the incident.",
                     "items": {
-                        "$ref": "#/$defs/psych-issues-vocab"
+                        "$ref": "#/properties/insider/$defs/psych-issues-vocab"
                     },
                     "minItems": 1
                 },
@@ -2296,10 +2214,10 @@
                         "type": "array",
                         "prefixItems": [
                             {
-                                "$ref": "#/$defs/predisposition-type-vocab"
+                                "$ref": "#/properties/insider/$defs/predisposition-type-vocab"
                             },
                             {
-                                "$ref": "#/$defs/predisposition-subtype-vocab"
+                                "$ref": "#/properties/insider/$defs/predisposition-subtype-vocab"
                             }
                         ],
                         "minItems": 2,
@@ -2313,10 +2231,10 @@
                         "type": "array",
                         "prefixItems": [
                             {
-                                "$ref": "#/$defs/concerning-behavior-vocab"
+                                "$ref": "#/properties/insider/$defs/concerning-behavior-vocab"
                             },
                             {
-                                "$ref": "#/$defs/cb-subtype-vocab"
+                                "$ref": "#/properties/insider/$defs/cb-subtype-vocab"
                             }
                         ],
                         "minItems": 2,
@@ -2802,12 +2720,12 @@
                 "job_function": {
                     "type": "string",
                     "description": "Functional category of the individual's job. job_function and occupation vocabularies are based in large part on the 2018 Standard Occupational Classification system published by the Bureau of Labor Statistics.",
-                    "$ref": "#/$defs/job-function-vocab"
+                    "$ref": "#/properties/job/$defs/job-function-vocab"
                 },
                 "occupation": {
                     "type": "string",
                     "description": "The subcategory of the individual's job. When present, `job_function` should also be present. The chosen constant for occupation MUST match the constant for job_function.",
-                    "$ref": "#/$defs/occupation-vocab"
+                    "$ref": "#/properties/job/$defs/occupation-vocab"
                 },
                 "title": {
                     "type": "string",
@@ -2820,12 +2738,12 @@
                 "access_authorization": {
                     "type": "string",
                     "description": "The level of access control given by this job role.",
-                    "$ref": "#/$defs/access-auth-vocab"
+                    "$ref": "#/properties/job/$defs/access-auth-vocab"
                 },
                 "employment_type": {
                     "type": "string",
                     "description": "The individual's employment arangement at the time of the incident.",
-                    "$ref": "#/$defs/employment-type-vocab"
+                    "$ref": "#/properties/job/$defs/employment-type-vocab"
                 },
                 "hire_date": {
                     "type": "string",
@@ -3694,12 +3612,12 @@
                 "industry_sector": {
                     "type": "string",
                     "description": "Top level category for the economic sector the organization belongs to. Note, sectors are dervied from the North American Industry Classification System (NAICS) version 2022 published by the United States Office of Management and Budget.",
-                    "$ref": "#/$defs/industry-sector-vocab"
+                    "$ref": "#/properties/organization/$defs/industry-sector-vocab"
                 },
                 "industry_subsector": {
                     "type": "string",
                     "description": "Second level category for the economic sector the organization belongs to. This value MUST map back to industry_sector. E.g., if sector is \"9\", subsector must be \"9.x\"",
-                    "$ref": "#/$defs/industry-subsector-vocab"
+                    "$ref": "#/properties/organization/$defs/industry-subsector-vocab"
                 },
                 "business": {
                     "type": "string",
@@ -3712,7 +3630,7 @@
                 "incident_role": {
                     "type": "string",
                     "description": "The organization's role in the incident.",
-                    "$ref": "#/$defs/org-role-vocab"
+                    "$ref": "#/properties/organization/$defs/org-role-vocab"
                 }
             },
             "required": [
@@ -4369,7 +4287,7 @@
                 "suffix": {
                     "type": "string",
                     "description": "The name suffix of the individual.",
-                    "$ref": "#/$defs/suffix-vocab"
+                    "$ref": "#/properties/person/$defs/suffix-vocab"
                 },
                 "alias": {
                     "type": "array",
@@ -4414,12 +4332,12 @@
                 "residency": {
                     "type": "string",
                     "description": "Residency status if the person was not a citizen of the country where they resided during the incident.",
-                    "$ref": "#/$defs/residency-vocab"
+                    "$ref": "#/properties/person/$defs/residency-vocab"
                 },
                 "gender": {
                     "type": "string",
                     "description": "Sex or gender at the time of the incident.",
-                    "$ref": "#/$defs/gender-vocab"
+                    "$ref": "#/properties/person/$defs/gender-vocab"
                 },
                 "age": {
                     "type": "integer",
@@ -4428,12 +4346,12 @@
                 "education": {
                     "type": "string",
                     "description": "Highest level of education at the time the incident began.",
-                    "$ref": "#/$defs/education-vocab"
+                    "$ref": "#/properties/person/$defs/education-vocab"
                 },
                 "marital_status": {
                     "type": "string",
                     "description": "The marital status at the time of the incident.",
-                    "$ref": "#/$defs/marital-status-vocab"
+                    "$ref": "#/properties/person/$defs/marital-status-vocab"
                 },
                 "number_of_children": {
                     "type": "integer",
@@ -4589,7 +4507,7 @@
                         "type": "array",
                         "prefixItems": [
                             {
-                                "$ref": "#/$defs/technical-control-vocab"
+                                "$ref": "#/properties/response/$defs/technical-control-vocab"
                             },
                             {
                                 "type": "string",
@@ -4607,7 +4525,7 @@
                         "type": "array",
                         "prefixItems": [
                             {
-                                "$ref": "#/$defs/behavioral-control-vocab"
+                                "$ref": "#/properties/response/$defs/behavioral-control-vocab"
                             },
                             {
                                 "type": "string",
@@ -4622,7 +4540,7 @@
                     "type": "array",
                     "description": "The organization(s) or entity(s) that investigated the incident.",
                     "items": {
-                        "$ref": "#/$defs/investigator-vocab"
+                        "$ref": "#/properties/response/$defs/investigator-vocab"
                     },
                     "minItems": 1
                 },
@@ -4633,7 +4551,7 @@
                         "type": "array",
                         "prefixItems": [
                             {
-                                "$ref": "#/$defs/investigation-vocab"
+                                "$ref": "#/properties/response/$defs/investigation-vocab"
                             },
                             {
                                 "type": "string",
@@ -4809,7 +4727,7 @@
                 "sentence_type": {
                     "type": "string",
                     "description": "The type of sentence that was ordered.",
-                    "$ref": "#/$defs/sentence-type-vocab"
+                    "$ref": "#/properties/sentence/$defs/sentence-type-vocab"
                 },
                 "quantity": {
                     "type": "integer",
@@ -4818,7 +4736,7 @@
                 "metric": {
                     "type": "string",
                     "description": "The measurement type of the sentence imposed. MUST be used with the `quantity` property if used.",
-                    "$ref": "#/$defs/sentence-metric-vocab"
+                    "$ref": "#/properties/sentence/$defs/sentence-metric-vocab"
                 },
                 "concurrency": {
                     "type": "boolean",
@@ -4970,12 +4888,12 @@
                 "source_type": {
                     "type": "string",
                     "description": "The \"source\" or author of the source document.",
-                    "$ref": "#/$defs/source-type-vocab"
+                    "$ref": "#/properties/source/$defs/source-type-vocab"
                 },
                 "file_type": {
                     "type": "string",
                     "description": "File type or extension.",
-                    "$ref": "#/$defs/source-file-type-vocab"
+                    "$ref": "#/properties/source/$defs/source-file-type-vocab"
                 },
                 "date": {
                     "type": "string",
@@ -5072,7 +4990,7 @@
                 "sponsor_type": {
                     "type": "string",
                     "description": "The type of sponsor.",
-                    "$ref": "#/$defs/sponsor-type-vocab"
+                    "$ref": "#/properties/sponsor/$defs/sponsor-type-vocab"
                 }
             },
             "required": [
@@ -5128,12 +5046,12 @@
                 "category": {
                     "type": "string",
                     "description": "The category to which the stressor belongs.",
-                    "$ref": "#/$defs/stressor-category-vocab"
+                    "$ref": "#/properties/stressor/$defs/stressor-category-vocab"
                 },
                 "subcategory": {
                     "type": "string",
                     "description": "The subcategory to which the stressor belongs. When subcategory is specified, category MUST also be specified. The subcategory constant MUST map to the specified category constant.",
-                    "$ref": "#/$defs/stressor-subcategory-vocab"
+                    "$ref": "#/properties/stressor/$defs/stressor-subcategory-vocab"
                 },
                 "comment": {
                     "type": "string",
@@ -5367,33 +5285,33 @@
                 "asset_type": {
                     "type": "string",
                     "description": "The type of target.",
-                    "$ref": "#/$defs/target-asset-vocab"
+                    "$ref": "#/properties/target/$defs/target-asset-vocab"
                 },
                 "category": {
                     "type": "string",
                     "description": "The classification group a target belongs to.",
-                    "$ref": "#/$defs/target-category-vocab"
+                    "$ref": "#/properties/target/$defs/target-category-vocab"
                 },
                 "subcategory": {
                     "type": "string",
                     "description": "The lower-level classification group a target belongs to.",
-                    "$ref": "#/$defs/target-subcategory-vocab"
+                    "$ref": "#/properties/target/$defs/target-subcategory-vocab"
                 },
                 "format": {
                     "type": "string",
                     "description": "The data type of the target.",
-                    "$ref": "#/$defs/target-format-vocab"
+                    "$ref": "#/properties/target/$defs/target-format-vocab"
                 },
                 "owner": {
                     "type": "string",
                     "description": "Who the data is about. For assets, the owner of the asset. In cases where the owner and subject of the data/asset is unclear, pick the person/group most responsible for safeguarding the data/asset.",
-                    "$ref": "#/$defs/target-owner-vocab"
+                    "$ref": "#/properties/target/$defs/target-owner-vocab"
                 },
                 "sensitivity": {
                     "type": "array",
                     "description": "The level of sensitivity and controls applied to a target.",
                     "items": {
-                        "$ref": "#/$defs/target-sensitivity-vocab"
+                        "$ref": "#/properties/target/$defs/target-sensitivity-vocab"
                     },
                     "minItems": 1
                 },
@@ -6046,18 +5964,18 @@
                 "tactic": {
                     "type": "string",
                     "description": "The high level category or goal of the action.",
-                    "$ref": "#/$defs/tactic-vocab"
+                    "$ref": "#/properties/ttp/$defs/tactic-vocab"
                 },
                 "technique": {
                     "type": "string",
                     "description": "The general action taken. If technique exists, `tactic` should as well.",
-                    "$ref": "#/$defs/technique-vocab"
+                    "$ref": "#/properties/ttp/$defs/technique-vocab"
                 },
                 "location": {
                     "type": "array",
                     "description": "Whether the action was taken on-site or remotely.",
                     "items": {
-                        "$ref": "#/$defs/attack-location-vocab"
+                        "$ref": "#/properties/ttp/$defs/attack-location-vocab"
                     },
                     "minItems": 1
                 },
@@ -6065,7 +5983,7 @@
                     "type": "array",
                     "description": "Whether the action was taken during work hours.",
                     "items": {
-                        "$ref": "#/$defs/attack-hours-vocab"
+                        "$ref": "#/properties/ttp/$defs/attack-hours-vocab"
                     },
                     "minItems": 1
                 },
@@ -6073,7 +5991,7 @@
                     "type": "array",
                     "description": "The device where this action either took place or a device that was affected by the action. A device where the action could be detected.",
                     "items": {
-                        "$ref": "#/$defs/device-vocab"
+                        "$ref": "#/properties/ttp/$defs/device-vocab"
                     },
                     "minItems": 1
                 },
@@ -6081,7 +5999,7 @@
                     "type": "array",
                     "description": "Methods used to transmit information outside, or into, the victim organization.",
                     "items": {
-                        "$ref": "#/$defs/channel-vocab"
+                        "$ref": "#/properties/ttp/$defs/channel-vocab"
                     },
                     "minItems": 1
                 },
@@ -6687,7 +6605,7 @@
                 "recruitment": {
                     "type": "string",
                     "description": "The reason insider1 recruited insider2.",
-                    "$ref": "#/$defs/recruitment-vocab"
+                    "$ref": "#/properties/collusion/$defs/recruitment-vocab"
                 }
             },
             "required": [
@@ -6783,7 +6701,7 @@
                 "relationship": {
                     "type": "string",
                     "description": "Defines the relationship between the two organizations. Reads as \"Org1 is [relationship] to Org2.\" E.g., \"Org1 is vendor to Org2.\"",
-                    "$ref": "#/$defs/org-relationship-vocab"
+                    "$ref": "#/properties/org-relationship/$defs/org-relationship-vocab"
                 }
             },
             "required": [
