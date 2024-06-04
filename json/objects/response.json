@@ -18,10 +18,10 @@
           "prefixItems": [
             { "$ref": "#/$defs/technical-control-vocab"},
             { "type": "string", "format": "date" }
-          ],
-          "minItems": 2,
-          "maxItems": 2
-          }       
+          ]
+        },
+        "minItems": 2,
+        "maxItems": 2      
       },
       "behavioral_controls": {
         "type": "array",
@@ -31,11 +31,11 @@
           "prefixItems": [
             { "$ref": "#/$defs/behavioral-control-vocab"},
             { "type": "string", "format": "date" }
-          ],
-          "minItems": 2,
-          "maxItems": 2
-          }
+          ]
         },
+        "minItems": 2,
+        "maxItems": 2
+      },
       "investigated_by": {
         "type": "array",
         "description": "The organization(s) or entity(s) that investigated the incident.",
@@ -52,11 +52,11 @@
           "prefixItems": [
             { "$ref": "#/$defs/investigation-vocab"},
             { "type": "string", "format": "date" }
-          ],
-          "minItems": 2,
-          "maxItems": 2
-        }
+          ]
         },
+      "minItems": 2,
+      "maxItems": 2
+      },
       "comment": {
         "type": "string",
         "description": "Clarifying comments or additional details about the organization's response."

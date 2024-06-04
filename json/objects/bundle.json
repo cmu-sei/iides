@@ -36,7 +36,8 @@
                     { "$ref": "target.json" },
                     { "$ref": "ttp.json" }
                 ]
-            }
+            },
+            "minItems": 1
         }
     },
     "required": ["id", "objects"]

@@ -87,6 +87,10 @@ class Note #D4EFDF {
 	* date : string 
 	* comment : string 
 }
+class Bundle #F5F5F5 {
+	* id : string 
+	* objects : string[1...*] 
+}
 class Sentence #f9b8bd {
 	* id : string 
 	* sentence_type : sentence-type-vocab 
@@ -103,8 +107,8 @@ class TTP #A456ED {
 	+ ttp_vocab : string 
 	+ tactic : tactic-vocab 
 	+ technique : technique-vocab 
-	+ location : attack-location-vocab 
-	+ hours : attack-hours-vocab 
+	+ location : attack-location-vocab[1...*] 
+	+ hours : attack-hours-vocab[1...*] 
 	+ device : device-vocab[1...*] 
 	+ channel : channel-vocab[1...*] 
 	+ description : string 
@@ -173,15 +177,15 @@ class Insider <<Person>> #043673;text:white {
 	+ motive : motive-vocab[1...*] 
 	+ substance_use_during_incident : boolean 
 	+ psychological_issues : psych-issues-vocab[1...*] 
-	+ predispositions : ({field} predisposition-type-vocab, predisposition-subtype-vocab)[1...*] 
-	+ concerning_behaviors : ({field} concerning-behavior-vocab, cb-subtype-vocab)[1...*] 
+	+ predispositions : string[2...*] 
+	+ concerning_behaviors : string[2...*] 
 }
 class Response #EF3A47 {
 	* id : string 
-	+ technical_controls : ({field} technical-control-vocab, date)[1...*] 
-	+ behavioral_controls : ({field} behavioral-control-vocab, date)[1...*] 
+	+ technical_controls : string[2...*] 
+	+ behavioral_controls : string[2...*] 
 	+ investigated_by : investigator-vocab[1...*] 
-	+ investigation_events : ({field} investigation-vocab, date)[1...*] 
+	+ investigation_events : string[2...*] 
 	+ comment : string 
 }
 class Detection #FDB515 {
