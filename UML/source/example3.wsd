@@ -1,4 +1,4 @@
-@startuml IIDES
+@startuml Example3
 
 Class Accomplice #b0d0ed {
 * id : accomplice--3426b922-135a-42f9-869d-f8b30e0d483b 

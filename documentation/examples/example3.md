@@ -1,4 +1,4 @@
-# Example3
+# Examples/example3
 
 ## Incident
 
@@ -210,12 +210,9 @@ A third party investigator was hired to look into the matter after an engineer a
 - **`Id`**:
    - response--9923bad0-25bb-474a-bff7-4b23bfb3e240
 - **`Investigated by`**:
-   - *99*: Other - Other investigator not lised in this vocabulary.
-  - *2*: Management - Management internal to the organization.
-
+ ['99', '2']
 - **`Investigation events`**:
-   - *['2', '2016-11-00']*: Evidence Found - Evidence relevant to the incident is found. E.g., Fellow employee found a USB drive left in the insider's computer that had sensitive company files downloaded on to it.
-
+ [['2', '2016-11-00']]
 ## Court-case
 
 - **`Id`**:

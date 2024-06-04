@@ -3,7 +3,7 @@ import json
 import os
 
 DOCUMENTATION_PATH = "documentation/"
-JSON_PATH = "example_jsons"
+JSON_PATH = "examples"
 
 
 def get_json_files(jpath):
@@ -15,6 +15,7 @@ def get_json_files(jpath):
                 fnames.append(os.path.join(root, f))
     return fnames
 
+
 def find_schema(schema_paths, target_tag):
     """
     Returns the desired json schema file
@@ -22,10 +23,11 @@ def find_schema(schema_paths, target_tag):
     param: target schema path
     """
     for schema in schema_paths:
-        if (schema[schema.rindex('\\')+1:] == (target_tag + '.json')):
+        if schema.endswith(target_tag + '.json'):
             with open(schema) as f:
                 return json.load(f)
     return None
+
 
 def get_vocab(items, field, schema):
     """
@@ -118,7 +120,7 @@ def get_sort_index(tag):
 if __name__ == "__main__":
 
     # Get json files
-    json_examples = get_json_files('example_jsons')
+    json_examples = get_json_files('examples')
     json_schemas = get_json_files('json')
 
     print("Example paths: " + str(json_examples))
@@ -130,7 +132,7 @@ if __name__ == "__main__":
             example_data = json.load(f)
 
         # Example Number
-        file_lines.append(f"# {filename[filename.find('\\example')+1:filename.find('.json')].capitalize()}\n")
+        file_lines.append(f"# {filename[:-5].capitalize()}\n")
 
         if 'objects' in example_data:
             # Iterate through each IIDES object
@@ -159,7 +161,7 @@ if __name__ == "__main__":
                             schema_field = schema['properties'][field]
                         except:
                             print("Not a default field: " + str(field))
-                            file_lines.append(f"- **`{field.capitalize().replace("_", " ")}`**:\n {items}")
+                            file_lines.append(f"- **`{field.capitalize().replace('_', ' ')}`**:\n {items}")
                             continue
                         if field == 'location':
                             print("Trying to get location vocab")
@@ -188,10 +190,10 @@ if __name__ == "__main__":
                         else:
                             items_print = f"{items}"
                
-                        file_lines.append(f"- **`{field.capitalize().replace("_", " ")}`**:\n {items_print}")
+                        file_lines.append(f"- **`{field.capitalize().replace('_', ' ')}`**:\n {items_print}")
 
         # Write output to markdown file
-        f = open(f"{DOCUMENTATION_PATH}{filename[:filename.find('.json')]}.md", "w")
+        f = open(f"{DOCUMENTATION_PATH}{filename[:-5]}.md", "w")
         f.writelines([line + '\n' for line in file_lines])
         f.close()
-        print("Successfuly made markdown: " + str(filename[:filename.find('.json')]))
+        print("Successfuly made markdown: " + str(filename[:-5]))

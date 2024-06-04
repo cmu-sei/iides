@@ -1,4 +1,4 @@
-@startuml IIDES
+@startuml Example4
 
 Class Charge #f9b8bd {
 * id : charge--80e9f464-867a-4c2d-a0d5-da3303fef9f8 
