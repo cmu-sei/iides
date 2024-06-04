@@ -24,6 +24,7 @@ def get_json_files(jpath):
     return fnames
 
 def iterate_replace_refs_list(my_list, schema_name):
+    """ For the edge case of nested dictionaries in lists """
     for item in my_list:
         if isinstance(item, list):
             print("Iterating through nested list for key:", schema_name)
@@ -34,6 +35,7 @@ def iterate_replace_refs_list(my_list, schema_name):
         print("Reached the end of the dictionary.")
 
 def iterate_replace_refs(my_dict, schema_name):
+    """ Recursively iterate through the schema finding $refs """
     for key, value in my_dict.items():
         if isinstance(value, dict):
             print("Iterating through nested dictionary for key:", key)
