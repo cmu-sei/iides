@@ -44,10 +44,10 @@
           "prefixItems": [
             { "$ref": "#/$defs/predisposition-type-vocab" },
             { "$ref": "#/$defs/predisposition-subtype-vocab" }
-          ],
-          "minItems": 2,
-          "maxItems": 2
-        }
+          ]
+        },
+        "minItems": 2,
+        "maxItems": 2
       },
       "concerning_behaviors": {
         "type": "array",
@@ -57,12 +57,12 @@
           "prefixItems": [
             { "$ref": "#/$defs/concerning-behavior-vocab" },
             { "$ref": "#/$defs/cb-subtype-vocab" }
-          ],
-          "minItems": 2,
-          "maxItems": 2
-        }
-        }
-      },
+          ]
+        },
+        "minItems": 2,
+        "maxItems": 2
+      }
+    },
     "required": [
         "id",
         "incident_role"

@@ -27,7 +27,8 @@ color_map = {
     'TTP': '#A456ED',
     'Org Relationship': '#F5F5F5',
     'Org Owner': '#F5F5F5',
-    'Relationship': '#F5F5F5'
+    'Relationship': '#F5F5F5',
+    'Bundle': '#F5F5F5',
 }
 
 
