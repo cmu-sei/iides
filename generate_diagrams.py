@@ -4,6 +4,8 @@ import json
 import os
 
 example_jsons_path = 'example_jsons'
+
+# The color maps
 color_map = {
     'Person': '#b0d0ed',
     'Insider': '#043673;text:white',
@@ -30,6 +32,7 @@ color_map = {
     'Relationship': '#F5F5F5'
 }
 
+# All UML relationships
 relationships = '''
 
     Insider --o{ Accomplice
@@ -62,6 +65,8 @@ relationships = '''
 '''
 
 count = 1
+
+# loop through our "example_jsons" directory 
 for file_name in os.listdir(example_jsons_path):
     file_lines = []
     file_lines.append("@startuml IIDES\n\n")
@@ -71,7 +76,8 @@ for file_name in os.listdir(example_jsons_path):
         data = json.load(f)
         for obj in data.get("objects"):
             class_lines = []
-            # grab name 
+
+            # grab name and write the UML class header
             id = obj.get("id")
             name = id[0:id.find("--")]
             if ("-" in name):
@@ -87,16 +93,40 @@ for file_name in os.listdir(example_jsons_path):
             line_1 = f"Class {name} {color_map[name]}" + " {\n"
             class_lines.append(line_1)
 
+            # now write the rest of the class based on the 
+            # inner attributes of the object
             for key in obj:
                 curr_line = ''
                 if key == "id" or key == "title":
                     curr_line += "* "
                 else:
                     curr_line += "+ "    
-                curr_line += f"{key} : {obj[key]}\n"
+
+                # add newlines to long strings (like the summary)
+                if isinstance(obj[key], str):
+                    words = obj[key].split()
+                    text = ""
+                    word_count = 0
+                    for word in words:
+                        text += word + " "
+                        word_count += 1
+                        # adding a new line every 15 words
+                        if word_count == 15: 
+                            text += "\n"
+                            word_count = 0
+                    curr_line += f"{key} : {text}\n"
+                else:
+                    curr_line += f"{key} : {obj[key]}\n"
+                
+                # add this to our "class_lines"
                 class_lines.append(curr_line)
-            class_lines.append("}\n")
+            
+            # finish the class by placing a line and end curly bracket,
+            # then we add it to the full file in 'file_lines'
+            class_lines.append("---\n}\n")
             file_lines.extend(class_lines)
+
+    # add relationships and the enduml before finishing
     file_lines.append(relationships)
     file_lines.append("@enduml")
 
