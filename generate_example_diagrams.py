@@ -69,7 +69,7 @@ count = 1
 # loop through our "example_jsons" directory 
 for file_name in os.listdir(example_jsons_path):
     file_lines = []
-    file_lines.append("@startuml IIDES\n\n")
+    file_lines.append(f"@startuml {file_name[:-5].capitalize()}\n\n")
     if (file_name == 'README.md'): continue
 
     with open(example_jsons_path + '/' + file_name) as f:
@@ -117,10 +117,10 @@ for file_name in os.listdir(example_jsons_path):
                     curr_line += f"{key} : {text}\n"
                 else:
                     curr_line += f"{key} : {obj[key]}\n"
-                
+
                 # add this to our "class_lines"
                 class_lines.append(curr_line)
-            
+
             # finish the class by placing a line and end curly bracket,
             # then we add it to the full file in 'file_lines'
             class_lines.append("---\n}\n")
@@ -130,6 +130,6 @@ for file_name in os.listdir(example_jsons_path):
     file_lines.append(relationships)
     file_lines.append("@enduml")
 
-    new_f = open(f"example_diagrams/example{count}.wsd", "w")
+    new_f = open(f"UML/source/{file_name[:-5]}.wsd", "w")
     new_f.writelines(file_lines)
     count += 1
