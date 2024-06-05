@@ -2,8 +2,8 @@
 import json
 import os
 
-DOCUMENTATION_PATH = "documentation/"
-JSON_PATH = "examples"
+DOCUMENTATION_PATH = "examples/"
+JSON_PATH = "examples/json"
 
 
 def get_json_files(jpath):
@@ -193,7 +193,9 @@ if __name__ == "__main__":
                         file_lines.append(f"- **`{field.capitalize().replace('_', ' ')}`**:\n {items_print}")
 
         # Write output to markdown file
-        f = open(f"{DOCUMENTATION_PATH}{filename[:-5]}.md", "w")
+        print(filename)
+        new_path = os.path.split(filename)[-1][:-5]
+        f = open(f"{DOCUMENTATION_PATH}{new_path}.md", "w")
         f.writelines([line + '\n' for line in file_lines])
         f.close()
         print("Successfuly made markdown: " + str(filename[:-5]))

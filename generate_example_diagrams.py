@@ -3,7 +3,7 @@
 import json
 import os
 
-example_jsons_path = 'examples'
+example_jsons_path = 'examples/json'
 
 # The color maps
 color_map = {

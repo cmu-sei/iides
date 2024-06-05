@@ -58,7 +58,7 @@ def iterate_replace_refs(my_dict, schema_name):
 
 if __name__ == "__main__":
   # Define the directory containing JSON files (replace with your path)
-  schema_doc = "schema_doc.json"
+  schema_doc = "iides_full_schema.json"
 
   json_schemas = get_json_files('json')
   properties = {}
@@ -80,10 +80,10 @@ if __name__ == "__main__":
 
   f = open(f"{schema_doc}", "w")
   header = {
-  f"$id": "iides/json/schema_doc.json",
+  f"$id": "iides/json/iides_full_schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Schema Doc",
-  "description": "A combined schema including all schemas.",
+  "title": "IIDES Schema",
+  "description": "A combined schema including all subschemas.",
   "type": "object",
   "properties": {}
   }
