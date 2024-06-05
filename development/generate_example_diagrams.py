@@ -2,8 +2,12 @@
 
 import json
 import os
+import sys
 
-example_jsons_path = 'examples/json'
+script_directory = os.path.dirname(os.path.abspath(sys.argv[0]))
+iides_directory = os.path.dirname(script_directory)
+JSON_PATH = os.path.join(iides_directory, 'examples', 'json')
+
 
 # The color maps
 color_map = {
@@ -12,7 +16,7 @@ color_map = {
     'Incident': '#009647',
     'Accomplice': '#b0d0ed',
     'Collusion': '#F5F5F5',
-    'Organization': '#007BC0', 
+    'Organization': '#007BC0',
     'Sponsor': '#b0d0ed',
     'Job': '#33c2C4',
     'Impact': '#D4EFDF',
@@ -64,14 +68,14 @@ relationships = {
 count = 1
 
 # loop through our "example_jsons" directory 
-for file_name in os.listdir(example_jsons_path):
+for file_name in os.listdir(JSON_PATH):
     file_lines = []
     seen_classes = set()
 
     file_lines.append(f"@startuml {file_name[:-5].capitalize()}\n\n")
     if (file_name == 'README.md'): continue
 
-    with open(example_jsons_path + '/' + file_name) as f:
+    with open(JSON_PATH + '/' + file_name) as f:
         data = json.load(f)
         for obj in data.get("objects"):
             class_lines = []
@@ -133,6 +137,7 @@ for file_name in os.listdir(example_jsons_path):
             file_lines.extend(relationships[r])
     file_lines.append("@enduml")
 
-    new_f = open(f"UML/source/{file_name[:-5]}.wsd", "w")
+    new_path = os.path.join(iides_directory, 'UML', 'source', f'{file_name[:-5]}.wsd')
+    new_f = open(new_path, "w")
     new_f.writelines(file_lines)
     count += 1
