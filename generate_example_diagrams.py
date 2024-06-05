@@ -32,43 +32,42 @@ color_map = {
     'Relationship': '#F5F5F5'
 }
 
-# All UML relationships
-relationships = '''
-
-    Insider --o{ Accomplice
-    Incident --|{ Insider : commits <
-    Accomplice |o--o{ Job
-    Job }o--o| Organization : employs <
-    Insider |o--o{ Job
-    Organization }o--o| Incident
-    Organization }o-- OrgRelationship
-    OrgRelationship --o{ Organization
-    Insider }o--o| Sponsor
-    Accomplice }o--o| Sponsor
-    Insider }o..o{ Organization : OrgOwner >
-    Accomplice }o..o{ Organization : OrgOwner >
-    Insider -- Collusion
-    Collusion -- Insider
-    Incident --o{ Impact
-    Incident --o{ Target
-    Incident --o{ Source
-    Incident --o{ Note
-    CourtCase ||--o{ Charge
-    CourtCase ||--o{ Sentence
-    Incident --o| Detection
-    Incident --o| Response
-    Response ||--o| LegalResponse
-    LegalResponse ||--o{ CourtCase
-    Organization --o{ Stressor
-    Stressor }o-- Insider
-    Incident --o{ TTP
-'''
+# All UML Relationships
+relationships = {
+    ("Insider", "Accomplice"): ["Insider --o{ Accomplice\n"],
+    ("Incident", "Insider"): ["Incident --|{ Insider : commits <\n"],
+    ("Accomplice", "Job"): ["Accomplice |o--o{ Job\n"], 
+    ("Job", "Organization"): ["Job }o--o| Organization : employs <\n"],
+    ("Insider", "Job"): ["Insider |o--o{ Job\n"],
+    ("Organization", "Incident"): ["Organization }o--o| Incident\n"],
+    ("Organization", "OrgRelationship"): ["Organization }o-- OrgRelationship\n", "OrgRelationship --o{ Organization\n"],
+    ("Insider", "Sponsor"): ["Insider }o--o| Sponsor\n"],
+    ("Accomplice", "Sponsor"): ["Accomplice }o--o| Sponsor\n"],
+    ("Insider", "Organization"): ["Insider }o..o{ Organization\n"],
+    ("Accomplice", "Organization"): ["Accomplice }o..o{ Organization\n"],
+    ("Insider", "Collusion"): ["Insider -- Collusion\n", "Collusion -- Insider"],
+    ("Incident", "Impact"): ["Incident --o{ Impact\n"],
+    ("Incident", "Target"): ["Incident --o{ Target\n"],
+    ("Incident", "Source"): ["Incident --o{ Source\n"],
+    ("Incident", "Note"): ["Incident --o{ Note\n"],
+    ("CourtCase", "Charge"): ["CourtCase ||--o{ Charge\n"],
+    ("CourtCase", "Sentence"): ["CourtCase ||--o{ Sentence\n"],
+    ("Incident", "Detection"): ["Incident --o| Detection\n"],
+    ("Incident", "Response"): ["Incident --o| Response\n"],
+    ("Response", "LegalResponse"): ["Response ||--o| LegalResponse\n"],
+    ("LegalResponse", "CourtCase"): ["LegalResponse ||--o{ CourtCase\n"],
+    ("Organization", "Stressor"): ["Organization --o{ Stressor\n"],
+    ("Stressor", "Insider"): ["Stressor }o-- Insider\n"],
+    ("Incident", "TTP"): ["Incident --o{ TTP\n"]
+}
 
 count = 1
 
 # loop through our "example_jsons" directory 
 for file_name in os.listdir(example_jsons_path):
     file_lines = []
+    seen_classes = set()
+
     file_lines.append(f"@startuml {file_name[:-5].capitalize()}\n\n")
     if (file_name == 'README.md'): continue
 
@@ -89,6 +88,8 @@ for file_name in os.listdir(example_jsons_path):
                 name = 'TTP'
             else:
                 name = name.capitalize()
+
+            seen_classes.add(name)
 
             line_1 = f"Class {name} {color_map[name]}" + " {\n"
             class_lines.append(line_1)
@@ -127,7 +128,9 @@ for file_name in os.listdir(example_jsons_path):
             file_lines.extend(class_lines)
 
     # add relationships and the enduml before finishing
-    file_lines.append(relationships)
+    for r in relationships:
+        if (r[0] in seen_classes and r[1] in seen_classes):
+            file_lines.extend(relationships[r])
     file_lines.append("@enduml")
 
     new_f = open(f"UML/source/{file_name[:-5]}.wsd", "w")
