@@ -341,33 +341,22 @@ Class TTP #A456ED {
 to meet in China. 
 ---
 }
-
-
-    Insider --o{ Accomplice
-    Incident --|{ Insider : commits <
-    Accomplice |o--o{ Job
-    Job }o--o| Organization : employs <
-    Insider |o--o{ Job
-    Organization }o--o| Incident
-    Organization }o-- OrgRelationship
-    OrgRelationship --o{ Organization
-    Insider }o--o| Sponsor
-    Accomplice }o--o| Sponsor
-    Insider }o..o{ Organization : OrgOwner >
-    Accomplice }o..o{ Organization : OrgOwner >
-    Insider -- Collusion
-    Collusion -- Insider
-    Incident --o{ Impact
-    Incident --o{ Target
-    Incident --o{ Source
-    Incident --o{ Note
-    CourtCase ||--o{ Charge
-    CourtCase ||--o{ Sentence
-    Incident --o| Detection
-    Incident --o| Response
-    Response ||--o| LegalResponse
-    LegalResponse ||--o{ CourtCase
-    Organization --o{ Stressor
-    Stressor }o-- Insider
-    Incident --o{ TTP
+Incident --|{ Insider : commits <
+Job }o--o| Organization : employs <
+Insider |o--o{ Job
+Organization }o--o| Incident
+Insider }o--o| Sponsor
+Insider }o..o{ Organization
+Incident --o{ Impact
+Incident --o{ Target
+Incident --o{ Source
+CourtCase ||--o{ Charge
+CourtCase ||--o{ Sentence
+Incident --o| Detection
+Incident --o| Response
+Response ||--o| LegalResponse
+LegalResponse ||--o{ CourtCase
+Organization --o{ Stressor
+Stressor }o-- Insider
+Incident --o{ TTP
 @enduml
