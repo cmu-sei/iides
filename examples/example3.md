@@ -17,8 +17,8 @@ The case was settled out of court, and no formal determination of guilt was made
   - Data Stolen (*DS*) &mdash; Any organizational information or assets that are stolen.
   - Monetary Losses (*ML*) &mdash; Indirect loss of money through damage, detriment, or suffering related to the incident.
 - **`Status`**: Closed (*C*) &mdash; All investigations and legal proceedings are closed.
-- **`Summary`**: The case involved Waymo, a self-driving car company spun off from Google, accusing Uber, through its acquisition of Otto, of stealing trade secrets related to LiDAR technology. The lawsuit claimed that Anthony Levandowski, a former Google engineer, downloaded thousands of files related to Waymoâ€™s self-driving technology before leaving to start Otto, which was soon acquired by Uber.
-- **`Brief summary`**: Waymo sued Uber for intellectual property theft, claiming that ex-Google engineer Anthony Levandowski stole LiDAR technology secrets before joining Uber. The case was settled with Uber agreeing to not use Waymoâ€™s technology and paying equity worth approximately $245 million.
+- **`Summary`**: The case involved Waymo, a self-driving car company spun off from Google, accusing Uber, through its acquisition of Otto, of stealing trade secrets related to LiDAR technology. The lawsuit claimed that Anthony Levandowski, a former Google engineer, downloaded thousands of files related to Waymo’s self-driving technology before leaving to start Otto, which was soon acquired by Uber.
+- **`Brief summary`**: Waymo sued Uber for intellectual property theft, claiming that ex-Google engineer Anthony Levandowski stole LiDAR technology secrets before joining Uber. The case was settled with Uber agreeing to not use Waymo’s technology and paying equity worth approximately $245 million.
 
 ## Insider
 
@@ -154,10 +154,11 @@ Levandowski downloaded over 14,000 files before leaving the company to found his
 A third party investigator was hired to look into the matter after an engineer at Waymo found Uber's autonomous vehicle sensors drastically similar to those developed by Waymo.
 
 - **`Id`**: response--9923bad0-25bb-474a-bff7-4b23bfb3e240
-- **`Investigated by`**:
- ['99', '2']
-- **`Investigation events`**:
- [['2', '2016-11-00']]
+- **`Investigated by`**: 
+  - Other (*99*) &mdash; Other investigator not lised in this vocabulary.
+  - Management (*2*) &mdash; Management internal to the organization.
+- **`Investigation events`**: 
+  - Evidence Found (*['2', '2016-11-00']*) &mdash; Evidence relevant to the incident is found. E.g., Fellow employee found a USB drive left in the insider's computer that had sensitive company files downloaded on to it.
 
 ## Court-case
 

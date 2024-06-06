@@ -124,10 +124,11 @@ Reality Winner was caught after the NSA identified that a classified document pu
 
 
 - **`Id`**: response--ab3c9833-1e6a-426a-9e48-6f74bcbc5778
-- **`Investigated by`**:
- ['4']
-- **`Investigation events`**:
- [['1', '2017-05-17'], ['3', '2017-05-03']]
+- **`Investigated by`**: 
+  - Law Enforcement - Federal (*4*) &mdash; Federal law enforcement entity such as the FBI or USSS.
+- **`Investigation events`**: 
+  - Insider's Residence/Workplace Searched (*['1', '2017-05-17']*) &mdash; Investigators search the insider's home or workplace for evidence related to the incident.
+  - Insider Admits to Activity in Interview (*['3', '2017-05-03']*) &mdash; Insider admits to involvement in insider incident while being interviewed by investigators about the incident (or related activity).
 
 ## Court-case
 
@@ -230,31 +231,9 @@ The exact date of hire and departure is unknown, but the month and year are corr
 - **`Tactic`**: Data Exfiltration (*7*) &mdash; Data (or copies of data) is removed from the organization without permission or explicitly against permission to use in an unauthorized way.
 - **`Technique`**: Email (*7.3*) &mdash; Insider exfiltrates data through electronic mail (e.g., Insider e-mailed confidential information to competitor).
 - **`Location`**: 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - On-site (*1*) &mdash; Action taken while on-site at an organizational facility.
 - **`Hours`**: 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - During Work Hours (*1*) &mdash; Insider took the action during their normal working hours.
 - **`Device`**: 
   - Company Desktop (*1*) &mdash; Organization owned desktop workstation.
   - Printer/Copier/Fax (*9*) &mdash; Printer, copier, or fax machine.
