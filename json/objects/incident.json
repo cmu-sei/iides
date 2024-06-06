@@ -211,57 +211,57 @@
     "incident-subtype-vocab": {
       "anyOf": [
         {
-          "const": "F1",
+          "const": "F.1",
           "title": "Embezzlement",
           "description": "The fraudulent appropriation of the organization's property (financial or otherwise) by someone who has been entrusted with its possession."
         },
         {
-          "const": "F2",
+          "const": "F.2",
           "title": "Corruption",
           "description": "Conflict of interest, bribery, illegal gratuities, and economic extortion."
         },
         {
-          "const": "F3",
+          "const": "F.3",
           "title": "False Statements",
           "description": "Knowingly and willfully making false or fraudulent statements, or concealing information."
         },
         {
-          "const": "S1",
+          "const": "S.1",
           "title": "Virtual",
           "description": "Taking malicious actions through technical means to disrupt or stop an organization's normal business operations."
         },
         {
-          "const": "S2",
+          "const": "S.2",
           "title": "Physical",
           "description": "Taking deliberate actions aimed at harming an organization's physical infrastructure (e.g., facilities or equipment)."
         },
         {
-          "const": "E1",
+          "const": "E.1",
           "title": "Intellectual Property Theft",
           "description": "Theft or robbery of an individual's or organization's ideas, inventions, or creative expressions, including trade secrets and proprietary products, even if the concepts or items being stolen originated from the thief."
         },
         {
-          "const": "E2",
+          "const": "E.2",
           "title": "Government",
           "description": "Covert intelligence-gathering activities to obtain government or military secrets for the benefit of another government to obtain political or military advantage."
         },
         {
-          "const": "V1",
+          "const": "V.1",
           "title": "Workplace Violence",
           "description": "Any action or threat of physical violence, harassment, sexual harassment, intimidation, bullying, offensive jokes, or other threatening behavior by a co-worker or associate that occurs in a person's place of employment or while a person is working."
         },
         {
-          "const": "V2",
+          "const": "V.2",
           "title": "Self Harm",
           "description": "An incident where an insider attempts, or indicates a desire to attempt, self harm or suicide."
         },
         {
-          "const": "U1",
+          "const": "U.1",
           "title": "Negligence",
           "description": "Threat caused by carelessness. Negligent insiders are generally familiar with security and/or IT policies but choose to ignore them, creating risk for the organization."
         },
         {
-          "const": "U2",
+          "const": "U.2",
           "title": "Accidental",
           "description": "An incident of this type results from an insider mistakenly causing an unintended risk to an organization."
         }
