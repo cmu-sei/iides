@@ -43,7 +43,7 @@ def find_schema(schema_paths, target_tag):
     for path in schema_paths:
         name = path[path.rfind("\\")+1:]
         if name == target_tag + '.json':
-            with open(path, "r", encoding='utf-8') as schema_file:
+            with open(path, "r", encoding='utf-16') as schema_file:
                 return json.load(schema_file)
     return None
 
@@ -203,7 +203,7 @@ if __name__ == "__main__":
     for filename in json_examples:
         file_lines = []
 
-        with open(filename, 'r', encoding='utf-8') as f:
+        with open(filename, 'r', encoding='utf-16') as f:
             example_data = json.load(f)
 
         # Example Number
@@ -242,7 +242,7 @@ if __name__ == "__main__":
 
         # Write output to markdown file
         new_path = os.path.split(filename)[-1][:-5]
-        f = open(f"{DOCUMENTATION_PATH}/{new_path}.md", "w", encoding="utf-8")
+        f = open(f"{DOCUMENTATION_PATH}/{new_path}.md", "w", encoding="utf-16")
         f.writelines([line + '\n' for line in file_lines])
         f.close()
         print("Successfuly made markdown: " + str(filename[:-5]))
