@@ -83,7 +83,7 @@ Class Incident #009647 {
 * id : incident--843c85b1-6f2d-4a64-a959-d9880905114f 
 + cia_effect : ['C']
 + incident_type : ['E']
-+ incident_subtype : ['E2']
++ incident_subtype : ['E.2']
 + outcome : ['DS', 'DR']
 + status : C 
 + summary : The insider was a former CIA officer. They were involved in a espionage case where 
@@ -299,7 +299,7 @@ Class TTP #A456ED {
 + ttp_vocab : IIDES 
 + tactic : 7 
 + technique : 1.6 
-+ location : remote 
++ location : 2 
 + hours : 2 
 + device : ['8']
 + channel : ['6']
@@ -316,7 +316,7 @@ Class TTP #A456ED {
 + ttp_vocab : IIDES 
 + tactic : 2 
 + technique : 2.1 
-+ location : remote 
++ location : 2 
 + hours : 2 
 + device : ['7']
 + channel : ['4']
@@ -333,7 +333,7 @@ Class TTP #A456ED {
 + ttp_vocab : IIDES 
 + tactic : 2 
 + technique : 2.1 
-+ location : remote 
++ location : 2 
 + hours : 2 
 + device : ['7']
 + channel : ['4']

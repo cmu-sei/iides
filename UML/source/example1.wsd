@@ -151,7 +151,7 @@ Class Incident #009647 {
 * id : incident--ef88113a-27a0-4a56-8f70-e8a5fd4541e6 
 + cia_effect : ['C']
 + incident_type : ['E']
-+ incident_subtype : ['E2']
++ incident_subtype : ['E.2']
 + outcome : ['DD', 'ML', 'SI', 'DR', 'DS']
 + status : C 
 + summary : Joshua Adam Schulte, a former CIA software engineer, leaked classified CIA documents known as Vault 

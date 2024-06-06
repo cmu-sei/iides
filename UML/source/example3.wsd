@@ -65,16 +65,16 @@ Class Incident #009647 {
 * id : incident--6e75f650-c1a5-4c71-8d2f-7e9d2bba0381 
 + cia_effect : ['C', 'I']
 + incident_type : ['E']
-+ incident_subtype : ['E1']
++ incident_subtype : ['E.1']
 + outcome : ['DS', 'ML']
 + status : C 
 + summary : The case involved Waymo, a self-driving car company spun off from Google, accusing Uber, through 
 its acquisition of Otto, of stealing trade secrets related to LiDAR technology. The lawsuit claimed 
-that Anthony Levandowski, a former Google engineer, downloaded thousands of files related to Waymo’s self-driving 
+that Anthony Levandowski, a former Google engineer, downloaded thousands of files related to Waymo's self-driving 
 technology before leaving to start Otto, which was soon acquired by Uber. 
 + brief_summary : Waymo sued Uber for intellectual property theft, claiming that ex-Google engineer Anthony Levandowski stole LiDAR 
 technology secrets before joining Uber. The case was settled with Uber agreeing to not use 
-Waymo’s technology and paying equity worth approximately $245 million. 
+Waymo's technology and paying equity worth approximately $245 million. 
 + comment : The case was settled out of court, and no formal determination of guilt was made 
 against Uber, but they agreed to a settlement to avoid the continuation of litigation. 
 ---
