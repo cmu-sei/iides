@@ -50,7 +50,7 @@ Class Incident #009647 {
 * id : incident--0e339a3d-37fa-455c-b818-7aae0e34a2a8 
 + cia_effect : ['C']
 + incident_type : ['E']
-+ incident_subtype : ['E2']
++ incident_subtype : ['E.2']
 + outcome : ['DR', 'DS']
 + status : C 
 + summary : The insider, an ex-Air Force member, worked as a translater for the National Security Agency 
@@ -284,8 +284,8 @@ Class TTP #A456ED {
 + ttp_vocab : IIDES 
 + tactic : 7 
 + technique : 7.3 
-+ location : on-site 
-+ hours : During work hours 
++ location : 1 
++ hours : 1 
 + device : ['1', '9']
 + channel : ['9']
 + description : Winner printed and improperly removed classified intelligence reporting. 

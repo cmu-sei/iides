@@ -78,18 +78,18 @@ Constants: `F`, `S`, `E`, `V`, `U`
 
 ### incident-subtype-vocab
 
-Constants: `F1`, `F2`, `F3`, `S1`, `S2`, `E1`, `E2`, `V1`, `V2`, `U1`, `U2`
+Constants: `F.1`, `F.2`, `F.3`, `S.1`, `S.2`, `E.1`, `E.2`, `V.1`, `V.2`, `U.1`, `U.2`
 
 | Const | Value | Description |
 | --- | --- | --- |
-| F1 | Embezzlement | The fraudulent appropriation of the organization's property (financial or otherwise) by someone who has been entrusted with its possession.|
-| F2 | Corruption | Conflict of interest, bribery, illegal gratuities, and economic extortion.|
-| F3 | False Statements | Knowingly and willfully making false or fraudulent statements, or concealing information.|
-| S1 | Virtual | Taking malicious actions through technical means to disrupt or stop an organization's normal business operations.|
-| S2 | Physical | Taking deliberate actions aimed at harming an organization's physical infrastructure (e.g., facilities or equipment).|
-| E1 | Intellectual Property Theft | Theft or robbery of an individual's or organization's ideas, inventions, or creative expressions, including trade secrets and proprietary products, even if the concepts or items being stolen originated from the thief.|
-| E2 | Government | Covert intelligence-gathering activities to obtain government or military secrets for the benefit of another government to obtain political or military advantage.|
-| V1 | Workplace Violence | Any action or threat of physical violence, harassment, sexual harassment, intimidation, bullying, offensive jokes, or other threatening behavior by a co-worker or associate that occurs in a person's place of employment or while a person is working.|
-| V2 | Self Harm | An incident where an insider attempts, or indicates a desire to attempt, self harm or suicide.|
-| U1 | Negligence | Threat caused by carelessness. Negligent insiders are generally familiar with security and/or IT policies but choose to ignore them, creating risk for the organization.|
-| U2 | Accidental | An incident of this type results from an insider mistakenly causing an unintended risk to an organization.|
+| F.1 | Embezzlement | The fraudulent appropriation of the organization's property (financial or otherwise) by someone who has been entrusted with its possession.|
+| F.2 | Corruption | Conflict of interest, bribery, illegal gratuities, and economic extortion.|
+| F.3 | False Statements | Knowingly and willfully making false or fraudulent statements, or concealing information.|
+| S.1 | Virtual | Taking malicious actions through technical means to disrupt or stop an organization's normal business operations.|
+| S.2 | Physical | Taking deliberate actions aimed at harming an organization's physical infrastructure (e.g., facilities or equipment).|
+| E.1 | Intellectual Property Theft | Theft or robbery of an individual's or organization's ideas, inventions, or creative expressions, including trade secrets and proprietary products, even if the concepts or items being stolen originated from the thief.|
+| E.2 | Government | Covert intelligence-gathering activities to obtain government or military secrets for the benefit of another government to obtain political or military advantage.|
+| V.1 | Workplace Violence | Any action or threat of physical violence, harassment, sexual harassment, intimidation, bullying, offensive jokes, or other threatening behavior by a co-worker or associate that occurs in a person's place of employment or while a person is working.|
+| V.2 | Self Harm | An incident where an insider attempts, or indicates a desire to attempt, self harm or suicide.|
+| U.1 | Negligence | Threat caused by carelessness. Negligent insiders are generally familiar with security and/or IT policies but choose to ignore them, creating risk for the organization.|
+| U.2 | Accidental | An incident of this type results from an insider mistakenly causing an unintended risk to an organization.|

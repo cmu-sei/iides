@@ -171,6 +171,13 @@ if __name__ == "__main__":
             file_lines.extend(get_vocab(data['$defs']))
 
         # Write output to markdown file
-        f = open(f"{DOCUMENTATION_PATH}/{filename[filename.rfind('/json/')+5:-5]}.md", "w")
-        f.writelines([line + '\n' for line in file_lines])
-        f.close()
+        relative_path = os.path.relpath(filename, JSON_PATH)
+        markdown_filename = os.path.splitext(relative_path)[0] + '.md'
+        markdown_filepath = os.path.join(DOCUMENTATION_PATH, markdown_filename)
+
+        os.makedirs(os.path.dirname(markdown_filepath), exist_ok=True)
+
+        with open(markdown_filepath, "w", encoding="utf-8") as f:
+            f.writelines([line + '\n' for line in file_lines])
+
+        print("Successfully made markdown: " + markdown_filename)
