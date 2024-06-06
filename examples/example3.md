@@ -17,8 +17,8 @@ The case was settled out of court, and no formal determination of guilt was made
   - Data Stolen (*DS*) &mdash; Any organizational information or assets that are stolen.
   - Monetary Losses (*ML*) &mdash; Indirect loss of money through damage, detriment, or suffering related to the incident.
 - **`Status`**: Closed (*C*) &mdash; All investigations and legal proceedings are closed.
-- **`Summary`**: The case involved Waymo, a self-driving car company spun off from Google, accusing Uber, through its acquisition of Otto, of stealing trade secrets related to LiDAR technology. The lawsuit claimed that Anthony Levandowski, a former Google engineer, downloaded thousands of files related to Waymo’s self-driving technology before leaving to start Otto, which was soon acquired by Uber.
-- **`Brief summary`**: Waymo sued Uber for intellectual property theft, claiming that ex-Google engineer Anthony Levandowski stole LiDAR technology secrets before joining Uber. The case was settled with Uber agreeing to not use Waymo’s technology and paying equity worth approximately $245 million.
+- **`Summary`**: The case involved Waymo, a self-driving car company spun off from Google, accusing Uber, through its acquisition of Otto, of stealing trade secrets related to LiDAR technology. The lawsuit claimed that Anthony Levandowski, a former Google engineer, downloaded thousands of files related to Waymo's self-driving technology before leaving to start Otto, which was soon acquired by Uber.
+- **`Brief summary`**: Waymo sued Uber for intellectual property theft, claiming that ex-Google engineer Anthony Levandowski stole LiDAR technology secrets before joining Uber. The case was settled with Uber agreeing to not use Waymo's technology and paying equity worth approximately $245 million.
 
 ## Insider
 

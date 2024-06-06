@@ -41,27 +41,55 @@ def get_vocab(items, field, schema):
     """
     ret_val = ""
 
+    # Function to fetch vocab array from schema definitions
+    def get_vocab_array(ref_path, defs, key='oneOf'):
+        try:
+            return defs[ref_path[ref_path.rfind('/') + 1:]][key]
+        except KeyError:
+            return []
+
     # Tuple case
     if isinstance(items, list):
         refs = []
         for elems in schema['properties'][field]['items']['prefixItems']:
             if '$ref' in elems:
                 refs.append(elems['$ref'])
-        try:
-            for ref in refs:
-                defs = schema['$defs']
-                ref_path = ref
-                vocab_array = defs[ref_path[ref_path.rfind('/')+1:]]['oneOf']
-                count = 0
-                for vocab_object in vocab_array:
-                    if vocab_object['const'] == items[0]:
-                        ret_val = ret_val + f"{vocab_object['title']} (*{items}*) &mdash; {vocab_object['description']}"
-                        count +=1
-        except:
-            vocab_array = []
+        
+        for ref in refs:
+            vocab_array = get_vocab_array(ref, schema['$defs'])
+            for vocab_object in vocab_array:
+                if vocab_object.get('const') == items[0]:
+                    ret_val += f"{vocab_object['title']} (*{items}*) &mdash; {vocab_object['description']}"
+        if not ret_val:
             print(f"Error: could not get vocab: {items}\n")
         return ret_val
-    
+
+    try:
+        ref_path = schema['properties'][field]['$ref']
+        vocab_array = get_vocab_array(ref_path, schema['$defs'])
+        for vocab_object in vocab_array:
+            if vocab_object.get('const') == items:
+                ret_val = f"{vocab_object['title']} (*{items}*) &mdash; {vocab_object['description']}"
+                break
+        if not ret_val:
+            ret_val = items
+            print(f"Error: could not get vocab: {items}\n")
+    except KeyError:
+        try:
+            ref_path = schema['properties'][field]['items']['$ref']
+            vocab_array = get_vocab_array(ref_path, schema['$defs'], 'anyOf')
+            if not vocab_array:
+                vocab_array = get_vocab_array(ref_path, schema['$defs'])
+            for vocab_object in vocab_array:
+                if vocab_object.get('const') == items:
+                    ret_val = f"{vocab_object['title']} (*{items}*) &mdash; {vocab_object['description']}"
+                    break
+            if not ret_val:
+                print(f"Error: could not get vocab: {items}\n")
+        except KeyError:
+            print(f"Error: could not get vocab: {items}\n")
+
+    return ret_val
 
     try: #string case
         ref_path = schema['properties'][field]['$ref']
