@@ -6,16 +6,16 @@
 - **`Id`**:
  incident--0e339a3d-37fa-455c-b818-7aae0e34a2a8
 - **`Cia effect`**:
-   - Confidentiality (*C*) - The protection of information from unauthorized access or disclosure.
+   - Confidentiality (*C*) &mdash; The protection of information from unauthorized access or disclosure.
 - **`Incident type`**:
-   - Espionage (*E*) - The covert or illicit practice of spying on a foreign government, organization, entity, or person to obtain confidential information for military, political, strategic, or financial advantage.
+   - Espionage (*E*) &mdash; The covert or illicit practice of spying on a foreign government, organization, entity, or person to obtain confidential information for military, political, strategic, or financial advantage.
 - **`Incident subtype`**:
-   - Government (*E.2*) - Covert intelligence-gathering activities to obtain government or military secrets for the benefit of another government to obtain political or military advantage.
+   - Government (*E.2*) &mdash; Covert intelligence-gathering activities to obtain government or military secrets for the benefit of another government to obtain political or military advantage.
 - **`Outcome`**:
-   - Data Read (*DR*) - Organizational data was read by the insider.
-  - Data Stolen (*DS*) - Any organizational information or assets that are stolen.
+   - Data Read (*DR*) &mdash; Organizational data was read by the insider.
+  - Data Stolen (*DS*) &mdash; Any organizational information or assets that are stolen.
 - **`Status`**:
- Closed (*C*) - All investigations and legal proceedings are closed.
+ Closed (*C*) &mdash; All investigations and legal proceedings are closed.
 - **`Summary`**:
  The insider, an ex-Air Force member, worked as a translater for the National Security Agency in May 2017. During this time, she printed a report from her work computer that detailed hacking attempts by a Russian intelligence service against local election officers and voter registration databases. She then shared this Top Secret information with an online news outlet. This report revealed the sources and methods used to acquire the information contained on the report, which, if disclosed, could be harmful to the United States. The FBI investigated and later arrested the insider in June 2017. The insider pleaded guilty in June 2018 to one felony count of unauthorized transmission of national defense information and was convicted.
 - **`Brief summary`**:
@@ -28,9 +28,9 @@ The insider previously had a very clean record, and was an unlikely suspect. The
 - **`Id`**:
  insider--04548271-8e9f-4e40-8bad-9cf77c858070
 - **`Incident role`**:
- Primary (*1*) - Insider is the primary perpetrator of the incident.
+ Primary (*1*) &mdash; Insider is the primary perpetrator of the incident.
 - **`Motive`**:
-   - Freedom of Information (*6*) - The insider held the belief that it is in the best interest of the public to share the victim organization's confidential information with the public. E.g., sharing unfavorable test results of a product or unfavorable information about an organization's internal practices.
+   - Freedom of Information (*6*) &mdash; The insider held the belief that it is in the best interest of the public to share the victim organization's confidential information with the public. E.g., sharing unfavorable test results of a product or unfavorable information about an organization's internal practices.
 - **`Substance use during incident`**:
  False
 - **`First name`**:
@@ -81,15 +81,15 @@ The insider previously had a very clean record, and was an unlikely suspect. The
 - **`Small business`**:
  False
 - **`Industry sector`**:
- Public Administration (*92*) - Federal/State/Local administration and the oversight of public programs.
+ Public Administration (*92*) &mdash; Federal/State/Local administration and the oversight of public programs.
 - **`Industry subsector`**:
- National Security (*92.811*) - This industry comprises government establishments of the Armed Forces, including the National Guard, primarily engaged in national security and related activities.
+ National Security (*92.811*) &mdash; This industry comprises government establishments of the Armed Forces, including the National Guard, primarily engaged in national security and related activities.
 - **`Business`**:
  The National Security Agency (NSA) is a critical player in the U.S. intelligence community. Its primary function is to gather and analyze foreign signals intelligence (SIGINT) to protect national security.
 - **`Parent company`**:
  United States Department of Defense
 - **`Incident role`**:
- Primary Victim (*V*) - The organization was the primary victim organization of the insider's actions.
+ Primary Victim (*V*) &mdash; The organization was the primary victim organization of the insider's actions.
 
 ## Organization
 
@@ -108,13 +108,13 @@ The insider previously had a very clean record, and was an unlikely suspect. The
 - **`Small business`**:
  True
 - **`Industry sector`**:
- Professional Services, Scientific and Technical Services (*54*) - Services provided by trained professionals in specialized fields.
+ Professional Services, Scientific and Technical Services (*54*) &mdash; Services provided by trained professionals in specialized fields.
 - **`Industry subsector`**:
- Professional, Scientific, and Technical Services (*54.1*) - The Professional, Scientific, and Technical Services sector comprises establishments that specialize in performing professional, scientific, and technical activities for others. These activities require a high degree of expertise and training. The establishments in this sector specialize according to expertise and provide these services to clients in a variety of industries and, in some cases, to households.
+ Professional, Scientific, and Technical Services (*54.1*) &mdash; The Professional, Scientific, and Technical Services sector comprises establishments that specialize in performing professional, scientific, and technical activities for others. These activities require a high degree of expertise and training. The establishments in this sector specialize according to expertise and provide these services to clients in a variety of industries and, in some cases, to households.
 - **`Business`**:
  Pluribus International Corporation is a defense and intelligence contractor providing analysis, intelligence, and security services to various U.S. government agencies.
 - **`Incident role`**:
- Other (*O*) - Other role not described by this vocabulary.
+ Other (*O*) &mdash; Other role not described by this vocabulary.
 
 ## Detection
 
@@ -125,12 +125,12 @@ Reality Winner was caught after the NSA identified that a classified document pu
 - **`First detected`**:
  2017-04-23T18:25:43.511Z
 - **`Who detected`**:
-   - Law Enforcement (*LE*) - Law enforcement discovered the insider's illegal activity (e.g., Police noticed that the insider was gaining access to the company after hours).
+   - Law Enforcement (*LE*) &mdash; Law enforcement discovered the insider's illegal activity (e.g., Police noticed that the insider was gaining access to the company after hours).
 - **`Detected method`**:
-   - Technical Means (*2*) - The insider's activity was detected via analysis or anomalies in technical systems and software.
+   - Technical Means (*2*) &mdash; The insider's activity was detected via analysis or anomalies in technical systems and software.
 - **`Logs`**:
-   - Access Logs (*AC*) - File or system access logs.
-  - Email Logs (*EM*) - Logs from email servers or services.
+   - Access Logs (*AC*) &mdash; File or system access logs.
+  - Email Logs (*EM*) &mdash; Logs from email servers or services.
 
 ## Impact
 
@@ -141,7 +141,7 @@ Reality Winner was caught after the NSA identified that a classified document pu
 - **`Low`**:
  1
 - **`Metric`**:
- Documents (*4*) - The number of physical or digital documents effected (stolen, deleted, modified, etc.).
+ Documents (*4*) &mdash; The number of physical or digital documents effected (stolen, deleted, modified, etc.).
 - **`Estimated`**:
  False
 
@@ -150,17 +150,17 @@ Reality Winner was caught after the NSA identified that a classified document pu
 - **`Id`**:
  target--c482c487-5bb4-4dee-abdf-2e0c207a81bd
 - **`Asset type`**:
- Information (*2*) - Data/business materials which contain important details belonging to a specific target owner.
+ Information (*2*) &mdash; Data/business materials which contain important details belonging to a specific target owner.
 - **`Category`**:
- Government/Law Enforcement Information (*2.3*) - Classified or sensitive government or law enforcement information.
+ Government/Law Enforcement Information (*2.3*) &mdash; Classified or sensitive government or law enforcement information.
 - **`Subcategory`**:
- Classified Information (*2.3.1*) - Information that is restricted by the government for reasons of national security.
+ Classified Information (*2.3.1*) &mdash; Information that is restricted by the government for reasons of national security.
 - **`Format`**:
- Physical (*2*) - Tangible real world format.
+ Physical (*2*) &mdash; Tangible real world format.
 - **`Owner`**:
- Organization (*O*) - The organization, rather than its employees or customers owns the target.
+ Organization (*O*) &mdash; The organization, rather than its employees or customers owns the target.
 - **`Sensitivity`**:
-   - Top Secret (TS) (*6*) - Top secret, unauthorized disclosure would cause exceptionally grave damage to national security
+   - Top Secret (TS) (*6*) &mdash; Top secret, unauthorized disclosure would cause exceptionally grave damage to national security
 
 ## Response
 
@@ -169,10 +169,10 @@ Reality Winner was caught after the NSA identified that a classified document pu
 - **`Id`**:
  response--ab3c9833-1e6a-426a-9e48-6f74bcbc5778
 - **`Investigated by`**:
-   - Law Enforcement - Federal (*4*) - Federal law enforcement entity such as the FBI or USSS.
+   - Law Enforcement - Federal (*4*) &mdash; Federal law enforcement entity such as the FBI or USSS.
 - **`Investigation events`**:
-   - Insider's Residence/Workplace Searched (*['1', '2017-05-17']*) - Investigators search the insider's home or workplace for evidence related to the incident.
-  - Insider Admits to Activity in Interview (*['3', '2017-05-03']*) - Insider admits to involvement in insider incident while being interviewed by investigators about the incident (or related activity).
+   - Insider's Residence/Workplace Searched (*['1', '2017-05-17']*) &mdash; Investigators search the insider's home or workplace for evidence related to the incident.
+  - Insider Admits to Activity in Interview (*['3', '2017-05-03']*) &mdash; Insider admits to involvement in insider incident while being interviewed by investigators about the incident (or related activity).
 
 ## Court-case
 
@@ -191,9 +191,9 @@ Reality Winner was caught after the NSA identified that a classified document pu
 - **`Court district`**:
  Southern District Court of Georgia
 - **`Court type`**:
- State (*3*) - State or regional level government court.
+ State (*3*) &mdash; State or regional level government court.
 - **`Case type`**:
- Criminal (*2*) - A case dealing with a violation of criminal law.
+ Criminal (*2*) &mdash; A case dealing with a violation of criminal law.
 - **`Defendant`**:
    - Reality Winner
 - **`Plaintiff`**:
@@ -212,22 +212,22 @@ Reality Winner was caught after the NSA identified that a classified document pu
 - **`Count`**:
  1
 - **`Plea`**:
- Guilty (*1*) - The defendant pleaed guilty to a charge.
+ Guilty (*1*) &mdash; The defendant pleaed guilty to a charge.
 - **`Plea bargain`**:
  True
 - **`Disposition`**:
- Convicted (*2*) - Plead or been found guilty by a court.
+ Convicted (*2*) &mdash; Plead or been found guilty by a court.
 
 ## Sentence
 
 - **`Id`**:
  sentence--73e8e020-5ce6-4acb-94ea-7ff3d6f1bcc5
 - **`Sentence type`**:
- Incarceration (*9*) - Imprisonment.
+ Incarceration (*9*) &mdash; Imprisonment.
 - **`Quantity`**:
  63
 - **`Metric`**:
- Month(s) (*3*) - Imposed sentence is in terms of months. E.g. 18 months imprisonment.
+ Month(s) (*3*) &mdash; Imposed sentence is in terms of months. E.g. 18 months imprisonment.
 - **`Concurrency`**:
  False
 
@@ -236,11 +236,11 @@ Reality Winner was caught after the NSA identified that a classified document pu
 - **`Id`**:
  sentence--73e8e020-5ce6-4acb-94ea-7ff3d6f1bcb6
 - **`Sentence type`**:
- Supervised Release (*16*) - Defendant is released into the community, subject to special conditions and restrictions, after the completion of a prison sentence.
+ Supervised Release (*16*) &mdash; Defendant is released into the community, subject to special conditions and restrictions, after the completion of a prison sentence.
 - **`Quantity`**:
  3
 - **`Metric`**:
- Year(s) (*4*) - Imposed sentence is in terms of years. E.g. 5 years no Internet access.
+ Year(s) (*4*) &mdash; Imposed sentence is in terms of years. E.g. 5 years no Internet access.
 - **`Concurrency`**:
  False
 
@@ -268,17 +268,17 @@ The exact date of hire and departure is unknown, but the month and year are corr
 - **`Id`**:
  job--11492807-43a6-4e50-9480-b26ecaca983d
 - **`Job function`**:
- Military Specific (*55*) - Military Specific
+ Military Specific (*55*) &mdash; Military Specific
 - **`Occupation`**:
- Military Enlisted Tactical Operations, Specialists, and Crew Members (*55.3*) - Crew Members, Specialists, Infantry, Special Forces, etc.
+ Military Enlisted Tactical Operations, Specialists, and Crew Members (*55.3*) &mdash; Crew Members, Specialists, Infantry, Special Forces, etc.
 - **`Title`**:
  Linguist
 - **`Position technical`**:
  False
 - **`Access authorization`**:
- Authorized Account Only (*4*) - Authorized account but not authorized access to targeted data.
+ Authorized Account Only (*4*) &mdash; Authorized account but not authorized access to targeted data.
 - **`Employment type`**:
- Contractor (*CTR*) - Individual not directly employed by the organization whose job responsibilities they filling (self-employed or employed by a different, contracting organization).
+ Contractor (*CTR*) &mdash; Individual not directly employed by the organization whose job responsibilities they filling (self-employed or employed by a different, contracting organization).
 - **`Hire date`**:
  2017-02-01
 - **`Departure date`**:
@@ -301,18 +301,18 @@ The exact date of hire and departure is unknown, but the month and year are corr
 - **`Ttp vocab`**:
  IIDES
 - **`Tactic`**:
- Data Exfiltration (*7*) - Data (or copies of data) is removed from the organization without permission or explicitly against permission to use in an unauthorized way.
+ Data Exfiltration (*7*) &mdash; Data (or copies of data) is removed from the organization without permission or explicitly against permission to use in an unauthorized way.
 - **`Technique`**:
- Paper (*7.1*) - Insider exfiltrates data through printed or hand-written materials (e.g., Insider takes screenshots of important data, prints the screenshots, and walks out of work with them).
+ Paper (*7.1*) &mdash; Insider exfiltrates data through printed or hand-written materials (e.g., Insider takes screenshots of important data, prints the screenshots, and walks out of work with them).
 - **`Location`**:
-   - On-site (*1*) - Action taken while on-site at an organizational facility.
+   - On-site (*1*) &mdash; Action taken while on-site at an organizational facility.
 - **`Hours`**:
-   - During Work Hours (*1*) - Insider took the action during their normal working hours.
+   - During Work Hours (*1*) &mdash; Insider took the action during their normal working hours.
 - **`Device`**:
-   - Company Desktop (*1*) - Organization owned desktop workstation.
-  - Printer/Copier/Fax (*9*) - Printer, copier, or fax machine.
+   - Company Desktop (*1*) &mdash; Organization owned desktop workstation.
+  - Printer/Copier/Fax (*9*) &mdash; Printer, copier, or fax machine.
 - **`Channel`**:
-   - Other (*9*) - Other type of channel not listed in this vocabulary.
+   - Other (*9*) &mdash; Other type of channel not listed in this vocabulary.
 - **`Description`**:
  Winner printed and improperly removed classified intelligence reporting.
 
@@ -331,18 +331,18 @@ The exact date of hire and departure is unknown, but the month and year are corr
 - **`Ttp vocab`**:
  IIDES
 - **`Tactic`**:
- Data Exfiltration (*7*) - Data (or copies of data) is removed from the organization without permission or explicitly against permission to use in an unauthorized way.
+ Data Exfiltration (*7*) &mdash; Data (or copies of data) is removed from the organization without permission or explicitly against permission to use in an unauthorized way.
 - **`Technique`**:
- Email (*7.3*) - Insider exfiltrates data through electronic mail (e.g., Insider e-mailed confidential information to competitor).
+ Email (*7.3*) &mdash; Insider exfiltrates data through electronic mail (e.g., Insider e-mailed confidential information to competitor).
 - **`Location`**:
-   - On-site (*1*) - Action taken while on-site at an organizational facility.
+   - On-site (*1*) &mdash; Action taken while on-site at an organizational facility.
 - **`Hours`**:
-   - During Work Hours (*1*) - Insider took the action during their normal working hours.
+   - During Work Hours (*1*) &mdash; Insider took the action during their normal working hours.
 - **`Device`**:
-   - Company Desktop (*1*) - Organization owned desktop workstation.
-  - Printer/Copier/Fax (*9*) - Printer, copier, or fax machine.
+   - Company Desktop (*1*) &mdash; Organization owned desktop workstation.
+  - Printer/Copier/Fax (*9*) &mdash; Printer, copier, or fax machine.
 - **`Channel`**:
-   - Other (*9*) - Other type of channel not listed in this vocabulary.
+   - Other (*9*) &mdash; Other type of channel not listed in this vocabulary.
 - **`Description`**:
  Winner printed and improperly removed classified intelligence reporting.
 
@@ -364,7 +364,7 @@ The exact date of hire and departure is unknown, but the month and year are corr
 - **`Title`**:
  United States v. Winner
 - **`Source type`**:
- Court Document (*1*) - Legal document from a court case.
+ Court Document (*1*) &mdash; Legal document from a court case.
 - **`File type`**:
  html
 - **`Date`**:
@@ -381,7 +381,7 @@ The exact date of hire and departure is unknown, but the month and year are corr
 - **`Title`**:
  CASE STUDY Unlawful Retention and Transmission of National Defense Information
 - **`Source type`**:
- Media (*5*) - News, blog, or similar publication.
+ Media (*5*) &mdash; News, blog, or similar publication.
 - **`File type`**:
  pdf
 - **`Date`**:
@@ -398,7 +398,7 @@ The exact date of hire and departure is unknown, but the month and year are corr
 - **`Title`**:
  USA v. Reality Leigh Winner, No. 20-11692 (11th Cir. 2020)
 - **`Source type`**:
- Court Document (*1*) - Legal document from a court case.
+ Court Document (*1*) &mdash; Legal document from a court case.
 - **`File type`**:
  pdf
 - **`Date`**:
@@ -415,7 +415,7 @@ The exact date of hire and departure is unknown, but the month and year are corr
 - **`Title`**:
  USA v. Reality Leigh Winner, No. 20-11692 (11th Cir. 2020)
 - **`Source type`**:
- DOJ Press Release (*2*) - Press release from the Department of Justice or US Attorneys' Office.
+ DOJ Press Release (*2*) &mdash; Press release from the Department of Justice or US Attorneys' Office.
 - **`File type`**:
  html
 - **`Date`**:
@@ -432,7 +432,7 @@ The exact date of hire and departure is unknown, but the month and year are corr
 - **`Title`**:
  Reality Winner, N.S.A. Contractor Accused of Leak, Was Undone by Trail of Clues
 - **`Source type`**:
- Media (*5*) - News, blog, or similar publication.
+ Media (*5*) &mdash; News, blog, or similar publication.
 - **`File type`**:
  html
 - **`Date`**:
@@ -449,7 +449,7 @@ The exact date of hire and departure is unknown, but the month and year are corr
 - **`Title`**:
  Reality Winner, Former N.S.A. Translator, Gets More Than 5 Years in Leak of Russian Hacking Report
 - **`Source type`**:
- Media (*5*) - News, blog, or similar publication.
+ Media (*5*) &mdash; News, blog, or similar publication.
 - **`File type`**:
  html
 - **`Date`**:
@@ -466,7 +466,7 @@ The exact date of hire and departure is unknown, but the month and year are corr
 - **`Title`**:
  Original Court Documents: US v. Reality Leigh Winner
 - **`Source type`**:
- Court Document (*1*) - Legal document from a court case.
+ Court Document (*1*) &mdash; Legal document from a court case.
 - **`File type`**:
  pdf
 - **`Date`**:
