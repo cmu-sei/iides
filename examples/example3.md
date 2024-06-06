@@ -8,17 +8,17 @@ The case was settled out of court, and no formal determination of guilt was made
 - **`Id`**:
  incident--6e75f650-c1a5-4c71-8d2f-7e9d2bba0381
 - **`Cia effect`**:
-   - Confidentiality (*C*) &mdash; The protection of information from unauthorized access or disclosure.
-  - Integrity (*I*) &mdash; The protection of information from unauthorized modification or destruction.
+   - Confidentiality (*C*) - The protection of information from unauthorized access or disclosure.
+  - Integrity (*I*) - The protection of information from unauthorized modification or destruction.
 - **`Incident type`**:
-   - Espionage (*E*) &mdash; The covert or illicit practice of spying on a foreign government, organization, entity, or person to obtain confidential information for military, political, strategic, or financial advantage.
+   - Espionage (*E*) - The covert or illicit practice of spying on a foreign government, organization, entity, or person to obtain confidential information for military, political, strategic, or financial advantage.
 - **`Incident subtype`**:
-   - Intellectual Property Theft (*E1*) &mdash; Theft or robbery of an individual's or organization's ideas, inventions, or creative expressions, including trade secrets and proprietary products, even if the concepts or items being stolen originated from the thief.
+   - Intellectual Property Theft (*E.1*) - Theft or robbery of an individual's or organization's ideas, inventions, or creative expressions, including trade secrets and proprietary products, even if the concepts or items being stolen originated from the thief.
 - **`Outcome`**:
-   - Data Stolen (*DS*) &mdash; Any organizational information or assets that are stolen.
-  - Monetary Losses (*ML*) &mdash; Indirect loss of money through damage, detriment, or suffering related to the incident.
+   - Data Stolen (*DS*) - Any organizational information or assets that are stolen.
+  - Monetary Losses (*ML*) - Indirect loss of money through damage, detriment, or suffering related to the incident.
 - **`Status`**:
- Closed (*C*) &mdash; All investigations and legal proceedings are closed.
+ Closed (*C*) - All investigations and legal proceedings are closed.
 - **`Summary`**:
  The case involved Waymo, a self-driving car company spun off from Google, accusing Uber, through its acquisition of Otto, of stealing trade secrets related to LiDAR technology. The lawsuit claimed that Anthony Levandowski, a former Google engineer, downloaded thousands of files related to Waymo's self-driving technology before leaving to start Otto, which was soon acquired by Uber.
 - **`Brief summary`**:
@@ -31,10 +31,10 @@ Anthony Levandowski's actions of transferring confidential files from Waymo to h
 - **`Id`**:
  insider--2fe80494-c7cf-4d75-85ef-736b55884664
 - **`Incident role`**:
- Primary (*1*) &mdash; Insider is the primary perpetrator of the incident.
+ Primary (*1*) - Insider is the primary perpetrator of the incident.
 - **`Motive`**:
-   - Competitive Business Advantage (*3*) &mdash; Insider committed their attack in order to gain a business advantage for a competing company. Often, this is the insider starting their own company.
-  - Financial Gain (*5*) &mdash; Insider committed their attack to make a profit.
+   - Competitive Business Advantage (*3*) - Insider committed their attack in order to gain a business advantage for a competing company. Often, this is the insider starting their own company.
+  - Financial Gain (*5*) - Insider committed their attack to make a profit.
 - **`Substance use during incident`**:
  False
 - **`First name`**:
@@ -66,10 +66,10 @@ Anthony Levandowski's actions of transferring confidential files from Waymo to h
 - **`Number of children`**:
  2
 - **`Concerning behaviors`**:
-   - Technical Policy Abuse (*['3.2', '3.2.4']*) &mdash; Violating policies regarding the use of the organization's IT systems.
-  - Technical Policy Abuse (*['3.2', '3.2.3']*) &mdash; Violating policies regarding the use of the organization's IT systems.
-  - Organizational Conflict (*['3.5', '3.5.1']*) &mdash; Competitive conflicts of interest with the organization.
-  - Organizational Conflict (*['3.5', '3.5.2']*) &mdash; Competitive conflicts of interest with the organization.
+   - Technical Policy Abuse (*['3.2', '3.2.4']*) - Violating policies regarding the use of the organization's IT systems.
+  - Technical Policy Abuse (*['3.2', '3.2.3']*) - Violating policies regarding the use of the organization's IT systems.
+  - Organizational Conflict (*['3.5', '3.5.1']*) - Competitive conflicts of interest with the organization.
+  - Organizational Conflict (*['3.5', '3.5.2']*) - Competitive conflicts of interest with the organization.
 
 ## Organization
 
@@ -88,15 +88,15 @@ Anthony Levandowski's actions of transferring confidential files from Waymo to h
 - **`Small business`**:
  False
 - **`Industry sector`**:
- Transportation and Warehousing (*48*) &mdash; Services directly or indirectly involved in the movement of people.
+ Transportation and Warehousing (*48*) - Services directly or indirectly involved in the movement of people.
 - **`Industry subsector`**:
- Transit and Ground Passenger Transportation (*48.5*) &mdash; This subsector includes industries providing passenger transportation, such as buses and taxis.
+ Transit and Ground Passenger Transportation (*48.5*) - This subsector includes industries providing passenger transportation, such as buses and taxis.
 - **`Business`**:
  Waymo operates as a self-driving technology company primarily involved in developing autonomous driving systems.
 - **`Parent company`**:
  Alphabet Inc.
 - **`Incident role`**:
- Primary Victim (*V*) &mdash; The organization was the primary victim organization of the insider's actions.
+ Primary Victim (*V*) - The organization was the primary victim organization of the insider's actions.
 
 ## Organization
 
@@ -115,13 +115,13 @@ Anthony Levandowski's actions of transferring confidential files from Waymo to h
 - **`Small business`**:
  False
 - **`Industry sector`**:
- Transportation and Warehousing (*48*) &mdash; Services directly or indirectly involved in the movement of people.
+ Transportation and Warehousing (*48*) - Services directly or indirectly involved in the movement of people.
 - **`Industry subsector`**:
- Transit and Ground Passenger Transportation (*48.5*) &mdash; This subsector includes industries providing passenger transportation, such as buses and taxis.
+ Transit and Ground Passenger Transportation (*48.5*) - This subsector includes industries providing passenger transportation, such as buses and taxis.
 - **`Business`**:
  Uber operates as a technology company offering ridesharing, food delivery, and transportation services globally, with a division focused on developing autonomous vehicle technology.
 - **`Incident role`**:
- Beneficiary (*B*) &mdash; The organization accepted trade secrets, customer lists, intellectual property, etc. that the insider obtained through the incident.
+ Beneficiary (*B*) - The organization accepted trade secrets, customer lists, intellectual property, etc. that the insider obtained through the incident.
 
 ## Detection
 
@@ -130,15 +130,15 @@ Anthony Levandowski's actions of transferring confidential files from Waymo to h
 - **`First detected`**:
  2017-02-23
 - **`Who detected`**:
-   - Law Enforcement (*LE*) &mdash; Law enforcement discovered the insider's illegal activity (e.g., Police noticed that the insider was gaining access to the company after hours).
-  - Organization (*OR*) &mdash; The victim organization discovered the insider's activity (e.g., IT noticed that the insider had downloaded dozens of company trade secrets to their workstation).
+   - Law Enforcement (*LE*) - Law enforcement discovered the insider's illegal activity (e.g., Police noticed that the insider was gaining access to the company after hours).
+  - Organization (*OR*) - The victim organization discovered the insider's activity (e.g., IT noticed that the insider had downloaded dozens of company trade secrets to their workstation).
 - **`Detected method`**:
-   - Technical Means (*2*) &mdash; The insider's activity was detected via analysis or anomalies in technical systems and software.
-  - Security Software (*4*) &mdash; The insider's activity was detected by security software (e.g., The insider tried to download a document with trade secrets and an automatic alert detected the download).
+   - Technical Means (*2*) - The insider's activity was detected via analysis or anomalies in technical systems and software.
+  - Security Software (*4*) - The insider's activity was detected by security software (e.g., The insider tried to download a document with trade secrets and an automatic alert detected the download).
 - **`Logs`**:
-   - Access Logs (*AC*) &mdash; File or system access logs.
-  - Email Logs (*EM*) &mdash; Logs from email servers or services.
-  - Video Logs (*VD*) &mdash; Video, security cam, webcam, screen capture recordings.
+   - Access Logs (*AC*) - File or system access logs.
+  - Email Logs (*EM*) - Logs from email servers or services.
+  - Video Logs (*VD*) - Video, security cam, webcam, screen capture recordings.
 
 ## Impact
 
@@ -151,7 +151,7 @@ Financial impact valued at approximately $245 million, which was the settlement 
 - **`Low`**:
  245,000,000
 - **`Metric`**:
- Dollars (*5*) &mdash; Specific financial impact of money stolen, restitution ordered, etc.
+ Dollars (*5*) - Specific financial impact of money stolen, restitution ordered, etc.
 - **`Estimated`**:
  False
 
@@ -164,7 +164,7 @@ Levandowski downloaded over 14,000 files before leaving the company to found his
 - **`High`**:
  14,000
 - **`Metric`**:
- Files (*7*) &mdash; Number of physical or digital files stolen, read, or compromised.
+ Files (*7*) - Number of physical or digital files stolen, read, or compromised.
 - **`Estimated`**:
  True
 
@@ -173,34 +173,34 @@ Levandowski downloaded over 14,000 files before leaving the company to found his
 - **`Id`**:
  target--831dfcd9-11c5-407b-955e-287d531702b7
 - **`Asset type`**:
- Information (*2*) &mdash; Data/business materials which contain important details belonging to a specific target owner.
+ Information (*2*) - Data/business materials which contain important details belonging to a specific target owner.
 - **`Category`**:
- Product Information (*2.1*) &mdash; Information about products or services the organization sells
+ Product Information (*2.1*) - Information about products or services the organization sells
 - **`Subcategory`**:
- Product Information (*2.1.1*) &mdash; Information about products or services offered by the organization.
+ Product Information (*2.1.1*) - Information about products or services offered by the organization.
 - **`Format`**:
- Electronic (*1*) &mdash; Technological digital format.
+ Electronic (*1*) - Technological digital format.
 - **`Owner`**:
- Organization (*O*) &mdash; The organization, rather than its employees or customers owns the target.
+ Organization (*O*) - The organization, rather than its employees or customers owns the target.
 - **`Sensitivity`**:
-   - Intellectual Property (IP) (*23*) &mdash; Information that has been created and is subject to protection of its creativity.
+   - Intellectual Property (IP) (*23*) - Information that has been created and is subject to protection of its creativity.
 
 ## Target
 
 - **`Id`**:
  target--a08d89e4-4b16-49e7-bdcc-0eea308a56e6
 - **`Asset type`**:
- Technology (*5*) &mdash; Hardware, software, or firmware intended for the storage or transmission of data or the operation of equipment (as in computers running a manufacturing line).
+ Technology (*5*) - Hardware, software, or firmware intended for the storage or transmission of data or the operation of equipment (as in computers running a manufacturing line).
 - **`Category`**:
- Software (*5.2*) &mdash; Software or applications running on the organization's devices or systems.
+ Software (*5.2*) - Software or applications running on the organization's devices or systems.
 - **`Subcategory`**:
- Source code (*5.2.3*) &mdash; Underlying codebase for a product or system.
+ Source code (*5.2.3*) - Underlying codebase for a product or system.
 - **`Format`**:
- Electronic (*1*) &mdash; Technological digital format.
+ Electronic (*1*) - Technological digital format.
 - **`Owner`**:
- Organization (*O*) &mdash; The organization, rather than its employees or customers owns the target.
+ Organization (*O*) - The organization, rather than its employees or customers owns the target.
 - **`Sensitivity`**:
-   - Intellectual Property (IP) (*23*) &mdash; Information that has been created and is subject to protection of its creativity.
+   - Intellectual Property (IP) (*23*) - Information that has been created and is subject to protection of its creativity.
 
 ## Response
 
@@ -209,10 +209,10 @@ A third party investigator was hired to look into the matter after an engineer a
 - **`Id`**:
  response--9923bad0-25bb-474a-bff7-4b23bfb3e240
 - **`Investigated by`**:
-   - Other (*99*) &mdash; Other investigator not lised in this vocabulary.
-  - Management (*2*) &mdash; Management internal to the organization.
+   - Other (*99*) - Other investigator not lised in this vocabulary.
+  - Management (*2*) - Management internal to the organization.
 - **`Investigation events`**:
-   - Evidence Found (*['2', '2016-11-00']*) &mdash; Evidence relevant to the incident is found. E.g., Fellow employee found a USB drive left in the insider's computer that had sensitive company files downloaded on to it.
+   - Evidence Found (*['2', '2016-11-00']*) - Evidence relevant to the incident is found. E.g., Fellow employee found a USB drive left in the insider's computer that had sensitive company files downloaded on to it.
 
 ## Court-case
 
@@ -229,9 +229,9 @@ A third party investigator was hired to look into the matter after an engineer a
 - **`Court district`**:
  United States District Court for the Northern District of California
 - **`Court type`**:
- Federal (*1*) &mdash; Top level government court.
+ Federal (*1*) - Top level government court.
 - **`Case type`**:
- Civil (*1*) &mdash; A case dealing with a dispute between two people or organizations.
+ Civil (*1*) - A case dealing with a dispute between two people or organizations.
 - **`Defendant`**:
    - Uber Technologies, Inc
 - **`Plaintiff`**:
@@ -250,22 +250,22 @@ A third party investigator was hired to look into the matter after an engineer a
 - **`Count`**:
  1
 - **`Plea`**:
- Not Guilty (*3*) &mdash; The defendant pleaed not guilty to a charge.
+ Not Guilty (*3*) - The defendant pleaed not guilty to a charge.
 - **`Plea bargain`**:
  False
 - **`Disposition`**:
- Convicted (*2*) &mdash; Plead or been found guilty by a court.
+ Convicted (*2*) - Plead or been found guilty by a court.
 
 ## Sentence
 
 - **`Id`**:
  sentence--c67354c2-5619-4ebc-85d0-21ca230c8a1d
 - **`Sentence type`**:
- Restitution (*14*) &mdash; An attempt to measure in financial terms the extent of the gains or profits the defendant obtained through harming the victim.
+ Restitution (*14*) - An attempt to measure in financial terms the extent of the gains or profits the defendant obtained through harming the victim.
 - **`Quantity`**:
  245,000,000
 - **`Metric`**:
- Dollar(s) (*5*) &mdash; Imposed sentence is in terms of dollars. E.g. $10,000 in damages.
+ Dollar(s) (*5*) - Imposed sentence is in terms of dollars. E.g. $10,000 in damages.
 - **`Concurrency`**:
  False
 
@@ -285,17 +285,17 @@ Anthony Levandowski was involved in the development of autonomous vehicle techno
 - **`Id`**:
  job--afc08477-7f6f-4130-a966-f7b1e2188587
 - **`Job function`**:
- Architecture and Engineering (*17*) &mdash; Architecture and Engineering
+ Architecture and Engineering (*17*) - Architecture and Engineering
 - **`Occupation`**:
- Engineers (*17.2*) &mdash; Aerospace Engineers, Bioengineers Engineers, Chemical Engineers, Civil Engineers, Electrical Engineers, Electronics Engineers, Environmental Engineers, Industrial Engineers, Marine Engineers, Naval Architects, Mechanical Engineers, Geological Engineers, Etc.
+ Engineers (*17.2*) - Aerospace Engineers, Bioengineers Engineers, Chemical Engineers, Civil Engineers, Electrical Engineers, Electronics Engineers, Environmental Engineers, Industrial Engineers, Marine Engineers, Naval Architects, Mechanical Engineers, Geological Engineers, Etc.
 - **`Title`**:
  Lead Engineer for Autonomous Vehicle Technology
 - **`Position technical`**:
  False
 - **`Access authorization`**:
- Authorized Privileged User (*5*) &mdash; Authorized privileged access.
+ Authorized Privileged User (*5*) - Authorized privileged access.
 - **`Employment type`**:
- Full-time (*FLT*) &mdash; Individual who is directly employed by the organization and works at least 35 hours per week (or is classified by the organization as a full-time employee).
+ Full-time (*FLT*) - Individual who is directly employed by the organization and works at least 35 hours per week (or is classified by the organization as a full-time employee).
 - **`Hire date`**:
  2007-08-01
 - **`Departure date`**:
@@ -312,9 +312,9 @@ Insider left Waymo to start his own company.
 - **`Date`**:
  2015-12-01
 - **`Category`**:
- Employment Status (*1*) &mdash; The insider's employment status changed.
+ Employment Status (*1*) - The insider's employment status changed.
 - **`Subcategory`**:
- Insider Resigned (*1.9*) &mdash; The insider resigns from any organization, including the victim organization.
+ Insider Resigned (*1.9*) - The insider resigns from any organization, including the victim organization.
 
 ## Ttp
 
@@ -331,15 +331,15 @@ Insider left Waymo to start his own company.
 - **`Ttp vocab`**:
  IIDES
 - **`Tactic`**:
- Data Exfiltration (*7*) &mdash; Data (or copies of data) is removed from the organization without permission or explicitly against permission to use in an unauthorized way.
+ Data Exfiltration (*7*) - Data (or copies of data) is removed from the organization without permission or explicitly against permission to use in an unauthorized way.
 - **`Technique`**:
- Laptop (*7.8*) &mdash; Insider exfiltrates data by taking it out of the organization on a laptop.
+ Laptop (*7.8*) - Insider exfiltrates data by taking it out of the organization on a laptop.
 - **`Location`**:
-   - Remotely (*2*) &mdash; Action taken while remote (i.e. not at an organizational facility).
+   - Remotely (*2*) - Action taken while remote (i.e. not at an organizational facility).
 - **`Hours`**:
-   - During Work Hours (*1*) &mdash; Insider took the action during their normal working hours.
+   - During Work Hours (*1*) - Insider took the action during their normal working hours.
 - **`Device`**:
-   - Company Laptop (*2*) &mdash; Organization owned laptop workstation.
+   - Company Laptop (*2*) - Organization owned laptop workstation.
 - **`Description`**:
  The insider locally downloaded files from the company cloud directories to their laptop.
 
@@ -385,7 +385,7 @@ This was a civil case, the insider was formally charged through a third party ci
 - **`Title`**:
  Settlement Agreement
 - **`Source type`**:
- Court Document (*1*) &mdash; Legal document from a court case.
+ Court Document (*1*) - Legal document from a court case.
 - **`File type`**:
  pdf
 - **`Date`**:

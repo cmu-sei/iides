@@ -80,7 +80,7 @@ def get_vocab(items, field, schema):
             vocab_array = get_vocab_array(ref, schema['$defs'])
             for vocab_object in vocab_array:
                 if vocab_object.get('const') == items[0]:
-                    ret_val += f"{vocab_object['title']} (*{items}*) &mdash; {vocab_object['description']}"
+                    ret_val += f"{vocab_object['title']} (*{items}*) - {vocab_object['description']}"
         if not ret_val:
             print(f"Error: could not get vocab: {items}, {refs}\n")
         return ret_val
@@ -90,7 +90,7 @@ def get_vocab(items, field, schema):
         vocab_array = get_vocab_array(ref_path, schema['$defs'])
         for vocab_object in vocab_array:
             if vocab_object.get('const') == items:
-                ret_val = f"{vocab_object['title']} (*{items}*) &mdash; {vocab_object['description']}"
+                ret_val = f"{vocab_object['title']} (*{items}*) - {vocab_object['description']}"
                 break
         if not ret_val:
             ret_val = items
@@ -103,7 +103,7 @@ def get_vocab(items, field, schema):
                 vocab_array = get_vocab_array(ref_path, schema['$defs'])
             for vocab_object in vocab_array:
                 if vocab_object.get('const') == items:
-                    ret_val = f"{vocab_object['title']} (*{items}*) &mdash; {vocab_object['description']}"
+                    ret_val = f"{vocab_object['title']} (*{items}*) - {vocab_object['description']}"
                     break
             if not ret_val:
                 print(f"Error: could not get vocab: {items}, {ref_path}\n")
