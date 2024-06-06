@@ -27,10 +27,11 @@ def find_schema(schema_paths, target_tag):
     param: a list of schemas
     param: target schema path
     """
-    for schema in schema_paths:
-        if schema.endswith(target_tag + '.json'):
-            with open(schema) as f:
-                return json.load(f)
+    for path in schema_paths:
+        name = path[path.rfind("\\")+1:]
+        if name == target_tag + '.json':
+            with open(path, "r", encoding='utf-8') as schema_file:
+                return json.load(schema_file)
     return None
 
 
@@ -40,7 +41,7 @@ def get_vocab(items, field, schema):
     """
     ret_val = ""
 
-    #Tuple case
+    # Tuple case
     if isinstance(items, list):
         refs = []
         for elems in schema['properties'][field]['items']['prefixItems']:
@@ -116,8 +117,11 @@ desired_order = [
     "ttp"
 ]
 
-# Function to get the sort index based on the desired order
+
 def get_sort_index(tag):
+    """
+    Function to get the sort index based on the desired order
+    """
     if tag in desired_order:
         return desired_order.index(tag)
     else:
@@ -130,16 +134,16 @@ if __name__ == "__main__":
     json_examples = get_json_files(EXAMPLE_JSON_PATH)
     json_schemas = get_json_files(JSON_SCHEMA_PATH)
 
-    print("Example paths: " + str(json_examples))
     for filename in json_examples:
 
         file_lines = []  # lines that will be written to the markdown file
 
-        with open(filename, 'r') as f:
+        with open(filename, 'r', encoding='utf-8') as f:
             example_data = json.load(f)
 
         # Example Number
-        file_lines.append(f"# {os.path.split(filename)[-1].capitalize().replace('.json','')}\n")
+        title = os.path.split(filename)[-1].capitalize().replace('.json', '')
+        file_lines.append(f"# {title}\n")
 
         if 'objects' in example_data:
             # Iterate through each IIDES object
@@ -153,25 +157,22 @@ if __name__ == "__main__":
                     file_lines.append(f"{object['comment']}\n")
 
                 # Find the correlating schema
-                print(tag)
                 schema = find_schema(json_schemas, tag)
                 #need to do something about references to other schema, accomplice and insider
 
                 # Load the requested field
                 for field in object:
                     # Append the file line with appropriate const, description, vocab
-                    if field not in ['comment']:
+                    if field != 'comment':
                         items = object[field]
                         items_print = ''
 
                         try:
                             schema_field = schema['properties'][field]
-                        except:
+                        except Exception as e:
                             print("Not a default field: " + str(field))
                             file_lines.append(f"- **`{field.capitalize().replace('_', ' ')}`**:\n {items}")
                             continue
-                        if field == 'location':
-                            print("Trying to get location vocab")
                         #items is a string
                         if schema_field['type'] == "string":
                             if '$ref' in schema_field:

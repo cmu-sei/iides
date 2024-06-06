@@ -245,8 +245,8 @@
       "ttp_vocab": "IIDES",
       "tactic": "7",
       "technique": "7.3",
-      "location": "on-site",
-      "hours": "During work hours",
+      "location": "1",
+      "hours": "1",
       "device": ["1", "9"],
       "channel": ["9"],
       "description": "Winner printed and improperly removed classified intelligence reporting."

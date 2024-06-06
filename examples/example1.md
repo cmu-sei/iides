@@ -154,14 +154,18 @@ The financial impact of the breach was substantial, with estimates ranging from 
 Schulte left the CIA in November of 2016, before departing from the agency planted a service to still allow remote access to government files and databases, which he used to access classified information post departure.
 
 - **`Id`**: response--f42fc7ae-48a1-48f9-bf84-0d4b13f7a64c
-- **`Technical controls`**:
- [['1', '2016-11-01'], ['2', '2016-11-01']]
-- **`Behavioral controls`**:
- [['4', '2016-11-01']]
-- **`Investigated by`**:
- ['4', '7']
-- **`Investigation events`**:
- [['1', '2017-03-07'], ['2', '2017-03-07'], ['3', '2018-06-18']]
+- **`Technical controls`**: 
+  - Access to Technical System(s) Restricted (*['1', '2016-11-01']*) &mdash; Insider's access to the organization's technical systems is restricted in any capacity E.g., Organization declares that insider could only log onto system if another employee is present.
+  - Access to Technical System(s) Terminated (*['2', '2016-11-01']*) &mdash; Insider's access to the organization's technical systems is completely terminated E.g., Insider's account is deleted upon termination from the company.
+- **`Behavioral controls`**: 
+  - Terminated (*['4', '2016-11-01']*) &mdash; Insider is terminated, or fired, from the organization.
+- **`Investigated by`**: 
+  - Law Enforcement - Federal (*4*) &mdash; Federal law enforcement entity such as the FBI or USSS.
+  - Internal Investigators (*7*) &mdash; Other investigators internal to the victim organization.
+- **`Investigation events`**: 
+  - Insider's Residence/Workplace Searched (*['1', '2017-03-07']*) &mdash; Investigators search the insider's home or workplace for evidence related to the incident.
+  - Evidence Found (*['2', '2017-03-07']*) &mdash; Evidence relevant to the incident is found. E.g., Fellow employee found a USB drive left in the insider's computer that had sensitive company files downloaded on to it.
+  - Insider Admits to Activity in Interview (*['3', '2018-06-18']*) &mdash; Insider admits to involvement in insider incident while being interviewed by investigators about the incident (or related activity).
 
 ## Court-case
 
@@ -448,7 +452,7 @@ The child pornography charges were included in the JSON because they are relevan
 ## Source
 
 - **`Id`**: source--7e3ef93e-31b0-4e17-a32a-98540326fd05
-- **`Title`**: CIA Engineer Convicted of Largest Theft of Classified Data in Agencyâ€™s History
+- **`Title`**: CIA Engineer Convicted of Largest Theft of Classified Data in Agency’s History
 - **`Source type`**: Media (*5*) &mdash; News, blog, or similar publication.
 - **`File type`**: html
 - **`Date`**: 2022-07-13T00:00:00Z
