@@ -12,7 +12,15 @@ JSON_SCHEMA_PATH = os.path.join(iides_directory, 'json')
 
 
 def get_json_files(jpath):
-    '''Returns json files from which to generate markdown'''
+    """
+    Returns a list of JSON files from the given directory path.
+
+    Args:
+        jpath (str): Path to the directory containing JSON files.
+
+    Returns:
+        list: List of paths to JSON files.
+    """
     fnames = []
     for root, _, f_names in os.walk(jpath):
         for f in f_names:
@@ -23,9 +31,14 @@ def get_json_files(jpath):
 
 def find_schema(schema_paths, target_tag):
     """
-    Returns the desired json schema file
-    param: a list of schemas
-    param: target schema path
+    Returns the JSON schema file corresponding to the target tag.
+
+    Args:
+        schema_paths (list): List of paths to schema files.
+        target_tag (str): Target schema tag to find.
+
+    Returns:
+        dict: The JSON schema corresponding to the target tag, or None if not found.
     """
     for path in schema_paths:
         name = path[path.rfind("\\")+1:]
@@ -37,7 +50,15 @@ def find_schema(schema_paths, target_tag):
 
 def get_vocab(items, field, schema):
     """
-    Returns the vocab definition of a given item for the given field, from the given schema
+    Returns the vocab definition of a given item for the given field from the given schema.
+
+    Args:
+        items (any): The value of the field in the JSON object.
+        field (str): The name of the field.
+        schema (dict): The JSON schema for the object.
+
+    Returns:
+        str: The vocab definition as a string.
     """
     ret_val = ""
 
@@ -61,7 +82,7 @@ def get_vocab(items, field, schema):
                 if vocab_object.get('const') == items[0]:
                     ret_val += f"{vocab_object['title']} (*{items}*) &mdash; {vocab_object['description']}"
         if not ret_val:
-            print(f"Error: could not get vocab: {items}\n")
+            print(f"Error: could not get vocab: {items}, {refs}\n")
         return ret_val
 
     try:
@@ -73,7 +94,7 @@ def get_vocab(items, field, schema):
                 break
         if not ret_val:
             ret_val = items
-            print(f"Error: could not get vocab: {items}\n")
+            print(f"Error: could not get vocab: {items}, {ref_path}\n")
     except KeyError:
         try:
             ref_path = schema['properties'][field]['items']['$ref']
@@ -85,48 +106,59 @@ def get_vocab(items, field, schema):
                     ret_val = f"{vocab_object['title']} (*{items}*) &mdash; {vocab_object['description']}"
                     break
             if not ret_val:
-                print(f"Error: could not get vocab: {items}\n")
+                print(f"Error: could not get vocab: {items}, {ref_path}\n")
         except KeyError:
-            print(f"Error: could not get vocab: {items}\n")
+            print(f"Error: could not get vocab: {items}, {field}\n")
 
     return ret_val
 
-    try: #string case
-        ref_path = schema['properties'][field]['$ref']
-        defs = schema['$defs']
 
-        try:
-            vocab_array = defs[ref_path[ref_path.rfind('/')+1:]]['oneOf']
-            for vocab_object in vocab_array:
-                if vocab_object['const'] == items:
-                    ret_val = f"{vocab_object['title']} (*{items}*) &mdash; {vocab_object['description']}"
-        except:
-            ret_val = items
-            vocab_array = []
-            print(f"Error: could not get vocab: {items}\n")
-    except: #list case
-        try:
-            ref_path = schema['properties'][field]['items']['$ref']
-            defs = schema['$defs']
+def process_field(items, field, schema, schema_field):
+    """
+    Processes a field in the JSON object according to its schema definition.
 
-            try:
-                vocab_array = defs[ref_path[ref_path.rfind('/')+1:]]['anyOf']
-                for vocab_object in vocab_array:
-                    if vocab_object['const'] == items:
-                        ret_val = f"{vocab_object['title']} (*{items}*) &mdash; {vocab_object['description']}"
-            except:
-                try:
-                    vocab_array = defs[ref_path[ref_path.rfind('/')+1:]]['oneOf']
-                    for vocab_object in vocab_array:
-                        if vocab_object['const'] == items:
-                            ret_val = f"{vocab_object['title']} (*{items}*) &mdash; {vocab_object['description']}"
-                except:
-                    print(f"Error: could not get vocab: {items}\n")
-                #just a list case first:
+    Args:
+        items (any): The value of the field in the JSON object.
+        field (str): The name of the field.
+        schema (dict): The JSON schema for the object.
+        schema_field (dict): The schema definition for the specific field.
 
-        except:
-            print(f"Error: could not get vocab: {items}\n")
-    return ret_val
+    Returns:
+        str: The processed field value as a string.
+    """
+    if schema_field['type'] == "string":
+        return get_vocab(items, field, schema) if '$ref' in schema_field else str(items)
+    elif schema_field['type'] == "array":
+        return process_array_field(items, field, schema, schema_field)
+    elif schema_field['type'] in ['number', 'integer']:
+        return f"{items:,}"
+    else:
+        return str(items)
+
+
+def process_array_field(items, field, schema, schema_field):
+    """
+    Processes an array field in the JSON object according to its schema definition.
+
+    Args:
+        items (list): The value of the array field in the JSON object.
+        field (str): The name of the field.
+        schema (dict): The JSON schema for the object.
+        schema_field (dict): The schema definition for the specific field.
+
+    Returns:
+        str: The processed array field value as a string.
+    """
+    items_print = ""
+    if 'type' not in schema_field['items'] or schema_field['items']['type'] != "array":
+        if '$ref' in schema['properties'][field]['items']:
+            items_print = "\n".join(f"  - {get_vocab(item, field, schema)}" for item in items)
+        else:
+            items_print = "\n".join(f"  - {item}" for item in items)
+    elif schema_field['items']['type'] == "array":
+        items_print = "\n".join(f"  - {get_vocab(item, field, schema)}" for item in items)
+    return items_print
+
 
 desired_order = [
     "incident",
@@ -146,12 +178,18 @@ desired_order = [
 ]
 
 
-def get_sort_index(tag):
+def get_sort_index(target_schema):
     """
-    Function to get the sort index based on the desired order
+    Gets the sort index based on the desired order.
+
+    Args:
+        target_schema (str): The target schema name.
+
+    Returns:
+        int: The index of the target schema in the desired order, or the length of the desired order if not found.
     """
-    if tag in desired_order:
-        return desired_order.index(tag)
+    if target_schema in desired_order:
+        return desired_order.index(target_schema)
     else:
         return len(desired_order)
 
@@ -163,14 +201,13 @@ if __name__ == "__main__":
     json_schemas = get_json_files(JSON_SCHEMA_PATH)
 
     for filename in json_examples:
-
-        file_lines = []  # lines that will be written to the markdown file
+        file_lines = []
 
         with open(filename, 'r', encoding='utf-8') as f:
             example_data = json.load(f)
 
         # Example Number
-        title = os.path.split(filename)[-1].capitalize().replace('.json', '')
+        title = os.path.splitext(os.path.basename(filename))[0].capitalize()
         file_lines.append(f"# {title}\n")
 
         if 'objects' in example_data:
@@ -178,59 +215,34 @@ if __name__ == "__main__":
             objects = example_data['objects']
             sorted_objects = sorted(objects, key=lambda obj: get_sort_index(obj['id'][0:obj['id'].find("--")].lower()))
 
-            for object in sorted_objects:
-                tag = object['id'][0:object['id'].find("--")]
+            for obj in sorted_objects:
+                tag = obj['id'].split("--")[0]
                 file_lines.append(f"\n## {tag.capitalize()}\n")
-                if 'comment' in object:
-                    file_lines.append(f"{object['comment']}\n")
+
+                if 'comment' in obj:
+                    file_lines.append(f"{obj['comment']}\n")
 
                 # Find the correlating schema
                 schema = find_schema(json_schemas, tag)
-                #need to do something about references to other schema, accomplice and insider
+                # TODO: Implement cross file references for
+                # Person/Country/State vocabs
 
-                # Load the requested field
-                for field in object:
-                    # Append the file line with appropriate const, description, vocab
-                    if field != 'comment':
-                        items = object[field]
-                        items_print = ''
+                for field, items in obj.items():
+                    if field == 'comment':
+                        continue
 
-                        try:
-                            schema_field = schema['properties'][field]
-                        except Exception as e:
-                            print("Not a default field: " + str(field))
-                            file_lines.append(f"- **`{field.capitalize().replace('_', ' ')}`**:\n {items}")
-                            continue
-                        #items is a string
-                        if schema_field['type'] == "string":
-                            if '$ref' in schema_field:
-                                #There is vocab for this item
-                                items_print = get_vocab(items, field, schema)
-                            else:
-                                items_print = f"{items}"
-                        # item is a list
-                        elif schema_field['type'] == "array" and ('type' not in schema_field['items'] or schema_field['items']['type'] != "array"): 
-                            if '$ref' in schema['properties'][field]['items']:
-                                #There is vocab to parse for this field entry
-                                for item in items:
-                                    items_print= items_print + (f"\n  - {get_vocab(item, field, schema)}")
-                            else:
-                                for item in items:
-                                    items_print = items_print + (f"\n  - {item}")
-                        # item is a tuple
-                        elif schema_field['type'] == "array" and ('type' in schema_field['items'] and schema_field['items']['type'] == "array"):
-                            for item in items:
-                                items_print= items_print + (f"\n  - {get_vocab(item, field, schema)}")
-                        elif schema_field['type'] == 'number' or schema_field['type'] == 'integer':
-                            items_print = f"{items:,}"
-                        else:
-                            items_print = f"{items}"
-               
-                        file_lines.append(f"- **`{field.capitalize().replace('_', ' ')}`**: {items_print}")
+                    schema_field = schema['properties'].get(field)
+                    if not schema_field:
+                        print(f"Not a default field: {field}")
+                        file_lines.append(f"- **`{field.capitalize().replace('_', ' ')}`**:\n {items}")
+                        continue
+
+                    items_print = process_field(items, field, schema, schema_field)
+                    file_lines.append(f"- **`{field.capitalize().replace('_', ' ')}`**:\n {items_print}")
 
         # Write output to markdown file
         new_path = os.path.split(filename)[-1][:-5]
-        f = open(f"{DOCUMENTATION_PATH}/{new_path}.md", "w")
+        f = open(f"{DOCUMENTATION_PATH}/{new_path}.md", "w", encoding="utf-8")
         f.writelines([line + '\n' for line in file_lines])
         f.close()
         print("Successfuly made markdown: " + str(filename[:-5]))

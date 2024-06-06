@@ -43,7 +43,7 @@
       "id": "incident--0e339a3d-37fa-455c-b818-7aae0e34a2a8",
       "cia_effect": ["C"],
       "incident_type": ["E"],
-      "incident_subtype": ["E2"],
+      "incident_subtype": ["E.2"],
       "outcome": ["DR", "DS"],
       "status": "C",
       "summary": "The insider, an ex-Air Force member, worked as a translater for the National Security Agency in May 2017. During this time, she printed a report from her work computer that detailed hacking attempts by a Russian intelligence service against local election officers and voter registration databases. She then shared this Top Secret information with an online news outlet. This report revealed the sources and methods used to acquire the information contained on the report, which, if disclosed, could be harmful to the United States. The FBI investigated and later arrested the insider in June 2017. The insider pleaded guilty in June 2018 to one felony count of unauthorized transmission of national defense information and was convicted.",

@@ -73,7 +73,7 @@
       "id": "incident--843c85b1-6f2d-4a64-a959-d9880905114f",
       "cia_effect": ["C"],
       "incident_type": ["E"],
-      "incident_subtype": ["E2"],
+      "incident_subtype": ["E.2"],
       "outcome": ["DS", "DR"],
       "status": "C",
       "summary": "The insider was a former CIA officer. They were involved in a espionage case where they were convicted of providing classified U.S. Defence information to Chinese intelligence agents, which began in 2017. The insider was motivated by financial gain: the Chinese officials would exchange top secret information for money. Once the FBI became aware, they investigated the insider, and found evidence of espionage in their home. The insider was then tried and found guilty of several espionage charges, and sentenced to 20 years of federal prison.",
