@@ -1,9 +1,14 @@
 '''Generates markdown files from json schema'''
 import json
 import os
+import sys
 
-DOCUMENTATION_PATH = "examples/"
-JSON_PATH = "examples/json"
+
+script_directory = os.path.dirname(os.path.abspath(sys.argv[0]))
+iides_directory = os.path.dirname(script_directory)
+DOCUMENTATION_PATH = os.path.join(iides_directory, 'examples')
+EXAMPLE_JSON_PATH = os.path.join(iides_directory, 'examples', 'json')
+JSON_SCHEMA_PATH = os.path.join(iides_directory, 'json')
 
 
 def get_json_files(jpath):
@@ -49,7 +54,7 @@ def get_vocab(items, field, schema):
                 count = 0
                 for vocab_object in vocab_array:
                     if vocab_object['const'] == items[0]:
-                        ret_val = ret_val + f"{vocab_object['title']} - {vocab_object['description']}"
+                        ret_val = ret_val + f"{vocab_object['title']} (*{items}*) &mdash; {vocab_object['description']}"
                         count +=1
         except:
             vocab_array = []
@@ -65,8 +70,9 @@ def get_vocab(items, field, schema):
             vocab_array = defs[ref_path[ref_path.rfind('/')+1:]]['oneOf']
             for vocab_object in vocab_array:
                 if vocab_object['const'] == items:
-                    ret_val = f"{vocab_object['title']} - {vocab_object['description']}"
+                    ret_val = f"{vocab_object['title']} (*{items}*) &mdash; {vocab_object['description']}"
         except:
+            ret_val = items
             vocab_array = []
             print(f"Error: could not get vocab: {items}\n")
     except: #list case
@@ -78,13 +84,13 @@ def get_vocab(items, field, schema):
                 vocab_array = defs[ref_path[ref_path.rfind('/')+1:]]['anyOf']
                 for vocab_object in vocab_array:
                     if vocab_object['const'] == items:
-                        ret_val = f"{vocab_object['title']} - {vocab_object['description']}"
+                        ret_val = f"{vocab_object['title']} (*{items}*) &mdash; {vocab_object['description']}"
             except:
                 try:
                     vocab_array = defs[ref_path[ref_path.rfind('/')+1:]]['oneOf']
                     for vocab_object in vocab_array:
                         if vocab_object['const'] == items:
-                            ret_val = f"{vocab_object['title']} - {vocab_object['description']}"
+                            ret_val = f"{vocab_object['title']} (*{items}*) &mdash; {vocab_object['description']}"
                 except:
                     print(f"Error: could not get vocab: {items}\n")
                 #just a list case first:
@@ -117,11 +123,12 @@ def get_sort_index(tag):
     else:
         return len(desired_order)
 
+
 if __name__ == "__main__":
 
     # Get json files
-    json_examples = get_json_files('examples')
-    json_schemas = get_json_files('json')
+    json_examples = get_json_files(EXAMPLE_JSON_PATH)
+    json_schemas = get_json_files(JSON_SCHEMA_PATH)
 
     print("Example paths: " + str(json_examples))
     for filename in json_examples:
@@ -132,7 +139,7 @@ if __name__ == "__main__":
             example_data = json.load(f)
 
         # Example Number
-        file_lines.append(f"# {filename[:-5].capitalize()}\n")
+        file_lines.append(f"# {os.path.split(filename)[-1].capitalize().replace('.json','')}\n")
 
         if 'objects' in example_data:
             # Iterate through each IIDES object
@@ -141,10 +148,10 @@ if __name__ == "__main__":
 
             for object in sorted_objects:
                 tag = object['id'][0:object['id'].find("--")]
-                file_lines.append(f"## {tag.capitalize()}\n")
+                file_lines.append(f"\n## {tag.capitalize()}\n")
                 if 'comment' in object:
                     file_lines.append(f"{object['comment']}\n")
-                
+
                 # Find the correlating schema
                 print(tag)
                 schema = find_schema(json_schemas, tag)
@@ -167,35 +174,34 @@ if __name__ == "__main__":
                             print("Trying to get location vocab")
                         #items is a string
                         if schema_field['type'] == "string":
-                            if '$ref' in schema_field: 
+                            if '$ref' in schema_field:
                                 #There is vocab for this item
-                                items_print = f"  - *{items}*: {get_vocab(items, field, schema)}"
+                                items_print = get_vocab(items, field, schema)
                             else:
-                                items_print = f"  - {items}" 
-                        #item is a list
+                                items_print = f"{items}"
+                        # item is a list
                         elif schema_field['type'] == "array" and ('type' not in schema_field['items'] or schema_field['items']['type'] != "array"): 
                             if '$ref' in schema['properties'][field]['items']:
                                 #There is vocab to parse for this field entry
                                 for item in items:
-                                    items_print= items_print + (f"  - *{item}*: {get_vocab(item, field, schema)}\n")
+                                    items_print= items_print + (f"\n  - {get_vocab(item, field, schema)}")
                             else:
                                 for item in items:
-                                    items_print = items_print + (f"  - {item}\n")
-                        #item is a tuple
+                                    items_print = items_print + (f"\n  - {item}")
+                        # item is a tuple
                         elif schema_field['type'] == "array" and ('type' in schema_field['items'] and schema_field['items']['type'] == "array"):
                             for item in items:
-                                items_print= items_print + (f"  - *{item}*: {get_vocab(item, field, schema)}\n")
+                                items_print= items_print + (f"\n  - {get_vocab(item, field, schema)}")
                         elif schema_field['type'] == 'number' or schema_field['type'] == 'integer':
                             items_print = f"{items:,}"
                         else:
                             items_print = f"{items}"
                
-                        file_lines.append(f"- **`{field.capitalize().replace('_', ' ')}`**:\n {items_print}")
+                        file_lines.append(f"- **`{field.capitalize().replace('_', ' ')}`**: {items_print}")
 
         # Write output to markdown file
-        print(filename)
         new_path = os.path.split(filename)[-1][:-5]
-        f = open(f"{DOCUMENTATION_PATH}{new_path}.md", "w")
+        f = open(f"{DOCUMENTATION_PATH}/{new_path}.md", "w")
         f.writelines([line + '\n' for line in file_lines])
         f.close()
         print("Successfuly made markdown: " + str(filename[:-5]))
