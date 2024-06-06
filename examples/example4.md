@@ -258,12 +258,7 @@ Insider was behind 2 mortgage payments and had debt they wished to pay.
 - **`Tactic`**: Data Exfiltration (*7*) &mdash; Data (or copies of data) is removed from the organization without permission or explicitly against permission to use in an unauthorized way.
 - **`Technique`**: Own Account After Termination/Resignation (*1.6*) &mdash; Insider gains access to their company account after their termination date.
 - **`Location`**: 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Remotely (*2*) &mdash; Action taken while remote (i.e. not at an organizational facility).
 - **`Hours`**: 
   - Outside of Work Hours (*2*) &mdash; Insider took the action outside of their normal working hours.
 - **`Device`**: 
@@ -283,12 +278,7 @@ Insider was behind 2 mortgage payments and had debt they wished to pay.
 - **`Tactic`**: Recruitment (*2*) &mdash; Insider recruits, or is recruited by others.
 - **`Technique`**: Outsider Recruits Insider (*2.1*) &mdash; An outside entity that is not a competing organization encourages the insider to become an insider. E.g., Insider is contacted by known hacking specialist who asks insider to divulge company secrets to the hacker.
 - **`Location`**: 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Remotely (*2*) &mdash; Action taken while remote (i.e. not at an organizational facility).
 - **`Hours`**: 
   - Outside of Work Hours (*2*) &mdash; Insider took the action outside of their normal working hours.
 - **`Device`**: 
@@ -308,12 +298,7 @@ Insider was behind 2 mortgage payments and had debt they wished to pay.
 - **`Tactic`**: Recruitment (*2*) &mdash; Insider recruits, or is recruited by others.
 - **`Technique`**: Outsider Recruits Insider (*2.1*) &mdash; An outside entity that is not a competing organization encourages the insider to become an insider. E.g., Insider is contacted by known hacking specialist who asks insider to divulge company secrets to the hacker.
 - **`Location`**: 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Remotely (*2*) &mdash; Action taken while remote (i.e. not at an organizational facility).
 - **`Hours`**: 
   - Outside of Work Hours (*2*) &mdash; Insider took the action outside of their normal working hours.
 - **`Device`**: 
