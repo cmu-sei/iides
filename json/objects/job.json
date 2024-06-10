@@ -69,19 +69,9 @@
         "job-function-vocab": {
             "oneOf": [
                 {
-                    "const": "17",
-                    "title": "Architecture and Engineering",
-                    "description": "Architecture and Engineering"
-                },
-                {
-                    "const": "27",
-                    "title": "Arts, Design, Entertainment, Sports, and Media",
-                    "description": "Arts, Design, Entertainment, Sports, and Media"
-                },
-                {
-                    "const": "37",
-                    "title": "Building and Grounds Cleaning and Maintenance",
-                    "description": "Building and Grounds Cleaning and Maintenance"
+                    "const": "11",
+                    "title": "Management",
+                    "description": "Management"
                 },
                 {
                     "const": "13",
@@ -89,14 +79,34 @@
                     "description": "Business and Financial Operations"
                 },
                 {
+                    "const": "15",
+                    "title": "Computer and Mathematical",
+                    "description": "Computer and Mathematical"
+                },
+                {
+                    "const": "17",
+                    "title": "Architecture and Engineering",
+                    "description": "Architecture and Engineering"
+                },
+                {
+                    "const": "19",
+                    "title": "Life, Physical, and Social Science",
+                    "description": "Life, Physical, and Social Science"
+                },
+                {
                     "const": "21",
                     "title": "Community and Social Service",
                     "description": "Community and Social Service"
                 },
                 {
-                    "const": "15",
-                    "title": "Computer and Mathematical",
-                    "description": "Computer and Mathematical"
+                    "const": "22",
+                    "title": "Student",
+                    "description": "Student"
+                },
+                {
+                    "const": "23",
+                    "title": "Legal",
+                    "description": "Legal"
                 },
                 {
                     "const": "25",
@@ -104,9 +114,9 @@
                     "description": "Educational Instruction and Library"
                 },
                 {
-                    "const": "35",
-                    "title": "Food Preparation and Serving Related",
-                    "description": "Food Preparation and Serving Related"
+                    "const": "27",
+                    "title": "Arts, Design, Entertainment, Sports, and Media",
+                    "description": "Arts, Design, Entertainment, Sports, and Media"
                 },
                 {
                     "const": "29",
@@ -119,44 +129,24 @@
                     "description": "Healthcare Support"
                 },
                 {
-                    "const": "49",
-                    "title": "Installation, Maintenance, and Repair",
-                    "description": "Installation, Maintenance, and Repair"
-                },
-                {
-                    "const": "23",
-                    "title": "Legal",
-                    "description": "Legal"
-                },
-                {
-                    "const": "19",
-                    "title": "Life, Physical, and Social Science",
-                    "description": "Life, Physical, and Social Science"
-                },
-                {
-                    "const": "11",
-                    "title": "Management",
-                    "description": "Management"
-                },
-                {
-                    "const": "55",
-                    "title": "Military Specific",
-                    "description": "Military Specific"
-                },
-                {
-                    "const": "43",
-                    "title": "Office and Administrative Support",
-                    "description": "Office and Administrative Support"
-                },
-                {
-                    "const": "51",
-                    "title": "Production",
-                    "description": "Production"
-                },
-                {
                     "const": "33",
                     "title": "Protective Service",
                     "description": "Protective Service"
+                },
+                {
+                    "const": "35",
+                    "title": "Food Preparation and Serving Related",
+                    "description": "Food Preparation and Serving Related"
+                },
+                {
+                    "const": "37",
+                    "title": "Building and Grounds Cleaning and Maintenance",
+                    "description": "Building and Grounds Cleaning and Maintenance"
+                },
+                {
+                    "const": "39",
+                    "title": "Personal Care and Service Occupations",
+                    "description": "Personal Care and Service Occupations"
                 },
                 {
                     "const": "41",
@@ -164,9 +154,29 @@
                     "description": "Sales and Related"
                 },
                 {
-                    "const": "22",
-                    "title": "Student",
-                    "description": "Student"
+                    "const": "43",
+                    "title": "Office and Administrative Support",
+                    "description": "Office and Administrative Support"
+                },
+                {
+                    "const": "45",
+                    "title": "Farming, Fishing, and Forestry Occupations",
+                    "description": "Farming, Fishing, and Forestry Occupations"
+                },
+                {
+                    "const": "47",
+                    "title": "Construction and Extraction Occupations",
+                    "description": "Construction and Extraction Occupations"
+                },
+                {
+                    "const": "49",
+                    "title": "Installation, Maintenance, and Repair",
+                    "description": "Installation, Maintenance, and Repair"
+                },
+                {
+                    "const": "51",
+                    "title": "Production",
+                    "description": "Production"
                 },
                 {
                     "const": "53",
@@ -174,10 +184,16 @@
                     "description": "Transportation and Material Moving"
                 },
                 {
+                    "const": "55",
+                    "title": "Military Specific",
+                    "description": "Military Specific"
+                },
+                {
                     "const": "99",
                     "title": "Other",
                     "description": "Other job function not listed in this vocabulary."
                 }
+                
             ]
         },
         "occupation-vocab": {

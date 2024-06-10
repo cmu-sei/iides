@@ -26,7 +26,7 @@ The organization(s) involved in the incident. At least one organization, the vic
 
 ### industry-sector-vocab
 
-Constants: `11`, `22`, `22`, `23`, `31`, `42`, `44`, `48`, `51`, `52`, `53`, `54`, `55`, `56`, `61`, `62`, `71`, `92`, `81`, `99`
+Constants: `11`, `22`, `22`, `23`, `31`, `42`, `44`, `48`, `51`, `52`, `53`, `54`, `55`, `56`, `61`, `62`, `71`, `72`, `92`, `81`, `99`
 
 | Const | Value | Description |
 | --- | --- | --- |
@@ -47,6 +47,7 @@ Constants: `11`, `22`, `22`, `23`, `31`, `42`, `44`, `48`, `51`, `52`, `53`, `54
 | 61 | Educational Services | Instruction and training of individuals.|
 | 62 | Healthcare and Social Assistance | Medical care and social advocacy/assistance.|
 | 71 | Arts, Entertainment, Recreation | Industries that meet the entertainment needs of patrons.|
+| 72 | Accommodation and Food Services | Establishments providing customers with lodging and/or preparing meals, snacks, and beverages for immediate consumption.|
 | 92 | Public Administration | Federal/State/Local administration and the oversight of public programs.|
 | 81 | Other Services | Other services defined in NAICS.|
 | 99 | Other | Other sector not listed in this vocabulary.|

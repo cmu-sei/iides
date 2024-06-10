@@ -28,7 +28,7 @@ Constants: `AD`, `AE`, `AF`, `AG`, `AI`, `AL`, `AM`, `AO`, `AQ`, `AR`, `AS`, `AT
 | AT | Austria | |
 | AU | Australia | |
 | AW | Aruba | |
-| AX | Ã…land Islands | |
+| AX | Åland Islands | |
 | AZ | Azerbaijan | |
 | BA | Bosnia and Herzegovina | |
 | BB | Barbados | |
@@ -39,7 +39,7 @@ Constants: `AD`, `AE`, `AF`, `AG`, `AI`, `AL`, `AM`, `AO`, `AQ`, `AR`, `AS`, `AT
 | BH | Bahrain | |
 | BI | Burundi | |
 | BJ | Benin | |
-| BL | Saint BarthÃ©lemy | |
+| BL | Saint Barthélemy | |
 | BM | Bermuda | |
 | BN | Brunei Darussalam | |
 | BO | Bolivia | |
@@ -57,7 +57,7 @@ Constants: `AD`, `AE`, `AF`, `AG`, `AI`, `AL`, `AM`, `AO`, `AQ`, `AR`, `AS`, `AT
 | CF | Central African Republic | |
 | CG | Congo | |
 | CH | Switzerland | |
-| CI | CÃ´te d'Ivoire | |
+| CI | Côte d'Ivoire | |
 | CK | Cook Islands | |
 | CL | Chile | |
 | CM | Cameroon | |
@@ -66,7 +66,7 @@ Constants: `AD`, `AE`, `AF`, `AG`, `AI`, `AL`, `AM`, `AO`, `AQ`, `AR`, `AS`, `AT
 | CR | Costa Rica | |
 | CU | Cuba | |
 | CV | Cabo Verde | |
-| CW | CuraÃ§ao | |
+| CW | Curaçao | |
 | CX | Christmas Island | |
 | CY | Cyprus | |
 | CZ | Czechia | |
@@ -201,7 +201,7 @@ Constants: `AD`, `AE`, `AF`, `AG`, `AI`, `AL`, `AM`, `AO`, `AQ`, `AR`, `AS`, `AT
 | PW | Palau | |
 | PY | Paraguay | |
 | QA | Qatar | |
-| RE | RÃ©union | |
+| RE | Réunion | |
 | RO | Romania | |
 | RS | Serbia | |
 | RU | Russian Federation | |
@@ -238,7 +238,7 @@ Constants: `AD`, `AE`, `AF`, `AG`, `AI`, `AL`, `AM`, `AO`, `AQ`, `AR`, `AS`, `AT
 | TM | Turkmenistan | |
 | TN | Tunisia | |
 | TO | Tonga | |
-| TR | TÃ¼rkiye | |
+| TR | Türkiye | |
 | TT | Trinidad and Tobago | |
 | TV | Tuvalu | |
 | TW | Taiwan, Province of China | |

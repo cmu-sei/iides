@@ -146,7 +146,7 @@ if __name__ == "__main__":
 
         file_lines = []  # lines that will be written to the markdown file
 
-        with open(filename) as f:
+        with open(filename, 'r', encoding='utf-8') as f:
             data = json.load(f)
             print(data['title'])
 

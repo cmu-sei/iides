@@ -154,6 +154,11 @@
                 "description": "Industries that meet the entertainment needs of patrons."
               },
               {
+                "const": "72",
+                "title": "Accommodation and Food Services",
+                "description": "Establishments providing customers with lodging and/or preparing meals, snacks, and beverages for immediate consumption."
+              },
+              {
                 "const": "92",
                 "title": "Public Administration",
                 "description": "Federal/State/Local administration and the oversight of public programs."

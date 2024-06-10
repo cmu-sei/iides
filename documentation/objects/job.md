@@ -27,31 +27,34 @@ Details of the employment relationship between an individual and an organization
 
 ### job-function-vocab
 
-Constants: `17`, `27`, `37`, `13`, `21`, `15`, `25`, `35`, `29`, `31`, `49`, `23`, `19`, `11`, `55`, `43`, `51`, `33`, `41`, `22`, `53`, `99`
+Constants: `11`, `13`, `15`, `17`, `19`, `21`, `22`, `23`, `25`, `27`, `29`, `31`, `33`, `35`, `37`, `39`, `41`, `43`, `45`, `47`, `49`, `51`, `53`, `55`, `99`
 
 | Const | Value | Description |
 | --- | --- | --- |
-| 17 | Architecture and Engineering | Architecture and Engineering|
-| 27 | Arts, Design, Entertainment, Sports, and Media | Arts, Design, Entertainment, Sports, and Media|
-| 37 | Building and Grounds Cleaning and Maintenance | Building and Grounds Cleaning and Maintenance|
+| 11 | Management | Management|
 | 13 | Business and Financial Operations | Business and Financial Operations|
-| 21 | Community and Social Service | Community and Social Service|
 | 15 | Computer and Mathematical | Computer and Mathematical|
+| 17 | Architecture and Engineering | Architecture and Engineering|
+| 19 | Life, Physical, and Social Science | Life, Physical, and Social Science|
+| 21 | Community and Social Service | Community and Social Service|
+| 22 | Student | Student|
+| 23 | Legal | Legal|
 | 25 | Educational Instruction and Library | Educational Instruction and Library|
-| 35 | Food Preparation and Serving Related | Food Preparation and Serving Related|
+| 27 | Arts, Design, Entertainment, Sports, and Media | Arts, Design, Entertainment, Sports, and Media|
 | 29 | Healthcare Practitioners and Technical | Healthcare Practitioners and Technical|
 | 31 | Healthcare Support | Healthcare Support|
-| 49 | Installation, Maintenance, and Repair | Installation, Maintenance, and Repair|
-| 23 | Legal | Legal|
-| 19 | Life, Physical, and Social Science | Life, Physical, and Social Science|
-| 11 | Management | Management|
-| 55 | Military Specific | Military Specific|
-| 43 | Office and Administrative Support | Office and Administrative Support|
-| 51 | Production | Production|
 | 33 | Protective Service | Protective Service|
+| 35 | Food Preparation and Serving Related | Food Preparation and Serving Related|
+| 37 | Building and Grounds Cleaning and Maintenance | Building and Grounds Cleaning and Maintenance|
+| 39 | Personal Care and Service Occupations | Personal Care and Service Occupations|
 | 41 | Sales and Related | Sales and Related|
-| 22 | Student | Student|
+| 43 | Office and Administrative Support | Office and Administrative Support|
+| 45 | Farming, Fishing, and Forestry Occupations | Farming, Fishing, and Forestry Occupations|
+| 47 | Construction and Extraction Occupations | Construction and Extraction Occupations|
+| 49 | Installation, Maintenance, and Repair | Installation, Maintenance, and Repair|
+| 51 | Production | Production|
 | 53 | Transportation and Material Moving | Transportation and Material Moving|
+| 55 | Military Specific | Military Specific|
 | 99 | Other | Other job function not listed in this vocabulary.|
 
 ### occupation-vocab
