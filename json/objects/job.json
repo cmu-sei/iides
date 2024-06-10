@@ -139,6 +139,11 @@
                     "description": "Management"
                 },
                 {
+                    "const": "39",
+                    "title": "Personal Care and Service Occupations",
+                    "description": "Personal Care and Service Occupations"
+                },
+                {
                     "const": "55",
                     "title": "Military Specific",
                     "description": "Military Specific"
