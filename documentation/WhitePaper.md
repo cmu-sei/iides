@@ -2,23 +2,24 @@
 
 Author: [TEAM]
 
-Date: April 26, 2024
+Date: June 18, 2024
 
-Version: 0.1, Revision 1
+Version: 0.1, Revision 3
 
 ## Introduction
 
-TODO - Intro
+Insider threat and risk management are not themselves new phenomena, but they do represent a relatively nascent field of study. While CERT's research in the field was already at a decade old when the CERT Guide to Insider Threat was published in 2012 (Cappelli, Moore, and Trzeciak, 2012), the area as a field of study is itself still relatively young, encompassing many different fields, disparate sources of legal and policy mandates, and several schools of thought. In much the same way that research around insider threat is still growing and coalescing, practitioners are still working out best practices around technical defenses, behavioral and human elements mitigations, and how to store and share incident data.
+
+This standard exists to expand on that last point - how can we best store insider threat case data? What are the best ways to craft and apply the appropriate taxonomy to case data? Perhaps most importantly, which types of individuals stand to benefit from this work, and how best might they use such a framework to assure mutually intelligible information sharing?
+
+While some work has been performed around information schema and information portability as it relates to general cybersecurity data, we seek in this paper and the associated standard to provide guidance and structure around the coding, storage, and sharing of data related specifically to insider incidents of all kinds. This work is built upon the work of our aforementioned guide, our continually updated collection of best practices in the Common Sense Guide to Insider Risk (Software Engineering Institute, 2022), as well as two decades of work and corpus curation around MERIT, our insider threat case database.
 
 
 ## Background
 
-TODO - Background
+The study and management of insider threat and risk remain areas of increasingly growing attention, prevalence, and concern. According to the 2024 Verizon Data Breach Incident Report, 35% of breaches are perpetrated by organizational insiders (Verizon, 2024), a not insignificant share. Further, the Ponemon Institute has attempted to assign costs to these phenomena: malicious insider incidents cost organizations an average of $701,500; at roughly 7 events per year, per organization, the average annualized costs of malicious insider incidents becomes $4,840,350 - add in non-malicious and credential theft, and the average annualized costs jumps to $16,226,605 (Ponemon Institute, 2023). Taken together, we can state confidently that both in terms of occurrence and of costs, the threat posed by trusted insiders is as grave an issue as ever.
 
-- bit about MERIT
-- bit about our other research
-- users: researchers, analysts, risk managers, practitioners, investigators, simulations/exercises
-- general happenings in the InT world
+Several classes of stakeholders stand to benefit from this work. Research into insider threat is often stymied early by a lack of data. A standard of case classification and information sharing could allow researchers to build, maintain, and share insider threat case data. Similarly, practitioners - namely analysts, investigators, and those responsible for risk management - stand to benefit from ways in which to build internal case corpora and share that data with other practitioners, other similar businesses or entities, as well as with third-party organizations such as law enforcement, governmental agencies, or research organizations. Such methods would also be of benefit for sharing case information with those who create models and simulations, as well as training, education, and best practices.
 
 
 ## Guiding Principles
@@ -171,6 +172,10 @@ The following is a list of references included in this document, as well as thos
 4. ISO 3166 Maintenance Agency: International Organization for Standardization. ISO 3166 Country Codes. Retrieved May 2024 from https://www.iso.org/obp/ui/.
 5. Merah, Y. Kenaza, T. (2021). Ontology-based Cyber Risk Monitoring Using Cyber Threat Intelligence. *ARES '21: Proceedings of the 16th International Conference on Availability, Reliability and Security, 88, 1–8. doi: 10.1145/3465481.3470024.
 6. Spaeth, H.J., Epstein, L., et al. (2019). Supreme Court Database, Version 2019 Release 1. URL: http://Supremecourtdatabase.org
+7. Software Engineering Institute. “Common Sense Guide to Managing Insider Threats, Seventh Edition.” White Paper. Common Sense Guide to Mitigating Insider Threats. Pittsburgh, PA: Software Engineering Institute, Carnegie Mellon University, September 2022. https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=886874.
+8. Cappelli, Dawn M., Andrew P. Moore, and Randall F. Trzeciak. *The CERT Guide to Insider Threats: How to Prevent, Detect, and Respond to Information Technology Crimes.* 1st ed. Addison-Wesley Professional, 2012.
+9. Verizon. “Data Breach Investigations Report 2024.” Data Breach Investigations Report. Verizon, 2024.
+10. Ponemon Institute. “2023 Cost of Insider Threats Global Report.” Ponemon Institute, September 2023.
 
 ## Licensing and RRO
 TODO - RRO
