@@ -34,5 +34,16 @@ Constants: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `99`
 
 ### source-file-type-vocab
 
-Values: `html`, `log`, `pdf`, `txt`, `docx`, `png`, `xlsx`, `video`, `other`
+Constants: `html`, `log`, `pdf`, `txt`, `docx`, `png`, `xlsx`, `video`, `other`
 
+| Const | Value | Description |
+| --- | --- | --- |
+| html | HTML File | A file in HTML format.|
+| log | Log File | A log file containing event or transaction logs.|
+| pdf | PDF File | A file in Portable Document Format.|
+| txt | Text File | A plain text file.|
+| docx | DOCX File | A Microsoft Word document.|
+| png | PNG Image | An image file in PNG format.|
+| xlsx | Excel File | A Microsoft Excel spreadsheet.|
+| video | Video File | A video file.|
+| other | Other File | A file of another type not listed in this vocabulary.|
