@@ -35,8 +35,14 @@ Abstract class for inheritance by the Insider and Accomplice objects. Describes 
 
 ### suffix-vocab
 
-Values: `Jr`, `Sr`, `III`, `IV`
+Constants: `Jr`, `Sr`, `III`, `IV`
 
+| Const | Value | Description |
+| --- | --- | --- |
+| Jr | Junior | A suffix denoting the son of the father with the same name.|
+| Sr | Senior | A suffix denoting the father when the son has the same name.|
+| III | The Third | A suffix denoting the third generation with the same name.|
+| IV | The Fourth | A suffix denoting the fourth generation with the same name.|
 
 ### residency-vocab
 
