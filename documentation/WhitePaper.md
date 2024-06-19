@@ -1,30 +1,28 @@
 # Insider Incident Data Exchange Standard
 
-Author: [TEAM]
-
-Date: June 18, 2024
-
-Version: 0.1, Revision 3
+Author: CERT Insider Threat Center  
+Date: June 2024  
+Version: 1, Revision 1
 
 ## Introduction
 
-Insider threat and risk management are not themselves new phenomena, but they do represent a relatively nascent field of study. While CERT's research in the field was already at a decade old when the CERT Guide to Insider Threat was published in 2012 (Cappelli, Moore, and Trzeciak, 2012), the area as a field of study is itself still relatively young, encompassing many different fields, disparate sources of legal and policy mandates, and several schools of thought. In much the same way that research around insider threat is still growing and coalescing, practitioners are still working out best practices around technical defenses, behavioral and human elements mitigations, and how to store and share incident data.
+Insider threat and risk management are not themselves new phenomena, but they do represent a relatively nascent field of study. While CERT's research in the field was already at a decade old when the CERT Guide to Insider Threat was published in 2012 [[1](#references)], the area as a field of study is itself still relatively young, encompassing many different fields, disparate sources of legal and policy mandates, and several schools of thought. In much the same way that research around insider threat is still growing and coalescing, practitioners are still working out best practices around technical defenses, behavioral and human elements mitigations, and how to store and share incident data.
 
-This standard exists to expand on that last point - how can we best store insider threat case data? What are the best ways to craft and apply the appropriate taxonomy to case data? Perhaps most importantly, which types of individuals stand to benefit from this work, and how best might they use such a framework to assure mutually intelligible information sharing?
+This standard exists to expand on that last point - how can we best store and exhange insider threat case data? What are the best ways to craft and apply the appropriate taxonomy to case data? Perhaps most importantly, which types of individuals stand to benefit from this work, and how best might they use such a framework to assure mutually intelligible information sharing?
 
-While some work has been performed around information schema and information portability as it relates to general cybersecurity data, we seek in this paper and the associated standard to provide guidance and structure around the coding, storage, and sharing of data related specifically to insider incidents of all kinds. This work is built upon the work of our aforementioned guide, our continually updated collection of best practices in the Common Sense Guide to Insider Risk (Software Engineering Institute, 2022), as well as two decades of work and corpus curation around MERIT, our insider threat case database.
+While some work has been performed around information schema and information portability as it relates to general cybersecurity data, we seek in this paper and the associated standard to provide guidance and structure around the coding, storage, and sharing of data related specifically to insider incidents of all kinds. This work is built upon the work of our Guide to Insider Threat, our continually updated collection of best practices in the Common Sense Guide to Insider Risk [[2](#references)], as well as two decades of work and corpus curation around MERIT, our insider threat case database.
 
 
 ## Background
 
-The study and management of insider threat and risk remain areas of increasingly growing attention, prevalence, and concern. According to the 2024 Verizon Data Breach Incident Report, 35% of breaches are perpetrated by organizational insiders (Verizon, 2024), a not insignificant share. Further, the Ponemon Institute has attempted to assign costs to these phenomena: malicious insider incidents cost organizations an average of $701,500; at roughly 7 events per year, per organization, the average annualized costs of malicious insider incidents becomes $4,840,350 - add in non-malicious and credential theft, and the average annualized costs jumps to $16,226,605 (Ponemon Institute, 2023). Taken together, we can state confidently that both in terms of occurrence and of costs, the threat posed by trusted insiders is as grave an issue as ever.
+The study and management of insider threat and risk remain areas of increasingly growing attention, prevalence, and concern. According to the 2024 Verizon Data Breach Incident Report, 35% of breaches are perpetrated by organizational insiders [[3](#references)]. Further, the Ponemon Institute has attempted to assign costs to these phenomena: malicious insider incidents cost organizations an average of $701,500; at roughly 7 events per year, per organization, the average annualized costs of malicious insider incidents becomes $4,840,350 - add in non-malicious and credential theft, and the average annualized costs jumps to $16,226,605 [[4](#references)]. Taken together, we can state confidently that both in terms of occurrence and of costs, the threat posed by trusted insiders is as grave an issue as ever.
 
 Several classes of stakeholders stand to benefit from this work. Research into insider threat is often stymied early by a lack of data. A standard of case classification and information sharing could allow researchers to build, maintain, and share insider threat case data. Similarly, practitioners - namely analysts, investigators, and those responsible for risk management - stand to benefit from ways in which to build internal case corpora and share that data with other practitioners, other similar businesses or entities, as well as with third-party organizations such as law enforcement, governmental agencies, or research organizations. Such methods would also be of benefit for sharing case information with those who create models and simulations, as well as training, education, and best practices.
 
 
 ## Guiding Principles
 
-The development of IIDES, as with the development of many standards, required a trade off between a fully articulated, tightly constrained schema and a language flexible enough to be useful across a range of potential applications. We balanced these trade offs by adhering to the following set of guidelines when deciding on each particular element of IIDES.
+The development of IIDES, as with the development of many standards, required a trade off between a fully articulated, tightly constrained schema and a language flexible enough to be useful across a range of potential applications and users. We balanced these trade offs by adhering to the following set of guidelines when deciding on each particular element of IIDES.
 
 **Simplicity** - 
 Support the individuals and organizations who do the hard work of analyzing insider incidents by providing the tools and language to do their work as efficiently as possible, without unncessary constraints, abstractions, or requirements.
@@ -33,42 +31,26 @@ Support the individuals and organizations who do the hard work of analyzing insi
 The elements that make up the standard should be based on a mix of direct experience, emprical data, analysis, and theoretical observations. The standard should be directly applicable to current operational practice but also support the advancement of the state of the art.
 
 **Flexibility** - 
-Support different users, use cases, and needs by not overconstraining the schema and limiting requirements. Allow for different users to facilitate their use cases by adding their own constraints, fields, or  vocabularies in local implementations. Respond to and incorporate community feedback regarding changes to the standard or the schema.
+Support different users, use cases, and needs by not overconstraining the schema or adding too many requirements. Allow for different users to facilitate their use cases by adding their own constraints, fields, or  vocabularies in local implementations. Respond to and incorporate community feedback regarding changes to the standard or the schema.
 
 **Interoperability** - 
 Be aware of related work and, when possible, allow for compatibility and interoperability with existing standards. Support referencing of other standards rather than redefining existing work within the schema.
 
 ## Related Standards
 
-TODO - Related standards
+The current landscape of insider threat management is supported by an array of frameworks, standards, and guidelines aimed at mitigating risks. Notable among these are the Common Sense Guide developed by Carnegie Mellon University [[2](#references)], offering valuable guidelines for organizations to safeguard against internal threats, the Insider Threat Indicator Ontology [[5](#references)] which provides a method for describing indicators of insider risk, the MITRE ATT&CK [[6](#references)] framework, which provides a comprehensive matrix of tactics and techniques used by adversaries, and the insider threat specific version of ATT&CK [[7](#references)]. The National Counterintelligence and Security Center's Insider Threat Mitigation Guide [[8](#references)] and the DHS Insider Threat Program (ITP) further contribute by delivering strategic insights and structured methodologies for threat detection and prevention [[9](#references)]. 
 
-We believe IIDES fills a need... Insider threat is nichee, but it touches a variety of other domains... 
+Additionally, the DHS Privacy Impact Assessment (PIA) for Insider Threat Reporting Mobile Platform [[10](#references)] emphasizes the importance of privacy considerations in threat reporting. Standards like STIX/TAXII (Structured Threat Information eXchange/Trusted Automated eXchange of Indicator Information) [[11](#references)], MISP [[12](#references)], and CyberDEM [[13](#references)] facilitate the standardized exchange of cyber threat intelligence and simulations, while the Cyber Incident Reporting Framework (CIRF) outlines protocols for incident documentation and communication [[14](#references)]. Furthermore, technical standards such as OpenIOC (Open Indicators of Compromise) [[15](#references)], MAEC (Malware Analysis Reporting Exchange Format) [[16](#references)], CAPEC (Common Attack Pattern Enumeration and Classification) [[17](#references)], and CVE (Common Vulnerabilities and Exposures) [[18](#references)] provide detailed specifications for identifying and reporting various cyber threats and vulnerabilities. 
 
-Insider Threat
-- Indicator Ontology
-- SOFIT: https://ieeexplore.ieee.org/document/8424651
+Noteably, the bulk of these works are focused on the most technical aspects of cyber and insider incidents. Though some, such as the SOFIT ontology from Greitzer et. al. [[19](#references)] focus on sociotechnical, organizational, or behavioral factors of insider threats. At a higher level, risk management frameworks such as NIST Risk Framework [[20](#references)], NIST Cybersecurity Framework [[21](#references)], and the CERT Resilience Management Model [[22](#references)] focus on identifying organizational risks and addressing the gaps that lead to those risks. IIDES provides a standard for addressing the gap left by existing frameworks and ontologies to connect the technical, cyber, behavioral, and risk components of the insider threat domain into one easily referenced standard.
 
-Cyber:
-- ATT&CK and InT ATT&CK
-- STIX/TAXII
-- MISP
-- SISO CyberDEM
-
-Risk:
-- NIST Risk framework and/or incident framework
-- RMM
-
-Other General Standards
-- NIACS, ANSI, ISO
+The IIDES sschema builds off of lessons learned from the frameworks and standards described above and also references more general standards where appropriate, such as NAICS standards for industry, occupation [[23](#references)] and ISO [[24](#references)] for location codes. It leverages some of CISA's insider threat categories [[25](#references)] and leaves room to reference any of the existing cyber frameworks and repositories.
 
 ## Benefits
-TODO - Benefits
 
-IIDES is designed to provide a range of beneifts across a broad array of potential users in both research and operational environments. Ideally, IIDES will **support efficient sharing** of incident data among practioners, organizations, and researchers by providing a shared naming convention for details that may be included in incident data. It will provide a **foundational vocabulary** for organizations collecting their own incident data and **ease development** of new data collection and case management systems...[ that can talk to each other]
+IIDES is designed to provide a range of beneifts across a broad array of potential users in both research and operational environments. Ideally, IIDES will **support efficient sharing** of incident data among practioners, organizations, and researchers by providing a shared naming convention for details that may be included in incident data. We hope that in the future this will support a more consistent mapping of recommendations and best practices for response, detection, and mitigation of insider threats.
 
-We hope that IIDES will also help **guide data collection** efforts for both researchers and organizations to improve... research....
-
-Allow for a more consistent mapping of recommendations and best practices for response, detection, and mitigation. 
+ IIDES also provides a **foundational vocabulary** for organizations collecting their own incident data and **eases development** of new data collection and case management systems for reporting and tracking incidents. Without clear and consistent reporting mechanisms, organizations risk delays in detecting and responding to insider threats, as well as inconsistencies in data collection and analysis. Additionally, inadequate reporting procedures may result in missed opportunities for early intervention and mitigation, leaving organizations vulnerable to insider attacks. By implementing IIDES, organizations can streamline reporting processes, improve data accuracy and reliability, and enhance their overall resilience against insider threats.  
 
 ## IIDES Architecture
 
@@ -76,11 +58,12 @@ IIDES is split into four different sections: the seven core components, addition
 
 ### Core Components
 
-The core components of IIDES are Incident, Insider, Organization, Job, Detection, Response, and TTP. Figure X describes the relationships between these core components. 
+The core components of IIDES are Incident, Insider, Organization, Job, Detection, Response, and TTP. Figure 1 describes the relationships between these core components. 
 
-![IIDES Core Diagram](../UML/out/IIDES_Core.png "IIDES Core")
+![IIDES Core Diagram](../UML/out/IIDES_Core.png "IIDES Core")  
+*Figure 1: IIDES Core Components*
 
-None of the components in IIDES are required. An organization using IIDES may choose to one, all, or some subset of the avaialable components. To have a valid schema, the relationships are required as described in the schema [documentation](../).
+None of the components in IIDES are required by the schema. An organization using IIDES may choose to one, all, or some subset of the avaialable components. To have a valid schema, the relationships must be implemented as described in the schema [documentation](../).
 
 An insider threat [Incident](objects/incident.md) can be associated with one or more [Insiders](objects/insider.md) who commited the incident. Those insiders may either be employed by, or own, one or more [Organizations](objects/organization.md) involved in the incident. The specific details of an employment relationship are contained in the [Job](objects/job.md) entity.
 
@@ -94,9 +77,10 @@ An incident can have zero, one, or multiple [TTPs](objects/ttp.md), each of whic
 
 ### Full Architecture
 
-The full architecture of IIDES includes a number of subcomponents that are associated with one or more of the IIDES core components.
+The full architecture of IIDES includes a number of subcomponents that are associated with one or more of the IIDES core components as outlined in Figure 2.
 
-![IIDES Entity Relationships](../UML/out/IIDES_Entity_Relationships.png "IIDES Relationships")
+![IIDES Entity Relationships](../UML/out/IIDES_Entity_Relationships.png "IIDES Relationships")  
+*Figure 2: IIDES Full Relationship Diagram*
 
 The Incident core component includes the subcomponents [Target](objects/target.md), [Impact](objects/impact.md), [Note](objects/note.md), and [Source](objects/source.md). An incident can have zero, one, or more of each of these subcomponents. A target is the system, data, person, or physical property that was targeted by the insider. An impact is a quantitative measurement of the impact of the incident on the victim organization. A note is used for keeping details unrelated to the incident, such as case management notes or research references. Sources are documents and files related to the incident or its investigation.
 
@@ -112,20 +96,20 @@ The Detection and TTP core components do not have any additional subcomponents.
 
 IIDES components are connected to one another through relationships. We have tried not to overspecify the relationships in IIDES, as doing so would be a violation of our guiding principles of simplicity and flexibility. However, we do specify as part of the schema the relationships which we believe are important to facilitating a clear understanding of an insider incident.
 
-We refer to a group of components all related to one another through a particular incident as an "incident bundle". Though we understand that it is theoretically possible to have an insider or organization connected to more than one incident (e.g., an organization that has an incident in one year, then a separate incident the next year), we recommend that implementations only include one incident in each bundle. This simplifies the technical implemenation of the schema and ensures the data remains readable by human analysts. 
+We refer to a group of components all related to one another through a particular incident as an "incident bundle". Though we understand that it is theoretically possible to have an insider or organization connected to more than one incident (e.g., an organization that has an incident in one year, then a separate incident the next year), we recommend that implementations only include one incident in each bundle. This simplifies the technical implemenation of the schema and ensures the data remains readable by human analysts and researchers. 
 
-The schema does not require inclusion of an incident entity. However, we highly recommend including the incident entity, with null fields if necessary (except for `id`), as it provides the connective glue between the other components of IIDES and will allow for consistent sharing of incidents across organizations, should the need arise.
+The schema does not require inclusion of an incident entity. However, we strongly recommend including the incident entity, with null fields if necessary (except for `id`), as it provides the connective glue between the other components of IIDES and will allow for consistent sharing of incidents across organizations, should the need arise.
 
 The relationships specified in IIDES are are detailed in the description of each component, as well as in the IIDES [ERD](../UML/out/) files. Implementations can more tightly constrain the relationships should they have a need to do so, for example by requiring every incident have at least one insider, organization, and target. Implementations should not more loosely define the relationships, for example by allowing an incident to have multiple detection components. Doing so would result in a non-conformant implementation.
 
-The generic [relationship struct](structs/relationship.md) is provided for connecting entities to one another as specified by the relationships in the schema. For example, the generic relationship struct would be used to connect an insider entity with a job entity. Some relationships have additional properties relevant to the relationship and are therefore specified separately from the generic relationship struct in IIDES. These include [Collusion](structs/collusion.md), organization [ownership](structs/org-owner.md) by an insider, and [relationships between organizations](structs/org-relationship.md).
+A generic [relationship struct](structs/relationship.md) is provided for connecting entities to one another as specified by the relationships in the schema. For example, the generic relationship struct would be used to connect an insider entity with a job entity. Some relationships have additional properties relevant to the relationship and are therefore specified separately from the generic relationship struct in IIDES. These include [Collusion](structs/collusion.md), organization [ownership](structs/org-owner.md) by an insider, and [relationships between organizations](structs/org-relationship.md).
 
 The existing generic relationship struct should not be used for connecting entities that do not have relationships specified by the schema. For example, an implementation may require a way to connect a specific impact to a specific TTP, or to connect a specific source to a specific target. These relationships are not specified in IIDES. Before implementing a custom relationship for such entities, we suggest making a request for inclusion of such a new relationship in IIDES via the IIDES GitHub page.
 
 
 ### Vocabularies
 
-Many of the components in IIDES include properties which require values from specific vocabularies (enumerations) included with IIDES. For example, the `incident_type` property of the [Incident](objects/incident.md) component requires a value from the [incident-type-vocab](objects/incident.md#incident-type-vocab), which lists Fraud, Sabotage, Espionage, Violence, and Unintentional as the options for `incident_type`.  The vocabularies in IIDES are based on our own extensive experience working with insider incidents as well as on a large collection of incident data.
+Many of the components in IIDES include properties which require values from specific vocabularies (enumerations) included with IIDES. For example, the `incident_type` property of the [Incident](objects/incident.md) component requires a value from the [incident-type-vocab](objects/incident.md#incident-type-vocab), which lists Fraud, Sabotage, Espionage, Violence, and Unintentional as the options for `incident_type`.  The vocabularies in IIDES are based on our own extensive experience working with insider incidents as well as on a large collection of incident data. We expect some of these vocabularies to grow and change over time to beter suit the needs of the IIDES user community.
 
 Most vocabularies in the IIDES schema are specified as subschemas with a mapping of constants to their titles and description, as opposed to a simple list of values (i.e., an enumeration). For example, the allowed values for the `incident_type` propertiy are only "F", "S", "E", "V", and "U". This specification of constants is intended to keep the stored data as small as possible, as well as to provide consistent definitions of the vocabulary terms across the IIDES user base and insider threat community at large. 
 
@@ -149,33 +133,61 @@ No matter how well a standard is defined, there will always be cases where the d
 
 ### Implementation Guidance
 
-We chose to use JSON to define the IIDES schema, as JSON is one of the most widely used data interchange formats and is arguably eaiser to use than XML. JSON however does have its drawbacks as a language for defining schemas. For example, it is difficult to directly specify many-to-many relationships and it assumes that undefined entities are allowed by default. Explicity stating that additional properties and objects are disallowed would violate our guiding principle of flexibility. For this reason, the IIDES schema is defined only in part by its JSON specification. Additional details for implementation can be found in this white paper, the descriptions of each component, and the entity relationship diagrams (ERDs) located in the [UML](../UML/out/) files.
+We chose to use JSON to define the IIDES schema, as JSON is one of the most widely used data interchange formats and is arguably eaiser to use than XML. JSON however does have its drawbacks as a language for defining schemas. For example, it is difficult to directly specify many-to-many relationships and it assumes that undefined entities are allowed by default. Explicity stating that additional properties and objects are disallowed would violate our guiding principle of flexibility. For this reason, the IIDES schema is defined only in part by its JSON specification. Additional details for implementation can be found in this white paper, the descriptions of each component (found in the [documentation](.) folder), and the entity relationship diagrams (ERDs) located in the [UML](../UML/out/) files.
 
-We also provide a separate reference implementation of IIDES, pyIIDES, written in Python, for those who wish to reference a schema-comformant, complete implementation. PyIIDES is a python package available for download and use in other tools or IIDES implementations. One such example of a tool using pyIIDES is Termite, a lightweight, IIDES-compliant insider threat case management solution.
+We also provide a separate reference implementation of IIDES, called PyIIDES, written in Python, for those who wish to reference a schema-comformant, complete implementation. PyIIDES is a python package available for download and use in other tools or IIDES implementations. One such example of a tool using PyIIDES is Termite, a lightweight, IIDES-compliant insider threat case management solution.
 
-For those writing implementations of IIDES in other languages, we suggest conforming as tightly as possible to the IIDES schema as specified in these documents and the reference implementations. We request that community memebers requiring a non-standard or non-comformant implementation of IIDES make a request to the IIDES development team via the GitHub page before implementing a custom schema. Doing so provides the team an opportunity to improve IIDES and its associated implementations for use by the community.
+For those writing implementations of IIDES in other languages, we suggest conforming as tightly as possible to the IIDES schema as specified in these documents and the reference implementations. We request that community members requiring a non-standard or non-comformant implementation of IIDES make a request to the IIDES development team via the GitHub page before implementing a custom schema. Doing so provides the team an opportunity to improve IIDES and its associated implementations for use by the community.
 
 
 ## Conclusion
 
-TODO - conclusion
+Though extensive, existing tools and guidelines do not collectively address the need for a unified insider threat data exchange standard. Other frameworks and standards are often focused on specific aspects of threat management, such as external attacks, cyber threat intelligence sharing, or procurement regulations, rather than on creating a holistic, standardized approach to collecting and reporting insider threat incidents. This fragmentation leads to inconsistencies in how insider threats are reported, analyzed, and mitigated across different organizations and sectors.
 
-We welcome community feedback and suggestions for enhancement, which can be submitted via the IIDES GitHub page as issues, discussions, or pull requests.
+IIDES addresses the critical need for an insider threat data standard that integrates these disparate elements into a cohesive framework, ensuring uniformity and effectiveness in addressing insider threats. 
+It provides a mechanism for information sharing and collaboration among stakeholders by leveraging best practices and lessons learned from existing policies and frameworks. 
+
+It is our hope that IIDES will serve as a valuable tool for enhancing insider threat management capabilities across organizations. We welcome community feedback and suggestions for enhancement, which can be submitted via the IIDES GitHub page as issues, discussions, or pull requests.
 
 ## References
 
 The following is a list of references included in this document, as well as those referenced in the IIDES schema files.
 
-1. Cyber Data Exchange Model (DEM) Product Development Group - Simulation Interoperability Standards Organization (SISO). (2023). Cyber Data Exchange Model (DEM).
-2. Cybersecurity and Infrastructure Security Agency. Defining Insider Threats. Retrieved May 23, 2024 from https://www.cisa.gov/topics/physical-security/insider-threat-mitigation/defining-insider-threats
-3. Greitzer, F.L. (2014). Unintentional Insider Threat: Contributing Factors, Observables, and Mitigation Strategies. *47th Hawaii International Conference on System Science*.
-4. ISO 3166 Maintenance Agency: International Organization for Standardization. ISO 3166 Country Codes. Retrieved May 2024 from https://www.iso.org/obp/ui/.
-5. Merah, Y. Kenaza, T. (2021). Ontology-based Cyber Risk Monitoring Using Cyber Threat Intelligence. *ARES '21: Proceedings of the 16th International Conference on Availability, Reliability and Security, 88, 1–8. doi: 10.1145/3465481.3470024.
-6. Spaeth, H.J., Epstein, L., et al. (2019). Supreme Court Database, Version 2019 Release 1. URL: http://Supremecourtdatabase.org
-7. Software Engineering Institute. “Common Sense Guide to Managing Insider Threats, Seventh Edition.” White Paper. Common Sense Guide to Mitigating Insider Threats. Pittsburgh, PA: Software Engineering Institute, Carnegie Mellon University, September 2022. https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=886874.
-8. Cappelli, Dawn M., Andrew P. Moore, and Randall F. Trzeciak. *The CERT Guide to Insider Threats: How to Prevent, Detect, and Respond to Information Technology Crimes.* 1st ed. Addison-Wesley Professional, 2012.
-9. Verizon. “Data Breach Investigations Report 2024.” Data Breach Investigations Report. Verizon, 2024.
-10. Ponemon Institute. “2023 Cost of Insider Threats Global Report.” Ponemon Institute, September 2023.
+1. Cappelli, Dawn M., Andrew P. Moore, and Randall F. Trzeciak. *The CERT Guide to Insider Threats: How to Prevent, Detect, and Respond to Information Technology Crimes.* 1st ed. Addison-Wesley Professional, 2012.
+2. Software Engineering Institute. “Common Sense Guide to Managing Insider Threats, Seventh Edition.” White Paper. Common Sense Guide to Mitigating Insider Threats. Pittsburgh, PA: Software Engineering Institute, Carnegie Mellon University, September 2022. https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=886874.
+3. Verizon. “Data Breach Investigations Report 2024.” Data Breach Investigations Report. Verizon, 2024.
+4. Ponemon Institute. “2023 Cost of Insider Threats Global Report.” Ponemon Institute, September 2023.
+5. D. Costa, M. Albrethsen, M. Collins, S. Perl, G. Silowash, and D. Spooner, "An Insider Threat Indicator Ontology," Carnegie Mellon University, Software Engineering Institute's Digital Library. Software Engineering Institute, Technical Report CMU/SEI-2016-TR-007, 10-May-2016.
+6. MITRE. MITRE ATT&CK. URL: https://attack.mitre.org. Accessed June 2024.
+7. MITRE Engenuity. Insider Threat TTP Knowledge Base. URL: https://center-for-threat-informed-defense.github.io/insider-threat-ttp-kb/. Accessed June 2024.
+8. Cybersecurity and Infrastructure Security Agency (CISA). Insider Threat Mitigation Guide. November 2020.
+9. Department of Homeland Security (DHS) Insider Threat Program (ITP). URL: https://www.dhs.gov/publication/dhs-all-pia-052-dhs-insider-threat-program. Accessed June 2024.
+10. Department of Homeland Security (DHS). Privacy Impact Assessments. URL: https://www.dhs.gov/privacy-impact-assessments. Accessed June 2024.
+11. OASIS Open. Structured Threat Information Exchange (STIX)/Trusted Automated Exchange of Intelligence Information (TAXII). URL: https://oasis-open.github.io/cti-documentation/. Accessed June 2024.
+12. Wagner, Dulaunoy, Wagener, and Iklody. Malware Information Sharing Platform (MISP). URL: https://www.misp-project.org/. Accessed June 2024.
+13. Cyber Data Exchange Model (DEM) Product Development Group - Simulation Interoperability Standards Organization (SISO). (2023). Cyber Data Exchange Model (DEM).
+14. Cyber Threat Alliance. Cyber Incident Reporting Framework: Global Edition. 2023.
+15. Mandiant FireEye. OpenIOC (Open Indicators of Compromise).
+16. MITRE. MAEC (Malware Analysis Reporting Exchange Format). URL: https://maecproject.github.io/documentation/maec5-docs/#introduction. Accessed June 2024.
+17. MITRE. Common Attack Pattern Enumeration and Classification (CAPEC). URL: https://capec.mitre.org/. Accessed June 2024.
+18. CVE Program. Common Vulnerabilities and Exposures (CVE). URL: https://www.cve.org/. Accessed June 2024.
+19. F. Greitzer, J. Purl, Y. M. Leong and D. E. S. Becker, "SOFIT: Sociotechnical and Organizational Factors for Insider Threat," 2018 IEEE Security and Privacy Workshops (SPW), San Francisco, CA, USA, 2018, pp. 197-206, doi: 10.1109/SPW.2018.00035.
+20. National Institute of Standards and Technology. Risk Management Framework for Information Systems and Organizations: A System Life Cycle Approach for Security and Privacy. December 2018.
+21. National Institute of Standards and Technology. The NIST Cybersecurity Framework (CSF) 2.0. Februrary 2024.
+22. Software Engineering Institute. "CERT Resilience Management Model: Version 1.2". Pittsburgh, PA: Software Engineering Institute, Carnegie Mellon University, Februrary 2016. https://insights.sei.cmu.edu/documents/1629/2016_002_001_514462.pdf
+23. U.S. Bureau of Labor. North American Industry Classification System (NAICS). 2022.
+24. ISO 3166 Maintenance Agency: International Organization for Standardization. ISO 3166 Country Codes. Retrieved May 2024 from https://www.iso.org/obp/ui/.
+25. Cybersecurity and Infrastructure Security Agency. Defining Insider Threats. Retrieved May 23, 2024 from https://www.cisa.gov/topics/physical-security/insider-threat-mitigation/defining-insider-threats
+
+
+## Acknowledgments
+The following individuals have made significant contributions to the development of IIDES. Thank you for your time and effort.
+
+Austin Whisnant  
+Nathan Ammerman  
+Gaberiel Sha  
+Marco Paes  
+Luke Osterritter
 
 ## Licensing and RRO
 TODO - RRO
