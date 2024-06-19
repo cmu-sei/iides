@@ -12,6 +12,11 @@ large file. The schema file can them be used offline.
 """
 import os
 import json
+import sys
+
+script_directory = os.path.dirname(os.path.abspath(sys.argv[0]))
+iides_directory = os.path.dirname(script_directory)
+JSON_PATH = os.path.join(iides_directory, 'json')
 
 
 def get_json_files(jpath):
@@ -23,6 +28,7 @@ def get_json_files(jpath):
                 fnames.append(os.path.join(root, f))
     return fnames
 
+
 def iterate_replace_refs_list(my_list, schema_name):
     """ For the edge case of nested dictionaries in lists """
     for item in my_list:
@@ -33,6 +39,7 @@ def iterate_replace_refs_list(my_list, schema_name):
             iterate_replace_refs(item, schema_name)
     else:
         print("Reached the end of the dictionary.")
+
 
 def iterate_replace_refs(my_dict, schema_name):
     """ Recursively iterate through the schema finding $refs """
@@ -56,42 +63,42 @@ def iterate_replace_refs(my_dict, schema_name):
     else:
         print("Reached the end of the dictionary.")
 
+
 if __name__ == "__main__":
-  # Define the directory containing JSON files (replace with your path)
-  schema_doc = "iides_full_schema.json"
+    # Define the directory containing JSON files (replace with your path)
+    schema_doc = os.path.join(iides_directory, "iides_full_schema_TEST.json")
 
-  json_schemas = get_json_files('json')
-  properties = {}
+    json_schemas = get_json_files(JSON_PATH)
+    properties = {}
 
-  for filename in json_schemas:
-      print(filename)
-      with open(filename, 'r') as f:
+    for filename in json_schemas:
+        print(filename)
+        with open(filename, 'r') as f:
             schema = json.load(f)
-      name = filename[(filename.rfind("\\")+1):len(filename)-5]
-      print(name)
-      if name != "bundle":
-        obj_properties = {}  
-        for obj in schema:
-            if obj not in ['$id', '$schema']:
-              obj_properties[obj] = schema[obj]
-            if obj == 'properties':
-                iterate_replace_refs(obj_properties[obj], name)
-        properties[name] = obj_properties
+        name = filename[len(iides_directory)+1:-5]
+        print(name)
+        if name != "bundle":
+            obj_properties = {}
+            for obj in schema:
+                if obj not in ['$id', '$schema']:
+                    obj_properties[obj] = schema[obj]
+                if obj == 'properties':
+                    iterate_replace_refs(obj_properties[obj], name)
+            properties[name] = obj_properties
 
-  f = open(f"{schema_doc}", "w")
-  header = {
-  f"$id": "iides/json/iides_full_schema.json",
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "IIDES Schema",
-  "description": "A combined schema including all subschemas.",
-  "type": "object",
-  "properties": {}
-  }
+    f = open(schema_doc, "w")
+    header = {
+        "$id": "iides/json/iides_full_schema.json",
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "IIDES Schema",
+        "description": "A combined schema including all subschemas.",
+        "type": "object",
+        "properties": {}
+    }
 
-  header['properties'] = properties
+    header['properties'] = properties
 
-  f.write(json.dumps(header, indent=4))
-  # f.write(json.dumps(properties, indent=4))
+    f.write(json.dumps(header, indent=4))
+    f.close()
 
-  f.close()
-  print("Successfuly made large doc.")
+    print("Successfuly made large doc.")
