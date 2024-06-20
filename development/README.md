@@ -3,17 +3,11 @@ Information and files in this development folder should not be pushed to the pub
 # Development Status
 
 1. Schema development status: Complete
-2. Documentation status: in progress
-  - [ ] Intro (@losterritter)
-  - [ ] Background (@losterritter)
-  - [ ] Related Standards (@mpaes)
-  - [ ] Benefits (@mpaes)
-  - [ ] Conclusion (@abwhisnant)
-3. MERIT data updates: not started
-4. Final team review: not started
-5. External review (Dan, Bill, etc.): not started
-6. Comms review: not started
-7. Release review: not started
+2. Documentation status: Complete
+3. MERIT data updates: In Progress
+4. Final team review: Scheduled
+5. Comms review: not started
+6. Release review: not started
 
 
 ## Workflow and Editing
