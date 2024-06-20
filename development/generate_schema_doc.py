@@ -66,7 +66,7 @@ def iterate_replace_refs(my_dict, schema_name):
 
 if __name__ == "__main__":
     # Define the directory containing JSON files (replace with your path)
-    schema_doc = os.path.join(iides_directory, "iides_full_schema_TEST.json")
+    schema_doc = os.path.join(iides_directory, "iides_full_schema.json")
 
     json_schemas = get_json_files(JSON_PATH)
     properties = {}
