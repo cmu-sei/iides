@@ -185,7 +185,7 @@ The insider willingly contacted an acquaintance who worked in the CIA to get in 
 - **`Court country`**:
  United States of America
 - **`Court state`**:
- Virginia
+ VA
 - **`Court district`**:
  Eastern District of Virginia
 - **`Court type`**:
@@ -464,7 +464,7 @@ Insider was behind 2 mortgage payments and had debt they wished to pay.
 - **`Source type`**:
  Media (*5*) &mdash; News, blog, or similar publication.
 - **`File type`**:
- html
+ HTML File (*html*) &mdash; A file in HTML format.
 - **`Date`**:
  2019-05-17
 - **`Public`**:
@@ -481,7 +481,7 @@ Insider was behind 2 mortgage payments and had debt they wished to pay.
 - **`Source type`**:
  Court Document (*1*) &mdash; Legal document from a court case.
 - **`File type`**:
- pdf
+ PDF File (*pdf*) &mdash; A file in Portable Document Format.
 - **`Date`**:
  2022-07-11
 - **`Public`**:
@@ -498,7 +498,7 @@ Insider was behind 2 mortgage payments and had debt they wished to pay.
 - **`Source type`**:
  Court Document (*1*) &mdash; Legal document from a court case.
 - **`File type`**:
- pdf
+ PDF File (*pdf*) &mdash; A file in Portable Document Format.
 - **`Date`**:
  2017-06-21
 - **`Public`**:
@@ -515,7 +515,7 @@ Insider was behind 2 mortgage payments and had debt they wished to pay.
 - **`Source type`**:
  Court Document (*1*) &mdash; Legal document from a court case.
 - **`File type`**:
- html
+ HTML File (*html*) &mdash; A file in HTML format.
 - **`Date`**:
  2020-10-05
 - **`Public`**:
@@ -532,7 +532,7 @@ Insider was behind 2 mortgage payments and had debt they wished to pay.
 - **`Source type`**:
  Court Document (*1*) &mdash; Legal document from a court case.
 - **`File type`**:
- html
+ HTML File (*html*) &mdash; A file in HTML format.
 - **`Date`**:
  2022-07-11
 - **`Public`**:
@@ -549,7 +549,7 @@ Insider was behind 2 mortgage payments and had debt they wished to pay.
 - **`Source type`**:
  Court Document (*1*) &mdash; Legal document from a court case.
 - **`File type`**:
- html
+ HTML File (*html*) &mdash; A file in HTML format.
 - **`Date`**:
  2018-10-15
 - **`Public`**:

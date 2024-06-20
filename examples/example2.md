@@ -100,7 +100,7 @@ The insider previously had a very clean record, and was an unlikely suspect. The
 - **`City`**:
  Alexandria
 - **`State`**:
- Virginia
+ VA
 - **`Country`**:
  United States of America
 - **`Postal code`**:
@@ -366,7 +366,7 @@ The exact date of hire and departure is unknown, but the month and year are corr
 - **`Source type`**:
  Court Document (*1*) &mdash; Legal document from a court case.
 - **`File type`**:
- html
+ HTML File (*html*) &mdash; A file in HTML format.
 - **`Date`**:
  2020-04-24
 - **`Public`**:
@@ -383,7 +383,7 @@ The exact date of hire and departure is unknown, but the month and year are corr
 - **`Source type`**:
  Media (*5*) &mdash; News, blog, or similar publication.
 - **`File type`**:
- pdf
+ PDF File (*pdf*) &mdash; A file in Portable Document Format.
 - **`Date`**:
  
 - **`Public`**:
@@ -400,7 +400,7 @@ The exact date of hire and departure is unknown, but the month and year are corr
 - **`Source type`**:
  Court Document (*1*) &mdash; Legal document from a court case.
 - **`File type`**:
- pdf
+ PDF File (*pdf*) &mdash; A file in Portable Document Format.
 - **`Date`**:
  2020-12-07
 - **`Public`**:
@@ -417,7 +417,7 @@ The exact date of hire and departure is unknown, but the month and year are corr
 - **`Source type`**:
  DOJ Press Release (*2*) &mdash; Press release from the Department of Justice or US Attorneys' Office.
 - **`File type`**:
- html
+ HTML File (*html*) &mdash; A file in HTML format.
 - **`Date`**:
  2018-08-23
 - **`Public`**:
@@ -434,7 +434,7 @@ The exact date of hire and departure is unknown, but the month and year are corr
 - **`Source type`**:
  Media (*5*) &mdash; News, blog, or similar publication.
 - **`File type`**:
- html
+ HTML File (*html*) &mdash; A file in HTML format.
 - **`Date`**:
  2017-05-06
 - **`Public`**:
@@ -451,7 +451,7 @@ The exact date of hire and departure is unknown, but the month and year are corr
 - **`Source type`**:
  Media (*5*) &mdash; News, blog, or similar publication.
 - **`File type`**:
- html
+ HTML File (*html*) &mdash; A file in HTML format.
 - **`Date`**:
  2018-08-23
 - **`Public`**:
@@ -468,7 +468,7 @@ The exact date of hire and departure is unknown, but the month and year are corr
 - **`Source type`**:
  Court Document (*1*) &mdash; Legal document from a court case.
 - **`File type`**:
- pdf
+ PDF File (*pdf*) &mdash; A file in Portable Document Format.
 - **`Date`**:
  2018-08-23
 - **`Public`**:
