@@ -26,12 +26,12 @@ The organization(s) involved in the incident. At least one organization, the vic
 
 ### industry-sector-vocab
 
-Constants: `11`, `22`, `22`, `23`, `31`, `42`, `44`, `48`, `51`, `52`, `53`, `54`, `55`, `56`, `61`, `62`, `71`, `72`, `92`, `81`, `99`
+Constants: `11`, `21`, `22`, `23`, `31`, `42`, `44`, `48`, `51`, `52`, `53`, `54`, `55`, `56`, `61`, `62`, `71`, `72`, `92`, `81`, `99`
 
 | Const | Value | Description |
 | --- | --- | --- |
 | 11 | Agriculture and Mining | Growing crops, raising animals, harvesting timber, or extraction of naturally occurring minerals.|
-| 22 | Mining, Quarrying, and Oil and Gas Extraction | Establishments that extract naturally occurring mineral solids, liquid minerals, and gases, to include quarrying, well operations, beneficiating, and other preparation customarily performed at the mine site, or as a part of mining activity.|
+| 21 | Mining, Quarrying, and Oil and Gas Extraction | Establishments that extract naturally occurring mineral solids, liquid minerals, and gases, to include quarrying, well operations, beneficiating, and other preparation customarily performed at the mine site, or as a part of mining activity.|
 | 22 | Utilities | Provisioning of services for the public (e.g., energy, water, and waste collection).|
 | 23 | Construction | Construction and engineering of buildings and associated support services or trades.|
 | 31 | Manufacturing | Mechanical, Chemical, Physical changes to material.|

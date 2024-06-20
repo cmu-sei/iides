@@ -3666,7 +3666,7 @@
                             "description": "Growing crops, raising animals, harvesting timber, or extraction of naturally occurring minerals."
                         },
                         {
-                            "const": "22",
+                            "const": "21",
                             "title": "Mining, Quarrying, and Oil and Gas Extraction",
                             "description": "Establishments that extract naturally occurring mineral solids, liquid minerals, and gases, to include quarrying, well operations, beneficiating, and other preparation customarily performed at the mine site, or as a part of mining activity."
                         },
@@ -4385,11 +4385,27 @@
             "required": [],
             "$defs": {
                 "suffix-vocab": {
-                    "enum": [
-                        "Jr",
-                        "Sr",
-                        "III",
-                        "IV"
+                    "oneOf": [
+                        {
+                            "const": "Jr",
+                            "title": "Junior",
+                            "description": "A suffix denoting the son of the father with the same name."
+                        },
+                        {
+                            "const": "Sr",
+                            "title": "Senior",
+                            "description": "A suffix denoting the father when the son has the same name."
+                        },
+                        {
+                            "const": "III",
+                            "title": "The Third",
+                            "description": "A suffix denoting the third generation with the same name."
+                        },
+                        {
+                            "const": "IV",
+                            "title": "The Fourth",
+                            "description": "A suffix denoting the fourth generation with the same name."
+                        }
                     ]
                 },
                 "residency-vocab": {
@@ -4979,16 +4995,52 @@
                     ]
                 },
                 "source-file-type-vocab": {
-                    "enum": [
-                        "html",
-                        "log",
-                        "pdf",
-                        "txt",
-                        "docx",
-                        "png",
-                        "xlsx",
-                        "video",
-                        "other"
+                    "oneOf": [
+                        {
+                            "const": "html",
+                            "title": "HTML File",
+                            "description": "A file in HTML format."
+                        },
+                        {
+                            "const": "log",
+                            "title": "Log File",
+                            "description": "A log file containing event or transaction logs."
+                        },
+                        {
+                            "const": "pdf",
+                            "title": "PDF File",
+                            "description": "A file in Portable Document Format."
+                        },
+                        {
+                            "const": "txt",
+                            "title": "Text File",
+                            "description": "A plain text file."
+                        },
+                        {
+                            "const": "docx",
+                            "title": "DOCX File",
+                            "description": "A Microsoft Word document."
+                        },
+                        {
+                            "const": "png",
+                            "title": "PNG Image",
+                            "description": "An image file in PNG format."
+                        },
+                        {
+                            "const": "xlsx",
+                            "title": "Excel File",
+                            "description": "A Microsoft Excel spreadsheet."
+                        },
+                        {
+                            "const": "video",
+                            "title": "Video File",
+                            "description": "A video file."
+                        },
+                        {
+                            "const": "other",
+                            "title": "Other File",
+                            "description": "A file of another type not listed in this vocabulary."
+                        }
                     ]
                 }
             }

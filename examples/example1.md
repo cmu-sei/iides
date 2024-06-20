@@ -85,7 +85,7 @@ Joshua Adam Schulte had a history of social and mental health issues. He showed 
 - **`City`**:
  Langley
 - **`State`**:
- Virginia
+ VA
 - **`Country`**:
  US
 - **`Postal code`**:
@@ -633,7 +633,7 @@ The child pornography charges were included in the JSON because they are relevan
 - **`Source type`**:
  DOJ Press Release (*2*) &mdash; Press release from the Department of Justice or US Attorneys' Office.
 - **`File type`**:
- html
+ HTML File (*html*) &mdash; A file in HTML format.
 - **`Date`**:
  2018-06-18T00:00:00Z
 - **`Public`**:
@@ -650,7 +650,7 @@ The child pornography charges were included in the JSON because they are relevan
 - **`Source type`**:
  DOJ Press Release (*2*) &mdash; Press release from the Department of Justice or US Attorneys' Office.
 - **`File type`**:
- html
+ HTML File (*html*) &mdash; A file in HTML format.
 - **`Date`**:
  2023-01-18T00:00:00Z
 - **`Public`**:
@@ -667,7 +667,7 @@ The child pornography charges were included in the JSON because they are relevan
 - **`Source type`**:
  Media (*5*) &mdash; News, blog, or similar publication.
 - **`File type`**:
- html
+ HTML File (*html*) &mdash; A file in HTML format.
 - **`Date`**:
  2022-07-13T00:00:00Z
 - **`Public`**:
@@ -684,7 +684,7 @@ The child pornography charges were included in the JSON because they are relevan
 - **`Source type`**:
  Court Document (*1*) &mdash; Legal document from a court case.
 - **`File type`**:
- html
+ HTML File (*html*) &mdash; A file in HTML format.
 - **`Date`**:
  2022-07-13T00:00:00Z
 - **`Public`**:

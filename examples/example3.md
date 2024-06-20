@@ -387,7 +387,7 @@ This was a civil case, the insider was formally charged through a third party ci
 - **`Source type`**:
  Court Document (*1*) &mdash; Legal document from a court case.
 - **`File type`**:
- pdf
+ PDF File (*pdf*) &mdash; A file in Portable Document Format.
 - **`Date`**:
  2017-09-13
 - **`Public`**:
