@@ -228,12 +228,12 @@
         ["1", "2016-11-01"],
         ["2", "2016-11-01"]
       ],
-      "behavioral_controls": [["4", "2016-11-01"]],
-      "investigated_by": ["4", "7"],
+      "behavioral_controls": [["9", "2016-11-01"]],
+      "investigated_by": ["2", "3"],
       "investigation_events": [
+        ["3", "2017-03-07"],
         ["1", "2017-03-07"],
-        ["2", "2017-03-07"],
-        ["3", "2018-06-18"]
+        ["2", "2018-06-18"]
       ],
       "comment": "Schulte left the CIA in November of 2016, before departing from the agency planted a service to still allow remote access to government files and databases, which he used to access classified information post departure."
     },

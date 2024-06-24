@@ -49,7 +49,7 @@ Class CourtCase #f9b8bd {
 + case_number : 1:17-cr-154 
 + case_title : United States v. Mallory 
 + court_country : United States of America 
-+ court_state : Virginia 
++ court_state : VA 
 + court_district : Eastern District of Virginia 
 + court_type : 1 
 + case_type : 2 
@@ -194,8 +194,8 @@ Class Organization #007BC0 {
 Class Response #EF3A47 {
 * id : response--eb4d3760-213c-4f3b-81c2-b7805376c369 
 + technical_controls : [['2', '2012-01-01']]
-+ investigated_by : ['3']
-+ investigation_events : [['1', '2017-06-22'], ['2', '2017-06-22'], ['3', '2017-05-24']]
++ investigated_by : ['5']
++ investigation_events : [['3', '2017-06-22'], ['1', '2017-06-22'], ['2', '2017-05-24']]
 ---
 }
 Class Sentence #f9b8bd {
