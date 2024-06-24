@@ -237,7 +237,7 @@ Class Organization #007BC0 {
 * id : organization--d1472454-0236-4b66-9013-65d0f916ee48 
 + name : Central Intelligence Agency 
 + city : Langley 
-+ state : Virginia 
++ state : VA 
 + country : US 
 + postal_code : 22101
 + small_business : False
@@ -264,9 +264,9 @@ sources.
 Class Response #EF3A47 {
 * id : response--f42fc7ae-48a1-48f9-bf84-0d4b13f7a64c 
 + technical_controls : [['1', '2016-11-01'], ['2', '2016-11-01']]
-+ behavioral_controls : [['4', '2016-11-01']]
-+ investigated_by : ['4', '7']
-+ investigation_events : [['1', '2017-03-07'], ['2', '2017-03-07'], ['3', '2018-06-18']]
++ behavioral_controls : [['9', '2016-11-01']]
++ investigated_by : ['2', '3']
++ investigation_events : [['3', '2017-03-07'], ['1', '2017-03-07'], ['2', '2018-06-18']]
 + comment : Schulte left the CIA in November of 2016, before departing from the agency planted a 
 service to still allow remote access to government files and databases, which he used to 
 access classified information post departure. 

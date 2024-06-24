@@ -33,15 +33,15 @@ Constants: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`
 
 | Const | Value | Description |
 | --- | --- | --- |
-| 1 | Demoted | Insider is demoted. E.g., lowered their rank, title, or responsbilities.|
-| 2 | Suspended | Insider is suspended (definitely or indefinitely) and not allowed to conduct normal work for the organization.|
-| 3 | Put on Paid/Unpaid Leave | Insider is put on temporary leave from a job assignment, with or without pay and benefits.|
-| 4 | Terminated | Insider is terminated, or fired, from the organization.|
-| 5 | Poor Performance Review | Insider receives a review of their work performance which is deemed below average|
-| 6 | Passed Over For Promotion | Organization chooses to promote someone other than the insider as a result of the insider's actions.|
-| 7 | Counseling | Insider is sent to counseling of any kind as a result of their actions.|
-| 8 | Referred to Employee Assistance Program | Insider is referred to the EAP as a result of their actions.|
-| 9 | Reported to HR | Insider is reported to Human Resources as a result of their actions.|
+| 1 | Counseling | Insider is sent to counseling of any kind as a result of their actions.|
+| 2 | Demoted | Insider is demoted. E.g., lowered their rank, title, or responsbilities.|
+| 3 | Passed Over For Promotion | Organization chooses to promote someone other than the insider as a result of the insider's actions.|
+| 4 | Poor Performance Review | Insider receives a review of their work performance which is deemed below average|
+| 5 | Put on Paid/Unpaid Leave | Insider is put on temporary leave from a job assignment, with or without pay and benefits.|
+| 6 | Referred to Employee Assistance Program | Insider is referred to the EAP as a result of their actions.|
+| 7 | Reported to HR | Insider is reported to Human Resources as a result of their actions.|
+| 8 | Suspended | Insider is suspended (definitely or indefinitely) and not allowed to conduct normal work for the organization.|
+| 9 | Terminated | Insider is terminated, or fired, from the organization.|
 | 10 | Transferred | Insider is transferred to another company location as a result of their actions.|
 | 11 | Verbal Reprimand | Insider receives a verbal reprimand from their supervisor as a result of their actions.|
 | 12 | Written Reprimand | Insider receives a written reprimand from their supervisor as a result of their actions.|
@@ -52,9 +52,9 @@ Constants: `1`, `2`, `3`
 
 | Const | Value | Description |
 | --- | --- | --- |
-| 1 | Insider's Residence/Workplace Searched | Investigators search the insider's home or workplace for evidence related to the incident.|
-| 2 | Evidence Found | Evidence relevant to the incident is found. E.g., Fellow employee found a USB drive left in the insider's computer that had sensitive company files downloaded on to it.|
-| 3 | Insider Admits to Activity in Interview | Insider admits to involvement in insider incident while being interviewed by investigators about the incident (or related activity).|
+| 1 | Evidence Found | Evidence relevant to the incident is found. E.g., Fellow employee found a USB drive left in the insider's computer that had sensitive company files downloaded on to it.|
+| 2 | Insider Admits to Activity in Interview | Insider admits to involvement in insider incident while being interviewed by investigators about the incident (or related activity).|
+| 3 | Insider's Residence/Workplace Searched | Investigators search the insider's home or workplace for evidence related to the incident.|
 
 ### investigator-vocab
 
@@ -63,10 +63,10 @@ Constants: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `99`
 | Const | Value | Description |
 | --- | --- | --- |
 | 1 | Incident Response Team | Incident Response Team (IRT), whether internal to the organization or provided by an external contract.|
-| 2 | Management | Management internal to the organization.|
-| 3 | Law Enforcement - Local/State | State or local law enforcement entity.|
-| 4 | Law Enforcement - Federal | Federal law enforcement entity such as the FBI or USSS.|
-| 5 | Law Enforcement - Military/DoD | Law enforcement belonging to the military or Department of Defense, such as military police or NCIS. |
-| 6 | Law Enforcement - Government Agency | Law enforcement belonging to a government agency such as DHS, USPS, IRS, etc.|
-| 7 | Internal Investigators | Other investigators internal to the victim organization.|
+| 2 | Internal Investigators | Other investigators internal to the victim organization.|
+| 3 | Law Enforcement - Federal | Federal law enforcement entity such as the FBI or USSS.|
+| 4 | Law Enforcement - Government Agency | Law enforcement belonging to a government agency such as DHS, USPS, IRS, etc.|
+| 5 | Law Enforcement - Local/State | State or local law enforcement entity.|
+| 6 | Law Enforcement - Military/DoD | Law enforcement belonging to the military or Department of Defense, such as military police or NCIS. |
+| 7 | Management | Management internal to the organization.|
 | 99 | Other | Other investigator not lised in this vocabulary.|

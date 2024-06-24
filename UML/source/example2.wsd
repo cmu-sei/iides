@@ -137,7 +137,7 @@ Class Organization #007BC0 {
 * id : organization--3d459486-b1b1-4886-9129-87b3458120b4 
 + name : Pluribus International Corporation 
 + city : Alexandria 
-+ state : Virginia 
++ state : VA 
 + country : United States of America 
 + postal_code : 22314
 + small_business : True
@@ -157,8 +157,8 @@ Class OrgRelationship #F5F5F5 {
 }
 Class Response #EF3A47 {
 * id : response--ab3c9833-1e6a-426a-9e48-6f74bcbc5778 
-+ investigated_by : ['4']
-+ investigation_events : [['1', '2017-05-17'], ['3', '2017-05-03']]
++ investigated_by : ['3']
++ investigation_events : [['3', '2017-05-17'], ['2', '2017-05-03']]
 + comment : 
 ---
 }

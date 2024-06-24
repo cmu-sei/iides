@@ -128,10 +128,10 @@
     },
     {
       "id": "response--ab3c9833-1e6a-426a-9e48-6f74bcbc5778",
-      "investigated_by": ["4"],
+      "investigated_by": ["3"],
       "investigation_events": [
-        ["1", "2017-05-17"],
-        ["3", "2017-05-03"]
+        ["3", "2017-05-17"],
+        ["2", "2017-05-03"]
       ],
       "comment": ""
     },
