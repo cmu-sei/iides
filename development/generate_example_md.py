@@ -41,8 +41,7 @@ def find_schema(schema_paths, target_tag):
         dict: The JSON schema corresponding to the target tag, or None if not found.
     """
     for path in schema_paths:
-        name = path[path.rfind("\\")+1:]
-        if name == target_tag + '.json':
+        if f'{target_tag}.json' in path:
             with open(path, "r", encoding='utf-8') as schema_file:
                 return json.load(schema_file)
     return None
