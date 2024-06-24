@@ -164,13 +164,11 @@ The insider willingly contacted an acquaintance who worked in the CIA to get in 
 - **`Id`**:
  response--eb4d3760-213c-4f3b-81c2-b7805376c369
 - **`Technical controls`**:
-   - Access to Technical System(s) Terminated (*['2', '2012-01-01']*) &mdash; Insider's access to the organization's technical systems is completely terminated E.g., Insider's account is deleted upon termination from the company.
+ [['2', '2012-01-01']]
 - **`Investigated by`**:
-   - Law Enforcement - Local/State (*3*) &mdash; State or local law enforcement entity.
+ ['5']
 - **`Investigation events`**:
-   - Insider's Residence/Workplace Searched (*['1', '2017-06-22']*) &mdash; Investigators search the insider's home or workplace for evidence related to the incident.
-  - Evidence Found (*['2', '2017-06-22']*) &mdash; Evidence relevant to the incident is found. E.g., Fellow employee found a USB drive left in the insider's computer that had sensitive company files downloaded on to it.
-  - Insider Admits to Activity in Interview (*['3', '2017-05-24']*) &mdash; Insider admits to involvement in insider incident while being interviewed by investigators about the incident (or related activity).
+ [['3', '2017-06-22'], ['1', '2017-06-22'], ['2', '2017-05-24']]
 
 ## Court-case
 

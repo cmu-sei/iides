@@ -169,10 +169,9 @@ Reality Winner was caught after the NSA identified that a classified document pu
 - **`Id`**:
  response--ab3c9833-1e6a-426a-9e48-6f74bcbc5778
 - **`Investigated by`**:
-   - Law Enforcement - Federal (*4*) &mdash; Federal law enforcement entity such as the FBI or USSS.
+ ['3']
 - **`Investigation events`**:
-   - Insider's Residence/Workplace Searched (*['1', '2017-05-17']*) &mdash; Investigators search the insider's home or workplace for evidence related to the incident.
-  - Insider Admits to Activity in Interview (*['3', '2017-05-03']*) &mdash; Insider admits to involvement in insider incident while being interviewed by investigators about the incident (or related activity).
+ [['3', '2017-05-17'], ['2', '2017-05-03']]
 
 ## Court-case
 
