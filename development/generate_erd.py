@@ -150,5 +150,7 @@ relationships = '''
 '''
 f.write(relationships)
 
+f.write('note as N1\n<size:10>This file is a part of the Insider Incident Data Exchange Standard (IIDES)\n<size:10>- see https://github.com/cmu-sei/IIDES\n<size:5> \n<size:10>Copyright 2024 Carnegie Mellon University.\n<size:5> \n<size:10>[DISTRIBUTION STATEMENT A] This material has been approved for public release\n<size:10>and unlimited distribution.  Please see Copyright notice for non-US\n<size:10>Government use and distribution.\n<size:5> \n<size:10>This work is provided “AS-IS” with “NO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED”\n<size:10>and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n<size:5> \n<size:10>Requests for permission for non-licensed uses should be directed to the\n<size:10>Software Engineering Institute at permission@sei.cmu.edu.\n<size:5> \n<size:10>CERT® is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n<size:10>DM24-0776\nend note\n')
+
 f.write("}\n@enduml")
 f.close()

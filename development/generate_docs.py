@@ -170,6 +170,10 @@ if __name__ == "__main__":
             file_lines.append("\n## Vocabularies")
             file_lines.extend(get_vocab(data['$defs']))
 
+        if '$comment' in data:
+            file_lines.append("\n## License")
+            file_lines.append(data['$comment'])
+
         # Write output to markdown file
         relative_path = os.path.relpath(filename, JSON_PATH)
         markdown_filename = os.path.splitext(relative_path)[0] + '.md'

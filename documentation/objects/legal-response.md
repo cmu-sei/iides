@@ -16,3 +16,18 @@ Information about the legal response to the incident, particularly the dates of 
 - **`insider_charges_dismissed`** *(date)* : The plaintiff dismiss their case against the insider. E.g., Upon discovery of further evidence, the judge decided to drop the charges against the insider.
 - **`insider_settled`** *(date)* : The case against the insider is settled outside of the courtroom. E.g., The victim organization reached an agreement with the insider to not file formal charges in return for financial compensation.
 - **`comment`** *(string)* : Comments clarifying the details or dates of the legal response.
+
+## License
+This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES
+
+Copyright 2024 Carnegie Mellon University.
+
+[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.
+
+This work is provided “AS-IS” with “NO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED” and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
+
+Requests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.
+
+CERT® is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.
+
+DM24-0776
