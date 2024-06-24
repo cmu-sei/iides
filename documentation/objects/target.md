@@ -178,3 +178,18 @@ Constants: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, 
 | 24 | Law Enforcement Sensitive | Information, software, or device used by and only available to law enforcement.|
 | 25 | Non-Public | Information not made available to the public.|
 | 26 | Credit/Payment Card (PCI) | Credit/payment card information.|
+
+## License
+This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES
+
+Copyright 2024 Carnegie Mellon University.
+
+[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.
+
+This work is provided “AS-IS” with “NO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED” and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
+
+Requests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.
+
+CERT® is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.
+
+DM24-0776

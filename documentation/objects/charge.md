@@ -46,3 +46,18 @@ Constants: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`
 | 9 | Sealed | The court has restricted access to all or some of the content of the record; however, the existence of the record will still be public record.|
 | 10 | Suspended sentence | The court has delayed the sentencing pending the successful completion of a period of probation and/or treatment program.|
 | 11 | Vacated | The court has withdrawn the guilty plea or set aside the guilty verdict, and the defendant may state they have never been convicted of that crime.|
+
+## License
+This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES
+
+Copyright 2024 Carnegie Mellon University.
+
+[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.
+
+This work is provided “AS-IS” with “NO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED” and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
+
+Requests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.
+
+CERT® is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.
+
+DM24-0776

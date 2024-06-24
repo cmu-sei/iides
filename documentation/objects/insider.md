@@ -155,3 +155,18 @@ Constants: `3.1.1`, `3.1.2`, `3.1.3`, `3.2.1`, `3.2.2`, `3.2.3`, `3.2.4`, `3.2.5
 | 3.6.3 | Foreign Travel - Work Related | Travel undertaken by the insider as required for their job. E.g., The insider's job required frequent travel to non-allied countries.|
 | 3.6.4 | Planning/Contact with Conspirator | Conspiring with a conspirator in order to begin or further their particular scheme. E.g., Insider calls their partner-in-crime in order to establish attack details.|
 | 3.7.1 | Geographic Relocation | Permanent move to a new physical location.|
+
+## License
+This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES
+
+Copyright 2024 Carnegie Mellon University.
+
+[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.
+
+This work is provided “AS-IS” with “NO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED” and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
+
+Requests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.
+
+CERT® is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.
+
+DM24-0776

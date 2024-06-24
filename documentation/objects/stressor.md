@@ -68,3 +68,18 @@ Constants: `1.1`, `1.2`, `1.3`, `1.4`, `1.5`, `1.6`, `1.7`, `1.8`, `1.9`, `1.10`
 | 4.4 | Transferred | Insider was transferred to another location or another team as a result of their actions.|
 | 4.5 | Verbal Reprimand | Insider received a verbal reprimand from their supervisor as a result of their actions.|
 | 4.6 | Written Reprimand | Insider received a written reprimand from their supervisor as a result of their actions.|
+
+## License
+This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES
+
+Copyright 2024 Carnegie Mellon University.
+
+[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.
+
+This work is provided “AS-IS” with “NO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED” and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
+
+Requests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.
+
+CERT® is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.
+
+DM24-0776

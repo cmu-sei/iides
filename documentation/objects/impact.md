@@ -37,3 +37,18 @@ Constants: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, 
 | 14 | Records | Records or rows. Often refers to database or accounting records.|
 | 15 | Drugs | Number of pills, vials, syringes, etc. drugs or medicine taken or effected.|
 | 16 | Trade Secrets | Number of trade secrets stolen or effected.|
+
+## License
+This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES
+
+Copyright 2024 Carnegie Mellon University.
+
+[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.
+
+This work is provided “AS-IS” with “NO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED” and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
+
+Requests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.
+
+CERT® is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.
+
+DM24-0776
