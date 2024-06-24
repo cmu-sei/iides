@@ -7,13 +7,13 @@ Describes the organization's response to the incident, including technical and b
 - **`id`** (required) *(string)* : A unique string that begins with "response--" and is appended with a UUIDv4.
   - Uses pattern: ^response--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
 - **`technical_controls`** *(array)* : Controls put in place to limit or monitor the insider's access to devices, data, or the network, or to limit/monitor network/device access for the user population more generally.
-  - One or more array values
+  - One or more tuple values of the format ([technical-control-vocab](#technical-control-vocab), date)
 - **`behavioral_controls`** *(array)* : Controls put in place to limit, monitor, or correct the insider's behavior within the organization.
-  - One or more array values
+  - One or more tuple values of the format ([behavioral-control-vocab](#behavioral-control-vocab), date)
 - **`investigated_by`** *(array)* : The organization(s) or entity(s) that investigated the incident.
   - One or more constants from [investigator-vocab](#investigator-vocab)
 - **`investigation_events`** *(array)* : Specific events that happend during the course of the investigation into the incident.
-  - One or more array values
+  - One or more tuple values of the format ([investigation-vocab](#investigation-vocab), date)
 - **`comment`** *(string)* : Clarifying comments or additional details about the organization's response.
 
 ## Vocabularies

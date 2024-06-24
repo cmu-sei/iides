@@ -14,9 +14,9 @@ Information about the insider involved in the incident. An incident can have mul
 - **`psychological_issues`** *(array)* : Psychological issue(s) the insider experienced during or before the incident.
   - One or more constants from [psych-issues-vocab](#psych-issues-vocab)
 - **`predispositions`** *(array)* : Insider's tendancy toward certain actions or qualities.
-  - One or more array values
+  - One or more tuple values of the format ([predisposition-type-vocab](#predisposition-type-vocab), [predisposition-subtype-vocab](#predisposition-subtype-vocab))
 - **`concerning_behaviors`** *(array)* : Insider's history of past behavior that could indicate future issues.
-  - One or more array values
+  - One or more tuple values of the format ([concerning-behavior-vocab](#concerning-behavior-vocab), [cb-subtype-vocab](#cb-subtype-vocab))
 - **Inherits properties from [Person](person)**
 
 ## Vocabularies
