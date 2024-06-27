@@ -169,6 +169,11 @@
                 "description": "Insider threatened or attempted to commit suicide at some point during their employment within the organization."
               },
               {
+                "const": "6",
+                "title": "Depression/Anxiety",
+                "description": "Insider expressed issues with or was diagnosed with depression or anxiety."
+              },
+              {
                 "const": "99",
                 "title": "Other",
                 "description": "Insider experienced specific psychological issues not specified in this vocabulary."

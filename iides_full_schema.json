@@ -58,7 +58,8 @@
                         }
                     ]
                 }
-            }
+            },
+            "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \u201cAS-IS\u201d with \u201cNO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\u201d and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT\u00ae is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
         },
         "json/objects/stressor": {
             "title": "Stressor",
@@ -302,7 +303,8 @@
                         }
                     ]
                 }
-            }
+            },
+            "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \u201cAS-IS\u201d with \u201cNO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\u201d and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT\u00ae is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
         },
         "json/objects/accomplice": {
             "title": "Accomplice",
@@ -323,7 +325,8 @@
             },
             "required": [
                 "id"
-            ]
+            ],
+            "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \u201cAS-IS\u201d with \u201cNO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\u201d and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT\u00ae is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
         },
         "json/objects/target": {
             "title": "Target",
@@ -474,8 +477,8 @@
                         },
                         {
                             "const": "4.5",
-                            "title": "Communication Systems",
-                            "description": "Servers, routers, phone systems, etc. that enable communication within the organization, or between the organization and external entities."
+                            "title": "Person(s)",
+                            "description": "Individual person or persons."
                         },
                         {
                             "const": "5.1",
@@ -491,6 +494,11 @@
                             "const": "5.3",
                             "title": "Passwords",
                             "description": "Text strings which authenticate access to a system."
+                        },
+                        {
+                            "const": "5.4",
+                            "title": "Communication Systems",
+                            "description": "Servers, routers, phone systems, etc. that enable communication within the organization, or between the organization and external entities."
                         },
                         {
                             "const": "6.1",
@@ -703,13 +711,13 @@
                         },
                         {
                             "const": "4.5.1",
-                            "title": "Emails",
-                            "description": "Electronic communications in the form of static messages shared to specified user addresses via a network."
+                            "title": "Self",
+                            "description": "The insider is targeting themself."
                         },
                         {
                             "const": "4.5.2",
-                            "title": "Telecommunication Systems",
-                            "description": "Networks that facilitate digital or voice communications."
+                            "title": "Others",
+                            "description": "Indivdual or individuals other than the insider."
                         },
                         {
                             "const": "5.1.1",
@@ -785,6 +793,16 @@
                             "const": "5.3.2",
                             "title": "Passwords",
                             "description": "Access credentials in the form of a text string."
+                        },
+                        {
+                            "const": "5.4.1",
+                            "title": "Emails",
+                            "description": "Electronic communications in the form of static messages shared to specified user addresses via a network."
+                        },
+                        {
+                            "const": "5.4.2",
+                            "title": "Telecommunication Systems",
+                            "description": "Networks that facilitate digital or voice communications."
                         }
                     ]
                 },
@@ -980,7 +998,8 @@
                         }
                     ]
                 }
-            }
+            },
+            "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \u201cAS-IS\u201d with \u201cNO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\u201d and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT\u00ae is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
         },
         "json/objects/incident": {
             "title": "Incident",
@@ -1251,7 +1270,8 @@
                         }
                     ]
                 }
-            }
+            },
+            "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \u201cAS-IS\u201d with \u201cNO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\u201d and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT\u00ae is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
         },
         "json/objects/source": {
             "title": "Source",
@@ -1389,7 +1409,8 @@
                         }
                     ]
                 }
-            }
+            },
+            "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \u201cAS-IS\u201d with \u201cNO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\u201d and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT\u00ae is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
         },
         "json/objects/legal-response": {
             "title": "Legal Response",
@@ -1453,7 +1474,8 @@
             },
             "required": [
                 "id"
-            ]
+            ],
+            "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \u201cAS-IS\u201d with \u201cNO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\u201d and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT\u00ae is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
         },
         "json/objects/person": {
             "title": "Person",
@@ -1692,7 +1714,8 @@
                         }
                     ]
                 }
-            }
+            },
+            "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \u201cAS-IS\u201d with \u201cNO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\u201d and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT\u00ae is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
         },
         "json/objects/note": {
             "title": "Note",
@@ -1723,7 +1746,8 @@
                 "author",
                 "date",
                 "comment"
-            ]
+            ],
+            "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \u201cAS-IS\u201d with \u201cNO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\u201d and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT\u00ae is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
         },
         "json/objects/bundle": {
             "title": "Bundle",
@@ -1806,7 +1830,8 @@
             "required": [
                 "id",
                 "objects"
-            ]
+            ],
+            "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \u201cAS-IS\u201d with \u201cNO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\u201d and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT\u00ae is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
         },
         "json/objects/sentence": {
             "title": "Sentence",
@@ -1963,7 +1988,8 @@
                         }
                     ]
                 }
-            }
+            },
+            "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \u201cAS-IS\u201d with \u201cNO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\u201d and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT\u00ae is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
         },
         "json/objects/ttp": {
             "title": "TTP",
@@ -2611,7 +2637,8 @@
                         }
                     ]
                 }
-            }
+            },
+            "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \u201cAS-IS\u201d with \u201cNO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\u201d and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT\u00ae is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
         },
         "json/objects/job": {
             "title": "Job",
@@ -3399,7 +3426,8 @@
                         }
                     ]
                 }
-            }
+            },
+            "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \u201cAS-IS\u201d with \u201cNO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\u201d and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT\u00ae is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
         },
         "json/objects/charge": {
             "title": "Charge",
@@ -3530,7 +3558,8 @@
                         }
                     ]
                 }
-            }
+            },
+            "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \u201cAS-IS\u201d with \u201cNO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\u201d and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT\u00ae is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
         },
         "json/objects/impact": {
             "title": "Impact",
@@ -3655,7 +3684,8 @@
                         }
                     ]
                 }
-            }
+            },
+            "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \u201cAS-IS\u201d with \u201cNO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\u201d and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT\u00ae is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
         },
         "json/objects/organization": {
             "title": "Organization",
@@ -4352,7 +4382,8 @@
                         }
                     ]
                 }
-            }
+            },
+            "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \u201cAS-IS\u201d with \u201cNO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\u201d and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT\u00ae is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
         },
         "json/objects/court-case": {
             "title": "Court Case",
@@ -4454,7 +4485,8 @@
                         }
                     ]
                 }
-            }
+            },
+            "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \u201cAS-IS\u201d with \u201cNO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\u201d and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT\u00ae is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
         },
         "json/objects/insider": {
             "title": "Insider",
@@ -4631,6 +4663,11 @@
                             "const": "5",
                             "title": "Threatened/Attempted Suicide",
                             "description": "Insider threatened or attempted to commit suicide at some point during their employment within the organization."
+                        },
+                        {
+                            "const": "6",
+                            "title": "Depression/Anxiety",
+                            "description": "Insider expressed issues with or was diagnosed with depression or anxiety."
                         },
                         {
                             "const": "99",
@@ -4990,7 +5027,8 @@
                         }
                     ]
                 }
-            }
+            },
+            "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \u201cAS-IS\u201d with \u201cNO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\u201d and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT\u00ae is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
         },
         "json/objects/response": {
             "title": "Response",
@@ -5214,7 +5252,8 @@
                         }
                     ]
                 }
-            }
+            },
+            "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \u201cAS-IS\u201d with \u201cNO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\u201d and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT\u00ae is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
         },
         "json/objects/detection": {
             "title": "Detection",
@@ -5411,7 +5450,8 @@
                         }
                     ]
                 }
-            }
+            },
+            "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \u201cAS-IS\u201d with \u201cNO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\u201d and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT\u00ae is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
         },
         "json/common/state-vocab": {
             "title": "States Vocabulary",
@@ -5652,7 +5692,8 @@
                         }
                     ]
                 }
-            }
+            },
+            "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \u201cAS-IS\u201d with \u201cNO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\u201d and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT\u00ae is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
         },
         "json/common/insider-relationship-vocab": {
             "title": "Insider Relationship Vocab",
@@ -5713,7 +5754,8 @@
                         }
                     ]
                 }
-            }
+            },
+            "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \u201cAS-IS\u201d with \u201cNO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\u201d and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT\u00ae is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
         },
         "json/common/country-vocab": {
             "title": "Country Vocabulary",
@@ -6730,7 +6772,8 @@
                         }
                     ]
                 }
-            }
+            },
+            "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \u201cAS-IS\u201d with \u201cNO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\u201d and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT\u00ae is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
         },
         "json/structs/org-relationship": {
             "title": "Org Relationship",
@@ -6799,7 +6842,8 @@
                         }
                     ]
                 }
-            }
+            },
+            "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \u201cAS-IS\u201d with \u201cNO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\u201d and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT\u00ae is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
         },
         "json/structs/relationship": {
             "title": "Relationship",
@@ -6826,7 +6870,8 @@
                 "id",
                 "object1",
                 "object2"
-            ]
+            ],
+            "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \u201cAS-IS\u201d with \u201cNO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\u201d and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT\u00ae is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
         },
         "json/structs/org-owner": {
             "title": "Org Owner",
@@ -6853,7 +6898,8 @@
                 "id",
                 "person",
                 "org"
-            ]
+            ],
+            "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \u201cAS-IS\u201d with \u201cNO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\u201d and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT\u00ae is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
         },
         "json/structs/collusion": {
             "title": "Collusion",
@@ -6927,7 +6973,8 @@
                         }
                     ]
                 }
-            }
+            },
+            "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \u201cAS-IS\u201d with \u201cNO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\u201d and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT\u00ae is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
         }
     }
 }
