@@ -50,7 +50,7 @@ Constants: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `99`
 
 ### psych-issues-vocab
 
-Constants: `1`, `2`, `3`, `4`, `5`, `99`
+Constants: `1`, `2`, `3`, `4`, `5`, `6`, `99`
 
 | Const | Value | Description |
 | --- | --- | --- |
@@ -59,6 +59,7 @@ Constants: `1`, `2`, `3`, `4`, `5`, `99`
 | 3 | Medication Noncompliance | The insider stopped taking a prescribed medication or following a prescribed course of treatment for a particular medical or mental health condition which, in turn, could have impacted their mental faculties.|
 | 4 | Delusions | The insider experienced or acted on delusions at some point during their employment within the organization.|
 | 5 | Threatened/Attempted Suicide | Insider threatened or attempted to commit suicide at some point during their employment within the organization.|
+| 6 | Depression/Anxiety | Insider expressed issues with or was diagnosed with depression or anxiety.|
 | 99 | Other | Insider experienced specific psychological issues not specified in this vocabulary.|
 
 ### predisposition-type-vocab

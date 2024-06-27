@@ -39,7 +39,7 @@ Constants: `1`, `2`, `3`, `4`, `5`, `6`
 
 ### target-category-vocab
 
-Constants: `1.1`, `2.1`, `2.2`, `2.3`, `3.1`, `4.1`, `4.2`, `4.3`, `4.4`, `4.5`, `5.1`, `5.2`, `5.3`, `6.1`
+Constants: `1.1`, `2.1`, `2.2`, `2.3`, `3.1`, `4.1`, `4.2`, `4.3`, `4.4`, `4.5`, `5.1`, `5.2`, `5.3`, `5.4`, `6.1`
 
 | Const | Value | Description |
 | --- | --- | --- |
@@ -52,15 +52,16 @@ Constants: `1.1`, `2.1`, `2.2`, `2.3`, `3.1`, `4.1`, `4.2`, `4.3`, `4.4`, `4.5`,
 | 4.2 | Employee Data | Information collected from employees or describing employees.|
 | 4.3 | Identification | Digital or physical means of verifying identity.|
 | 4.4 | Medical Information | Information about an individuals' Protected Health Information (PHI), Medicare/Medicaid, prescription medication, etc.|
-| 4.5 | Communication Systems | Servers, routers, phone systems, etc. that enable communication within the organization, or between the organization and external entities.|
+| 4.5 | Person(s) | Individual person or persons.|
 | 5.1 | Network or Systems | Platforms in which information is shared or processes are run.|
 | 5.2 | Software | Software or applications running on the organization's devices or systems.|
 | 5.3 | Passwords | Text strings which authenticate access to a system.|
+| 5.4 | Communication Systems | Servers, routers, phone systems, etc. that enable communication within the organization, or between the organization and external entities.|
 | 6.1 | Unknown | Unclear what was targeted.|
 
 ### target-subcategory-vocab
 
-Constants: `1.1.1`, `1.1.2`, `1.1.3`, `2.1.1`, `2.1.2`, `2.2.1`, `2.2.2`, `2.2.3`, `2.2.4`, `2.2.5`, `2.2.6`, `2.3.1`, `2.3.2`, `3.1.1`, `3.1.2`, `3.1.3`, `3.1.4`, `3.1.5`, `3.1.6`, `3.1.7`, `3.1.8`, `3.1.9`, `3.1.10`, `3.1.11`, `3.1.12`, `3.1.13`, `3.1.14`, `4.1.1`, `4.1.2`, `4.1.3`, `4.1.4`, `4.1.5`, `4.2.1`, `4.3.1`, `4.3.2`, `4.3.3`, `4.4.1`, `4.4.2`, `4.4.3`, `4.4.4`, `4.5.1`, `4.5.2`, `5.1.1`, `5.1.2`, `5.1.3`, `5.1.4`, `5.1.5`, `5.1.6`, `5.1.7`, `5.1.8`, `5.1.9`, `5.2.1`, `5.2.2`, `5.2.3`, `5.2.4`, `5.3.1`, `5.3.2`
+Constants: `1.1.1`, `1.1.2`, `1.1.3`, `2.1.1`, `2.1.2`, `2.2.1`, `2.2.2`, `2.2.3`, `2.2.4`, `2.2.5`, `2.2.6`, `2.3.1`, `2.3.2`, `3.1.1`, `3.1.2`, `3.1.3`, `3.1.4`, `3.1.5`, `3.1.6`, `3.1.7`, `3.1.8`, `3.1.9`, `3.1.10`, `3.1.11`, `3.1.12`, `3.1.13`, `3.1.14`, `4.1.1`, `4.1.2`, `4.1.3`, `4.1.4`, `4.1.5`, `4.2.1`, `4.3.1`, `4.3.2`, `4.3.3`, `4.4.1`, `4.4.2`, `4.4.3`, `4.4.4`, `4.5.1`, `4.5.2`, `5.1.1`, `5.1.2`, `5.1.3`, `5.1.4`, `5.1.5`, `5.1.6`, `5.1.7`, `5.1.8`, `5.1.9`, `5.2.1`, `5.2.2`, `5.2.3`, `5.2.4`, `5.3.1`, `5.3.2`, `5.4.1`, `5.4.2`
 
 | Const | Value | Description |
 | --- | --- | --- |
@@ -104,8 +105,8 @@ Constants: `1.1.1`, `1.1.2`, `1.1.3`, `2.1.1`, `2.1.2`, `2.2.1`, `2.2.2`, `2.2.3
 | 4.4.2 | Medicare/Medicaid | Information related to health insurance provided by the state to the elderly or financially limited populations.|
 | 4.4.3 | Prescription Medication | Iinformation that relates to doctors notes permiting the purchase of controlled medical substances.|
 | 4.4.4 | Prescription Pads | Secured stationery notes that doctors use for writing prescriptions.|
-| 4.5.1 | Emails | Electronic communications in the form of static messages shared to specified user addresses via a network.|
-| 4.5.2 | Telecommunication Systems | Networks that facilitate digital or voice communications.|
+| 4.5.1 | Self | The insider is targeting themself.|
+| 4.5.2 | Others | Indivdual or individuals other than the insider.|
 | 5.1.1 | Backup Data | Data that can be used to restore a system or dataset if it becomes compromised.|
 | 5.1.2 | Backup Tapes | Stored backup data copied to a tape cartridge.|
 | 5.1.3 | Database | Structured electronic digital information repository.|
@@ -121,6 +122,8 @@ Constants: `1.1.1`, `1.1.2`, `1.1.3`, `2.1.1`, `2.1.2`, `2.2.1`, `2.2.2`, `2.2.3
 | 5.2.4 | Unreleased Software | Software that has not yet been made available.|
 | 5.3.1 | Login Information | Credentials used for access to a technological system.|
 | 5.3.2 | Passwords | Access credentials in the form of a text string.|
+| 5.4.1 | Emails | Electronic communications in the form of static messages shared to specified user addresses via a network.|
+| 5.4.2 | Telecommunication Systems | Networks that facilitate digital or voice communications.|
 
 ### target-format-vocab
 
