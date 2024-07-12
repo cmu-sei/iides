@@ -24,7 +24,7 @@ Constants: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `99`
 | Const | Value | Description |
 | --- | --- | --- |
 | 1 | Court Document | Legal document from a court case|
-| 2 | DOJ Press Release | Press release from the Department of Justice or US Attorneys' Office|
+| 2 | DOJ Press Release | Press release from the Department of Justice or U.S. Attorneys' Office|
 | 3 | Investigator Notes | Raw notes from an incident investigator|
 | 4 | Logs | Technical logs from network, server, or user devices|
 | 5 | Media | News, blog, or similar publication|

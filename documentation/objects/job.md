@@ -66,97 +66,97 @@ Constants: `11.1`, `11.2`, `11.3`, `11.9`, `13.1`, `13.2`, `15.1`, `15.2`, `17.1
 | 11.1 | Top Executives | Chief Executives, General and Operations Managers, Legislators|
 | 11.2 | Advertising, Public Relations, and Sales Managers | Advertising and Promotions Managers, Marketing Managers, Sales Managers, Public Relations Managers, Fundraising Managers|
 | 11.3 | Operations Specialties Managers | Administrative Services Managers, Facilities Managers, Computer and Information Systems Managers, Financial Managers, Industrial Production Managers, Purchasing Managers, Transportation and Distribution Managers, Compensation and Benefits Managers, Human Resources Managers, Training and Development Managers|
-| 11.9 | Other Management Occupations | Construction Managers, Education Administrators, Food Service Managers, Entertainment and Recreation Managers, Postmasters, Property and Community Association Managers, Social and Community Service Managers, Emergency Management Directors, Funeral Home Managers, Personal Service Managers, Etc.|
-| 13.1 | Business Operations Specialists | Agents and Business Managers, Buyers and Purchasing Agents, Claims Adjusters, Compliance Officers, Human Resources Specialists, Project Managers, Management Analysts, Event Planners, Fundraisers, Benefits and Job Analysts, Training and Development Specialists, Market Research Analysts, Etc.|
-| 13.2 | Financial Specialists | Accountants, Auditors, Appraisers, Credit Analysts, Financial Analysts, Financial Advisors, Insurance Underwriters, Credit Counselors, Loan Officers, Tax Preparers, Etc.|
-| 15.1 | Computer Occupations | Computer Systems Analysts, Information Security Analysts, Network Support Specialists, User Support Specialists, Network Architects, Systems Administrators, Software Developers, Web Developers, Interface Designers, Etc.|
-| 15.2 | Mathematical Science Occupations | Actuaries, Mathematicians, Operations Research Analysts, Statisticians, Data Scientists, Etc.|
-| 17.1 | Architects, Surveyors, and Cartographers | Architects, Landscape Architects, Cartographers, Surveyors, Etc.|
-| 17.2 | Engineers | Aerospace Engineers, Bioengineers Engineers, Chemical Engineers, Civil Engineers, Electrical Engineers, Electronics Engineers, Environmental Engineers, Industrial Engineers, Marine Engineers, Naval Architects, Mechanical Engineers, Geological Engineers, Etc.|
-| 17.3 | Drafters, Engineering Technicians, and Mapping Technicians | Architectural Drafters, Mechanical Drafters, Other Drafters, Aerospace Technicians, Civil Engineering Technicians, Environmental Engineering Technicians, Industrial Engineering Technicians, Mechanical Engineering Technicians, Engineering Technicians, Surveying Technicians, Etc.|
-| 19.1 | Life Scientists | Food Scientists and Technologists, Microbiologists, Zoologists, Biological Scientists, Conservation Scientists, Epidemiologists, Medical Scientists, Etc.|
-| 19.2 | Physical Scientists | Astronomers, Physicists, Atmospheric and Space Scientists, Chemists, Materials Scientists, Environmental Scientists and Specialists, Geoscientists, Hydrologists, Etc.|
-| 19.3 | Social Scientists and Related Workers | Economists, Survey Researchers, Psychologists, Sociologists, Urban Planners, Anthropologists, Archeologists, Geographers, Historians, Political Scientists, Etc.|
-| 19.4 | Life, Physical, and Social Science Technicians | Biological Technicians, Chemical Technicians, Environmental Science Technicians, Geological Technicians, Nuclear Technicians, Social Science Research Assistants, Forest and Conservation Technicians, Forensic Science Technicians, Etc.|
+| 11.9 | Other Management Occupations | Construction Managers, Education Administrators, Food Service Managers, Entertainment and Recreation Managers, Postmasters, Property and Community Association Managers, Social and Community Service Managers, Emergency Management Directors, Funeral Home Managers, Personal Service Managers, etc.|
+| 13.1 | Business Operations Specialists | Agents and Business Managers, Buyers and Purchasing Agents, Claims Adjusters, Compliance Officers, Human Resources Specialists, Project Managers, Management Analysts, Event Planners, Fundraisers, Benefits and Job Analysts, Training and Development Specialists, Market Research Analysts, etc.|
+| 13.2 | Financial Specialists | Accountants, Auditors, Appraisers, Credit Analysts, Financial Analysts, Financial Advisors, Insurance Underwriters, Credit Counselors, Loan Officers, Tax Preparers, etc.|
+| 15.1 | Computer Occupations | Computer Systems Analysts, Information Security Analysts, Network Support Specialists, User Support Specialists, Network Architects, Systems Administrators, Software Developers, Web Developers, Interface Designers, etc.|
+| 15.2 | Mathematical Science Occupations | Actuaries, Mathematicians, Operations Research Analysts, Statisticians, Data Scientists, etc.|
+| 17.1 | Architects, Surveyors, and Cartographers | Architects, Landscape Architects, Cartographers, Surveyors, etc.|
+| 17.2 | Engineers | Aerospace Engineers, Bioengineers Engineers, Chemical Engineers, Civil Engineers, Electrical Engineers, Electronics Engineers, Environmental Engineers, Industrial Engineers, Marine Engineers, Naval Architects, Mechanical Engineers, Geological Engineers, etc.|
+| 17.3 | Drafters, Engineering Technicians, and Mapping Technicians | Architectural Drafters, Mechanical Drafters, Other Drafters, Aerospace Technicians, Civil Engineering Technicians, Environmental Engineering Technicians, Industrial Engineering Technicians, Mechanical Engineering Technicians, Engineering Technicians, Surveying Technicians, etc.|
+| 19.1 | Life Scientists | Food Scientists and Technologists, Microbiologists, Zoologists, Biological Scientists, Conservation Scientists, Epidemiologists, Medical Scientists, etc.|
+| 19.2 | Physical Scientists | Astronomers, Physicists, Atmospheric and Space Scientists, Chemists, Materials Scientists, Environmental Scientists and Specialists, Geoscientists, Hydrologists, etc.|
+| 19.3 | Social Scientists and Related Workers | Economists, Survey Researchers, Psychologists, Sociologists, Urban Planners, Anthropologists, Archeologists, Geographers, Historians, Political Scientists, etc.|
+| 19.4 | Life, Physical, and Social Science Technicians | Biological Technicians, Chemical Technicians, Environmental Science Technicians, Geological Technicians, Nuclear Technicians, Social Science Research Assistants, Forest and Conservation Technicians, Forensic Science Technicians, etc.|
 | 19.5 | Occupational Health and Safety Specialists and Technicians | Occupational Health and Safety Specialists and Technicians|
-| 21.1 | Social Service Specialists | Guidance Counselors, Marriage and Family Therapists, Mental Health Counselors, Rehabilitation Counselors, Social Workers, Health Education Specialists, Probation Officers, Social Service Assistants, Community Health Workers, Etc.|
-| 21.2 | Religious Workers | Clergy, Religious Activities Directors, Religious Education Directors, Etc.|
-| 23.1 | Lawyers, Judges, and Related Workers | Lawyers, Judicial Law Clerks, Hearing Officers, Arbitrators, Judges, Magistrates, Etc.|
-| 23.2 | Legal Support Workers | Paralegals, Legal Assistants, Title Examiners, Abstractors, Etc.|
+| 21.1 | Social Service Specialists | Guidance Counselors, Marriage and Family Therapists, Mental Health Counselors, Rehabilitation Counselors, Social Workers, Health Education Specialists, Probation Officers, Social Service Assistants, Community Health Workers, etc.|
+| 21.2 | Religious Workers | Clergy, Religious Activities Directors, Religious Education Directors, etc.|
+| 23.1 | Lawyers, Judges, and Related Workers | Lawyers, Judicial Law Clerks, Hearing Officers, Arbitrators, Judges, Magistrates, etc.|
+| 23.2 | Legal Support Workers | Paralegals, Legal Assistants, Title Examiners, Abstractors, etc.|
 | 25.2 | K12 and Special Education Teachers | Preschool, Elementary, Middle, Secondary, and Special Education Teachers|
-| 25.3 | Other Teachers and Instructors | Adult Education, English as a Second Language Instructors, Self-Enrichment Teachers, Substitute Teachers, Tutors, Etc.|
+| 25.3 | Other Teachers and Instructors | Adult Education, English as a Second Language Instructors, Self-Enrichment Teachers, Substitute Teachers, Tutors, etc.|
 | 25.4 | Librarians, Curators, and Archivists | Archivists, Curators, Museum Technicians and Conservators,Librarians, Media Collections Specialists, Library Technicians|
-| 25.9 | Other Educational Instruction and Library Occupations | Farm and Home Management Educators, Instructional Coordinators, Teaching Assistants, Library Workers, Etc.|
-| 27.1 | Art and Design Workers | Art Directors, Fine Artists, Animators, Fashion Designers, Graphic Designers, Interior Designers, Etc.|
-| 27.2 | Entertainers and Performers, Sports and Related Workers | Actors, Producers, Directors, Athletes, Coaches, Scouts, Referees, Dancers, Choreographers, Composers, Musicians, Etc.|
-| 27.3 | Media and Communication Workers | Broadcast Announcers, Radio Disc Jockeys, News Analysts, Reporters, Journalists, Public Relations Specialists, Editors, Technical Writers, Writers and Authors, Interpreters and Translators, Court Reporters and Simultaneous Captioners, Etc.|
-| 27.4 | Media and Communication Equipment Workers | Audio and Video Technicians, Broadcast Technicians, Sound Engineering Technicians, Lighting Technicians, Photographers, Camera Operators, Film Editors, Etc.|
-| 29.1 | Healthcare Practitioners | Chiropractors, Dentists, Dietitians, Pharmacists, Physician Assistants, Physical and Occupational Therapists, Veterinarians, Nurses, Psychiatrists, Radiologists, Physicians, Surgeons, Etc.|
-| 29.2 | Health Technologists and Technicians | Laboratory Technicians, Sonographers, Radiologic Technicians, Paramedics, Pharmacy Technicians, Psychiatric Technicians, Veterinary Technicians, Vocational Nurses, Medical Records Specialists, Orthotists and Prosthetists, Etc.|
-| 29.9 | Other Healthcare Practitioners and Technical Occupations | Health Information Technologists and Medical Registrars, Athletic Trainers, Genetic Counselors, Surgical Assistants, Etc.|
-| 31.1 | Home Health Aides, Nursing Assistants, and Psychiatric Aides | Home Health Aides, Personal Care Aides, Nursing Assistants, Orderlies, Psychiatric Aides, Etc.|
+| 25.9 | Other Educational Instruction and Library Occupations | Farm and Home Management Educators, Instructional Coordinators, Teaching Assistants, Library Workers, etc.|
+| 27.1 | Art and Design Workers | Art Directors, Fine Artists, Animators, Fashion Designers, Graphic Designers, Interior Designers, etc.|
+| 27.2 | Entertainers and Performers, Sports and Related Workers | Actors, Producers, Directors, Athletes, Coaches, Scouts, Referees, Dancers, Choreographers, Composers, Musicians, etc.|
+| 27.3 | Media and Communication Workers | Broadcast Announcers, Radio Disc Jockeys, News Analysts, Reporters, Journalists, Public Relations Specialists, Editors, Technical Writers, Writers and Authors, Interpreters and Translators, Court Reporters and Simultaneous Captioners, etc.|
+| 27.4 | Media and Communication Equipment Workers | Audio and Video Technicians, Broadcast Technicians, Sound Engineering Technicians, Lighting Technicians, Photographers, Camera Operators, Film Editors, etc.|
+| 29.1 | Healthcare Practitioners | Chiropractors, Dentists, Dietitians, Pharmacists, Physician Assistants, Physical and Occupational Therapists, Veterinarians, Nurses, Psychiatrists, Radiologists, Physicians, Surgeons, etc.|
+| 29.2 | Health Technologists and Technicians | Laboratory Technicians, Sonographers, Radiologic Technicians, Paramedics, Pharmacy Technicians, Psychiatric Technicians, Veterinary Technicians, Vocational Nurses, Medical Records Specialists, Orthotists and Prosthetists, etc.|
+| 29.9 | Other Healthcare Practitioners and Technical Occupations | Health Information Technologists and Medical Registrars, Athletic Trainers, Genetic Counselors, Surgical Assistants, etc.|
+| 31.1 | Home Health Aides, Nursing Assistants, and Psychiatric Aides | Home Health Aides, Personal Care Aides, Nursing Assistants, Orderlies, Psychiatric Aides, etc.|
 | 31.2 | Occupational and Physical Therapist Assistants and Aides | Occupational Therapy Assistants and Aides, Physical Therapist Assistants Aides|
-| 31.9 | Other Healthcare Support Occupations | Massage Therapists, Dental Assistants, Medical Assistants, Medical Transcriptionists, Pharmacy Aides, Veterinary Assistants and Laboratory Animal Caretakers, Phlebotomists, Etc.|
+| 31.9 | Other Healthcare Support Occupations | Massage Therapists, Dental Assistants, Medical Assistants, Medical Transcriptionists, Pharmacy Aides, Veterinary Assistants and Laboratory Animal Caretakers, Phlebotomists, etc.|
 | 33.1 | Supervisors of Protective Service Workers | First-Line Supervisors of Protective Service Workers|
-| 33.2 | Firefighting and Prevention Workers | Firefighters, Fire Investigators, Forest Fire Prevention Specialists, Etc.|
-| 33.3 | Law Enforcement Workers | Bailiffs, Correctional Officers, Detectives and Criminal Investigators, Fish and Game Wardens, Parking Enforcement Workers, Police and Sheriff's Patrol Officers, Etc.|
-| 33.9 | Other Protective Service Workers | Animal Control Workers, Private Detectives and Investigators, Security Guards, Lifeguards and Other Recreational Protective Service Workers, Transportation Security Screeners, Etc.|
+| 33.2 | Firefighting and Prevention Workers | Firefighters, Fire Investigators, Forest Fire Prevention Specialists, etc.|
+| 33.3 | Law Enforcement Workers | Bailiffs, Correctional Officers, Detectives and Criminal Investigators, Fish and Game Wardens, Parking Enforcement Workers, Police and Sheriff's Patrol Officers, etc.|
+| 33.9 | Other Protective Service Workers | Animal Control Workers, Private Detectives and Investigators, Security Guards, Lifeguards and Other Recreational Protective Service Workers, Transportation Security Screeners, etc.|
 | 35.1 | Supervisors of Food Preparation and Serving Workers | Chefs and Head Cooks, First-Line Supervisors of Food Preparation and Serving Workers|
-| 35.2 | Cooks and Food Preparation Workers | Cooks and Food Preparation Workers, Etc.|
-| 35.3 | Food and Beverage Serving Workers | Bartenders, Fast Food and Counter Workers, Waiters and Waitresses, Food Servers (Nonrestaurant), Etc.|
-| 35.9 | Other Food Preparation and Serving Related Workers | Dining Room and Cafeteria Attendants and Bartender Helpers, Dishwashers, Hosts and Hostesses, Etc.|
+| 35.2 | Cooks and Food Preparation Workers | Cooks and Food Preparation Workers, etc.|
+| 35.3 | Food and Beverage Serving Workers | Bartenders, Fast Food and Counter Workers, Waiters and Waitresses, Food Servers (Nonrestaurant), etc.|
+| 35.9 | Other Food Preparation and Serving Related Workers | Dining Room and Cafeteria Attendants and Bartender Helpers, Dishwashers, Hosts and Hostesses, etc.|
 | 37.1 | Supervisors of Building and Grounds Cleaning and Maintenance Workers | First-Line Supervisors of Housekeeping, Janitorial Workers, and Groundskeeping Workers|
-| 37.2 | Building Cleaning and Pest Control Workers | Janitors and Cleaners, Maids and Housekeeping Cleaners, Building Cleaning Workers, Pest Control Workers, Etc.|
-| 37.3 | Grounds Maintenance Workers | Landscaping and Groundskeeping Workers, Tree Trimmers, Etc.|
+| 37.2 | Building Cleaning and Pest Control Workers | Janitors and Cleaners, Maids and Housekeeping Cleaners, Building Cleaning Workers, Pest Control Workers, etc.|
+| 37.3 | Grounds Maintenance Workers | Landscaping and Groundskeeping Workers, Tree Trimmers, etc.|
 | 39.1 | Supervisors of Personal Care and Service Workers | First-Line Supervisors of Personal Care and Service Workers|
-| 39.2 | Animal Care and Service Workers | Animal Trainers, Animal Caretakers, Etc.|
-| 39.3 | Entertainment Attendants and Related Workers | Gambling Dealers, Sports Book Writers and Runners, Ushers and Ticket Takers, Amusement and Recreation Attendants, Dressing Room Attendants, Etc.|
-| 39.4 | Funeral Service Workers | Embalmers, Crematory Operators, Funeral Attendants, Morticians, Undertakers, and Funeral Arrangers, Etc.|
-| 39.5 | Personal Appearance Workers | Barbers, Hairdressers, Hairstylists, Cosmetologists, Makeup Artists, Manicurists, Skincare Specialists, Etc.|
-| 39.6 | Baggage Porters, Bellhops, and Concierges | Baggage Porters and Bellhops, Concierges, Etc.|
-| 39.7 | Tour and Travel Guides | Tour Guides and Escorts, Travel Guides, Etc.|
-| 39.9 | Other Personal Care and Service Workers | Childcare Workers, Exercise Trainers and Group Fitness Instructors, Recreation Workers, Residential Advisors, Etc.|
+| 39.2 | Animal Care and Service Workers | Animal Trainers, Animal Caretakers, etc.|
+| 39.3 | Entertainment Attendants and Related Workers | Gambling Dealers, Sports Book Writers and Runners, Ushers and Ticket Takers, Amusement and Recreation Attendants, Dressing Room Attendants, etc.|
+| 39.4 | Funeral Service Workers | Embalmers, Crematory Operators, Funeral Attendants, Morticians, Undertakers, and Funeral Arrangers, etc.|
+| 39.5 | Personal Appearance Workers | Barbers, Hairdressers, Hairstylists, Cosmetologists, Makeup Artists, Manicurists, Skincare Specialists, etc.|
+| 39.6 | Baggage Porters, Bellhops, and Concierges | Baggage Porters and Bellhops, Concierges, etc.|
+| 39.7 | Tour and Travel Guides | Tour Guides and Escorts, Travel Guides, etc.|
+| 39.9 | Other Personal Care and Service Workers | Childcare Workers, Exercise Trainers and Group Fitness Instructors, Recreation Workers, Residential Advisors, etc.|
 | 41.1 | Supervisors of Sales Workers | First-Line Supervisors of Sales Workers|
-| 41.2 | Retail Sales Workers | Cashiers, Counter and Rental Clerks, Parts Salespersons, Retail Salespersons, Etc.|
-| 41.3 | Sales Representatives, Services | Advertising Sales Agents, Insurance Sales Agents, Securities and Commodities Sales Agents, Financial Services Sales Agents, Travel Agents, Etc.|
+| 41.2 | Retail Sales Workers | Cashiers, Counter and Rental Clerks, Parts Salespersons, Retail Salespersons, etc.|
+| 41.3 | Sales Representatives, Services | Advertising Sales Agents, Insurance Sales Agents, Securities and Commodities Sales Agents, Financial Services Sales Agents, Travel Agents, etc.|
 | 41.4 | Sales Representatives, Wholesale and Manufacturing | Sales Representatives for Wholesale and Manufacturing|
-| 41.9 | Other Sales and Related Workers | Demonstrators and Product Promoters, Real Estate Brokers, Real Estate Sales Agents, Sales Engineers, Telemarketers, Door-to-Door Sales Workers, News and Street Vendors, Etc.|
+| 41.9 | Other Sales and Related Workers | Demonstrators and Product Promoters, Real Estate Brokers, Real Estate Sales Agents, Sales Engineers, Telemarketers, Door-to-Door Sales Workers, News and Street Vendors, etc.|
 | 43.1 | Supervisors of Office and Administrative Support Workers | First-Line Supervisors of Office and Administrative Support Workers|
-| 43.2 | Communications Equipment Operators | Telephone Operators, Communications Equipment Operators, Etc.|
-| 43.3 | Financial Clerks | Bill Collectors, Bookkeeping and Accounting Clerks, and Auditing Clerks, Payroll and Timekeeping Clerks, Procurement Clerks, Tellers, Financial Clerks, Etc.|
-| 43.4 | Information and Record Clerks | Court Clerks, Customer Service Representatives, Eligibility Interviewers, File Clerks, Hotel Desk Clerks, Library Assistants, Accounts Clerks, Order Clerks, Human Resources Assistants, Receptionists, Information Clerks, Ticket Agents and Travel Clerks, Etc.|
-| 43.5 | Material Recording, Scheduling, Dispatching, and Distributing Workers | Cargo and Freight Agents, Couriers, Messengers, Dispatchers, Meter Readers, Postal Service Clerks and Carriers, Mail Sorters, Shipping and Receiving Clerks, Inventory Clerks, Etc.|
-| 43.6 | Administrative Assistants | Executive Administrative Assistants, Legal Secretaries, Administrative Assistants, Etc.|
-| 43.9 | Other Office and Administrative Support Workers | Data Entry Clerks, Insurance Claims Clerks, Mail Clerks, Office Clerks, Proofreaders, Statistical Assistants, Etc.|
+| 43.2 | Communications Equipment Operators | Telephone Operators, Communications Equipment Operators, etc.|
+| 43.3 | Financial Clerks | Bill Collectors, Bookkeeping and Accounting Clerks, and Auditing Clerks, Payroll and Timekeeping Clerks, Procurement Clerks, Tellers, Financial Clerks, etc.|
+| 43.4 | Information and Record Clerks | Court Clerks, Customer Service Representatives, Eligibility Interviewers, File Clerks, Hotel Desk Clerks, Library Assistants, Accounts Clerks, Order Clerks, Human Resources Assistants, Receptionists, Information Clerks, Ticket Agents and Travel Clerks, etc.|
+| 43.5 | Material Recording, Scheduling, Dispatching, and Distributing Workers | Cargo and Freight Agents, Couriers, Messengers, Dispatchers, Meter Readers, Postal Service Clerks and Carriers, Mail Sorters, Shipping and Receiving Clerks, Inventory Clerks, etc.|
+| 43.6 | Administrative Assistants | Executive Administrative Assistants, Legal Secretaries, Administrative Assistants, etc.|
+| 43.9 | Other Office and Administrative Support Workers | Data Entry Clerks, Insurance Claims Clerks, Mail Clerks, Office Clerks, Proofreaders, Statistical Assistants, etc.|
 | 45.1 | Supervisors of Farming, Fishing, and Forestry Workers | First-Line Supervisors of Farming, Fishing, and Forestry Workers|
-| 45.2 | Agricultural Workers | Agricultural Inspectors, Animal Breeders, Graders and Sorters, Equipment Operators, Farmworkers and Laborers, Etc.|
+| 45.2 | Agricultural Workers | Agricultural Inspectors, Animal Breeders, Graders and Sorters, Equipment Operators, Farmworkers and Laborers, etc.|
 | 45.3 | Fishing and Hunting Workers | Fishing and Hunting Workers|
-| 45.4 | Forest, Conservation, and Logging Workers | Forest and Conservation Workers, Logging Workers, Etc.|
+| 45.4 | Forest, Conservation, and Logging Workers | Forest and Conservation Workers, Logging Workers, etc.|
 | 47.1 | Supervisors of Construction and Extraction Workers | First-Line Supervisors of Construction Trades and Extraction Workers |
-| 47.2 | Construction Trades Workers | Masons, Carpenters, Floor Layers, Construction Laborers, Equipment Operators, Drywall Installers, Electricians, Painters, Paperhangers, Plumbers, Pipefitters, Roofers, Etc.|
-| 47.3 | Helpers, Construction Trades | Helpers of Masons, Carpenters, Electricians, Painters, Paperhangers, Pipelayers, Plumbers, Pipefitters, and Steamfitters, Roofers, Etc.|
-| 47.4 | Other Construction and Related Workers | Construction and Building Inspectors, Elevator and Escalator Installers and Repairers, Fence Erectors, Hazardous Materials Removal Workers, Highway Maintenance Workers, Rail-Track Laying and Maintenance Equipment Operators, Septic Tank Servicers and Sewer Pipe Cleaners, Etc.|
-| 47.5 | Extraction Workers | Oil and Gas Operators, Explosives Workers, Ordnance Handling Experts, Blasters, Mining Machine Operators, Quarry Rock Splitters, Extraction Workers, Etc.|
+| 47.2 | Construction Trades Workers | Masons, Carpenters, Floor Layers, Construction Laborers, Equipment Operators, Drywall Installers, Electricians, Painters, Paperhangers, Plumbers, Pipefitters, Roofers, etc.|
+| 47.3 | Helpers, Construction Trades | Helpers of Masons, Carpenters, Electricians, Painters, Paperhangers, Pipelayers, Plumbers, Pipefitters, and Steamfitters, Roofers, etc.|
+| 47.4 | Other Construction and Related Workers | Construction and Building Inspectors, Elevator and Escalator Installers and Repairers, Fence Erectors, Hazardous Materials Removal Workers, Highway Maintenance Workers, Rail-Track Laying and Maintenance Equipment Operators, Septic Tank Servicers and Sewer Pipe Cleaners, etc.|
+| 47.5 | Extraction Workers | Oil and Gas Operators, Explosives Workers, Ordnance Handling Experts, Blasters, Mining Machine Operators, Quarry Rock Splitters, Extraction Workers, etc.|
 | 49.1 | Supervisors of Installation, Maintenance, and Repair Workers | First-Line Supervisors of Mechanics, Installers, and Repairers|
-| 49.2 | Electrical and Electronic Equipment Mechanics, Installers, and Repairers | Computer and Office Machine Repairers, Radio and Cellular Equipment Installers, Avionics Technicians, Electric Motor and Power Tool Repairers, Electrical and Electronics Repairers and Installers, Audiovisual Equipment Technicicans, Security and Fire Alarm Systems Installers, Etc.|
-| 49.3 | Vehicle and Mobile Equipment Mechanics, Installers, and Repairers | Aircraft Mechanics and Service Technicians, Automotive Body Repairers, Automotive Service Technicians and Mechanics, Mobile Heavy Equipment Mechanics, Motorboat Mechanics, Outdoor Power Equipment and Other Small Engine Mechanics, Tire Repairers and Changers, Etc.|
-| 49.9 | Other Installation, Maintenance, and Repair Occupations | HVAC and Refrigeration Mechanics, Home Appliance Repairers, Machinery Maintenance Workers, Power-Line Installers and Repairers, Precision Instrument and Equipment Repairers, General Maintenance and Repair Workers, Service Technicians, Signal and Track Switch Repairers, Etc.|
+| 49.2 | Electrical and Electronic Equipment Mechanics, Installers, and Repairers | Computer and Office Machine Repairers, Radio and Cellular Equipment Installers, Avionics Technicians, Electric Motor and Power Tool Repairers, Electrical and Electronics Repairers and Installers, Audiovisual Equipment Technicicans, Security and Fire Alarm Systems Installers, etc.|
+| 49.3 | Vehicle and Mobile Equipment Mechanics, Installers, and Repairers | Aircraft Mechanics and Service Technicians, Automotive Body Repairers, Automotive Service Technicians and Mechanics, Mobile Heavy Equipment Mechanics, Motorboat Mechanics, Outdoor Power Equipment and Other Small Engine Mechanics, Tire Repairers and Changers, etc.|
+| 49.9 | Other Installation, Maintenance, and Repair Occupations | HVAC and Refrigeration Mechanics, Home Appliance Repairers, Machinery Maintenance Workers, Power-Line Installers and Repairers, Precision Instrument and Equipment Repairers, General Maintenance and Repair Workers, Service Technicians, Signal and Track Switch Repairers, etc.|
 | 51.1 | Supervisors of Production Workers | First-Line Supervisors of Production and Operating Workers|
-| 51.2 | Assemblers and Fabricators | Electrical and Electronic Equipment Assemblers, Engine and Other Machine Assemblers, Structural Metal Fabricators and Fitters, Fiberglass Laminators and Fabricators, Etc.|
-| 51.3 | Food Processing Workers | Bakers, Butchers and Meat Cutters, Meat Packers, Machine Operators, Etc.|
-| 51.4 | Metal Workers and Plastic Workers | Machinists, Furnace Operators, Casters, Model Makers, Patternmakers, Tool and Die Makers, Welders, Cutters, Solderers, Brazers, Layout Workers, Machine Setters and Operators, Tool Sharpeners, Etc.|
+| 51.2 | Assemblers and Fabricators | Electrical and Electronic Equipment Assemblers, Engine and Other Machine Assemblers, Structural Metal Fabricators and Fitters, Fiberglass Laminators and Fabricators, etc.|
+| 51.3 | Food Processing Workers | Bakers, Butchers and Meat Cutters, Meat Packers, Machine Operators, etc.|
+| 51.4 | Metal Workers and Plastic Workers | Machinists, Furnace Operators, Casters, Model Makers, Patternmakers, Tool and Die Makers, Welders, Cutters, Solderers, Brazers, Layout Workers, Machine Setters and Operators, Tool Sharpeners, etc.|
 | 51.5 | Printing Workers | Prepress Technicians and Workers, Printing Press Operators, Print Binding and Finishing Workers|
-| 51.6 | Textile, Apparel, and Furnishings Workers | Laundry and Dry-Cleaning Workers, Shoe and Leather Workers, Sewers, Tailors, Dressmakers, Textile Operators and Machine Setters, Patternmakers, Upholsterers, Etc.|
-| 51.7 | Woodworkers | Cabinetmakers and Bench Carpenters, Furniture Finishers, Model Makers, Patternmakers, Machine Setters and Operators, Etc.|
-| 51.8 | Plant and System Operators | Nuclear Power Reactor Operators, Power Distributors and Dispatchers, Plant Operators, Stationary Engineers and Boiler Operators, Petroleum Pump System Operators, Refinery Operators, Gaugers, Etc.|
-| 51.9 | Other Production Occupations | Chemical Equipment Operators, Appliance Technicians, Inspectors, Testers, Sorters, Jewelers, Metal Workers, Laboratory Technicians, Machine Operators, Painting Workers, Production Workers, Etc.|
-| 53.1 | Supervisors of Transportation and Material Moving Workers | Aircraft Cargo Handling Supervisors, First-Line Supervisors of Helpers, Laborers, Material Movers, Vehicle Operators, Passenger Attendants, Transportation Workers, Etc.|
-| 53.2 | Air Transportation Workers | Pilots, Copilots, Flight Engineers, Air Traffic Controllers, Airfield Operations Specialists, Flight Attendants, Etc.|
+| 51.6 | Textile, Apparel, and Furnishings Workers | Laundry and Dry-Cleaning Workers, Shoe and Leather Workers, Sewers, Tailors, Dressmakers, Textile Operators and Machine Setters, Patternmakers, Upholsterers, etc.|
+| 51.7 | Woodworkers | Cabinetmakers and Bench Carpenters, Furniture Finishers, Model Makers, Patternmakers, Machine Setters and Operators, etc.|
+| 51.8 | Plant and System Operators | Nuclear Power Reactor Operators, Power Distributors and Dispatchers, Plant Operators, Stationary Engineers and Boiler Operators, Petroleum Pump System Operators, Refinery Operators, Gaugers, etc.|
+| 51.9 | Other Production Occupations | Chemical Equipment Operators, Appliance Technicians, Inspectors, Testers, Sorters, Jewelers, Metal Workers, Laboratory Technicians, Machine Operators, Painting Workers, Production Workers, etc.|
+| 53.1 | Supervisors of Transportation and Material Moving Workers | Aircraft Cargo Handling Supervisors, First-Line Supervisors of Helpers, Laborers, Material Movers, Vehicle Operators, Passenger Attendants, Transportation Workers, etc.|
+| 53.2 | Air Transportation Workers | Pilots, Copilots, Flight Engineers, Air Traffic Controllers, Airfield Operations Specialists, Flight Attendants, etc.|
 | 53.3 | Motor Vehicle Operators | Drivers and other motor vehicle operators.|
-| 53.4 | Rail Transportation Workers | Engineers, Operators, Hostlers, Locomotive Firers, Conductors, Yardmasters, Etc.|
-| 53.5 | Water Transportation Workers | Sailors and Marine Oilers, Captains, Mates, and Pilots of Water Vessels, Motorboat Operators, Ship Engineers, Etc.|
-| 53.6 | Other Transportation Workers | Bridge and Lock Tenders, Parking Attendants, Service Attendants, Traffic Technicians, Transportation Inspectors, Passenger Attendants, Etc.|
-| 53.7 | Material Moving Workers | Packers, Stockers, Refuse Collectors, Loaders, Crane Operators, Truck and Tractor Operators, Laborers, Etc.|
+| 53.4 | Rail Transportation Workers | Engineers, Operators, Hostlers, Locomotive Firers, Conductors, Yardmasters, etc.|
+| 53.5 | Water Transportation Workers | Sailors and Marine Oilers, Captains, Mates, and Pilots of Water Vessels, Motorboat Operators, Ship Engineers, etc.|
+| 53.6 | Other Transportation Workers | Bridge and Lock Tenders, Parking Attendants, Service Attendants, Traffic Technicians, Transportation Inspectors, Passenger Attendants, etc.|
+| 53.7 | Material Moving Workers | Packers, Stockers, Refuse Collectors, Loaders, Crane Operators, Truck and Tractor Operators, Laborers, etc.|
 | 55.1 | Military Officer Special and Tactical Operations Leaders | Crew Officers, Infantry Officers, Special Forces Officers, All Other Military Officer Special and Tactical Operations Leaders|
 | 55.2 | First-Line Enlisted Military Supervisors | Supervisors of Crew Members, Supervisors of Tactical Operations Specialists, In-Flight Refueling Manager, Superintendent, Intelligence Chief, etc.|
 | 55.3 | Military Enlisted Tactical Operations, Specialists, and Crew Members | Crew Members, Specialists, Infantry, Special Forces, etc.|
@@ -185,7 +185,7 @@ Constants: `CTR`, `FLT`, `PRT`, `INT`, `TMP`, `VOL`, `OTH`
 
 | Const | Value | Description |
 | --- | --- | --- |
-| CTR | Contractor | Individual not directly employed by the organization whose job responsibilities they filling (self-employed or employed by a different, contracting organization)|
+| CTR | Contractor | Individual not directly employed by the organization whose job responsibilities they are filling (self-employed or employed by a different, contracting organization)|
 | FLT | Full-time | Individual who is directly employed by the organization and works at least 35 hours per week or is classified by the organization as a full-time employee|
 | PRT | Part-time | Individual who is directly employed by the organization and works less than 35 hours per week or is classified by the organization as a part-time employee|
 | INT | Intern/Trainee/Aprentice | An advanced student or graduate gaining supervised practical experience in a particular field or job role, sometimes without pay|

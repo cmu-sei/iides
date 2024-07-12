@@ -23,14 +23,14 @@ Constants: `LE`, `OR`, `CU`, `CO`, `AU`, `SR`, `IR`, `ST`, `MG`, `II`, `RR`
 
 | Const | Value | Description |
 | --- | --- | --- |
-| LE | Law Enforcement | Law enforcement discovered the insider's illegal activity (e.g., Police noticed that the insider was gaining access to the company after hours)|
+| LE | Law Enforcement | Law enforcement discovered the insider's illegal activity (e.g., police noticed that the insider was gaining access to the company after hours)|
 | OR | Organization | The victim organization discovered the insider's activity (e.g., IT noticed that the insider had downloaded dozens of company trade secrets to their workstation)|
 | CU | Customer | A customer of the victim organization discovered the insider's activity|
-| CO | Competitor | An organization competing with the victim organization discovered the insider's activity (e.g., Insider approached a competing organization with company trade secrets, and the competitor alerted the victim organization)|
+| CO | Competitor | An organization competing with the victim organization discovered the insider's activity (e.g., the insider approached a competing organization with company trade secrets, and the competitor alerted the victim organization)|
 | AU | Auditor | Internal or external auditor assigned to assess the organization's security, risk, or threat posture|
 | SR | Self-Reported | The insider reported their activity to their organization|
 | IR | Incident Response Team | The incident response team (IRT) discovered the insider's activity|
-| ST | Security Team | Technical or personnnel security team discovered the insider's activity|
+| ST | Security Team | Technical or personnel security team discovered the insider's activity|
 | MG | Management | A member of the organization's management or the insider's management chain discovered the insider's activities|
 | II | Internal Investigators | Investigators internal to the victim organization|
 | RR | Researcher | Researcher external to the organization|
@@ -43,8 +43,8 @@ Constants: `1`, `2`, `3`, `4`, `5`
 | --- | --- | --- |
 | 1 | Audit | The insider's activity was spotted during an internal or third-party auditing process|
 | 2 | Technical Means | The insider's activity was detected via analysis or anomalies in technical systems and software|
-| 3 | Non-Technical Means | The insider's activity was detected in a non-technical fashion (e.g., The insider had personal items purchased with a company credit card sent to the office by accident)|
-| 4 | Security Software | The insider's activity was detected by security software (e.g., The insider tried to download a document with trade secrets and an automatic alert detected the download)|
+| 3 | Non-Technical Means | The insider's activity was detected in a non-technical fashion (e.g., the insider had personal items purchased with a company credit card sent to the office by accident)|
+| 4 | Security Software | The insider's activity was detected by security software (e.g., the insider tried to download a document with trade secrets and an automatic alert detected the download)|
 | 5 | System Failure | The insider's activity resulted in a system going down within the organization, which led to the detection of the insider's activities|
 
 ### detection-log-vocab

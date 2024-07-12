@@ -10,7 +10,7 @@ This is the quantified impact of the incident on the victim organization. An inc
 - **`low`** *(number)* : If a range, the low estimate of the range
 - **`metric`** (required) *(string)* : The type of impact being quantified
 	- A constant from [impact-metric-vocab](#impact-metric-vocab)
-- **`estimated`** (required) *(boolean)* : True if the impact low and/or high is an estimated number or range
+- **`estimated`** (required) *(boolean)* : True if the impact `high` or `low` property is an estimated number
 - **`comment`** *(string)* : Clarifying comments
 
 ## Vocabularies

@@ -72,7 +72,7 @@
               {
                 "const": "2",
                 "title": "Information",
-                "description": "Data/business materials which contain important details belonging to a specific target owner"
+                "description": "Data or business materials that contain important details belonging to a specific target owner"
               },
               {
                 "const": "3",
@@ -484,7 +484,7 @@
               {
                 "const": "2",
                 "title": "Physical",
-                "description": "Tangible real world format"
+                "description": "Tangible real-world format"
               },
               {
                 "const": "3",
@@ -518,7 +518,7 @@
               {
                 "const": "O",
                 "title": "Organization",
-                "description": "The organization, rather than its employees or customers owns the target"
+                "description": "The organization, rather than its employees or customers, owns the target"
               },
               {
                 "const": "T",

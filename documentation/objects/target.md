@@ -31,7 +31,7 @@ Constants: `1`, `2`, `3`, `4`, `5`, `6`
 | Const | Value | Description |
 | --- | --- | --- |
 | 1 | Facilities | Buildings, offices, areas of buildings, or functions of buildings (such as disabling a door)|
-| 2 | Information | Data/business materials which contain important details belonging to a specific target owner|
+| 2 | Information | Data or business materials that contain important details belonging to a specific target owner|
 | 3 | Money | Currency, digital or physical, or materials, goods, or data that will be converted to currency or are currency equivalent|
 | 4 | People | Employees, customers, individuals|
 | 5 | Technology | Hardware, software, or firmware intended for the storage or transmission of data or the operation of equipment (as in computers running a manufacturing line)|
@@ -132,7 +132,7 @@ Constants: `1`, `2`, `3`, `4`, `5`
 | Const | Value | Description |
 | --- | --- | --- |
 | 1 | Electronic | Technological digital format|
-| 2 | Physical | Tangible real world format|
+| 2 | Physical | Tangible real-world format|
 | 3 | Personnel | People or individuals|
 | 4 | Other | Other format not listed in this vocabulary|
 | 5 | Unknown | Unclear what was targeted|
@@ -145,7 +145,7 @@ Constants: `C`, `E`, `O`, `T`, `Z`
 | --- | --- | --- |
 | C | Consumer | An individual that purchases and makes use of a product or service|
 | E | Employee | An individual internal to an organization who facilitates the disbursement of products or services|
-| O | Organization | The organization, rather than its employees or customers owns the target|
+| O | Organization | The organization, rather than its employees or customers, owns the target|
 | T | Third Party | Parties external to an organization and consumers|
 | Z | Other | Other owner not listed in this vocabulary|
 

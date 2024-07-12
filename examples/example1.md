@@ -8,19 +8,19 @@ The leak severely impacted the confidentiality and integrity of CIA operations, 
 - **`Id`**:
  incident--ef88113a-27a0-4a56-8f70-e8a5fd4541e6
 - **`Cia effect`**:
-   - Confidentiality (*C*) &mdash; The protection of information from unauthorized access or disclosure.
+   - Confidentiality (*C*) &mdash; The protection of information from unauthorized access or disclosure
 - **`Incident type`**:
-   - Espionage (*E*) &mdash; The covert or illicit practice of spying on a foreign government, organization, entity, or person to obtain confidential information for military, political, strategic, or financial advantage.
+   - Espionage (*E*) &mdash; The covert or illicit practice of spying on a foreign government, organization, entity, or person to obtain confidential information for military, political, strategic, or financial advantage
 - **`Incident subtype`**:
-   - Government (*E.2*) &mdash; Covert intelligence-gathering activities to obtain government or military secrets for the benefit of another government to obtain political or military advantage.
+   - Government (*E.2*) &mdash; Covert intelligence-gathering activities to obtain government or military secrets for the benefit of another government to obtain political or military advantage
 - **`Outcome`**:
-   - Data Deleted (*DD*) &mdash; Data was deleted from the victim organization's systems.
-  - Monetary Losses (*ML*) &mdash; Indirect loss of money through damage, detriment, or suffering related to the incident.
-  - Safety Impact (*SI*) &mdash; There was an impact, or potential for impact to safety, as a result of the incident.
-  - Data Read (*DR*) &mdash; Organizational data was read by the insider.
-  - Data Stolen (*DS*) &mdash; Any organizational information or assets that are stolen.
+   - Data Deleted (*DD*) &mdash; Data was deleted from the victim organization's systems
+  - Monetary Losses (*ML*) &mdash; Indirect loss of money through damage, detriment, or suffering related to the incident
+  - Safety Impact (*SI*) &mdash; There was an impact or potential for impact to safety as a result of the incident
+  - Data Read (*DR*) &mdash; Organizational data was read by the insider
+  - Data Stolen (*DS*) &mdash; Any organizational information or assets that are stolen
 - **`Status`**:
- Closed (*C*) &mdash; All investigations and legal proceedings are closed.
+ Closed (*C*) &mdash; All investigations and legal proceedings are closed
 - **`Summary`**:
  Joshua Adam Schulte, a former CIA software engineer, leaked classified CIA documents known as Vault 7 to WikiLeaks. These documents detailed the CIA's hacking tools and techniques, causing severe damage to U.S. national security, exposing CIA operations and personnel, and costing the agency hundreds of millions of dollars. Schulte was charged with espionage, unauthorized access to computer systems, and other related crimes. He was convicted and sentenced to 40 years in prison.
 - **`Brief summary`**:
@@ -28,52 +28,52 @@ The leak severely impacted the confidentiality and integrity of CIA operations, 
 
 ## Insider
 
-Joshua Adam Schulte had a history of social and mental health issues. He showed concerning behaviors such as repeated technical policy abuse and conflicts with his supervisor, as well as browsing dark web forums. The insider had multiple workplace incidents involving the harassment of colleagues, ultimately resulting in the insider being forced to move offices across the building. The insider believed he had been mistreated by staff, leading to a desire for revenge.
+Joshua Adam Schulte had a history of social and mental health issues. He showed concerning behaviors, such as repeated technical policy abuse and conflicts with his supervisor as well as browsing dark web forums. The insider had multiple workplace incidents involving the harassment of colleagues, ultimately resulting in the insider being forced to move offices across the building. The insider believed he had been mistreated by staff, leading to a desire for revenge.
 
 - **`Id`**:
  insider--5460491c-eacd-4074-aef9-f6f584893a59
 - **`Incident role`**:
- Primary (*1*) &mdash; Insider is the primary perpetrator of the incident.
+ Primary (*1*) &mdash; Insider is the primary perpetrator of the incident
 - **`Motive`**:
-   - Revenge (*8*) &mdash; The insider wanted revenge for an actual or perceived wrong.
+   - Revenge (*8*) &mdash; The insider wanted revenge for an actual or perceived wrong
 - **`Predispositions`**:
-   - Social and Mental Health Issues (*['1', '1.1']*) &mdash; A history of behaviors related to the insider's mental health or unacceptable social behavior.
-  - A History of Rule Violations (*['2', '2.4']*) &mdash; A history of violating the law or violating rules at other organizations.
-  - Suspicious Associations (*['3', '3.2']*) &mdash; A history of associating with criminal or otherwise objectionable persons or entities.
+   - Social and Mental Health Issues (*['1', '1.1']*) &mdash; A history of behaviors related to the insider's mental health or unacceptable social behavior
+  - A History of Rule Violations (*['2', '2.4']*) &mdash; A history of violating the law or violating rules at other organizations
+  - Suspicious Associations (*['3', '3.2']*) &mdash; A history of associating with criminal or otherwise objectionable persons or entities
 - **`Concerning behaviors`**:
-   - Technical Policy Abuse (*['3.2', '3.2.2']*) &mdash; Violating policies regarding the use of the organization's IT systems.
-  - Interpersonal Issues (*['3.3', '3.3.2']*) &mdash; Conflicts with others in the organization or human resources (HR) issues.
-- **`First name`**:
+   - Technical Policy Abuse (*['3.2', '3.2.2']*) &mdash; Violating policies regarding the use of the organization's IT systems
+  - Interpersonal Issues (*['3.3', '3.3.2']*) &mdash; Conflicts with others in the organization or human resources (HR) issues
+- **`first_name`**:
  Joshua
-- **`Middle name`**:
+- **`middle_name`**:
  Adam
-- **`Last name`**:
+- **`last_name`**:
  Schulte
-- **`Suffix`**:
+- **`suffix`**:
  Jr
-- **`Alias`**:
+- **`alias`**:
  ['JSchulte', 'Kinetic Panda', 'Nuclear Option', 'Voldemort']
-- **`City`**:
+- **`city`**:
  New York
-- **`State`**:
+- **`state`**:
  NY
-- **`Country`**:
+- **`country`**:
  US
-- **`Postal code`**:
+- **`postal_code`**:
  10001
-- **`Country of citizenship`**:
+- **`country_of_citizenship`**:
  ['US']
-- **`Nationality`**:
+- **`nationality`**:
  ['US']
-- **`Gender`**:
+- **`gender`**:
  M
-- **`Age`**:
+- **`age`**:
  35
-- **`Education`**:
+- **`education`**:
  5
-- **`Marital status`**:
+- **`marital_status`**:
  1
-- **`Number of children`**:
+- **`number_of_children`**:
  0
 
 ## Organization
@@ -89,7 +89,7 @@ Joshua Adam Schulte had a history of social and mental health issues. He showed 
 - **`Country`**:
  US
 - **`Postal code`**:
- 22,101
+ 22101
 - **`Small business`**:
  False
 - **`Industry sector`**:
@@ -114,9 +114,9 @@ Joshua Adam Schulte had a history of social and mental health issues. He showed 
 - **`Industry sector`**:
  Information (*51*) &mdash; Hardware or software systems related to the processing, communications, and accessing of information.
 - **`Industry subsector`**:
- Web Search Portals, Libraries, Archives, and Other Information Services (*51.9*) &mdash; Industries in the Web Search Portals, Libraries, Archives, and Other Information Services subsector group establishments supplying information, storing and providing access to information, searching and retrieving information, and operating Web sites that use search engines to allow for searching information on the Internet. The main components of the subsector are libraries, archives, and Web search portals.
+ Web Search Portals, Libraries, Archives, and Other Information Services (*51.9*) &mdash; Industries in the Web Search Portals, Libraries, Archives, and Other Information Services subsector group establishments supplying information, storing and providing access to information, searching and retrieving information, and operating websites that use search engines to allow for searching information on the Internet. The main components of the subsector are libraries, archives, and web search portals.
 - **`Business`**:
- WikiLeaks is a non-profit organization that publishes news leaks and classified media provided by anonymous sources.
+ WikiLeaks is a nonprofit organization that publishes news leaks and classified media provided by anonymous sources.
 - **`Incident role`**:
  Beneficiary (*B*) &mdash; The organization accepted trade secrets, customer lists, intellectual property, etc. that the insider obtained through the incident.
 
@@ -129,17 +129,17 @@ Schulte's unauthorized activities were detected by the CIA's security team and s
 - **`First detected`**:
  2017-03-07T00:00:00Z
 - **`Who detected`**:
-   - Law Enforcement (*LE*) &mdash; Law enforcement discovered the insider's illegal activity (e.g., Police noticed that the insider was gaining access to the company after hours).
-  - Security Team (*ST*) &mdash; Technical or personnnel security team discovered the insider's activity.
+   - Law Enforcement (*LE*) &mdash; Law enforcement discovered the insider's illegal activity (e.g., police noticed that the insider was gaining access to the company after hours)
+  - Security Team (*ST*) &mdash; Technical or personnel security team discovered the insider's activity
 - **`Detected method`**:
-   - Technical Means (*2*) &mdash; The insider's activity was detected via analysis or anomalies in technical systems and software.
-  - Security Software (*4*) &mdash; The insider's activity was detected by security software (e.g., The insider tried to download a document with trade secrets and an automatic alert detected the download).
+   - Technical Means (*2*) &mdash; The insider's activity was detected via analysis or anomalies in technical systems and software
+  - Security Software (*4*) &mdash; The insider's activity was detected by security software (e.g., the insider tried to download a document with trade secrets and an automatic alert detected the download)
 - **`Logs`**:
-   - Access Logs (*AC*) &mdash; File or system access logs.
-  - Audit Logs (*AU*) &mdash; Logs generated specifically for auditing purposes.
-  - Database Logs (*DB*) &mdash; Logs from traditional or non-traditional database servers or services.
-  - Remote Access Logs (*RA*) &mdash; Logs from remote access servers or clients.
-  - System File Logs (*SF*) &mdash; File logs (create, delete, modify, etc.) from workstations, servers, and other systems.
+   - Access Logs (*AC*) &mdash; File or system access logs
+  - Audit Logs (*AU*) &mdash; Logs generated specifically for auditing purposes
+  - Database Logs (*DB*) &mdash; Logs from traditional or non-traditional database servers or services
+  - Remote Access Logs (*RA*) &mdash; Logs from remote access servers or clients
+  - System File Logs (*SF*) &mdash; File logs (create, delete, modify, etc.) from workstations, servers, and other systems
 
 ## Impact
 
@@ -152,7 +152,7 @@ The Vault 7 leak included approximately 8,000 documents detailing CIA hacking to
 - **`Low`**:
  8,000
 - **`Metric`**:
- Files (*7*) &mdash; Number of physical or digital files stolen, read, or compromised.
+ Files (*7*) &mdash; Number of physical or digital files stolen, read, or compromised
 - **`Estimated`**:
  True
 
@@ -176,39 +176,39 @@ The financial impact of the breach was substantial, with estimates ranging from 
 - **`Id`**:
  target--2a6f542f-a3e6-43e9-b628-cc9c97765276
 - **`Asset type`**:
- Information (*2*) &mdash; Data/business materials which contain important details belonging to a specific target owner.
+ Information (*2*) &mdash; Data or business materials that contain important details belonging to a specific target owner
 - **`Category`**:
- Government/Law Enforcement Information (*2.3*) &mdash; Classified or sensitive government or law enforcement information.
+ Government/Law Enforcement Information (*2.3*) &mdash; Classified or sensitive government or law enforcement information
 - **`Subcategory`**:
- Classified Information (*2.3.1*) &mdash; Information that is restricted by the government for reasons of national security.
+ Classified Information (*2.3.1*) &mdash; Information that is restricted by the government for reasons of national security
 - **`Format`**:
- Electronic (*1*) &mdash; Technological digital format.
+ Electronic (*1*) &mdash; Technological digital format
 - **`Owner`**:
- Organization (*O*) &mdash; The organization, rather than its employees or customers owns the target.
+ Organization (*O*) &mdash; The organization, rather than its employees or customers, owns the target
 - **`Sensitivity`**:
    - Secret (*4*) &mdash; Public disclosure would cause serious damage to national security
   - SecretNoForn (*5*) &mdash; Secret / restricted to country of source
-  - Top Secret (TS) (*6*) &mdash; Top secret, unauthorized disclosure would cause exceptionally grave damage to national security
+  - Top Secret (TS) (*6*) &mdash; Top secret - unauthorized disclosure would cause exceptionally grave damage to national security
   - TS/SCI (*7*) &mdash; Top secret / Sensitive compartmented information
 - **`Description`**:
  Classified CIA information related to hacking tools and techniques disclosed to WikiLeaks as part of the Vault 7 leaks.
 
 ## Response
 
-Schulte left the CIA in November of 2016, before departing from the agency planted a service to still allow remote access to government files and databases, which he used to access classified information post departure.
+Schulte left the CIA in November of 2016. Before departing from the agency, he planted a service to still allow remote access to government files and databases, which he used to access classified information post departure.
 
 - **`Id`**:
  response--f42fc7ae-48a1-48f9-bf84-0d4b13f7a64c
-- **`Technical controls`**:
+- **`technical_controls`**:
  [['1', '2016-11-01'], ['2', '2016-11-01']]
-- **`Behavioral controls`**:
+- **`behavioral_controls`**:
  [['9', '2016-11-01']]
-- **`Investigated by`**:
+- **`investigated_by`**:
  ['2', '3']
-- **`Investigation events`**:
+- **`investigation_events`**:
  [['3', '2017-03-07'], ['1', '2017-03-07'], ['2', '2018-06-18']]
 
-## Court-case
+## Court Case
 
 This case involved multiple charges against Joshua Adam Schulte, including espionage and unauthorized disclosure of classified information to WikiLeaks (known as the Vault 7 leak), computer hacking, unauthorized access to CIA computer systems, causing transmission of harmful computer commands, and receipt, possession, and transportation of child pornography.
 
@@ -225,9 +225,9 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
 - **`Court district`**:
  Southern District of New York
 - **`Court type`**:
- Federal (*1*) &mdash; Top level government court.
+ Federal (*1*) &mdash; Top level government court
 - **`Case type`**:
- Criminal (*2*) &mdash; A case dealing with a violation of criminal law.
+ Criminal (*2*) &mdash; A case dealing with a violation of criminal law
 - **`Defendant`**:
    - Joshua Adam Schulte
 - **`Plaintiff`**:
@@ -246,11 +246,11 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
 - **`Count`**:
  3
 - **`Plea`**:
- Not Guilty (*3*) &mdash; The defendant pleaed not guilty to a charge.
+ Not Guilty (*3*) &mdash; The defendant pleaded not guilty to the charge
 - **`Plea bargain`**:
  False
 - **`Disposition`**:
- Convicted (*2*) &mdash; Plead or been found guilty by a court.
+ Convicted (*2*) &mdash; Pleaded or found guilty by a court
 
 ## Charge
 
@@ -265,11 +265,11 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
 - **`Count`**:
  1
 - **`Plea`**:
- Not Guilty (*3*) &mdash; The defendant pleaed not guilty to a charge.
+ Not Guilty (*3*) &mdash; The defendant pleaded not guilty to the charge
 - **`Plea bargain`**:
  False
 - **`Disposition`**:
- Convicted (*2*) &mdash; Plead or been found guilty by a court.
+ Convicted (*2*) &mdash; Pleaded or found guilty by a court
 
 ## Charge
 
@@ -284,11 +284,11 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
 - **`Count`**:
  1
 - **`Plea`**:
- Not Guilty (*3*) &mdash; The defendant pleaed not guilty to a charge.
+ Not Guilty (*3*) &mdash; The defendant pleaded not guilty to the charge
 - **`Plea bargain`**:
  False
 - **`Disposition`**:
- Convicted (*2*) &mdash; Plead or been found guilty by a court.
+ Convicted (*2*) &mdash; Pleaded or found guilty by a court
 
 ## Charge
 
@@ -303,11 +303,11 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
 - **`Count`**:
  1
 - **`Plea`**:
- Not Guilty (*3*) &mdash; The defendant pleaed not guilty to a charge.
+ Not Guilty (*3*) &mdash; The defendant pleaded not guilty to the charge
 - **`Plea bargain`**:
  False
 - **`Disposition`**:
- Convicted (*2*) &mdash; Plead or been found guilty by a court.
+ Convicted (*2*) &mdash; Pleaded or found guilty by a court
 
 ## Charge
 
@@ -322,11 +322,11 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
 - **`Count`**:
  1
 - **`Plea`**:
- Not Guilty (*3*) &mdash; The defendant pleaed not guilty to a charge.
+ Not Guilty (*3*) &mdash; The defendant pleaded not guilty to the charge
 - **`Plea bargain`**:
  False
 - **`Disposition`**:
- Convicted (*2*) &mdash; Plead or been found guilty by a court.
+ Convicted (*2*) &mdash; Pleaded or found guilty by a court
 
 ## Charge
 
@@ -341,11 +341,11 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
 - **`Count`**:
  1
 - **`Plea`**:
- Not Guilty (*3*) &mdash; The defendant pleaed not guilty to a charge.
+ Not Guilty (*3*) &mdash; The defendant pleaded not guilty to the charge
 - **`Plea bargain`**:
  False
 - **`Disposition`**:
- Convicted (*2*) &mdash; Plead or been found guilty by a court.
+ Convicted (*2*) &mdash; Pleaded or found guilty by a court
 
 ## Charge
 
@@ -360,11 +360,11 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
 - **`Count`**:
  1
 - **`Plea`**:
- Not Guilty (*3*) &mdash; The defendant pleaed not guilty to a charge.
+ Not Guilty (*3*) &mdash; The defendant pleaded not guilty to the charge
 - **`Plea bargain`**:
  False
 - **`Disposition`**:
- Convicted (*2*) &mdash; Plead or been found guilty by a court.
+ Convicted (*2*) &mdash; Pleaded or found guilty by a court
 
 ## Charge
 
@@ -379,11 +379,11 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
 - **`Count`**:
  1
 - **`Plea`**:
- Not Guilty (*3*) &mdash; The defendant pleaed not guilty to a charge.
+ Not Guilty (*3*) &mdash; The defendant pleaded not guilty to the charge
 - **`Plea bargain`**:
  False
 - **`Disposition`**:
- Convicted (*2*) &mdash; Plead or been found guilty by a court.
+ Convicted (*2*) &mdash; Pleaded or found guilty by a court
 
 ## Charge
 
@@ -398,22 +398,22 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
 - **`Count`**:
  1
 - **`Plea`**:
- Not Guilty (*3*) &mdash; The defendant pleaed not guilty to a charge.
+ Not Guilty (*3*) &mdash; The defendant pleaded not guilty to the charge
 - **`Plea bargain`**:
  False
 - **`Disposition`**:
- Convicted (*2*) &mdash; Plead or been found guilty by a court.
+ Convicted (*2*) &mdash; Pleaded or found guilty by a court
 
 ## Sentence
 
 - **`Id`**:
  sentence--21e74a96-ba47-46fe-8338-736ab19552ba
 - **`Sentence type`**:
- Incarceration (*9*) &mdash; Imprisonment.
+ Incarceration (*9*) &mdash; Imprisonment
 - **`Quantity`**:
  40
 - **`Metric`**:
- Year(s) (*4*) &mdash; Imposed sentence is in terms of years. E.g. 5 years no Internet access.
+ Year(s) (*4*) &mdash; Imposed sentence is in terms of years (e.g. five years no Internet access)
 - **`Concurrency`**:
  False
 
@@ -424,15 +424,15 @@ Lifetime supervised release, to run concurrently.
 - **`Id`**:
  sentence--1141c372-543a-42f5-a640-c88b8ab16ae2
 - **`Sentence type`**:
- Supervised Release (*16*) &mdash; Defendant is released into the community, subject to special conditions and restrictions, after the completion of a prison sentence.
+ Supervised Release (*16*) &mdash; Defendant is released into the community, subject to special conditions and restrictions, after the completion of a prison sentence
 - **`Quantity`**:
  60
 - **`Metric`**:
- Year(s) (*4*) &mdash; Imposed sentence is in terms of years. E.g. 5 years no Internet access.
+ Year(s) (*4*) &mdash; Imposed sentence is in terms of years (e.g. five years no Internet access)
 - **`Concurrency`**:
  True
 
-## Legal-response
+## Legal Response
 
 Joshua Adam Schulte was investigated and charged for multiple offenses, including espionage, unauthorized disclosure of classified information (Vault 7 leaks), computer hacking, and possession of child pornography. The judgment date is in relation to the charges specifically related to the dissemination of the Stolen CIA Files.
 
@@ -460,15 +460,15 @@ Schulte was employed as a software engineer in the Center for Cyber Intelligence
 - **`Job function`**:
  Computer and Mathematical (*15*) &mdash; Computer and Mathematical
 - **`Occupation`**:
- Computer Occupations (*15.1*) &mdash; Computer Systems Analysts, Information Security Analysts, Network Support Specialists, User Support Specialists, Network Architects, Systems Administrators, Software Developers, Web Developers, Interface Designers, Etc.
+ Computer Occupations (*15.1*) &mdash; Computer Systems Analysts, Information Security Analysts, Network Support Specialists, User Support Specialists, Network Architects, Systems Administrators, Software Developers, Web Developers, Interface Designers, etc.
 - **`Title`**:
  Software Engineer
 - **`Position technical`**:
  True
 - **`Access authorization`**:
- Administrator/Root (*2*) &mdash; Authorized full administrative access.
+ Administrator/Root (*2*) &mdash; Authorized full administrative access
 - **`Employment type`**:
- Full-time (*FLT*) &mdash; Individual who is directly employed by the organization and works at least 35 hours per week (or is classified by the organization as a full-time employee).
+ Full-time (*FLT*) &mdash; Individual who is directly employed by the organization and works at least 35 hours per week or is classified by the organization as a full-time employee
 - **`Hire date`**:
  2010-01-01
 - **`Departure date`**:
@@ -478,18 +478,18 @@ Schulte was employed as a software engineer in the Center for Cyber Intelligence
 
 ## Stressor
 
-Joshua Adam Schulte internal disputes and a hostile work environment at the CIA (self-imposed) contributed to his decision to steal and leak classified information as revenge for mistreatment.
+Joshua Adam Schulte's internal disputes and a hostile work environment at the CIA (self-imposed) contributed to his decision to steal and leak classified information as revenge for mistreatment.
 
 - **`Id`**:
  stressor--28ecfbf3-5eb1-429f-8a55-c2e16f08ebcd
 - **`Date`**:
  2016
 - **`Category`**:
- Organizational Issues (*2*) &mdash; The insider's employer had problems or changes that directly or indirectly affected the insider.
+ Organizational Issues (*2*) &mdash; The insider's employer had problems or changes that directly or indirectly affected the insider
 - **`Subcategory`**:
- Hostile Work Environment (*2.12*) &mdash; A work environment that is difficult or uncomfortable for another person to work in due to discrimination of any kind.
+ Hostile Work Environment (*2.12*) &mdash; A work environment that is difficult or uncomfortable for another person to work in due to discrimination of any kind
 
-## Ttp
+## TTP
 
 - **`Id`**:
  ttp--a181e814-aa3a-411e-ae79-79ceba48e36a
@@ -501,26 +501,26 @@ Joshua Adam Schulte internal disputes and a hostile work environment at the CIA 
  True
 - **`Number of times`**:
  2
-- **`Ttp vocab`**:
+- **`TTP vocab`**:
  IIDES
 - **`Tactic`**:
- Data Exfiltration (*7*) &mdash; Data (or copies of data) is removed from the organization without permission or explicitly against permission to use in an unauthorized way.
+ Data Exfiltration (*7*) &mdash; Data (or copies of data) is removed from the organization without permission or explicitly against permission to use in an unauthorized way
 - **`Technique`**:
- Email (*7.3*) &mdash; Insider exfiltrates data through electronic mail (e.g., Insider e-mailed confidential information to competitor).
+ Email (*7.3*) &mdash; Data exfiltration through electronic mail (e.g., the insider e-mailed confidential information to competitor)
 - **`Location`**:
-   - On-site (*1*) &mdash; Action taken while on-site at an organizational facility.
+   - On-site (*1*) &mdash; Action taken while on site at an organizational facility
 - **`Hours`**:
-   - During Work Hours (*1*) &mdash; Insider took the action during their normal working hours.
+   - During Work Hours (*1*) &mdash; Insider took the action during their normal working hours
 - **`Device`**:
-   - Company Desktop (*1*) &mdash; Organization owned desktop workstation.
+   - Company Desktop (*1*) &mdash; Organization owned desktop workstation
 - **`Channel`**:
-   - Company Email (*1*) &mdash; An email account the company controls.
-  - Online Forum (*4*) &mdash; Private or public forum accessed via the Internet.
-  - Personal Email (*5*) &mdash; An email account the organization does not control or monitor.
+   - Company Email (*1*) &mdash; An email account the company controls
+  - Online Forum (*4*) &mdash; Private or public forum accessed via the Internet
+  - Personal Email (*5*) &mdash; An email account the organization does not control or monitor
 - **`Description`**:
  Schulte used a personal email account to exfiltrate classified CIA information from the organization's database server to his personal computer.
 
-## Ttp
+## TTP
 
 - **`Id`**:
  ttp--a154e814-aa3a-411e-ae79-79ceba48e79b
@@ -532,24 +532,24 @@ Joshua Adam Schulte internal disputes and a hostile work environment at the CIA 
  True
 - **`Number of times`**:
  1
-- **`Ttp vocab`**:
+- **`TTP vocab`**:
  IIDES
 - **`Tactic`**:
- Data Exfiltration (*7*) &mdash; Data (or copies of data) is removed from the organization without permission or explicitly against permission to use in an unauthorized way.
+ Data Exfiltration (*7*) &mdash; Data (or copies of data) is removed from the organization without permission or explicitly against permission to use in an unauthorized way
 - **`Technique`**:
- Removable Media (*7.2*) &mdash; Insider exfiltrates data through digital equipment or media (e.g., Insider had trade secrets owned by the victim organization on a flash drive and sent the flash drive to the competitor to be copied).
+ Removable Media (*7.2*) &mdash; Data exfiltration through digital equipment or media (e.g., the insider had trade secrets owned by the victim organization on a flash drive and sent the flash drive to the competitor to be copied)
 - **`Location`**:
-   - Remotely (*2*) &mdash; Action taken while remote (i.e. not at an organizational facility).
+   - Remotely (*2*) &mdash; Action taken while remote (i.e., not at an organizational facility)
 - **`Hours`**:
-   - Outside of Work Hours (*2*) &mdash; Insider took the action outside of their normal working hours.
+   - Outside of Work Hours (*2*) &mdash; Insider took the action outside of their normal working hours
 - **`Device`**:
-   - Personal Computer (*7*) &mdash; Personally owned computer.
+   - Personal Computer (*7*) &mdash; Personally owned computer
 - **`Channel`**:
-   - Other (*9*) &mdash; Other type of channel not listed in this vocabulary.
+   - Other (*9*) &mdash; Other type of channel not listed in this vocabulary
 - **`Description`**:
  Schulte then loaded the data on a removable media disk
 
-## Ttp
+## TTP
 
 - **`Id`**:
  ttp--a154e814-aa3a-411e-ae79-79ceba48e77b
@@ -561,24 +561,24 @@ Joshua Adam Schulte internal disputes and a hostile work environment at the CIA 
  True
 - **`Number of times`**:
  2
-- **`Ttp vocab`**:
+- **`TTP vocab`**:
  IIDES
 - **`Tactic`**:
- Malware (*4*) &mdash; Malicious software is used.
+ Malware (*4*) &mdash; Malicious software is used
 - **`Technique`**:
- Backdoor (*4.1*) &mdash; A malicious program that allows an attacker to perform actions on a remote system, such as transferring files, acquiring passwords, or executing arbitrary commands.
+ Backdoor (*4.1*) &mdash; A malicious program that allows an attacker to perform actions on a remote system, such as transferring files, acquiring passwords, or executing arbitrary commands
 - **`Location`**:
-   - On-site (*1*) &mdash; Action taken while on-site at an organizational facility.
+   - On-site (*1*) &mdash; Action taken while on site at an organizational facility
 - **`Hours`**:
-   - During Work Hours (*1*) &mdash; Insider took the action during their normal working hours.
+   - During Work Hours (*1*) &mdash; Insider took the action during their normal working hours
 - **`Device`**:
-   - Company Desktop (*1*) &mdash; Organization owned desktop workstation.
+   - Company Desktop (*1*) &mdash; Organization owned desktop workstation
 - **`Channel`**:
-   - Other (*9*) &mdash; Other type of channel not listed in this vocabulary.
+   - Other (*9*) &mdash; Other type of channel not listed in this vocabulary
 - **`Description`**:
  Before leaving the CIA, Schulte planted a backdoor into the CIA network
 
-## Ttp
+## TTP
 
 - **`Id`**:
  ttp--a154e814-aa3a-411e-ae79-79ceba48e76b
@@ -590,22 +590,22 @@ Joshua Adam Schulte internal disputes and a hostile work environment at the CIA 
  True
 - **`Number of times`**:
  1
-- **`Ttp vocab`**:
+- **`TTP vocab`**:
  IIDES
 - **`Tactic`**:
- Data Exfiltration (*7*) &mdash; Data (or copies of data) is removed from the organization without permission or explicitly against permission to use in an unauthorized way.
+ Data Exfiltration (*7*) &mdash; Data (or copies of data) is removed from the organization without permission or explicitly against permission to use in an unauthorized way
 - **`Technique`**:
- Other Technical/Digital (*7.9*) &mdash; Insider exfiltrates data using other technical or digital means not listed in this vocabulary.
+ Other Technical/Digital (*7.9*) &mdash; Data exfiltration using other technical or digital means not listed in this vocabulary
 - **`Location`**:
-   - Remotely (*2*) &mdash; Action taken while remote (i.e. not at an organizational facility).
+   - Remotely (*2*) &mdash; Action taken while remote (i.e., not at an organizational facility)
 - **`Hours`**:
-   - Outside of Work Hours (*2*) &mdash; Insider took the action outside of their normal working hours.
+   - Outside of Work Hours (*2*) &mdash; Insider took the action outside of their normal working hours
 - **`Device`**:
-   - Database Server (*4*) &mdash; Database server.
+   - Database Server (*4*) &mdash; Database server
 - **`Channel`**:
-   - Company Email (*1*) &mdash; An email account the company controls.
-  - Personal Email (*5*) &mdash; An email account the organization does not control or monitor.
-  - Other (*9*) &mdash; Other type of channel not listed in this vocabulary.
+   - Company Email (*1*) &mdash; An email account the company controls
+  - Personal Email (*5*) &mdash; An email account the organization does not control or monitor
+  - Other (*9*) &mdash; Other type of channel not listed in this vocabulary
 - **`Description`**:
  After leaving the CIA, Schulte hosted a server on the CIA's network to continue accessing and exfiltrating classified data.
 
@@ -627,9 +627,9 @@ The child pornography charges were included in the JSON because they are relevan
 - **`Title`**:
  Joshua Adam Schulte Charged with Unauthorized Disclosure of Classified Information and Other Offenses
 - **`Source type`**:
- DOJ Press Release (*2*) &mdash; Press release from the Department of Justice or US Attorneys' Office.
+ DOJ Press Release (*2*) &mdash; Press release from the Department of Justice or U.S. Attorneys' Office
 - **`File type`**:
- HTML File (*html*) &mdash; A file in HTML format.
+ HTML File (*html*) &mdash; A file in HTML format
 - **`Date`**:
  2018-06-18T00:00:00Z
 - **`Public`**:
@@ -644,9 +644,9 @@ The child pornography charges were included in the JSON because they are relevan
 - **`Title`**:
  Former CIA Officer Joshua Adam Schulte Sentenced to 40 Years in Prison for Espionage and Child Pornography Offenses
 - **`Source type`**:
- DOJ Press Release (*2*) &mdash; Press release from the Department of Justice or US Attorneys' Office.
+ DOJ Press Release (*2*) &mdash; Press release from the Department of Justice or U.S. Attorneys' Office
 - **`File type`**:
- HTML File (*html*) &mdash; A file in HTML format.
+ HTML File (*html*) &mdash; A file in HTML format
 - **`Date`**:
  2023-01-18T00:00:00Z
 - **`Public`**:
@@ -661,9 +661,9 @@ The child pornography charges were included in the JSON because they are relevan
 - **`Title`**:
  CIA Engineer Convicted of Largest Theft of Classified Data in Agency’s History
 - **`Source type`**:
- Media (*5*) &mdash; News, blog, or similar publication.
+ Media (*5*) &mdash; News, blog, or similar publication
 - **`File type`**:
- HTML File (*html*) &mdash; A file in HTML format.
+ HTML File (*html*) &mdash; A file in HTML format
 - **`Date`**:
  2022-07-13T00:00:00Z
 - **`Public`**:
@@ -678,9 +678,9 @@ The child pornography charges were included in the JSON because they are relevan
 - **`Title`**:
  USA v. Schulte Docket Information
 - **`Source type`**:
- Court Document (*1*) &mdash; Legal document from a court case.
+ Court Document (*1*) &mdash; Legal document from a court case
 - **`File type`**:
- HTML File (*html*) &mdash; A file in HTML format.
+ HTML File (*html*) &mdash; A file in HTML format
 - **`Date`**:
  2022-07-13T00:00:00Z
 - **`Public`**:

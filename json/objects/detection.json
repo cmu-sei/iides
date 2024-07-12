@@ -53,7 +53,7 @@
               {
                 "const": "LE",
                 "title": "Law Enforcement",
-                "description": "Law enforcement discovered the insider's illegal activity (e.g., Police noticed that the insider was gaining access to the company after hours)"
+                "description": "Law enforcement discovered the insider's illegal activity (e.g., police noticed that the insider was gaining access to the company after hours)"
               },
               {
                 "const": "OR",
@@ -68,7 +68,7 @@
               {
                 "const": "CO",
                 "title": "Competitor",
-                "description": "An organization competing with the victim organization discovered the insider's activity (e.g., Insider approached a competing organization with company trade secrets, and the competitor alerted the victim organization)"
+                "description": "An organization competing with the victim organization discovered the insider's activity (e.g., the insider approached a competing organization with company trade secrets, and the competitor alerted the victim organization)"
               },
               {
                 "const": "AU",
@@ -88,7 +88,7 @@
               {
                 "const": "ST",
                 "title": "Security Team",
-                "description": "Technical or personnnel security team discovered the insider's activity"
+                "description": "Technical or personnel security team discovered the insider's activity"
               },
               {
                 "const": "MG",
@@ -122,12 +122,12 @@
                 {
                     "const": "3",
                     "title": "Non-Technical Means",
-                    "description": "The insider's activity was detected in a non-technical fashion (e.g., The insider had personal items purchased with a company credit card sent to the office by accident)"
+                    "description": "The insider's activity was detected in a non-technical fashion (e.g., the insider had personal items purchased with a company credit card sent to the office by accident)"
                 },
                 {
                     "const": "4",
                     "title": "Security Software",
-                    "description": "The insider's activity was detected by security software (e.g., The insider tried to download a document with trade secrets and an automatic alert detected the download)"
+                    "description": "The insider's activity was detected by security software (e.g., the insider tried to download a document with trade secrets and an automatic alert detected the download)"
                 },
                 {
                     "const": "5",

@@ -6,7 +6,7 @@
         "relationship_to_insider": "2",
         "first_name": "Travis",
         "last_name": "Kalanick",
-        "comment": "Co-founder and former chief executive officer of Uber was accused of having conspired with Levandowski, motivating him financially to starting a company using trade secrets from Waymo, that would then be bought by Uber."
+        "comment": "Co-founder and former chief executive officer of Uber was accused of having conspired with Levandowski, motivating him financially to start a company using trade secrets from Waymo, which would then be bought by Uber."
       },
       {
         "id": "charge--3fcbf985-f10e-45b7-aacb-e16c89da1105",
@@ -64,7 +64,7 @@
         "high": 14000,
         "metric": "7",
         "estimated": true,
-        "comment": "Levandowski downloaded over 14,000 files before leaving the company to found his own startup, that was then bought by Uber"
+        "comment": "Levandowski downloaded over 14,000 files before leaving the company to found his own startup, which was then bought by Uber."
       },
       {
         "id": "incident--6e75f650-c1a5-4c71-8d2f-7e9d2bba0381",
@@ -150,7 +150,7 @@
         "id": "note--afc08477-7f6f-4130-a966-f7b1e2188587",
         "author": "CMU Researcher",
         "date": "2024-05-28",
-        "comment": "This was a civil case, the insider was formally charged through a third party civil court and later filed for bankruptcy"
+        "comment": "This was a civil case. The insider was formally charged through a third-party civil court and later filed for bankruptcy"
       },
       {
         "id": "organization--8ed0c400-fa6a-4bd6-babe-4da40240442d",
@@ -197,7 +197,7 @@
             "2016-11-00"
           ]
         ],
-        "comment": "A third party investigator was hired to look into the matter after an engineer at Waymo found Uber's autonomous vehicle sensors drastically similar to those developed by Waymo."
+        "comment": "A third-party investigator was hired to look into the matter after an engineer at Waymo found Uber's autonomous vehicle sensors drastically similar to those developed by Waymo."
       },
       {
         "id": "sentence--c67354c2-5619-4ebc-85d0-21ca230c8a1d",
