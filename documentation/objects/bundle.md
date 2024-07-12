@@ -1,6 +1,6 @@
 # Bundle
 
-A bundle holds the objects relating an incident, i.e. court cases, insider, targets and impacts.
+A bundle holds the objects relating an incident, (i.e., court cases, insider, targets, and impacts).
 
 ## Properties
 

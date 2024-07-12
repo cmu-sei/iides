@@ -2,34 +2,34 @@
     "$id": "iides/json/objects/impact.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Impact",
-    "description": "The quantified impact of the incident on the victim organization. An incident may have one or more impacts. An impact MUST be associated with only one incident.",
+    "description": "This is the quantified impact of the incident on the victim organization. An incident may have one or more impacts. An impact MUST be associated with only one incident.",
     "type": "object",
     "properties": {
       "id": {
         "type": "string",
-        "description": "A unique string that begins with \"impact--\" and is appended with a UUIDv4.",
+        "description": "A unique string that begins with \"impact--\" and is appended with a UUIDv4",
         "pattern": "^impact--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
       },
       "high": {
         "type": "number",
-        "description": "The quantity of the impact being measured. If a range, the high end of the range."
+        "description": "The quantity of the impact being measured. If a range, the high end of the range"
       },
       "low": {
         "type": "number",
-        "description": "If a range, the low estimate of the range."
+        "description": "If a range, the low estimate of the range"
       },
       "metric": {
         "type": "string",
-        "description": "The type of impact being quantified.",
+        "description": "The type of impact being quantified",
         "$ref": "#/$defs/impact-metric-vocab"
       },
       "estimated": {
         "type": "boolean",
-        "description": "True if the impact low and/or high is an estimated number or range."
+        "description": "True if the impact low and/or high is an estimated number or range"
       },
       "comment": {
         "type": "string",
-        "description": "Clarifying comments."
+        "description": "Clarifying comments"
       }
     },
     "required": [
@@ -44,12 +44,12 @@
               {
                 "const": "1",
                 "title": "Accounts",
-                "description": "Computer, network, financial, user accounts."
+                "description": "Computer, network, financial, user accounts"
               },
               {
                 "const": "2",
                 "title": "Credit card numbers",
-                "description": "Physical or digital credit or debit card numbers."
+                "description": "Physical or digital credit or debit card numbers"
               },
               {
                 "const": "3",
@@ -59,7 +59,7 @@
               {
                 "const": "4",
                 "title": "Documents",
-                "description": "The number of physical or digital documents effected (stolen, deleted, modified, etc.)."
+                "description": "The number of physical or digital documents effected (stolen, deleted, modified, etc.)"
               },
               {
                 "const": "5",
@@ -69,27 +69,27 @@
               {
                 "const": "6",
                 "title": "Employees",
-                "description": "Number of employees effected."
+                "description": "Number of employees effected"
               },
               {
                 "const": "7",
                 "title": "Files",
-                "description": "Number of physical or digital files stolen, read, or compromised."
+                "description": "Number of physical or digital files stolen, read, or compromised"
               },
               {
                 "const": "8",
                 "title": "Hours",
-                "description": "Down time or time effected in hours."
+                "description": "Down time or time effected in hours"
               },
               {
                 "const": "9",
                 "title": "Pages",
-                "description": "Number of individual pages of a document(s) or file(s)."
+                "description": "Number of individual pages of a document(s) or file(s)"
               },
               {
                 "const": "10",
                 "title": "Person-hours",
-                "description": "Person-hours or work time effected. Often occurs in sabotage incidents."
+                "description": "Person-hours or work time effected. Often occurs in sabotage incidents"
               },
               {
                 "const": "11",
@@ -99,7 +99,7 @@
               {
                 "const": "12",
                 "title": "Items",
-                "description": "Generic items, such as merchandise."
+                "description": "Generic items such as merchandise"
               },
               {
                 "const": "13",
@@ -109,17 +109,17 @@
               {
                 "const": "14",
                 "title": "Records",
-                "description": "Records or rows. Often refers to database or accounting records."
+                "description": "Records or rows such as database or accounting records"
               },
               {
                 "const": "15",
                 "title": "Drugs",
-                "description": "Number of pills, vials, syringes, etc. drugs or medicine taken or effected."
+                "description": "Number of pills, vials, syringes, etc. for drugs or medicine taken or effected"
               },
               {
                 "const": "16",
                 "title": "Trade Secrets",
-                "description": "Number of trade secrets stolen or effected."
+                "description": "Number of trade secrets stolen or effected"
               }
             ]
         }

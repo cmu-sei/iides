@@ -7,7 +7,7 @@
     "properties": {
         "country": {
             "type": "string",
-            "description": "The country code and name.",
+            "description": "The country code and name",
             "items": {
                 "$ref": "#/$defs/country-vocab"
             }

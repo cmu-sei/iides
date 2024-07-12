@@ -8,10 +8,10 @@ The system, data, person, or physical property that was targeted by the insider.
   - Uses pattern: ^target--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
 - **`asset_type`** (required) *(string)* : The type of target.
 	- A constant from [target-asset-vocab](#target-asset-vocab)
-  - Required if `category` exists.
+  - Required if `category` exists
 - **`category`** (required) *(string)* : The classification group a target belongs to.
 	- A constant from [target-category-vocab](#target-category-vocab)
-  - Required if `subcategory` exists.
+  - Required if `subcategory` exists
 - **`subcategory`** (required) *(string)* : The lower-level classification group a target belongs to.
 	- A constant from [target-subcategory-vocab](#target-subcategory-vocab)
 - **`format`** (required) *(string)* : The data type of the target.

@@ -1,27 +1,27 @@
 # Job
 
-Details of the employment relationship between an individual and an organization. A job may be connected to only one organization, and may be connected to only one insider or accomplice.
+This contains details of the employment relationship between an individual and an organization. A job may be connected to only one organization and may be connected to only one insider or accomplice.
 
 ## Properties
 
-- **`id`** (required) *(string)* : A unique string that begins with "job--" and is appended with a UUIDv4.
+- **`id`** (required) *(string)* : A unique string that begins with "job--" and is appended with a UUIDv4
   - Uses pattern: ^job--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
-- **`job_function`** *(string)* : Functional category of the individual's job. job_function and occupation vocabularies are based in large part on the 2018 Standard Occupational Classification system published by the Bureau of Labor Statistics.
+- **`job_function`** *(string)* : Functional category of the individual's job. job_function and occupation vocabularies are based in large part on the 2018 Standard Occupational Classification system published by the Bureau of Labor Statistics
 	- A constant from [job-function-vocab](#job-function-vocab)
-  - Required if `occupation` exists.
-- **`occupation`** *(string)* : The subcategory of the individual's job. When present, `job_function` should also be present. The chosen constant for occupation MUST match the constant for job_function.
+  - Required if `occupation` exists
+- **`occupation`** *(string)* : The subcategory of the individual's job. When present, `job_function` should also be present. The chosen constant for occupation MUST match the constant for job_function
 	- A constant from [occupation-vocab](#occupation-vocab)
-  - Required if `title` exists.
-- **`title`** *(string)* : The individual's job title. If title is specified, `occupation` should be as well.
-- **`position_technical`** *(boolean)* : The individual had access to technical areas of the organization as part of their job role. E.g. IT admin, network engineer, help desk associate, etc.
-- **`access_authorization`** *(string)* : The level of access control given by this job role.
+  - Required if `title` exists
+- **`title`** *(string)* : The individual's job title. If title is specified, `occupation` should be as well
+- **`position_technical`** *(boolean)* : The individual had access to technical areas of the organization as part of their job role (e.g., IT admin, network engineer, help desk associate)
+- **`access_authorization`** *(string)* : The level of access control given by this job role
 	- A constant from [access-auth-vocab](#access-auth-vocab)
-- **`employment_type`** *(string)* : The individual's employment arangement at the time of the incident.
+- **`employment_type`** *(string)* : The individual's employment arrangement at the time of the incident
 	- A constant from [employment-type-vocab](#employment-type-vocab)
-- **`hire_date`** *(date)* : Date the individual is hired into this position.
-- **`departure_date`** *(date)* : Date the individual departed from this position.
-- **`tenure`** *(timedelta)* : The amount of time the individual spent in this particular job role.
-- **`comment`** *(string)* : Clarifying comments or details about the job or the individual's employment with the organization.
+- **`hire_date`** *(date)* : Date the individual was hired into this position
+- **`departure_date`** *(date)* : Date the individual departed from this position
+- **`tenure`** *(timedelta)* : The amount of time the individual spent in this particular job role
+- **`comment`** *(string)* : Clarifying comments or details about the job or the individual's employment with the organization
 
 ## Vocabularies
 

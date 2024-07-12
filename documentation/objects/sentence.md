@@ -9,10 +9,10 @@ Term of imprisonment or probation, or amount of fines, imposed on a convicted de
 - **`sentence_type`** (required) *(string)* : The type of sentence that was ordered.
 	- A constant from [sentence-type-vocab](#sentence-type-vocab)
 - **`quantity`** *(integer)* : The quantity of the sentence type imposed. MUST be used with the `metric` property if used.
-  - Required if `metric` exists.
+  - Required if `metric` exists
 - **`metric`** *(string)* : The measurement type of the sentence imposed. MUST be used with the `quantity` property if used.
 	- A constant from [sentence-metric-vocab](#sentence-metric-vocab)
-  - Required if `quantity` exists.
+  - Required if `quantity` exists
 - **`concurrency`** *(boolean)* : Whether the sentence is to run concurrently (at the same time as) other sentences within the same case.
 
 ## Vocabularies

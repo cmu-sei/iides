@@ -7,7 +7,7 @@
     "properties": {
         "state": {
             "type": "string",
-            "description": "The state code and name.",
+            "description": "the state code and name",
             "items": {
                 "$ref": "#/$defs/state-vocab-us"
             }
