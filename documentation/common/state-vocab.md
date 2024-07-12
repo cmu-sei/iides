@@ -4,7 +4,7 @@ Vocabulary for the possible states
 
 ## Properties
 
-- **`state`** *(string)* : The state code and name.
+- **`state`** *(string)* : the state code and name
 
 ## Vocabularies
 

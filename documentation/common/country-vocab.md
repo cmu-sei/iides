@@ -4,7 +4,7 @@ Vocabulary for the possible countries
 
 ## Properties
 
-- **`country`** *(string)* : The country code and name.
+- **`country`** *(string)* : The country code and name
 
 ## Vocabularies
 

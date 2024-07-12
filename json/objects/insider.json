@@ -2,23 +2,23 @@
     "$id": "iides/json/objects/insider.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Insider",
-    "description": "Information about the insider involved in the incident. An incident can have multiple insiders.",
+    "description": "This is information about the insider involved in the incident. An incident can have multiple insiders.",
     "type": "object",
     "$ref": "./person.json",
     "properties": {
       "id": {
         "type": "string",
-        "description": "A unique string that begins with \"insider--\" and is appended with a UUIDv4.",
+        "description": "A unique string that begins with \"insider--\" and is appended with a UUIDv4",
         "pattern": "^insider--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
       },
       "incident_role": {
         "type": "string",
-        "description": "Whether the insider was the primary actor, or had a different role in the incident.",
+        "description": "Whether the insider was the primary actor or had a different role in the incident",
         "$ref": "#/$defs/incident-role-vocab"
       },
       "motive": {
         "type": "array",
-        "description": "The insider's motive(s) for the incident.",
+        "description": "The insider's motive(s) for the incident",
         "items": {
             "$ref": "#/$defs/motive-vocab"
         },
@@ -26,11 +26,11 @@
       },
       "substance_use_during_incident": {
         "type": "boolean",
-        "description": "Insider was using or abusing substance(s) at the time they took one or more actions related to the incident."
+        "description": "Insider was using or abusing substance(s) at the time they took one or more actions related to the incident"
       },
       "psychological_issues": {
         "type": "array",
-        "description": "Psychological issue(s) the insider experienced during or before the incident.",
+        "description": "Psychological issue(s) the insider experienced during or before the incident",
         "items": {
             "$ref": "#/$defs/psych-issues-vocab"
         },
@@ -38,7 +38,7 @@
       },
       "predispositions": {
         "type": "array",
-        "description": "Insider's tendancy toward certain actions or qualities.",
+        "description": "Insider's tendency toward certain actions or qualities",
         "items": {
           "type": "array",
           "prefixItems": [
@@ -51,7 +51,7 @@
       },
       "concerning_behaviors": {
         "type": "array",
-        "description": "Insider's history of past behavior that could indicate future issues.",
+        "description": "Insider's history of past behavior that could indicate future issues",
         "items": {
           "type": "array",
           "prefixItems": [
@@ -73,7 +73,7 @@
               {
                 "const": "1",
                 "title": "Primary",
-                "description": "Insider is the primary perpetrator of the incident."
+                "description": "Insider is the primary perpetrator of the incident"
               },
               {
                 "const": "2",
@@ -83,12 +83,12 @@
               {
                 "const": "3",
                 "title": "Looked the other way",
-                "description": "Insider looked the other way while the primary perpetrator conducted the incident."
+                "description": "Insider looked the other way while the primary perpetrator conducted the incident"
               },
               {
                 "const": "4",
                 "title": "Approved primary insider's actions",
-                "description": "Insider knowingly approved the primary perpetrator's actions, such as by signing off on a fraudulent invoice."
+                "description": "Insider knowingly approved the primary perpetrator's actions, such as by signing off on a fraudulent invoice"
               }
             ]
         },
@@ -97,47 +97,47 @@
               {
                 "const": "1",
                 "title": "Benefit Foreign Entity",
-                "description": "Insider committed their attack to benefit a foreign entity, such as a foreign government or military."
+                "description": "Insider committed their attack to benefit a foreign entity, such as a foreign government or military"
               },
               {
                 "const": "2",
                 "title": "Benefit New Employer",
-                "description": "Insider committed their attack to benefit their new employer, such as by stealing a client list when they left the victim organization."
+                "description": "Insider committed their attack to benefit their new employer, such as by stealing a client list when they left the victim organization"
               },
               {
                 "const": "3",
                 "title": "Competitive Business Advantage",
-                "description": "Insider committed their attack in order to gain a business advantage for a competing company. Often, this is the insider starting their own company."
+                "description": "Insider committed their attack in order to gain a business advantage for a competing company. Often, this is the insider starting their own company"
               },
               {
                 "const": "4",
                 "title": "Curiosity",
-                "description": "Insider committed the incident out of curiosity. E.g., Insider accessed medical records of a celebrity because they were curious of that celebrity's age."
+                "description": "Insider committed the incident out of curiosity. E.g., Insider accessed medical records of a celebrity because they were curious of that celebrity's age"
               },
               {
                 "const": "5",
                 "title": "Financial Gain",
-                "description": "Insider committed their attack to make a profit."
+                "description": "Insider committed their attack to make a profit"
               },
               {
                 "const": "6",
                 "title": "Freedom of Information",
-                "description": "The insider held the belief that it is in the best interest of the public to share the victim organization's confidential information with the public. E.g., sharing unfavorable test results of a product or unfavorable information about an organization's internal practices."
+                "description": "The insider held the belief that it is in the best interest of the public to share the victim organization's confidential information with the public (e.g., sharing unfavorable test results of a product or unfavorable information about an organization's internal practices)"
               },
               {
                 "const": "7",
                 "title": "Recognition",
-                "description": "The insider wanted to be recognized (e.g. for being smart, talented, capable, powerful, etc.)"
+                "description": "The insider wanted to be recognized (e.g., for being smart, talented, capable, powerful, etc.)"
               },
               {
                 "const": "8",
                 "title": "Revenge",
-                "description": "The insider wanted revenge for an actual or perceived wrong."
+                "description": "The insider wanted revenge for an actual or perceived wrong"
               },
               {
                 "const": "99",
                 "title": "Other",
-                "description": "Other motive not listed in this vocabulary."
+                "description": "Other motive not listed in this vocabulary"
               }
             ]
         },
@@ -146,37 +146,37 @@
               {
                 "const": "1",
                 "title": "Outpatient Treatment",
-                "description": "Insider received treatment in which they were not hospitalized overnight, but rather visited a hospital, clinic, or associated facility for diagnosis or treatment."
+                "description": "Insider received treatment in which they were not hospitalized overnight, but rather visited a hospital, clinic, or associated facility for diagnosis or treatment"
               },
               {
                 "const": "2",
                 "title": "Inpatient Treatment",
-                "description": "Insider received treatment that involved 24-hour (including overnight) supervision at a hospital or dedicated psychiatric facility."
+                "description": "Insider received treatment that involved 24-hour (including overnight) supervision at a hospital or dedicated psychiatric facility"
               },
               {
                 "const": "3",
                 "title": "Medication Noncompliance",
-                "description": "The insider stopped taking a prescribed medication or following a prescribed course of treatment for a particular medical or mental health condition which, in turn, could have impacted their mental faculties."
+                "description": "The insider stopped taking a prescribed medication or following a prescribed course of treatment for a particular medical or mental health condition which, in turn, could have impacted their mental faculties"
               },
               {
                 "const": "4",
                 "title": "Delusions",
-                "description": "The insider experienced or acted on delusions at some point during their employment within the organization."
+                "description": "The insider experienced or acted on delusions at some point during their employment within the organization"
               },
               {
                 "const": "5",
                 "title": "Threatened/Attempted Suicide",
-                "description": "Insider threatened or attempted to commit suicide at some point during their employment within the organization."
+                "description": "Insider threatened or attempted to commit suicide at some point during their employment within the organization"
               },
               {
                 "const": "6",
                 "title": "Depression/Anxiety",
-                "description": "Insider expressed issues with or was diagnosed with depression or anxiety."
+                "description": "Insider expressed issues with or was diagnosed with depression or anxiety"
               },
               {
                 "const": "99",
                 "title": "Other",
-                "description": "Insider experienced specific psychological issues not specified in this vocabulary."
+                "description": "Insider experienced specific psychological issues not specified in this vocabulary"
               }
             ]
         },
@@ -185,22 +185,22 @@
               {
                 "const": "1",
                 "title": "Social and Mental Health Issues",
-                "description": "A history of behaviors related to the insider's mental health or unacceptable social behavior."
+                "description": "A history of behaviors related to the insider's mental health or unacceptable social behavior"
               },
               {
                 "const": "2",
                 "title": "A History of Rule Violations",
-                "description": "A history of violating the law or violating rules at other organizations."
+                "description": "A history of violating the law or violating rules at other organizations"
               },
               {
                 "const": "3",
                 "title": "Suspicious Associations",
-                "description": "A history of associating with criminal or otherwise objectionable persons or entities."
+                "description": "A history of associating with criminal or otherwise objectionable persons or entities"
               },
               {
                 "const": "4",
                 "title": "Personal Stressful Events",
-                "description": "Events in the insider's personal life that could lead to additional stress or futher motivate the insider to harm their organization."
+                "description": "Events in the insider's personal life that could lead to additional stress or futher motivate the insider to harm their organization"
               }
             ]
         },
@@ -209,102 +209,102 @@
               {
                 "const": "1.1",
                 "title": "Possible Psychological Issues",
-                "description": "Possible or confirmed mental health condition or psychological problem. E.g., Insider shared they were feeling depressed."
+                "description": "Possible or confirmed mental health condition or psychological problem (e.g., the insider shared they were feeling depressed)"
               },
               {
                 "const": "1.2",
                 "title": "Diagnosed Psychological Issues",
-                "description": "Insider is diagnosed with a mental health problem. E.g., Insider put on medication for depression and antipsychotics."
+                "description": "Insider is diagnosed with a mental health problem (e.g., the insider put on medication for depression and antipsychotics)"
               },
               {
                 "const": "1.3",
                 "title": "Gambling Problems",
-                "description": "Gambling activity that negatively affects other areas of their life. E.g., Insider frequently spends multiple hours at the casino every week."
+                "description": "Gambling activity that negatively affects other areas of their life (e.g., the insider frequently spends multiple hours at the casino every week)"
               },
               {
                 "const": "1.4",
                 "title": "Substance Abuse",
-                "description": "A history of alcohol or drugs, either previous or ongoing. E.g., Insider showed up to work intoxicated."
+                "description": "A history of alcohol or drugs, either previous or ongoing (e.g., the insider showed up to work intoxicated)"
               },
               {
                 "const": "1.5",
                 "title": "A History Of Financial Problems",
-                "description": "Existing financial issues, including medical bills for family members. E.g., Insider had previously filed for bankruptcy."
+                "description": "Existing financial issues, including medical bills for family members (e.g., the insider had previously filed for bankruptcy)"
               },
               {
                 "const": "1.6",
                 "title": "Poor Hygiene",
-                "description": "Insider has poor general hygiene."
+                "description": "Insider had poor general hygiene"
               },
               {
                 "const": "1.7",
                 "title": "Risk Taker",
-                "description": "Insider is referred to by co-workers, supervisors, or friends as a reckless or risk-taking individual."
+                "description": "Insider was referred to by co-workers, supervisors, or friends as a reckless or risk-taking individual"
               },
               {
                 "const": "2.1",
                 "title": "Previous Arrest/Conviction For Related Crime",
-                "description": "Involvement or conviction in a previous crime which is similar in nature to the current case. E.g., Insider executed similar fraud six years earlier. Misdemeanor conviction for the same conduct with probation sentence."
+                "description": "Involvement or conviction in a previous crime which is similar in nature to the current case (e.g., the insider executed similar fraud six years earlier. Misdemeanor conviction for the same conduct with probation sentence)"
               },
               {
                 "const": "2.2",
                 "title": "Previous Arrest/Conviction for Unrelated Crime",
-                "description": "Involvement in a previous crime which is unrelated to the current case. E.g., Insider was previously arrested for assault."
+                "description": "Involvement in a previous crime which is unrelated to the current case (e.g., the insider was previously arrested for assault)"
               },
               {
                 "const": "2.3",
                 "title": "Previous Perpetrator of Domestic Violence",
-                "description": "Previously convicted or charged on a crime involving domestic violence. E.g., Insider was previously arrested for abusing spouse."
+                "description": "Previously convicted or charged on a crime involving domestic violence (e.g., the insider was previously arrested for abusing spouse)"
               },
               {
                 "const": "2.4",
                 "title": "Hacking Related Activities",
-                "description": "Involvement in activities focused on obtaining unauthorized access to or otherwise harming IT systems. E.g., Insider often discussed their hacking related activities on their website."
+                "description": "Involvement in activities focused on obtaining unauthorized access to or otherwise harming IT systems (e.g., the insider often discussed their hacking related activities on their website)"
               },
               {
                 "const": "2.5",
                 "title": "Previous Attempts to Disclose Through Illegitimate Means",
-                "description": "Disclosing or attempting to disclose information through illegitimate means (i.e., not legally protected as a whistleblower)."
+                "description": "Disclosing or attempting to disclose information through illegitimate means (i.e., not legally protected as a whistleblower)"
               },
               {
                 "const": "2.6",
                 "title": "Pending or Previous Defendant in Civil Action",
-                "description": "The insider was previously found liable in a civil action, outside of the specific incident (i.e. where a insider was sued previously, which may be a motivation for the insider's actions)."
+                "description": "The insider was previously found liable in a civil action outside of the specific incident (i.e. where a insider was sued previously, which may be a motivation for the insider's actions)"
               },
               {
                 "const": "2.7",
                 "title": "Previous use of illegal substances",
-                "description": "Known use of illegal narcotics, or illegal use of prescribed medications."
+                "description": "Known use of illegal narcotics or illegal use of prescribed medications"
               },
               {
                 "const": "3.1",
                 "title": "Criminal Association",
-                "description": "Insider associates with known criminals or criminal organizations."
+                "description": "Insider associates with known criminals or criminal organizations"
               },
               {
                 "const": "3.2",
                 "title": "Internet Underground Association",
-                "description": "Insider associates with or participates in darkweb groups or activities."
+                "description": "Insider associates with or participates in darkweb groups or activities"
               },
               {
                 "const": "4.1",
                 "title": "Medical Problems",
-                "description": "Health issues experienced by anyone involved in the event since the insider's hire date. E.g., Insider contracted lupus and was put on medication."
+                "description": "Health issues experienced by anyone involved in the event since the insider's hire date (e.g., the insider contracted lupus and was put on medication)"
               },
               {
                 "const": "4.2",
                 "title": "Relationship Problems",
-                "description": "A problem in one of the insider's relationships which affects the insider, including family and romantic relationships developed after the insider's hire date. E.g., Insider was going through a divorce."
+                "description": "A problem in one of the insider's relationships that affects the insider, including family and romantic relationships developed after the insider's hire date (e.g., the insider was going through a divorce)"
               },
               {
                 "const": "4.3",
                 "title": "Emerging Financial Problems",
-                "description": "Monetary issues experienced by or relevant to the insider (including medical bills for family members) known to have developed after the insider's hire date. E.g., The insider claimed they stole from the organization in order to pay for their child's education."
+                "description": "Monetary issues experienced by or relevant to the insider (including medical bills for family members) known to have developed after the insider's hire date (e.g., the insider claimed they stole from the organization in order to pay for their child's education)"
               },
               {
                 "const": "4.4",
                 "title": "Family Health Issues",
-                "description": "Someone in the insider's family, or otherwise close to the insider, has health or medical issues."
+                "description": "Someone in the insider's family, or otherwise close to the insider, has health or medical issues"
               }
             ]
         },
@@ -313,37 +313,37 @@
               {
                 "const": "3.1",
                 "title": "Misuse of Company Resources",
-                "description": "Using or abusing company resources in an unauthorized manner."
+                "description": "Using or abusing company resources in an unauthorized manner"
               },
               {
                 "const": "3.2",
                 "title": "Technical Policy Abuse",
-                "description": "Violating policies regarding the use of the organization's IT systems."
+                "description": "Violating policies regarding the use of the organization's IT systems"
               },
               {
                 "const": "3.3",
                 "title": "Interpersonal Issues",
-                "description": "Conflicts with others in the organization or human resources (HR) issues."
+                "description": "Conflicts with others in the organization or human resources (HR) issues"
               },
               {
                 "const": "3.4",
                 "title": "Financial",
-                "description": "Financial conflicts of interest or significant changes to financial status."
+                "description": "Financial conflicts of interest or significant changes to financial status"
               },
               {
                 "const": "3.5",
                 "title": "Organizational Conflict",
-                "description": "Competitive conflicts of interest with the organization."
+                "description": "Competitive conflicts of interest with the organization"
               },
               {
                 "const": "3.6",
                 "title": "Suspicious Contact",
-                "description": "Suspicious communication with or travel to entities, areas, or individuals that present a conflict of interest with the organization."
+                "description": "Suspicious communication with or travel to entities, areas, or individuals that present a conflict of interest with the organization"
               },
               {
                 "const": "3.7",
                 "title": "Relocation",
-                "description": "Physical relocation."
+                "description": "Physical relocation"
               }
             ]
         },
@@ -352,132 +352,132 @@
               {
                 "const": "3.1.1",
                 "title": "Theft Of Physical Company Property",
-                "description": "Stealing their employer's physical property. E.g., Insider reported a company laptop as stolen, but had it when they were arrested."
+                "description": "Stealing their employer's physical property (e.g., the insider reported a company laptop as stolen, but had it when they were arrested)"
               },
               {
                 "const": "3.1.2",
                 "title": "Insider Expressed Ownership Of Work",
-                "description": "Acting as if they had personal right to any work done for the organization, despite knowledge of organizational right to employee work. E.g., Insider refused to return copy of code that they wrote because they felt entitled to it."
+                "description": "Acting as if they had personal right to any work done for the organization, despite knowledge of organizational right to employee work (e.g., the insider refused to return copy of code that they wrote because they felt entitled to it)"
               },
               {
                 "const": "3.1.3",
                 "title": "Repeated Security Violations - Non-Technical",
-                "description": "Violating organizational security policies not related to IT systems. E.g., Insider broke into the school on multiple occasions and was also caught cheating."
+                "description": "Violating organizational security policies not related to IT systems (e.g., the insider broke into the school on multiple occasions and was also caught cheating)"
               },
               {
                 "const": "3.2.1",
                 "title": "Other Unauthorized Software Acquisition",
-                "description": "Acquiring any sort of unauthorized software on an organizational system. E.g., The insider downloaded a password recovery tool from a website."
+                "description": "Acquiring any sort of unauthorized software on an organizational system (e.g., the insider downloaded a password recovery tool from a website)"
               },
               {
                 "const": "3.2.2",
                 "title": "Repeated Security Violations - Technical",
-                "description": "Multiple instances of security violations related to organizational IT systems, which are committed by the insider. E.g., Insider repeatedly let co-workers use their workstation."
+                "description": "Multiple instances of security violations related to organizational IT systems (e.g., the insider repeatedly let co-workers use their workstation)"
               },
               {
                 "const": "3.2.3",
                 "title": "Unauthorized Download - Remotely",
-                "description": "Unapproved download from a remote distance. E.g., Insider logged into their company account from home on their personal laptop and downloaded torrents."
+                "description": "Unapproved download from offsite (e.g., the insider logged into their company account from home on their personal laptop and downloaded torrents)"
               },
               {
                 "const": "3.2.4",
                 "title": "Unauthorized Download - On Site",
-                "description": "Unapproved download from within the organization E.g., Insider used their company-issued workstation to download torrents."
+                "description": "Unapproved download from within the organization (e.g., the insider used their company-issued workstation to download torrents)"
               },
               {
                 "const": "3.2.5",
                 "title": "IP Policy Violation",
-                "description": "Violating any of the policies put in place by the company regarding their IP (i.e. trade secrets, patents, copyright, etc.)."
+                "description": "Violating any of the policies put in place by the company regarding their IP (i.e. trade secrets, patents, copyright, etc.)"
               },
               {
                 "const": "3.2.6",
                 "title": "Violation of Need to Know",
-                "description": "Accessing organizational information which is not needed for their work, as defined by organizational policy."
+                "description": "Accessing organizational information which is not needed for their work, as defined by organizational policy"
               },
               {
                 "const": "3.3.1",
                 "title": "Employee Extortion, Threats, or Legal Demands",
-                "description": "Extortion, threats (physical, technical, legal, etc.) or legal demands against the organization. E.g., Insider threatened to sue company unless they agreed to the terms of their demands."
+                "description": "Extortion, threats (physical, technical, legal, etc.) or legal demands against the organization (e.g., the insider threatened to sue company unless they agreed to the terms of their demands)"
               },
               {
                 "const": "3.3.2",
                 "title": "Conflict With Supervisor",
-                "description": "Personal or work-related disputes with their supervisor. E.g., Insider was unhappy with their new boss, because the boss modified the organization's bonus system."
+                "description": "Personal or work-related disputes with their supervisor (e.g., the insider was unhappy with their new boss because the boss modified the organization's bonus system)"
               },
               {
                 "const": "3.3.3",
                 "title": "Conflict With Coworker(s)",
-                "description": "Personal or work-related disputes with a coworker. E.g., Insider yelled at coworker for repeatedly parking in their spot."
+                "description": "Personal or work-related disputes with a coworker (e.g., the insider yelled at a coworker for repeatedly parking in their spot)"
               },
               {
                 "const": "3.3.4",
                 "title": "Work Attendance Problems",
-                "description": "Being late for work or having unexcused/unplanned absences from work, generally multiple times E.g., Insider reports late to work 7 times during the month of April."
+                "description": "Being late for work or having unexcused/unplanned absences from work, generally multiple times (e.g., the insider reports late to work 7 times during the month of April)"
               },
               {
                 "const": "3.3.5",
                 "title": "Human Resource Policy Violations or Complaints",
-                "description": "Violating the organization's Human Resource Policy, or making a formal complaint about something/someone within the organization. E.g., Insider made several complaints to management about their co-worker's noise level."
+                "description": "Violating the organization's human resource policy or making a formal complaint about something/someone within the organization (e.g., the insider made several complaints to management about their co-worker's noise level)"
               },
               {
                 "const": "3.3.6",
                 "title": "Disgruntled Employee",
-                "description": "One who is upset with the organization and desires to get a measure of revenge against the organization. E.g., Insider grew disgruntled because of losing their 'star' status at the organization as it grew larger."
+                "description": "One who is upset with the organization and desires to get a measure of revenge against the organization (e.g., the insider grew disgruntled because of losing their 'star' status at the organization as it grew larger)"
               },
               {
                 "const": "3.3.7",
                 "title": "Bragging",
-                "description": "The insider boasts about a concerning behavior to co-workers or online E.g., Insider boasted about being able to shut down the organization's system anytime they wanted."
+                "description": "The insider boasts about a concerning behavior to co-workers or online (e.g., the insider boasted about being able to shut down the organization's system anytime they wanted)"
               },
               {
                 "const": "3.3.8",
                 "title": "Concurrent Crimes",
-                "description": "The insider commits a second illegal action, while committing the unrelated illegal insider incident E.g., Insider indicted for domestic abuse while Insider committed the insider incident."
+                "description": "The insider commits a second illegal action while committing the unrelated illegal insider incident (e.g., the insider was indicted for domestic abuse while committing the insider incident)"
               },
               {
                 "const": "3.3.9",
                 "title": "Formal Complaint",
-                "description": "Organization receives complaints about the insider from a coworker that were officially documented."
+                "description": "Organization receives complaints about the insider from a coworker which were officially documented"
               },
               {
                 "const": "3.3.10",
                 "title": "Informal Complaint",
-                "description": "Organization receives complaints about the insider from a coworker that were not officially documented."
+                "description": "Organization receives complaints about the insider from a coworker which were not officially documented"
               },
               {
                 "const": "3.3.11",
                 "title": "Insubordination",
-                "description": "Defiance or refusal to follow commands or instructions."
+                "description": "Defiance or refusal to follow commands or instructions"
               },
               {
                 "const": "3.3.12",
                 "title": "Physical Abuse/Harassment",
-                "description": "Engaging in any type of physical abuse and/or harassment against another employee."
+                "description": "Engaging in any type of physical abuse and/or harassment against another employee"
               },
               {
                 "const": "3.3.13",
                 "title": "Sexual Harassment",
-                "description": "Engaging in any type of sexual harassment against another employee."
+                "description": "Engaging in any type of sexual harassment against another employee"
               },
               {
                 "const": "3.4.1",
                 "title": "Unexplained Wealth",
-                "description": "A sudden increase in the amount of money the insider appears to have. E.g., Insider purchased $436,000 in personal items even though their annual salary was $50,000."
+                "description": "A sudden increase in the amount of money the insider appears to have (e.g., the insider purchased $400,000 in personal items even though their annual salary was $50,000)"
               },
               {
                 "const": "3.4.2",
                 "title": "Employee Forms New Competing Business",
-                "description": "Maintains a financial stake in another business or scheme that conflicts with their present employer. E.g., Insider invests in stocks of the victim organization's competitor."
+                "description": "Maintains a financial stake in another business or scheme that conflicts with their present employer (e.g., the insider invests in stocks of the victim organization's competitor)"
               },
               {
                 "const": "3.4.3",
                 "title": "Financial Conflict of Interest",
-                "description": "Starting a business in the same area as their previous employer. E.g., Insider left one law firm to start their own law firm."
+                "description": "Starting a business in the same area as their previous employer (e.g., the insider left one law firm to start their own law firm)"
               },
               {
                 "const": "3.5.1",
                 "title": "Planning/Contact with Competing Organization",
-                "description": "onspiring with a competitor of the current employer in any way, including communication through an IT system. E.g., Insider e-mailed competing organization detailing plans to steal trade secrets."
+                "description": "Conspiring with a competitor of the current employer in any way (e.g., the insider e-mailed a competing organization detailing plans to steal trade secrets)"
               },
               {
                 "const": "3.5.2",
@@ -487,17 +487,17 @@
               {
                 "const": "3.5.3",
                 "title": "Employee Sought Other Employment",
-                "description": "Seeking another job while still employed with their current employer. E.g., Insider sent their resume to another organization."
+                "description": "Seeking another job while still employed with their current employer (e.g., the insider sent their resume to another organization)"
               },
               {
                 "const": "3.5.4",
                 "title": "Group Resignation",
-                "description": "Two or more employees leave the organization at approximately the same time for similar reasons. E.g., All five insiders resigned simultaneously, then went to work for a competitor."
+                "description": "Two or more employees leave the organization at approximately the same time for similar reasons (e.g., all five insiders resigned simultaneously, then went to work for a competitor)"
               },
               {
                 "const": "3.5.5",
                 "title": "Insider Creates Legal Entity for Illegitimate Purpose",
-                "description": "Creates a legal entity in order to move forward with scheme, or hide assets as a result of the scheme. E.g., insider creates a shell company to protect assets."
+                "description": "Creates a legal entity in order to move forward with scheme or to hide assets as a result of the scheme (e.g., the insider creates a shell company to protect assets)"
               },
               {
                 "const": "3.5.6",
@@ -507,27 +507,27 @@
               {
                 "const": "3.6.1",
                 "title": "Suspicious Foreign Contact",
-                "description": "Tie(s) to foreign nation(s), such as company or independent travel, family members, telephone records, etc. E.g., Insider consistently calls former co-worker who now works in a non-allied country."
+                "description": "Tie(s) to foreign nation(s) such as company or independent travel, family members, telephone records, etc. (e.g., the insider consistently calls former co-worker who now works in a non-allied country)"
               },
               {
                 "const": "3.6.2",
                 "title": "Suspicious Foreign Travel",
-                "description": "Traveling to foreign nations that, if the travel was known, should raise concerns with the organization."
+                "description": "Traveling to foreign nations that, if the travel was known, should raise concerns with the organization"
               },
               {
                 "const": "3.6.3",
                 "title": "Foreign Travel - Work Related",
-                "description": "Travel undertaken by the insider as required for their job. E.g., The insider's job required frequent travel to non-allied countries."
+                "description": "Travel undertaken by the insider as required for their job (e.g., the insider's job required frequent travel to non-allied countries)"
               },
               {
                 "const": "3.6.4",
                 "title": "Planning/Contact with Conspirator",
-                "description": "Conspiring with a conspirator in order to begin or further their particular scheme. E.g., Insider calls their partner-in-crime in order to establish attack details."
+                "description": "Conspiring with a conspirator in order to begin or further their particular scheme (e.g., the insider calls their partner-in-crime in order to establish attack details)"
               },
               {
                 "const": "3.7.1",
                 "title": "Geographic Relocation",
-                "description": "Permanent move to a new physical location."
+                "description": "Permanent move to a new physical location"
               }
             ]
         }

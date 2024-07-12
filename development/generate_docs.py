@@ -92,7 +92,7 @@ def get_properties(properties, required):
             lines.append(f"  - Default: \"{properties[p]['default']}\"")
 
         if is_dependent(p):
-            lines.append(f"  - Required if `{is_dependent(p)}` exists.")
+            lines.append(f"  - Required if `{is_dependent(p)}` exists")
 
     return lines
 

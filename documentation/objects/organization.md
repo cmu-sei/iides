@@ -14,7 +14,7 @@ The organization(s) involved in the incident. At least one organization, the vic
 - **`small_business`** *(boolean)* : TRUE if the organization is a privately owned business with 500 or fewer employees.
 - **`industry_sector`** *(string)* : Top level category for the economic sector the organization belongs to. Note, sectors are dervied from the North American Industry Classification System (NAICS) version 2022 published by the United States Office of Management and Budget.
 	- A constant from [industry-sector-vocab](#industry-sector-vocab)
-  - Required if `industry_subsector` exists.
+  - Required if `industry_subsector` exists
 - **`industry_subsector`** *(string)* : Second level category for the economic sector the organization belongs to. This value MUST map back to industry_sector. E.g., if sector is "9", subsector must be "9.x"
 	- A constant from [industry-subsector-vocab](#industry-subsector-vocab)
 - **`business`** *(string)* : Description of the organization's business.

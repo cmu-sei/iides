@@ -2,18 +2,18 @@
     "$id": "iides/json/objects/accomplice.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Accomplice",
-    "description": "An outsider who conspired with the insider(s) to accomplish the objectives of the incident. An accomplice was not part of the victim organization at the time of the incident. An insider may have one or more accomplices. An accomplice may have one or more jobs (job history).",
+    "description": "An accomplice is an outsider who conspired with the insider(s) to accomplish the objectives of the incident. An accomplice was not part of the victim organization at the time of the incident. An insider may have one or more accomplices. An accomplice may have one or more jobs (job history).",
     "type": "object",
     "$ref": "./person.json",
     "properties": {
       "id": {
         "type": "string",
-        "description": "A unique string that begins with \"accomplice--\" and is appended with a UUIDv4.",
+        "description": "A unique string that begins with \"accomplice--\" and is appended with a UUIDv4",
         "pattern": "^accomplice--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
       },
       "relationship_to_insider": {
         "type": "string",
-        "description": "The type of relationship between this accomplice and the insider to which it is connected.",
+        "description": "The type of relationship between this accomplice and the insider to whom they are connected",
         "$ref": "../common/insider-relationship-vocab.json"
       }
     },

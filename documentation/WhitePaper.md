@@ -102,7 +102,7 @@ We refer to a group of components all related to one another through a particula
 
 The schema does not require inclusion of an incident entity. However, we strongly recommend including the incident entity&mdash;with null fields if necessary (except for `id`)&mdash;as it provides the connective glue between the other components of IIDES and will allow for organizations to consistently share incidents, should the need arise.
 
-The relationships specified in IIDES are detailed in the description of each component as well as in the IIDES [ERD](../UML/out/) files. Implementations can more tightly constrain the relationships, should they have a need to do so, for example by requiring every incident have at least one insider, organization, and target. Implementations should not define the relationships more loosely, for example by allowing an incident to have multiple detection components. Doing so would result in a non-conformant implementation.
+The relationships specified in IIDES are detailed in the description of each component as well as in the IIDES [ERD](../UML/out/) files. Implementations can more tightly constrain the relationships, should they have a need to do so, for example by requiring every incident to have at least one insider, organization, and target. Implementations should not define the relationships more loosely, for example by allowing an incident to have multiple detection components. Doing so would result in a non-conformant implementation.
 
 We provided a generic [relationship struct](structs/relationship.md) for connecting entities to one another as specified by the relationships in the schema. For example, the generic relationship struct would be used to connect an insider entity with a job entity. Some relationships have additional properties relevant to the relationship and are therefore specified separately from the generic relationship struct in IIDES. These include [Collusion](structs/collusion.md), organization [ownership](structs/org-owner.md) by an insider, and [relationships between organizations](structs/org-relationship.md).
 
@@ -113,9 +113,9 @@ The existing generic relationship struct should not be used for connecting entit
 
 Many of the components in IIDES include properties that require values from specific vocabularies (enumerations) included with IIDES. For example, the `incident_type` property of the [Incident](objects/incident.md) component requires a value from the [incident-type-vocab](objects/incident.md#incident-type-vocab), which lists Fraud, Sabotage, Espionage, Violence, and Unintentional as the options for `incident_type`.  The vocabularies in IIDES are based on our own extensive experience working with insider incidents as well as on a large collection of incident data. We expect some of these vocabularies to grow and change over time to better suit the needs of the IIDES user community.
 
-Most vocabularies in the IIDES schema are specified as subschemas with a mapping of constants to their titles and description, as opposed to a simple list of values (i.e., an enumeration). For example, the allowed values for the `incident_type` propertiy are only "F", "S", "E", "V", and "U". This specification of constants is intended to keep the stored data as small as possible, as well as to provide consistent definitions of the vocabulary terms across the IIDES user base and insider threat community at large. 
+Most vocabularies in the IIDES schema are specified as subschemas with a mapping of constants to their titles and description, as opposed to a simple list of values (i.e., an enumeration). For example, the allowed values for the `incident_type` propertiy are only  &#8220;F,&#8221; &#8220;S,&#8221; &#8220;E,&#8221; &#8220;V,&#8221; and &#8220;U.&#8221; This specification of constants is intended to keep the stored data as small as possible as well as to provide consistent definitions of the vocabulary terms across the IIDES user base and insider threat community at large. 
 
-Using subschemas also provides flexibility for local implementations that may wish to use different value titles without breaking the schema requirements or affecting shareability. For example, an organization wishing to use the term "non-malicious" instead of "unintentional" may swap out the mapping of the title to the constant "U" from "Unintentional" to "non-malicious" without invalidating their implementation. Another organization may use a translation of the titles and descriptions to another language, while keeping the constants as is. Organizations may also clarify descriptions for their own internal purposes in the same way, e.g., by adding guidance for analysts deciding which value to use.
+Using subschemas also provides flexibility for local implementations that may wish to use different value titles without breaking the schema requirements or affecting shareability. For example, an organization wishing to use the term &#8220;non-malicious&#8221; instead of &#8220;unintentional&#8221; may swap out the mapping of the title to the constant &#8220;U&#8221; from &#8220;unintentional&#8221; to &#8220;non-malicious&#8221; without invalidating their implementation. Another organization may use a translation of the titles and descriptions to another language, while keeping the constants as is. Organizations may also clarify descriptions for their own internal purposes in the same way (e.g., by adding guidance for analysts deciding which value to use).
 
 It is difficult to provide full coverage for all possible vocabulary terms across all use cases of a data standard. We request that organizations that find that the necessary vocabulary terms are missing for their use case provide feedback via the IIDES GitHub page before considering making internal changes to the vocabularies. This way, we may consider including new terms in an updated version of IIDES, making them available for other organizations with similar use cases.
 
@@ -137,14 +137,14 @@ No matter how well a standard is defined, there will always be cases where the d
 
 We chose to use JSON to define the IIDES schema, as JSON is one of the most widely used data interchange formats and is arguably easier to use than XML. However, JSON does have its drawbacks as a language for defining schemas. For example, it is difficult to directly specify many-to-many relationships, and it assumes that undefined entities are allowed by default. Explicitly stating that additional properties and objects are disallowed would violate our guiding principle of flexibility. For this reason, the IIDES schema is defined only in part by its JSON specification. Additional details for implementation can be found in this white paper, the descriptions of each component (found in the [documentation](.) folder), and the entity relationship diagrams (ERDs) located in the [UML](../UML/out/) files.
 
-We also provide a separate reference implementation of IIDES, called PyIIDES, written in Python, for those who wish to reference a schema-comformant, complete implementation. PyIIDES is a python package available for download and use in other tools or IIDES implementations. One such example of a tool using PyIIDES is Termite, a lightweight, IIDES-compliant insider threat case management solution.
+We also provide a separate reference implementation of IIDES called PyIIDES, which is written in Python for those who wish to reference a complete schema-conformant implementation. PyIIDES is a Python package available for download and use in other tools or IIDES implementations. One such example of a tool using PyIIDES is Termite, a lightweight, IIDES-compliant insider threat case management solution.
 
-For those writing implementations of IIDES in other languages, we suggest conforming as tightly as possible to the IIDES schema as specified in these documents and the reference implementations. We request that community members requiring a non-standard or non-comformant implementation of IIDES make a request to the IIDES development team via the GitHub page before implementing a custom schema. Doing so provides the team an opportunity to improve IIDES and its associated implementations for use by the community.
+For those writing implementations of IIDES in other languages, we suggest conforming as tightly as possible to the IIDES schema as specified in these documents and the reference implementations. We request that community members requiring a non-standard or non-conformant implementation of IIDES make a request to the IIDES development team via the GitHub page before implementing a custom schema. Doing so provides the team an opportunity to improve IIDES and its associated implementations for the community's use.
 
 
 ## Conclusion
 
-Though extensive, existing tools and guidelines do not collectively address the need for a unified insider threat data exchange standard. Other frameworks and standards are often focused on specific aspects of threat management, such as external attacks, cyber threat intelligence sharing, or procurement regulations, rather than on creating a holistic, standardized approach to collecting and reporting insider threat incidents. This fragmentation leads to inconsistencies in how insider threats are reported, analyzed, and mitigated across different organizations and sectors.
+Though extensive, existing tools and guidelines do not collectively address the need for a unified insider threat data exchange standard. Other frameworks and standards are often focused on specific aspects of threat management&mdash;such as external attacks, cyber threat intelligence sharing, or procurement regulations&mdash;rather than on creating a holistic, standardized approach to collecting and reporting insider threat incidents. This fragmentation leads to inconsistencies in how insider threats are reported, analyzed, and mitigated across different organizations and sectors.
 
 IIDES addresses the critical need for an insider threat data standard that integrates these disparate elements into a cohesive framework, ensuring uniformity and effectiveness in addressing insider threats. 
 It provides a mechanism for information sharing and collaboration among stakeholders by leveraging best practices and lessons learned from existing policies and frameworks. 
@@ -153,33 +153,82 @@ It is our hope that IIDES will serve as a valuable tool for enhancing insider th
 
 ## References
 
-The following is a list of references included in this document, as well as those referenced in the IIDES schema files.
+URLs are valid as of the publication date of this report.
 
-1. Cappelli, Dawn M., Andrew P. Moore, and Randall F. Trzeciak. *The CERT Guide to Insider Threats: How to Prevent, Detect, and Respond to Information Technology Crimes.* 1st ed. Addison-Wesley Professional, 2012.
-2. Software Engineering Institute. “Common Sense Guide to Managing Insider Threats, Seventh Edition.” White Paper. Common Sense Guide to Mitigating Insider Threats. Pittsburgh, PA: Software Engineering Institute, Carnegie Mellon University, September 2022. https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=886874.
-3. Verizon. “Data Breach Investigations Report 2024.” Data Breach Investigations Report. Verizon, 2024.
-4. Ponemon Institute. “2023 Cost of Insider Threats Global Report.” Ponemon Institute, September 2023.
-5. D. Costa, M. Albrethsen, M. Collins, S. Perl, G. Silowash, and D. Spooner, "An Insider Threat Indicator Ontology," Carnegie Mellon University, Software Engineering Institute's Digital Library. Software Engineering Institute, Technical Report CMU/SEI-2016-TR-007, 10-May-2016.
-6. MITRE. MITRE ATT&CK. URL: https://attack.mitre.org. Accessed June 2024.
-7. MITRE Engenuity. Insider Threat TTP Knowledge Base. URL: https://center-for-threat-informed-defense.github.io/insider-threat-ttp-kb/. Accessed June 2024.
-8. Cybersecurity and Infrastructure Security Agency (CISA). Insider Threat Mitigation Guide. November 2020.
-9. Department of Homeland Security (DHS) Insider Threat Program (ITP). URL: https://www.dhs.gov/publication/dhs-all-pia-052-dhs-insider-threat-program. Accessed June 2024.
-10. Department of Homeland Security (DHS). Privacy Impact Assessments. URL: https://www.dhs.gov/privacy-impact-assessments. Accessed June 2024.
-11. OASIS Open. Structured Threat Information Exchange (STIX)/Trusted Automated Exchange of Intelligence Information (TAXII). URL: https://oasis-open.github.io/cti-documentation/. Accessed June 2024.
-12. Wagner, Dulaunoy, Wagener, and Iklody. Malware Information Sharing Platform (MISP). URL: https://www.misp-project.org/. Accessed June 2024.
-13. Cyber Data Exchange Model (DEM) Product Development Group - Simulation Interoperability Standards Organization (SISO). (2023). Cyber Data Exchange Model (DEM).
-14. Cyber Threat Alliance. Cyber Incident Reporting Framework: Global Edition. 2023.
-15. Mandiant FireEye. OpenIOC (Open Indicators of Compromise).
-16. MITRE. MAEC (Malware Analysis Reporting Exchange Format). URL: https://maecproject.github.io/documentation/maec5-docs/#introduction. Accessed June 2024.
-17. MITRE. Common Attack Pattern Enumeration and Classification (CAPEC). URL: https://capec.mitre.org/. Accessed June 2024.
-18. CVE Program. Common Vulnerabilities and Exposures (CVE). URL: https://www.cve.org/. Accessed June 2024.
-19. F. Greitzer, J. Purl, Y. M. Leong and D. E. S. Becker, "SOFIT: Sociotechnical and Organizational Factors for Insider Threat," 2018 IEEE Security and Privacy Workshops (SPW), San Francisco, CA, USA, 2018, pp. 197-206, doi: 10.1109/SPW.2018.00035.
-20. National Institute of Standards and Technology. Risk Management Framework for Information Systems and Organizations: A System Life Cycle Approach for Security and Privacy. December 2018.
-21. National Institute of Standards and Technology. The NIST Cybersecurity Framework (CSF) 2.0. Februrary 2024.
-22. Software Engineering Institute. "CERT Resilience Management Model: Version 1.2". Pittsburgh, PA: Software Engineering Institute, Carnegie Mellon University, Februrary 2016. https://insights.sei.cmu.edu/documents/1629/2016_002_001_514462.pdf
-23. U.S. Bureau of Labor. North American Industry Classification System (NAICS). 2022.
-24. ISO 3166 Maintenance Agency: International Organization for Standardization. ISO 3166 Country Codes. Retrieved May 2024 from https://www.iso.org/obp/ui/.
-25. Cybersecurity and Infrastructure Security Agency. Defining Insider Threats. Retrieved May 23, 2024 from https://www.cisa.gov/topics/physical-security/insider-threat-mitigation/defining-insider-threats
+[Cappelli 2012]  
+Cappelli, Dawn; Moore, Andrew; & Trzeciak, Randall. The CERT Guide to Insider Threats: How to Prevent, Detect, and Respond to Information Technology Crimes (Theft, Sabotage, Fraud). Addison-Wesley Professional. 2012. ISBN 978-0-321-81257-5. https://insights.sei.cmu.edu/library/the-cert-guide-to-insider-threats-how-to-prevent-detect-and-respond-to-information-technology-crimes-theft-sabotage-fraud/
+
+[Caralli 2016]  
+Caralli, Richard A.; Allen, Julia H.; White, David W.; Young, Lisa R.; Mehravari, Nader; & Curtis, Pamela D. CERT Resilience Management Model, Version 1.2. Software Engineering Institute, Carnegie Mellon University. 2016. https://insights.sei.cmu.edu/documents/1629/2016_002_001_514462.pdf
+
+[CISA 2020]  
+Cybersecurity and Infrastructure Security Agency (CISA). Insider Threat Mitigation Guide. CISA. 2020. https://www.cisa.gov/resources-tools/resources/insider-threat-mitigation-guide
+
+[CISA 2024]  
+Cybersecurity and Infrastructure Security Agency (CISA). Defining Insider Threats. CISA Website. May 2024 [accessed]. https://www.cisa.gov/topics/physical-security/insider-threat-mitigation/defining-insider-threats
+
+[Common Vulnerabilities and Exposures 2024]  
+Common Vulnerabilities and Exposures (CVE). CVE Program. CVE Website. June 2024 [ac-cessed]. https://www.cve.org/
+
+[Costa 2016]  
+Costa, Daniel L.; Albrethsen, Michael J.; Collins, Matthew L.; Perl, Samuel J.; Silowash, George J.; & Spooner, Derrick L. An Insider Threat Indicator Ontology. CMU/SEI-2016-TR-007. Software Engineering Institute, Carnegie Mellon University. 2016. https://insights.sei.cmu.edu/documents/1260/2016_005_001_454627.pdf
+
+[Cyber Threat Alliance 2023]  
+Cyber Threat Alliance; Institute for Security and Technology; Chainalysis; Ciphertrace; CREST; Cybera; Cybercrime Support Network; & Cyber Peace Institute. Cyber Incident Re-porting Framework: Global Edition. Cyber Threat Alliance. 2023. https://www.cyberthreatalliance.org/wp-content/uploads/2023/04/Cyber-Incident-Reporting-Framework-Global-Edition.pdf
+
+[DHS 2018]  
+Department of Homeland Security (DHS). Privacy Impact Assessment for the Insider Threat Reporting Mobile Platform. DHS/ALL/PIA-068. Department of Homeland Security. 2018. https://www.dhs.gov/sites/default/files/publications/privacy-pia-all-livesafe068-september2018.pdf
+
+[DHS 2020]  
+Department of Homeland Security (DHS). Privacy Impact Assessment Update for the Insider Threat Program. DHS/ALL/PIA-052(b). Department of Homeland Security. 2020. https://www.dhs.gov/publication/dhs-all-pia-052-dhs-insider-threat-program
+
+[Executive Office of the President 2022]  
+Executive Office of the President, Office of Management and Budget. North American Indus-try Classification System. Executive Office of the President of the United States. 2022. https://www.census.gov/naics/reference_files_tools/2022_NAICS_Manual.pdf
+
+[Greitzer 2018]  
+Greitzer, Frank; Purl, Justin; Leong, Yung Mei; & Sunny Becker, D. E. SOFIT: Sociotech-nical and Organizational Factors for Insider Threat. Pages 197–206. 2018 IEEE Security and Privacy Workshops (SPW). May 2018. https://ieeexplore.ieee.org/document/8424651
+
+[International Organization for Standardization 2024]  
+International Organization for Standardization. ISO 3166 Country Codes. International Or-ganization for Standardization (ISO). May 2024 [accessed]. https://www.iso.org/iso-3166-country-codes.html
+
+[MAEC 2024]  
+Malware Attribute Enumeration and Characterization (MAEC). MAEC Documentation. MAEC Project GitHub Website. June 2024 [accessed]. https://maecproject.github.io/documentation/maec5-docs/#introduction
+
+[Mandiant Corporation 2013]  
+Mandiant Corporation. FireEye / OpenIOC_1.1. GitHub Website. 2013. https://github.com/fireeye/OpenIOC_1.1
+
+[MITRE 2024a]  
+MITRE. MITRE ATT&CK. MITRE Website. June 2024 [accessed]. https://attack.mitre.org/
+
+[MITRE 2024b]  
+MITRE. Common Attack Pattern Enumerations and Classifications (CAPEC). MITRE Web-site. June 2024 [accessed]. https://capec.mitre.org/
+
+[MITRE Engenuity 2024]  
+MITRE Engenuity. Insider Threat TTP Knowledge Base v2.0.0. Center for Threat Informed Defense GitHub Website. June 2024 [accessed]. https://center-for-threat-informed-defense.github.io/insider-threat-ttp-kb/
+
+[NIST 2024]  
+National Institute of Standards and Technology (NIST). The NIST Cybersecurity Framework (CSF) 2.0. NIST. 2024. https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf
+
+[OASIS Open 2024]  
+OASIS Open. Cyber Threat Intelligence Documentation. OASIS Open GitHub Website. June 2024 [accessed]. https://oasis-open.github.io/cti-documentation/
+
+[Ponemon Institute 2023]  
+Ponemon Institute. 2023 Cost of Insider Risks Global Report. DTEX. 2023. https://www.dtexsystems.com/resource-ponemon-insider-risks-global-report/
+
+[Ross 2018]  
+Ross, Ronald S. Risk Management Framework for Information Systems and Organizations: A System Life Cycle Approach for Security and Privacy. NIST SP 800-37 Rev. 2. National Insti-tute of Standards and Technology (NIST). 2018. https://www.nist.gov/publications/risk-management-framework-information-systems-and-organizations-system-life-cycle
+
+[SISO 2023]  
+Simulation Interoperability Standards Organization (SISO). Cyber Data Exchange Model (DEM). SISO-STD-025-2023. SISO. 2023. https://cdn.ymaws.com/www.sisostandards.org/resource/resmgr/standards_products/siso-std-025-2023_cyberdem.pdf
+
+[Software Engineering Institute 2022]  
+Software Engineering Institute. Common Sense Guide to Mitigating Insider Threats, Seventh Edition. Software Engineering Institute, Carnegie Mellon University. 2022. https://insights.sei.cmu.edu/library/common-sense-guide-to-mitigating-insider-threats-seventh-edition/ 
+
+[Verizon 2024]  
+Verizon. 2024 Data Breach Investigations Report. Verizon Business. 2024. https://www.verizon.com/business/resources/T2f2/reports/2024-dbir-data-breach-investigations-report.pdf
+
+[Wagner 2024]  
+Wagner, Cynthia; Dulaunoy, Alexandre; Wagener, Gérard; & Iklody, Andras. MISP Threat Sharing. MISP Project Website. June 2024 [accessed]. https://www.misp-project.org/  
 
 
 ## Acknowledgments

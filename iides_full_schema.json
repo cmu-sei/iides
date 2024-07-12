@@ -308,18 +308,18 @@
         },
         "json/objects/accomplice": {
             "title": "Accomplice",
-            "description": "An outsider who conspired with the insider(s) to accomplish the objectives of the incident. An accomplice was not part of the victim organization at the time of the incident. An insider may have one or more accomplices. An accomplice may have one or more jobs (job history).",
+            "description": "An accomplice is an outsider who conspired with the insider(s) to accomplish the objectives of the incident. An accomplice was not part of the victim organization at the time of the incident. An insider may have one or more accomplices. An accomplice may have one or more jobs (job history).",
             "type": "object",
             "$ref": "./person.json",
             "properties": {
                 "id": {
                     "type": "string",
-                    "description": "A unique string that begins with \"accomplice--\" and is appended with a UUIDv4.",
+                    "description": "A unique string that begins with \"accomplice--\" and is appended with a UUIDv4",
                     "pattern": "^accomplice--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
                 },
                 "relationship_to_insider": {
                     "type": "string",
-                    "description": "The type of relationship between this accomplice and the insider to which it is connected.",
+                    "description": "The type of relationship between this accomplice and the insider to whom they are connected",
                     "$ref": "../common/insider-relationship-vocab.json"
                 }
             },
@@ -1003,17 +1003,17 @@
         },
         "json/objects/incident": {
             "title": "Incident",
-            "description": "Description and summary details of the incident.",
+            "description": "This contains a description and summary details of the incident.",
             "type": "object",
             "properties": {
                 "id": {
                     "type": "string",
-                    "description": "A unique string that begins with \"incident--\" and is appended with a UUIDv4.",
+                    "description": "A unique string that begins with \"incident--\" and is appended with a UUIDv4",
                     "pattern": "^incident--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
                 },
                 "cia_effect": {
                     "type": "array",
-                    "description": "CIA triad components which were affected.",
+                    "description": "CIA triad components that were affected",
                     "items": {
                         "$ref": "#/properties/json/objects/incident/$defs/cia-vocab"
                     },
@@ -1021,7 +1021,7 @@
                 },
                 "incident_type": {
                     "type": "array",
-                    "description": "Categorization of the incident.",
+                    "description": "Categorization of the incident",
                     "items": {
                         "$ref": "#/properties/json/objects/incident/$defs/incident-type-vocab"
                     },
@@ -1029,7 +1029,7 @@
                 },
                 "incident_subtype": {
                     "type": "array",
-                    "description": "The subtype that the incident fits. MUST match the specified incident_type.",
+                    "description": "The subtype that the incident fits. This MUST match the specified incident_type",
                     "items": {
                         "$ref": "#/properties/json/objects/incident/$defs/incident-subtype-vocab"
                     },
@@ -1037,7 +1037,7 @@
                 },
                 "outcome": {
                     "type": "array",
-                    "description": "Consequences suffered by the victim organization as a result of the insider's attack. This is NOT the outcome or consequences imposed on the insider.",
+                    "description": "Consequences suffered by the victim organization as a result of the insider's attack. This is NOT the outcome or consequences imposed on the insider",
                     "items": {
                         "$ref": "#/properties/json/objects/incident/$defs/outcome-type-vocab"
                     },
@@ -1045,7 +1045,7 @@
                 },
                 "status": {
                     "type": "string",
-                    "description": "The current status of the incident.",
+                    "description": "The current status of the incident",
                     "$ref": "#/properties/json/objects/incident/$defs/incident-status-vocab"
                 },
                 "summary": {
@@ -1054,11 +1054,11 @@
                 },
                 "brief_summary": {
                     "type": "string",
-                    "description": "A shortened version of the summary (2-4 sentences, max 500 characters) with anonymized data."
+                    "description": "A shortened version of the summary (two-four sentences, max 500 characters) with anonymized data"
                 },
                 "comment": {
                     "type": "string",
-                    "description": "Clarifying details about the incident or any of the above properties."
+                    "description": "Clarifying details about the incident or any of the above properties"
                 }
             },
             "required": [
@@ -1075,22 +1075,22 @@
                         {
                             "const": "P",
                             "title": "Open",
-                            "description": "A case has been opened for the incident."
+                            "description": "A case has been opened for the incident"
                         },
                         {
                             "const": "I",
                             "title": "Under Investigation",
-                            "description": "The incident is being investigated."
+                            "description": "The incident is being investigated"
                         },
                         {
                             "const": "R",
                             "title": "Referred out",
-                            "description": "Incident has been referred to another team or organization."
+                            "description": "Incident has been referred to another team or organization"
                         },
                         {
                             "const": "C",
                             "title": "Closed",
-                            "description": "All investigations and legal proceedings are closed."
+                            "description": "All investigations and legal proceedings are closed"
                         }
                     ]
                 },
@@ -1099,17 +1099,17 @@
                         {
                             "const": "C",
                             "title": "Confidentiality",
-                            "description": "The protection of information from unauthorized access or disclosure."
+                            "description": "The protection of information from unauthorized access or disclosure"
                         },
                         {
                             "const": "I",
                             "title": "Integrity",
-                            "description": "The protection of information from unauthorized modification or destruction."
+                            "description": "The protection of information from unauthorized modification or destruction"
                         },
                         {
                             "const": "A",
                             "title": "Availability",
-                            "description": "The protection of information and information systems from unauthorized disruption."
+                            "description": "The protection of information and information systems from unauthorized disruption"
                         }
                     ]
                 },
@@ -1118,67 +1118,72 @@
                         {
                             "const": "BR",
                             "title": "Bankruptcy",
-                            "description": "One or more victim organizations filed for bankruptcy."
+                            "description": "One or more victim organizations filed for bankruptcy"
                         },
                         {
                             "const": "DC",
                             "title": "Data Created",
-                            "description": "Newly created data that is a direct result of the insider's attack."
+                            "description": "Newly created data that is a direct result of the insider's attack"
                         },
                         {
                             "const": "DD",
                             "title": "Data Deleted",
-                            "description": "Data was deleted from the victim organization's systems."
+                            "description": "Data was deleted from the victim organization's systems"
+                        },
+                        {
+                            "const": "DM",
+                            "title": "Data Modified",
+                            "description": "Data was changed or modified on the victim organization's systems"
                         },
                         {
                             "const": "DR",
                             "title": "Data Read",
-                            "description": "Organizational data was read by the insider."
+                            "description": "Organizational data was read by the insider"
                         },
                         {
                             "const": "DS",
                             "title": "Data Stolen",
-                            "description": "Any organizational information or assets that are stolen."
+                            "description": "Any organizational information or assets that are stolen"
                         },
                         {
                             "const": "MD",
                             "title": "Monetary Damages",
-                            "description": "The court ordered a sum of money to be paid by the victim organization for the purpose of replacing the monetary value of property or rights which have been lost or damaged, or to cover expenses, loss, pain and suffering relating to a victim's injury or death."
+                            "description": "The court ordered a sum of money to be paid by the victim organization for the purpose of replacing the monetary value of property or rights which have been lost or damaged, or to cover expenses, loss, pain and suffering relating to a victim's injury or death"
                         },
                         {
                             "const": "ML",
                             "title": "Monetary Losses",
-                            "description": "Indirect loss of money through damage, detriment, or suffering related to the incident."
+                            "description": "Indirect loss of money through damage, detriment, or suffering related to the incident"
                         },
                         {
                             "const": "MS",
                             "title": "Money Stolen",
-                            "description": "The insider directly stole money from the victim organization."
+                            "description": "The insider directly stole money from the victim organization"
                         },
                         {
                             "const": "NN",
                             "title": "No net negative",
-                            "description": "Though an incident occurred, there were no negative consequences to the victim organization as a result."
+                            "description": "Though an incident occurred, there were no negative consequences to the victim organization as a result"
                         },
                         {
                             "const": "OT",
                             "title": "Other",
-                            "description": "Other type of outcome not listed in this vocabulary."
+                            "description": "Other type of outcome not listed in this vocabulary"
                         },
                         {
                             "const": "RO",
                             "title": "Restituion Ordered",
-                            "description": "The organizatiion was ordered by a court to pay restitution to additional victims of the incident."
+                            "description": "The organizatiion was ordered by a court to pay restitution to additional victims of the incident"
                         },
                         {
                             "const": "SI",
                             "title": "Safety Impact",
-                            "description": "There was an impact, or potential for impact to safety, as a result of the incident."
+                            "description": "There was an impact, or potential for impact to safety, as a result of the incident"
                         },
                         {
                             "const": "IT",
                             "title": "Used in Identity Theft",
-                            "description": "Identity theft of one or more individuals resulted from the incident. E.g., The insider used stolen PII to file fraudulent tax returns."
+                            "description": "Identity theft of one or more individuals resulted from the incident. E.g., The insider used stolen PII to file fraudulent tax returns"
                         }
                     ]
                 },
@@ -1187,27 +1192,27 @@
                         {
                             "const": "F",
                             "title": "Fraud",
-                            "description": "Deceiving the organization for personal gain at the organization's expense."
+                            "description": "Deceiving the organization for personal gain at the organization's expense"
                         },
                         {
                             "const": "S",
                             "title": "Sabotage",
-                            "description": "Deliberate actions to harm an organization's physical or virtual infrastructure, including noncompliance with maintenance or IT procedures, contaminating clean spaces, physically damaging facilities, or deleting code to prevent regular operations."
+                            "description": "Deliberate actions to harm an organization's physical or virtual infrastructure, including noncompliance with maintenance or IT procedures, contaminating clean spaces, physically damaging facilities, or deleting code to prevent regular operations"
                         },
                         {
                             "const": "E",
                             "title": "Espionage",
-                            "description": "The covert or illicit practice of spying on a foreign government, organization, entity, or person to obtain confidential information for military, political, strategic, or financial advantage."
+                            "description": "The covert or illicit practice of spying on a foreign government, organization, entity, or person to obtain confidential information for military, political, strategic, or financial advantage"
                         },
                         {
                             "const": "V",
                             "title": "Violence",
-                            "description": "Includes the threat of violence, as well as other threatening behaviors that create an intimidating, hostile, or abusive environment."
+                            "description": "Includes the threat of violence as well as other threatening behaviors that create an intimidating, hostile, or abusive environment"
                         },
                         {
                             "const": "U",
                             "title": "Unintentional",
-                            "description": "The insider unwittingly causes harm or substantially increases the probability of future serious harm to the organization through action or inaction without malicious intent."
+                            "description": "The insider unwittingly causes harm or substantially increases the probability of future serious harm to the organization through action or inaction without malicious intent"
                         }
                     ]
                 },
@@ -1216,57 +1221,57 @@
                         {
                             "const": "F.1",
                             "title": "Embezzlement",
-                            "description": "The fraudulent appropriation of the organization's property (financial or otherwise) by someone who has been entrusted with its possession."
+                            "description": "The fraudulent appropriation of the organization's property (financial or otherwise) by someone who has been entrusted with its possession"
                         },
                         {
                             "const": "F.2",
                             "title": "Corruption",
-                            "description": "Conflict of interest, bribery, illegal gratuities, and economic extortion."
+                            "description": "Conflict of interest, bribery, illegal gratuities, and economic extortion"
                         },
                         {
                             "const": "F.3",
                             "title": "False Statements",
-                            "description": "Knowingly and willfully making false or fraudulent statements, or concealing information."
+                            "description": "Knowingly and willfully making false or fraudulent statements, or concealing information"
                         },
                         {
                             "const": "S.1",
                             "title": "Virtual",
-                            "description": "Taking malicious actions through technical means to disrupt or stop an organization's normal business operations."
+                            "description": "Taking malicious actions through technical means to disrupt or stop an organization's normal business operations"
                         },
                         {
                             "const": "S.2",
                             "title": "Physical",
-                            "description": "Taking deliberate actions aimed at harming an organization's physical infrastructure (e.g., facilities or equipment)."
+                            "description": "Taking deliberate actions aimed at harming an organization's physical infrastructure (e.g., facilities or equipment)"
                         },
                         {
                             "const": "E.1",
                             "title": "Intellectual Property Theft",
-                            "description": "Theft or robbery of an individual's or organization's ideas, inventions, or creative expressions, including trade secrets and proprietary products, even if the concepts or items being stolen originated from the thief."
+                            "description": "Theft or robbery of an individual's or organization's ideas, inventions, or creative expressions, including trade secrets and proprietary products, even if the concepts or items being stolen originated from the insider"
                         },
                         {
                             "const": "E.2",
                             "title": "Government",
-                            "description": "Covert intelligence-gathering activities to obtain government or military secrets for the benefit of another government to obtain political or military advantage."
+                            "description": "Covert intelligence-gathering activities to obtain government or military secrets for the benefit of another government to obtain political or military advantage"
                         },
                         {
                             "const": "V.1",
                             "title": "Workplace Violence",
-                            "description": "Any action or threat of physical violence, harassment, sexual harassment, intimidation, bullying, offensive jokes, or other threatening behavior by a co-worker or associate that occurs in a person's place of employment or while a person is working."
+                            "description": "Any action or threat of physical violence, harassment, sexual harassment, intimidation, bullying, offensive jokes, or other threatening behavior by a co-worker or associate that occurs in a person's place of employment or while a person is working"
                         },
                         {
                             "const": "V.2",
                             "title": "Self Harm",
-                            "description": "An incident where an insider attempts, or indicates a desire to attempt, self harm or suicide."
+                            "description": "An incident where an insider attempts, or indicates a desire to attempt, self harm or suicide"
                         },
                         {
                             "const": "U.1",
                             "title": "Negligence",
-                            "description": "Threat caused by carelessness. Negligent insiders are generally familiar with security and/or IT policies but choose to ignore them, creating risk for the organization."
+                            "description": "Threat caused by carelessness. Negligent insiders are generally familiar with security and/or IT policies but choose to ignore them, creating risk for the organization"
                         },
                         {
                             "const": "U.2",
                             "title": "Accidental",
-                            "description": "An incident of this type results from an insider mistakenly causing an unintended risk to an organization."
+                            "description": "An incident of this type results from an insider mistakenly causing an unintended risk to an organization"
                         }
                     ]
                 }
@@ -1751,7 +1756,7 @@
         },
         "json/objects/bundle": {
             "title": "Bundle",
-            "description": "A bundle holds the objects relating an incident, i.e. court cases, insider, targets and impacts.",
+            "description": "A bundle holds the objects relating an incident, (i.e., court cases, insider, targets, and impacts).",
             "type": "object",
             "properties": {
                 "id": {
@@ -2642,60 +2647,60 @@
         },
         "json/objects/job": {
             "title": "Job",
-            "description": "Details of the employment relationship between an individual and an organization. A job may be connected to only one organization, and may be connected to only one insider or accomplice.",
+            "description": "This contains details of the employment relationship between an individual and an organization. A job may be connected to only one organization and may be connected to only one insider or accomplice.",
             "type": "object",
             "properties": {
                 "id": {
                     "type": "string",
-                    "description": "A unique string that begins with \"job--\" and is appended with a UUIDv4.",
+                    "description": "A unique string that begins with \"job--\" and is appended with a UUIDv4",
                     "pattern": "^job--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
                 },
                 "job_function": {
                     "type": "string",
-                    "description": "Functional category of the individual's job. job_function and occupation vocabularies are based in large part on the 2018 Standard Occupational Classification system published by the Bureau of Labor Statistics.",
+                    "description": "Functional category of the individual's job. job_function and occupation vocabularies are based in large part on the 2018 Standard Occupational Classification system published by the Bureau of Labor Statistics",
                     "$ref": "#/properties/json/objects/job/$defs/job-function-vocab"
                 },
                 "occupation": {
                     "type": "string",
-                    "description": "The subcategory of the individual's job. When present, `job_function` should also be present. The chosen constant for occupation MUST match the constant for job_function.",
+                    "description": "The subcategory of the individual's job. When present, `job_function` should also be present. The chosen constant for occupation MUST match the constant for job_function",
                     "$ref": "#/properties/json/objects/job/$defs/occupation-vocab"
                 },
                 "title": {
                     "type": "string",
-                    "description": "The individual's job title. If title is specified, `occupation` should be as well."
+                    "description": "The individual's job title. If title is specified, `occupation` should be as well"
                 },
                 "position_technical": {
                     "type": "boolean",
-                    "description": "The individual had access to technical areas of the organization as part of their job role. E.g. IT admin, network engineer, help desk associate, etc."
+                    "description": "The individual had access to technical areas of the organization as part of their job role (e.g., IT admin, network engineer, help desk associate)"
                 },
                 "access_authorization": {
                     "type": "string",
-                    "description": "The level of access control given by this job role.",
+                    "description": "The level of access control given by this job role",
                     "$ref": "#/properties/json/objects/job/$defs/access-auth-vocab"
                 },
                 "employment_type": {
                     "type": "string",
-                    "description": "The individual's employment arangement at the time of the incident.",
+                    "description": "The individual's employment arrangement at the time of the incident",
                     "$ref": "#/properties/json/objects/job/$defs/employment-type-vocab"
                 },
                 "hire_date": {
                     "type": "string",
                     "format": "date",
-                    "description": "Date the individual is hired into this position."
+                    "description": "Date the individual was hired into this position"
                 },
                 "departure_date": {
                     "type": "string",
                     "format": "date",
-                    "description": "Date the individual departed from this position."
+                    "description": "Date the individual departed from this position"
                 },
                 "tenure": {
                     "type": "string",
                     "format": "timedelta",
-                    "description": "The amount of time the individual spent in this particular job role."
+                    "description": "The amount of time the individual spent in this particular job role"
                 },
                 "comment": {
                     "type": "string",
-                    "description": "Clarifying comments or details about the job or the individual's employment with the organization."
+                    "description": "Clarifying comments or details about the job or the individual's employment with the organization"
                 }
             },
             "required": [
@@ -3431,42 +3436,42 @@
         },
         "json/objects/charge": {
             "title": "Charge",
-            "description": "A charge or accusation brought against the insider when the incident is pursued in the legal system. E.g., \"Two counts of Unauthorized Access to Company Systems.\" A charge must be connected to only one court case. A court case may have one or more charges.",
+            "description": "A charge is an accusation brought against the insider when the incident is pursued in the legal system. For example, \"two counts of unauthorized access to company systems.\" A charge must be connected to only one court case. A court case may have one or more charges.",
             "type": "object",
             "properties": {
                 "id": {
                     "type": "string",
-                    "description": "A unique string that begins with \"charge--\" and is appended with a UUIDv4.",
+                    "description": "A unique string that begins with \"charge--\" and is appended with a UUIDv4",
                     "pattern": "^charge--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
                 },
                 "title": {
                     "type": "string",
-                    "description": "Broad subject matter area of the legal code. For U.S. cases, these are often title '18 U.S.C.'."
+                    "description": "Broad subject matter area of the legal code. For U.S. cases, these are often titled \"18 U.S.C.\""
                 },
                 "section": {
                     "type": "string",
-                    "description": "Section (and subsection) of the law the subject is accused of violating. For U.S. cases for example, Wire Fraud is section 1343 of Title 18."
+                    "description": "Section (and subsection) of the law that the subject is accused of violating. For U.S. cases, for example, wire fraud is section 1343 of Title 18."
                 },
                 "nature_of_offense": {
                     "type": "string",
-                    "description": "Description of the title and section of the law being violated."
+                    "description": "Description of the title and section of the law being violated"
                 },
                 "count": {
                     "type": "integer",
-                    "description": "Number of times the subject is accused of violating the law associated with this charge. Note that multiple violations of a law are often listed as a range of counts (e.g. 'Count 2-6' would have count=5 for this property)."
+                    "description": "Number of times the subject is accused of violating the law associated with this charge. Note that multiple violations of a law are often listed as a range of counts (e.g., 'Count 2-6' would have count=5 for this property)."
                 },
                 "plea": {
                     "type": "string",
-                    "description": "Plea entered by the defendant for this charge.",
+                    "description": "Plea entered by the defendant for this charge",
                     "$ref": "#/properties/json/objects/charge/$defs/charge-plea-vocab"
                 },
                 "plea_bargain": {
                     "type": "boolean",
-                    "description": "Whether the charge indicated here is a lesser charge based on a previous plea agreement."
+                    "description": "Whether the charge indicated here is a lesser charge based on a previous plea agreement"
                 },
                 "disposition": {
                     "type": "string",
-                    "description": "The decision in the case or the final result.",
+                    "description": "The decision in the case or the final result",
                     "$ref": "#/properties/json/objects/charge/$defs/charge-disposition-vocab"
                 }
             },
@@ -3480,22 +3485,22 @@
                         {
                             "const": "1",
                             "title": "Guilty",
-                            "description": "The defendant pleaed guilty to a charge."
+                            "description": "The defendant pleaed guilty to the charge"
                         },
                         {
                             "const": "2",
                             "title": "No Contest",
-                            "description": "The defendant didn't contest to a charge."
+                            "description": "The defendant did not contest to the charge"
                         },
                         {
                             "const": "3",
                             "title": "Not Guilty",
-                            "description": "The defendant pleaed not guilty to a charge."
+                            "description": "The defendant pleaed not guilty to the charge"
                         },
                         {
                             "const": "4",
                             "title": "Refused to Enter a Plea",
-                            "description": "The defendant refused to enter into a plea to a charge."
+                            "description": "The defendant refused to enter into a plea to the charge"
                         }
                     ]
                 },
@@ -3504,57 +3509,57 @@
                         {
                             "const": "1",
                             "title": "Acquitted",
-                            "description": "Found not guilty by a court of law in a criminal trial."
+                            "description": "Found not guilty by a court of law in a criminal trial"
                         },
                         {
                             "const": "2",
                             "title": "Convicted",
-                            "description": "Plead or been found guilty by a court."
+                            "description": "Plead or been found guilty by a court"
                         },
                         {
                             "const": "3",
                             "title": "Dismissed",
-                            "description": "The court or prosecutor has decided the charge should not go forward."
+                            "description": "The court or prosecutor decided the charge should not go forward"
                         },
                         {
                             "const": "4",
                             "title": "Diversion/Deferred Prosecution",
-                            "description": "The court has delayed prosecution pending the successful completion of a treatment program, at which point the charges will be dismissed."
+                            "description": "The court delayed prosecution pending the successful completion of a treatment program, at which point the charges will be dismissed"
                         },
                         {
                             "const": "5",
                             "title": "Expunged",
-                            "description": "The deletion of non-conviction information (such as arrest data)."
+                            "description": "The deletion of non-conviction information (such as arrest data)"
                         },
                         {
                             "const": "6",
                             "title": "No charges filed/Charges dropped",
-                            "description": "The prosecutor has declined to pursue the case."
+                            "description": "The prosecutor declined to pursue the case"
                         },
                         {
                             "const": "7",
                             "title": "Pending",
-                            "description": "The case is still being investigated or prosecuted."
+                            "description": "The case is still being investigated or prosecuted"
                         },
                         {
                             "const": "8",
                             "title": "Pled down",
-                            "description": "Pled guilty to a lesser charge."
+                            "description": "Pled guilty to a lesser charge"
                         },
                         {
                             "const": "9",
                             "title": "Sealed",
-                            "description": "The court has restricted access to all or some of the content of the record; however, the existence of the record will still be public record."
+                            "description": "The court has restricted access to all or some of the content of the record; however, the existence of the record will still be public record"
                         },
                         {
                             "const": "10",
                             "title": "Suspended sentence",
-                            "description": "The court has delayed the sentencing pending the successful completion of a period of probation and/or treatment program."
+                            "description": "The court has delayed the sentencing pending the successful completion of a period of probation and/or treatment program"
                         },
                         {
                             "const": "11",
                             "title": "Vacated",
-                            "description": "The court has withdrawn the guilty plea or set aside the guilty verdict, and the defendant may state they have never been convicted of that crime."
+                            "description": "The court has withdrawn the guilty plea or set aside the guilty verdict, and the defendant may state they have never been convicted of that crime"
                         }
                     ]
                 }
@@ -3563,34 +3568,34 @@
         },
         "json/objects/impact": {
             "title": "Impact",
-            "description": "The quantified impact of the incident on the victim organization. An incident may have one or more impacts. An impact MUST be associated with only one incident.",
+            "description": "This is the quantified impact of the incident on the victim organization. An incident may have one or more impacts. An impact MUST be associated with only one incident.",
             "type": "object",
             "properties": {
                 "id": {
                     "type": "string",
-                    "description": "A unique string that begins with \"impact--\" and is appended with a UUIDv4.",
+                    "description": "A unique string that begins with \"impact--\" and is appended with a UUIDv4",
                     "pattern": "^impact--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
                 },
                 "high": {
                     "type": "number",
-                    "description": "The quantity of the impact being measured. If a range, the high end of the range."
+                    "description": "The quantity of the impact being measured. If a range, the high end of the range"
                 },
                 "low": {
                     "type": "number",
-                    "description": "If a range, the low estimate of the range."
+                    "description": "If a range, the low estimate of the range"
                 },
                 "metric": {
                     "type": "string",
-                    "description": "The type of impact being quantified.",
+                    "description": "The type of impact being quantified",
                     "$ref": "#/properties/json/objects/impact/$defs/impact-metric-vocab"
                 },
                 "estimated": {
                     "type": "boolean",
-                    "description": "True if the impact low and/or high is an estimated number or range."
+                    "description": "True if the impact low and/or high is an estimated number or range"
                 },
                 "comment": {
                     "type": "string",
-                    "description": "Clarifying comments."
+                    "description": "Clarifying comments"
                 }
             },
             "required": [
@@ -3605,12 +3610,12 @@
                         {
                             "const": "1",
                             "title": "Accounts",
-                            "description": "Computer, network, financial, user accounts."
+                            "description": "Computer, network, financial, user accounts"
                         },
                         {
                             "const": "2",
                             "title": "Credit card numbers",
-                            "description": "Physical or digital credit or debit card numbers."
+                            "description": "Physical or digital credit or debit card numbers"
                         },
                         {
                             "const": "3",
@@ -3620,7 +3625,7 @@
                         {
                             "const": "4",
                             "title": "Documents",
-                            "description": "The number of physical or digital documents effected (stolen, deleted, modified, etc.)."
+                            "description": "The number of physical or digital documents effected (stolen, deleted, modified, etc.)"
                         },
                         {
                             "const": "5",
@@ -3630,27 +3635,27 @@
                         {
                             "const": "6",
                             "title": "Employees",
-                            "description": "Number of employees effected."
+                            "description": "Number of employees effected"
                         },
                         {
                             "const": "7",
                             "title": "Files",
-                            "description": "Number of physical or digital files stolen, read, or compromised."
+                            "description": "Number of physical or digital files stolen, read, or compromised"
                         },
                         {
                             "const": "8",
                             "title": "Hours",
-                            "description": "Down time or time effected in hours."
+                            "description": "Down time or time effected in hours"
                         },
                         {
                             "const": "9",
                             "title": "Pages",
-                            "description": "Number of individual pages of a document(s) or file(s)."
+                            "description": "Number of individual pages of a document(s) or file(s)"
                         },
                         {
                             "const": "10",
                             "title": "Person-hours",
-                            "description": "Person-hours or work time effected. Often occurs in sabotage incidents."
+                            "description": "Person-hours or work time effected. Often occurs in sabotage incidents"
                         },
                         {
                             "const": "11",
@@ -3660,7 +3665,7 @@
                         {
                             "const": "12",
                             "title": "Items",
-                            "description": "Generic items, such as merchandise."
+                            "description": "Generic items such as merchandise"
                         },
                         {
                             "const": "13",
@@ -3670,17 +3675,17 @@
                         {
                             "const": "14",
                             "title": "Records",
-                            "description": "Records or rows. Often refers to database or accounting records."
+                            "description": "Records or rows such as database or accounting records"
                         },
                         {
                             "const": "15",
                             "title": "Drugs",
-                            "description": "Number of pills, vials, syringes, etc. drugs or medicine taken or effected."
+                            "description": "Number of pills, vials, syringes, etc. for drugs or medicine taken or effected"
                         },
                         {
                             "const": "16",
                             "title": "Trade Secrets",
-                            "description": "Number of trade secrets stolen or effected."
+                            "description": "Number of trade secrets stolen or effected"
                         }
                     ]
                 }
@@ -4387,49 +4392,49 @@
         },
         "json/objects/court-case": {
             "title": "Court Case",
-            "description": "Information about legal procedings related to the incident, whether charges against the insider or their accomplice(s), a civil suit, or a suit against another entity involved in the incident. A legal response can have one or more court cases, and a court case MUST be tied to only one legal response. Each court case can have one or more charges and one or more sentences.",
+            "description": "Court Case contains information about legal proceedings related to the incident, whether it is charges against the insider or their accomplice(s), a civil suit, or a suit against another entity involved in the incident. A legal response can have one or more court cases, and a court case MUST be tied to only one legal response. Each court case can have one or more charges and one or more sentences.",
             "type": "object",
             "properties": {
                 "id": {
                     "type": "string",
-                    "description": "A unique string that begins with \"court-case--\" and is appended with a UUIDv4.",
+                    "description": "A unique string that begins with \"court-case--\" and is appended with a UUIDv4",
                     "pattern": "^court-case--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
                 },
                 "case_number": {
                     "type": "string",
-                    "description": "A case number assigned by the court system in which the case is being tried."
+                    "description": "A case number assigned by the court system in which the case is being tried"
                 },
                 "case_title": {
                     "type": "string",
-                    "description": "Title provided by the court system (e.g., 'USA v. LastName' or 'USA v. LastName, et al.')."
+                    "description": "Title provided by the court system (e.g., 'USA v. LastName' or 'USA v. LastName, et al.')"
                 },
                 "court_country": {
                     "type": "string",
-                    "description": "Country where the case was tried.",
+                    "description": "Country where the case was tried",
                     "$ref": "../common/country-vocab.json"
                 },
                 "court_state": {
                     "type": "string",
-                    "description": "State or region where the case was tried.",
+                    "description": "State or region where the case was tried",
                     "$ref": "../common/state-vocab.json"
                 },
                 "court_district": {
                     "type": "string",
-                    "description": "District where the case was tried, if applicable (e.g., \"CA Central District Court\")."
+                    "description": "District where the case was tried, if applicable (e.g., \"CA Central District Court\")"
                 },
                 "court_type": {
                     "type": "string",
-                    "description": "Type or level of the court where the case is tried.",
+                    "description": "Type or level of the court where the case is tried",
                     "$ref": "#/properties/json/objects/court-case/$defs/court-type-vocab"
                 },
                 "case_type": {
                     "type": "string",
-                    "description": "Type of case.",
+                    "description": "Type of case",
                     "$ref": "#/properties/json/objects/court-case/$defs/case-type-vocab"
                 },
                 "defendant": {
                     "type": "array",
-                    "description": "The names of all the defendants (or respondants, or appellees) in the case.",
+                    "description": "The names of all the defendants (or respondents or appellees) in the case",
                     "items": {
                         "type": "string"
                     },
@@ -4437,7 +4442,7 @@
                 },
                 "plaintiff": {
                     "type": "array",
-                    "description": "The names of all the plaintiffs (or petitioners, or appellants) in the case.",
+                    "description": "The names of all the plaintiffs (or petitioners or appellants) in the case",
                     "items": {
                         "type": "string"
                     },
@@ -4445,7 +4450,7 @@
                 },
                 "comment": {
                     "type": "string",
-                    "description": "Clarifying comments about any of the court case details, or its associated charges and sentences, such as which sentences run concurrently, the structure of a plea deal, or the status of the case."
+                    "description": "Clarifying comments about any of the court case details, or its associated charges and sentences, such as concurrent sentences, the structure of a plea deal, or the status of the case"
                 }
             },
             "required": [
@@ -4457,17 +4462,17 @@
                         {
                             "const": "1",
                             "title": "Federal",
-                            "description": "Top level government court."
+                            "description": "Top level government court"
                         },
                         {
                             "const": "2",
                             "title": "International",
-                            "description": "Intergovernmental level court."
+                            "description": "Intergovernmental level court"
                         },
                         {
                             "const": "3",
                             "title": "State",
-                            "description": "State or regional level government court."
+                            "description": "State or regional level government court"
                         }
                     ]
                 },
@@ -4476,12 +4481,12 @@
                         {
                             "const": "1",
                             "title": "Civil",
-                            "description": "A case dealing with a dispute between two people or organizations."
+                            "description": "A case dealing with a dispute between two people or organizations"
                         },
                         {
                             "const": "2",
                             "title": "Criminal",
-                            "description": "A case dealing with a violation of criminal law."
+                            "description": "A case dealing with a violation of criminal law"
                         }
                     ]
                 }
@@ -4490,23 +4495,23 @@
         },
         "json/objects/insider": {
             "title": "Insider",
-            "description": "Information about the insider involved in the incident. An incident can have multiple insiders.",
+            "description": "This is information about the insider involved in the incident. An incident can have multiple insiders.",
             "type": "object",
             "$ref": "./person.json",
             "properties": {
                 "id": {
                     "type": "string",
-                    "description": "A unique string that begins with \"insider--\" and is appended with a UUIDv4.",
+                    "description": "A unique string that begins with \"insider--\" and is appended with a UUIDv4",
                     "pattern": "^insider--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
                 },
                 "incident_role": {
                     "type": "string",
-                    "description": "Whether the insider was the primary actor, or had a different role in the incident.",
+                    "description": "Whether the insider was the primary actor or had a different role in the incident",
                     "$ref": "#/properties/json/objects/insider/$defs/incident-role-vocab"
                 },
                 "motive": {
                     "type": "array",
-                    "description": "The insider's motive(s) for the incident.",
+                    "description": "The insider's motive(s) for the incident",
                     "items": {
                         "$ref": "#/properties/json/objects/insider/$defs/motive-vocab"
                     },
@@ -4514,11 +4519,11 @@
                 },
                 "substance_use_during_incident": {
                     "type": "boolean",
-                    "description": "Insider was using or abusing substance(s) at the time they took one or more actions related to the incident."
+                    "description": "Insider was using or abusing substance(s) at the time they took one or more actions related to the incident"
                 },
                 "psychological_issues": {
                     "type": "array",
-                    "description": "Psychological issue(s) the insider experienced during or before the incident.",
+                    "description": "Psychological issue(s) the insider experienced during or before the incident",
                     "items": {
                         "$ref": "#/properties/json/objects/insider/$defs/psych-issues-vocab"
                     },
@@ -4526,7 +4531,7 @@
                 },
                 "predispositions": {
                     "type": "array",
-                    "description": "Insider's tendancy toward certain actions or qualities.",
+                    "description": "Insider's tendency toward certain actions or qualities",
                     "items": {
                         "type": "array",
                         "prefixItems": [
@@ -4543,7 +4548,7 @@
                 },
                 "concerning_behaviors": {
                     "type": "array",
-                    "description": "Insider's history of past behavior that could indicate future issues.",
+                    "description": "Insider's history of past behavior that could indicate future issues",
                     "items": {
                         "type": "array",
                         "prefixItems": [
@@ -4569,7 +4574,7 @@
                         {
                             "const": "1",
                             "title": "Primary",
-                            "description": "Insider is the primary perpetrator of the incident."
+                            "description": "Insider is the primary perpetrator of the incident"
                         },
                         {
                             "const": "2",
@@ -4579,12 +4584,12 @@
                         {
                             "const": "3",
                             "title": "Looked the other way",
-                            "description": "Insider looked the other way while the primary perpetrator conducted the incident."
+                            "description": "Insider looked the other way while the primary perpetrator conducted the incident"
                         },
                         {
                             "const": "4",
                             "title": "Approved primary insider's actions",
-                            "description": "Insider knowingly approved the primary perpetrator's actions, such as by signing off on a fraudulent invoice."
+                            "description": "Insider knowingly approved the primary perpetrator's actions, such as by signing off on a fraudulent invoice"
                         }
                     ]
                 },
@@ -4593,47 +4598,47 @@
                         {
                             "const": "1",
                             "title": "Benefit Foreign Entity",
-                            "description": "Insider committed their attack to benefit a foreign entity, such as a foreign government or military."
+                            "description": "Insider committed their attack to benefit a foreign entity, such as a foreign government or military"
                         },
                         {
                             "const": "2",
                             "title": "Benefit New Employer",
-                            "description": "Insider committed their attack to benefit their new employer, such as by stealing a client list when they left the victim organization."
+                            "description": "Insider committed their attack to benefit their new employer, such as by stealing a client list when they left the victim organization"
                         },
                         {
                             "const": "3",
                             "title": "Competitive Business Advantage",
-                            "description": "Insider committed their attack in order to gain a business advantage for a competing company. Often, this is the insider starting their own company."
+                            "description": "Insider committed their attack in order to gain a business advantage for a competing company. Often, this is the insider starting their own company"
                         },
                         {
                             "const": "4",
                             "title": "Curiosity",
-                            "description": "Insider committed the incident out of curiosity. E.g., Insider accessed medical records of a celebrity because they were curious of that celebrity's age."
+                            "description": "Insider committed the incident out of curiosity. E.g., Insider accessed medical records of a celebrity because they were curious of that celebrity's age"
                         },
                         {
                             "const": "5",
                             "title": "Financial Gain",
-                            "description": "Insider committed their attack to make a profit."
+                            "description": "Insider committed their attack to make a profit"
                         },
                         {
                             "const": "6",
                             "title": "Freedom of Information",
-                            "description": "The insider held the belief that it is in the best interest of the public to share the victim organization's confidential information with the public. E.g., sharing unfavorable test results of a product or unfavorable information about an organization's internal practices."
+                            "description": "The insider held the belief that it is in the best interest of the public to share the victim organization's confidential information with the public (e.g., sharing unfavorable test results of a product or unfavorable information about an organization's internal practices)"
                         },
                         {
                             "const": "7",
                             "title": "Recognition",
-                            "description": "The insider wanted to be recognized (e.g. for being smart, talented, capable, powerful, etc.)"
+                            "description": "The insider wanted to be recognized (e.g., for being smart, talented, capable, powerful, etc.)"
                         },
                         {
                             "const": "8",
                             "title": "Revenge",
-                            "description": "The insider wanted revenge for an actual or perceived wrong."
+                            "description": "The insider wanted revenge for an actual or perceived wrong"
                         },
                         {
                             "const": "99",
                             "title": "Other",
-                            "description": "Other motive not listed in this vocabulary."
+                            "description": "Other motive not listed in this vocabulary"
                         }
                     ]
                 },
@@ -4642,37 +4647,37 @@
                         {
                             "const": "1",
                             "title": "Outpatient Treatment",
-                            "description": "Insider received treatment in which they were not hospitalized overnight, but rather visited a hospital, clinic, or associated facility for diagnosis or treatment."
+                            "description": "Insider received treatment in which they were not hospitalized overnight, but rather visited a hospital, clinic, or associated facility for diagnosis or treatment"
                         },
                         {
                             "const": "2",
                             "title": "Inpatient Treatment",
-                            "description": "Insider received treatment that involved 24-hour (including overnight) supervision at a hospital or dedicated psychiatric facility."
+                            "description": "Insider received treatment that involved 24-hour (including overnight) supervision at a hospital or dedicated psychiatric facility"
                         },
                         {
                             "const": "3",
                             "title": "Medication Noncompliance",
-                            "description": "The insider stopped taking a prescribed medication or following a prescribed course of treatment for a particular medical or mental health condition which, in turn, could have impacted their mental faculties."
+                            "description": "The insider stopped taking a prescribed medication or following a prescribed course of treatment for a particular medical or mental health condition which, in turn, could have impacted their mental faculties"
                         },
                         {
                             "const": "4",
                             "title": "Delusions",
-                            "description": "The insider experienced or acted on delusions at some point during their employment within the organization."
+                            "description": "The insider experienced or acted on delusions at some point during their employment within the organization"
                         },
                         {
                             "const": "5",
                             "title": "Threatened/Attempted Suicide",
-                            "description": "Insider threatened or attempted to commit suicide at some point during their employment within the organization."
+                            "description": "Insider threatened or attempted to commit suicide at some point during their employment within the organization"
                         },
                         {
                             "const": "6",
                             "title": "Depression/Anxiety",
-                            "description": "Insider expressed issues with or was diagnosed with depression or anxiety."
+                            "description": "Insider expressed issues with or was diagnosed with depression or anxiety"
                         },
                         {
                             "const": "99",
                             "title": "Other",
-                            "description": "Insider experienced specific psychological issues not specified in this vocabulary."
+                            "description": "Insider experienced specific psychological issues not specified in this vocabulary"
                         }
                     ]
                 },
@@ -4681,22 +4686,22 @@
                         {
                             "const": "1",
                             "title": "Social and Mental Health Issues",
-                            "description": "A history of behaviors related to the insider's mental health or unacceptable social behavior."
+                            "description": "A history of behaviors related to the insider's mental health or unacceptable social behavior"
                         },
                         {
                             "const": "2",
                             "title": "A History of Rule Violations",
-                            "description": "A history of violating the law or violating rules at other organizations."
+                            "description": "A history of violating the law or violating rules at other organizations"
                         },
                         {
                             "const": "3",
                             "title": "Suspicious Associations",
-                            "description": "A history of associating with criminal or otherwise objectionable persons or entities."
+                            "description": "A history of associating with criminal or otherwise objectionable persons or entities"
                         },
                         {
                             "const": "4",
                             "title": "Personal Stressful Events",
-                            "description": "Events in the insider's personal life that could lead to additional stress or futher motivate the insider to harm their organization."
+                            "description": "Events in the insider's personal life that could lead to additional stress or futher motivate the insider to harm their organization"
                         }
                     ]
                 },
@@ -4705,102 +4710,102 @@
                         {
                             "const": "1.1",
                             "title": "Possible Psychological Issues",
-                            "description": "Possible or confirmed mental health condition or psychological problem. E.g., Insider shared they were feeling depressed."
+                            "description": "Possible or confirmed mental health condition or psychological problem (e.g., the insider shared they were feeling depressed)"
                         },
                         {
                             "const": "1.2",
                             "title": "Diagnosed Psychological Issues",
-                            "description": "Insider is diagnosed with a mental health problem. E.g., Insider put on medication for depression and antipsychotics."
+                            "description": "Insider is diagnosed with a mental health problem (e.g., the insider put on medication for depression and antipsychotics)"
                         },
                         {
                             "const": "1.3",
                             "title": "Gambling Problems",
-                            "description": "Gambling activity that negatively affects other areas of their life. E.g., Insider frequently spends multiple hours at the casino every week."
+                            "description": "Gambling activity that negatively affects other areas of their life (e.g., the insider frequently spends multiple hours at the casino every week)"
                         },
                         {
                             "const": "1.4",
                             "title": "Substance Abuse",
-                            "description": "A history of alcohol or drugs, either previous or ongoing. E.g., Insider showed up to work intoxicated."
+                            "description": "A history of alcohol or drugs, either previous or ongoing (e.g., the insider showed up to work intoxicated)"
                         },
                         {
                             "const": "1.5",
                             "title": "A History Of Financial Problems",
-                            "description": "Existing financial issues, including medical bills for family members. E.g., Insider had previously filed for bankruptcy."
+                            "description": "Existing financial issues, including medical bills for family members (e.g., the insider had previously filed for bankruptcy)"
                         },
                         {
                             "const": "1.6",
                             "title": "Poor Hygiene",
-                            "description": "Insider has poor general hygiene."
+                            "description": "Insider had poor general hygiene"
                         },
                         {
                             "const": "1.7",
                             "title": "Risk Taker",
-                            "description": "Insider is referred to by co-workers, supervisors, or friends as a reckless or risk-taking individual."
+                            "description": "Insider was referred to by co-workers, supervisors, or friends as a reckless or risk-taking individual"
                         },
                         {
                             "const": "2.1",
                             "title": "Previous Arrest/Conviction For Related Crime",
-                            "description": "Involvement or conviction in a previous crime which is similar in nature to the current case. E.g., Insider executed similar fraud six years earlier. Misdemeanor conviction for the same conduct with probation sentence."
+                            "description": "Involvement or conviction in a previous crime which is similar in nature to the current case (e.g., the insider executed similar fraud six years earlier. Misdemeanor conviction for the same conduct with probation sentence)"
                         },
                         {
                             "const": "2.2",
                             "title": "Previous Arrest/Conviction for Unrelated Crime",
-                            "description": "Involvement in a previous crime which is unrelated to the current case. E.g., Insider was previously arrested for assault."
+                            "description": "Involvement in a previous crime which is unrelated to the current case (e.g., the insider was previously arrested for assault)"
                         },
                         {
                             "const": "2.3",
                             "title": "Previous Perpetrator of Domestic Violence",
-                            "description": "Previously convicted or charged on a crime involving domestic violence. E.g., Insider was previously arrested for abusing spouse."
+                            "description": "Previously convicted or charged on a crime involving domestic violence (e.g., the insider was previously arrested for abusing spouse)"
                         },
                         {
                             "const": "2.4",
                             "title": "Hacking Related Activities",
-                            "description": "Involvement in activities focused on obtaining unauthorized access to or otherwise harming IT systems. E.g., Insider often discussed their hacking related activities on their website."
+                            "description": "Involvement in activities focused on obtaining unauthorized access to or otherwise harming IT systems (e.g., the insider often discussed their hacking related activities on their website)"
                         },
                         {
                             "const": "2.5",
                             "title": "Previous Attempts to Disclose Through Illegitimate Means",
-                            "description": "Disclosing or attempting to disclose information through illegitimate means (i.e., not legally protected as a whistleblower)."
+                            "description": "Disclosing or attempting to disclose information through illegitimate means (i.e., not legally protected as a whistleblower)"
                         },
                         {
                             "const": "2.6",
                             "title": "Pending or Previous Defendant in Civil Action",
-                            "description": "The insider was previously found liable in a civil action, outside of the specific incident (i.e. where a insider was sued previously, which may be a motivation for the insider's actions)."
+                            "description": "The insider was previously found liable in a civil action outside of the specific incident (i.e. where a insider was sued previously, which may be a motivation for the insider's actions)"
                         },
                         {
                             "const": "2.7",
                             "title": "Previous use of illegal substances",
-                            "description": "Known use of illegal narcotics, or illegal use of prescribed medications."
+                            "description": "Known use of illegal narcotics or illegal use of prescribed medications"
                         },
                         {
                             "const": "3.1",
                             "title": "Criminal Association",
-                            "description": "Insider associates with known criminals or criminal organizations."
+                            "description": "Insider associates with known criminals or criminal organizations"
                         },
                         {
                             "const": "3.2",
                             "title": "Internet Underground Association",
-                            "description": "Insider associates with or participates in darkweb groups or activities."
+                            "description": "Insider associates with or participates in darkweb groups or activities"
                         },
                         {
                             "const": "4.1",
                             "title": "Medical Problems",
-                            "description": "Health issues experienced by anyone involved in the event since the insider's hire date. E.g., Insider contracted lupus and was put on medication."
+                            "description": "Health issues experienced by anyone involved in the event since the insider's hire date (e.g., the insider contracted lupus and was put on medication)"
                         },
                         {
                             "const": "4.2",
                             "title": "Relationship Problems",
-                            "description": "A problem in one of the insider's relationships which affects the insider, including family and romantic relationships developed after the insider's hire date. E.g., Insider was going through a divorce."
+                            "description": "A problem in one of the insider's relationships that affects the insider, including family and romantic relationships developed after the insider's hire date (e.g., the insider was going through a divorce)"
                         },
                         {
                             "const": "4.3",
                             "title": "Emerging Financial Problems",
-                            "description": "Monetary issues experienced by or relevant to the insider (including medical bills for family members) known to have developed after the insider's hire date. E.g., The insider claimed they stole from the organization in order to pay for their child's education."
+                            "description": "Monetary issues experienced by or relevant to the insider (including medical bills for family members) known to have developed after the insider's hire date (e.g., the insider claimed they stole from the organization in order to pay for their child's education)"
                         },
                         {
                             "const": "4.4",
                             "title": "Family Health Issues",
-                            "description": "Someone in the insider's family, or otherwise close to the insider, has health or medical issues."
+                            "description": "Someone in the insider's family, or otherwise close to the insider, has health or medical issues"
                         }
                     ]
                 },
@@ -4809,37 +4814,37 @@
                         {
                             "const": "3.1",
                             "title": "Misuse of Company Resources",
-                            "description": "Using or abusing company resources in an unauthorized manner."
+                            "description": "Using or abusing company resources in an unauthorized manner"
                         },
                         {
                             "const": "3.2",
                             "title": "Technical Policy Abuse",
-                            "description": "Violating policies regarding the use of the organization's IT systems."
+                            "description": "Violating policies regarding the use of the organization's IT systems"
                         },
                         {
                             "const": "3.3",
                             "title": "Interpersonal Issues",
-                            "description": "Conflicts with others in the organization or human resources (HR) issues."
+                            "description": "Conflicts with others in the organization or human resources (HR) issues"
                         },
                         {
                             "const": "3.4",
                             "title": "Financial",
-                            "description": "Financial conflicts of interest or significant changes to financial status."
+                            "description": "Financial conflicts of interest or significant changes to financial status"
                         },
                         {
                             "const": "3.5",
                             "title": "Organizational Conflict",
-                            "description": "Competitive conflicts of interest with the organization."
+                            "description": "Competitive conflicts of interest with the organization"
                         },
                         {
                             "const": "3.6",
                             "title": "Suspicious Contact",
-                            "description": "Suspicious communication with or travel to entities, areas, or individuals that present a conflict of interest with the organization."
+                            "description": "Suspicious communication with or travel to entities, areas, or individuals that present a conflict of interest with the organization"
                         },
                         {
                             "const": "3.7",
                             "title": "Relocation",
-                            "description": "Physical relocation."
+                            "description": "Physical relocation"
                         }
                     ]
                 },
@@ -4848,132 +4853,132 @@
                         {
                             "const": "3.1.1",
                             "title": "Theft Of Physical Company Property",
-                            "description": "Stealing their employer's physical property. E.g., Insider reported a company laptop as stolen, but had it when they were arrested."
+                            "description": "Stealing their employer's physical property (e.g., the insider reported a company laptop as stolen, but had it when they were arrested)"
                         },
                         {
                             "const": "3.1.2",
                             "title": "Insider Expressed Ownership Of Work",
-                            "description": "Acting as if they had personal right to any work done for the organization, despite knowledge of organizational right to employee work. E.g., Insider refused to return copy of code that they wrote because they felt entitled to it."
+                            "description": "Acting as if they had personal right to any work done for the organization, despite knowledge of organizational right to employee work (e.g., the insider refused to return copy of code that they wrote because they felt entitled to it)"
                         },
                         {
                             "const": "3.1.3",
                             "title": "Repeated Security Violations - Non-Technical",
-                            "description": "Violating organizational security policies not related to IT systems. E.g., Insider broke into the school on multiple occasions and was also caught cheating."
+                            "description": "Violating organizational security policies not related to IT systems (e.g., the insider broke into the school on multiple occasions and was also caught cheating)"
                         },
                         {
                             "const": "3.2.1",
                             "title": "Other Unauthorized Software Acquisition",
-                            "description": "Acquiring any sort of unauthorized software on an organizational system. E.g., The insider downloaded a password recovery tool from a website."
+                            "description": "Acquiring any sort of unauthorized software on an organizational system (e.g., the insider downloaded a password recovery tool from a website)"
                         },
                         {
                             "const": "3.2.2",
                             "title": "Repeated Security Violations - Technical",
-                            "description": "Multiple instances of security violations related to organizational IT systems, which are committed by the insider. E.g., Insider repeatedly let co-workers use their workstation."
+                            "description": "Multiple instances of security violations related to organizational IT systems (e.g., the insider repeatedly let co-workers use their workstation)"
                         },
                         {
                             "const": "3.2.3",
                             "title": "Unauthorized Download - Remotely",
-                            "description": "Unapproved download from a remote distance. E.g., Insider logged into their company account from home on their personal laptop and downloaded torrents."
+                            "description": "Unapproved download from offsite (e.g., the insider logged into their company account from home on their personal laptop and downloaded torrents)"
                         },
                         {
                             "const": "3.2.4",
                             "title": "Unauthorized Download - On Site",
-                            "description": "Unapproved download from within the organization E.g., Insider used their company-issued workstation to download torrents."
+                            "description": "Unapproved download from within the organization (e.g., the insider used their company-issued workstation to download torrents)"
                         },
                         {
                             "const": "3.2.5",
                             "title": "IP Policy Violation",
-                            "description": "Violating any of the policies put in place by the company regarding their IP (i.e. trade secrets, patents, copyright, etc.)."
+                            "description": "Violating any of the policies put in place by the company regarding their IP (i.e. trade secrets, patents, copyright, etc.)"
                         },
                         {
                             "const": "3.2.6",
                             "title": "Violation of Need to Know",
-                            "description": "Accessing organizational information which is not needed for their work, as defined by organizational policy."
+                            "description": "Accessing organizational information which is not needed for their work, as defined by organizational policy"
                         },
                         {
                             "const": "3.3.1",
                             "title": "Employee Extortion, Threats, or Legal Demands",
-                            "description": "Extortion, threats (physical, technical, legal, etc.) or legal demands against the organization. E.g., Insider threatened to sue company unless they agreed to the terms of their demands."
+                            "description": "Extortion, threats (physical, technical, legal, etc.) or legal demands against the organization (e.g., the insider threatened to sue company unless they agreed to the terms of their demands)"
                         },
                         {
                             "const": "3.3.2",
                             "title": "Conflict With Supervisor",
-                            "description": "Personal or work-related disputes with their supervisor. E.g., Insider was unhappy with their new boss, because the boss modified the organization's bonus system."
+                            "description": "Personal or work-related disputes with their supervisor (e.g., the insider was unhappy with their new boss because the boss modified the organization's bonus system)"
                         },
                         {
                             "const": "3.3.3",
                             "title": "Conflict With Coworker(s)",
-                            "description": "Personal or work-related disputes with a coworker. E.g., Insider yelled at coworker for repeatedly parking in their spot."
+                            "description": "Personal or work-related disputes with a coworker (e.g., the insider yelled at a coworker for repeatedly parking in their spot)"
                         },
                         {
                             "const": "3.3.4",
                             "title": "Work Attendance Problems",
-                            "description": "Being late for work or having unexcused/unplanned absences from work, generally multiple times E.g., Insider reports late to work 7 times during the month of April."
+                            "description": "Being late for work or having unexcused/unplanned absences from work, generally multiple times (e.g., the insider reports late to work 7 times during the month of April)"
                         },
                         {
                             "const": "3.3.5",
                             "title": "Human Resource Policy Violations or Complaints",
-                            "description": "Violating the organization's Human Resource Policy, or making a formal complaint about something/someone within the organization. E.g., Insider made several complaints to management about their co-worker's noise level."
+                            "description": "Violating the organization's human resource policy or making a formal complaint about something/someone within the organization (e.g., the insider made several complaints to management about their co-worker's noise level)"
                         },
                         {
                             "const": "3.3.6",
                             "title": "Disgruntled Employee",
-                            "description": "One who is upset with the organization and desires to get a measure of revenge against the organization. E.g., Insider grew disgruntled because of losing their 'star' status at the organization as it grew larger."
+                            "description": "One who is upset with the organization and desires to get a measure of revenge against the organization (e.g., the insider grew disgruntled because of losing their 'star' status at the organization as it grew larger)"
                         },
                         {
                             "const": "3.3.7",
                             "title": "Bragging",
-                            "description": "The insider boasts about a concerning behavior to co-workers or online E.g., Insider boasted about being able to shut down the organization's system anytime they wanted."
+                            "description": "The insider boasts about a concerning behavior to co-workers or online (e.g., the insider boasted about being able to shut down the organization's system anytime they wanted)"
                         },
                         {
                             "const": "3.3.8",
                             "title": "Concurrent Crimes",
-                            "description": "The insider commits a second illegal action, while committing the unrelated illegal insider incident E.g., Insider indicted for domestic abuse while Insider committed the insider incident."
+                            "description": "The insider commits a second illegal action while committing the unrelated illegal insider incident (e.g., the insider was indicted for domestic abuse while committing the insider incident)"
                         },
                         {
                             "const": "3.3.9",
                             "title": "Formal Complaint",
-                            "description": "Organization receives complaints about the insider from a coworker that were officially documented."
+                            "description": "Organization receives complaints about the insider from a coworker which were officially documented"
                         },
                         {
                             "const": "3.3.10",
                             "title": "Informal Complaint",
-                            "description": "Organization receives complaints about the insider from a coworker that were not officially documented."
+                            "description": "Organization receives complaints about the insider from a coworker which were not officially documented"
                         },
                         {
                             "const": "3.3.11",
                             "title": "Insubordination",
-                            "description": "Defiance or refusal to follow commands or instructions."
+                            "description": "Defiance or refusal to follow commands or instructions"
                         },
                         {
                             "const": "3.3.12",
                             "title": "Physical Abuse/Harassment",
-                            "description": "Engaging in any type of physical abuse and/or harassment against another employee."
+                            "description": "Engaging in any type of physical abuse and/or harassment against another employee"
                         },
                         {
                             "const": "3.3.13",
                             "title": "Sexual Harassment",
-                            "description": "Engaging in any type of sexual harassment against another employee."
+                            "description": "Engaging in any type of sexual harassment against another employee"
                         },
                         {
                             "const": "3.4.1",
                             "title": "Unexplained Wealth",
-                            "description": "A sudden increase in the amount of money the insider appears to have. E.g., Insider purchased $436,000 in personal items even though their annual salary was $50,000."
+                            "description": "A sudden increase in the amount of money the insider appears to have (e.g., the insider purchased $400,000 in personal items even though their annual salary was $50,000)"
                         },
                         {
                             "const": "3.4.2",
                             "title": "Employee Forms New Competing Business",
-                            "description": "Maintains a financial stake in another business or scheme that conflicts with their present employer. E.g., Insider invests in stocks of the victim organization's competitor."
+                            "description": "Maintains a financial stake in another business or scheme that conflicts with their present employer (e.g., the insider invests in stocks of the victim organization's competitor)"
                         },
                         {
                             "const": "3.4.3",
                             "title": "Financial Conflict of Interest",
-                            "description": "Starting a business in the same area as their previous employer. E.g., Insider left one law firm to start their own law firm."
+                            "description": "Starting a business in the same area as their previous employer (e.g., the insider left one law firm to start their own law firm)"
                         },
                         {
                             "const": "3.5.1",
                             "title": "Planning/Contact with Competing Organization",
-                            "description": "onspiring with a competitor of the current employer in any way, including communication through an IT system. E.g., Insider e-mailed competing organization detailing plans to steal trade secrets."
+                            "description": "Conspiring with a competitor of the current employer in any way (e.g., the insider e-mailed a competing organization detailing plans to steal trade secrets)"
                         },
                         {
                             "const": "3.5.2",
@@ -4983,17 +4988,17 @@
                         {
                             "const": "3.5.3",
                             "title": "Employee Sought Other Employment",
-                            "description": "Seeking another job while still employed with their current employer. E.g., Insider sent their resume to another organization."
+                            "description": "Seeking another job while still employed with their current employer (e.g., the insider sent their resume to another organization)"
                         },
                         {
                             "const": "3.5.4",
                             "title": "Group Resignation",
-                            "description": "Two or more employees leave the organization at approximately the same time for similar reasons. E.g., All five insiders resigned simultaneously, then went to work for a competitor."
+                            "description": "Two or more employees leave the organization at approximately the same time for similar reasons (e.g., all five insiders resigned simultaneously, then went to work for a competitor)"
                         },
                         {
                             "const": "3.5.5",
                             "title": "Insider Creates Legal Entity for Illegitimate Purpose",
-                            "description": "Creates a legal entity in order to move forward with scheme, or hide assets as a result of the scheme. E.g., insider creates a shell company to protect assets."
+                            "description": "Creates a legal entity in order to move forward with scheme or to hide assets as a result of the scheme (e.g., the insider creates a shell company to protect assets)"
                         },
                         {
                             "const": "3.5.6",
@@ -5003,27 +5008,27 @@
                         {
                             "const": "3.6.1",
                             "title": "Suspicious Foreign Contact",
-                            "description": "Tie(s) to foreign nation(s), such as company or independent travel, family members, telephone records, etc. E.g., Insider consistently calls former co-worker who now works in a non-allied country."
+                            "description": "Tie(s) to foreign nation(s) such as company or independent travel, family members, telephone records, etc. (e.g., the insider consistently calls former co-worker who now works in a non-allied country)"
                         },
                         {
                             "const": "3.6.2",
                             "title": "Suspicious Foreign Travel",
-                            "description": "Traveling to foreign nations that, if the travel was known, should raise concerns with the organization."
+                            "description": "Traveling to foreign nations that, if the travel was known, should raise concerns with the organization"
                         },
                         {
                             "const": "3.6.3",
                             "title": "Foreign Travel - Work Related",
-                            "description": "Travel undertaken by the insider as required for their job. E.g., The insider's job required frequent travel to non-allied countries."
+                            "description": "Travel undertaken by the insider as required for their job (e.g., the insider's job required frequent travel to non-allied countries)"
                         },
                         {
                             "const": "3.6.4",
                             "title": "Planning/Contact with Conspirator",
-                            "description": "Conspiring with a conspirator in order to begin or further their particular scheme. E.g., Insider calls their partner-in-crime in order to establish attack details."
+                            "description": "Conspiring with a conspirator in order to begin or further their particular scheme (e.g., the insider calls their partner-in-crime in order to establish attack details)"
                         },
                         {
                             "const": "3.7.1",
                             "title": "Geographic Relocation",
-                            "description": "Permanent move to a new physical location."
+                            "description": "Permanent move to a new physical location"
                         }
                     ]
                 }
@@ -5257,22 +5262,22 @@
         },
         "json/objects/detection": {
             "title": "Detection",
-            "description": "Describes details about how, when, and by whom the incident was detected. An incident may have only one detection entity.",
+            "description": "Detection describes details about how, when, and by whom the incident was detected. An incident may have only one detection entity.",
             "type": "object",
             "properties": {
                 "id": {
                     "type": "string",
-                    "description": "A unique string that begins with \"detection--\" and is appended with a UUIDv4.",
+                    "description": "A unique string that begins with \"detection--\" and is appended with a UUIDv4",
                     "pattern": "^detection--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
                 },
                 "first_detected": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "The date and time the victim organization first became aware of the incident."
+                    "description": "The date and time the victim organization first became aware of the incident"
                 },
                 "who_detected": {
                     "type": "array",
-                    "description": "The individual entities or teams that first detected the incident.",
+                    "description": "The individual entities or team(s) that first detected the incident",
                     "items": {
                         "$ref": "#/properties/json/objects/detection/$defs/detection-team-vocab"
                     },
@@ -5280,7 +5285,7 @@
                 },
                 "detected_method": {
                     "type": "array",
-                    "description": "The system or process that led to the first detection of the incident.",
+                    "description": "The system or process that led to the first detection of the incident",
                     "items": {
                         "$ref": "#/properties/json/objects/detection/$defs/detection-method-vocab"
                     },
@@ -5288,7 +5293,7 @@
                 },
                 "logs": {
                     "type": "array",
-                    "description": "The type(s) of logs used by the detection team and/or method to first detect the incident.",
+                    "description": "The type(s) of logs used by the detection team and/or method used to first detect the incident",
                     "items": {
                         "$ref": "#/properties/json/objects/detection/$defs/detection-log-vocab"
                     },
@@ -5296,7 +5301,7 @@
                 },
                 "comment": {
                     "type": "string",
-                    "description": "Clarifying comments about who, what, when, or how the incident was detected."
+                    "description": "Clarifying comments about who, what, when, or how the incident was detected"
                 }
             },
             "required": [
@@ -5308,57 +5313,57 @@
                         {
                             "const": "LE",
                             "title": "Law Enforcement",
-                            "description": "Law enforcement discovered the insider's illegal activity (e.g., Police noticed that the insider was gaining access to the company after hours)."
+                            "description": "Law enforcement discovered the insider's illegal activity (e.g., Police noticed that the insider was gaining access to the company after hours)"
                         },
                         {
                             "const": "OR",
                             "title": "Organization",
-                            "description": "The victim organization discovered the insider's activity (e.g., IT noticed that the insider had downloaded dozens of company trade secrets to their workstation)."
+                            "description": "The victim organization discovered the insider's activity (e.g., IT noticed that the insider had downloaded dozens of company trade secrets to their workstation)"
                         },
                         {
                             "const": "CU",
                             "title": "Customer",
-                            "description": "A customer of the victim organization discovered the insider's activity."
+                            "description": "A customer of the victim organization discovered the insider's activity"
                         },
                         {
                             "const": "CO",
                             "title": "Competitor",
-                            "description": "An organization competing with the victim organization discovered the insider's activity (e.g., Insider approached a competing organization with company trade secrets, and the competitor alerted the victim organization)."
+                            "description": "An organization competing with the victim organization discovered the insider's activity (e.g., Insider approached a competing organization with company trade secrets, and the competitor alerted the victim organization)"
                         },
                         {
                             "const": "AU",
                             "title": "Auditor",
-                            "description": "Internal or external auditor assigned to assess the organization's security, risk, or threat posture."
+                            "description": "Internal or external auditor assigned to assess the organization's security, risk, or threat posture"
                         },
                         {
                             "const": "SR",
                             "title": "Self-Reported",
-                            "description": "The insider reported their activity to their organization."
+                            "description": "The insider reported their activity to their organization"
                         },
                         {
                             "const": "IR",
                             "title": "Incident Response Team",
-                            "description": "The incident response team (IRT) discovered the insider's activity."
+                            "description": "The incident response team (IRT) discovered the insider's activity"
                         },
                         {
                             "const": "ST",
                             "title": "Security Team",
-                            "description": "Technical or personnnel security team discovered the insider's activity."
+                            "description": "Technical or personnnel security team discovered the insider's activity"
                         },
                         {
                             "const": "MG",
                             "title": "Management",
-                            "description": "A member of the organization's management or the insider's management chain discovered the insider's activities."
+                            "description": "A member of the organization's management or the insider's management chain discovered the insider's activities"
                         },
                         {
                             "const": "II",
                             "title": "Internal Investigators",
-                            "description": "Investigators internal to the victim organization."
+                            "description": "Investigators internal to the victim organization"
                         },
                         {
                             "const": "RR",
                             "title": "Researcher",
-                            "description": "Researcher external to the organization."
+                            "description": "Researcher external to the organization"
                         }
                     ]
                 },
@@ -5367,27 +5372,27 @@
                         {
                             "const": "1",
                             "title": "Audit",
-                            "description": "The insider's activity was spotted during an internal or third-party auditing process."
+                            "description": "The insider's activity was spotted during an internal or third-party auditing process"
                         },
                         {
                             "const": "2",
                             "title": "Technical Means",
-                            "description": "The insider's activity was detected via analysis or anomalies in technical systems and software."
+                            "description": "The insider's activity was detected via analysis or anomalies in technical systems and software"
                         },
                         {
                             "const": "3",
                             "title": "Non-Technical Means",
-                            "description": "The insider's activity was detected in a non-technical fashion (e.g., The insider had personal items purchased with a company credit card sent to the office by accident)."
+                            "description": "The insider's activity was detected in a non-technical fashion (e.g., The insider had personal items purchased with a company credit card sent to the office by accident)"
                         },
                         {
                             "const": "4",
                             "title": "Security Software",
-                            "description": "The insider's activity was detected by security software (e.g., The insider tried to download a document with trade secrets and an automatic alert detected the download)."
+                            "description": "The insider's activity was detected by security software (e.g., The insider tried to download a document with trade secrets and an automatic alert detected the download)"
                         },
                         {
                             "const": "5",
                             "title": "System Failure",
-                            "description": "The insider's activity resulted in a system going down within the organization, which led to the detection of the insider's activities."
+                            "description": "The insider's activity resulted in a system going down within the organization, which led to the detection of the insider's activities"
                         }
                     ]
                 },
@@ -5396,57 +5401,57 @@
                         {
                             "const": "AC",
                             "title": "Access Logs",
-                            "description": "File or system access logs."
+                            "description": "File or system access logs"
                         },
                         {
                             "const": "AU",
                             "title": "Audit Logs",
-                            "description": "Logs generated specifically for auditing purposes."
+                            "description": "Logs generated specifically for auditing purposes"
                         },
                         {
                             "const": "BR",
                             "title": "Bank Records",
-                            "description": "Financial transaction or account records."
+                            "description": "Financial transaction or account records"
                         },
                         {
                             "const": "DB",
                             "title": "Database Logs",
-                            "description": "Logs from traditional or non-traditional database servers or services."
+                            "description": "Logs from traditional or non-traditional database servers or services"
                         },
                         {
                             "const": "EM",
                             "title": "Email Logs",
-                            "description": "Logs from email servers or services."
+                            "description": "Logs from email servers or services"
                         },
                         {
                             "const": "FS",
                             "title": "Financial Statements",
-                            "description": "Statements or records from an individual's financial account(s)."
+                            "description": "Statements or records from an individual's financial account(s)"
                         },
                         {
                             "const": "IS",
                             "title": "ISP Logs",
-                            "description": "Logs from internet service providers (ISPs)."
+                            "description": "Logs from internet service providers (ISPs)"
                         },
                         {
                             "const": "RA",
                             "title": "Remote Access Logs",
-                            "description": "Logs from remote access servers or clients."
+                            "description": "Logs from remote access servers or clients"
                         },
                         {
                             "const": "SF",
                             "title": "System File Logs",
-                            "description": "File logs (create, delete, modify, etc.) from workstations, servers, and other systems."
+                            "description": "File logs (create, delete, modify, etc.) from workstations, servers, and other systems"
                         },
                         {
                             "const": "VD",
                             "title": "Video Logs",
-                            "description": "Video, security cam, webcam, screen capture recordings."
+                            "description": "Video, security cam, webcam, screen capture recordings"
                         },
                         {
                             "const": "WB",
                             "title": "Web Logs",
-                            "description": "Logs from web servers or web proxies."
+                            "description": "Logs from web servers or web proxies"
                         }
                     ]
                 }
@@ -5460,7 +5465,7 @@
             "properties": {
                 "state": {
                     "type": "string",
-                    "description": "The state code and name.",
+                    "description": "the state code and name",
                     "items": {
                         "$ref": "#/properties/json/common/state-vocab/$defs/state-vocab-us"
                     }
@@ -5697,12 +5702,12 @@
         },
         "json/common/insider-relationship-vocab": {
             "title": "Insider Relationship Vocab",
-            "description": "Vocabulary for the possible types of relationships between multiple insiders, or between insiders and external accomplices.",
+            "description": "Vocabulary for the possible types of relationships between multiple insiders or between insiders and external accomplices",
             "type": "string",
             "properties": {
                 "relationship": {
                     "type": "string",
-                    "description": "The insider's relationship to the other insider or to the accomplice at the time of the incident. If multiple, choose the strongest tie (e.g. \"Friend\" over \"Colleague\".",
+                    "description": "The insider's relationship to the other insider or to the accomplice at the time of the incident. If multiple, choose the strongest tie (e.g., \"Friend\" over \"Colleague\".",
                     "items": {
                         "$ref": "#/properties/json/common/insider-relationship-vocab/$defs/insider-relationship-vocab"
                     }
@@ -5715,42 +5720,42 @@
                         {
                             "const": "1",
                             "title": "Acquaintance",
-                            "description": "Persons known to each other but not otherwise close."
+                            "description": "Persons known to each other but not otherwise close"
                         },
                         {
                             "const": "2",
                             "title": "Colleague",
-                            "description": "Working together on the same team, department, or organization."
+                            "description": "Working together on the same team, department, or organization"
                         },
                         {
                             "const": "3",
                             "title": "Former Colleague",
-                            "description": "Formerly worked together on the same team, department, or organization."
+                            "description": "Formerly worked together on the same team, department, or organization"
                         },
                         {
                             "const": "4",
                             "title": "Friend",
-                            "description": "An ongoing close and/or friendly relationship."
+                            "description": "An ongoing close and/or friendly relationship"
                         },
                         {
                             "const": "5",
                             "title": "Relative",
-                            "description": "Members of the same family (immediate or extended)."
+                            "description": "Members of the same family (immediate or extended)"
                         },
                         {
                             "const": "6",
                             "title": "Significant Other/Legal partner",
-                            "description": "Spouse, boyfriend, girlfriend, common law partner, or similar."
+                            "description": "Spouse, boyfriend, girlfriend, common law partner, or similar"
                         },
                         {
                             "const": "8",
                             "title": "Unknown",
-                            "description": "The type of relationship is unknown."
+                            "description": "The type of relationship is unknown"
                         },
                         {
                             "const": "9",
                             "title": "Other",
-                            "description": "The type of relationship is known, but not listed in this vocabulary."
+                            "description": "The type of relationship is known, but not listed in this vocabulary"
                         }
                     ]
                 }
@@ -5764,7 +5769,7 @@
             "properties": {
                 "country": {
                     "type": "string",
-                    "description": "The country code and name.",
+                    "description": "The country code and name",
                     "items": {
                         "$ref": "#/properties/json/common/country-vocab/$defs/country-vocab"
                     }

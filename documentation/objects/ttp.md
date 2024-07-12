@@ -12,10 +12,10 @@ Action taken by the insider or colluding outsider(s) during the course of the in
 - **`number_of_times`** *(integer)* : The number of times this particular action took place. E.g., subject issued "5" fraudulent checks over the course of three weeks.
 - **`ttp_vocab`** *(string)* : A reference to the TTP framework being used by this TTP. Common options are IIDES, ATT&CK, CAPEC, etc.
   - Default: "IIDES"
-  - Required if `tactic` exists.
+  - Required if `tactic` exists
 - **`tactic`** *(string)* : The high level category or goal of the action.
 	- A constant from [tactic-vocab](#tactic-vocab)
-  - Required if `technique` exists.
+  - Required if `technique` exists
 - **`technique`** *(string)* : The general action taken. If technique exists, `tactic` should as well.
 	- A constant from [technique-vocab](#technique-vocab)
 - **`location`** *(array)* : Whether the action was taken on-site or remotely.
