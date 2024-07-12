@@ -2,39 +2,39 @@
   "$id": " iides/json/objects/person.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Person",
-  "description": "Abstract class for inheritance by the Insider and Accomplice objects. Describes the properties of an individual that MAY be inherited by those classes.",
+  "description": "This is an abstract class for inheritance by the Insider and Accomplice objects. Person describes the properties of an individual that MAY be inherited by those classes.",
   "type": "object",
   "properties": {
     "first_name": {
       "type": "string",
-      "description": "The first, or given, name of the individual."
+      "description": "The first or given name of the individual"
     },
     "middle_name": {
       "type": "string",
-      "description": "The middle name of the individual."
+      "description": "The middle name of the individual"
     },
     "last_name": {
       "type": "string",
-      "description": "The last, or family, name of the individual."
+      "description": "The last or family name of the individual"
     },
     "suffix": {
       "type": "string",
-      "description": "The name suffix of the individual.",
+      "description": "The name suffix of the individual",
       "$ref": "#/$defs/suffix-vocab"
     },
     "alias": {
       "type": "array",
-      "description": "A list of aliases (other names) the individual has used, and/or the anonymized of the individual in court records.",
+      "description": "A list of aliases (other names) the individual has used or the anonymized name of the individual in court records",
       "items": { "type": "string" },
       "minItems": 1
     },
     "city": {
       "type": "string",
-      "description": "The city (or county/district) that the person resided in at the time of the incident."
+      "description": "The city (or county or district) that the person resided in at the time of the incident"
     },
     "state": {
       "type": "string",
-      "description": "The state (or region) that the person resided in at the time of the incident."
+      "description": "The state (or region) that the person resided in at the time of the incident"
     },
     "country": {
       "type": "string",
@@ -42,7 +42,7 @@
     },
     "postal_code": {
       "type": "integer",
-      "description": "The postal code that the person resided in at the time of the incident."
+      "description": "The postal code that the person resided in at the time of the incident"
     },
     "country_of_citizenship": {
       "type": "array",
@@ -58,35 +58,35 @@
     },
     "residency": {
       "type": "string",
-      "description": "Residency status if the person was not a citizen of the country where they resided during the incident.",
+      "description": "Residency status if the person was not a citizen of the country where they resided during the incident",
       "$ref": "#/$defs/residency-vocab"
     },
     "gender": {
       "type": "string",
-      "description": "Sex or gender at the time of the incident.",
+      "description": "Sex or gender at the time of the incident",
       "$ref": "#/$defs/gender-vocab"
     },
     "age": {
       "type": "integer",
-      "description": "Age at the time that the incident began."
+      "description": "Age at the time that the incident began"
     },
     "education": {
       "type": "string",
-      "description": "Highest level of education at the time the incident began.",
+      "description": "Highest level of education at the time the incident began",
       "$ref": "#/$defs/education-vocab"
     },
     "marital_status": {
       "type": "string",
-      "description": "The marital status at the time of the incident.",
+      "description": "The marital status at the time of the incident",
       "$ref": "#/$defs/marital-status-vocab"
     },
     "number_of_children": {
       "type": "integer",
-      "description": "The number of children that the person is responsible for, at the time of the incident."
+      "description": "The number of children that the person is responsible for at the time of the incident"
     },
     "comment": {
       "type": "string",
-      "description": "Comments or clarifications regarding any of the Person properties."
+      "description": "Comments or clarifications regarding any of the Person properties"
     }
   },
   "required": [],
@@ -96,22 +96,22 @@
         {
           "const": "Jr",
           "title": "Junior",
-          "description": "A suffix denoting the son of the father with the same name."
+          "description": "A suffix denoting the son of the father with the same name"
         },
         {
           "const": "Sr",
           "title": "Senior",
-          "description": "A suffix denoting the father when the son has the same name."
+          "description": "A suffix denoting the father when the son has the same name"
         },
         {
           "const": "III",
           "title": "The Third",
-          "description": "A suffix denoting the third generation with the same name."
+          "description": "A suffix denoting the third generation with the same name"
         },
         {
           "const": "IV",
           "title": "The Fourth",
-          "description": "A suffix denoting the fourth generation with the same name."
+          "description": "A suffix denoting the fourth generation with the same name"
         }
       ]
     },
@@ -120,17 +120,17 @@
         {
           "const": "N",
           "title": "Naturalized",
-          "description": "A formerly non-citizen that has undergone naturalization and become a citizen."
+          "description": "A formerly non-citizen that has undergone naturalization and become a citizen"
         },
         {
           "const": "P",
           "title": "Permanent Resident",
-          "description": "A foreign citizen who is a permitted to live in a country they are not a citizen of indefinitely."
+          "description": "A foreign citizen who is a permitted to live in a country they are not a citizen of indefinitely"
         },
         {
           "const": "R",
           "title": "Resident Alien",
-          "description": "A foreign citizen who is a resident of a country they are not a citizen of."
+          "description": "A foreign citizen who is a resident of a country they are not a citizen of"
         }
       ]
     },
@@ -163,42 +163,42 @@
         {
           "const": "4",
           "title": "Associates Degree",
-          "description": "Possessing an undergraduate degree at the associates level."
+          "description": "Possessing an undergraduate degree at the associates level"
         },
         {
           "const": "5",
           "title": "Bachelors Degree",
-          "description": "Possessing an undegraduate degree at the bachelors level."
+          "description": "Possessing an undegraduate degree at the bachelors level"
         },
         {
           "const": "8",
           "title": "Doctorate",
-          "description": "Possesing a graduate degree at the doctoral level."
+          "description": "Possesing a graduate degree at the doctoral level"
         },
         {
           "const": "2",
           "title": "High School Diploma or GED",
-          "description": "Possessing a high school diploma or general education development (GED)."
+          "description": "Possessing a high school diploma or general education development (GED)"
         },
         {
           "const": "7",
           "title": "Masters Degree",
-          "description": "Possessing a graduate degree at the masters level."
+          "description": "Possessing a graduate degree at the masters level"
         },
         {
           "const": "6",
           "title": "Professional Degree",
-          "description": "Possessing a degree making one qualified for a particular profession."
+          "description": "Possessing a degree making one qualified for a particular profession"
         },
         {
           "const": "3",
           "title": "Some College",
-          "description": "Having completed some amount of collegiate coursework but not possessing a degree."
+          "description": "Having completed some amount of collegiate coursework but not possessing a degree"
         },
         {
           "const": "1",
           "title": "Some High School",
-          "description": "Having completed some amount of high school coursework but not possessing a high school diploma."
+          "description": "Having completed some amount of high school coursework but not possessing a high school diploma"
         }
       ]
     },
@@ -207,27 +207,27 @@
         {
           "const": "1",
           "title": "Single",
-          "description": "Not currently married."
+          "description": "Not currently married"
         },
         {
           "const": "2",
           "title": "Married",
-          "description": "Currently belonging to a marriage or common law partnership with a spouse who is an intimate partner."
+          "description": "Currently belonging to a marriage or common law partnership with a spouse who is an intimate partner"
         },
         {
           "const": "3",
           "title": "Divorced",
-          "description": "Having legally exited a previous marriage."
+          "description": "Having legally exited a previous marriage"
         },
         {
           "const": "4",
           "title": "Separated",
-          "description": "Married but no longer in an intimate partnership with a spouse."
+          "description": "Married but no longer in an intimate partnership with a spouse"
         },
         {
           "const": "5",
           "title": "Widowed/Widower",
-          "description": "Previously in a marriage that ended due to the death of their spouse."
+          "description": "Previously in a marriage that ended due to the death of their spouse"
         }
       ]
     }

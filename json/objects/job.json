@@ -2,60 +2,60 @@
     "$id": "iides/json/objects/job.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Job",
-    "description": "Details of the employment relationship between an individual and an organization. A job may be connected to only one organization, and may be connected to only one insider or accomplice.",
+    "description": "This contains details of the employment relationship between an individual and an organization. A job may be connected to only one organization and may be connected to only one insider or accomplice.",
     "type": "object",
     "properties": {
         "id": {
             "type": "string",
-            "description": "A unique string that begins with \"job--\" and is appended with a UUIDv4.",
+            "description": "A unique string that begins with \"job--\" and is appended with a UUIDv4",
             "pattern": "^job--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
         },
         "job_function": {
             "type": "string",
-            "description": "Functional category of the individual's job. job_function and occupation vocabularies are based in large part on the 2018 Standard Occupational Classification system published by the Bureau of Labor Statistics.",
+            "description": "Functional category of the individual's job. job_function and occupation vocabularies are based in large part on the 2018 Standard Occupational Classification system published by the Bureau of Labor Statistics",
             "$ref": "#/$defs/job-function-vocab"
         },
         "occupation": {
             "type": "string",
-            "description": "The subcategory of the individual's job. When present, `job_function` should also be present. The chosen constant for occupation MUST match the constant for job_function.",
+            "description": "The subcategory of the individual's job. When present, `job_function` should also be present. The chosen constant for occupation MUST match the constant for job_function",
             "$ref": "#/$defs/occupation-vocab"
         },
         "title": {
             "type": "string",
-            "description": "The individual's job title. If title is specified, `occupation` should be as well."
+            "description": "The individual's job title. If title is specified, `occupation` should be as well"
         },
         "position_technical": {
             "type": "boolean",
-            "description": "The individual had access to technical areas of the organization as part of their job role. E.g. IT admin, network engineer, help desk associate, etc."
+            "description": "The individual had access to technical areas of the organization as part of their job role (e.g., IT admin, network engineer, help desk associate)"
         },
         "access_authorization": {
             "type": "string",
-            "description": "The level of access control given by this job role.",
+            "description": "The level of access control given by this job role",
             "$ref": "#/$defs/access-auth-vocab"
         },
         "employment_type": {
             "type": "string",
-            "description": "The individual's employment arangement at the time of the incident.",
+            "description": "The individual's employment arrangement at the time of the incident",
             "$ref": "#/$defs/employment-type-vocab"
         },
         "hire_date": {
             "type": "string",
             "format": "date",
-            "description": "Date the individual is hired into this position."
+            "description": "Date the individual was hired into this position"
         },
         "departure_date": {
             "type": "string",
             "format": "date",
-            "description": "Date the individual departed from this position."
+            "description": "Date the individual departed from this position"
         },
         "tenure": {
             "type": "string",
             "format": "timedelta",
-            "description": "The amount of time the individual spent in this particular job role."
+            "description": "The amount of time the individual spent in this particular job role"
         },
         "comment": {
             "type": "string",
-            "description": "Clarifying comments or details about the job or the individual's employment with the organization."
+            "description": "Clarifying comments or details about the job or the individual's employment with the organization"
         }
     },
     "required": [
@@ -691,7 +691,7 @@
                 {
                     "const": "99.9",
                     "title": "Other",
-                    "description": "Other occupation not listed."
+                    "description": "Other occupation not listed"
                 }
             ]
         },
@@ -700,47 +700,47 @@
                 {
                     "const": "1",
                     "title": "Access Revoked",
-                    "description": "Access was revoked after departing or as a disciplinary action."
+                    "description": "Access was revoked after departing or as a disciplinary action"
                 },
                 {
                     "const": "2",
                     "title": "Administrator/Root",
-                    "description": "Authorized full administrative access."
+                    "description": "Authorized full administrative access"
                 },
                 {
                     "const": "3",
                     "title": "Authorized Account & Data",
-                    "description": "Authorized account and access to targeted data."
+                    "description": "Authorized account and access to targeted data"
                 },
                 {
                     "const": "4",
                     "title": "Authorized Account Only",
-                    "description": "Authorized account but not authorized access to targeted data."
+                    "description": "Authorized account but not authorized access to targeted data"
                 },
                 {
                     "const": "5",
                     "title": "Authorized Privileged User",
-                    "description": "Authorized privileged access."
+                    "description": "Authorized privileged access"
                 },
                 {
                     "const": "6",
                     "title": "Authorized Unprivileged User",
-                    "description": "Authorized unprivileged access."
+                    "description": "Authorized unprivileged access"
                 },
                 {
                     "const": "7",
                     "title": "Former Employee, Access not Deactivated",
-                    "description": "Access was not properly revoked after departure from the organization."
+                    "description": "Access was not properly revoked after departure from the organization"
                 },
                 {
                     "const": "8",
                     "title": "Never Given Access",
-                    "description": "Never given system access."
+                    "description": "Never given system access"
                 },
                 {
                     "const": "9",
                     "title": "Unauthorized",
-                    "description": "Unauthorized access."
+                    "description": "Unauthorized access"
                 }
             ]
         },
@@ -749,37 +749,37 @@
                 {
                     "const": "CTR",
                     "title": "Contractor",
-                    "description": "Individual not directly employed by the organization whose job responsibilities they filling (self-employed or employed by a different, contracting organization)."
+                    "description": "Individual not directly employed by the organization whose job responsibilities they filling (self-employed or employed by a different, contracting organization)"
                 },
                 {
                     "const": "FLT",
                     "title": "Full-time",
-                    "description": "Individual who is directly employed by the organization and works at least 35 hours per week (or is classified by the organization as a full-time employee)."
+                    "description": "Individual who is directly employed by the organization and works at least 35 hours per week or is classified by the organization as a full-time employee"
                 },
                 {
                     "const": "PRT",
                     "title": "Part-time",
-                    "description": "Individual who is directly employed by the organization and works less than 35 hours per week (or is classified by the organization as a part-time employee)."
+                    "description": "Individual who is directly employed by the organization and works less than 35 hours per week or is classified by the organization as a part-time employee"
                 },
                 {
                     "const": "INT",
                     "title": "Intern/Trainee/Aprentice",
-                    "description": "An advanced student or graduate gaining supervised practical experience in a particular field or job role, sometimes without pay."
+                    "description": "An advanced student or graduate gaining supervised practical experience in a particular field or job role, sometimes without pay"
                 },
                 {
                     "const": "TMP",
                     "title": "Temporary Employee",
-                    "description": "Individual hired for a brief period of time or until a certain project is completed."
+                    "description": "Individual hired for a brief period of time or until a certain project is completed"
                 },
                 {
                     "const": "VOL",
                     "title": "Volunteer",
-                    "description": "Individual not employed by the organization, but who donates their time to working on projects without receiving pay or benefits."
+                    "description": "Individual not employed by the organization, but who donates their time to working on projects without receiving pay or benefits"
                 },
                 {
                     "const": "OTH",
                     "title": "Other",
-                    "description": "Other employment type not listed in this vocabulary."
+                    "description": "Other employment type not listed in this vocabulary"
                 }
             ]
         }

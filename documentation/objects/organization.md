@@ -1,25 +1,25 @@
 # Organization
 
-The organization(s) involved in the incident. At least one organization, the victim organization, should be included as part of an incident bundle. There may be other organizations involved, such as a competitor organization that benefitted from stolen data or pass through organization that received kickbacks. The victim organization(s) include all organizations negatively impacted by the incident, not just the organization(s) that employed the insider.
+This is the organization(s) involved in the incident. At least one organization, the victim organization, should be included as part of an incident bundle. There may be other organizations involved, such as a competitor organization that benefitted from stolen data or a pass-through organization that received kickbacks. The victim organization(s) include all organizations negatively impacted by the incident, not just the organization(s) that employed the insider.
 
 ## Properties
 
-- **`id`** (required) *(string)* : A unique string that begins with "organization--" and is appended with a UUIDv4.
+- **`id`** (required) *(string)* : A unique string that begins with "organization--" and is appended with a UUIDv4
   - Uses pattern: ^organization--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
-- **`name`** *(string)* : The name of the organization. E.g., "Company XYZ, Inc."
-- **`city`** *(string)* : The city where the organization is located. Use the address of the headquarters if the whole organization was affected or use the address of the local branch if only that local branch was affected.
-- **`state`** *(string)* : The state where the organization is located. Use the address of the headquarters if the whole organization was affected or use the address of the local branch if only that local branch was affected.
-- **`country`** *(string)* : The country where the organization is located. Use the address of the headquarters if the whole organization was affected or use the address of the local branch if only that local branch was affected. Public implementations should use the standard codes provided by ISO 3166-1 alpha-2.
-- **`postal_code`** *(integer)* : The postal code of the organization. Use the address of the headquarters if the whole organization was affected or use the address of the local branch if only that local branch was affected.
-- **`small_business`** *(boolean)* : TRUE if the organization is a privately owned business with 500 or fewer employees.
-- **`industry_sector`** *(string)* : Top level category for the economic sector the organization belongs to. Note, sectors are dervied from the North American Industry Classification System (NAICS) version 2022 published by the United States Office of Management and Budget.
+- **`name`** *(string)* : The name of the organization (e.g., "Company XYZ, Inc.")
+- **`city`** *(string)* : The city where the organization is located. Use the address of the headquarters if the whole organization was affected. Use the address of the local branch if only that local branch was affected.
+- **`state`** *(string)* : The state where the organization is located. Use the address of the headquarters if the whole organization was affected. Use the address of the local branch if only that local branch was affected.
+- **`country`** *(string)* : The country where the organization is located. Use the address of the headquarters if the whole organization was affected. Use the address of the local branch if only that local branch was affected. Public implementations should use the standard codes provided by ISO 3166-1 alpha-2.
+- **`postal_code`** *(integer)* : The postal code of the organization. Use the address of the headquarters if the whole organization was affected. Use the address of the local branch if only that local branch was affected.
+- **`small_business`** *(boolean)* : TRUE if the organization is a privately owned business with 500 or fewer employees
+- **`industry_sector`** *(string)* : Top-level category for the economic sector the organization belongs to. Note, sectors are derived from the North American Industry Classification System (NAICS) version 2022 published by the United States Office of Management and Budget.
 	- A constant from [industry-sector-vocab](#industry-sector-vocab)
   - Required if `industry_subsector` exists
-- **`industry_subsector`** *(string)* : Second level category for the economic sector the organization belongs to. This value MUST map back to industry_sector. E.g., if sector is "9", subsector must be "9.x"
+- **`industry_subsector`** *(string)* : Second-level category for the economic sector the organization belongs to. This value MUST map back to industry_sector (e.g., if sector is "9," subsector must be "9.x").
 	- A constant from [industry-subsector-vocab](#industry-subsector-vocab)
-- **`business`** *(string)* : Description of the organization's business.
-- **`parent_company`** *(string)* : Name of the organization's parent company, if applicable.
-- **`incident_role`** (required) *(string)* : The organization's role in the incident.
+- **`business`** *(string)* : Description of the organization's business
+- **`parent_company`** *(string)* : Name of the organization's parent company, if applicable
+- **`incident_role`** (required) *(string)* : The organization's role in the incident
 	- A constant from [org-role-vocab](#org-role-vocab)
 
 ## Vocabularies

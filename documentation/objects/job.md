@@ -161,7 +161,7 @@ Constants: `11.1`, `11.2`, `11.3`, `11.9`, `13.1`, `13.2`, `15.1`, `15.2`, `17.1
 | 55.2 | First-Line Enlisted Military Supervisors | Supervisors of Crew Members, Supervisors of Tactical Operations Specialists, In-Flight Refueling Manager, Superintendent, Intelligence Chief, etc.|
 | 55.3 | Military Enlisted Tactical Operations, Specialists, and Crew Members | Crew Members, Specialists, Infantry, Special Forces, etc.|
 | 99.1 | Student | Student|
-| 99.9 | Other | Other occupation not listed.|
+| 99.9 | Other | Other occupation not listed|
 
 ### access-auth-vocab
 
@@ -169,15 +169,15 @@ Constants: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`
 
 | Const | Value | Description |
 | --- | --- | --- |
-| 1 | Access Revoked | Access was revoked after departing or as a disciplinary action.|
-| 2 | Administrator/Root | Authorized full administrative access.|
-| 3 | Authorized Account & Data | Authorized account and access to targeted data.|
-| 4 | Authorized Account Only | Authorized account but not authorized access to targeted data.|
-| 5 | Authorized Privileged User | Authorized privileged access.|
-| 6 | Authorized Unprivileged User | Authorized unprivileged access.|
-| 7 | Former Employee, Access not Deactivated | Access was not properly revoked after departure from the organization.|
-| 8 | Never Given Access | Never given system access.|
-| 9 | Unauthorized | Unauthorized access.|
+| 1 | Access Revoked | Access was revoked after departing or as a disciplinary action|
+| 2 | Administrator/Root | Authorized full administrative access|
+| 3 | Authorized Account & Data | Authorized account and access to targeted data|
+| 4 | Authorized Account Only | Authorized account but not authorized access to targeted data|
+| 5 | Authorized Privileged User | Authorized privileged access|
+| 6 | Authorized Unprivileged User | Authorized unprivileged access|
+| 7 | Former Employee, Access not Deactivated | Access was not properly revoked after departure from the organization|
+| 8 | Never Given Access | Never given system access|
+| 9 | Unauthorized | Unauthorized access|
 
 ### employment-type-vocab
 
@@ -185,13 +185,13 @@ Constants: `CTR`, `FLT`, `PRT`, `INT`, `TMP`, `VOL`, `OTH`
 
 | Const | Value | Description |
 | --- | --- | --- |
-| CTR | Contractor | Individual not directly employed by the organization whose job responsibilities they filling (self-employed or employed by a different, contracting organization).|
-| FLT | Full-time | Individual who is directly employed by the organization and works at least 35 hours per week (or is classified by the organization as a full-time employee).|
-| PRT | Part-time | Individual who is directly employed by the organization and works less than 35 hours per week (or is classified by the organization as a part-time employee).|
-| INT | Intern/Trainee/Aprentice | An advanced student or graduate gaining supervised practical experience in a particular field or job role, sometimes without pay.|
-| TMP | Temporary Employee | Individual hired for a brief period of time or until a certain project is completed.|
-| VOL | Volunteer | Individual not employed by the organization, but who donates their time to working on projects without receiving pay or benefits.|
-| OTH | Other | Other employment type not listed in this vocabulary.|
+| CTR | Contractor | Individual not directly employed by the organization whose job responsibilities they filling (self-employed or employed by a different, contracting organization)|
+| FLT | Full-time | Individual who is directly employed by the organization and works at least 35 hours per week or is classified by the organization as a full-time employee|
+| PRT | Part-time | Individual who is directly employed by the organization and works less than 35 hours per week or is classified by the organization as a part-time employee|
+| INT | Intern/Trainee/Aprentice | An advanced student or graduate gaining supervised practical experience in a particular field or job role, sometimes without pay|
+| TMP | Temporary Employee | Individual hired for a brief period of time or until a certain project is completed|
+| VOL | Volunteer | Individual not employed by the organization, but who donates their time to working on projects without receiving pay or benefits|
+| OTH | Other | Other employment type not listed in this vocabulary|
 
 ## License
 This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES

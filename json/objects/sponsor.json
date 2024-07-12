@@ -2,21 +2,21 @@
     "$id": "iides/json/objects/sponsor.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Sponsor",
-    "description": "An individual or entity that recruited, instigated, motivated, or otherwise supported the insider's action. A sponsor MUST be associated with at least one insider or accomplice. It may be associated with multiple insider and/or accomplices.",
+    "description": "A sponsor is an individual or entity that recruited, instigated, motivated, or otherwise supported the insider's action. A sponsor MUST be associated with at least one insider or accomplice. The sponsor may be associated with multiple insiders or accomplices.",
     "type": "object",
     "properties": {
       "id": {
         "type": "string",
-        "description": "A unique string that begins with \"sponsor--\" and is appended with a UUIDv4.",
+        "description": "A unique string that begins with \"sponsor--\" and is appended with a UUIDv4",
         "pattern": "^sponsor--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
       },
       "name": {
         "type": "string",
-        "description": "The name of the individual or entity sponsoring the insider's actions."
+        "description": "The name of the individual or entity sponsoring the insider's actions"
       },
       "sponsor_type": {
         "type": "string",
-        "description": "The type of sponsor.",
+        "description": "The type of sponsor",
         "$ref": "#/$defs/sponsor-type-vocab"
       }
     },
@@ -29,27 +29,27 @@
                 {
                     "const": "OC",
                     "title": "Organized Crime",
-                    "description": "E.g., terrorist group, mafia, gang."
+                    "description": "E.g., terrorist group, mafia, gang"
                 },
                 {
                     "const": "SS",
                     "title": "State Sponsor",
-                    "description": "Geopolitical, state, or national military with a speciific country of origin."
+                    "description": "Geopolitical, state, or national military with a speciific country of origin"
                 },
                 {
                     "const": "FN",
                     "title": "Foreign National",
-                    "description": "An individual whose objectives are aligned with either the political, commercial, or military interests of a country other than where the incident originated."
+                    "description": "An individual whose objectives are aligned with either the political, commercial, or military interests of a country other than where the incident originated"
                 },
                 {
                     "const": "CE",
                     "title": "Criminal Enterprise",
-                    "description": "A group of individuals with an identified hierarchy or structure who engage in significant criminal activity."
+                    "description": "A group of individuals with an identified hierarchy or structure who engage in significant criminal activity"
                 },
                 {
                     "const": "OT",
                     "title": "Other",
-                    "description": "A sponsor type not listed in this vocabulary."
+                    "description": "A sponsor type not listed in this vocabulary"
                 }
             ]
         }
