@@ -71,7 +71,7 @@ Constants: `1`, `2`, `3`, `4`
 | 1 | Social and Mental Health Issues | A history of behaviors related to the insider's mental health or unacceptable social behavior|
 | 2 | A History of Rule Violations | A history of violating the law or violating rules at other organizations|
 | 3 | Suspicious Associations | A history of associating with criminal or otherwise objectionable persons or entities|
-| 4 | Personal Stressful Events | Events in the insider's personal life that could lead to additional stress or futher motivate the insider to harm their organization|
+| 4 | Personal Stressful Events | Events in the insider's personal life that could lead to additional stress or further motivate the insider to harm their organization|
 
 ### predisposition-subtype-vocab
 

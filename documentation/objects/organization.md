@@ -1,25 +1,25 @@
 # Organization
 
-The organization(s) involved in the incident. At least one organization, the victim organization, should be included as part of an incident bundle. There may be other organizations involved, such as a competitor organization that benefitted from stolen data or pass through organization that received kickbacks. The victim organization(s) include all organizations negatively impacted by the incident, not just the organization(s) that employed the insider.
+This is the organization(s) involved in the incident. At least one organization, the victim organization, should be included as part of an incident bundle. There may be other organizations involved, such as a competitor organization that benefitted from stolen data or a pass-through organization that received kickbacks. The victim organization(s) include all organizations negatively impacted by the incident, not just the organization(s) that employed the insider.
 
 ## Properties
 
-- **`id`** (required) *(string)* : A unique string that begins with "organization--" and is appended with a UUIDv4.
+- **`id`** (required) *(string)* : A unique string that begins with "organization--" and is appended with a UUIDv4
   - Uses pattern: ^organization--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
-- **`name`** *(string)* : The name of the organization. E.g., "Company XYZ, Inc."
-- **`city`** *(string)* : The city where the organization is located. Use the address of the headquarters if the whole organization was affected or use the address of the local branch if only that local branch was affected.
-- **`state`** *(string)* : The state where the organization is located. Use the address of the headquarters if the whole organization was affected or use the address of the local branch if only that local branch was affected.
-- **`country`** *(string)* : The country where the organization is located. Use the address of the headquarters if the whole organization was affected or use the address of the local branch if only that local branch was affected. Public implementations should use the standard codes provided by ISO 3166-1 alpha-2.
-- **`postal_code`** *(integer)* : The postal code of the organization. Use the address of the headquarters if the whole organization was affected or use the address of the local branch if only that local branch was affected.
-- **`small_business`** *(boolean)* : TRUE if the organization is a privately owned business with 500 or fewer employees.
-- **`industry_sector`** *(string)* : Top level category for the economic sector the organization belongs to. Note, sectors are dervied from the North American Industry Classification System (NAICS) version 2022 published by the United States Office of Management and Budget.
+- **`name`** *(string)* : The name of the organization (e.g., "Company XYZ, Inc.")
+- **`city`** *(string)* : The city where the organization is located. Use the address of the headquarters if the whole organization was affected. Use the address of the local branch if only that local branch was affected.
+- **`state`** *(string)* : The state where the organization is located. Use the address of the headquarters if the whole organization was affected. Use the address of the local branch if only that local branch was affected.
+- **`country`** *(string)* : The country where the organization is located. Use the address of the headquarters if the whole organization was affected. Use the address of the local branch if only that local branch was affected. Public implementations should use the standard codes provided by ISO 3166-1 alpha-2.
+- **`postal_code`** *(integer)* : The postal code of the organization. Use the address of the headquarters if the whole organization was affected. Use the address of the local branch if only that local branch was affected.
+- **`small_business`** *(boolean)* : TRUE if the organization is a privately owned business with 500 or fewer employees
+- **`industry_sector`** *(string)* : Top-level category for the economic sector the organization belongs to. Note, sectors are derived from the North American Industry Classification System (NAICS) version 2022 published by the United States Office of Management and Budget.
 	- A constant from [industry-sector-vocab](#industry-sector-vocab)
   - Required if `industry_subsector` exists
-- **`industry_subsector`** *(string)* : Second level category for the economic sector the organization belongs to. This value MUST map back to industry_sector. E.g., if sector is "9", subsector must be "9.x"
+- **`industry_subsector`** *(string)* : Second-level category for the economic sector the organization belongs to. This value MUST map back to industry_sector (e.g., if sector is "9," subsector must be "9.x").
 	- A constant from [industry-subsector-vocab](#industry-subsector-vocab)
-- **`business`** *(string)* : Description of the organization's business.
-- **`parent_company`** *(string)* : Name of the organization's parent company, if applicable.
-- **`incident_role`** (required) *(string)* : The organization's role in the incident.
+- **`business`** *(string)* : Description of the organization's business
+- **`parent_company`** *(string)* : Name of the organization's parent company, if applicable
+- **`incident_role`** (required) *(string)* : The organization's role in the incident
 	- A constant from [org-role-vocab](#org-role-vocab)
 
 ## Vocabularies
@@ -119,7 +119,7 @@ Constants: `11.1`, `11.2`, `11.3`, `11.4`, `11.5`, `21.1`, `21.2`, `21.3`, `22.1
 | 51.6 | Broadcasting and Content Providers | Industries in the Broadcasting and Content Providers subsector include establishments that create content or acquire the right to distribute content and subsequently broadcast or distribute that content. The industry groups are based on differences in the methods of communication and the nature of services provided.|
 | 51.7 | Telecommunications | Industries in this subsector provide telecommunications services, such as transmitting voice, data, text, sound, and video. This includes establishments providing telephone, data transmission, cellular, cable, and other subscription programming services.|
 | 51.8 | Computing Infrastructure Providers, Data Processing, Web Hosting, and Related Services | The Computing Infrastructure Providers, Data Processing, Web Hosting, and Related Services subsector groups establishments that provide computing infrastructure, data processing services, Web hosting services (except software publishing), and related services, including streaming support services (except streaming distribution services).|
-| 51.9 | Web Search Portals, Libraries, Archives, and Other Information Services | Industries in the Web Search Portals, Libraries, Archives, and Other Information Services subsector group establishments supplying information, storing and providing access to information, searching and retrieving information, and operating Web sites that use search engines to allow for searching information on the Internet. The main components of the subsector are libraries, archives, and Web search portals.|
+| 51.9 | Web Search Portals, Libraries, Archives, and Other Information Services | Industries in the Web Search Portals, Libraries, Archives, and Other Information Services subsector group establishments supplying information, storing and providing access to information, searching and retrieving information, and operating websites that use search engines to allow for searching information on the Internet. The main components of the subsector are libraries, archives, and web search portals.|
 | 52.1 | Monetary Authorities-Central Bank | The Monetary Authorities-Central Bank subsector groups establishments that engage in performing central banking functions, such as issuing currency, managing the Nation's money supply and international reserves, holding deposits that represent the reserves of other banks and other central banks, and acting as a fiscal agent for the central government.|
 | 52.2 | Credit Intermediation and Related Activities | Industries in the Credit Intermediation and Related Activities subsector group establishments that (1) lend funds raised from depositors; (2) lend funds raised from credit market borrowing; or (3) facilitate the lending of funds or issuance of credit by engaging in such activities as mortgage and loan brokerage, clearinghouse and reserve services, and check cashing services.|
 | 52.3 | Securities, Commodity Contracts, and Other Financial Investments and Related Activities | Industries in the Securities, Commodity Contracts, and Other Financial Investments and Related Activities subsector group establishments that are primarily engaged in one of the following: (1) underwriting securities issues and/or making markets for securities and commodities; (2) acting as agents (i.e., brokers) between buyers and sellers of securities and commodities; (3) providing securities and commodity exchange services; and (4) providing other services, such as managing portfolios of assets; providing investment advice; and trust, fiduciary, and custody services.|

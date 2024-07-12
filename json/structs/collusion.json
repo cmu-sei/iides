@@ -2,32 +2,32 @@
 	"$id": "iides/json/structs/collusion.json",
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "Collusion",
-	"description": "Represents the relationship between insiders. For the purposes of the `recruitment` property, insider 1 recruited insider 2.",
+	"description": "Collusion represents the relationship between insiders. For the purposes of the `recruitment` property, insider1 recruited insider2.",
 	"type": "object",
 	"properties": {
 		"id": {
 			"type": "string",
-			"description": "A unique string that begins with \"collusion--\" and is appended with a UUIDv4.",
+			"description": "A unique string that begins with \"collusion--\" and is appended with a UUIDv4",
 			"pattern": "^collusion--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
 		},
       "insider1": {
 			"type": "string",
-			"description": "The id of the first insider.",
+			"description": "The `id` of the first insider",
 			"pattern": "^insider--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
 		},
       "insider2": {
 			"type": "string",
-			"description": "The id of the second insider",
+			"description": "The `id` of the second insider",
 			"pattern": "^insider--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
 		},
       "relationship": {
 			"type": "string",
-			"description": "The type of relationship between insider1 and insider2.",
+			"description": "The type of relationship between insider1 and insider2",
       "$ref": "../common/insider-relationship-vocab.json"
 		},
       "recruitment": {
 			"type": "string",
-			"description": "The reason insider1 recruited insider2.",
+			"description": "The reason insider1 recruited insider2",
       "$ref": "#/$defs/recruitment-vocab"
 		}
 	},
@@ -43,32 +43,32 @@
         {
           "const": "1",
           "title": "Avoid Detection",
-          "description": "Insider 1 needed insider 2's access or authorization to avoid detection."
+          "description": "Insider1 needed insider2's access or authorization to avoid detection"
         },
         {
           "const": "2",
           "title": "Greater Payoff",
-          "description": "Insider 1 received a greater payoff by recruiting insider 2."
+          "description": "Insider1 received a greater payoff by recruiting insider2"
         },
         {
           "const": "3",
           "title": "Insider Resigned",
-          "description": "Insider 1 no longer worked at the victim organization and needed insider 2 to finish the incident."
+          "description": "Insider1 no longer worked at the victim organization and needed insider2 to finish the incident"
         },
         {
           "const": "4",
           "title": "Separation of Duties",
-          "description": "Insider 1 could not conduct acheive their goals without insider 2 due to a separationi of duties which limited their access of authorization."
+          "description": "Insider1 could not conduct acheive their goals without insider2 due to a separation of duties which limited their access of authorization"
         },
         {
           "const": "5",
           "title": "Share the Wealth",
-          "description": "Insider 1 recruited insider 2 due to a desire to share the wealth."
+          "description": "Insider1 recruited insider2 due to a desire to share the wealth"
         },
         {
           "const": "9",
           "title": "Other",
-          "description": "Insider 1 recruited insider 2 for unknown reasons."
+          "description": "Insider1 recruited insider2 for unknown reasons"
         }
       ]
     }

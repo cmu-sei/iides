@@ -130,6 +130,8 @@ def process_field(items, field, schema, schema_field):
     elif schema_field['type'] == "array":
         return process_array_field(items, field, schema, schema_field)
     elif schema_field['type'] in ['number', 'integer']:
+        if field == 'postal_code':
+            return items
         return f"{items:,}"
     else:
         return str(items)
@@ -216,7 +218,10 @@ if __name__ == "__main__":
 
             for obj in sorted_objects:
                 tag = obj['id'].split("--")[0]
-                file_lines.append(f"\n## {tag.capitalize()}\n")
+                formatted_tag = tag.replace('-', ' ').title()
+                if formatted_tag == 'Ttp':
+                    formatted_tag = 'TTP'
+                file_lines.append(f"\n## {formatted_tag}\n")
 
                 if 'comment' in obj:
                     file_lines.append(f"{obj['comment']}\n")
@@ -233,11 +238,14 @@ if __name__ == "__main__":
                     schema_field = schema['properties'].get(field)
                     if not schema_field:
                         print(f"Not a default field: {field}")
-                        file_lines.append(f"- **`{field.capitalize().replace('_', ' ')}`**:\n {items}")
+                        file_lines.append(f"- **`{field}`**:\n {items}")
                         continue
 
                     items_print = process_field(items, field, schema, schema_field)
-                    file_lines.append(f"- **`{field.capitalize().replace('_', ' ')}`**:\n {items_print}")
+                    formatted_field = field.capitalize().replace('_', ' ')
+                    if formatted_field == 'Ttp vocab':
+                        formatted_field = 'TTP vocab'
+                    file_lines.append(f"- **`{formatted_field}`**:\n {items_print}")
 
         # Write output to markdown file
         new_path = os.path.split(filename)[-1][:-5]

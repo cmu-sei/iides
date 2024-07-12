@@ -2,31 +2,31 @@
     "$id": "iides/json/objects/sentence.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Sentence",
-    "description": "Term of imprisonment or probation, or amount of fines, imposed on a convicted defendant for criminal wrongdoing, or the amount of damages imposed for civil cases. Generally, the amount of punishment for an offense. A sentence must be connected to only one court case. A court case may have one or more sentences.",
+    "description": "Generally, sentence is the amount of punishment for an offense. It could refer to the term of imprisonment or probation, the amount of fines imposed on a convicted defendant for criminal wrongdoing, or the amount of damages imposed for civil cases. Generally, the amount of punishment for an offense. A sentence must be connected to only one court case. A court case may have one or more sentences.",
     "type": "object",
     "properties": {
       "id": {
         "type": "string",
-        "description": "A unique string that begins with \"sentence--\" and is appended with a UUIDv4.",
+        "description": "A unique string that begins with \"sentence--\" and is appended with a UUIDv4",
         "pattern": "^sentence--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
       },
       "sentence_type": {
         "type": "string",
-        "description": "The type of sentence that was ordered.",
+        "description": "The type of sentence that was ordered",
         "$ref": "#/$defs/sentence-type-vocab"
       },
       "quantity": {
         "type": "integer",
-        "description": "The quantity of the sentence type imposed. MUST be used with the `metric` property if used."
+        "description": "The quantity of the sentence type imposed. MUST be used with the `metric` property if used"
       },
       "metric": {
         "type": "string",
-        "description": "The measurement type of the sentence imposed. MUST be used with the `quantity` property if used.",
+        "description": "The measurement type of the sentence imposed. MUST be used with the `quantity` property if used",
         "$ref": "#/$defs/sentence-metric-vocab"
       },
       "concurrency": {
         "type": "boolean",
-        "description": "Whether the sentence is to run concurrently (at the same time as) other sentences within the same case."
+        "description": "Whether the sentence is to run concurrently (at the same time as) other sentences within the same case"
       }
     },
     "required": [
@@ -43,12 +43,12 @@
               {
                 "const": "1",
                 "title": "Assessment/Special Assessment",
-                "description": "A type of fine that always applies to each count of a convicted crime."
+                "description": "A type of fine that always applies to each count of a convicted crime"
               },
               {
                 "const": "2",
                 "title": "Community Service",
-                "description": "Unpaid work that benefits the community."
+                "description": "Unpaid work that benefits the community"
               },
               {
                 "const": "3",
@@ -58,12 +58,12 @@
               {
                 "const": "4",
                 "title": "Deportation",
-                "description": "Defendant is ordered to leave the country where the case is being tried."
+                "description": "Defendant is ordered to leave the country where the case is being tried"
               },
               {
                 "const": "5",
                 "title": "Drug Testing",
-                "description": "Regular screening ordered to test for drugs."
+                "description": "Regular screening ordered to test for drugs"
               },
               {
                 "const": "6",
@@ -73,52 +73,52 @@
               {
                 "const": "7",
                 "title": "Forfeiture",
-                "description": "Loss of property, right, or privilege without compensation."
+                "description": "Loss of property, right, or privilege without compensation"
               },
               {
                 "const": "8",
                 "title": "House Arrest",
-                "description": "Confinement to a particular location for the duration of the sentence."
+                "description": "Confinement to a particular location for the duration of the sentence"
               },
               {
                 "const": "9",
                 "title": "Incarceration",
-                "description": "Imprisonment."
+                "description": "Imprisonment"
               },
               {
                 "const": "10",
                 "title": "Injunction/Restraining Order",
-                "description": "Defendant is ordered to cease doing a particular action. E.g., using stolen IP in their business."
+                "description": "Defendant is ordered to cease a particular action (e.g., using stolen IP in their business)"
               },
               {
                 "const": "11",
                 "title": "Mental Health Treatment",
-                "description": "Defendant is ordered to an inpatient or outpatient mental health facility, or is ordered to attend therapy for mental health issues."
+                "description": "Defendant is ordered to an inpatient or outpatient mental health facility or is ordered to attend therapy for mental health issues"
               },
               {
                 "const": "12",
                 "title": "No Internet Access",
-                "description": "Defendant is not allowed to access the Internet via any type of device."
+                "description": "Defendant is not allowed to access the Internet via any type of device"
               },
               {
                 "const": "13",
                 "title": "Probation",
-                "description": "Defendant is released into the community in lieu of a prison sentence, but is subject to sepcial conditions and restrictions such as other types of sentences in this vocabulary."
+                "description": "Defendant is released into the community in lieu of a prison sentence, but is subject to sepcial conditions and restrictions such as other types of sentences in this vocabulary"
               },
               {
                 "const": "14",
                 "title": "Restitution",
-                "description": "An attempt to measure in financial terms the extent of the gains or profits the defendant obtained through harming the victim."
+                "description": "An attempt to measure in financial terms the extent of the gains or profits the defendant obtained through harming the victim"
               },
               {
                 "const": "15",
                 "title": "Substance Abuse Treatment",
-                "description": "Defendant is ordered to attend inpatient or outpatient treatment for substance abuse issues."
+                "description": "Defendant is ordered to attend inpatient or outpatient treatment for substance abuse issues"
               },
               {
                 "const": "16",
                 "title": "Supervised Release",
-                "description": "Defendant is released into the community, subject to special conditions and restrictions, after the completion of a prison sentence."
+                "description": "Defendant is released into the community, subject to special conditions and restrictions, after the completion of a prison sentence"
               }   
             ]
         },
@@ -127,27 +127,27 @@
             {
               "const": "1",
               "title": "Hour(s)",
-              "description": "Imposed sentence is in terms of hours. E.g. 20 hours community service."
+              "description": "Imposed sentence is in terms of hours (e.g. 20 hours community service)"
             },
             {
               "const": "2",
               "title": "Day(s)",
-              "description": "Imposed sentence is in terms of days. E.g. 30 days in a substance abuse treatment facility."
+              "description": "Imposed sentence is in terms of days (e.g. 30 days in a substance abuse treatment facility)"
             },
             {
               "const": "3",
               "title": "Month(s)",
-              "description": "Imposed sentence is in terms of months. E.g. 18 months imprisonment."
+              "description": "Imposed sentence is in terms of months (e.g. 18 months imprisonment)"
             },
             {
               "const": "4",
               "title": "Year(s)",
-              "description": "Imposed sentence is in terms of years. E.g. 5 years no Internet access."
+              "description": "Imposed sentence is in terms of years (e.g. five years no Internet access)"
             },
             {
               "const": "5",
               "title": "Dollar(s)",
-              "description": "Imposed sentence is in terms of dollars. E.g. $10,000 in damages."
+              "description": "Imposed sentence is in terms of dollars (e.g. $10,000 in damages)"
             }
           ]
       }

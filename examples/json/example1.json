@@ -168,7 +168,7 @@
       "education": "5",
       "marital_status": "1",
       "number_of_children": 0,
-      "comment": "Joshua Adam Schulte had a history of social and mental health issues. He showed concerning behaviors such as repeated technical policy abuse and conflicts with his supervisor, as well as browsing dark web forums. The insider had multiple workplace incidents involving the harassment of colleagues, ultimately resulting in the insider being forced to move offices across the building. The insider believed he had been mistreated by staff, leading to a desire for revenge."
+      "comment": "Joshua Adam Schulte had a history of social and mental health issues. He showed concerning behaviors, such as repeated technical policy abuse and conflicts with his supervisor as well as browsing dark web forums. The insider had multiple workplace incidents involving the harassment of colleagues, ultimately resulting in the insider being forced to move offices across the building. The insider believed he had been mistreated by staff, leading to a desire for revenge."
     },
     {
       "id": "job--e76248a2-82df-4c7d-b7a0-bf86eb85c570",
@@ -219,7 +219,7 @@
       "small_business": false,
       "industry_sector": "51",
       "industry_subsector": "51.9",
-      "business": "WikiLeaks is a non-profit organization that publishes news leaks and classified media provided by anonymous sources.",
+      "business": "WikiLeaks is a nonprofit organization that publishes news leaks and classified media provided by anonymous sources.",
       "incident_role": "B"
     },
     {
@@ -235,7 +235,7 @@
         ["1", "2017-03-07"],
         ["2", "2018-06-18"]
       ],
-      "comment": "Schulte left the CIA in November of 2016, before departing from the agency planted a service to still allow remote access to government files and databases, which he used to access classified information post departure."
+      "comment": "Schulte left the CIA in November of 2016. Before departing from the agency, he planted a service to still allow remote access to government files and databases, which he used to access classified information post departure."
     },
     {
       "id": "sentence--21e74a96-ba47-46fe-8338-736ab19552ba",
@@ -293,7 +293,7 @@
       "date": "2016",
       "category": "2",
       "subcategory": "2.12",
-      "comment": "Joshua Adam Schulte internal disputes and a hostile work environment at the CIA (self-imposed) contributed to his decision to steal and leak classified information as revenge for mistreatment."
+      "comment": "Joshua Adam Schulte's internal disputes and a hostile work environment at the CIA (self-imposed) contributed to his decision to steal and leak classified information as revenge for mistreatment."
     },
     {
       "id": "target--2a6f542f-a3e6-43e9-b628-cc9c97765276",

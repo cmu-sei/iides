@@ -61,7 +61,7 @@
         {
           "const": "3",
           "title": "Not Guilty",
-          "description": "The defendant pleaed not guilty to the charge"
+          "description": "The defendant pleaded not guilty to the charge"
         },
         {
           "const": "4",
@@ -80,7 +80,7 @@
         {
           "const": "2",
           "title": "Convicted",
-          "description": "Plead or been found guilty by a court"
+          "description": "Pleaded or found guilty by a court"
         },
         {
           "const": "3",

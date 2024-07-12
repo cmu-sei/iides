@@ -2,60 +2,60 @@
     "$id": "iides/json/objects/job.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Job",
-    "description": "Details of the employment relationship between an individual and an organization. A job may be connected to only one organization, and may be connected to only one insider or accomplice.",
+    "description": "This contains details of the employment relationship between an individual and an organization. A job may be connected to only one organization and may be connected to only one insider or accomplice.",
     "type": "object",
     "properties": {
         "id": {
             "type": "string",
-            "description": "A unique string that begins with \"job--\" and is appended with a UUIDv4.",
+            "description": "A unique string that begins with \"job--\" and is appended with a UUIDv4",
             "pattern": "^job--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
         },
         "job_function": {
             "type": "string",
-            "description": "Functional category of the individual's job. job_function and occupation vocabularies are based in large part on the 2018 Standard Occupational Classification system published by the Bureau of Labor Statistics.",
+            "description": "Functional category of the individual's job. job_function and occupation vocabularies are based in large part on the 2018 Standard Occupational Classification system published by the Bureau of Labor Statistics",
             "$ref": "#/$defs/job-function-vocab"
         },
         "occupation": {
             "type": "string",
-            "description": "The subcategory of the individual's job. When present, `job_function` should also be present. The chosen constant for occupation MUST match the constant for job_function.",
+            "description": "The subcategory of the individual's job. When present, `job_function` should also be present. The chosen constant for occupation MUST match the constant for job_function",
             "$ref": "#/$defs/occupation-vocab"
         },
         "title": {
             "type": "string",
-            "description": "The individual's job title. If title is specified, `occupation` should be as well."
+            "description": "The individual's job title. If title is specified, `occupation` should be as well"
         },
         "position_technical": {
             "type": "boolean",
-            "description": "The individual had access to technical areas of the organization as part of their job role. E.g. IT admin, network engineer, help desk associate, etc."
+            "description": "The individual had access to technical areas of the organization as part of their job role (e.g., IT admin, network engineer, help desk associate)"
         },
         "access_authorization": {
             "type": "string",
-            "description": "The level of access control given by this job role.",
+            "description": "The level of access control given by this job role",
             "$ref": "#/$defs/access-auth-vocab"
         },
         "employment_type": {
             "type": "string",
-            "description": "The individual's employment arangement at the time of the incident.",
+            "description": "The individual's employment arrangement at the time of the incident",
             "$ref": "#/$defs/employment-type-vocab"
         },
         "hire_date": {
             "type": "string",
             "format": "date",
-            "description": "Date the individual is hired into this position."
+            "description": "Date the individual was hired into this position"
         },
         "departure_date": {
             "type": "string",
             "format": "date",
-            "description": "Date the individual departed from this position."
+            "description": "Date the individual departed from this position"
         },
         "tenure": {
             "type": "string",
             "format": "timedelta",
-            "description": "The amount of time the individual spent in this particular job role."
+            "description": "The amount of time the individual spent in this particular job role"
         },
         "comment": {
             "type": "string",
-            "description": "Clarifying comments or details about the job or the individual's employment with the organization."
+            "description": "Clarifying comments or details about the job or the individual's employment with the organization"
         }
     },
     "required": [
@@ -216,62 +216,62 @@
                 {
                     "const": "11.9",
                     "title": "Other Management Occupations",
-                    "description": "Construction Managers, Education Administrators, Food Service Managers, Entertainment and Recreation Managers, Postmasters, Property and Community Association Managers, Social and Community Service Managers, Emergency Management Directors, Funeral Home Managers, Personal Service Managers, Etc."
+                    "description": "Construction Managers, Education Administrators, Food Service Managers, Entertainment and Recreation Managers, Postmasters, Property and Community Association Managers, Social and Community Service Managers, Emergency Management Directors, Funeral Home Managers, Personal Service Managers, etc."
                 },
                 {
                     "const": "13.1",
                     "title": "Business Operations Specialists",
-                    "description": "Agents and Business Managers, Buyers and Purchasing Agents, Claims Adjusters, Compliance Officers, Human Resources Specialists, Project Managers, Management Analysts, Event Planners, Fundraisers, Benefits and Job Analysts, Training and Development Specialists, Market Research Analysts, Etc."
+                    "description": "Agents and Business Managers, Buyers and Purchasing Agents, Claims Adjusters, Compliance Officers, Human Resources Specialists, Project Managers, Management Analysts, Event Planners, Fundraisers, Benefits and Job Analysts, Training and Development Specialists, Market Research Analysts, etc."
                 },
                 {
                     "const": "13.2",
                     "title": "Financial Specialists",
-                    "description": "Accountants, Auditors, Appraisers, Credit Analysts, Financial Analysts, Financial Advisors, Insurance Underwriters, Credit Counselors, Loan Officers, Tax Preparers, Etc."
+                    "description": "Accountants, Auditors, Appraisers, Credit Analysts, Financial Analysts, Financial Advisors, Insurance Underwriters, Credit Counselors, Loan Officers, Tax Preparers, etc."
                 },
                 {
                     "const": "15.1",
                     "title": "Computer Occupations",
-                    "description": "Computer Systems Analysts, Information Security Analysts, Network Support Specialists, User Support Specialists, Network Architects, Systems Administrators, Software Developers, Web Developers, Interface Designers, Etc."
+                    "description": "Computer Systems Analysts, Information Security Analysts, Network Support Specialists, User Support Specialists, Network Architects, Systems Administrators, Software Developers, Web Developers, Interface Designers, etc."
                 },
                 {
                     "const": "15.2",
                     "title": "Mathematical Science Occupations",
-                    "description": "Actuaries, Mathematicians, Operations Research Analysts, Statisticians, Data Scientists, Etc."
+                    "description": "Actuaries, Mathematicians, Operations Research Analysts, Statisticians, Data Scientists, etc."
                 },
                 {
                     "const": "17.1",
                     "title": "Architects, Surveyors, and Cartographers",
-                    "description": "Architects, Landscape Architects, Cartographers, Surveyors, Etc."
+                    "description": "Architects, Landscape Architects, Cartographers, Surveyors, etc."
                 },
                 {
                     "const": "17.2",
                     "title": "Engineers",
-                    "description": "Aerospace Engineers, Bioengineers Engineers, Chemical Engineers, Civil Engineers, Electrical Engineers, Electronics Engineers, Environmental Engineers, Industrial Engineers, Marine Engineers, Naval Architects, Mechanical Engineers, Geological Engineers, Etc."
+                    "description": "Aerospace Engineers, Bioengineers Engineers, Chemical Engineers, Civil Engineers, Electrical Engineers, Electronics Engineers, Environmental Engineers, Industrial Engineers, Marine Engineers, Naval Architects, Mechanical Engineers, Geological Engineers, etc."
                 },
                 {
                     "const": "17.3",
                     "title": "Drafters, Engineering Technicians, and Mapping Technicians",
-                    "description": "Architectural Drafters, Mechanical Drafters, Other Drafters, Aerospace Technicians, Civil Engineering Technicians, Environmental Engineering Technicians, Industrial Engineering Technicians, Mechanical Engineering Technicians, Engineering Technicians, Surveying Technicians, Etc."
+                    "description": "Architectural Drafters, Mechanical Drafters, Other Drafters, Aerospace Technicians, Civil Engineering Technicians, Environmental Engineering Technicians, Industrial Engineering Technicians, Mechanical Engineering Technicians, Engineering Technicians, Surveying Technicians, etc."
                 },
                 {
                     "const": "19.1",
                     "title": "Life Scientists",
-                    "description": "Food Scientists and Technologists, Microbiologists, Zoologists, Biological Scientists, Conservation Scientists, Epidemiologists, Medical Scientists, Etc."
+                    "description": "Food Scientists and Technologists, Microbiologists, Zoologists, Biological Scientists, Conservation Scientists, Epidemiologists, Medical Scientists, etc."
                 },
                 {
                     "const": "19.2",
                     "title": "Physical Scientists",
-                    "description": "Astronomers, Physicists, Atmospheric and Space Scientists, Chemists, Materials Scientists, Environmental Scientists and Specialists, Geoscientists, Hydrologists, Etc."
+                    "description": "Astronomers, Physicists, Atmospheric and Space Scientists, Chemists, Materials Scientists, Environmental Scientists and Specialists, Geoscientists, Hydrologists, etc."
                 },
                 {
                     "const": "19.3",
                     "title": "Social Scientists and Related Workers",
-                    "description": "Economists, Survey Researchers, Psychologists, Sociologists, Urban Planners, Anthropologists, Archeologists, Geographers, Historians, Political Scientists, Etc."
+                    "description": "Economists, Survey Researchers, Psychologists, Sociologists, Urban Planners, Anthropologists, Archeologists, Geographers, Historians, Political Scientists, etc."
                 },
                 {
                     "const": "19.4",
                     "title": "Life, Physical, and Social Science Technicians",
-                    "description": "Biological Technicians, Chemical Technicians, Environmental Science Technicians, Geological Technicians, Nuclear Technicians, Social Science Research Assistants, Forest and Conservation Technicians, Forensic Science Technicians, Etc."
+                    "description": "Biological Technicians, Chemical Technicians, Environmental Science Technicians, Geological Technicians, Nuclear Technicians, Social Science Research Assistants, Forest and Conservation Technicians, Forensic Science Technicians, etc."
                 },
                 {
                     "const": "19.5",
@@ -281,22 +281,22 @@
                 {
                     "const": "21.1",
                     "title": "Social Service Specialists",
-                    "description": "Guidance Counselors, Marriage and Family Therapists, Mental Health Counselors, Rehabilitation Counselors, Social Workers, Health Education Specialists, Probation Officers, Social Service Assistants, Community Health Workers, Etc."
+                    "description": "Guidance Counselors, Marriage and Family Therapists, Mental Health Counselors, Rehabilitation Counselors, Social Workers, Health Education Specialists, Probation Officers, Social Service Assistants, Community Health Workers, etc."
                 },
                 {
                     "const": "21.2",
                     "title": "Religious Workers",
-                    "description": "Clergy, Religious Activities Directors, Religious Education Directors, Etc."
+                    "description": "Clergy, Religious Activities Directors, Religious Education Directors, etc."
                 },
                 {
                     "const": "23.1",
                     "title": "Lawyers, Judges, and Related Workers",
-                    "description": "Lawyers, Judicial Law Clerks, Hearing Officers, Arbitrators, Judges, Magistrates, Etc."
+                    "description": "Lawyers, Judicial Law Clerks, Hearing Officers, Arbitrators, Judges, Magistrates, etc."
                 },
                 {
                     "const": "23.2",
                     "title": "Legal Support Workers",
-                    "description": "Paralegals, Legal Assistants, Title Examiners, Abstractors, Etc."
+                    "description": "Paralegals, Legal Assistants, Title Examiners, Abstractors, etc."
                 },
                 {
                     "const": "25.2",
@@ -306,7 +306,7 @@
                 {
                     "const": "25.3",
                     "title": "Other Teachers and Instructors",
-                    "description": "Adult Education, English as a Second Language Instructors, Self-Enrichment Teachers, Substitute Teachers, Tutors, Etc."
+                    "description": "Adult Education, English as a Second Language Instructors, Self-Enrichment Teachers, Substitute Teachers, Tutors, etc."
                 },
                 {
                     "const": "25.4",
@@ -316,47 +316,47 @@
                 {
                     "const": "25.9",
                     "title": "Other Educational Instruction and Library Occupations",
-                    "description": "Farm and Home Management Educators, Instructional Coordinators, Teaching Assistants, Library Workers, Etc."
+                    "description": "Farm and Home Management Educators, Instructional Coordinators, Teaching Assistants, Library Workers, etc."
                 },
                 {
                     "const": "27.1",
                     "title": "Art and Design Workers",
-                    "description": "Art Directors, Fine Artists, Animators, Fashion Designers, Graphic Designers, Interior Designers, Etc."
+                    "description": "Art Directors, Fine Artists, Animators, Fashion Designers, Graphic Designers, Interior Designers, etc."
                 },
                 {
                     "const": "27.2",
                     "title": "Entertainers and Performers, Sports and Related Workers",
-                    "description": "Actors, Producers, Directors, Athletes, Coaches, Scouts, Referees, Dancers, Choreographers, Composers, Musicians, Etc."
+                    "description": "Actors, Producers, Directors, Athletes, Coaches, Scouts, Referees, Dancers, Choreographers, Composers, Musicians, etc."
                 },
                 {
                     "const": "27.3",
                     "title": "Media and Communication Workers",
-                    "description": "Broadcast Announcers, Radio Disc Jockeys, News Analysts, Reporters, Journalists, Public Relations Specialists, Editors, Technical Writers, Writers and Authors, Interpreters and Translators, Court Reporters and Simultaneous Captioners, Etc."
+                    "description": "Broadcast Announcers, Radio Disc Jockeys, News Analysts, Reporters, Journalists, Public Relations Specialists, Editors, Technical Writers, Writers and Authors, Interpreters and Translators, Court Reporters and Simultaneous Captioners, etc."
                 },
                 {
                     "const": "27.4",
                     "title": "Media and Communication Equipment Workers",
-                    "description": "Audio and Video Technicians, Broadcast Technicians, Sound Engineering Technicians, Lighting Technicians, Photographers, Camera Operators, Film Editors, Etc."
+                    "description": "Audio and Video Technicians, Broadcast Technicians, Sound Engineering Technicians, Lighting Technicians, Photographers, Camera Operators, Film Editors, etc."
                 },
                 {
                     "const": "29.1",
                     "title": "Healthcare Practitioners",
-                    "description": "Chiropractors, Dentists, Dietitians, Pharmacists, Physician Assistants, Physical and Occupational Therapists, Veterinarians, Nurses, Psychiatrists, Radiologists, Physicians, Surgeons, Etc."
+                    "description": "Chiropractors, Dentists, Dietitians, Pharmacists, Physician Assistants, Physical and Occupational Therapists, Veterinarians, Nurses, Psychiatrists, Radiologists, Physicians, Surgeons, etc."
                 },
                 {
                     "const": "29.2",
                     "title": "Health Technologists and Technicians",
-                    "description": "Laboratory Technicians, Sonographers, Radiologic Technicians, Paramedics, Pharmacy Technicians, Psychiatric Technicians, Veterinary Technicians, Vocational Nurses, Medical Records Specialists, Orthotists and Prosthetists, Etc."
+                    "description": "Laboratory Technicians, Sonographers, Radiologic Technicians, Paramedics, Pharmacy Technicians, Psychiatric Technicians, Veterinary Technicians, Vocational Nurses, Medical Records Specialists, Orthotists and Prosthetists, etc."
                 },
                 {
                     "const": "29.9",
                     "title": "Other Healthcare Practitioners and Technical Occupations",
-                    "description": "Health Information Technologists and Medical Registrars, Athletic Trainers, Genetic Counselors, Surgical Assistants, Etc."
+                    "description": "Health Information Technologists and Medical Registrars, Athletic Trainers, Genetic Counselors, Surgical Assistants, etc."
                 },
                 {
                     "const": "31.1",
                     "title": "Home Health Aides, Nursing Assistants, and Psychiatric Aides",
-                    "description": "Home Health Aides, Personal Care Aides, Nursing Assistants, Orderlies, Psychiatric Aides, Etc."
+                    "description": "Home Health Aides, Personal Care Aides, Nursing Assistants, Orderlies, Psychiatric Aides, etc."
                 },
                 {
                     "const": "31.2",
@@ -366,7 +366,7 @@
                 {
                     "const": "31.9",
                     "title": "Other Healthcare Support Occupations",
-                    "description": "Massage Therapists, Dental Assistants, Medical Assistants, Medical Transcriptionists, Pharmacy Aides, Veterinary Assistants and Laboratory Animal Caretakers, Phlebotomists, Etc."
+                    "description": "Massage Therapists, Dental Assistants, Medical Assistants, Medical Transcriptionists, Pharmacy Aides, Veterinary Assistants and Laboratory Animal Caretakers, Phlebotomists, etc."
                 },
                 {
                     "const": "33.1",
@@ -376,17 +376,17 @@
                 {
                     "const": "33.2",
                     "title": "Firefighting and Prevention Workers",
-                    "description": "Firefighters, Fire Investigators, Forest Fire Prevention Specialists, Etc."
+                    "description": "Firefighters, Fire Investigators, Forest Fire Prevention Specialists, etc."
                 },
                 {
                     "const": "33.3",
                     "title": "Law Enforcement Workers",
-                    "description": "Bailiffs, Correctional Officers, Detectives and Criminal Investigators, Fish and Game Wardens, Parking Enforcement Workers, Police and Sheriff's Patrol Officers, Etc."
+                    "description": "Bailiffs, Correctional Officers, Detectives and Criminal Investigators, Fish and Game Wardens, Parking Enforcement Workers, Police and Sheriff's Patrol Officers, etc."
                 },
                 {
                     "const": "33.9",
                     "title": "Other Protective Service Workers",
-                    "description": "Animal Control Workers, Private Detectives and Investigators, Security Guards, Lifeguards and Other Recreational Protective Service Workers, Transportation Security Screeners, Etc."
+                    "description": "Animal Control Workers, Private Detectives and Investigators, Security Guards, Lifeguards and Other Recreational Protective Service Workers, Transportation Security Screeners, etc."
                 },
                 {
                     "const": "35.1",
@@ -396,17 +396,17 @@
                 {
                     "const": "35.2",
                     "title": "Cooks and Food Preparation Workers",
-                    "description": "Cooks and Food Preparation Workers, Etc."
+                    "description": "Cooks and Food Preparation Workers, etc."
                 },
                 {
                     "const": "35.3",
                     "title": "Food and Beverage Serving Workers",
-                    "description": "Bartenders, Fast Food and Counter Workers, Waiters and Waitresses, Food Servers (Nonrestaurant), Etc."
+                    "description": "Bartenders, Fast Food and Counter Workers, Waiters and Waitresses, Food Servers (Nonrestaurant), etc."
                 },
                 {
                     "const": "35.9",
                     "title": "Other Food Preparation and Serving Related Workers",
-                    "description": "Dining Room and Cafeteria Attendants and Bartender Helpers, Dishwashers, Hosts and Hostesses, Etc."
+                    "description": "Dining Room and Cafeteria Attendants and Bartender Helpers, Dishwashers, Hosts and Hostesses, etc."
                 },
                 {
                     "const": "37.1",
@@ -416,12 +416,12 @@
                 {
                     "const": "37.2",
                     "title": "Building Cleaning and Pest Control Workers",
-                    "description": "Janitors and Cleaners, Maids and Housekeeping Cleaners, Building Cleaning Workers, Pest Control Workers, Etc."
+                    "description": "Janitors and Cleaners, Maids and Housekeeping Cleaners, Building Cleaning Workers, Pest Control Workers, etc."
                 },
                 {
                     "const": "37.3",
                     "title": "Grounds Maintenance Workers",
-                    "description": "Landscaping and Groundskeeping Workers, Tree Trimmers, Etc."
+                    "description": "Landscaping and Groundskeeping Workers, Tree Trimmers, etc."
                 },
                 {
                     "const": "39.1",
@@ -431,37 +431,37 @@
                 {
                     "const": "39.2",
                     "title": "Animal Care and Service Workers",
-                    "description": "Animal Trainers, Animal Caretakers, Etc."
+                    "description": "Animal Trainers, Animal Caretakers, etc."
                 },
                 {
                     "const": "39.3",
                     "title": "Entertainment Attendants and Related Workers",
-                    "description": "Gambling Dealers, Sports Book Writers and Runners, Ushers and Ticket Takers, Amusement and Recreation Attendants, Dressing Room Attendants, Etc."
+                    "description": "Gambling Dealers, Sports Book Writers and Runners, Ushers and Ticket Takers, Amusement and Recreation Attendants, Dressing Room Attendants, etc."
                 },
                 {
                     "const": "39.4",
                     "title": "Funeral Service Workers",
-                    "description": "Embalmers, Crematory Operators, Funeral Attendants, Morticians, Undertakers, and Funeral Arrangers, Etc."
+                    "description": "Embalmers, Crematory Operators, Funeral Attendants, Morticians, Undertakers, and Funeral Arrangers, etc."
                 },
                 {
                     "const": "39.5",
                     "title": "Personal Appearance Workers",
-                    "description": "Barbers, Hairdressers, Hairstylists, Cosmetologists, Makeup Artists, Manicurists, Skincare Specialists, Etc."
+                    "description": "Barbers, Hairdressers, Hairstylists, Cosmetologists, Makeup Artists, Manicurists, Skincare Specialists, etc."
                 },
                 {
                     "const": "39.6",
                     "title": "Baggage Porters, Bellhops, and Concierges",
-                    "description": "Baggage Porters and Bellhops, Concierges, Etc."
+                    "description": "Baggage Porters and Bellhops, Concierges, etc."
                 },
                 {
                     "const": "39.7",
                     "title": "Tour and Travel Guides",
-                    "description": "Tour Guides and Escorts, Travel Guides, Etc."
+                    "description": "Tour Guides and Escorts, Travel Guides, etc."
                 },
                 {
                     "const": "39.9",
                     "title": "Other Personal Care and Service Workers",
-                    "description": "Childcare Workers, Exercise Trainers and Group Fitness Instructors, Recreation Workers, Residential Advisors, Etc."
+                    "description": "Childcare Workers, Exercise Trainers and Group Fitness Instructors, Recreation Workers, Residential Advisors, etc."
                 },
                 {
                     "const": "41.1",
@@ -471,12 +471,12 @@
                 {
                     "const": "41.2",
                     "title": "Retail Sales Workers",
-                    "description": "Cashiers, Counter and Rental Clerks, Parts Salespersons, Retail Salespersons, Etc."
+                    "description": "Cashiers, Counter and Rental Clerks, Parts Salespersons, Retail Salespersons, etc."
                 },
                 {
                     "const": "41.3",
                     "title": "Sales Representatives, Services",
-                    "description": "Advertising Sales Agents, Insurance Sales Agents, Securities and Commodities Sales Agents, Financial Services Sales Agents, Travel Agents, Etc."
+                    "description": "Advertising Sales Agents, Insurance Sales Agents, Securities and Commodities Sales Agents, Financial Services Sales Agents, Travel Agents, etc."
                 },
                 {
                     "const": "41.4",
@@ -486,7 +486,7 @@
                 {
                     "const": "41.9",
                     "title": "Other Sales and Related Workers",
-                    "description": "Demonstrators and Product Promoters, Real Estate Brokers, Real Estate Sales Agents, Sales Engineers, Telemarketers, Door-to-Door Sales Workers, News and Street Vendors, Etc."
+                    "description": "Demonstrators and Product Promoters, Real Estate Brokers, Real Estate Sales Agents, Sales Engineers, Telemarketers, Door-to-Door Sales Workers, News and Street Vendors, etc."
                 },
                 {
                     "const": "43.1",
@@ -496,32 +496,32 @@
                 {
                     "const": "43.2",
                     "title": "Communications Equipment Operators",
-                    "description": "Telephone Operators, Communications Equipment Operators, Etc."
+                    "description": "Telephone Operators, Communications Equipment Operators, etc."
                 },
                 {
                     "const": "43.3",
                     "title": "Financial Clerks",
-                    "description": "Bill Collectors, Bookkeeping and Accounting Clerks, and Auditing Clerks, Payroll and Timekeeping Clerks, Procurement Clerks, Tellers, Financial Clerks, Etc."
+                    "description": "Bill Collectors, Bookkeeping and Accounting Clerks, and Auditing Clerks, Payroll and Timekeeping Clerks, Procurement Clerks, Tellers, Financial Clerks, etc."
                 },
                 {
                     "const": "43.4",
                     "title": "Information and Record Clerks",
-                    "description": "Court Clerks, Customer Service Representatives, Eligibility Interviewers, File Clerks, Hotel Desk Clerks, Library Assistants, Accounts Clerks, Order Clerks, Human Resources Assistants, Receptionists, Information Clerks, Ticket Agents and Travel Clerks, Etc."
+                    "description": "Court Clerks, Customer Service Representatives, Eligibility Interviewers, File Clerks, Hotel Desk Clerks, Library Assistants, Accounts Clerks, Order Clerks, Human Resources Assistants, Receptionists, Information Clerks, Ticket Agents and Travel Clerks, etc."
                 },
                 {
                     "const": "43.5",
                     "title": "Material Recording, Scheduling, Dispatching, and Distributing Workers",
-                    "description": "Cargo and Freight Agents, Couriers, Messengers, Dispatchers, Meter Readers, Postal Service Clerks and Carriers, Mail Sorters, Shipping and Receiving Clerks, Inventory Clerks, Etc."
+                    "description": "Cargo and Freight Agents, Couriers, Messengers, Dispatchers, Meter Readers, Postal Service Clerks and Carriers, Mail Sorters, Shipping and Receiving Clerks, Inventory Clerks, etc."
                 },
                 {
                     "const": "43.6",
                     "title": "Administrative Assistants",
-                    "description": "Executive Administrative Assistants, Legal Secretaries, Administrative Assistants, Etc."
+                    "description": "Executive Administrative Assistants, Legal Secretaries, Administrative Assistants, etc."
                 },
                 {
                     "const": "43.9",
                     "title": "Other Office and Administrative Support Workers",
-                    "description": "Data Entry Clerks, Insurance Claims Clerks, Mail Clerks, Office Clerks, Proofreaders, Statistical Assistants, Etc."
+                    "description": "Data Entry Clerks, Insurance Claims Clerks, Mail Clerks, Office Clerks, Proofreaders, Statistical Assistants, etc."
                 },
                 {
                     "const": "45.1",
@@ -531,7 +531,7 @@
                 {
                     "const": "45.2",
                     "title": "Agricultural Workers",
-                    "description": "Agricultural Inspectors, Animal Breeders, Graders and Sorters, Equipment Operators, Farmworkers and Laborers, Etc."
+                    "description": "Agricultural Inspectors, Animal Breeders, Graders and Sorters, Equipment Operators, Farmworkers and Laborers, etc."
                 },
                 {
                     "const": "45.3",
@@ -541,7 +541,7 @@
                 {
                     "const": "45.4",
                     "title": "Forest, Conservation, and Logging Workers",
-                    "description": "Forest and Conservation Workers, Logging Workers, Etc."
+                    "description": "Forest and Conservation Workers, Logging Workers, etc."
                 },
                 {
                     "const": "47.1",
@@ -551,22 +551,22 @@
                 {
                     "const": "47.2",
                     "title": "Construction Trades Workers",
-                    "description": "Masons, Carpenters, Floor Layers, Construction Laborers, Equipment Operators, Drywall Installers, Electricians, Painters, Paperhangers, Plumbers, Pipefitters, Roofers, Etc."
+                    "description": "Masons, Carpenters, Floor Layers, Construction Laborers, Equipment Operators, Drywall Installers, Electricians, Painters, Paperhangers, Plumbers, Pipefitters, Roofers, etc."
                 },
                 {
                     "const": "47.3",
                     "title": "Helpers, Construction Trades",
-                    "description": "Helpers of Masons, Carpenters, Electricians, Painters, Paperhangers, Pipelayers, Plumbers, Pipefitters, and Steamfitters, Roofers, Etc."
+                    "description": "Helpers of Masons, Carpenters, Electricians, Painters, Paperhangers, Pipelayers, Plumbers, Pipefitters, and Steamfitters, Roofers, etc."
                 },
                 {
                     "const": "47.4",
                     "title": "Other Construction and Related Workers",
-                    "description": "Construction and Building Inspectors, Elevator and Escalator Installers and Repairers, Fence Erectors, Hazardous Materials Removal Workers, Highway Maintenance Workers, Rail-Track Laying and Maintenance Equipment Operators, Septic Tank Servicers and Sewer Pipe Cleaners, Etc."
+                    "description": "Construction and Building Inspectors, Elevator and Escalator Installers and Repairers, Fence Erectors, Hazardous Materials Removal Workers, Highway Maintenance Workers, Rail-Track Laying and Maintenance Equipment Operators, Septic Tank Servicers and Sewer Pipe Cleaners, etc."
                 },
                 {
                     "const": "47.5",
                     "title": "Extraction Workers",
-                    "description": "Oil and Gas Operators, Explosives Workers, Ordnance Handling Experts, Blasters, Mining Machine Operators, Quarry Rock Splitters, Extraction Workers, Etc."
+                    "description": "Oil and Gas Operators, Explosives Workers, Ordnance Handling Experts, Blasters, Mining Machine Operators, Quarry Rock Splitters, Extraction Workers, etc."
                 },
                 {
                     "const": "49.1",
@@ -576,17 +576,17 @@
                 {
                     "const": "49.2",
                     "title": "Electrical and Electronic Equipment Mechanics, Installers, and Repairers",
-                    "description": "Computer and Office Machine Repairers, Radio and Cellular Equipment Installers, Avionics Technicians, Electric Motor and Power Tool Repairers, Electrical and Electronics Repairers and Installers, Audiovisual Equipment Technicicans, Security and Fire Alarm Systems Installers, Etc."
+                    "description": "Computer and Office Machine Repairers, Radio and Cellular Equipment Installers, Avionics Technicians, Electric Motor and Power Tool Repairers, Electrical and Electronics Repairers and Installers, Audiovisual Equipment Technicicans, Security and Fire Alarm Systems Installers, etc."
                 },
                 {
                     "const": "49.3",
                     "title": "Vehicle and Mobile Equipment Mechanics, Installers, and Repairers",
-                    "description": "Aircraft Mechanics and Service Technicians, Automotive Body Repairers, Automotive Service Technicians and Mechanics, Mobile Heavy Equipment Mechanics, Motorboat Mechanics, Outdoor Power Equipment and Other Small Engine Mechanics, Tire Repairers and Changers, Etc."
+                    "description": "Aircraft Mechanics and Service Technicians, Automotive Body Repairers, Automotive Service Technicians and Mechanics, Mobile Heavy Equipment Mechanics, Motorboat Mechanics, Outdoor Power Equipment and Other Small Engine Mechanics, Tire Repairers and Changers, etc."
                 },
                 {
                     "const": "49.9",
                     "title": "Other Installation, Maintenance, and Repair Occupations",
-                    "description": "HVAC and Refrigeration Mechanics, Home Appliance Repairers, Machinery Maintenance Workers, Power-Line Installers and Repairers, Precision Instrument and Equipment Repairers, General Maintenance and Repair Workers, Service Technicians, Signal and Track Switch Repairers, Etc."
+                    "description": "HVAC and Refrigeration Mechanics, Home Appliance Repairers, Machinery Maintenance Workers, Power-Line Installers and Repairers, Precision Instrument and Equipment Repairers, General Maintenance and Repair Workers, Service Technicians, Signal and Track Switch Repairers, etc."
                 },
                 {
                     "const": "51.1",
@@ -596,17 +596,17 @@
                 {
                     "const": "51.2",
                     "title": "Assemblers and Fabricators",
-                    "description": "Electrical and Electronic Equipment Assemblers, Engine and Other Machine Assemblers, Structural Metal Fabricators and Fitters, Fiberglass Laminators and Fabricators, Etc."
+                    "description": "Electrical and Electronic Equipment Assemblers, Engine and Other Machine Assemblers, Structural Metal Fabricators and Fitters, Fiberglass Laminators and Fabricators, etc."
                 },
                 {
                     "const": "51.3",
                     "title": "Food Processing Workers",
-                    "description": "Bakers, Butchers and Meat Cutters, Meat Packers, Machine Operators, Etc."
+                    "description": "Bakers, Butchers and Meat Cutters, Meat Packers, Machine Operators, etc."
                 },
                 {
                     "const": "51.4",
                     "title": "Metal Workers and Plastic Workers",
-                    "description": "Machinists, Furnace Operators, Casters, Model Makers, Patternmakers, Tool and Die Makers, Welders, Cutters, Solderers, Brazers, Layout Workers, Machine Setters and Operators, Tool Sharpeners, Etc."
+                    "description": "Machinists, Furnace Operators, Casters, Model Makers, Patternmakers, Tool and Die Makers, Welders, Cutters, Solderers, Brazers, Layout Workers, Machine Setters and Operators, Tool Sharpeners, etc."
                 },
                 {
                     "const": "51.5",
@@ -616,32 +616,32 @@
                 {
                     "const": "51.6",
                     "title": "Textile, Apparel, and Furnishings Workers",
-                    "description": "Laundry and Dry-Cleaning Workers, Shoe and Leather Workers, Sewers, Tailors, Dressmakers, Textile Operators and Machine Setters, Patternmakers, Upholsterers, Etc."
+                    "description": "Laundry and Dry-Cleaning Workers, Shoe and Leather Workers, Sewers, Tailors, Dressmakers, Textile Operators and Machine Setters, Patternmakers, Upholsterers, etc."
                 },
                 {
                     "const": "51.7",
                     "title": "Woodworkers",
-                    "description": "Cabinetmakers and Bench Carpenters, Furniture Finishers, Model Makers, Patternmakers, Machine Setters and Operators, Etc."
+                    "description": "Cabinetmakers and Bench Carpenters, Furniture Finishers, Model Makers, Patternmakers, Machine Setters and Operators, etc."
                 },
                 {
                     "const": "51.8",
                     "title": "Plant and System Operators",
-                    "description": "Nuclear Power Reactor Operators, Power Distributors and Dispatchers, Plant Operators, Stationary Engineers and Boiler Operators, Petroleum Pump System Operators, Refinery Operators, Gaugers, Etc."
+                    "description": "Nuclear Power Reactor Operators, Power Distributors and Dispatchers, Plant Operators, Stationary Engineers and Boiler Operators, Petroleum Pump System Operators, Refinery Operators, Gaugers, etc."
                 },
                 {
                     "const": "51.9",
                     "title": "Other Production Occupations",
-                    "description": "Chemical Equipment Operators, Appliance Technicians, Inspectors, Testers, Sorters, Jewelers, Metal Workers, Laboratory Technicians, Machine Operators, Painting Workers, Production Workers, Etc."
+                    "description": "Chemical Equipment Operators, Appliance Technicians, Inspectors, Testers, Sorters, Jewelers, Metal Workers, Laboratory Technicians, Machine Operators, Painting Workers, Production Workers, etc."
                 },
                 {
                     "const": "53.1",
                     "title": "Supervisors of Transportation and Material Moving Workers",
-                    "description": "Aircraft Cargo Handling Supervisors, First-Line Supervisors of Helpers, Laborers, Material Movers, Vehicle Operators, Passenger Attendants, Transportation Workers, Etc."
+                    "description": "Aircraft Cargo Handling Supervisors, First-Line Supervisors of Helpers, Laborers, Material Movers, Vehicle Operators, Passenger Attendants, Transportation Workers, etc."
                 },
                 {
                     "const": "53.2",
                     "title": "Air Transportation Workers",
-                    "description": "Pilots, Copilots, Flight Engineers, Air Traffic Controllers, Airfield Operations Specialists, Flight Attendants, Etc."
+                    "description": "Pilots, Copilots, Flight Engineers, Air Traffic Controllers, Airfield Operations Specialists, Flight Attendants, etc."
                 },
                 {
                     "const": "53.3",
@@ -651,22 +651,22 @@
                 {
                     "const": "53.4",
                     "title": "Rail Transportation Workers",
-                    "description": "Engineers, Operators, Hostlers, Locomotive Firers, Conductors, Yardmasters, Etc."
+                    "description": "Engineers, Operators, Hostlers, Locomotive Firers, Conductors, Yardmasters, etc."
                 },
                 {
                     "const": "53.5",
                     "title": "Water Transportation Workers",
-                    "description": "Sailors and Marine Oilers, Captains, Mates, and Pilots of Water Vessels, Motorboat Operators, Ship Engineers, Etc."
+                    "description": "Sailors and Marine Oilers, Captains, Mates, and Pilots of Water Vessels, Motorboat Operators, Ship Engineers, etc."
                 },
                 {
                     "const": "53.6",
                     "title": "Other Transportation Workers",
-                    "description": "Bridge and Lock Tenders, Parking Attendants, Service Attendants, Traffic Technicians, Transportation Inspectors, Passenger Attendants, Etc."
+                    "description": "Bridge and Lock Tenders, Parking Attendants, Service Attendants, Traffic Technicians, Transportation Inspectors, Passenger Attendants, etc."
                 },
                 {
                     "const": "53.7",
                     "title": "Material Moving Workers",
-                    "description": "Packers, Stockers, Refuse Collectors, Loaders, Crane Operators, Truck and Tractor Operators, Laborers, Etc."
+                    "description": "Packers, Stockers, Refuse Collectors, Loaders, Crane Operators, Truck and Tractor Operators, Laborers, etc."
                 },
                 {
                     "const": "55.1",
@@ -691,7 +691,7 @@
                 {
                     "const": "99.9",
                     "title": "Other",
-                    "description": "Other occupation not listed."
+                    "description": "Other occupation not listed"
                 }
             ]
         },
@@ -700,47 +700,47 @@
                 {
                     "const": "1",
                     "title": "Access Revoked",
-                    "description": "Access was revoked after departing or as a disciplinary action."
+                    "description": "Access was revoked after departing or as a disciplinary action"
                 },
                 {
                     "const": "2",
                     "title": "Administrator/Root",
-                    "description": "Authorized full administrative access."
+                    "description": "Authorized full administrative access"
                 },
                 {
                     "const": "3",
                     "title": "Authorized Account & Data",
-                    "description": "Authorized account and access to targeted data."
+                    "description": "Authorized account and access to targeted data"
                 },
                 {
                     "const": "4",
                     "title": "Authorized Account Only",
-                    "description": "Authorized account but not authorized access to targeted data."
+                    "description": "Authorized account but not authorized access to targeted data"
                 },
                 {
                     "const": "5",
                     "title": "Authorized Privileged User",
-                    "description": "Authorized privileged access."
+                    "description": "Authorized privileged access"
                 },
                 {
                     "const": "6",
                     "title": "Authorized Unprivileged User",
-                    "description": "Authorized unprivileged access."
+                    "description": "Authorized unprivileged access"
                 },
                 {
                     "const": "7",
                     "title": "Former Employee, Access not Deactivated",
-                    "description": "Access was not properly revoked after departure from the organization."
+                    "description": "Access was not properly revoked after departure from the organization"
                 },
                 {
                     "const": "8",
                     "title": "Never Given Access",
-                    "description": "Never given system access."
+                    "description": "Never given system access"
                 },
                 {
                     "const": "9",
                     "title": "Unauthorized",
-                    "description": "Unauthorized access."
+                    "description": "Unauthorized access"
                 }
             ]
         },
@@ -749,37 +749,37 @@
                 {
                     "const": "CTR",
                     "title": "Contractor",
-                    "description": "Individual not directly employed by the organization whose job responsibilities they filling (self-employed or employed by a different, contracting organization)."
+                    "description": "Individual not directly employed by the organization whose job responsibilities they are filling (self-employed or employed by a different, contracting organization)"
                 },
                 {
                     "const": "FLT",
                     "title": "Full-time",
-                    "description": "Individual who is directly employed by the organization and works at least 35 hours per week (or is classified by the organization as a full-time employee)."
+                    "description": "Individual who is directly employed by the organization and works at least 35 hours per week or is classified by the organization as a full-time employee"
                 },
                 {
                     "const": "PRT",
                     "title": "Part-time",
-                    "description": "Individual who is directly employed by the organization and works less than 35 hours per week (or is classified by the organization as a part-time employee)."
+                    "description": "Individual who is directly employed by the organization and works less than 35 hours per week or is classified by the organization as a part-time employee"
                 },
                 {
                     "const": "INT",
                     "title": "Intern/Trainee/Aprentice",
-                    "description": "An advanced student or graduate gaining supervised practical experience in a particular field or job role, sometimes without pay."
+                    "description": "An advanced student or graduate gaining supervised practical experience in a particular field or job role, sometimes without pay"
                 },
                 {
                     "const": "TMP",
                     "title": "Temporary Employee",
-                    "description": "Individual hired for a brief period of time or until a certain project is completed."
+                    "description": "Individual hired for a brief period of time or until a certain project is completed"
                 },
                 {
                     "const": "VOL",
                     "title": "Volunteer",
-                    "description": "Individual not employed by the organization, but who donates their time to working on projects without receiving pay or benefits."
+                    "description": "Individual not employed by the organization, but who donates their time to working on projects without receiving pay or benefits"
                 },
                 {
                     "const": "OTH",
                     "title": "Other",
-                    "description": "Other employment type not listed in this vocabulary."
+                    "description": "Other employment type not listed in this vocabulary"
                 }
             ]
         }

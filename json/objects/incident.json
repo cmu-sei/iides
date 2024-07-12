@@ -175,7 +175,7 @@
         {
           "const": "SI",
           "title": "Safety Impact",
-          "description": "There was an impact, or potential for impact to safety, as a result of the incident"
+          "description": "There was an impact or potential for impact to safety as a result of the incident"
         },
         {
           "const": "IT",

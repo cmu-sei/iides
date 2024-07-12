@@ -2,40 +2,40 @@
   "$id": "iides/json/objects/source.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Source",
-  "description": "Document that provides information about one or more aspects of the incident.",
+  "description": "Source describes a document that provides information about one or more aspects of the incident.",
   "type": "object",
   "properties": {
     "id": {
       "type": "string",
-      "description": "A unique string that begins with \"source--\" and is appended with a UUIDv4.",
+      "description": "A unique string that begins with \"source--\" and is appended with a UUIDv4",
       "pattern": "^source--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
     },
     "title": {
       "type": "string",
-      "description": "The title of the document."
+      "description": "The title of the document"
     },
     "source_type": {
       "type": "string",
-      "description": "The \"source\" or author of the source document.",
+      "description": "The \"source\" or author of the source document",
       "$ref": "#/$defs/source-type-vocab"
     },
     "file_type": {
       "type": "string",
-      "description": "File type or extension.",
+      "description": "File type or extension",
       "$ref": "#/$defs/source-file-type-vocab"
     },
     "date": {
       "type": "string",
       "format": "date-time",
-      "description": "The date the document was created or most recently modified."
+      "description": "The date the document was created or most recently modified"
     },
     "public": {
       "type": "boolean",
-      "description": "Whether the document is publicly available."
+      "description": "Whether the document is publicly available"
     },
     "document": {
       "type": "string",
-      "description": "A pointer to the document itself, whether a file path, location, url, or document object."
+      "description": "A pointer to the document itself, whether a file path, location, URL, or document object"
     }
   },
   "required": ["id", "title"],
@@ -45,42 +45,42 @@
         {
           "const": "1",
           "title": "Court Document",
-          "description": "Legal document from a court case."
+          "description": "Legal document from a court case"
         },
         {
           "const": "2",
           "title": "DOJ Press Release",
-          "description": "Press release from the Department of Justice or US Attorneys' Office."
+          "description": "Press release from the Department of Justice or U.S. Attorneys' Office"
         },
         {
           "const": "3",
           "title": "Investigator Notes",
-          "description": "Raw notes from an incident investigator."
+          "description": "Raw notes from an incident investigator"
         },
         {
           "const": "4",
           "title": "Logs",
-          "description": "Technical logs from network, server, or user devices."
+          "description": "Technical logs from network, server, or user devices"
         },
         {
           "const": "5",
           "title": "Media",
-          "description": "News, blog, or similar publication."
+          "description": "News, blog, or similar publication"
         },
         {
           "const": "6",
           "title": "Organization Interview",
-          "description": "Direct interview with the victim organization."
+          "description": "Direct interview with the victim organization"
         },
         {
           "const": "7",
           "title": "Insider Interview",
-          "description": "Direct interview with the insider."
+          "description": "Direct interview with the insider"
         },
         {
           "const": "99",
           "title": "Other",
-          "description": "Other type of source not listed in this vocabulary."
+          "description": "Other type of source not listed in this vocabulary"
         }
       ]
     },
@@ -89,47 +89,47 @@
         {
           "const": "html",
           "title": "HTML File",
-          "description": "A file in HTML format."
+          "description": "A file in HTML format"
         },
         {
           "const": "log",
           "title": "Log File",
-          "description": "A log file containing event or transaction logs."
+          "description": "A log file containing technical event or transaction logs"
         },
         {
           "const": "pdf",
           "title": "PDF File",
-          "description": "A file in Portable Document Format."
+          "description": "A file in Portable Document Format"
         },
         {
           "const": "txt",
           "title": "Text File",
-          "description": "A plain text file."
+          "description": "A plain text file"
         },
         {
           "const": "docx",
           "title": "DOCX File",
-          "description": "A Microsoft Word document."
+          "description": "A Microsoft Word document"
         },
         {
           "const": "png",
           "title": "PNG Image",
-          "description": "An image file in PNG format."
+          "description": "An image file in PNG format"
         },
         {
           "const": "xlsx",
           "title": "Excel File",
-          "description": "A Microsoft Excel spreadsheet."
+          "description": "A Microsoft Excel spreadsheet"
         },
         {
           "const": "video",
           "title": "Video File",
-          "description": "A video file."
+          "description": "A video file"
         },
         {
           "const": "other",
           "title": "Other File",
-          "description": "A file of another type not listed in this vocabulary."
+          "description": "A file of another type not listed in this vocabulary"
         }
       ]
     }

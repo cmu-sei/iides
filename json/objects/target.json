@@ -2,42 +2,42 @@
     "$id": "iides/json/objects/target.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Target",
-    "description": "The system, data, person, or physical property that was targeted by the insider. An incident may have many targets.",
+    "description": "Target describes the system, data, person, or physical property that was targeted by the insider. An incident may have many targets.",
     "type": "object",
     "properties": {
       "id": {
         "type": "string",
-        "description": "A unique string that begins with \"target--\" and is appended with a UUIDv4.",
+        "description": "A unique string that begins with \"target--\" and is appended with a UUIDv4",
         "pattern": "^target--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
       },
       "asset_type": {
         "type": "string",
-        "description": "The type of target.",
+        "description": "The type of target",
         "$ref": "#/$defs/target-asset-vocab"
       },
       "category": {
         "type": "string",
-        "description": "The classification group a target belongs to.",
+        "description": "The classification group a target belongs to",
         "$ref": "#/$defs/target-category-vocab"
       },
       "subcategory": {
         "type": "string",
-        "description": "The lower-level classification group a target belongs to.",
+        "description": "The lower level classification group a target belongs to",
         "$ref": "#/$defs/target-subcategory-vocab"
       },
       "format": {
         "type": "string",
-        "description": "The data type of the target.",
+        "description": "The data type of the target",
         "$ref": "#/$defs/target-format-vocab"
       },
       "owner": {
         "type": "string",
-        "description": "Who the data is about. For assets, the owner of the asset. In cases where the owner and subject of the data/asset is unclear, pick the person/group most responsible for safeguarding the data/asset.",
+        "description": "Who the data is about. For assets, the owner of the asset. In cases where the owner and subject of the data or asset is unclear, pick the person or group most responsible for safeguarding the data or asset.",
         "$ref": "#/$defs/target-owner-vocab"
       },
       "sensitivity": {
         "type": "array",
-        "description": "The level of sensitivity and controls applied to a target.",
+        "description": "The level of sensitivity and controls applied to a target",
         "items": {
           "$ref": "#/$defs/target-sensitivity-vocab"
         },
@@ -45,7 +45,7 @@
       },
       "description": {
         "type": "string",
-        "description": "Brief description of the target."
+        "description": "Brief description of the target"
       }
     },
     "required": [
@@ -67,32 +67,32 @@
               {
                 "const": "1",
                 "title": "Facilities",
-                "description": "Buildings, offices, areas of buildings, or functions of buildings (such as disabling a door)."
+                "description": "Buildings, offices, areas of buildings, or functions of buildings (such as disabling a door)"
               },
               {
                 "const": "2",
                 "title": "Information",
-                "description": "Data/business materials which contain important details belonging to a specific target owner."
+                "description": "Data or business materials that contain important details belonging to a specific target owner"
               },
               {
                 "const": "3",
                 "title": "Money",
-                "description": "Currency, digital or physical, or materials, goods, or data that will be converted to currency or are currency equivalent."
+                "description": "Currency, digital or physical, or materials, goods, or data that will be converted to currency or are currency equivalent"
               },
               {
                 "const": "4",
                 "title": "People",
-                "description": "Employees, customers, individuals."
+                "description": "Employees, customers, individuals"
               },
               {
                 "const": "5",
                 "title": "Technology",
-                "description": "Hardware, software, or firmware intended for the storage or transmission of data or the operation of equipment (as in computers running a manufacturing line)."
+                "description": "Hardware, software, or firmware intended for the storage or transmission of data or the operation of equipment (as in computers running a manufacturing line)"
               },
               {
                 "const": "6",
                 "title": "Other",
-                "description": "Other asset type not listed in this vocabulary."
+                "description": "Other asset type not listed in this vocabulary"
               }
             ]
         },
@@ -101,7 +101,7 @@
               {
                 "const": "1.1",
                 "title": "Physical Property - Non-digital assets",
-                "description": "Physical property such as blue prints or material goods."
+                "description": "Physical property such as material goods or office furnishings"
               },
               {
                 "const": "2.1",
@@ -111,67 +111,67 @@
               {
                 "const": "2.2",
                 "title": "Business Plans",
-                "description": "Data or documents having to do with the everyday course of the business."
+                "description": "Data or documents having to do with the everyday course of the business"
               },
               {
                 "const": "2.3",
                 "title": "Government/Law Enforcement Information",
-                "description": "Classified or sensitive government or law enforcement information."
+                "description": "Classified or sensitive government or law enforcement information"
               },
               {
                 "const": "3.1",
                 "title": "Money",
-                "description": "Currency, digital or physical, or materials, goods, or data that will be converted to currency or are currency equivalent."
+                "description": "Currency, digital or physical, or materials, goods, or data that will be converted to currency or are currency equivalent"
               },
               {
                 "const": "4.1",
                 "title": "Customer Data",
-                "description": "Information provided by customers or describing customers."
+                "description": "Information provided by customers or describing customers"
               },
               {
                 "const": "4.2",
                 "title": "Employee Data",
-                "description": "Information collected from employees or describing employees."
+                "description": "Information collected from employees or describing employees"
               },
               {
                 "const": "4.3",
                 "title": "Identification",
-                "description": "Digital or physical means of verifying identity."
+                "description": "Digital or physical means of verifying identity"
               },
               {
                 "const": "4.4",
                 "title": "Medical Information",
-                "description": "Information about an individuals' Protected Health Information (PHI), Medicare/Medicaid, prescription medication, etc."
+                "description": "Information about an individuals' Protected Health Information (PHI) such as Medicare/Medicaid or prescription medications"
               },
               {
                 "const": "4.5",
                 "title": "Person(s)",
-                "description": "Individual person or persons."
+                "description": "Individual person or persons"
               },
               {
                 "const": "5.1",
                 "title": "Network or Systems",
-                "description": "Platforms in which information is shared or processes are run."
+                "description": "Platforms in which information is shared or processes are run"
               },
               {
                 "const": "5.2",
                 "title": "Software",
-                "description": "Software or applications running on the organization's devices or systems."
+                "description": "Software or applications running on the organization's devices or systems"
               },
               {
                 "const": "5.3",
                 "title": "Passwords",
-                "description": "Text strings which authenticate access to a system."
+                "description": "Text strings which authenticate access to a system"
               },
               {
                 "const": "5.4",
                 "title": "Communication Systems",
-                "description": "Servers, routers, phone systems, etc. that enable communication within the organization, or between the organization and external entities."
+                "description": "Servers, routers, phone systems, etc. that enable communication within the organization or between the organization and external entities"
               },
               {
                 "const": "6.1",
                 "title": "Unknown",
-                "description": "Unclear what was targeted."
+                "description": "Unclear what was targeted"
               }
             ]
         },
@@ -180,142 +180,142 @@
               {
                 "const": "1.1.1",
                 "title": "Blueprint Plans",
-                "description": "Schematics for facility layout or products/devices."
+                "description": "Schematics for facility layout, products, or devices"
               },
               {
                 "const": "1.1.2",
                 "title": "Facilities",
-                "description": "Buildings, offices, areas of buildings, or functions of buildings (such as disabling a door)."
+                "description": "Buildings, offices, areas of buildings, or functions of buildings (such as disabling a door)"
               },
               {
                 "const": "1.1.3",
                 "title": "Physical Products",
-                "description": "Tangible objects owned or managed by the organization."
+                "description": "Tangible objects owned or managed by the organization"
               },
               {
                 "const": "2.1.1",
                 "title": "Product Information",
-                "description": "Information about products or services offered by the organization."
+                "description": "Information about products or services offered by the organization"
               },
               {
                 "const": "2.1.2",
                 "title": "Proprietary Information",
-                "description": "Information that gives the organization a competitive advantage, such as trade secrets, formulas, designs, or processes, which could be exposed or sold to a competitor."
+                "description": "Information that gives the organization a competitive advantage, such as trade secrets, formulas, designs, or processes which could be exposed or sold to a competitor"
               },
               {
                 "const": "2.2.1",
                 "title": "Business Plans",
-                "description": "Pitches or anything having to do with the everyday course of business."
+                "description": "Pitches or anything having to do with the everyday course of business"
               },
               {
                 "const": "2.2.2",
                 "title": "Business System",
-                "description": "System which the organization requires to operate the business."
+                "description": "System which the organization requires to operate the business"
               },
               {
                 "const": "2.2.3",
                 "title": "Commerce information",
-                "description": "Data related to the organization's business dealings, such as customer lists, pricing strategies, supplier contracts, or marketing plans."
+                "description": "Data related to the organization's business dealings, such as customer lists, pricing strategies, supplier contracts, or marketing plans"
               },
               {
                 "const": "2.2.4",
                 "title": "Contract Information",
-                "description": "Information related to legal agreements made between the organization and other organizations or individuals such as employees or contractors."
+                "description": "Information related to legal agreements made between the organization and other organizations or individuals such as employees or contractors"
               },
               {
                 "const": "2.2.5",
                 "title": "Design and Plans",
-                "description": "Product design or information for a business plan."
+                "description": "Product design or information for a business plan"
               },
               {
                 "const": "2.2.6",
                 "title": "Payroll Information",
-                "description": "Data relating to employee salaries, benefits, and tax information."
+                "description": "Data relating to employee salaries, benefits, and tax information"
               },
               {
                 "const": "2.3.1",
                 "title": "Classified Information",
-                "description": "Information that is restricted by the government for reasons of national security."
+                "description": "Information that is restricted by the government for reasons of national security"
               },
               {
                 "const": "2.3.2",
                 "title": "Sensitive Information",
-                "description": "Data that could cause harm to the organization or its stakeholders if leaked or misused."
+                "description": "Data that could cause harm to the organization or its stakeholders if leaked or misused"
               },
               {
                 "const": "3.1.1",
                 "title": "Accounting Records",
-                "description": "Records tracking money, inventory, or purchases."
+                "description": "Records tracking money, inventory, or purchases"
               },
               {
                 "const": "3.1.2",
                 "title": "ATM Withdrawal",
-                "description": "Money that withdrawn from an ATM."
+                "description": "Money that withdrawn from an ATM"
               },
               {
                 "const": "3.1.3",
                 "title": "Bank Account Information",
-                "description": "Bank account information for a peculiar person or entity."
+                "description": "Bank account information for a peculiar person or entity"
               },
               {
                 "const": "3.1.4",
                 "title": "Bitcoin",
-                "description": "Money in the form of virtual currency."
+                "description": "Money in the form of virtual currency"
               },
               {
                 "const": "3.1.5",
                 "title": "Company Funds",
-                "description": "Monetary assets used for financing operations and initiatives of the organization."
+                "description": "Monetary assets used for financing operations and initiatives of the organization"
               },
               {
                 "const": "3.1.6",
                 "title": "Gift Cards",
-                "description": "Money in the form of prepaid debit cards for use at a specific vendor."
+                "description": "Money in the form of prepaid debit cards for use at a specific vendor"
               },
               {
                 "const": "3.1.7",
                 "title": "Invoices",
-                "description": "Money in the form of receiving funds from fraudulent invoices."
+                "description": "Money in the form of receiving funds from fraudulent invoices"
               },
               {
                 "const": "3.1.8",
                 "title": "Issued Checks",
-                "description": "Money in the form of receiving funds from fraudulent checks."
+                "description": "Money in the form of receiving funds from fraudulent checks"
               },
               {
                 "const": "3.1.9",
                 "title": "Loan",
-                "description": "Money in the form of temporary funds given with the expectation of being repaid with interest."
+                "description": "Money in the form of temporary funds given with the expectation of being repaid with interest"
               },
               {
                 "const": "3.1.10",
                 "title": "Physical Currency",
-                "description": "Money in the form of tangible paper bills, coins, or other means of circulation that holds direct monetary value."
+                "description": "Money in the form of tangible paper bills, coins, or other means of circulation that holds direct monetary value"
               },
               {
                 "const": "3.1.11",
                 "title": "Refunds",
-                "description": "Money in the form of reimbursements for returend goods or services."
+                "description": "Money in the form of reimbursements for returend goods or services"
               },
               {
                 "const": "3.1.12",
                 "title": "Reimbursement Forms",
-                "description": "Information related to reports of incurred transaction expenses."
+                "description": "Information related to reports of incurred transaction expenses"
               },
               {
                 "const": "3.1.13",
                 "title": "Tax Information",
-                "description": "Tax forms, documentation, or identifiers."
+                "description": "Tax forms, documentation, or identifiers"
               },
               {
                 "const": "3.1.14",
                 "title": "Time Sheets",
-                "description": "Digital or analog forms for employees to report hours worked."
+                "description": "Digital or analog forms for employees to report hours worked"
               },
               {
                 "const": "4.1.1",
                 "title": "Client List",
-                "description": "Listing of organizations or individuals which are provided services by the organization."
+                "description": "Listing of organizations or individuals which are provided services by the organization"
               },
               {
                 "const": "4.1.2",
@@ -325,152 +325,152 @@
               {
                 "const": "4.1.3",
                 "title": "Immigration Records",
-                "description": "Records of individuals who are unaturalized immigrants."
+                "description": "Records of individuals who are unaturalized immigrants"
               },
               {
                 "const": "4.1.4",
                 "title": "Credit Card Information",
-                "description": "Information relating to a credit card, such as the card number, the cardholder's name, when the card expires and the card's security code."
+                "description": "Information relating to a credit card such as the card number, the cardholder's name, when the card expires, and the card's security code"
               },
               {
                 "const": "4.1.5",
                 "title": "Insurance Claims",
-                "description": "Information relating to monetary claims made in request to an insurance policy."
+                "description": "Information relating to monetary claims made in request to an insurance policy"
               },
               {
                 "const": "4.2.1",
                 "title": "Employee Data",
-                "description": "Information about employees or belonging to employees of an organization."
+                "description": "Information about employees or belonging to employees of an organization"
               },
               {
                 "const": "4.3.1",
                 "title": "Driver's license",
-                "description": "Information related to a legal identification that provides a permit to operate a motor vehicle."
+                "description": "Information related to a legal identification that provides a permit to operate a motor vehicle"
               },
               {
                 "const": "4.3.2",
                 "title": "Personal Photos",
-                "description": "Images of a personal nature or unrelated to the organization's business."
+                "description": "Images of a personal nature or unrelated to the organization's business"
               },
               {
                 "const": "4.3.3",
                 "title": "PII",
-                "description": "Sensitive information that can be used to identify an individual."
+                "description": "Sensitive information that can be used to identify an individual"
               },
               {
                 "const": "4.4.1",
                 "title": "PHI",
-                "description": "Sensitive information that is indicative of an individual's health condition."
+                "description": "Sensitive information that is indicative of an individual's health condition"
               },
               {
                 "const": "4.4.2",
                 "title": "Medicare/Medicaid",
-                "description": "Information related to health insurance provided by the state to the elderly or financially limited populations."
+                "description": "Information related to health insurance provided by the state to the elderly or financially limited populations"
               },
               {
                 "const": "4.4.3",
                 "title": "Prescription Medication",
-                "description": "Iinformation that relates to doctors notes permiting the purchase of controlled medical substances."
+                "description": "Iinformation that relates to doctors notes permiting the purchase of controlled medical substances"
               },
               {
                 "const": "4.4.4",
                 "title": "Prescription Pads",
-                "description": "Secured stationery notes that doctors use for writing prescriptions."
+                "description": "Secured stationery notes that doctors use for writing prescriptions"
               },
               {
                 "const": "4.5.1",
                 "title": "Self",
-                "description": "The insider is targeting themself."
+                "description": "The insider is targeting themself"
               },
               {
                 "const": "4.5.2",
                 "title": "Others",
-                "description": "Indivdual or individuals other than the insider."
+                "description": "Indivdual or individuals other than the insider"
               },
               {
                 "const": "5.1.1",
                 "title": "Backup Data",
-                "description": "Data that can be used to restore a system or dataset if it becomes compromised."
+                "description": "Data that can be used to restore a system or dataset if it becomes compromised"
               },
               {
                 "const": "5.1.2",
                 "title": "Backup Tapes",
-                "description": "Stored backup data copied to a tape cartridge."
+                "description": "Stored backup data copied to a tape cartridge"
               },
               {
                 "const": "5.1.3",
                 "title": "Database",
-                "description": "Structured electronic digital information repository."
+                "description": "Structured electronic digital information repository"
               },
               {
                 "const": "5.1.4",
                 "title": "Email Servers",
-                "description": "Systems used to host and deliver email services."
+                "description": "Systems used to host and deliver email services"
               },
               {
                 "const": "5.1.5",
                 "title": "FTP Servers",
-                "description": "Systems which allow the exchange of files between two or more computers."
+                "description": "Systems which allow the exchange of files between two or more computers"
               },
               {
                 "const": "5.1.6",
                 "title": "Network Configuration",
-                "description": "Routing or network access configuration."
+                "description": "Routing or network access configuration"
               },
               {
                 "const": "5.1.7",
                 "title": "Network Login Information",
-                "description": "Information related to access credentials for a network."
+                "description": "Information related to access credentials for a network"
               },
               {
                 "const": "5.1.8",
                 "title": "Servers",
-                "description": "System(s) which host information or digital services for end users."
+                "description": "System(s) which host information or digital services for end users"
               },
               {
                 "const": "5.1.9",
                 "title": "Website Hosting",
-                "description": "System(s) for delivering websites over the internet."
+                "description": "System(s) for delivering websites over the internet"
               },
               {
                 "const": "5.2.1",
                 "title": "Backup Software",
-                "description": "Software designed to create copies of data for safe storage."
+                "description": "Software designed to create copies of data for safe storage"
               },
               {
                 "const": "5.2.2",
                 "title": "Software Policy Protocol",
-                "description": "Rules developed by an organization for the ideal deployment of a software."
+                "description": "Rules developed by an organization for the ideal deployment of a software"
               },
               {
                 "const": "5.2.3",
                 "title": "Source code",
-                "description": "Underlying codebase for a product or system."
+                "description": "Underlying codebase for a product or system"
               },
               {
                 "const": "5.2.4",
                 "title": "Unreleased Software",
-                "description": "Software that has not yet been made available."
+                "description": "Software that has not yet been made available"
               },
               {
                 "const": "5.3.1",
                 "title": "Login Information",
-                "description": "Credentials used for access to a technological system."
+                "description": "Credentials used for access to a technological system"
               },
               {
                 "const": "5.3.2",
                 "title": "Passwords",
-                "description": "Access credentials in the form of a text string."
+                "description": "Access credentials in the form of a text string"
               },
               {
                 "const": "5.4.1",
                 "title": "Emails",
-                "description": "Electronic communications in the form of static messages shared to specified user addresses via a network."
+                "description": "Electronic communications in the form of static messages shared to specified user addresses via a network"
               },
               {
                 "const": "5.4.2",
                 "title": "Telecommunication Systems",
-                "description": "Networks that facilitate digital or voice communications."
+                "description": "Networks that facilitate digital or voice communications"
               }
             ]
         },
@@ -479,27 +479,27 @@
               {
                 "const": "1",
                 "title": "Electronic",
-                "description": "Technological digital format."
+                "description": "Technological digital format"
               },
               {
                 "const": "2",
                 "title": "Physical",
-                "description": "Tangible real world format."
+                "description": "Tangible real-world format"
               },
               {
                 "const": "3",
                 "title": "Personnel",
-                "description": "People or individuals."
+                "description": "People or individuals"
               },
               {
                 "const": "4",
                 "title": "Other",
-                "description": "Other format not listed in this vocabulary."
+                "description": "Other format not listed in this vocabulary"
               },
               {
                 "const": "5",
                 "title": "Unknown",
-                "description": "Unclear what was targeted."
+                "description": "Unclear what was targeted"
               }
             ]
         },
@@ -508,27 +508,27 @@
               {
                 "const": "C",
                 "title": "Consumer",
-                "description": "An individual that purchases and makes use of a product or service."
+                "description": "An individual that purchases and makes use of a product or service"
               },
               {
                 "const": "E",
                 "title": "Employee",
-                "description": "An individual internal to an organization who facilitates the disbursement of products or services."
+                "description": "An individual internal to an organization who facilitates the disbursement of products or services"
               },
               {
                 "const": "O",
                 "title": "Organization",
-                "description": "The organization, rather than its employees or customers owns the target."
+                "description": "The organization, rather than its employees or customers, owns the target"
               },
               {
                 "const": "T",
                 "title": "Third Party",
-                "description": "Parties external to an organization and consumers."
+                "description": "Parties external to an organization and consumers"
               },
               {
                 "const": "Z",
                 "title": "Other",
-                "description": "Other owner not listed in this vocabulary."
+                "description": "Other owner not listed in this vocabulary"
               }
             ]
         },
@@ -562,7 +562,7 @@
               {
                 "const": "6",
                 "title": "Top Secret (TS)",
-                "description": "Top secret, unauthorized disclosure would cause exceptionally grave damage to national security"
+                "description": "Top secret - unauthorized disclosure would cause exceptionally grave damage to national security"
               },
               {
                 "const": "7",
@@ -627,42 +627,42 @@
               {
                 "const": "19",
                 "title": "Controlled Technical Information (CTI)",
-                "description": "Technical information subject to controls to access, use, reproduction, or dissemination."
+                "description": "Technical information subject to controls to access, use, reproduction, or dissemination"
               },
               {
                 "const": "20",
                 "title": "FERPA (student education records)",
-                "description": "Information subject to sensitity due to relevance to student educational privacy."
+                "description": "Information subject to sensitity due to relevance to student educational privacy"
               },
               {
                 "const": "21",
                 "title": "Federal Tax Information (FTI)",
-                "description": "Information that subject to sensitivty that is derived from tax returns."
+                "description": "Information that subject to sensitivty that is derived from tax returns"
               },
               {
                 "const": "22",
                 "title": "Government Sensitive",
-                "description": "Classified or sensitive information used by and only available to the government."
+                "description": "Classified or sensitive information used by and only available to the government"
               },
               {
                 "const": "23",
                 "title": "Intellectual Property (IP)",
-                "description": "Information that has been created and is subject to protection of its creativity."
+                "description": "Information that has been created and is subject to protection of its creativity"
               },
               {
                 "const": "24",
                 "title": "Law Enforcement Sensitive",
-                "description": "Information, software, or device used by and only available to law enforcement."
+                "description": "Information, software, or device used by and only available to law enforcement"
               },
               {
                 "const": "25",
                 "title": "Non-Public",
-                "description": "Information not made available to the public."
+                "description": "Information not made available to the public"
               },
               {
                 "const": "26",
                 "title": "Credit/Payment Card (PCI)",
-                "description": "Credit/payment card information."
+                "description": "Credit/payment card information"
               }
             ]
         }

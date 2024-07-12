@@ -2,22 +2,22 @@
 	"$id": "iides/json/structs/org-owner.json",
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "Org Owner",
-	"description": "Describes the relationship for a person owning an organization. The person can be either an accomplice or an insider to the incident.",
+	"description": "Org Owner describes the relationship for a person owning an organization. The person can be either an accomplice or an insider to the incident.",
 	"type": "object",
 	"properties": {
 		"id": {
 			"type": "string",
-			"description": "A unique string that begins with \"org-owner--\" and is appended with a UUIDv4.",
+			"description": "A unique string that begins with \"org-owner--\" and is appended with a UUIDv4",
 			"pattern": "^org-owner--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
 		},
         "person": {
 			"type": "string",
-			"description": "The id of the insider or accomplice who owns the organization.",
+			"description": "The `id` of the insider or accomplice who owns the organization",
 			"pattern": "^(insider|accomplice)--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
 		},
         "org": {
 			"type": "string",
-			"description": "The id of the organization object that is owned by the insider or accomplice.",
+			"description": "The `id` of the organization object that is owned by the insider or accomplice",
 			"pattern": "^organization--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
 		}
 	},

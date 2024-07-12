@@ -26,7 +26,7 @@ Constants: `1`, `2`, `3`, `4`
 | --- | --- | --- |
 | 1 | Guilty | The defendant pleaed guilty to the charge|
 | 2 | No Contest | The defendant did not contest to the charge|
-| 3 | Not Guilty | The defendant pleaed not guilty to the charge|
+| 3 | Not Guilty | The defendant pleaded not guilty to the charge|
 | 4 | Refused to Enter a Plea | The defendant refused to enter into a plea to the charge|
 
 ### charge-disposition-vocab
@@ -36,7 +36,7 @@ Constants: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`
 | Const | Value | Description |
 | --- | --- | --- |
 | 1 | Acquitted | Found not guilty by a court of law in a criminal trial|
-| 2 | Convicted | Plead or been found guilty by a court|
+| 2 | Convicted | Pleaded or found guilty by a court|
 | 3 | Dismissed | The court or prosecutor decided the charge should not go forward|
 | 4 | Diversion/Deferred Prosecution | The court delayed prosecution pending the successful completion of a treatment program, at which point the charges will be dismissed|
 | 5 | Expunged | The deletion of non-conviction information (such as arrest data)|
