@@ -3,7 +3,7 @@
 
 ## Incident
 
-The leak severely impacted the confidentiality and integrity of CIA operations, exposing sensitive information and tools used for intelligence gathering.
+The leak severely impacted the confidentiality and integrity of agency operations, exposing sensitive information.
 
 - **`Id`**:
  incident--ef88113a-27a0-4a56-8f70-e8a5fd4541e6
@@ -22,13 +22,13 @@ The leak severely impacted the confidentiality and integrity of CIA operations, 
 - **`Status`**:
  Closed (*C*) &mdash; All investigations and legal proceedings are closed
 - **`Summary`**:
- Joshua Adam Schulte, a former CIA software engineer, leaked classified CIA documents known as Vault 7 to WikiLeaks. These documents detailed the CIA's hacking tools and techniques, causing severe damage to U.S. national security, exposing CIA operations and personnel, and costing the agency hundreds of millions of dollars. Schulte was charged with espionage, unauthorized access to computer systems, and other related crimes. He was convicted and sentenced to 40 years in prison.
+ Oliver Griffin, a former software engineer at a government agency, leaked sensitive documents to an unauthorized entity. These documents detailed the agency's secret tools and techniques, causing severe damage to national security, exposing operations and personnel, and costing the agency substantial financial resources. Griffin was charged with unauthorized access to computer systems, dissemination of classified information, and other related crimes. He was convicted and sentenced to 35 years in prison.
 - **`Brief summary`**:
- Joshua Adam Schulte leaked classified CIA documents to WikiLeaks, detailing CIA hacking tools and techniques. This caused severe national security damage and financial costs. Schulte was convicted of espionage and sentenced to 40 years in prison.
+ Oliver Griffin leaked sensitive documents to an unauthorized entity, detailing cybersecurity tools and techniques. This caused severe national security damage and financial costs. Griffin was convicted of multiple charges and sentenced to 35 years in prison.
 
 ## Insider
 
-Joshua Adam Schulte had a history of social and mental health issues. He showed concerning behaviors, such as repeated technical policy abuse and conflicts with his supervisor as well as browsing dark web forums. The insider had multiple workplace incidents involving the harassment of colleagues, ultimately resulting in the insider being forced to move offices across the building. The insider believed he had been mistreated by staff, leading to a desire for revenge.
+Oliver James Griffin had a history of social and mental health issues. He showed concerning behaviors, such as repeated technical policy abuse and conflicts with his supervisor as well as browsing dark web forums. The insider had multiple workplace incidents.
 
 - **`Id`**:
  insider--5460491c-eacd-4074-aef9-f6f584893a59
@@ -44,15 +44,15 @@ Joshua Adam Schulte had a history of social and mental health issues. He showed 
    - Technical Policy Abuse (*['3.2', '3.2.2']*) &mdash; Violating policies regarding the use of the organization's IT systems
   - Interpersonal Issues (*['3.3', '3.3.2']*) &mdash; Conflicts with others in the organization or human resources (HR) issues
 - **`first_name`**:
- Joshua
+ Oliver
 - **`middle_name`**:
- Adam
+ James
 - **`last_name`**:
- Schulte
+ Griffin
 - **`suffix`**:
  Jr
 - **`alias`**:
- ['JSchulte', 'Kinetic Panda', 'Nuclear Option', 'Voldemort']
+ ['OGriffin', 'Silent Hawk', 'Shadow Walker', 'Dark Avenger']
 - **`city`**:
  New York
 - **`state`**:
@@ -108,7 +108,7 @@ Joshua Adam Schulte had a history of social and mental health issues. He showed 
 - **`Id`**:
  organization--19f19fa9-d96e-4407-901e-06ecaefd71b5
 - **`Name`**:
- WikiLeaks
+ Global News Network
 - **`Small business`**:
  False
 - **`Industry sector`**:
@@ -116,13 +116,13 @@ Joshua Adam Schulte had a history of social and mental health issues. He showed 
 - **`Industry subsector`**:
  Web Search Portals, Libraries, Archives, and Other Information Services (*51.9*) &mdash; Industries in the Web Search Portals, Libraries, Archives, and Other Information Services subsector group establishments supplying information, storing and providing access to information, searching and retrieving information, and operating websites that use search engines to allow for searching information on the Internet. The main components of the subsector are libraries, archives, and web search portals.
 - **`Business`**:
- WikiLeaks is a nonprofit organization that publishes news leaks and classified media provided by anonymous sources.
+ Global News Network is a nonprofit organization that publishes news and media content from various sources.
 - **`Incident role`**:
  Beneficiary (*B*) &mdash; The organization accepted trade secrets, customer lists, intellectual property, etc. that the insider obtained through the incident.
 
 ## Detection
 
-Schulte's unauthorized activities were detected by the CIA's security team and subsequently investigated by law enforcement. Detection involved technical means such as monitoring access logs, audit logs, database logs, remote access logs, and system file logs.
+Griffin's unauthorized activities were detected by the government's security team and subsequently investigated by law enforcement. Detection involved technical means such as monitoring access logs, audit logs, database logs, remote access logs, and system file logs.
 
 - **`Id`**:
  detection--bd545866-663f-4d62-a39a-da3672842c9f
@@ -143,7 +143,7 @@ Schulte's unauthorized activities were detected by the CIA's security team and s
 
 ## Impact
 
-The Vault 7 leak included approximately 8,000 documents detailing CIA hacking tools and techniques.
+The leak included approximately 8,000 documents detailing hacking tools and techniques used by the intelligence agency.
 
 - **`Id`**:
  impact--2d4ed800-002d-4ce5-bbb0-c89acc1f4254
@@ -191,33 +191,33 @@ The financial impact of the breach was substantial, with estimates ranging from 
   - Top Secret (TS) (*6*) &mdash; Top secret - unauthorized disclosure would cause exceptionally grave damage to national security
   - TS/SCI (*7*) &mdash; Top secret / Sensitive compartmented information
 - **`Description`**:
- Classified CIA information related to hacking tools and techniques disclosed to WikiLeaks as part of the Vault 7 leaks.
+ Classified agency information related to hacking tools and techniques disclosed to an unauthorized entity.
 
 ## Response
 
-Schulte left the CIA in November of 2016. Before departing from the agency, he planted a service to still allow remote access to government files and databases, which he used to access classified information post departure.
+Griffin left the agency in November of 2001. Before departing from the agency, he planted a service to still allow remote access to government files and databases, which he used to access classified information post departure.
 
 - **`Id`**:
  response--f42fc7ae-48a1-48f9-bf84-0d4b13f7a64c
 - **`technical_controls`**:
- [['1', '2016-11-01'], ['2', '2016-11-01']]
+ [['1', '2001-11-01'], ['2', '2001-11-01']]
 - **`behavioral_controls`**:
- [['9', '2016-11-01']]
+ [['9', '2001-11-01']]
 - **`investigated_by`**:
  ['2', '3']
 - **`investigation_events`**:
- [['3', '2017-03-07'], ['1', '2017-03-07'], ['2', '2018-06-18']]
+ [['3', '2002-03-07'], ['1', '2002-03-07'], ['2', '2003-06-18']]
 
 ## Court Case
 
-This case involved multiple charges against Joshua Adam Schulte, including espionage and unauthorized disclosure of classified information to WikiLeaks (known as the Vault 7 leak), computer hacking, unauthorized access to CIA computer systems, causing transmission of harmful computer commands, and receipt, possession, and transportation of child pornography.
+This case involved multiple charges against Oliver Griffin, including unauthorized access to classified information, computer hacking, unauthorized access to government computer systems, causing transmission of harmful computer commands, and receipt, possession, and transportation of illicit digital content.
 
 - **`Id`**:
  court-case--0e430311-72ee-4776-be74-3c1969d141c0
 - **`Case number`**:
- 17 Cr. 548 (PAC)
+ 22 Cr. 123 (PAC)
 - **`Case title`**:
- USA vs. Schulte
+ USA vs. Griffin
 - **`Court country`**:
  United States
 - **`Court state`**:
@@ -229,7 +229,7 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
 - **`Case type`**:
  Criminal (*2*) &mdash; A case dealing with a violation of criminal law
 - **`Defendant`**:
-   - Joshua Adam Schulte
+   - Oliver Griffin
 - **`Plaintiff`**:
    - United States of America
 
@@ -242,7 +242,7 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
 - **`Section`**:
  793(e)
 - **`Nature of offense`**:
- Illegal gathering and transmission of national defense information.
+ Unlawful acquisition and dissemination of sensitive information.
 - **`Count`**:
  3
 - **`Plea`**:
@@ -261,7 +261,7 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
 - **`Section`**:
  641
 - **`Nature of offense`**:
- Theft of government property.
+ Misappropriation of state assets.
 - **`Count`**:
  1
 - **`Plea`**:
@@ -280,7 +280,7 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
 - **`Section`**:
  1030(a)(1)
 - **`Nature of offense`**:
- Unauthorized access to a computer to obtain classified information.
+ Unauthorized access to a network to retrieve confidential information.
 - **`Count`**:
  1
 - **`Plea`**:
@@ -299,7 +299,7 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
 - **`Section`**:
  1030(a)(2)
 - **`Nature of offense`**:
- Unauthorized access to a computer to obtain information from a department or agency of the U.S.
+ Unauthorized access to a system to obtain agency data.
 - **`Count`**:
  1
 - **`Plea`**:
@@ -318,7 +318,7 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
 - **`Section`**:
  1030(a)(5)(A)
 - **`Nature of offense`**:
- Causing transmission of harmful computer commands.
+ Initiating transmission of malicious network commands.
 - **`Count`**:
  1
 - **`Plea`**:
@@ -337,7 +337,7 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
 - **`Section`**:
  1519
 - **`Nature of offense`**:
- Obstruction of justice.
+ Interference with judicial processes.
 - **`Count`**:
  1
 - **`Plea`**:
@@ -356,7 +356,7 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
 - **`Section`**:
  2252A(a)(2)(A)
 - **`Nature of offense`**:
- Receipt of child pornography.
+ Acquisition of illicit digital content.
 - **`Count`**:
  1
 - **`Plea`**:
@@ -375,7 +375,7 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
 - **`Section`**:
  2252A(a)(5)(B)
 - **`Nature of offense`**:
- Possession of child pornography.
+ Possession of illicit digital content.
 - **`Count`**:
  1
 - **`Plea`**:
@@ -394,7 +394,7 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
 - **`Section`**:
  2252A(a)(1)
 - **`Nature of offense`**:
- Transportation of child pornography.
+ Distribution of illicit digital content.
 - **`Count`**:
  1
 - **`Plea`**:
@@ -411,7 +411,7 @@ This case involved multiple charges against Joshua Adam Schulte, including espio
 - **`Sentence type`**:
  Incarceration (*9*) &mdash; Imprisonment
 - **`Quantity`**:
- 40
+ 35
 - **`Metric`**:
  Year(s) (*4*) &mdash; Imposed sentence is in terms of years (e.g. five years no Internet access)
 - **`Concurrency`**:
@@ -434,26 +434,26 @@ Lifetime supervised release, to run concurrently.
 
 ## Legal Response
 
-Joshua Adam Schulte was investigated and charged for multiple offenses, including espionage, unauthorized disclosure of classified information (Vault 7 leaks), computer hacking, and possession of child pornography. The judgment date is in relation to the charges specifically related to the dissemination of the Stolen CIA Files.
+The insider was investigated and charged for multiple offenses, including unauthorized disclosure of classified information, computer hacking, and possession of illicit digital content. The judgment date is in relation to the charges specifically related to the dissemination of stolen classified files.
 
 - **`Id`**:
  legal-response--b318c37b-2f76-421f-bf12-0833e836b00c
 - **`Law enforcement contacted`**:
- 2017-03-07
+ 2002-03-07
 - **`Insider arrested`**:
- 2017-08-24
+ 2002-08-24
 - **`Insider charged`**:
- 2018-06
+ 2003-06
 - **`Insider pleads`**:
- 2018-06
+ 2003-06
 - **`Insider judgment`**:
- 2022-07-13
+ 2004-07-13
 - **`Insider sentenced`**:
- 2024-02-01
+ 2005-02-01
 
 ## Job
 
-Schulte was employed as a software engineer in the Center for Cyber Intelligence (CCI) at the CIA, where he had access to sensitive and classified information.
+The insider was employed as a software engineer in a high-security governmental agency, where they had access to sensitive and classified information.
 
 - **`Id`**:
  job--e76248a2-82df-4c7d-b7a0-bf86eb85c570
@@ -470,20 +470,20 @@ Schulte was employed as a software engineer in the Center for Cyber Intelligence
 - **`Employment type`**:
  Full-time (*FLT*) &mdash; Individual who is directly employed by the organization and works at least 35 hours per week or is classified by the organization as a full-time employee
 - **`Hire date`**:
- 2010-01-01
+ 2001-01-01
 - **`Departure date`**:
- 2016-11-11
+ 2006-11-11
 - **`Tenure`**:
- P6Y10M10D
+ P5Y10M10D
 
 ## Stressor
 
-Joshua Adam Schulte's internal disputes and a hostile work environment at the CIA (self-imposed) contributed to his decision to steal and leak classified information as revenge for mistreatment.
+Oliver Griffin's internal disputes and a hostile work environment at the agency (self-imposed) contributed to his decision to steal and leak classified information as revenge for mistreatment.
 
 - **`Id`**:
  stressor--28ecfbf3-5eb1-429f-8a55-c2e16f08ebcd
 - **`Date`**:
- 2016
+ 2002
 - **`Category`**:
  Organizational Issues (*2*) &mdash; The insider's employer had problems or changes that directly or indirectly affected the insider
 - **`Subcategory`**:
@@ -494,7 +494,7 @@ Joshua Adam Schulte's internal disputes and a hostile work environment at the CI
 - **`Id`**:
  ttp--a181e814-aa3a-411e-ae79-79ceba48e36a
 - **`Date`**:
- 2016-04-20T14:00:00Z
+ 2002-04-20T14:00:00Z
 - **`Sequence num`**:
  1
 - **`Observed`**:
@@ -518,14 +518,14 @@ Joshua Adam Schulte's internal disputes and a hostile work environment at the CI
   - Online Forum (*4*) &mdash; Private or public forum accessed via the Internet
   - Personal Email (*5*) &mdash; An email account the organization does not control or monitor
 - **`Description`**:
- Schulte used a personal email account to exfiltrate classified CIA information from the organization's database server to his personal computer.
+ Griffin used a personal email account to exfiltrate classified agency information from the organization's database server to his personal computer.
 
 ## TTP
 
 - **`Id`**:
  ttp--a154e814-aa3a-411e-ae79-79ceba48e79b
 - **`Date`**:
- 2016-04-20T14:00:00Z
+ 2002-04-20T14:00:00Z
 - **`Sequence num`**:
  2
 - **`Observed`**:
@@ -547,14 +547,14 @@ Joshua Adam Schulte's internal disputes and a hostile work environment at the CI
 - **`Channel`**:
    - Other (*9*) &mdash; Other type of channel not listed in this vocabulary
 - **`Description`**:
- Schulte then loaded the data on a removable media disk
+ Griffin then loaded the data on a removable media disk.
 
 ## TTP
 
 - **`Id`**:
  ttp--a154e814-aa3a-411e-ae79-79ceba48e77b
 - **`Date`**:
- 2016-04-20T14:00:00Z
+ 2002-04-20T14:00:00Z
 - **`Sequence num`**:
  2
 - **`Observed`**:
@@ -576,14 +576,14 @@ Joshua Adam Schulte's internal disputes and a hostile work environment at the CI
 - **`Channel`**:
    - Other (*9*) &mdash; Other type of channel not listed in this vocabulary
 - **`Description`**:
- Before leaving the CIA, Schulte planted a backdoor into the CIA network
+ Before leaving the agency, Griffin planted a backdoor into the agency network.
 
 ## TTP
 
 - **`Id`**:
  ttp--a154e814-aa3a-411e-ae79-79ceba48e76b
 - **`Date`**:
- 2016-04-20T14:00:00Z
+ 2002-04-20T14:00:00Z
 - **`Sequence num`**:
  3
 - **`Observed`**:
@@ -607,11 +607,11 @@ Joshua Adam Schulte's internal disputes and a hostile work environment at the CI
   - Personal Email (*5*) &mdash; An email account the organization does not control or monitor
   - Other (*9*) &mdash; Other type of channel not listed in this vocabulary
 - **`Description`**:
- After leaving the CIA, Schulte hosted a server on the CIA's network to continue accessing and exfiltrating classified data.
+ After leaving the agency, Griffin hosted a server on the agency's network to continue accessing and exfiltrating classified data.
 
 ## Note
 
-The child pornography charges were included in the JSON because they are relevant to the overall investigation of Joshua Adam Schulte. Although they do not directly pertain to the insider threat, they were pivotal in leading to his initial arrest and subsequent comprehensive charges.
+The charges related to illicit digital content were included in the JSON because they are relevant to the overall investigation of Oliver Griffin. Although they do not directly pertain to the insider threat, they were pivotal in leading to his initial arrest and subsequent comprehensive charges.
 
 - **`Id`**:
  note--b372b9ad-cb92-4db6-be28-1e3f62605858
@@ -625,65 +625,65 @@ The child pornography charges were included in the JSON because they are relevan
 - **`Id`**:
  source--5565e706-d762-4b35-b54a-6f22a80badb2
 - **`Title`**:
- Joshua Adam Schulte Charged with Unauthorized Disclosure of Classified Information and Other Offenses
+ Oliver Griffin Charged with Unauthorized Disclosure of Classified Information and Other Offenses
 - **`Source type`**:
  DOJ Press Release (*2*) &mdash; Press release from the Department of Justice or U.S. Attorneys' Office
 - **`File type`**:
  HTML File (*html*) &mdash; A file in HTML format
 - **`Date`**:
- 2018-06-18T00:00:00Z
+ 2003-06-18T00:00:00Z
 - **`Public`**:
  True
 - **`Document`**:
- https://www.justice.gov/opa/pr/joshua-adam-schulte-charged-unauthorized-disclosure-classified-information-and-other-offenses
+ https://www.fakeurl.com/oliver-griffin-charged
 
 ## Source
 
 - **`Id`**:
  source--d6a29cb3-519f-4d62-a1f6-a86439bef53d
 - **`Title`**:
- Former CIA Officer Joshua Adam Schulte Sentenced to 40 Years in Prison for Espionage and Child Pornography Offenses
+ Former Intelligence Officer Oliver Griffin Sentenced to 35 Years in Prison for Espionage
 - **`Source type`**:
  DOJ Press Release (*2*) &mdash; Press release from the Department of Justice or U.S. Attorneys' Office
 - **`File type`**:
  HTML File (*html*) &mdash; A file in HTML format
 - **`Date`**:
- 2023-01-18T00:00:00Z
+ 2004-01-18T00:00:00Z
 - **`Public`**:
  True
 - **`Document`**:
- https://www.justice.gov/usao-sdny/pr/former-cia-officer-joshua-adam-schulte-sentenced-40-years-prison-espionage-and-child
+ https://www.fakeurl.com/oliver-griffin-sentenced
 
 ## Source
 
 - **`Id`**:
  source--7e3ef93e-31b0-4e17-a32a-98540326fd05
 - **`Title`**:
- CIA Engineer Convicted of Largest Theft of Classified Data in Agency’s History
+ Intelligence Engineer Convicted of Largest Theft of Classified Data in Agency's History
 - **`Source type`**:
  Media (*5*) &mdash; News, blog, or similar publication
 - **`File type`**:
  HTML File (*html*) &mdash; A file in HTML format
 - **`Date`**:
- 2022-07-13T00:00:00Z
+ 2002-07-13T00:00:00Z
 - **`Public`**:
  True
 - **`Document`**:
- https://www.nytimes.com/2022/07/13/nyregion/cia-engineer-joshua-schulte-theft-convicted.html
+ https://www.fakeurl.com/intelligence-engineer-convicted
 
 ## Source
 
 - **`Id`**:
  source--d36603a3-2510-4617-87eb-10eea6ab672e
 - **`Title`**:
- USA v. Schulte Docket Information
+ USA v. Griffin Docket Information
 - **`Source type`**:
  Court Document (*1*) &mdash; Legal document from a court case
 - **`File type`**:
  HTML File (*html*) &mdash; A file in HTML format
 - **`Date`**:
- 2022-07-13T00:00:00Z
+ 2002-07-13T00:00:00Z
 - **`Public`**:
  True
 - **`Document`**:
- https://www.courtlistener.com/docket/6359557/united-states-v-schulte/
+ https://www.fakeurl.com/usa-v-griffin-docket
