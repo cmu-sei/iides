@@ -2,7 +2,7 @@
 
 ## Background and Context
 
-In the hypothetical case of **Griffin v. United States of America**, the defendant, **Oliver Griffin**, faced significant legal repercussions for activities that jeopardized national security. The case was adjudicated in the Southern District Court of New York, drawing substantial attention due to the severe implications of Griffin's actions. As a former employee of the Central Intelligence Agency (CIA), Griffin was entrusted with sensitive information. However, breaches of trust and violations of security protocols led to his indictment on multiple counts of unauthorized access, dissemination of classified information, and interference with judicial processes.
+In the hypothetical case of **Griffin v. United States of America**, the defendant, **Oliver Griffin**, faced significant legal repercussions for activities that jeopardized national security. The case was adjudicated in the Southern District Court of New York, drawing substantial attention due to the severe implications of Griffin's actions. Griffin was entrusted with sensitive information. However, breaches of trust and violations of security protocols led to his indictment on multiple counts of unauthorized access, dissemination of classified information, and interference with judicial processes.
 
 ## Detailed Charges and Allegations
 
@@ -24,21 +24,21 @@ The verdict was unequivocal: Oliver Griffin was found guilty on all counts. The 
 
 ### Stressor
 
-Oliver Griffin's internal disputes and a hostile work environment at the CIA (self-imposed) contributed to his decision to steal and leak classified information as revenge for mistreatment. This occurred around 2002.
+Oliver Griffin's internal disputes and a hostile work environment contributed to his decision to steal and leak classified information as revenge for mistreatment. This occurred around 2002.
 
 ### Target
 
-The targeted asset was classified CIA information related to various operations and techniques disclosed to an unauthorized entity. This information was highly sensitive, with varying degrees of sensitivity, and belonged to the CIA.
+The targeted asset was classified information related to various operations and techniques disclosed to an unauthorized entity. This information was highly sensitive, with varying degrees of sensitivity, and belonged to the victim organization.
 
 ### Tactics, Techniques, and Procedures (TTPs)
 
-Griffin used a personal email account to exfiltrate classified CIA information from the organization's database server to his personal computer in April 2002. He then loaded the data onto a removable media disk and planted a backdoor into the CIA's network before his departure. After leaving the CIA, Griffin continued to access and exfiltrate classified data by hosting a server on the CIA's network.
+Griffin used a personal email account to exfiltrate classified information from the organization's database server to his personal computer in April 2002. He then loaded the data onto a removable media disk and planted a backdoor into the organization's network before his departure. After leaving the organization, Griffin continued to access and exfiltrate classified data by hosting a server on the network.
 
 ## Response and Investigation
 
 ### Job Details
 
-The insider was employed as a software engineer in the Center for Cyber Intelligence (CCI) at the CIA from January 2001 to November 2006. They had access to sensitive and classified information and held a technical position with significant authorization.
+The insider was employed as a software engineer in the Center for Cyber Intelligence (CCI) from January 2001 to November 2006. They had access to sensitive and classified information and held a technical position with significant authorization.
 
 ### Legal Response
 
@@ -46,7 +46,7 @@ The insider was investigated and charged for multiple offenses, including unauth
 
 ## Organizations Involved
 
-The Central Intelligence Agency (CIA) played a central role as the victim in this case. The CIA is a civilian foreign intelligence service of the federal government of the United States, tasked with gathering, processing, and analyzing national security information from around the world. Another key organization involved was Global News Network, a generic news outlet that published the leaked information provided by Griffin.
+The victim organization played a central role in this case. Another key organization involved was Global News Network, a generic news outlet that published the leaked information provided by Griffin.
 
 ## Example Sources
 
