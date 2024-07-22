@@ -86,14 +86,14 @@ Class Incident #009647 {
 + incident_subtype : ['E.2']
 + outcome : ['DS', 'DR']
 + status : C 
-+ summary : The insider was a former CIA officer. They were involved in a espionage case where 
-they were convicted of providing classified U.S. Defence information to Chinese intelligence agents, which began 
++ summary : The insider was a former CIA officer. They were involved in an espionage case where 
+they were convicted of providing classified U.S. defense information to Chinese intelligence agents, which began 
 in 2017. The insider was motivated by financial gain: the Chinese officials would exchange top 
-secret information for money. Once the FBI became aware, they investigated the insider, and found 
+secret information for money. Once the FBI became aware, they investigated the insider and found 
 evidence of espionage in their home. The insider was then tried and found guilty of 
-several espionage charges, and sentenced to 20 years of federal prison. 
+several espionage charges and sentenced to 20 years of federal prison. 
 + brief_summary : The insider was a former CIA officer who began to communicate with Chinese intelligence agents 
-in 2017. They began communicating, and the insider would receive money for trasmitting classified U.S. 
+in 2017. They began communicating, and the insider would receive money for transmitting classified U.S. 
 defense information to Chinese intelligence agents. The insider was later investigated and brought to court, 
 where he was convicted of multiple counts of espionage. 
 ---
@@ -271,7 +271,7 @@ Class Stressor #b0d0ed {
 + date : 2017-02-01 
 + category : 3 
 + subcategory : 3.1 
-+ comment : Insider was behind 2 mortgage payments and had debt they wished to pay. 
++ comment : Insider was behind on two mortgage payments and had debt they wished to pay. 
 ---
 }
 Class Sponsor #b0d0ed {
@@ -303,7 +303,7 @@ Class TTP #A456ED {
 + hours : 2 
 + device : ['8']
 + channel : ['6']
-+ description : The insider communicated repeatedly with Chinese Intelligence officers to exchange top secret information for money. 
++ description : The insider communicated repeatedly with Chinese intelligence officers to exchange Top Secret information for money. 
 
 ---
 }
@@ -320,7 +320,7 @@ Class TTP #A456ED {
 + hours : 2 
 + device : ['7']
 + channel : ['4']
-+ description : The insider was initially recruited by a Chinese Intelligence Agent reaching out on LinkedIn asking 
++ description : The insider was initially recruited by a Chinese intelligence agent reaching out on LinkedIn asking 
 to meet in China. 
 ---
 }
@@ -337,7 +337,7 @@ Class TTP #A456ED {
 + hours : 2 
 + device : ['7']
 + channel : ['4']
-+ description : The insider was initially recruited by a Chinese Intelligence Agent reaching out on LinkedIn asking 
++ description : The insider was initially recruited by a Chinese intelligence agent reaching out on LinkedIn asking 
 to meet in China. 
 ---
 }

@@ -53,7 +53,7 @@ Class Incident #009647 {
 + incident_subtype : ['E.2']
 + outcome : ['DR', 'DS']
 + status : C 
-+ summary : The insider, an ex-Air Force member, worked as a translater for the National Security Agency 
++ summary : The insider, an ex-Air Force member, worked as a translator for the National Security Agency 
 in May 2017. During this time, she printed a report from her work computer that 
 detailed hacking attempts by a Russian intelligence service against local election officers and voter registration 
 databases. She then shared this Top Secret information with an online news outlet. This report 
@@ -62,7 +62,7 @@ if disclosed, could be harmful to the United States. The FBI investigated and la
 the insider in June 2017. The insider pleaded guilty in June 2018 to one felony 
 count of unauthorized transmission of national defense information and was convicted. 
 + brief_summary : The insider leaked Top Secret information to an online news outlet. The insider pleaded guilty 
-to one felony count of unauthorized transmission of national defense information in June 2018, and 
+to one felony count of unauthorized transmission of national defense information in June 2018 and 
 was convicted. 
 ---
 }
@@ -86,9 +86,9 @@ Class Insider #043673;text:white {
 + education : 5 
 + marital_status : 1 
 + number_of_children : 0
-+ comment : The insider previously had a very clean record, and was an unlikely suspect. The insider 
++ comment : The insider previously had a very clean record and was an unlikely suspect. The insider 
 was a 'good kid' who had no apparent history of leaking or any disciplinary proceedings 
-during their military service in the Air Force. 
+during her military service in the Air Force. 
 ---
 }
 Class Job #33c2C4 {
@@ -118,7 +118,7 @@ Class LegalResponse #f9b8bd {
 }
 Class Organization #007BC0 {
 * id : organization--3d459486-b1b1-4886-9129-87b3458120b3 
-+ name : US National Security Agency 
++ name : U.S. National Security Agency 
 + city : 
 + state : Maryland 
 + country : United States of America 
