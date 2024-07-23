@@ -50,8 +50,8 @@
       "court_district": "Southern District of New York",
       "court_type": "1",
       "case_type": "2",
-      "defendant": ["United States of America"],
-      "plaintiff": ["Xin Xia"],
+      "defendant": ["Xin Xia"],
+      "plaintiff": ["United States of America"],
       "comment": ""
     },
     {
@@ -87,9 +87,9 @@
       "predispositions": [["4", "4.3"]],
       "concerning_behaviors": [["3.6", "3.6.1"]],
       "first_name": "Xin",
-      "middle_name": "Patrick",
+      "middle_name": "Jason",
       "last_name": "Xia",
-      "alias": ["Patrick Xia", "Xin P. Xia"],
+      "alias": ["Jason Xia", "Xin J. Xia"],
       "city": "New York",
       "state": "NY",
       "country": "US",
@@ -191,48 +191,30 @@
     },
     {
       "id": "source--43dfd29e-60c0-4aaa-933f-a96c2845887e",
-      "title": "US v. Xin Xia, No. 04-4385 (4th Cir. 2006)",
+      "title": "Docket",
       "source_type": "1",
       "file_type": "pdf",
       "date": "2006-07-11",
       "public": true,
-      "document": "https://example.com/us-v-xin-xia-04-4385"
+      "document": "https://example.com/docket.pdf"
     },
     {
       "id": "source--0ae6419b-66e3-4d9f-bcb6-531cc8a4e53a",
-      "title": "United States of America v. Xin Patrick Xia",
+      "title": "Indictment",
       "source_type": "1",
       "file_type": "pdf",
       "date": "2003-06-21",
       "public": true,
-      "document": "https://example.com/us-v-xin-patrick-xia"
+      "document": "https://example.com/indictment.pdf"
     },
     {
       "id": "source--ada0e3cc-5048-4509-ad62-c06c7d34594f",
-      "title": "United States v. Xia (2004)",
+      "title": "Sentencing",
       "source_type": "1",
-      "file_type": "html",
+      "file_type": "pdf",
       "date": "2004-10-05",
       "public": true,
-      "document": "https://example.com/us-v-xia-2004"
-    },
-    {
-      "id": "source--9fe4a90d-abf1-4db6-a4e1-a30e37b3ffe6",
-      "title": "United States v. Xia (2006)",
-      "source_type": "1",
-      "file_type": "html",
-      "date": "2006-07-11",
-      "public": true,
-      "document": "https://example.com/us-v-xia-2006"
-    },
-    {
-      "id": "source--265815a9-494f-4034-b2cf-2d28e01b1318",
-      "title": "United States v. Xia, Criminal No. 1:03-CR-154",
-      "source_type": "1",
-      "file_type": "html",
-      "date": "2004-10-15",
-      "public": true,
-      "document": "https://example.com/us-v-xia-03-cr-154"
+      "document": "https://example.com/sentencing.pdf"
     },
     {
       "id": "stressor--40650474-f431-4ddb-9e3a-417bab254ac1",
