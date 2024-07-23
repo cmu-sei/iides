@@ -1,260 +1,212 @@
 {
-    "id": "bundle--1f1f4efd-313d-49d7-89b1-2d256544ce6e",
-    "objects": [
-      {
-        "id": "accomplice--3426b922-135a-42f9-869d-f8b30e0d483b",
-        "relationship_to_insider": "2",
-        "first_name": "Travis",
-        "last_name": "Kalanick",
-        "comment": "Co-founder and former chief executive officer of Uber was accused of having conspired with Levandowski, motivating him financially to start a company using trade secrets from Waymo, which would then be bought by Uber."
-      },
-      {
-        "id": "charge--3fcbf985-f10e-45b7-aacb-e16c89da1105",
-        "title": "18 U.S.C",
-        "section": "1836",
-        "nature_of_offense": "Misappropriation of Trade Secrets",
-        "count": 1,
-        "plea": "3",
-        "plea_bargain": false,
-        "disposition": "2"
-      },
-      {
-        "id": "court-case--3fcbf985-f10e-45b7-aacb-e16c89da1105",
-        "case_number": "17-cv-00939",
-        "case_title": "Waymo LLC v. Uber Technologies, Inc.",
-        "court_country": "United States",
-        "court_state": "California",
-        "court_district": "United States District Court for the Northern District of California",
-        "court_type": "1",
-        "case_type": "1",
-        "defendant": [
-            "Uber Technologies, Inc"
-          ],
-          "plaintiff": [
-            "Waymo LLC"
-          ]
-      },
-      {
-        "id": "detection--a181e814-aa3a-411e-ae79-79ceba48e36a",
-        "first_detected": "2017-02-23",
-        "who_detected": [
-          "LE",
-          "OR"
-        ],
-        "detected_method": [
-          "2",
-          "4"
-        ],
-        "logs": [
-          "AC",
-          "EM",
-          "VD"
-        ]
-      },
-      {
-        "id": "impact--d2eb25a4-1293-44ee-b8a6-a984714d8033",
-        "high": 245000000,
-        "low": 245000000,
-        "metric": "5",
-        "estimated": false,
-        "comment": "Financial impact valued at approximately $245 million, which was the settlement amount Uber agreed to give Waymo in equity."
-      },
-      {
-        "id": "impact--ea6f96c7-d4db-4021-b85b-057453ff2292",
-        "high": 14000,
-        "metric": "7",
-        "estimated": true,
-        "comment": "Levandowski downloaded over 14,000 files before leaving the company to found his own startup, which was then bought by Uber."
-      },
-      {
-        "id": "incident--6e75f650-c1a5-4c71-8d2f-7e9d2bba0381",
-        "cia_effect": [
-          "C",
-          "I"
-        ],
-        "incident_type": [
-          "E"
-        ],
-        "incident_subtype": [
-          "E.1"
-        ],
-        "outcome": [
-          "DS", "ML"
-        ],
-        "status": "C",
-        "summary": "The case involved Waymo, a self-driving car company spun off from Google, accusing Uber, through its acquisition of Otto, of stealing trade secrets related to LiDAR technology. The lawsuit claimed that Anthony Levandowski, a former Google engineer, downloaded thousands of files related to Waymo's self-driving technology before leaving to start Otto, which was soon acquired by Uber.",
-        "brief_summary": "Waymo sued Uber for intellectual property theft, claiming that ex-Google engineer Anthony Levandowski stole LiDAR technology secrets before joining Uber. The case was settled with Uber agreeing to not use Waymo's technology and paying equity worth approximately $245 million.",
-        "comment": "The case was settled out of court, and no formal determination of guilt was made against Uber, but they agreed to a settlement to avoid the continuation of litigation."
-      },
-      {
-        "id": "insider--2fe80494-c7cf-4d75-85ef-736b55884664",
-        "incident_role": "1",
-        "motive": [
-          "3",
-          "5"
-        ],
-        "substance_use_during_incident": false,
-        "first_name": "Anthony",
-        "last_name": "Levandowski",
-        "alias": ["Anton Levy", "John Doe"],
-        "city": "San Francisco",
-        "state": "CA",
-        "country": "US",
-        "postal_code": 94107,
-        "country_of_citizenship": ["US"],
-        "nationality": ["US"],
-        "gender": "M",
-        "age": 40,
-        "education": "8",
-        "marital_status": "2",
-        "number_of_children": 2,
-        "concerning_behaviors": [
-          [
-            "3.2",
-            "3.2.4"
-          ],
-          [
-            "3.2",
-            "3.2.3"
-          ],
-          [
-            "3.5",
-            "3.5.1"
-          ],
-          [
-            "3.5",
-            "3.5.2"
-          ]
-        ],
-        "comment": "Anthony Levandowski's actions of transferring confidential files from Waymo to his personal devices sparked the lawsuit. No public evidence of substance use or psychological issues affecting his actions has been documented."
-      },
-      {
-        "id": "job--afc08477-7f6f-4130-a966-f7b1e2188587",
-        "job_function": "17",
-        "occupation": "17.2",
-        "title": "Lead Engineer for Autonomous Vehicle Technology",
-        "position_technical": false,
-        "access_authorization": "5",
-        "employment_type": "FLT",
-        "hire_date": "2007-08-01",
-        "departure_date": "2016-01-27",
-        "tenure": "P8Y5M26D",
-        "comment": "Anthony Levandowski was involved in the development of autonomous vehicle technologies at Waymo, a division of Google, before leaving to start Otto, which was later acquired by Uber."
-      },
-      {
-        "id": "legal-response--4dbe427c-8f98-4621-afa6-a20902afb8d2",
-        "insider_settled": "2018-02-09",
-        "comment": "The legal response was primarily civil. The case did not involve law enforcement as it was not a criminal matter. The settlement resolved the dispute without a formal admission of wrongdoing."
-      },
-      {
-        "id": "note--afc08477-7f6f-4130-a966-f7b1e2188587",
-        "author": "CMU Researcher",
-        "date": "2024-05-28",
-        "comment": "This was a civil case. The insider was formally charged through a third-party civil court and later filed for bankruptcy"
-      },
-      {
-        "id": "organization--8ed0c400-fa6a-4bd6-babe-4da40240442d",
-        "name": "Waymo LLC",
-        "city": "Mountain View",
-        "state": "California",
-        "country": "USA",
-        "postal_code": 94043,
-        "small_business": false,
-        "industry_sector": "48",
-        "industry_subsector": "48.5",
-        "business": "Waymo operates as a self-driving technology company primarily involved in developing autonomous driving systems.",
-        "parent_company": "Alphabet Inc.",
-        "incident_role": "V"
-      },
-      {
-        "id": "organization--e7fda876-f31b-45a5-a540-7bb514ccecee",
-        "name": "Uber Technologies Inc.",
-        "city": "San Francisco",
-        "state": "California",
-        "country": "USA",
-        "postal_code": 94103,
-        "small_business": false,
-        "industry_sector": "48",
-        "industry_subsector": "48.5",
-        "business": "Uber operates as a technology company offering ridesharing, food delivery, and transportation services globally, with a division focused on developing autonomous vehicle technology.",
-        "incident_role": "B"
-      },
-      {
-        "id": "org-relationship--83271b80-b5de-410e-b7ba-3c93ca5cba99",
-        "org2": "organization--e7fda876-f31b-45a5-a540-7bb514ccecee",
-        "org1": "organization--8ed0c400-fa6a-4bd6-babe-4da40240442d",
-        "relationship": "C"
-      },
-      {
-        "id": "response--9923bad0-25bb-474a-bff7-4b23bfb3e240",
-        "investigated_by": [
-          "99",
-          "7"
-        ],
-        "investigation_events": [
-          [
-            "1",
-            "2016-11-00"
-          ]
-        ],
-        "comment": "A third-party investigator was hired to look into the matter after an engineer at Waymo found Uber's autonomous vehicle sensors drastically similar to those developed by Waymo."
-      },
-      {
-        "id": "sentence--c67354c2-5619-4ebc-85d0-21ca230c8a1d",
-        "sentence_type": "14",
-        "quantity": 245000000,
-        "metric": "5",
-        "concurrency": false
-      },
-      {
-        "id": "source--267d8772-b2e0-4bea-92a6-224f157e6924",
-        "title": "Settlement Agreement",
-        "source_type": "1",
-        "file_type": "pdf",
-        "date": "2017-09-13",
-        "public": true,
-        "document": "https://law.justia.com/cases/federal/appellate-courts/cafc/17-2235/17-2235-2017-09-13.html"
-      },
-      {
-        "id": "stressor--3a9b7107-9d1c-4c9e-b5c2-e56b0bd408f0",
-        "date": "2015-12-01",
-        "category": "1",
-        "subcategory": "1.9",
-        "comment": "Insider left Waymo to start his own company."
-      },
-      {
-        "id": "target--831dfcd9-11c5-407b-955e-287d531702b7",
-        "asset_type": "2",
-        "category": "2.1",
-        "subcategory": "2.1.1",
-        "format": "1",
-        "owner": "O",
-        "sensitivity": ["23"]
-      },
-      {
-        "id": "target--a08d89e4-4b16-49e7-bdcc-0eea308a56e6",
-        "asset_type": "5",
-        "category": "5.2",
-        "subcategory": "5.2.3",
-        "format": "1",
-        "owner": "O",
-        "sensitivity": ["23"]
-      },
-      {
-        "id": "ttp--adfa4038-3dec-4d49-9dad-8cc35d41a261",
-        "date": "2015-12-11",
-        "sequence_num": 1,
-        "observed": false,
-        "number_of_times": 1,
-        "ttp_vocab": "IIDES",
-        "tactic": "7",
-        "technique": "7.8",
-        "location": "2",
-        "hours": "1",
-        "device": [
-          "2"
-        ],
-        "description": "The insider locally downloaded files from the company cloud directories to their laptop."
-      }
-    ]
-  }
+  "id": "bundle--1f1f4efd-313d-49d7-89b1-2d256544ce6e",
+  "objects": [
+    {
+      "id": "accomplice--3426b922-135a-42f9-869d-f8b30e0d483b",
+      "relationship_to_insider": "2",
+      "first_name": "Chad",
+      "last_name": "Jones",
+      "comment": "Chad Jones was accused of conspiring with Zingerman, motivating him financially to start a company using trade secrets from Alpha Innovations, which would then be bought by Tech Solutions."
+    },
+    {
+      "id": "charge--3fcbf985-f10e-45b7-aacb-e16c89da1105",
+      "title": "18 U.S.C",
+      "section": "1836",
+      "nature_of_offense": "Misappropriation of Trade Secrets",
+      "count": 1,
+      "plea": "3",
+      "plea_bargain": false,
+      "disposition": "2"
+    },
+    {
+      "id": "court-case--3fcbf985-f10e-45b7-aacb-e16c89da1105",
+      "case_number": "01-cv-00939",
+      "case_title": "Alpha Innovations LLC v. Tech Solutions Inc.",
+      "court_country": "United States",
+      "court_state": "New York",
+      "court_district": "United States District Court for the Southern District of New York",
+      "court_type": "1",
+      "case_type": "1",
+      "defendant": ["Tech Solutions Inc."],
+      "plaintiff": ["Alpha Innovations LLC"]
+    },
+    {
+      "id": "detection--a181e814-aa3a-411e-ae79-79ceba48e36a",
+      "first_detected": "2001-02-23",
+      "who_detected": ["LE", "OR"],
+      "detected_method": ["2", "4"],
+      "logs": ["AC", "EM", "VD"]
+    },
+    {
+      "id": "impact--d2eb25a4-1293-44ee-b8a6-a984714d8033",
+      "high": 150000000,
+      "low": 150000000,
+      "metric": "5",
+      "estimated": false,
+      "comment": "Financial impact valued at approximately $150 million, which was the settlement amount Tech Solutions agreed to give Alpha Innovations in equity."
+    },
+    {
+      "id": "impact--ea6f96c7-d4db-4021-b85b-057453ff2292",
+      "high": 14000,
+      "metric": "7",
+      "estimated": true,
+      "comment": "Zingerman downloaded over 14,000 files before leaving the company to found his own startup, which was then bought by Tech Solutions."
+    },
+    {
+      "id": "incident--6e75f650-c1a5-4c71-8d2f-7e9d2bba0381",
+      "cia_effect": ["C", "I"],
+      "incident_type": ["E"],
+      "incident_subtype": ["E.1"],
+      "outcome": ["DS", "ML"],
+      "status": "C",
+      "summary": "The case involved Alpha Innovations, a software development company, accusing Tech Solutions, through its acquisition of Zingerman's startup, of stealing trade secrets related to software algorithms. The lawsuit claimed that Mark Zingerman, a former engineer at Alpha Innovations, downloaded thousands of files related to Alpha Innovations' proprietary software before leaving to start his own company, which was soon acquired by Tech Solutions.",
+      "brief_summary": "Alpha Innovations sued Tech Solutions for intellectual property theft, claiming that ex-engineer Mark Zingerman stole software technology secrets before joining Tech Solutions. The case was settled with Tech Solutions agreeing to not use Alpha Innovations' technology and paying equity worth approximately $150 million.",
+      "comment": "The case was settled out of court, and no formal determination of guilt was made against Tech Solutions, but they agreed to a settlement to avoid the continuation of litigation."
+    },
+    {
+      "id": "insider--2fe80494-c7cf-4d75-85ef-736b55884664",
+      "incident_role": "1",
+      "motive": ["3", "5"],
+      "substance_use_during_incident": false,
+      "first_name": "Mark",
+      "last_name": "Zingerman",
+      "alias": ["Matt Zinger", "John Doe"],
+      "city": "New York",
+      "state": "NY",
+      "country": "US",
+      "postal_code": 10001,
+      "country_of_citizenship": ["US"],
+      "nationality": ["US"],
+      "gender": "M",
+      "age": 35,
+      "education": "8",
+      "marital_status": "2",
+      "number_of_children": 2,
+      "concerning_behaviors": [
+        ["3.2", "3.2.4"],
+        ["3.2", "3.2.3"],
+        ["3.5", "3.5.1"],
+        ["3.5", "3.5.2"]
+      ],
+      "comment": "Mark Zingerman's actions of transferring confidential files from Alpha Innovations to his personal devices sparked the lawsuit. No public evidence of substance use or psychological issues affecting his actions has been documented."
+    },
+    {
+      "id": "job--afc08477-7f6f-4130-a966-f7b1e2188587",
+      "job_function": "17",
+      "occupation": "17.2",
+      "title": "Lead Engineer for Software Development",
+      "position_technical": false,
+      "access_authorization": "5",
+      "employment_type": "FLT",
+      "hire_date": "1997-08-01",
+      "departure_date": "2006-01-27",
+      "tenure": "P8Y5M26D",
+      "comment": "Mark Zingerman was involved in the development of proprietary software technologies at Alpha Innovations before leaving to start his own company, which was later acquired by Tech Solutions."
+    },
+    {
+      "id": "legal-response--4dbe427c-8f98-4621-afa6-a20902afb8d2",
+      "insider_settled": "2003-02-09",
+      "comment": "The legal response was primarily civil. The case did not involve law enforcement as it was not a criminal matter. The settlement resolved the dispute without a formal admission of wrongdoing."
+    },
+    {
+      "id": "note--afc08477-7f6f-4130-a966-f7b1e2188587",
+      "author": "CMU Researcher",
+      "date": "2004-05-28",
+      "comment": "This was a civil case. The insider was formally charged through a third-party civil court and later filed for bankruptcy."
+    },
+    {
+      "id": "organization--8ed0c400-fa6a-4bd6-babe-4da40240442d",
+      "name": "Alpha Innovations LLC",
+      "city": "New York",
+      "state": "New York",
+      "country": "USA",
+      "postal_code": 10001,
+      "small_business": false,
+      "industry_sector": "48",
+      "industry_subsector": "48.5",
+      "business": "Alpha Innovations operates as a software development company primarily involved in developing proprietary software systems.",
+      "parent_company": "Tech Giant Inc.",
+      "incident_role": "V"
+    },
+    {
+      "id": "organization--e7fda876-f31b-45a5-a540-7bb514ccecee",
+      "name": "Tech Solutions Inc.",
+      "city": "San Francisco",
+      "state": "California",
+      "country": "USA",
+      "postal_code": 94103,
+      "small_business": false,
+      "industry_sector": "48",
+      "industry_subsector": "48.5",
+      "business": "Tech Solutions operates as a technology company offering various software and IT services globally, with a division focused on developing proprietary software technology.",
+      "incident_role": "B"
+    },
+    {
+      "id": "org-relationship--83271b80-b5de-410e-b7ba-3c93ca5cba99",
+      "org2": "organization--e7fda876-f31b-45a5-a540-7bb514ccecee",
+      "org1": "organization--8ed0c400-fa6a-4bd6-babe-4da40240442d",
+      "relationship": "C"
+    },
+    {
+      "id": "response--9923bad0-25bb-474a-bff7-4b23bfb3e240",
+      "investigated_by": ["99", "7"],
+      "investigation_events": [["1", "2001-11-00"]],
+      "comment": "A third-party investigator was hired to look into the matter after an engineer at Alpha Innovations found Tech Solutions' software algorithms drastically similar to those developed by Alpha Innovations."
+    },
+    {
+      "id": "sentence--c67354c2-5619-4ebc-85d0-21ca230c8a1d",
+      "sentence_type": "14",
+      "quantity": 150000000,
+      "metric": "5",
+      "concurrency": false
+    },
+    {
+      "id": "source--267d8772-b2e0-4bea-92a6-224f157e6924",
+      "title": "Settlement Agreement",
+      "source_type": "1",
+      "file_type": "pdf",
+      "date": "2002-09-13",
+      "public": true,
+      "document": "https://fakeurl.com/cases/federal-appellate-courts/02-2235/02-2235-2002-09-13.html"
+    },
+    {
+      "id": "stressor--3a9b7107-9d1c-4c9e-b5c2-e56b0bd408f0",
+      "date": "2000-12-01",
+      "category": "1",
+      "subcategory": "1.9",
+      "comment": "Insider left Alpha Innovations to start his own company."
+    },
+    {
+      "id": "target--831dfcd9-11c5-407b-955e-287d531702b7",
+      "asset_type": "2",
+      "category": "2.1",
+      "subcategory": "2.1.1",
+      "format": "1",
+      "owner": "O",
+      "sensitivity": ["23"]
+    },
+    {
+      "id": "target--a08d89e4-4b16-49e7-bdcc-0eea308a56e6",
+      "asset_type": "5",
+      "category": "5.2",
+      "subcategory": "5.2.3",
+      "format": "1",
+      "owner": "O",
+      "sensitivity": ["23"]
+    },
+    {
+      "id": "ttp--adfa4038-3dec-4d49-9dad-8cc35d41a261",
+      "date": "2000-12-11",
+      "sequence_num": 1,
+      "observed": false,
+      "number_of_times": 1,
+      "ttp_vocab": "IIDES",
+      "tactic": "7",
+      "technique": "7.8",
+      "location": "2",
+      "hours": "1",
+      "device": ["2"],
+      "description": "The insider locally downloaded files from the company cloud directories to their laptop."
+    }
+  ]
+}
