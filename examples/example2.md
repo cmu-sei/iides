@@ -17,13 +17,13 @@
 - **`Status`**:
  Closed (*C*) &mdash; All investigations and legal proceedings are closed
 - **`Summary`**:
- The insider, an ex-Navy member, worked as a cybersecurity specialist for a government agency in May 2003. During this time, she printed a report from her work computer that detailed unauthorized access attempts by a foreign hacking group against municipal election systems and voter databases. She then shared this Top Secret information with a tech blog. This report revealed the techniques and tools used to gather the information contained in the report, which, if disclosed, could be detrimental to the United States. A government agency investigated her and the insider pleaded guilty in June 2004 to one felony count of unauthorized transmission of national defense information and was convicted.
+ The insider, a former military member, worked as a cybersecurity specialist for a government agency in May 2003. During this time, she printed a report from her work computer that detailed unauthorized access attempts by a foreign hacking group against municipal election systems and voter databases. She then shared this Top Secret information with a tech blog. This report revealed the techniques and tools used to gather the information contained in the report, which, if disclosed, could be detrimental to the United States. A government agency investigated her and the insider pleaded guilty in June 2004 to one felony count of unauthorized transmission of national defense information and was convicted.
 - **`Brief summary`**:
- The insider leaked Top Secret information to a tech blog. The insider pleaded guilty to one felony count of unauthorized transmission of national defense information in June 2004, and was convicted.
+ The insider leaked Top Secret information to a website. The insider pleaded guilty to one felony count of unauthorized transmission of national defense information in June 2004, and was convicted.
 
 ## Insider
 
-The insider previously had a very clean record and was an unlikely suspect. The insider was known as a 'model employee' with no apparent history of misconduct or any disciplinary proceedings during their military service in the Navy.
+The insider previously had a very clean record and was an unlikely suspect. The insider was known as a 'model employee' with no apparent history of misconduct or any disciplinary proceedings during their military service.
 
 - **`Id`**:
  insider--04548271-8e9f-4e40-8bad-9cf77c858070
@@ -118,7 +118,7 @@ The insider previously had a very clean record and was an unlikely suspect. The 
 
 ## Detection
 
-Emily Cabello was caught after the intelligence agency identified that a classified document published by The Journal had been printed, revealing traceable metadata. Investigators used printer tracking dots to determine the document's print date and reviewed access logs, finding that only six individuals, including Cabello, had accessed it. Further evidence included her email communication with The Journal and her confession when confronted by the FBI.
+Emily Cabello was caught after the intelligence agency identified that a classified document published by The Website had been printed, revealing traceable metadata. Investigators used printer tracking dots to determine the document's print date and reviewed access logs, finding that only four individuals, including Cabello, had accessed it. Further evidence included her email communication with The Journal and her confession when confronted by the FBI.
 
 - **`Id`**:
  detection--7f05c15a-84b2-489d-a3dc-0e3c78d9cbc8
@@ -378,7 +378,7 @@ The exact date of hire and departure is unknown, but the month and year are corr
 - **`Id`**:
  source--32c2aa75-685a-4af5-ba0f-36921b8d1c18
 - **`Title`**:
- CASE STUDY Unlawful Retention and Transmission of National Defense Information
+ Case Study of This Mock Case
 - **`Source type`**:
  Media (*5*) &mdash; News, blog, or similar publication
 - **`File type`**:
@@ -405,7 +405,7 @@ The exact date of hire and departure is unknown, but the month and year are corr
 - **`Public`**:
  True
 - **`Document`**:
- https://fakeurl.com/case/11th-cir/03-11692
+ source/example2desc.md
 
 ## Source
 
