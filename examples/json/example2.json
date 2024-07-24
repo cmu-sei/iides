@@ -46,7 +46,7 @@
       "incident_subtype": ["E.2"],
       "outcome": ["DR", "DS"],
       "status": "C",
-      "summary": "The insider, an ex-Navy member, worked as a cybersecurity specialist for the National Cybersecurity Agency (NCA) in May 2003. During this time, she printed a report from her work computer that detailed unauthorized access attempts by a foreign hacking group against municipal election systems and voter databases. She then shared this Top Secret information with a tech blog. This report revealed the techniques and tools used to gather the information contained in the report, which, if disclosed, could be detrimental to the United States. The Federal Bureau of Investigation (FBI) investigated and later arrested the insider in June 2003. The insider pleaded guilty in June 2004 to one felony count of unauthorized transmission of national defense information and was convicted.",
+      "summary": "The insider, an ex-Navy member, worked as a cybersecurity specialist for a government agency in May 2003. During this time, she printed a report from her work computer that detailed unauthorized access attempts by a foreign hacking group against municipal election systems and voter databases. She then shared this Top Secret information with a tech blog. This report revealed the techniques and tools used to gather the information contained in the report, which, if disclosed, could be detrimental to the United States. A government agency investigated her and the insider pleaded guilty in June 2004 to one felony count of unauthorized transmission of national defense information and was convicted.",
       "brief_summary": "The insider leaked Top Secret information to a tech blog. The insider pleaded guilty to one felony count of unauthorized transmission of national defense information in June 2004, and was convicted."
     },
     {
@@ -104,7 +104,7 @@
       "industry_sector": "92",
       "industry_subsector": "92.811",
       "business": "The Global Intelligence Agency (GIA) is a critical player in the U.S. intelligence community. Its primary function is to gather and analyze foreign signals intelligence (SIGINT) to protect national security.",
-      "parent_company": "United States Department of Defense",
+      "parent_company": "Government Agency",
       "incident_role": "V"
     },
     {
