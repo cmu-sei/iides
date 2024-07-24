@@ -1,227 +1,225 @@
 {
-    "$id": "iides/json/objects/response.json",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "Response",
-    "description": "Response describes the organization's response to the incident, including technical and behavioral controls, investigation, and legal response. An incident may have only one response entity. A response may have only one legal response entity.",
-    "type": "object",
-    "properties": {
-      "id": {
-        "type": "string",
-        "description": "A unique string that begins with \"response--\" and is appended with a UUIDv4",
-        "pattern": "^response--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
-      },
-      "technical_controls": {
+  "$id": "iides/json/objects/response.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Response",
+  "description": "Response describes the organization's response to the incident, including technical and behavioral controls, investigation, and legal response. An incident may have only one response entity. A response may have only one legal response entity.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "A unique string that begins with \"response--\" and is appended with a UUIDv4",
+      "pattern": "^response--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "technical_controls": {
+      "type": "array",
+      "description": "Controls put in place to limit or monitor the insider's access to devices, data, or the network or to limit or monitor network or device access for the user population more generally",
+      "items": {
         "type": "array",
-        "description": "Controls put in place to limit or monitor the insider's access to devices, data, or the network or to limit or monitor network or device access for the user population more generally",
-        "items": {
-          "type": "array",
-          "prefixItems": [
-            { "$ref": "#/$defs/technical-control-vocab"},
-            { "type": "string", "format": "date" }
-          ]
-        },
-        "minItems": 2,
-        "maxItems": 2      
+        "prefixItems": [
+          { "$ref": "#/$defs/technical-control-vocab" },
+          { "type": "string", "format": "date" }
+        ]
       },
-      "behavioral_controls": {
-        "type": "array",
-        "description": "Controls put in place to limit, monitor, or correct the insider's behavior within the organization",
-        "items": {
-          "type": "array",
-          "prefixItems": [
-            { "$ref": "#/$defs/behavioral-control-vocab"},
-            { "type": "string", "format": "date" }
-          ]
-        },
-        "minItems": 2,
-        "maxItems": 2
-      },
-      "investigated_by": {
-        "type": "array",
-        "description": "The organization(s) or entity(s) that investigated the incident",
-        "items": {
-            "$ref": "#/$defs/investigator-vocab"
-        },
-        "minItems": 1
-      },
-      "investigation_events": {
-        "type": "array",
-        "description": "Specific events that happened during the course of the investigation into the incident",
-        "items": {
-          "type": "array",
-          "prefixItems": [
-            { "$ref": "#/$defs/investigation-vocab"},
-            { "type": "string", "format": "date" }
-          ]
-        },
       "minItems": 2,
       "maxItems": 2
+    },
+    "behavioral_controls": {
+      "type": "array",
+      "description": "Controls put in place to limit, monitor, or correct the insider's behavior within the organization",
+      "items": {
+        "type": "array",
+        "prefixItems": [
+          { "$ref": "#/$defs/behavioral-control-vocab" },
+          { "type": "string", "format": "date" }
+        ]
       },
-      "comment": {
-        "type": "string",
-        "description": "Clarifying comments or additional details about the organization's response"
-      }
+      "minItems": 2,
+      "maxItems": 2
     },
-    "required": [
-        "id"
-    ],
-    "$defs": {
-        "technical-control-vocab": {
-          "oneOf": [
-            {
-              "const": "1",
-              "title": "Access to Technical System(s) Restricted",
-              "description": "Insider's access to the organization's technical systems is restricted in any capacity (e.g., the organization declares that insider could only log onto system if another employee is present)"
-            },
-            {
-              "const": "2",
-              "title": "Access to Technical System(s) Terminated",
-              "description": "Insider's access to the organization's technical systems is completely terminated (e.g., the insider's account is deleted upon termination from the company)"
-            }
-          ]
-        },
-        "behavioral-control-vocab": {
-          "oneOf": [
-            {
-              "const": "1",
-              "title": "Counseling",
-              "description": "Insider is sent to counseling of any kind as a result of their actions"
-            },
-            {
-              "const": "2",
-              "title": "Demoted",
-              "description": "Insider is demoted (.g., reduced their rank, title, or responsbilities)"
-            },
-            {
-              "const": "3",
-              "title": "Passed Over For Promotion",
-              "description": "Organization chooses to promote someone other than the insider as a result of the insider's actions"
-            },
-            {
-              "const": "4",
-              "title": "Poor Performance Review",
-              "description": "Insider receives a review of their work performance which is deemed below average"
-            },
-            {
-              "const": "5",
-              "title": "Put on Paid/Unpaid Leave",
-              "description": "Insider is put on temporary leave from a job assignment, with or without pay and benefits"
-            },
-            {
-              "const": "6",
-              "title": "Referred to Employee Assistance Program",
-              "description": "Insider is referred to the EAP as a result of their actions"
-            },
-            {
-              "const": "7",
-              "title": "Reported to HR",
-              "description": "Insider is reported to Human Resources as a result of their actions"
-            },
-            {
-              "const": "8",
-              "title": "Suspended",
-              "description": "Insider is suspended (definitely or indefinitely) and not allowed to conduct normal work for the organization"
-            },
-            {
-              "const": "9",
-              "title": "Terminated",
-              "description": "Insider is terminated, or fired, from the organization"
-            },
-            {
-              "const": "10",
-              "title": "Transferred",
-              "description": "Insider is transferred to another company location as a result of their actions"
-            },
-            {
-              "const": "11",
-              "title": "Verbal Reprimand",
-              "description": "Insider receives a verbal reprimand from their supervisor as a result of their actions"
-            },
-            {
-              "const": "12",
-              "title": "Written Reprimand",
-              "description": "Insider receives a written reprimand from their supervisor as a result of their actions"
-            }
-          ]
-        },
-        "investigation-vocab": {
-            "oneOf": [
-              {
-                "const": "1",
-                "title": "Evidence Found",
-                "description": "Evidence relevant to the incident is found (e.g., fellow employee found a USB drive left in the insider's computer that had sensitive company files downloaded on to it)"
-              },
-              {
-                "const": "2",
-                "title": "Insider Admits to Activity in Interview",
-                "description": "Insider admits to involvement in insider incident while being interviewed by investigators about the incident (or related activity)"
-              },
-              {
-                "const": "3",
-                "title": "Insider's Residence/Workplace Searched",
-                "description": "Investigators search the insider's home or workplace for evidence related to the incident"
-              },
-              {
-                "const": "4",
-                "title": "Case Opened Internally",
-                "description": "The victim organization open a case to investigate the insider"
-              },
-              {
-                "const": "5",
-                "title": "Case Opened with Law Enforcement",
-                "description": "Law enforcement opened a case to investigate the insider"
-              },
-              {
-                "const": "6",
-                "title": "Insider Interviewed",
-                "description": "Insider is interviewed about the incident by investigators"
-              }
-            ]
-        },
-        "investigator-vocab": {
-          "oneOf": [
-            {
-              "const": "1",
-              "title": "Incident Response Team",
-              "description": "Incident Response Team (IRT), whether internal to the organization or provided by an external contract"
-            },
-            {
-              "const": "2",
-              "title": "Internal Investigators",
-              "description": "Other investigators internal to the victim organization"
-            },
-            {
-              "const": "3",
-              "title": "Law Enforcement - Federal",
-              "description": "Federal law enforcement entity such as the FBI or USSS"
-            },
-            {
-              "const": "4",
-              "title": "Law Enforcement - Government Agency",
-              "description": "Law enforcement belonging to a government agency such as DHS, USPS, or the IRS"
-            },
-            {
-              "const": "5",
-              "title": "Law Enforcement - Local/State",
-              "description": "State or local law enforcement entity"
-            },
-            {
-              "const": "6",
-              "title": "Law Enforcement - Military/DoD",
-              "description": "Law enforcement belonging to the military or Department of Defense such as military police or NCIS"
-            },
-            {
-              "const": "7",
-              "title": "Management",
-              "description": "Management internal to the organization"
-            },
-            {
-              "const": "99",
-              "title": "Other",
-              "description": "Other investigator not lised in this vocabulary"
-            }
-          ]
-      }
+    "investigated_by": {
+      "type": "array",
+      "description": "The organization(s) or entity(s) that investigated the incident",
+      "items": {
+        "$ref": "#/$defs/investigator-vocab"
+      },
+      "minItems": 1
     },
-    "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided “AS-IS” with “NO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED” and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT® is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
+    "investigation_events": {
+      "type": "array",
+      "description": "Specific events that happened during the course of the investigation into the incident",
+      "items": {
+        "type": "array",
+        "prefixItems": [
+          { "$ref": "#/$defs/investigation-vocab" },
+          { "type": "string", "format": "date" }
+        ]
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "comment": {
+      "type": "string",
+      "description": "Clarifying comments or additional details about the organization's response"
+    }
+  },
+  "required": ["id"],
+  "$defs": {
+    "technical-control-vocab": {
+      "oneOf": [
+        {
+          "const": "1",
+          "title": "Access to Technical System(s) Restricted",
+          "description": "Insider's access to the organization's technical systems is restricted in any capacity (e.g., the organization declares that insider could only log onto system if another employee is present)"
+        },
+        {
+          "const": "2",
+          "title": "Access to Technical System(s) Terminated",
+          "description": "Insider's access to the organization's technical systems is completely terminated (e.g., the insider's account is deleted upon termination from the company)"
+        }
+      ]
+    },
+    "behavioral-control-vocab": {
+      "oneOf": [
+        {
+          "const": "1",
+          "title": "Counseling",
+          "description": "Insider is sent to counseling of any kind as a result of their actions"
+        },
+        {
+          "const": "2",
+          "title": "Demoted",
+          "description": "Insider is demoted (.g., reduced their rank, title, or responsbilities)"
+        },
+        {
+          "const": "3",
+          "title": "Passed Over For Promotion",
+          "description": "Organization chooses to promote someone other than the insider as a result of the insider's actions"
+        },
+        {
+          "const": "4",
+          "title": "Poor Performance Review",
+          "description": "Insider receives a review of their work performance which is deemed below average"
+        },
+        {
+          "const": "5",
+          "title": "Put on Paid/Unpaid Leave",
+          "description": "Insider is put on temporary leave from a job assignment, with or without pay and benefits"
+        },
+        {
+          "const": "6",
+          "title": "Referred to Employee Assistance Program",
+          "description": "Insider is referred to the EAP as a result of their actions"
+        },
+        {
+          "const": "7",
+          "title": "Reported to HR",
+          "description": "Insider is reported to Human Resources as a result of their actions"
+        },
+        {
+          "const": "8",
+          "title": "Suspended",
+          "description": "Insider is suspended (definitely or indefinitely) and not allowed to conduct normal work for the organization"
+        },
+        {
+          "const": "9",
+          "title": "Terminated",
+          "description": "Insider is terminated, or fired, from the organization"
+        },
+        {
+          "const": "10",
+          "title": "Transferred",
+          "description": "Insider is transferred to another company location as a result of their actions"
+        },
+        {
+          "const": "11",
+          "title": "Verbal Reprimand",
+          "description": "Insider receives a verbal reprimand from their supervisor as a result of their actions"
+        },
+        {
+          "const": "12",
+          "title": "Written Reprimand",
+          "description": "Insider receives a written reprimand from their supervisor as a result of their actions"
+        }
+      ]
+    },
+    "investigation-vocab": {
+      "oneOf": [
+        {
+          "const": "1",
+          "title": "Evidence Found",
+          "description": "Evidence relevant to the incident is found (e.g., fellow employee found a USB drive left in the insider's computer that had sensitive company files downloaded on to it)"
+        },
+        {
+          "const": "2",
+          "title": "Insider Admits to Activity in Interview",
+          "description": "Insider admits to involvement in insider incident while being interviewed by investigators about the incident (or related activity)"
+        },
+        {
+          "const": "3",
+          "title": "Insider's Residence/Workplace Searched",
+          "description": "Investigators search the insider's home or workplace for evidence related to the incident"
+        },
+        {
+          "const": "4",
+          "title": "Case Opened Internally",
+          "description": "The victim organization open a case to investigate the insider"
+        },
+        {
+          "const": "5",
+          "title": "Case Opened with Law Enforcement",
+          "description": "Law enforcement opened a case to investigate the insider"
+        },
+        {
+          "const": "6",
+          "title": "Insider Interviewed",
+          "description": "Insider is interviewed about the incident by investigators"
+        }
+      ]
+    },
+    "investigator-vocab": {
+      "oneOf": [
+        {
+          "const": "1",
+          "title": "Incident Response Team",
+          "description": "Incident Response Team (IRT), whether internal to the organization or provided by an external contract"
+        },
+        {
+          "const": "2",
+          "title": "Internal Investigators",
+          "description": "Other investigators internal to the victim organization"
+        },
+        {
+          "const": "3",
+          "title": "Law Enforcement - Federal",
+          "description": "Federal law enforcement entity such as the FBI or USSS"
+        },
+        {
+          "const": "4",
+          "title": "Law Enforcement - Government Agency",
+          "description": "Law enforcement belonging to a government agency such as DHS, USPS, or the IRS"
+        },
+        {
+          "const": "5",
+          "title": "Law Enforcement - Local/State",
+          "description": "State or local law enforcement entity"
+        },
+        {
+          "const": "6",
+          "title": "Law Enforcement - Military/DoD",
+          "description": "Law enforcement belonging to the military or Department of Defense such as military police or NCIS"
+        },
+        {
+          "const": "7",
+          "title": "Management",
+          "description": "Management internal to the organization"
+        },
+        {
+          "const": "99",
+          "title": "Other",
+          "description": "Other investigator not lised in this vocabulary"
+        }
+      ]
+    }
+  },
+  "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \"AS-IS\" with \"NO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\" and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT® is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
 }

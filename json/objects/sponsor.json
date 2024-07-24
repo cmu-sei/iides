@@ -1,58 +1,56 @@
 {
-    "$id": "iides/json/objects/sponsor.json",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "Sponsor",
-    "description": "A sponsor is an individual or entity that recruited, instigated, motivated, or otherwise supported the insider's action. A sponsor MUST be associated with at least one insider or accomplice. The sponsor may be associated with multiple insiders or accomplices.",
-    "type": "object",
-    "properties": {
-      "id": {
-        "type": "string",
-        "description": "A unique string that begins with \"sponsor--\" and is appended with a UUIDv4",
-        "pattern": "^sponsor--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
-      },
-      "name": {
-        "type": "string",
-        "description": "The name of the individual or entity sponsoring the insider's actions"
-      },
-      "sponsor_type": {
-        "type": "string",
-        "description": "The type of sponsor",
-        "$ref": "#/$defs/sponsor-type-vocab"
-      }
+  "$id": "iides/json/objects/sponsor.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sponsor",
+  "description": "A sponsor is an individual or entity that recruited, instigated, motivated, or otherwise supported the insider's action. A sponsor MUST be associated with at least one insider or accomplice. The sponsor may be associated with multiple insiders or accomplices.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "A unique string that begins with \"sponsor--\" and is appended with a UUIDv4",
+      "pattern": "^sponsor--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
     },
-    "required": [
-        "id"
-    ],
-    "$defs": {
-        "sponsor-type-vocab": {
-            "oneOf": [
-                {
-                    "const": "OC",
-                    "title": "Organized Crime",
-                    "description": "E.g., terrorist group, mafia, gang"
-                },
-                {
-                    "const": "SS",
-                    "title": "State Sponsor",
-                    "description": "Geopolitical, state, or national military with a speciific country of origin"
-                },
-                {
-                    "const": "FN",
-                    "title": "Foreign National",
-                    "description": "An individual whose objectives are aligned with either the political, commercial, or military interests of a country other than where the incident originated"
-                },
-                {
-                    "const": "CE",
-                    "title": "Criminal Enterprise",
-                    "description": "A group of individuals with an identified hierarchy or structure who engage in significant criminal activity"
-                },
-                {
-                    "const": "OT",
-                    "title": "Other",
-                    "description": "A sponsor type not listed in this vocabulary"
-                }
-            ]
+    "name": {
+      "type": "string",
+      "description": "The name of the individual or entity sponsoring the insider's actions"
+    },
+    "sponsor_type": {
+      "type": "string",
+      "description": "The type of sponsor",
+      "$ref": "#/$defs/sponsor-type-vocab"
+    }
+  },
+  "required": ["id"],
+  "$defs": {
+    "sponsor-type-vocab": {
+      "oneOf": [
+        {
+          "const": "OC",
+          "title": "Organized Crime",
+          "description": "E.g., terrorist group, mafia, gang"
+        },
+        {
+          "const": "SS",
+          "title": "State Sponsor",
+          "description": "Geopolitical, state, or national military with a speciific country of origin"
+        },
+        {
+          "const": "FN",
+          "title": "Foreign National",
+          "description": "An individual whose objectives are aligned with either the political, commercial, or military interests of a country other than where the incident originated"
+        },
+        {
+          "const": "CE",
+          "title": "Criminal Enterprise",
+          "description": "A group of individuals with an identified hierarchy or structure who engage in significant criminal activity"
+        },
+        {
+          "const": "OT",
+          "title": "Other",
+          "description": "A sponsor type not listed in this vocabulary"
         }
-    },
-    "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided “AS-IS” with “NO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED” and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT® is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
+      ]
+    }
+  },
+  "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \"AS-IS\" with \"NO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\" and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT® is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
 }

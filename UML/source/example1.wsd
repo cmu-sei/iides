@@ -4,7 +4,7 @@ Class Charge #f9b8bd {
 * id : charge--2bc9e36b-53c3-44fa-8997-ccb5d8ac9418 
 * title : 18 U.S.C. 
 + section : 793(e) 
-+ nature_of_offense : Unlawful acquisition and dissemination of sensitive information. 
++ nature_of_offense : Illegal gathering and transmission of national defense information. 
 + count : 3
 + plea : 3 
 + plea_bargain : False
@@ -15,7 +15,7 @@ Class Charge #f9b8bd {
 * id : charge--0572191b-beef-484c-841f-149a9f17fd8f 
 * title : 18 U.S.C. 
 + section : 641 
-+ nature_of_offense : Misappropriation of state assets. 
++ nature_of_offense : Theft of government property. 
 + count : 1
 + plea : 3 
 + plea_bargain : False
@@ -26,7 +26,7 @@ Class Charge #f9b8bd {
 * id : charge--868f7fd1-b492-40a4-b21f-f5a31cd5e219 
 * title : 18 U.S.C. 
 + section : 1030(a)(1) 
-+ nature_of_offense : Unauthorized access to a network to retrieve confidential information. 
++ nature_of_offense : Unauthorized access to a computer to obtain classified information. 
 + count : 1
 + plea : 3 
 + plea_bargain : False
@@ -37,7 +37,8 @@ Class Charge #f9b8bd {
 * id : charge--d59dd57a-96b5-472f-a788-dcdb30ec5cb6 
 * title : 18 U.S.C. 
 + section : 1030(a)(2) 
-+ nature_of_offense : Unauthorized access to a system to obtain agency data. 
++ nature_of_offense : Unauthorized access to a computer to obtain information from a department or agency of the 
+U.S. 
 + count : 1
 + plea : 3 
 + plea_bargain : False
@@ -48,7 +49,7 @@ Class Charge #f9b8bd {
 * id : charge--cc6be1c8-5c76-4286-84a0-2b456a288c13 
 * title : 18 U.S.C. 
 + section : 1030(a)(5)(A) 
-+ nature_of_offense : Initiating transmission of malicious network commands. 
++ nature_of_offense : Causing transmission of harmful computer commands. 
 + count : 1
 + plea : 3 
 + plea_bargain : False
@@ -59,40 +60,7 @@ Class Charge #f9b8bd {
 * id : charge--9259e182-5643-4a4d-b078-4bb251fe2595 
 * title : 18 U.S.C. 
 + section : 1519 
-+ nature_of_offense : Interference with judicial processes. 
-+ count : 1
-+ plea : 3 
-+ plea_bargain : False
-+ disposition : 2 
----
-}
-Class Charge #f9b8bd {
-* id : charge--10b415ea-7ea6-4068-b394-db1d18349b92 
-* title : 18 U.S.C. 
-+ section : 2252A(a)(2)(A) 
-+ nature_of_offense : Acquisition of illicit digital content. 
-+ count : 1
-+ plea : 3 
-+ plea_bargain : False
-+ disposition : 2 
----
-}
-Class Charge #f9b8bd {
-* id : charge--4ded5348-219f-4d74-851e-f7803b49e35e 
-* title : 18 U.S.C. 
-+ section : 2252A(a)(5)(B) 
-+ nature_of_offense : Possession of illicit digital content. 
-+ count : 1
-+ plea : 3 
-+ plea_bargain : False
-+ disposition : 2 
----
-}
-Class Charge #f9b8bd {
-* id : charge--a919f8e3-0674-4269-bc8a-d71a539018e1 
-* title : 18 U.S.C. 
-+ section : 2252A(a)(1) 
-+ nature_of_offense : Distribution of illicit digital content. 
++ nature_of_offense : Obstruction of justice. 
 + count : 1
 + plea : 3 
 + plea_bargain : False
@@ -111,13 +79,12 @@ Class CourtCase #f9b8bd {
 + defendant : ['Oliver Griffin']
 + plaintiff : ['United States of America']
 + comment : This case involved multiple charges against Oliver Griffin, including unauthorized access to classified information, computer 
-hacking, unauthorized access to government computer systems, causing transmission of harmful computer commands, and receipt, 
-possession, and transportation of illicit digital content. 
+hacking, unauthorized access to government computer systems, and causing transmission of harmful computer commands. 
 ---
 }
 Class Detection #FDB515 {
 * id : detection--bd545866-663f-4d62-a39a-da3672842c9f 
-+ first_detected : 2017-03-07T00:00:00Z 
++ first_detected : 2001-03-07T00:00:00Z 
 + who_detected : ['LE', 'ST']
 + detected_method : ['2', '4']
 + logs : ['AC', 'AU', 'DB', 'RA', 'SF']
@@ -128,12 +95,11 @@ access logs, and system file logs.
 }
 Class Impact #D4EFDF {
 * id : impact--2d4ed800-002d-4ce5-bbb0-c89acc1f4254 
-+ high : 8000
-+ low : 8000
++ high : 5
++ low : 5
 + metric : 7 
 + estimated : True
-+ comment : The leak included approximately 8,000 documents detailing hacking tools and techniques used by the intelligence 
-agency. 
++ comment : The leak included approximately 5 highly sensitive documents. 
 ---
 }
 Class Impact #D4EFDF {
@@ -231,17 +197,16 @@ charges.
 }
 Class Organization #007BC0 {
 * id : organization--d1472454-0236-4b66-9013-65d0f916ee48 
-+ name : Central Intelligence Agency 
-+ city : Langley 
-+ state : VA 
++ name : Government Agency 
++ city : Washington 
++ state : DC 
 + country : US 
-+ postal_code : 22101
++ postal_code : 20500
 + small_business : False
 + industry_sector : 92 
 + industry_subsector : 92.811 
-+ business : The Central Intelligence Agency (CIA) is a civilian foreign intelligence service of the federal government 
-of the United States, tasked with gathering, processing, and analyzing national security information from around 
-the world. 
++ business : A government agency responsible for various administrative and regulatory functions within the federal government of 
+the United States. 
 + incident_role : V 
 + parent_company : United States Government 
 ---
@@ -283,6 +248,16 @@ Class Sentence #f9b8bd {
 + metric : 4 
 + concurrency : True
 + comment : Lifetime supervised release, to run concurrently. 
+---
+}
+Class Source #D4EFDF {
+* id : source--53455e706-d762-4b35-b54a-7e33b91cbec3 
+* title : Mock Case Description 
++ source_type : 2 
++ file_type : html 
++ date : 2024-07-18T00:00:00Z 
++ public : True
++ document : ./source/example1desc.md 
 ---
 }
 Class Source #D4EFDF {

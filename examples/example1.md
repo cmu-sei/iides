@@ -81,15 +81,15 @@ Oliver James Griffin had a history of social and mental health issues. He showed
 - **`Id`**:
  organization--d1472454-0236-4b66-9013-65d0f916ee48
 - **`Name`**:
- Central Intelligence Agency
+ Government Agency
 - **`City`**:
- Langley
+ Washington
 - **`State`**:
- VA
+ DC
 - **`Country`**:
  US
 - **`Postal code`**:
- 22101
+ 20500
 - **`Small business`**:
  False
 - **`Industry sector`**:
@@ -97,7 +97,7 @@ Oliver James Griffin had a history of social and mental health issues. He showed
 - **`Industry subsector`**:
  National Security (*92.811*) &mdash; This industry comprises government establishments of the Armed Forces, including the National Guard, primarily engaged in national security and related activities.
 - **`Business`**:
- The Central Intelligence Agency (CIA) is a civilian foreign intelligence service of the federal government of the United States, tasked with gathering, processing, and analyzing national security information from around the world.
+ A government agency responsible for various administrative and regulatory functions within the federal government of the United States.
 - **`Incident role`**:
  Primary Victim (*V*) &mdash; The organization was the primary victim organization of the insider's actions.
 - **`Parent company`**:
@@ -127,7 +127,7 @@ Griffin's unauthorized activities were detected by the government's security tea
 - **`Id`**:
  detection--bd545866-663f-4d62-a39a-da3672842c9f
 - **`First detected`**:
- 2017-03-07T00:00:00Z
+ 2001-03-07T00:00:00Z
 - **`Who detected`**:
    - Law Enforcement (*LE*) &mdash; Law enforcement discovered the insider's illegal activity (e.g., police noticed that the insider was gaining access to the company after hours)
   - Security Team (*ST*) &mdash; Technical or personnel security team discovered the insider's activity
@@ -143,14 +143,14 @@ Griffin's unauthorized activities were detected by the government's security tea
 
 ## Impact
 
-The leak included approximately 8,000 documents detailing hacking tools and techniques used by the intelligence agency.
+The leak included approximately 5 highly sensitive documents.
 
 - **`Id`**:
  impact--2d4ed800-002d-4ce5-bbb0-c89acc1f4254
 - **`High`**:
- 8,000
+ 5
 - **`Low`**:
- 8,000
+ 5
 - **`Metric`**:
  Files (*7*) &mdash; Number of physical or digital files stolen, read, or compromised
 - **`Estimated`**:
@@ -210,7 +210,7 @@ Griffin left the agency in November of 2001. Before departing from the agency, h
 
 ## Court Case
 
-This case involved multiple charges against Oliver Griffin, including unauthorized access to classified information, computer hacking, unauthorized access to government computer systems, causing transmission of harmful computer commands, and receipt, possession, and transportation of illicit digital content.
+This case involved multiple charges against Oliver Griffin, including unauthorized access to classified information, computer hacking, unauthorized access to government computer systems, and causing transmission of harmful computer commands.
 
 - **`Id`**:
  court-case--0e430311-72ee-4776-be74-3c1969d141c0
@@ -242,7 +242,7 @@ This case involved multiple charges against Oliver Griffin, including unauthoriz
 - **`Section`**:
  793(e)
 - **`Nature of offense`**:
- Unlawful acquisition and dissemination of sensitive information.
+ Illegal gathering and transmission of national defense information.
 - **`Count`**:
  3
 - **`Plea`**:
@@ -261,7 +261,7 @@ This case involved multiple charges against Oliver Griffin, including unauthoriz
 - **`Section`**:
  641
 - **`Nature of offense`**:
- Misappropriation of state assets.
+ Theft of government property.
 - **`Count`**:
  1
 - **`Plea`**:
@@ -280,7 +280,7 @@ This case involved multiple charges against Oliver Griffin, including unauthoriz
 - **`Section`**:
  1030(a)(1)
 - **`Nature of offense`**:
- Unauthorized access to a network to retrieve confidential information.
+ Unauthorized access to a computer to obtain classified information.
 - **`Count`**:
  1
 - **`Plea`**:
@@ -299,7 +299,7 @@ This case involved multiple charges against Oliver Griffin, including unauthoriz
 - **`Section`**:
  1030(a)(2)
 - **`Nature of offense`**:
- Unauthorized access to a system to obtain agency data.
+ Unauthorized access to a computer to obtain information from a department or agency of the U.S.
 - **`Count`**:
  1
 - **`Plea`**:
@@ -318,7 +318,7 @@ This case involved multiple charges against Oliver Griffin, including unauthoriz
 - **`Section`**:
  1030(a)(5)(A)
 - **`Nature of offense`**:
- Initiating transmission of malicious network commands.
+ Causing transmission of harmful computer commands.
 - **`Count`**:
  1
 - **`Plea`**:
@@ -337,64 +337,7 @@ This case involved multiple charges against Oliver Griffin, including unauthoriz
 - **`Section`**:
  1519
 - **`Nature of offense`**:
- Interference with judicial processes.
-- **`Count`**:
- 1
-- **`Plea`**:
- Not Guilty (*3*) &mdash; The defendant pleaded not guilty to the charge
-- **`Plea bargain`**:
- False
-- **`Disposition`**:
- Convicted (*2*) &mdash; Pleaded or found guilty by a court
-
-## Charge
-
-- **`Id`**:
- charge--10b415ea-7ea6-4068-b394-db1d18349b92
-- **`Title`**:
- 18 U.S.C.
-- **`Section`**:
- 2252A(a)(2)(A)
-- **`Nature of offense`**:
- Acquisition of illicit digital content.
-- **`Count`**:
- 1
-- **`Plea`**:
- Not Guilty (*3*) &mdash; The defendant pleaded not guilty to the charge
-- **`Plea bargain`**:
- False
-- **`Disposition`**:
- Convicted (*2*) &mdash; Pleaded or found guilty by a court
-
-## Charge
-
-- **`Id`**:
- charge--4ded5348-219f-4d74-851e-f7803b49e35e
-- **`Title`**:
- 18 U.S.C.
-- **`Section`**:
- 2252A(a)(5)(B)
-- **`Nature of offense`**:
- Possession of illicit digital content.
-- **`Count`**:
- 1
-- **`Plea`**:
- Not Guilty (*3*) &mdash; The defendant pleaded not guilty to the charge
-- **`Plea bargain`**:
- False
-- **`Disposition`**:
- Convicted (*2*) &mdash; Pleaded or found guilty by a court
-
-## Charge
-
-- **`Id`**:
- charge--a919f8e3-0674-4269-bc8a-d71a539018e1
-- **`Title`**:
- 18 U.S.C.
-- **`Section`**:
- 2252A(a)(1)
-- **`Nature of offense`**:
- Distribution of illicit digital content.
+ Obstruction of justice.
 - **`Count`**:
  1
 - **`Plea`**:
@@ -619,6 +562,23 @@ The charges related to illicit digital content were included in the JSON because
  CMU Researcher
 - **`Date`**:
  2024-05-17T00:00:00Z
+
+## Source
+
+- **`Id`**:
+ source--53455e706-d762-4b35-b54a-7e33b91cbec3
+- **`Title`**:
+ Mock Case Description
+- **`Source type`**:
+ DOJ Press Release (*2*) &mdash; Press release from the Department of Justice or U.S. Attorneys' Office
+- **`File type`**:
+ HTML File (*html*) &mdash; A file in HTML format
+- **`Date`**:
+ 2024-07-18T00:00:00Z
+- **`Public`**:
+ True
+- **`Document`**:
+ ./source/example1desc.md
 
 ## Source
 

@@ -16,7 +16,7 @@
 
 **Read the [IIDES version](example2.md)**, look at the [visualization](pngs/Example2.svg), or view the [JSON](json/example2.json)
 
-## Example 3: 
+## Example 3:
 
 **Case**: Waymo LLC vs. Uber Technologies, Inc.
 
@@ -24,7 +24,7 @@
 
 **Read the [IIDES version](example3.md)**, look at the [visualization](pngs/Example3.svg), or view the [JSON](json/example3.json)
 
-## Example 4 
+## Example 4
 
 **Case**: USA vs. Kevin Patrick Mallory
 
