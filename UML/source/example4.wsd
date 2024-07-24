@@ -46,29 +46,29 @@ Class Charge #f9b8bd {
 }
 Class CourtCase #f9b8bd {
 * id : court-case--4715b227-cee7-49b4-95a0-f418ceb31ae5 
-+ case_number : 1:17-cr-154 
-+ case_title : United States v. Mallory 
++ case_number : 1:03-cr-154 
++ case_title : United States v. Xin Xia 
 + court_country : United States of America 
-+ court_state : VA 
-+ court_district : Eastern District of Virginia 
++ court_state : NY 
++ court_district : Southern District of New York 
 + court_type : 1 
 + case_type : 2 
 + defendant : ['United States of America']
-+ plaintiff : ['Kevin Patrick Mallory']
++ plaintiff : ['Xin Xia']
 + comment : 
 ---
 }
 Class Detection #FDB515 {
 * id : detection--28ab62a7-ef29-478d-9fcd-b06bd11dfbc6 
-+ first_detected : date-time 
++ first_detected : 2003-01-15T08:30:00Z 
 + who_detected : ['LE']
 + detected_method : ['3']
 + logs : ['EM']
-+ comment : The insider willingly contacted an acquaintance who worked in the CIA to get in touch 
-with CIA security, indicating to the acquaintance that they had been approached by Chinese intelligence 
-agents. There were CIA and FBI agents present during the interview, and the insider was 
-'visibly surprised' when secure chat messages showing their espionage appeared on the screen. The FBI 
-agents then realized that something was astray and investigated the insider thoroughly. 
++ comment : The insider willingly contacted an acquaintance who worked in a government security agency to get 
+in touch with security, indicating to the acquaintance that they had been approached by foreign 
+intelligence agents. There were security agents present during the interview, and the insider was 'visibly 
+surprised' when secure chat messages showing their espionage appeared on the screen. The agents then 
+realized that something was astray and investigated the insider thoroughly. 
 ---
 }
 Class Impact #D4EFDF {
@@ -86,16 +86,16 @@ Class Incident #009647 {
 + incident_subtype : ['E.2']
 + outcome : ['DS', 'DR']
 + status : C 
-+ summary : The insider was a former CIA officer. They were involved in an espionage case where 
-they were convicted of providing classified U.S. defense information to Chinese intelligence agents, which began 
-in 2017. The insider was motivated by financial gain: the Chinese officials would exchange top 
-secret information for money. Once the FBI became aware, they investigated the insider and found 
-evidence of espionage in their home. The insider was then tried and found guilty of 
-several espionage charges and sentenced to 20 years of federal prison. 
-+ brief_summary : The insider was a former CIA officer who began to communicate with Chinese intelligence agents 
-in 2017. They began communicating, and the insider would receive money for transmitting classified U.S. 
-defense information to Chinese intelligence agents. The insider was later investigated and brought to court, 
-where he was convicted of multiple counts of espionage. 
++ summary : The insider was a former security officer. They were involved in an espionage case where 
+they were convicted of providing classified U.S. defense information to foreign intelligence agents, which began 
+in 2002. The insider was motivated by financial gain: the foreign officials would exchange top 
+secret information for money. Once the security agency became aware, they investigated the insider and 
+found evidence of espionage in their home. The insider was then tried and found guilty 
+of several espionage charges and sentenced to 20 years of federal prison. 
++ brief_summary : The insider was a former security officer who began to communicate with foreign intelligence agents 
+in 2002. They began communicating, and the insider would receive money for transmitting classified U.S. 
+defense information to foreign intelligence agents. The insider was later investigated and brought to court, 
+where they were convicted of multiple counts of espionage. 
 ---
 }
 Class Insider #043673;text:white {
@@ -105,14 +105,14 @@ Class Insider #043673;text:white {
 + substance_use_during_incident : False
 + predispositions : [['4', '4.3']]
 + concerning_behaviors : [['3.6', '3.6.1']]
-+ first_name : Kevin 
-+ middle_name : Patrick 
-+ last_name : Mallory 
-+ alias : ['Patrick Mallory', 'Kevin P. Mallory']
-+ city : Leesburg 
-+ state : VA 
++ first_name : Xin 
++ middle_name : Jason 
++ last_name : Xia 
++ alias : ['Jason Xia', 'Xin J. Xia']
++ city : New York 
++ state : NY 
 + country : US 
-+ postal_code : 20175
++ postal_code : 10001
 + country_of_citizenship : ['US']
 + nationality : ['US']
 + gender : M 
@@ -131,8 +131,8 @@ Class Job #33c2C4 {
 + access_authorization : 5 
 + employment_type : FLT 
 + hire_date : 1992-01-01 
-+ departure_date : 2012-01-01 
-+ tenure : 175200:00:00 
++ departure_date : 2002-01-01 
++ tenure : 87600:00:00 
 ---
 }
 Class Job #33c2C4 {
@@ -143,19 +143,19 @@ Class Job #33c2C4 {
 + position_technical : False
 + access_authorization : 7 
 + employment_type : CTR 
-+ hire_date : 2012-01-01 
-+ departure_date : 2017-07-01 
++ hire_date : 2002-01-01 
++ departure_date : 2003-07-01 
 + tenure : 48192:00:00 
 ---
 }
 Class LegalResponse #f9b8bd {
 * id : legal-response--037be7c2-d741-4153-8c85-1483bc7b2e9d 
-+ law_enforcement_contacted : 2017-05-12 
-+ insider_arrested : 2017-06-22 
-+ insider_charged : 2017-07-27 
-+ insider_pleads : 2017-07-28 
-+ insider_judgment : 2018-06-08 
-+ insider_sentenced : 2019-05-17 
++ law_enforcement_contacted : 2003-02-12 
++ insider_arrested : 2003-03-22 
++ insider_charged : 2003-04-27 
++ insider_pleads : 2003-05-28 
++ insider_judgment : 2004-06-08 
++ insider_sentenced : 2005-05-17 
 + insider_charges_dropped : 
 + insider_charges_dismissed : 
 + insider_settled : 
@@ -163,7 +163,7 @@ Class LegalResponse #f9b8bd {
 }
 Class Organization #007BC0 {
 * id : organization--9b495e20-ae37-4df3-920e-88338b1298b5 
-+ name : U.S. Central Intelligence Agency 
++ name : U.S. Security Agency 
 + city : Washington 
 + state : D.C. 
 + country : US 
@@ -171,9 +171,9 @@ Class Organization #007BC0 {
 + small_business : False
 + industry_sector : 92 
 + industry_subsector : 92.811 
-+ business : The CIA, or Central Intelligence Agency, is an independent U.S. government agency focused on foreign 
-intelligence and national security. They collect information about other countries, analyze it, and deliver it 
-to policymakers to help them make decisions. 
++ business : The U.S. Security Agency is an independent U.S. government agency focused on national security. They 
+collect information about other countries, analyze it, and deliver it to policymakers to help them 
+make decisions. 
 + parent_company : U.S. Intelligence Community 
 + incident_role : V 
 ---
@@ -193,9 +193,9 @@ Class Organization #007BC0 {
 }
 Class Response #EF3A47 {
 * id : response--eb4d3760-213c-4f3b-81c2-b7805376c369 
-+ technical_controls : [['2', '2012-01-01']]
++ technical_controls : [['2', '2002-01-01']]
 + investigated_by : ['5']
-+ investigation_events : [['3', '2017-06-22'], ['1', '2017-06-22'], ['2', '2017-05-24']]
++ investigation_events : [['3', '2003-03-22'], ['1', '2003-03-22'], ['2', '2003-02-24']]
 ---
 }
 Class Sentence #f9b8bd {
@@ -208,67 +208,67 @@ Class Sentence #f9b8bd {
 }
 Class Source #D4EFDF {
 * id : source--370b7bf9-46a4-44f4-8229-dce1c0824b62 
-* title : Former C.I.A. Officer Sentenced to 20 Years After Spying for China 
+* title : Former Security Officer Sentenced to 20 Years After Spying for Foreign Government 
 + source_type : 5 
 + file_type : html 
-+ date : 2019-05-17 
++ date : 2005-05-17 
 + public : True
-+ document : https://www.nytimes.com/2019/05/17/us/politics/cia-spying-china.html 
++ document : https://example.com/former-security-officer-sentenced 
 ---
 }
 Class Source #D4EFDF {
 * id : source--43dfd29e-60c0-4aaa-933f-a96c2845887e 
-* title : US v. Kevin Mallory, No. 19-4385 (4th Cir. 2022) 
+* title : US v. Xin Xia, No. 04-4385 (4th Cir. 2006) 
 + source_type : 1 
 + file_type : pdf 
-+ date : 2022-07-11 
++ date : 2006-07-11 
 + public : True
-+ document : https://law.justia.com/cases/federal/appellate-courts/ca4/19-4385/19-4385-2022-07-11.html#:~:text=Kevin%20Mallory%2C%20No.-,19%2D4385%20(4th%20Cir.,2022)&text=A%20jury%20convicted%20Defendant%20of,in%20violation%20of%2018%20U.S.C. 
++ document : https://example.com/us-v-xin-xia-04-4385 
 ---
 }
 Class Source #D4EFDF {
 * id : source--0ae6419b-66e3-4d9f-bcb6-531cc8a4e53a 
-* title : United States of America v. Kevin Patrick Mallory 
+* title : United States of America v. Xin Jason Xia 
 + source_type : 1 
 + file_type : pdf 
-+ date : 2017-06-21 
++ date : 2003-06-21 
 + public : True
-+ document : https://www.justice.gov/opa/press-release/file/975671/dl 
++ document : https://example.com/us-v-xin-Jason-xia 
 ---
 }
 Class Source #D4EFDF {
 * id : source--ada0e3cc-5048-4509-ad62-c06c7d34594f 
-* title : United States v. Mallory (2020) 
+* title : United States v. Xia (2004) 
 + source_type : 1 
 + file_type : html 
-+ date : 2020-10-05 
++ date : 2004-10-05 
 + public : True
-+ document : https://caselaw.findlaw.com/court/us-dis-crt-e-d-vir-ale-div/2173526.html 
++ document : https://example.com/us-v-xia-2004 
 ---
 }
 Class Source #D4EFDF {
 * id : source--9fe4a90d-abf1-4db6-a4e1-a30e37b3ffe6 
-* title : United States v. Mallory (2022) 
+* title : United States v. Xia (2006) 
 + source_type : 1 
 + file_type : html 
-+ date : 2022-07-11 
++ date : 2006-07-11 
 + public : True
-+ document : https://caselaw.findlaw.com/court/us-4th-circuit/2178971.html 
++ document : https://example.com/us-v-xia-2006 
 ---
 }
 Class Source #D4EFDF {
 * id : source--265815a9-494f-4034-b2cf-2d28e01b1318 
-* title : United States v. Mallory, Criminal No. 1:17-CR-154 
+* title : United States v. Xia, Criminal No. 1:03-CR-154 
 + source_type : 1 
 + file_type : html 
-+ date : 2018-10-15 
++ date : 2004-10-15 
 + public : True
-+ document : https://case-law.vlex.com/vid/united-states-v-mallory-888386269 
++ document : https://example.com/us-v-xia-03-cr-154 
 ---
 }
 Class Stressor #b0d0ed {
 * id : stressor--40650474-f431-4ddb-9e3a-417bab254ac1 
-+ date : 2017-02-01 
++ date : 2002-02-01 
 + category : 3 
 + subcategory : 3.1 
 + comment : Insider was behind on two mortgage payments and had debt they wished to pay. 
@@ -276,7 +276,7 @@ Class Stressor #b0d0ed {
 }
 Class Sponsor #b0d0ed {
 * id : sponsor--0378da70-22a9-4998-ab9f-3fdd9f690247 
-+ name : Chinese Intelligence Agency 
++ name : Foreign Intelligence Agency 
 + sponsor_type : FN 
 ---
 }
@@ -292,7 +292,7 @@ Class Target #D4EFDF {
 }
 Class TTP #A456ED {
 * id : ttp--c130b8ca-6d8f-4696-a835-4d35448e8607 
-+ date : 2017-02-21 
++ date : 2002-02-21 
 + sequence_num : 2
 + observed : False
 + number_of_times : 7
@@ -303,13 +303,13 @@ Class TTP #A456ED {
 + hours : 2 
 + device : ['8']
 + channel : ['6']
-+ description : The insider communicated repeatedly with Chinese intelligence officers to exchange Top Secret information for money. 
++ description : The insider communicated repeatedly with foreign intelligence officers to exchange Top Secret information for money. 
 
 ---
 }
 Class TTP #A456ED {
 * id : ttp--def6dff4-cbf6-4cc5-adf6-a6880c9dc1c2 
-+ date : 2017-02-01 
++ date : 2002-02-01 
 + sequence_num : 1
 + observed : False
 + number_of_times : 1
@@ -320,13 +320,13 @@ Class TTP #A456ED {
 + hours : 2 
 + device : ['7']
 + channel : ['4']
-+ description : The insider was initially recruited by a Chinese intelligence agent reaching out on LinkedIn asking 
++ description : The insider was initially recruited by a foreign intelligence agent reaching out on LinkedIn asking 
 to meet in China. 
 ---
 }
 Class TTP #A456ED {
 * id : ttp--820373f2-e55f-45bf-9a75-6a6b5e38cc3c 
-+ date : 2017-03-01 
++ date : 2002-03-01 
 + sequence_num : 1
 + observed : False
 + number_of_times : 1
@@ -337,7 +337,7 @@ Class TTP #A456ED {
 + hours : 2 
 + device : ['7']
 + channel : ['4']
-+ description : The insider was initially recruited by a Chinese intelligence agent reaching out on LinkedIn asking 
++ description : The insider was initially recruited by a foreign intelligence agent reaching out on LinkedIn asking 
 to meet in China. 
 ---
 }

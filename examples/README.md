@@ -2,32 +2,32 @@
 
 ## Example 1
 
-**Case**: USA vs. Schulte
+**Case**: USA vs. Griffin
 
-**Description**: This case involves Joshua Adam Schulte, a former CIA software engineer, who leaked classified CIA documents known as Vault 7 to WikiLeaks. The documents detailed the CIA's hacking tools and techniques, causing severe damage to U.S. national security, exposing CIA operations and personnel, and costing the agency hundreds of millions of dollars. Schulte faced multiple charges, including espionage, unauthorized access to computer systems, and child pornography. He was convicted and sentenced to 40 years in prison.
+**Description**: Oliver Griffin, a former software engineer at a government agency, leaked sensitive documents to an unauthorized entity. These documents detailed the agency's secret tools and techniques, causing severe damage to national security, exposing operations and personnel, and costing the agency substantial financial resources. Griffin was charged with unauthorized access to computer systems, dissemination of classified information, and other related crimes. He was convicted and sentenced to 35 years in prison.
 
-**Read the [IIDES version](example1.md)**, look at the [visualization](pngs/Example1.svg), or view the [JSON](json/example1.json)
+**Read the [IIDES version](example1.md)**, look at the [visualization](pngs/Example1.svg), read the original [source document](source/example1desc.md), or view the [JSON](json/example1.json)
 
 ## Example 2
 
-**Case**: USA vs. Reality Winner
+**Case**: USA vs. Caballo
 
-**Description**: Reality Winner, an ex-Air Force member working as a linguist for the NSA, leaked a top-secret report detailing Russian hacking attempts against U.S. election systems to an online news outlet. She was arrested and charged with unauthorized transmission of national defense information. Winner pleaded guilty and was sentenced to over five years in prison. The leak compromised sensitive methods used by the U.S. intelligence community.
+**Description**: The insider, a former military member, worked as a cybersecurity specialist for a government agency in May 2003. During this time, she printed a report from her work computer that detailed unauthorized access attempts by a foreign hacking group against municipal election systems and voter databases. She then shared this Top Secret information with a tech blog. This report revealed the techniques and tools used to gather the information contained in the report, which, if disclosed, could be detrimental to the United States. A government agency investigated her and the insider pleaded guilty in June 2004 to one felony count of unauthorized transmission of national defense information and was convicted.
 
-**Read the [IIDES version](example2.md)**, look at the [visualization](pngs/Example2.svg), or view the [JSON](json/example2.json)
+**Read the [IIDES version](example2.md)**, look at the [visualization](pngs/Example2.svg), read the original [source document](source/example2desc.md), or view the [JSON](json/example2.json)
 
 ## Example 3:
 
-**Case**: Waymo LLC vs. Uber Technologies, Inc.
+**Case**: Alpha Innovations LLC v. Tech Solutions Inc.
 
-**Description**: This case involves Waymo accusing Uber of stealing trade secrets related to self-driving car technology. Former Google engineer Anthony Levandowski downloaded thousands of files before leaving to start his own company, which was then acquired by Uber. The lawsuit was settled with Uber agreeing to pay Waymo approximately $245 million in equity and not to use Waymo's technology.
+**Description**: The case involved Alpha Innovations, a software development company, accusing Tech Solutions, through its acquisition of Zingerman's startup, of stealing trade secrets related to software algorithms. The lawsuit claimed that Mark Zingerman, a former engineer at Alpha Innovations, downloaded thousands of files related to Alpha Innovations' proprietary software before leaving to start his own company, which was soon acquired by Tech Solutions.
 
-**Read the [IIDES version](example3.md)**, look at the [visualization](pngs/Example3.svg), or view the [JSON](json/example3.json)
+**Read the [IIDES version](example3.md)**, look at the [visualization](pngs/Example3.svg), read the original [source document](source/example3desc.md), or view the [JSON](json/example3.json)
 
 ## Example 4
 
-**Case**: USA vs. Kevin Patrick Mallory
+**Case**: USA vs. Xin Xia
 
-**Description**: Kevin Patrick Mallory, a former CIA officer, was convicted of providing classified U.S. defense information to Chinese intelligence agents. Motivated by financial gain, Mallory communicated with Chinese agents and exchanged top-secret information for money. The FBI investigated and found evidence of espionage, leading to his conviction and a 20-year prison sentence.
+**Description**: The insider was a former security officer. They were involved in an espionage case where they were convicted of providing classified U.S. defense information to foreign intelligence agents, which began in 2002. The insider was motivated by financial gain: the foreign officials would exchange top secret information for money. Once the security agency became aware, they investigated the insider and found evidence of espionage in their home. The insider was then tried and found guilty of several espionage charges and sentenced to 20 years of federal prison.
 
-**Read the [IIDES version](example4.md)**, look at the [visualization](pngs/Example4.svg), or view the [JSON](json/example4.json)
+**Read the [IIDES version](example4.md)**, look at the [visualization](pngs/Example4.svg), read the original [source document](source/example4desc.md), or view the [JSON](json/example4.json)
