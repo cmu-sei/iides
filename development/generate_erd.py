@@ -64,7 +64,6 @@ file_lines.append("@startuml IIDES\npackage \"IIDES\" #fff {\n\n")
 # iterate through all json object files
 json_files = get_json_files()
 for filename in json_files:
-    print(filename)
     with open(filename) as f:
         data = json.load(f)
         print(data['title'])
