@@ -17,13 +17,13 @@
 - **`Status`**:
  Closed (*C*) &mdash; All investigations and legal proceedings are closed
 - **`Summary`**:
- The insider, an ex-Air Force member, worked as a translator for the National Security Agency in May 2017. During this time, she printed a report from her work computer that detailed hacking attempts by a Russian intelligence service against local election officers and voter registration databases. She then shared this Top Secret information with an online news outlet. This report revealed the sources and methods used to acquire the information contained on the report, which, if disclosed, could be harmful to the United States. The FBI investigated and later arrested the insider in June 2017. The insider pleaded guilty in June 2018 to one felony count of unauthorized transmission of national defense information and was convicted.
+ The insider, an ex-Navy member, worked as a cybersecurity specialist for a government agency in May 2003. During this time, she printed a report from her work computer that detailed unauthorized access attempts by a foreign hacking group against municipal election systems and voter databases. She then shared this Top Secret information with a tech blog. This report revealed the techniques and tools used to gather the information contained in the report, which, if disclosed, could be detrimental to the United States. A government agency investigated her and the insider pleaded guilty in June 2004 to one felony count of unauthorized transmission of national defense information and was convicted.
 - **`Brief summary`**:
- The insider leaked Top Secret information to an online news outlet. The insider pleaded guilty to one felony count of unauthorized transmission of national defense information in June 2018 and was convicted.
+ The insider leaked Top Secret information to a tech blog. The insider pleaded guilty to one felony count of unauthorized transmission of national defense information in June 2004, and was convicted.
 
 ## Insider
 
-The insider previously had a very clean record and was an unlikely suspect. The insider was a 'good kid' who had no apparent history of leaking or any disciplinary proceedings during her military service in the Air Force.
+The insider previously had a very clean record and was an unlikely suspect. The insider was known as a 'model employee' with no apparent history of misconduct or any disciplinary proceedings during their military service in the Navy.
 
 - **`Id`**:
  insider--04548271-8e9f-4e40-8bad-9cf77c858070
@@ -34,21 +34,21 @@ The insider previously had a very clean record and was an unlikely suspect. The 
 - **`Substance use during incident`**:
  False
 - **`first_name`**:
- Reality
+ Emily
 - **`middle_name`**:
- Leigh
+ Marie
 - **`last_name`**:
- Winner
+ Cabello
 - **`alias`**:
- ['Sara Winners', 'Jane Doe']
+ ['Sara Cabello', 'Jane Doe']
 - **`city`**:
- Augusta
+ Houston
 - **`state`**:
- GA
+ TX
 - **`country`**:
  US
 - **`postal_code`**:
- 30907
+ 77001
 - **`country_of_citizenship`**:
  ['US']
 - **`nationality`**:
@@ -69,11 +69,11 @@ The insider previously had a very clean record and was an unlikely suspect. The 
 - **`Id`**:
  organization--3d459486-b1b1-4886-9129-87b3458120b3
 - **`Name`**:
- U.S. National Security Agency
+ Global Intelligence Agency
 - **`City`**:
  
 - **`State`**:
- Maryland
+ Virginia
 - **`Country`**:
  United States of America
 - **`Postal code`**:
@@ -85,9 +85,9 @@ The insider previously had a very clean record and was an unlikely suspect. The 
 - **`Industry subsector`**:
  National Security (*92.811*) &mdash; This industry comprises government establishments of the Armed Forces, including the National Guard, primarily engaged in national security and related activities.
 - **`Business`**:
- The National Security Agency (NSA) is a critical player in the U.S. intelligence community. Its primary function is to gather and analyze foreign signals intelligence (SIGINT) to protect national security.
+ The Global Intelligence Agency (GIA) is a critical player in the U.S. intelligence community. Its primary function is to gather and analyze foreign signals intelligence (SIGINT) to protect national security.
 - **`Parent company`**:
- United States Department of Defense
+ Government Agency
 - **`Incident role`**:
  Primary Victim (*V*) &mdash; The organization was the primary victim organization of the insider's actions.
 
@@ -96,15 +96,15 @@ The insider previously had a very clean record and was an unlikely suspect. The 
 - **`Id`**:
  organization--3d459486-b1b1-4886-9129-87b3458120b4
 - **`Name`**:
- Pluribus International Corporation
+ Data Solutions Inc.
 - **`City`**:
- Alexandria
+ Richmond
 - **`State`**:
- VA
+ Virginia
 - **`Country`**:
  United States of America
 - **`Postal code`**:
- 22314
+ 23218
 - **`Small business`**:
  True
 - **`Industry sector`**:
@@ -112,18 +112,18 @@ The insider previously had a very clean record and was an unlikely suspect. The 
 - **`Industry subsector`**:
  Professional, Scientific, and Technical Services (*54.1*) &mdash; The Professional, Scientific, and Technical Services sector comprises establishments that specialize in performing professional, scientific, and technical activities for others. These activities require a high degree of expertise and training. The establishments in this sector specialize according to expertise and provide these services to clients in a variety of industries and, in some cases, to households.
 - **`Business`**:
- Pluribus International Corporation is a defense and intelligence contractor providing analysis, intelligence, and security services to various U.S. government agencies.
+ Data Solutions Inc. is a defense and intelligence contractor providing analysis, intelligence, and security services to various U.S. government agencies.
 - **`Incident role`**:
  Other (*O*) &mdash; Other role not described by this vocabulary.
 
 ## Detection
 
-Reality Winner was caught after the NSA identified that a classified document published by The Intercept had been printed, revealing traceable metadata. Investigators used printer tracking dots to determine the document's print date and reviewed access logs, finding that only six individuals, including Winner, had accessed it. Further evidence included her email communication with The Intercept and her confession when confronted by the FBI.
+Emily Cabello was caught after the intelligence agency identified that a classified document published by The Journal had been printed, revealing traceable metadata. Investigators used printer tracking dots to determine the document's print date and reviewed access logs, finding that only six individuals, including Cabello, had accessed it. Further evidence included her email communication with The Journal and her confession when confronted by the FBI.
 
 - **`Id`**:
  detection--7f05c15a-84b2-489d-a3dc-0e3c78d9cbc8
 - **`First detected`**:
- 2017-04-23T18:25:43.511Z
+ 2003-04-23T18:25:43.511Z
 - **`Who detected`**:
    - Law Enforcement (*LE*) &mdash; Law enforcement discovered the insider's illegal activity (e.g., police noticed that the insider was gaining access to the company after hours)
 - **`Detected method`**:
@@ -169,9 +169,9 @@ Reality Winner was caught after the NSA identified that a classified document pu
 - **`Id`**:
  response--ab3c9833-1e6a-426a-9e48-6f74bcbc5778
 - **`investigated_by`**:
- ['3']
+ ['4']
 - **`investigation_events`**:
- [['3', '2017-05-17'], ['2', '2017-05-03']]
+ [['1', '2003-05-17'], ['3', '2003-05-03']]
 
 ## Court Case
 
@@ -180,21 +180,21 @@ Reality Winner was caught after the NSA identified that a classified document pu
 - **`Id`**:
  court-case--85e8998f-080a-4764-8bab-f8e9fa3fc70d
 - **`Case number`**:
- 1:17-cr-034
+ 1:03-cr-012
 - **`Case title`**:
- UNITED STATES of America v. Reality WINNER
+ UNITED STATES of America v. Emily CABELLO
 - **`Court country`**:
  United States of America
 - **`Court state`**:
- Georgia
+ Texas
 - **`Court district`**:
- Southern District Court of Georgia
+ Southern District Court of Texas
 - **`Court type`**:
  State (*3*) &mdash; State or regional level government court
 - **`Case type`**:
  Criminal (*2*) &mdash; A case dealing with a violation of criminal law
 - **`Defendant`**:
-   - Reality Winner
+   - Emily Cabello
 - **`Plaintiff`**:
    - United States of America
 
@@ -248,17 +248,17 @@ Reality Winner was caught after the NSA identified that a classified document pu
 - **`Id`**:
  legal-response--87cc68cc-6e06-4131-8732-80995f5e3ca6
 - **`Law enforcement contacted`**:
- 2017-05-01
+ 2003-05-01
 - **`Insider arrested`**:
- 2017-05-03
+ 2003-05-03
 - **`Insider charged`**:
- 2017-05-07
+ 2003-05-07
 - **`Insider pleads`**:
- 2017-05-21
+ 2003-05-21
 - **`Insider judgment`**:
- 2018-08-07
+ 2004-08-07
 - **`Insider sentenced`**:
- 2018-08-23
+ 2004-08-23
 
 ## Job
 
@@ -271,7 +271,7 @@ The exact date of hire and departure is unknown, but the month and year are corr
 - **`Occupation`**:
  Military Enlisted Tactical Operations, Specialists, and Crew Members (*55.3*) &mdash; Crew Members, Specialists, Infantry, Special Forces, etc.
 - **`Title`**:
- Linguist
+ Translator
 - **`Position technical`**:
  False
 - **`Access authorization`**:
@@ -279,9 +279,9 @@ The exact date of hire and departure is unknown, but the month and year are corr
 - **`Employment type`**:
  Contractor (*CTR*) &mdash; Individual not directly employed by the organization whose job responsibilities they are filling (self-employed or employed by a different, contracting organization)
 - **`Hire date`**:
- 2017-02-01
+ 2003-02-01
 - **`Departure date`**:
- 2017-07-01
+ 2003-07-01
 - **`Tenure`**:
  2904:00:00
 
@@ -290,7 +290,7 @@ The exact date of hire and departure is unknown, but the month and year are corr
 - **`Id`**:
  ttp--aabe47dc-fecb-43f9-bf77-361b06504789
 - **`Date`**:
- 2017-03-09T12:00:00.000Z
+ 2003-03-09T12:00:00.000Z
 - **`Sequence num`**:
  1
 - **`Observed`**:
@@ -313,14 +313,14 @@ The exact date of hire and departure is unknown, but the month and year are corr
 - **`Channel`**:
    - Other (*9*) &mdash; Other type of channel not listed in this vocabulary
 - **`Description`**:
- Winner printed and improperly removed classified intelligence reporting.
+ Cabello printed and improperly removed classified intelligence reporting.
 
 ## TTP
 
 - **`Id`**:
  ttp--aabe47dc-fecb-43f9-bf77-361b06504789
 - **`Date`**:
- 2017-03-09T12:00:00.000Z
+ 2003-03-09T12:00:00.000Z
 - **`Sequence num`**:
  2
 - **`Observed`**:
@@ -343,7 +343,7 @@ The exact date of hire and departure is unknown, but the month and year are corr
 - **`Channel`**:
    - Other (*9*) &mdash; Other type of channel not listed in this vocabulary
 - **`Description`**:
- Winner printed and improperly removed classified intelligence reporting.
+ Cabello printed and improperly removed classified intelligence reporting.
 
 ## Org Relationship
 
@@ -361,17 +361,17 @@ The exact date of hire and departure is unknown, but the month and year are corr
 - **`Id`**:
  source--c989a0c4-a559-491a-ac63-2f8b0eaba126
 - **`Title`**:
- United States v. Winner
+ United States v. Cabello
 - **`Source type`**:
  Court Document (*1*) &mdash; Legal document from a court case
 - **`File type`**:
  HTML File (*html*) &mdash; A file in HTML format
 - **`Date`**:
- 2020-04-24
+ 2005-04-24
 - **`Public`**:
  True
 - **`Document`**:
- https://casetext.com/case/united-states-v-winner-9
+ https://fakeurl.com/case/united-states-v-cabello
 
 ## Source
 
@@ -384,93 +384,76 @@ The exact date of hire and departure is unknown, but the month and year are corr
 - **`File type`**:
  PDF File (*pdf*) &mdash; A file in Portable Document Format
 - **`Date`**:
- 
+ 2005-01-15
 - **`Public`**:
  True
 - **`Document`**:
- https://www.cdse.edu/Portals/124/Documents/casestudies/case-study-winner.pdf
+ https://fakeurl.com/casestudy/unlawful-retention
 
 ## Source
 
 - **`Id`**:
  source--d7fba1ef-193d-4826-a551-ce6aa66150c3
 - **`Title`**:
- USA v. Reality Leigh Winner, No. 20-11692 (11th Cir. 2020)
+ USA v. Emily Marie Cabello, No. 03-11692 (11th Cir. 2005)
 - **`Source type`**:
  Court Document (*1*) &mdash; Legal document from a court case
 - **`File type`**:
  PDF File (*pdf*) &mdash; A file in Portable Document Format
 - **`Date`**:
- 2020-12-07
+ 2005-12-07
 - **`Public`**:
  True
 - **`Document`**:
- https://law.justia.com/cases/federal/appellate-courts/ca11/20-11692/20-11692-2020-12-07.html
+ https://fakeurl.com/case/11th-cir/03-11692
 
 ## Source
 
 - **`Id`**:
  source--5e290802-9738-40a5-bb64-9544d8624995
 - **`Title`**:
- USA v. Reality Leigh Winner, No. 20-11692 (11th Cir. 2020)
+ USA v. Emily Marie Cabello, No. 03-11692 (11th Cir. 2005)
 - **`Source type`**:
  DOJ Press Release (*2*) &mdash; Press release from the Department of Justice or U.S. Attorneys' Office
 - **`File type`**:
  HTML File (*html*) &mdash; A file in HTML format
 - **`Date`**:
- 2018-08-23
+ 2004-08-23
 - **`Public`**:
  True
 - **`Document`**:
- https://www.justice.gov/opa/pr/federal-government-contractor-sentenced-removing-and-transmitting-classified-materials-news
+ https://fakeurl.com/justice/03-11692
 
 ## Source
 
 - **`Id`**:
  source--1c8da449-30ed-4b7b-89f7-9c8f272207ab
 - **`Title`**:
- Reality Winner, N.S.A. Contractor Accused of Leak, Was Undone by Trail of Clues
+ Emily Cabello, Cybersecurity Specialist Accused of Leak, Was Undone by Trail of Clues
 - **`Source type`**:
  Media (*5*) &mdash; News, blog, or similar publication
 - **`File type`**:
  HTML File (*html*) &mdash; A file in HTML format
 - **`Date`**:
- 2017-05-06
+ 2003-05-06
 - **`Public`**:
  True
 - **`Document`**:
- https://www.nytimes.com/2017/06/06/us/politics/reality-leigh-winner-leak-nsa.html
+ https://fakeurl.com/news/emily-cabello-leak
 
 ## Source
 
 - **`Id`**:
  source--497d1b03-8c71-482f-9156-542d21e99fdf
 - **`Title`**:
- Reality Winner, Former N.S.A. Translator, Gets More Than 5 Years in Leak of Russian Hacking Report
+ Emily Cabello, Former NCA Specialist, Gets More Than 5 Years in Leak of Security Report
 - **`Source type`**:
  Media (*5*) &mdash; News, blog, or similar publication
 - **`File type`**:
  HTML File (*html*) &mdash; A file in HTML format
 - **`Date`**:
- 2018-08-23
+ 2004-08-23
 - **`Public`**:
  True
 - **`Document`**:
- https://www.nytimes.com/2018/08/23/us/reality-winner-nsa-sentence.html
-
-## Source
-
-- **`Id`**:
- source--a6e7705d-195f-4617-a2d2-30c84aadadea
-- **`Title`**:
- Original Court Documents: US v. Reality Leigh Winner
-- **`Source type`**:
- Court Document (*1*) &mdash; Legal document from a court case
-- **`File type`**:
- PDF File (*pdf*) &mdash; A file in Portable Document Format
-- **`Date`**:
- 2018-08-23
-- **`Public`**:
- True
-- **`Document`**:
- https://standwithreality.org/original-court-documents/
+ https://fakeurl.com/news/emily-cabello-sentence

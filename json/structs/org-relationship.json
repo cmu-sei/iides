@@ -1,72 +1,67 @@
 {
-	"$id": "iides/json/structs/org-relationship.json",
-	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"title": "Org Relationship",
-	"description": "Org Relationship describes the relationship between two organizations involved in an incident.",
-	"type": "object",
-	"properties": {
-		"id": {
-			"type": "string",
-			"description": "A unique string that begins with \"org-relationship--\" and is appended with a UUIDv4",
-			"pattern": "^org-relationship--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
-		},
-        "org1": {
-			"type": "string",
-			"description": "The `id` of the first organization object",
-			"pattern": "^organization--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
-		},
-        "org2": {
-			"type": "string",
-			"description": "The `id` of the second organization object",
-			"pattern": "^organization--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
-		},
-        "relationship": {
-			"type": "string",
-			"description": "Defines the relationship between the two organizations. Reads as \"Org1 is [relationship] to Org2\" (e.g., \"Org1 is vendor to Org2\").",
-            "$ref": "#/$defs/org-relationship-vocab"
-		}
-	},
-	"required": [
-		"id",
-        "org1",
-        "org2",
-        "relationship"
-	],
-	"$defs": {
-		"org-relationship-vocab": {
-			"anyOf": [
-				{
-					"const": "C",
-					"title": "Competitor",
-					"description": "Org1 and Org2 compete with each for the same customers"
-				},
-				{
-					"const": "P",
-					"title": "Parent",
-					"description": "Org1 is a parent company to Org2"
-				},
-				{
-					"const": "S",
-					"title": "Subsidiary",
-					"description": "Org1 is a subsidiary (child company) to Org2"
-				},
-				{
-					"const": "V",
-					"title": "Vendor",
-					"description": "Org1 provides goods, materials, or services to Org2 on a contractual basis"
-				},
-				{
-					"const": "T",
-					"title": "Trusted Business Partner",
-					"description": "A trusted business partner is an organization or individual that has an alliance (contractually, bonded, etc.) with the victim organization"
-				},
-				{
-					"const": "O",
-					"title": "Other",
-					"description": "Other type of relationship not described by this vocabulary"
-				}
-			]
-		}
-	},
-	"$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided “AS-IS” with “NO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED” and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT® is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
+  "$id": "iides/json/structs/org-relationship.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Org Relationship",
+  "description": "Org Relationship describes the relationship between two organizations involved in an incident.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "A unique string that begins with \"org-relationship--\" and is appended with a UUIDv4",
+      "pattern": "^org-relationship--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "org1": {
+      "type": "string",
+      "description": "The `id` of the first organization object",
+      "pattern": "^organization--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "org2": {
+      "type": "string",
+      "description": "The `id` of the second organization object",
+      "pattern": "^organization--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "relationship": {
+      "type": "string",
+      "description": "Defines the relationship between the two organizations. Reads as \"Org1 is [relationship] to Org2\" (e.g., \"Org1 is vendor to Org2\").",
+      "$ref": "#/$defs/org-relationship-vocab"
+    }
+  },
+  "required": ["id", "org1", "org2", "relationship"],
+  "$defs": {
+    "org-relationship-vocab": {
+      "anyOf": [
+        {
+          "const": "C",
+          "title": "Competitor",
+          "description": "Org1 and Org2 compete with each for the same customers"
+        },
+        {
+          "const": "P",
+          "title": "Parent",
+          "description": "Org1 is a parent company to Org2"
+        },
+        {
+          "const": "S",
+          "title": "Subsidiary",
+          "description": "Org1 is a subsidiary (child company) to Org2"
+        },
+        {
+          "const": "V",
+          "title": "Vendor",
+          "description": "Org1 provides goods, materials, or services to Org2 on a contractual basis"
+        },
+        {
+          "const": "T",
+          "title": "Trusted Business Partner",
+          "description": "A trusted business partner is an organization or individual that has an alliance (contractually, bonded, etc.) with the victim organization"
+        },
+        {
+          "const": "O",
+          "title": "Other",
+          "description": "Other type of relationship not described by this vocabulary"
+        }
+      ]
+    }
+  },
+  "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \"AS-IS\" with \"NO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\" and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT® is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
 }

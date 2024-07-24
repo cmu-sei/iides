@@ -1,45 +1,45 @@
 {
-    "$id": "iides/json/objects/bundle.json",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "Bundle",
-    "description": "A bundle holds the objects relating an incident, (i.e., court cases, insider, targets, and impacts).",
-    "type": "object",
-    "properties": {
-        "id": {
-            "type": "string",
-            "description": "A unique identifier for the bundle",
-            "pattern": "^bundle--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
-        },
-        "objects": {
-            "type": "array",
-            "description": "Array of IIDES objects",
-            "items": {
-                "type": "object",
-                "anyOf": [
-                    { "$ref": "accomplice.json" },
-                    { "$ref": "charge.json" },
-                    { "$ref": "court-case.json" },
-                    { "$ref": "detection.json" },
-                    { "$ref": "impact.json" },
-                    { "$ref": "incident.json" },
-                    { "$ref": "insider.json" },
-                    { "$ref": "job.json" },
-                    { "$ref": "legal-response.json" },
-                    { "$ref": "note.json" },
-                    { "$ref": "organization.json" },
-                    { "$ref": "person.json" },
-                    { "$ref": "response.json" },
-                    { "$ref": "sentence.json" },
-                    { "$ref": "source.json" },
-                    { "$ref": "sponsor.json" },
-                    { "$ref": "stressor.json" },
-                    { "$ref": "target.json" },
-                    { "$ref": "ttp.json" }
-                ]
-            },
-            "minItems": 1
-        }
+  "$id": "iides/json/objects/bundle.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Bundle",
+  "description": "A bundle holds the objects relating an incident, (i.e., court cases, insider, targets, and impacts).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "A unique identifier for the bundle",
+      "pattern": "^bundle--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
     },
-    "required": ["id", "objects"],
-    "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided “AS-IS” with “NO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED” and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT® is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
+    "objects": {
+      "type": "array",
+      "description": "Array of IIDES objects",
+      "items": {
+        "type": "object",
+        "anyOf": [
+          { "$ref": "accomplice.json" },
+          { "$ref": "charge.json" },
+          { "$ref": "court-case.json" },
+          { "$ref": "detection.json" },
+          { "$ref": "impact.json" },
+          { "$ref": "incident.json" },
+          { "$ref": "insider.json" },
+          { "$ref": "job.json" },
+          { "$ref": "legal-response.json" },
+          { "$ref": "note.json" },
+          { "$ref": "organization.json" },
+          { "$ref": "person.json" },
+          { "$ref": "response.json" },
+          { "$ref": "sentence.json" },
+          { "$ref": "source.json" },
+          { "$ref": "sponsor.json" },
+          { "$ref": "stressor.json" },
+          { "$ref": "target.json" },
+          { "$ref": "ttp.json" }
+        ]
+      },
+      "minItems": 1
+    }
+  },
+  "required": ["id", "objects"],
+  "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \"AS-IS\" with \"NO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\" and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT® is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
 }

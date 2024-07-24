@@ -3,7 +3,7 @@
 
 ## Incident
 
-The case was settled out of court, and no formal determination of guilt was made against Uber, but they agreed to a settlement to avoid the continuation of litigation.
+The case was settled out of court, and no formal determination of guilt was made against Tech Solutions, but they agreed to a settlement to avoid the continuation of litigation.
 
 - **`Id`**:
  incident--6e75f650-c1a5-4c71-8d2f-7e9d2bba0381
@@ -20,13 +20,13 @@ The case was settled out of court, and no formal determination of guilt was made
 - **`Status`**:
  Closed (*C*) &mdash; All investigations and legal proceedings are closed
 - **`Summary`**:
- The case involved Waymo, a self-driving car company spun off from Google, accusing Uber, through its acquisition of Otto, of stealing trade secrets related to LiDAR technology. The lawsuit claimed that Anthony Levandowski, a former Google engineer, downloaded thousands of files related to Waymo's self-driving technology before leaving to start Otto, which was soon acquired by Uber.
+ The case involved Alpha Innovations, a software development company, accusing Tech Solutions, through its acquisition of Zingerman's startup, of stealing trade secrets related to software algorithms. The lawsuit claimed that Mark Zingerman, a former engineer at Alpha Innovations, downloaded thousands of files related to Alpha Innovations' proprietary software before leaving to start his own company, which was soon acquired by Tech Solutions.
 - **`Brief summary`**:
- Waymo sued Uber for intellectual property theft, claiming that ex-Google engineer Anthony Levandowski stole LiDAR technology secrets before joining Uber. The case was settled with Uber agreeing to not use Waymo's technology and paying equity worth approximately $245 million.
+ Alpha Innovations sued Tech Solutions for intellectual property theft, claiming that ex-engineer Mark Zingerman stole software technology secrets before joining Tech Solutions. The case was settled with Tech Solutions agreeing to not use Alpha Innovations' technology and paying equity worth approximately $150 million.
 
 ## Insider
 
-Anthony Levandowski's actions of transferring confidential files from Waymo to his personal devices sparked the lawsuit. No public evidence of substance use or psychological issues affecting his actions has been documented.
+Mark Zingerman's actions of transferring confidential files from Alpha Innovations to his personal devices sparked the lawsuit. No public evidence of substance use or psychological issues affecting his actions has been documented.
 
 - **`Id`**:
  insider--2fe80494-c7cf-4d75-85ef-736b55884664
@@ -38,19 +38,19 @@ Anthony Levandowski's actions of transferring confidential files from Waymo to h
 - **`Substance use during incident`**:
  False
 - **`first_name`**:
- Anthony
+ Mark
 - **`last_name`**:
- Levandowski
+ Zingerman
 - **`alias`**:
- ['Anton Levy', 'John Doe']
+ ['Matt Zinger', 'John Doe']
 - **`city`**:
- San Francisco
+ New York
 - **`state`**:
- CA
+ NY
 - **`country`**:
  US
 - **`postal_code`**:
- 94107
+ 10001
 - **`country_of_citizenship`**:
  ['US']
 - **`nationality`**:
@@ -58,7 +58,7 @@ Anthony Levandowski's actions of transferring confidential files from Waymo to h
 - **`gender`**:
  M
 - **`age`**:
- 40
+ 35
 - **`education`**:
  8
 - **`marital_status`**:
@@ -76,15 +76,15 @@ Anthony Levandowski's actions of transferring confidential files from Waymo to h
 - **`Id`**:
  organization--8ed0c400-fa6a-4bd6-babe-4da40240442d
 - **`Name`**:
- Waymo LLC
+ Alpha Innovations LLC
 - **`City`**:
- Mountain View
+ New York
 - **`State`**:
- California
+ New York
 - **`Country`**:
  USA
 - **`Postal code`**:
- 94043
+ 10001
 - **`Small business`**:
  False
 - **`Industry sector`**:
@@ -92,9 +92,9 @@ Anthony Levandowski's actions of transferring confidential files from Waymo to h
 - **`Industry subsector`**:
  Transit and Ground Passenger Transportation (*48.5*) &mdash; This subsector includes industries providing passenger transportation, such as buses and taxis.
 - **`Business`**:
- Waymo operates as a self-driving technology company primarily involved in developing autonomous driving systems.
+ Alpha Innovations operates as a software development company primarily involved in developing proprietary software systems.
 - **`Parent company`**:
- Alphabet Inc.
+ Tech Giant Inc.
 - **`Incident role`**:
  Primary Victim (*V*) &mdash; The organization was the primary victim organization of the insider's actions.
 
@@ -103,7 +103,7 @@ Anthony Levandowski's actions of transferring confidential files from Waymo to h
 - **`Id`**:
  organization--e7fda876-f31b-45a5-a540-7bb514ccecee
 - **`Name`**:
- Uber Technologies Inc.
+ Tech Solutions Inc.
 - **`City`**:
  San Francisco
 - **`State`**:
@@ -119,7 +119,7 @@ Anthony Levandowski's actions of transferring confidential files from Waymo to h
 - **`Industry subsector`**:
  Transit and Ground Passenger Transportation (*48.5*) &mdash; This subsector includes industries providing passenger transportation, such as buses and taxis.
 - **`Business`**:
- Uber operates as a technology company offering ridesharing, food delivery, and transportation services globally, with a division focused on developing autonomous vehicle technology.
+ Tech Solutions operates as a technology company offering various software and IT services globally, with a division focused on developing proprietary software technology.
 - **`Incident role`**:
  Beneficiary (*B*) &mdash; The organization accepted trade secrets, customer lists, intellectual property, etc. that the insider obtained through the incident.
 
@@ -128,7 +128,7 @@ Anthony Levandowski's actions of transferring confidential files from Waymo to h
 - **`Id`**:
  detection--a181e814-aa3a-411e-ae79-79ceba48e36a
 - **`First detected`**:
- 2017-02-23
+ 2001-02-23
 - **`Who detected`**:
    - Law Enforcement (*LE*) &mdash; Law enforcement discovered the insider's illegal activity (e.g., police noticed that the insider was gaining access to the company after hours)
   - Organization (*OR*) &mdash; The victim organization discovered the insider's activity (e.g., IT noticed that the insider had downloaded dozens of company trade secrets to their workstation)
@@ -142,14 +142,14 @@ Anthony Levandowski's actions of transferring confidential files from Waymo to h
 
 ## Impact
 
-Financial impact valued at approximately $245 million, which was the settlement amount Uber agreed to give Waymo in equity.
+Financial impact valued at approximately $150 million, which was the settlement amount Tech Solutions agreed to give Alpha Innovations in equity.
 
 - **`Id`**:
  impact--d2eb25a4-1293-44ee-b8a6-a984714d8033
 - **`High`**:
- 245,000,000
+ 150,000,000
 - **`Low`**:
- 245,000,000
+ 150,000,000
 - **`Metric`**:
  Dollars (*5*) &mdash; Specific financial impact of money stolen, restitution ordered, etc.
 - **`Estimated`**:
@@ -157,7 +157,7 @@ Financial impact valued at approximately $245 million, which was the settlement 
 
 ## Impact
 
-Levandowski downloaded over 14,000 files before leaving the company to found his own startup, which was then bought by Uber.
+Zingerman downloaded over 14,000 files before leaving the company to found his own startup, which was then bought by Tech Solutions.
 
 - **`Id`**:
  impact--ea6f96c7-d4db-4021-b85b-057453ff2292
@@ -204,37 +204,37 @@ Levandowski downloaded over 14,000 files before leaving the company to found his
 
 ## Response
 
-A third-party investigator was hired to look into the matter after an engineer at Waymo found Uber's autonomous vehicle sensors drastically similar to those developed by Waymo.
+A third-party investigator was hired to look into the matter after an engineer at Alpha Innovations found Tech Solutions' software algorithms drastically similar to those developed by Alpha Innovations.
 
 - **`Id`**:
  response--9923bad0-25bb-474a-bff7-4b23bfb3e240
 - **`investigated_by`**:
  ['99', '7']
 - **`investigation_events`**:
- [['1', '2016-11-00']]
+ [['1', '2001-11-00']]
 
 ## Court Case
 
 - **`Id`**:
  court-case--3fcbf985-f10e-45b7-aacb-e16c89da1105
 - **`Case number`**:
- 17-cv-00939
+ 01-cv-00939
 - **`Case title`**:
- Waymo LLC v. Uber Technologies, Inc.
+ Alpha Innovations LLC v. Tech Solutions Inc.
 - **`Court country`**:
  United States
 - **`Court state`**:
- California
+ New York
 - **`Court district`**:
- United States District Court for the Northern District of California
+ United States District Court for the Southern District of New York
 - **`Court type`**:
  Federal (*1*) &mdash; Top level government court
 - **`Case type`**:
  Civil (*1*) &mdash; A case dealing with a dispute between two people or organizations
 - **`Defendant`**:
-   - Uber Technologies, Inc
+   - Tech Solutions Inc.
 - **`Plaintiff`**:
-   - Waymo LLC
+   - Alpha Innovations LLC
 
 ## Charge
 
@@ -262,7 +262,7 @@ A third-party investigator was hired to look into the matter after an engineer a
 - **`Sentence type`**:
  Restitution (*14*) &mdash; An attempt to measure in financial terms the extent of the gains or profits the defendant obtained through harming the victim
 - **`Quantity`**:
- 245,000,000
+ 150,000,000
 - **`Metric`**:
  Dollar(s) (*5*) &mdash; Imposed sentence is in terms of dollars (e.g. $10,000 in damages)
 - **`Concurrency`**:
@@ -275,11 +275,11 @@ The legal response was primarily civil. The case did not involve law enforcement
 - **`Id`**:
  legal-response--4dbe427c-8f98-4621-afa6-a20902afb8d2
 - **`Insider settled`**:
- 2018-02-09
+ 2003-02-09
 
 ## Job
 
-Anthony Levandowski was involved in the development of autonomous vehicle technologies at Waymo, a division of Google, before leaving to start Otto, which was later acquired by Uber.
+Mark Zingerman was involved in the development of proprietary software technologies at Alpha Innovations before leaving to start his own company, which was later acquired by Tech Solutions.
 
 - **`Id`**:
  job--afc08477-7f6f-4130-a966-f7b1e2188587
@@ -288,7 +288,7 @@ Anthony Levandowski was involved in the development of autonomous vehicle techno
 - **`Occupation`**:
  Engineers (*17.2*) &mdash; Aerospace Engineers, Bioengineers Engineers, Chemical Engineers, Civil Engineers, Electrical Engineers, Electronics Engineers, Environmental Engineers, Industrial Engineers, Marine Engineers, Naval Architects, Mechanical Engineers, Geological Engineers, etc.
 - **`Title`**:
- Lead Engineer for Autonomous Vehicle Technology
+ Lead Engineer for Software Development
 - **`Position technical`**:
  False
 - **`Access authorization`**:
@@ -296,20 +296,20 @@ Anthony Levandowski was involved in the development of autonomous vehicle techno
 - **`Employment type`**:
  Full-time (*FLT*) &mdash; Individual who is directly employed by the organization and works at least 35 hours per week or is classified by the organization as a full-time employee
 - **`Hire date`**:
- 2007-08-01
+ 1997-08-01
 - **`Departure date`**:
- 2016-01-27
+ 2006-01-27
 - **`Tenure`**:
  P8Y5M26D
 
 ## Stressor
 
-Insider left Waymo to start his own company.
+Insider left Alpha Innovations to start his own company.
 
 - **`Id`**:
  stressor--3a9b7107-9d1c-4c9e-b5c2-e56b0bd408f0
 - **`Date`**:
- 2015-12-01
+ 2000-12-01
 - **`Category`**:
  Employment Status (*1*) &mdash; The insider's employment status changed
 - **`Subcategory`**:
@@ -320,7 +320,7 @@ Insider left Waymo to start his own company.
 - **`Id`**:
  ttp--adfa4038-3dec-4d49-9dad-8cc35d41a261
 - **`Date`**:
- 2015-12-11
+ 2000-12-11
 - **`Sequence num`**:
  1
 - **`Observed`**:
@@ -344,27 +344,27 @@ Insider left Waymo to start his own company.
 
 ## Accomplice
 
-Co-founder and former chief executive officer of Uber was accused of having conspired with Levandowski, motivating him financially to start a company using trade secrets from Waymo, which would then be bought by Uber.
+Chad Jones was accused of conspiring with Zingerman, motivating him financially to start a company using trade secrets from Alpha Innovations, which would then be bought by Tech Solutions.
 
 - **`Id`**:
  accomplice--3426b922-135a-42f9-869d-f8b30e0d483b
 - **`Relationship to insider`**:
  
 - **`first_name`**:
- Travis
+ Chad
 - **`last_name`**:
- Kalanick
+ Jones
 
 ## Note
 
-This was a civil case. The insider was formally charged through a third-party civil court and later filed for bankruptcy
+This was a civil case. The insider was formally charged through a third-party civil court and later filed for bankruptcy.
 
 - **`Id`**:
  note--afc08477-7f6f-4130-a966-f7b1e2188587
 - **`Author`**:
  CMU Researcher
 - **`Date`**:
- 2024-05-28
+ 2004-05-28
 
 ## Org Relationship
 
@@ -388,8 +388,8 @@ This was a civil case. The insider was formally charged through a third-party ci
 - **`File type`**:
  PDF File (*pdf*) &mdash; A file in Portable Document Format
 - **`Date`**:
- 2017-09-13
+ 2002-09-13
 - **`Public`**:
  True
 - **`Document`**:
- https://law.justia.com/cases/federal/appellate-courts/cafc/17-2235/17-2235-2017-09-13.html
+ https://fakeurl.com/cases/federal-appellate-courts/02-2235/02-2235-2002-09-13.html

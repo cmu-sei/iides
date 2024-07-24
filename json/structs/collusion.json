@@ -1,43 +1,38 @@
 {
-	"$id": "iides/json/structs/collusion.json",
-	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"title": "Collusion",
-	"description": "Collusion represents the relationship between insiders. For the purposes of the `recruitment` property, insider1 recruited insider2.",
-	"type": "object",
-	"properties": {
-		"id": {
-			"type": "string",
-			"description": "A unique string that begins with \"collusion--\" and is appended with a UUIDv4",
-			"pattern": "^collusion--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
-		},
-      "insider1": {
-			"type": "string",
-			"description": "The `id` of the first insider",
-			"pattern": "^insider--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
-		},
-      "insider2": {
-			"type": "string",
-			"description": "The `id` of the second insider",
-			"pattern": "^insider--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
-		},
-      "relationship": {
-			"type": "string",
-			"description": "The type of relationship between insider1 and insider2",
+  "$id": "iides/json/structs/collusion.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Collusion",
+  "description": "Collusion represents the relationship between insiders. For the purposes of the `recruitment` property, insider1 recruited insider2.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "A unique string that begins with \"collusion--\" and is appended with a UUIDv4",
+      "pattern": "^collusion--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "insider1": {
+      "type": "string",
+      "description": "The `id` of the first insider",
+      "pattern": "^insider--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "insider2": {
+      "type": "string",
+      "description": "The `id` of the second insider",
+      "pattern": "^insider--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "relationship": {
+      "type": "string",
+      "description": "The type of relationship between insider1 and insider2",
       "$ref": "../common/insider-relationship-vocab.json"
-		},
-      "recruitment": {
-			"type": "string",
-			"description": "The reason insider1 recruited insider2",
+    },
+    "recruitment": {
+      "type": "string",
+      "description": "The reason insider1 recruited insider2",
       "$ref": "#/$defs/recruitment-vocab"
-		}
-	},
-	"required": [
-		"id",
-        "insider1",
-        "insider2",
-        "relationship"
-	],
-	"$defs": {
+    }
+  },
+  "required": ["id", "insider1", "insider2", "relationship"],
+  "$defs": {
     "recruitment-vocab": {
       "oneOf": [
         {
@@ -72,6 +67,6 @@
         }
       ]
     }
-	},
-  "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided “AS-IS” with “NO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED” and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT® is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
+  },
+  "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \"AS-IS\" with \"NO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\" and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT® is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
 }

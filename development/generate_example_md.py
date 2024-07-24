@@ -43,6 +43,7 @@ def find_schema(schema_paths, target_tag):
     for path in schema_paths:
         if f'{target_tag}.json' in path:
             with open(path, "r", encoding='utf-8') as schema_file:
+                print(path)
                 return json.load(schema_file)
     return None
 
