@@ -215,7 +215,7 @@ This case involved multiple charges against Oliver Griffin, including unauthoriz
 - **`Id`**:
  court-case--0e430311-72ee-4776-be74-3c1969d141c0
 - **`Case number`**:
- 22 Cr. 123 (PAC)
+ 1:22-cr-00123-JMF
 - **`Case title`**:
  USA vs. Griffin
 - **`Court country`**:
