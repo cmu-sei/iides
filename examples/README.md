@@ -1,5 +1,7 @@
 # IIDES Examples
 
+These examples provided with IIDES are mock examples. The individuals and organizations named are fictitious.
+
 ## Example 1
 
 **Case**: USA vs. Griffin
@@ -10,7 +12,7 @@
 
 ## Example 2
 
-**Case**: USA vs. Caballo
+**Case**: USA vs. Cabello
 
 **Description**: The insider, a former military member, worked as a cybersecurity specialist for a government agency in May 2003. During this time, she printed a report from her work computer that detailed unauthorized access attempts by a foreign hacking group against municipal election systems and voter databases. She then shared this Top Secret information with a tech blog. This report revealed the techniques and tools used to gather the information contained in the report, which, if disclosed, could be detrimental to the United States. A government agency investigated her and the insider pleaded guilty in June 2004 to one felony count of unauthorized transmission of national defense information and was convicted.
 

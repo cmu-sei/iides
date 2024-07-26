@@ -133,7 +133,7 @@ It is difficult to provide full coverage for all possible vocabulary terms acros
 
 We recognize that not all components of IIDES will be useful to all users. To that end, we have tried to provide a flexible schema that covers as many use cases as possible without limiting its application in use cases that we have not thought of.
 
-To assist with understanding the JSON schema and IIDES itself, we provide a set of [examples](../examples/), which covers several incident types and use cases. The examples are not intended to be exhaustive of all possible use cases. Rather, they are intended to provide insight into what valid IIDES data looks like, and to provide a small set of test cases to assist with testing alternative implementations of IIDES.
+To assist with understanding the JSON schema and IIDES itself, we provide a set of [examples](../examples/), which covers several mock insider threat example cases. The examples are not intended to be exhaustive of all possible use cases. Rather, they are intended to provide insight into what valid IIDES data looks like, and to provide a small set of test cases to assist with testing alternative implementations of IIDES.
 
 ### General Guidance
 
