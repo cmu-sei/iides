@@ -1,7 +1,7 @@
 # Insider Incident Data Exchange Standard
 
-Author: CERT Insider Threat Center  
-Date: July 2024  
+Author: CERT Insider Threat Team  
+Date: August 2024  
 Version: 1, Revision 1
 
 ## Introduction
