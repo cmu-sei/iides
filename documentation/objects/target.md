@@ -61,7 +61,7 @@ Constants: `1.1`, `2.1`, `2.2`, `2.3`, `3.1`, `4.1`, `4.2`, `4.3`, `4.4`, `4.5`,
 
 ### target-subcategory-vocab
 
-Constants: `1.1.1`, `1.1.2`, `1.1.3`, `2.1.1`, `2.1.2`, `2.2.1`, `2.2.2`, `2.2.3`, `2.2.4`, `2.2.5`, `2.2.6`, `2.3.1`, `2.3.2`, `3.1.1`, `3.1.2`, `3.1.3`, `3.1.4`, `3.1.5`, `3.1.6`, `3.1.7`, `3.1.8`, `3.1.9`, `3.1.10`, `3.1.11`, `3.1.12`, `3.1.13`, `3.1.14`, `4.1.1`, `4.1.2`, `4.1.3`, `4.1.4`, `4.1.5`, `4.2.1`, `4.3.1`, `4.3.2`, `4.3.3`, `4.4.1`, `4.4.2`, `4.4.3`, `4.4.4`, `4.5.1`, `4.5.2`, `5.1.1`, `5.1.2`, `5.1.3`, `5.1.4`, `5.1.5`, `5.1.6`, `5.1.7`, `5.1.8`, `5.1.9`, `5.1.10`, `5.2.1`, `5.2.2`, `5.2.3`, `5.2.4`, `5.3.1`, `5.3.2`, `5.4.1`, `5.4.2`
+Constants: `1.1.1`, `1.1.2`, `1.1.3`, `2.1.1`, `2.1.2`, `2.2.1`, `2.2.2`, `2.2.3`, `2.2.4`, `2.2.5`, `2.2.6`, `2.3.1`, `2.3.2`, `3.1.1`, `3.1.2`, `3.1.3`, `3.1.4`, `3.1.5`, `3.1.6`, `3.1.7`, `3.1.8`, `3.1.9`, `3.1.10`, `3.1.11`, `3.1.12`, `3.1.13`, `3.1.14`, `4.1.1`, `4.1.2`, `4.1.3`, `4.1.4`, `4.1.5`, `4.2.1`, `4.3.1`, `4.3.2`, `4.3.3`, `4.4.1`, `4.4.2`, `4.4.3`, `4.4.4`, `4.5.1`, `4.5.2`, `5.1.1`, `5.1.2`, `5.1.3`, `5.1.4`, `5.1.5`, `5.1.6`, `5.1.7`, `5.1.8`, `5.1.9`, `5.1.10`, `5.1.11`, `5.1.12`, `5.2.1`, `5.2.2`, `5.2.3`, `5.2.4`, `5.3.1`, `5.3.2`, `5.4.1`, `5.4.2`, `5.4.3`
 
 | Const | Value | Description |
 | --- | --- | --- |
@@ -117,6 +117,8 @@ Constants: `1.1.1`, `1.1.2`, `1.1.3`, `2.1.1`, `2.1.2`, `2.2.1`, `2.2.2`, `2.2.3
 | 5.1.8 | Servers | System(s) which host information or digital services for end users|
 | 5.1.9 | System Access | Accounts, pathways, tunnels, or backdoors for future use of a particular system or systems|
 | 5.1.10 | Website Hosting | System(s) for delivering websites over the internet|
+| 5.1.11 | Computer | Non-server computer such as a desktop or laptop|
+| 5.1.12 | Mobile Device | Laptop, tablet, or mobile phone|
 | 5.2.1 | Backup Software | Software designed to create copies of data for safe storage|
 | 5.2.2 | Software Policy Protocol | Rules developed by an organization for the ideal deployment of a software|
 | 5.2.3 | Source code | Underlying codebase for a product or system|
@@ -125,6 +127,7 @@ Constants: `1.1.1`, `1.1.2`, `1.1.3`, `2.1.1`, `2.1.2`, `2.2.1`, `2.2.2`, `2.2.3
 | 5.3.2 | Passwords | Access credentials in the form of a text string|
 | 5.4.1 | Emails | Electronic communications in the form of static messages shared to specified user addresses via a network|
 | 5.4.2 | Telecommunication Systems | Networks that facilitate digital or voice communications|
+| 5.4.3 | Mobile Phone | Mobile phone (cell phone)|
 
 ### target-format-vocab
 

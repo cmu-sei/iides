@@ -770,6 +770,16 @@
                             "description": "System(s) for delivering websites over the internet"
                         },
                         {
+                            "const": "5.1.11",
+                            "title": "Computer",
+                            "description": "Non-server computer such as a desktop or laptop"
+                        },
+                        {
+                            "const": "5.1.12",
+                            "title": "Mobile Device",
+                            "description": "Laptop, tablet, or mobile phone"
+                        },
+                        {
                             "const": "5.2.1",
                             "title": "Backup Software",
                             "description": "Software designed to create copies of data for safe storage"
@@ -808,6 +818,11 @@
                             "const": "5.4.2",
                             "title": "Telecommunication Systems",
                             "description": "Networks that facilitate digital or voice communications"
+                        },
+                        {
+                            "const": "5.4.3",
+                            "title": "Mobile Phone",
+                            "description": "Mobile phone (cell phone)"
                         }
                     ]
                 },
