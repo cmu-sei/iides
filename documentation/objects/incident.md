@@ -46,7 +46,7 @@ Constants: `C`, `I`, `A`
 
 ### outcome-type-vocab
 
-Constants: `BR`, `DC`, `DD`, `DM`, `DR`, `DS`, `MD`, `ML`, `MS`, `NN`, `OT`, `RO`, `SI`, `IT`
+Constants: `BR`, `DC`, `DD`, `DM`, `DR`, `DS`, `MD`, `ML`, `MS`, `NN`, `OT`, `RO`, `SI`, `SD`, `IT`
 
 | Const | Value | Description |
 | --- | --- | --- |
@@ -63,6 +63,7 @@ Constants: `BR`, `DC`, `DD`, `DM`, `DR`, `DS`, `MD`, `ML`, `MS`, `NN`, `OT`, `RO
 | OT | Other | Other type of outcome not listed in this vocabulary|
 | RO | Restituion Ordered | The organizatiion was ordered by a court to pay restitution to additional victims of the incident|
 | SI | Safety Impact | There was an impact or potential for impact to safety as a result of the incident|
+| SD | System Downtime | System(s) or the network was fully or partially inoperatble for some length of time|
 | IT | Used in Identity Theft | Identity theft of one or more individuals resulted from the incident. E.g., The insider used stolen PII to file fraudulent tax returns|
 
 ### incident-type-vocab

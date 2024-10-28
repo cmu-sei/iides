@@ -1201,6 +1201,11 @@
                             "description": "There was an impact or potential for impact to safety as a result of the incident"
                         },
                         {
+                            "const": "SD",
+                            "title": "System Downtime",
+                            "description": "System(s) or the network was fully or partially inoperatble for some length of time"
+                        },
+                        {
                             "const": "IT",
                             "title": "Used in Identity Theft",
                             "description": "Identity theft of one or more individuals resulted from the incident. E.g., The insider used stolen PII to file fraudulent tax returns"
