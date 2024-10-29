@@ -168,6 +168,11 @@
           "description": "Other type of outcome not listed in this vocabulary"
         },
         {
+          "const": "PD",
+          "title": "Physical Damage",
+          "description": "Physical damage to or destruction of property or other physical assets owned by the organization or located on the organization's property at the time of the incident"
+        },
+        {
           "const": "RO",
           "title": "Restituion Ordered",
           "description": "The organizatiion was ordered by a court to pay restitution to additional victims of the incident"
