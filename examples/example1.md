@@ -41,8 +41,8 @@ Oliver James Griffin had a history of social and mental health issues. He showed
   - A History of Rule Violations (*['2', '2.4']*) &mdash; A history of violating the law or violating rules at other organizations
   - Suspicious Associations (*['3', '3.2']*) &mdash; A history of associating with criminal or otherwise objectionable persons or entities
 - **`Concerning behaviors`**:
-   - Technical Policy Abuse (*['3.2', '3.2.2']*) &mdash; Violating policies regarding the use of the organization's IT systems
-  - Interpersonal Issues (*['3.3', '3.3.2']*) &mdash; Conflicts with others in the organization or human resources (HR) issues
+   - Technical Policy Abuse (*['2', '2.2']*) &mdash; Violating policies regarding the use of the organization's IT systems
+  - Interpersonal Issues (*['3', '3.2']*) &mdash; Conflicts with others in the organization or human resources (HR) issues
 - **`first_name`**:
  Oliver
 - **`middle_name`**:

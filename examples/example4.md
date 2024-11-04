@@ -34,7 +34,7 @@
 - **`Predispositions`**:
    - Personal Stressful Events (*['4', '4.3']*) &mdash; Events in the insider's personal life that could lead to additional stress or further motivate the insider to harm their organization
 - **`Concerning behaviors`**:
-   - Suspicious Contact (*['3.6', '3.6.1']*) &mdash; Suspicious communication with or travel to entities, areas, or individuals that present a conflict of interest with the organization
+   - Suspicious Contact (*['6', '6.1']*) &mdash; Suspicious communication with or travel to entities, areas, or individuals that present a conflict of interest with the organization
 - **`first_name`**:
  Xin
 - **`middle_name`**:
