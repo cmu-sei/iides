@@ -66,10 +66,10 @@ Mark Zingerman's actions of transferring confidential files from Alpha Innovatio
 - **`number_of_children`**:
  2
 - **`Concerning behaviors`**:
-   - Technical Policy Abuse (*['3.2', '3.2.4']*) &mdash; Violating policies regarding the use of the organization's IT systems
-  - Technical Policy Abuse (*['3.2', '3.2.3']*) &mdash; Violating policies regarding the use of the organization's IT systems
-  - Organizational Conflict (*['3.5', '3.5.1']*) &mdash; Competitive conflicts of interest with the organization
-  - Organizational Conflict (*['3.5', '3.5.2']*) &mdash; Competitive conflicts of interest with the organization
+   - Technical Policy Abuse (*['2', '2.4']*) &mdash; Violating policies regarding the use of the organization's IT systems
+  - Technical Policy Abuse (*['2', '2.3']*) &mdash; Violating policies regarding the use of the organization's IT systems
+  - Organizational Conflict (*['5', '5.1']*) &mdash; Competitive conflicts of interest with the organization
+  - Organizational Conflict (*['5', '5.2']*) &mdash; Competitive conflicts of interest with the organization
 
 ## Organization
 

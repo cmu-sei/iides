@@ -102,60 +102,60 @@ Constants: `1.1`, `1.2`, `1.3`, `1.4`, `1.5`, `1.6`, `1.7`, `2.1`, `2.2`, `2.3`,
 
 ### concerning-behavior-vocab
 
-Constants: `3.1`, `3.2`, `3.3`, `3.4`, `3.5`, `3.6`, `3.7`
+Constants: `1`, `2`, `3`, `4`, `5`, `6`, `7`
 
 | Const | Value | Description |
 | --- | --- | --- |
-| 3.1 | Misuse of Company Resources | Using or abusing company resources in an unauthorized manner|
-| 3.2 | Technical Policy Abuse | Violating policies regarding the use of the organization's IT systems|
-| 3.3 | Interpersonal Issues | Conflicts with others in the organization or human resources (HR) issues|
-| 3.4 | Financial | Financial conflicts of interest or significant changes to financial status|
-| 3.5 | Organizational Conflict | Competitive conflicts of interest with the organization|
-| 3.6 | Suspicious Contact | Suspicious communication with or travel to entities, areas, or individuals that present a conflict of interest with the organization|
-| 3.7 | Relocation | Physical relocation|
+| 1 | Misuse of Company Resources | Using or abusing company resources in an unauthorized manner|
+| 2 | Technical Policy Abuse | Violating policies regarding the use of the organization's IT systems|
+| 3 | Interpersonal Issues | Conflicts with others in the organization or human resources (HR) issues|
+| 4 | Financial | Financial conflicts of interest or significant changes to financial status|
+| 5 | Organizational Conflict | Competitive conflicts of interest with the organization|
+| 6 | Suspicious Contact | Suspicious communication with or travel to entities, areas, or individuals that present a conflict of interest with the organization|
+| 7 | Relocation | Physical relocation|
 
 ### cb-subtype-vocab
 
-Constants: `3.1.1`, `3.1.2`, `3.1.3`, `3.2.1`, `3.2.2`, `3.2.3`, `3.2.4`, `3.2.5`, `3.2.6`, `3.3.1`, `3.3.2`, `3.3.3`, `3.3.4`, `3.3.5`, `3.3.6`, `3.3.7`, `3.3.8`, `3.3.9`, `3.3.10`, `3.3.11`, `3.3.12`, `3.3.13`, `3.4.1`, `3.4.2`, `3.4.3`, `3.5.1`, `3.5.2`, `3.5.3`, `3.5.4`, `3.5.5`, `3.5.6`, `3.6.1`, `3.6.2`, `3.6.3`, `3.6.4`, `3.7.1`
+Constants: `1.1`, `1.2`, `1.3`, `2.1`, `2.2`, `2.3`, `2.4`, `2.5`, `2.6`, `3.1`, `3.2`, `3.3`, `3.4`, `3.5`, `3.6`, `3.7`, `3.8`, `3.9`, `3.10`, `3.11`, `3.12`, `3.13`, `4.1`, `4.2`, `4.3`, `5.1`, `5.2`, `5.3`, `5.4`, `5.5`, `5.6`, `6.1`, `6.2`, `6.3`, `6.4`, `7.1`
 
 | Const | Value | Description |
 | --- | --- | --- |
-| 3.1.1 | Theft Of Physical Company Property | Stealing their employer's physical property (e.g., the insider reported a company laptop as stolen, but had it when they were arrested)|
-| 3.1.2 | Insider Expressed Ownership Of Work | Acting as if they had personal right to any work done for the organization, despite knowledge of organizational right to employee work (e.g., the insider refused to return copy of code that they wrote because they felt entitled to it)|
-| 3.1.3 | Repeated Security Violations - Non-Technical | Violating organizational security policies not related to IT systems (e.g., the insider broke into the school on multiple occasions and was also caught cheating)|
-| 3.2.1 | Other Unauthorized Software Acquisition | Acquiring any sort of unauthorized software on an organizational system (e.g., the insider downloaded a password recovery tool from a website)|
-| 3.2.2 | Repeated Security Violations - Technical | Multiple instances of security violations related to organizational IT systems (e.g., the insider repeatedly let co-workers use their workstation)|
-| 3.2.3 | Unauthorized Download - Remotely | Unapproved download from offsite (e.g., the insider logged into their company account from home on their personal laptop and downloaded torrents)|
-| 3.2.4 | Unauthorized Download - On Site | Unapproved download from within the organization (e.g., the insider used their company-issued workstation to download torrents)|
-| 3.2.5 | IP Policy Violation | Violating any of the policies put in place by the company regarding their IP (i.e. trade secrets, patents, copyright, etc.)|
-| 3.2.6 | Violation of Need to Know | Accessing organizational information which is not needed for their work, as defined by organizational policy|
-| 3.3.1 | Employee Extortion, Threats, or Legal Demands | Extortion, threats (physical, technical, legal, etc.) or legal demands against the organization (e.g., the insider threatened to sue company unless they agreed to the terms of their demands)|
-| 3.3.2 | Conflict With Supervisor | Personal or work-related disputes with their supervisor (e.g., the insider was unhappy with their new boss because the boss modified the organization's bonus system)|
-| 3.3.3 | Conflict With Coworker(s) | Personal or work-related disputes with a coworker (e.g., the insider yelled at a coworker for repeatedly parking in their spot)|
-| 3.3.4 | Work Attendance Problems | Being late for work or having unexcused/unplanned absences from work, generally multiple times (e.g., the insider reports late to work 7 times during the month of April)|
-| 3.3.5 | Human Resource Policy Violations or Complaints | Violating the organization's human resource policy or making a formal complaint about something/someone within the organization (e.g., the insider made several complaints to management about their co-worker's noise level)|
-| 3.3.6 | Disgruntled Employee | One who is upset with the organization and desires to get a measure of revenge against the organization (e.g., the insider grew disgruntled because of losing their 'star' status at the organization as it grew larger)|
-| 3.3.7 | Bragging | The insider boasts about a concerning behavior to co-workers or online (e.g., the insider boasted about being able to shut down the organization's system anytime they wanted)|
-| 3.3.8 | Concurrent Crimes | The insider commits a second illegal action while committing the unrelated illegal insider incident (e.g., the insider was indicted for domestic abuse while committing the insider incident)|
-| 3.3.9 | Formal Complaint | Organization receives complaints about the insider from a coworker which were officially documented|
-| 3.3.10 | Informal Complaint | Organization receives complaints about the insider from a coworker which were not officially documented|
-| 3.3.11 | Insubordination | Defiance or refusal to follow commands or instructions|
-| 3.3.12 | Physical Abuse/Harassment | Engaging in any type of physical abuse and/or harassment against another employee|
-| 3.3.13 | Sexual Harassment | Engaging in any type of sexual harassment against another employee|
-| 3.4.1 | Unexplained Wealth | A sudden increase in the amount of money the insider appears to have (e.g., the insider purchased $400,000 in personal items even though their annual salary was $50,000)|
-| 3.4.2 | Employee Forms New Competing Business | Maintains a financial stake in another business or scheme that conflicts with their present employer (e.g., the insider invests in stocks of the victim organization's competitor)|
-| 3.4.3 | Financial Conflict of Interest | Starting a business in the same area as their previous employer (e.g., the insider left one law firm to start their own law firm)|
-| 3.5.1 | Planning/Contact with Competing Organization | Conspiring with a competitor of the current employer in any way (e.g., the insider e-mailed a competing organization detailing plans to steal trade secrets)|
-| 3.5.2 | Employee Went To Work For A Competing Organization | Leaving their current employer and joining a competing organization. E.g., Insider accepted a position at a competing technical firm before resigning from their current position.|
-| 3.5.3 | Employee Sought Other Employment | Seeking another job while still employed with their current employer (e.g., the insider sent their resume to another organization)|
-| 3.5.4 | Group Resignation | Two or more employees leave the organization at approximately the same time for similar reasons (e.g., all five insiders resigned simultaneously, then went to work for a competitor)|
-| 3.5.5 | Insider Creates Legal Entity for Illegitimate Purpose | Creates a legal entity in order to move forward with scheme or to hide assets as a result of the scheme (e.g., the insider creates a shell company to protect assets)|
-| 3.5.6 | Falsified Background Information | Lies about or otherwise manipulates information about their background: personal or financial history, contacts, groups, etc.|
-| 3.6.1 | Suspicious Foreign Contact | Tie(s) to foreign nation(s) such as company or independent travel, family members, telephone records, etc. (e.g., the insider consistently calls former co-worker who now works in a non-allied country)|
-| 3.6.2 | Suspicious Foreign Travel | Traveling to foreign nations that, if the travel was known, should raise concerns with the organization|
-| 3.6.3 | Foreign Travel - Work Related | Travel undertaken by the insider as required for their job (e.g., the insider's job required frequent travel to non-allied countries)|
-| 3.6.4 | Planning/Contact with Conspirator | Conspiring with a conspirator in order to begin or further their particular scheme (e.g., the insider calls their partner-in-crime in order to establish attack details)|
-| 3.7.1 | Geographic Relocation | Permanent move to a new physical location|
+| 1.1 | Theft Of Physical Company Property | Stealing their employer's physical property (e.g., the insider reported a company laptop as stolen, but had it when they were arrested)|
+| 1.2 | Insider Expressed Ownership Of Work | Acting as if they had personal right to any work done for the organization, despite knowledge of organizational right to employee work (e.g., the insider refused to return copy of code that they wrote because they felt entitled to it)|
+| 1.3 | Repeated Security Violations - Non-Technical | Violating organizational security policies not related to IT systems (e.g., the insider broke into the school on multiple occasions and was also caught cheating)|
+| 2.1 | Other Unauthorized Software Acquisition | Acquiring any sort of unauthorized software on an organizational system (e.g., the insider downloaded a password recovery tool from a website)|
+| 2.2 | Repeated Security Violations - Technical | Multiple instances of security violations related to organizational IT systems (e.g., the insider repeatedly let co-workers use their workstation)|
+| 2.3 | Unauthorized Download - Remotely | Unapproved download from offsite (e.g., the insider logged into their company account from home on their personal laptop and downloaded torrents)|
+| 2.4 | Unauthorized Download - On Site | Unapproved download from within the organization (e.g., the insider used their company-issued workstation to download torrents)|
+| 2.5 | IP Policy Violation | Violating any of the policies put in place by the company regarding their IP (i.e. trade secrets, patents, copyright, etc.)|
+| 2.6 | Violation of Need to Know | Accessing organizational information which is not needed for their work, as defined by organizational policy|
+| 3.1 | Employee Extortion, Threats, or Legal Demands | Extortion, threats (physical, technical, legal, etc.) or legal demands against the organization (e.g., the insider threatened to sue company unless they agreed to the terms of their demands)|
+| 3.2 | Conflict With Supervisor | Personal or work-related disputes with their supervisor (e.g., the insider was unhappy with their new boss because the boss modified the organization's bonus system)|
+| 3.3 | Conflict With Coworker(s) | Personal or work-related disputes with a coworker (e.g., the insider yelled at a coworker for repeatedly parking in their spot)|
+| 3.4 | Work Attendance Problems | Being late for work or having unexcused/unplanned absences from work, generally multiple times (e.g., the insider reports late to work 7 times during the month of April)|
+| 3.5 | Human Resource Policy Violations or Complaints | Violating the organization's human resource policy or making a formal complaint about something/someone within the organization (e.g., the insider made several complaints to management about their co-worker's noise level)|
+| 3.6 | Disgruntled Employee | One who is upset with the organization and desires to get a measure of revenge against the organization (e.g., the insider grew disgruntled because of losing their 'star' status at the organization as it grew larger)|
+| 3.7 | Bragging | The insider boasts about a concerning behavior to co-workers or online (e.g., the insider boasted about being able to shut down the organization's system anytime they wanted)|
+| 3.8 | Concurrent Crimes | The insider commits a second illegal action while committing the unrelated illegal insider incident (e.g., the insider was indicted for domestic abuse while committing the insider incident)|
+| 3.9 | Formal Complaint | Organization receives complaints about the insider from a coworker which were officially documented|
+| 3.10 | Informal Complaint | Organization receives complaints about the insider from a coworker which were not officially documented|
+| 3.11 | Insubordination | Defiance or refusal to follow commands or instructions|
+| 3.12 | Physical Abuse/Harassment | Engaging in any type of physical abuse and/or harassment against another employee|
+| 3.13 | Sexual Harassment | Engaging in any type of sexual harassment against another employee|
+| 4.1 | Unexplained Wealth | A sudden increase in the amount of money the insider appears to have (e.g., the insider purchased $400,000 in personal items even though their annual salary was $50,000)|
+| 4.2 | Employee Forms New Competing Business | Maintains a financial stake in another business or scheme that conflicts with their present employer (e.g., the insider invests in stocks of the victim organization's competitor)|
+| 4.3 | Financial Conflict of Interest | Starting a business in the same area as their previous employer (e.g., the insider left one law firm to start their own law firm)|
+| 5.1 | Planning/Contact with Competing Organization | Conspiring with a competitor of the current employer in any way (e.g., the insider e-mailed a competing organization detailing plans to steal trade secrets)|
+| 5.2 | Employee Went To Work For A Competing Organization | Leaving their current employer and joining a competing organization. E.g., Insider accepted a position at a competing technical firm before resigning from their current position.|
+| 5.3 | Employee Sought Other Employment | Seeking another job while still employed with their current employer (e.g., the insider sent their resume to another organization)|
+| 5.4 | Group Resignation | Two or more employees leave the organization at approximately the same time for similar reasons (e.g., all five insiders resigned simultaneously, then went to work for a competitor)|
+| 5.5 | Insider Creates Legal Entity for Illegitimate Purpose | Creates a legal entity in order to move forward with scheme or to hide assets as a result of the scheme (e.g., the insider creates a shell company to protect assets)|
+| 5.6 | Falsified Background Information | Lies about or otherwise manipulates information about their background: personal or financial history, contacts, groups, etc.|
+| 6.1 | Suspicious Foreign Contact | Tie(s) to foreign nation(s) such as company or independent travel, family members, telephone records, etc. (e.g., the insider consistently calls former co-worker who now works in a non-allied country)|
+| 6.2 | Suspicious Foreign Travel | Traveling to foreign nations that, if the travel was known, should raise concerns with the organization|
+| 6.3 | Foreign Travel - Work Related | Travel undertaken by the insider as required for their job (e.g., the insider's job required frequent travel to non-allied countries)|
+| 6.4 | Planning/Contact with Conspirator | Conspiring with a conspirator in order to begin or further their particular scheme (e.g., the insider calls their partner-in-crime in order to establish attack details)|
+| 7.1 | Geographic Relocation | Permanent move to a new physical location|
 
 ## License
 This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES

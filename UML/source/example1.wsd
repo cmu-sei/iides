@@ -69,7 +69,7 @@ Class Charge #f9b8bd {
 }
 Class CourtCase #f9b8bd {
 * id : court-case--0e430311-72ee-4776-be74-3c1969d141c0 
-+ case_number : 22 Cr. 123 (PAC) 
++ case_number : 1:22-cr-00123-JMF 
 + case_title : USA vs. Griffin 
 + court_country : United States 
 + court_state : New York 
@@ -135,7 +135,7 @@ Class Insider #043673;text:white {
 + incident_role : 1 
 + motive : ['8']
 + predispositions : [['1', '1.1'], ['2', '2.4'], ['3', '3.2']]
-+ concerning_behaviors : [['3.2', '3.2.2'], ['3.3', '3.3.2']]
++ concerning_behaviors : [['2', '2.2'], ['3', '3.2']]
 + first_name : Oliver 
 + middle_name : James 
 + last_name : Griffin 

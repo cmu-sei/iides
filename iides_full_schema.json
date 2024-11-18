@@ -4842,37 +4842,37 @@
                 "concerning-behavior-vocab": {
                     "oneOf": [
                         {
-                            "const": "3.1",
+                            "const": "1",
                             "title": "Misuse of Company Resources",
                             "description": "Using or abusing company resources in an unauthorized manner"
                         },
                         {
-                            "const": "3.2",
+                            "const": "2",
                             "title": "Technical Policy Abuse",
                             "description": "Violating policies regarding the use of the organization's IT systems"
                         },
                         {
-                            "const": "3.3",
+                            "const": "3",
                             "title": "Interpersonal Issues",
                             "description": "Conflicts with others in the organization or human resources (HR) issues"
                         },
                         {
-                            "const": "3.4",
+                            "const": "4",
                             "title": "Financial",
                             "description": "Financial conflicts of interest or significant changes to financial status"
                         },
                         {
-                            "const": "3.5",
+                            "const": "5",
                             "title": "Organizational Conflict",
                             "description": "Competitive conflicts of interest with the organization"
                         },
                         {
-                            "const": "3.6",
+                            "const": "6",
                             "title": "Suspicious Contact",
                             "description": "Suspicious communication with or travel to entities, areas, or individuals that present a conflict of interest with the organization"
                         },
                         {
-                            "const": "3.7",
+                            "const": "7",
                             "title": "Relocation",
                             "description": "Physical relocation"
                         }
@@ -4881,182 +4881,182 @@
                 "cb-subtype-vocab": {
                     "oneOf": [
                         {
-                            "const": "3.1.1",
+                            "const": "1.1",
                             "title": "Theft Of Physical Company Property",
                             "description": "Stealing their employer's physical property (e.g., the insider reported a company laptop as stolen, but had it when they were arrested)"
                         },
                         {
-                            "const": "3.1.2",
+                            "const": "1.2",
                             "title": "Insider Expressed Ownership Of Work",
                             "description": "Acting as if they had personal right to any work done for the organization, despite knowledge of organizational right to employee work (e.g., the insider refused to return copy of code that they wrote because they felt entitled to it)"
                         },
                         {
-                            "const": "3.1.3",
+                            "const": "1.3",
                             "title": "Repeated Security Violations - Non-Technical",
                             "description": "Violating organizational security policies not related to IT systems (e.g., the insider broke into the school on multiple occasions and was also caught cheating)"
                         },
                         {
-                            "const": "3.2.1",
+                            "const": "2.1",
                             "title": "Other Unauthorized Software Acquisition",
                             "description": "Acquiring any sort of unauthorized software on an organizational system (e.g., the insider downloaded a password recovery tool from a website)"
                         },
                         {
-                            "const": "3.2.2",
+                            "const": "2.2",
                             "title": "Repeated Security Violations - Technical",
                             "description": "Multiple instances of security violations related to organizational IT systems (e.g., the insider repeatedly let co-workers use their workstation)"
                         },
                         {
-                            "const": "3.2.3",
+                            "const": "2.3",
                             "title": "Unauthorized Download - Remotely",
                             "description": "Unapproved download from offsite (e.g., the insider logged into their company account from home on their personal laptop and downloaded torrents)"
                         },
                         {
-                            "const": "3.2.4",
+                            "const": "2.4",
                             "title": "Unauthorized Download - On Site",
                             "description": "Unapproved download from within the organization (e.g., the insider used their company-issued workstation to download torrents)"
                         },
                         {
-                            "const": "3.2.5",
+                            "const": "2.5",
                             "title": "IP Policy Violation",
                             "description": "Violating any of the policies put in place by the company regarding their IP (i.e. trade secrets, patents, copyright, etc.)"
                         },
                         {
-                            "const": "3.2.6",
+                            "const": "2.6",
                             "title": "Violation of Need to Know",
                             "description": "Accessing organizational information which is not needed for their work, as defined by organizational policy"
                         },
                         {
-                            "const": "3.3.1",
+                            "const": "3.1",
                             "title": "Employee Extortion, Threats, or Legal Demands",
                             "description": "Extortion, threats (physical, technical, legal, etc.) or legal demands against the organization (e.g., the insider threatened to sue company unless they agreed to the terms of their demands)"
                         },
                         {
-                            "const": "3.3.2",
+                            "const": "3.2",
                             "title": "Conflict With Supervisor",
                             "description": "Personal or work-related disputes with their supervisor (e.g., the insider was unhappy with their new boss because the boss modified the organization's bonus system)"
                         },
                         {
-                            "const": "3.3.3",
+                            "const": "3.3",
                             "title": "Conflict With Coworker(s)",
                             "description": "Personal or work-related disputes with a coworker (e.g., the insider yelled at a coworker for repeatedly parking in their spot)"
                         },
                         {
-                            "const": "3.3.4",
+                            "const": "3.4",
                             "title": "Work Attendance Problems",
                             "description": "Being late for work or having unexcused/unplanned absences from work, generally multiple times (e.g., the insider reports late to work 7 times during the month of April)"
                         },
                         {
-                            "const": "3.3.5",
+                            "const": "3.5",
                             "title": "Human Resource Policy Violations or Complaints",
                             "description": "Violating the organization's human resource policy or making a formal complaint about something/someone within the organization (e.g., the insider made several complaints to management about their co-worker's noise level)"
                         },
                         {
-                            "const": "3.3.6",
+                            "const": "3.6",
                             "title": "Disgruntled Employee",
                             "description": "One who is upset with the organization and desires to get a measure of revenge against the organization (e.g., the insider grew disgruntled because of losing their 'star' status at the organization as it grew larger)"
                         },
                         {
-                            "const": "3.3.7",
+                            "const": "3.7",
                             "title": "Bragging",
                             "description": "The insider boasts about a concerning behavior to co-workers or online (e.g., the insider boasted about being able to shut down the organization's system anytime they wanted)"
                         },
                         {
-                            "const": "3.3.8",
+                            "const": "3.8",
                             "title": "Concurrent Crimes",
                             "description": "The insider commits a second illegal action while committing the unrelated illegal insider incident (e.g., the insider was indicted for domestic abuse while committing the insider incident)"
                         },
                         {
-                            "const": "3.3.9",
+                            "const": "3.9",
                             "title": "Formal Complaint",
                             "description": "Organization receives complaints about the insider from a coworker which were officially documented"
                         },
                         {
-                            "const": "3.3.10",
+                            "const": "3.10",
                             "title": "Informal Complaint",
                             "description": "Organization receives complaints about the insider from a coworker which were not officially documented"
                         },
                         {
-                            "const": "3.3.11",
+                            "const": "3.11",
                             "title": "Insubordination",
                             "description": "Defiance or refusal to follow commands or instructions"
                         },
                         {
-                            "const": "3.3.12",
+                            "const": "3.12",
                             "title": "Physical Abuse/Harassment",
                             "description": "Engaging in any type of physical abuse and/or harassment against another employee"
                         },
                         {
-                            "const": "3.3.13",
+                            "const": "3.13",
                             "title": "Sexual Harassment",
                             "description": "Engaging in any type of sexual harassment against another employee"
                         },
                         {
-                            "const": "3.4.1",
+                            "const": "4.1",
                             "title": "Unexplained Wealth",
                             "description": "A sudden increase in the amount of money the insider appears to have (e.g., the insider purchased $400,000 in personal items even though their annual salary was $50,000)"
                         },
                         {
-                            "const": "3.4.2",
+                            "const": "4.2",
                             "title": "Employee Forms New Competing Business",
                             "description": "Maintains a financial stake in another business or scheme that conflicts with their present employer (e.g., the insider invests in stocks of the victim organization's competitor)"
                         },
                         {
-                            "const": "3.4.3",
+                            "const": "4.3",
                             "title": "Financial Conflict of Interest",
                             "description": "Starting a business in the same area as their previous employer (e.g., the insider left one law firm to start their own law firm)"
                         },
                         {
-                            "const": "3.5.1",
+                            "const": "5.1",
                             "title": "Planning/Contact with Competing Organization",
                             "description": "Conspiring with a competitor of the current employer in any way (e.g., the insider e-mailed a competing organization detailing plans to steal trade secrets)"
                         },
                         {
-                            "const": "3.5.2",
+                            "const": "5.2",
                             "title": "Employee Went To Work For A Competing Organization",
                             "description": "Leaving their current employer and joining a competing organization. E.g., Insider accepted a position at a competing technical firm before resigning from their current position."
                         },
                         {
-                            "const": "3.5.3",
+                            "const": "5.3",
                             "title": "Employee Sought Other Employment",
                             "description": "Seeking another job while still employed with their current employer (e.g., the insider sent their resume to another organization)"
                         },
                         {
-                            "const": "3.5.4",
+                            "const": "5.4",
                             "title": "Group Resignation",
                             "description": "Two or more employees leave the organization at approximately the same time for similar reasons (e.g., all five insiders resigned simultaneously, then went to work for a competitor)"
                         },
                         {
-                            "const": "3.5.5",
+                            "const": "5.5",
                             "title": "Insider Creates Legal Entity for Illegitimate Purpose",
                             "description": "Creates a legal entity in order to move forward with scheme or to hide assets as a result of the scheme (e.g., the insider creates a shell company to protect assets)"
                         },
                         {
-                            "const": "3.5.6",
+                            "const": "5.6",
                             "title": "Falsified Background Information",
                             "description": "Lies about or otherwise manipulates information about their background: personal or financial history, contacts, groups, etc."
                         },
                         {
-                            "const": "3.6.1",
+                            "const": "6.1",
                             "title": "Suspicious Foreign Contact",
                             "description": "Tie(s) to foreign nation(s) such as company or independent travel, family members, telephone records, etc. (e.g., the insider consistently calls former co-worker who now works in a non-allied country)"
                         },
                         {
-                            "const": "3.6.2",
+                            "const": "6.2",
                             "title": "Suspicious Foreign Travel",
                             "description": "Traveling to foreign nations that, if the travel was known, should raise concerns with the organization"
                         },
                         {
-                            "const": "3.6.3",
+                            "const": "6.3",
                             "title": "Foreign Travel - Work Related",
                             "description": "Travel undertaken by the insider as required for their job (e.g., the insider's job required frequent travel to non-allied countries)"
                         },
                         {
-                            "const": "3.6.4",
+                            "const": "6.4",
                             "title": "Planning/Contact with Conspirator",
                             "description": "Conspiring with a conspirator in order to begin or further their particular scheme (e.g., the insider calls their partner-in-crime in order to establish attack details)"
                         },
                         {
-                            "const": "3.7.1",
+                            "const": "7.1",
                             "title": "Geographic Relocation",
                             "description": "Permanent move to a new physical location"
                         }
