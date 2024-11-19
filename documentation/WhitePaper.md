@@ -1,8 +1,8 @@
 # Insider Incident Data Exchange Standard
 
 Author: CERT Insider Threat Team  
-Date: August 2024  
-Version: 1, Revision 1
+Date: November 2024  
+Version: 0, Revision 1
 
 ## Introduction
 
@@ -147,7 +147,7 @@ No matter how well a standard is defined, there will always be cases where the d
 
 We chose to use JSON to define the IIDES schema, as JSON is one of the most widely used data interchange formats and is arguably easier to use than XML. However, JSON does have its drawbacks as a language for defining schemas. For example, it is difficult to directly specify many-to-many relationships, and it assumes that undefined entities are allowed by default. Explicitly stating that additional properties and objects are disallowed would violate our guiding principle of flexibility. For this reason, the IIDES schema is defined only in part by its JSON specification. Additional details for implementation can be found in this white paper, the descriptions of each component (found in the [documentation](.) folder), and the entity relationship diagrams (ERDs) located in the [UML](../UML/out/) files.
 
-We also provide a separate reference implementation of IIDES called PyIIDES, which is written in Python for those who wish to reference a complete schema-conformant implementation. PyIIDES is a Python package available for download and use in other tools or IIDES implementations. One such example of a tool using PyIIDES is Termite, a lightweight, IIDES-compliant insider threat case management solution.
+We will also be providing a separate reference implementation of IIDES called PyIIDES, which is written in Python for those who wish to reference a complete schema-conformant implementation. PyIIDES is a Python package which will be available for download and use in other tools or IIDES implementations. We will also be providing the tools we use along with IIDES as examples of IIDES-compliant case management solutions.
 
 For those writing implementations of IIDES in other languages, we suggest conforming as tightly as possible to the IIDES schema as specified in these documents and the reference implementations. We request that community members requiring a non-standard or non-conformant implementation of IIDES make a request to the IIDES development team via the GitHub page before implementing a custom schema. Doing so provides the team an opportunity to improve IIDES and its associated implementations for the community's use.
 
@@ -241,7 +241,7 @@ Wagner, Cynthia; Dulaunoy, Alexandre; Wagener, Gérard; & Iklody, Andras. MISP T
 
 ## Acknowledgments
 
-The authors gratefully acknowledge support for this project from the Department of Energy (DOE). The views, opinions, and/or findings contained in this report are those of the au-thors and should not be interpreted as representing the official views or policies of the U.S. Government.
+The authors gratefully acknowledge support for this project from the Department of Energy (DOE). The views, opinions, and/or findings contained in this report are those of the authors and should not be interpreted as representing the official views or policies of the U.S. Government.
 
 The following individuals have made significant contributions to the development of IIDES. Thank you for your time and effort.
 
