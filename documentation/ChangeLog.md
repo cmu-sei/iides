@@ -1,8 +1,8 @@
 # Change Log
 
-## Version 1
+## Version 0.1 "beta"
 
-- v1.1 -- Aug 2024: Version 1, Revision 1 (v1.1) of IIDES released
+- v0.1 -- Nov 2024: Version 0, Revision 1 (v0.1) of IIDES released as "beta" for feedback
 
 ## Licensing
 

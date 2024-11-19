@@ -32,6 +32,8 @@ def get_ref(ref):
 
 
 def is_dependent(property):
+    '''Check if property is conditionally required'''
+
     dependent = None
     if "dependentRequired" in data:
         for present_property in data['dependentRequired'].items():
