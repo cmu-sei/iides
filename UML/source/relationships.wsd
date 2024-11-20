@@ -1,0 +1,56 @@
+@startuml IIDES_Entity_Relationships
+package "IIDES Entity Relationships" #FFF {
+
+    abstract Person #b0d0ed {}
+    class Insider <<Person>> #043673;text:white {}
+    class Accomplice <<Person>> #b0d0ed {}
+    struct Collusion #F5F5F5 {}
+    class Organization #007BC0 {}
+    class Sponsor #b0d0ed {}
+    class Incident #009647 {}
+    class Job #33c2C4 {}
+    class Impact #D4EFDF {}
+    class Target #D4EFDF {}
+    class Source #D4EFDF {}
+    class Detection #FDB515 {}
+    class Response #EF3A47 {}
+    class LegalResponse #f9b8bd {}
+    class CourtCase #f9b8bd {}
+    class Charge #f9b8bd {}
+    class Sentence #f9b8bd {}
+    class TTP #A456ED {}
+    class Stressor #b0d0ed {}
+    class Note #D4EFDF {}
+    struct Relationship #F5F5F5 {}
+    struct OrgRelationship #F5F5F5 {}
+    struct OrgOwner #F5F5F5 {}
+
+    Insider --o{ Accomplice : Relationship
+    Incident --|{ Insider : commits <
+    Accomplice |o--o{ Job
+    Job }o--o| Organization : employs <
+    Insider |o--o{ Job
+    Organization }o--o| Incident : OrgRole
+    Organization }o-- OrgRelationship
+    OrgRelationship --o{ Organization
+    Insider }o--o| Sponsor
+    Accomplice }o--o| Sponsor
+    Insider }o..o{ Organization : OrgOwner >
+    Accomplice }o..o{ Organization : OrgOwner >
+    Insider -- Collusion
+    Collusion -- Insider
+    Incident --|{ Impact
+    Incident --o{ Target
+    Incident --o{ Source
+    Incident --o{ Note
+    CourtCase ||--o{ Charge
+    CourtCase ||--o{ Sentence
+    Incident --o| Detection
+    Incident --o| Response
+    Response ||--o| LegalResponse
+    LegalResponse ||--o{ CourtCase
+    Organization --o{ Stressor
+    Stressor }o-- Insider
+    Incident --o{ TTP
+}
+@enduml

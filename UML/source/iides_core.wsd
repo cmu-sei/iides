@@ -1,0 +1,23 @@
+@startuml IIDES_Core
+package "IIDES Core Relationships" #FFF {
+
+    class Insider <<Person>> #043673;text:white {}
+    class Organization #007BC0 {}
+    class Incident #009647 {}
+    class Job #33c2C4 {}
+    class Detection #FDB515 {}
+    class Response #EF3A47 {}
+    class TTP #A456ED {}
+
+    Incident --|{ Insider : commits <
+    Job }o--o| Organization : employs <
+    Insider |o--o{ Job
+    Organization }o--o| Incident : OrgRole
+    Organization }o--o{ Organization : OrgRelationship
+    Insider }o..o{ Organization : OrgOwner >
+    Insider }|--|{ Insider
+    Incident --o| Detection
+    Incident --o| Response
+    Incident --o{ TTP
+}
+@enduml

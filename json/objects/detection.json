@@ -1,0 +1,198 @@
+{
+  "$id": "iides/json/objects/detection.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Detection",
+  "description": "Detection describes details about how, when, and by whom the incident was detected. An incident may have only one detection entity.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "A unique string that begins with \"detection--\" and is appended with a UUIDv4",
+      "pattern": "^detection--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "first_detected": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date and time the victim organization first became aware of the incident"
+    },
+    "who_detected": {
+      "type": "array",
+      "description": "The individual entities or team(s) that first detected the incident",
+      "items": {
+        "$ref": "#/$defs/detection-team-vocab"
+      },
+      "minItems": 1
+    },
+    "detected_method": {
+      "type": "array",
+      "description": "The system or process that led to the first detection of the incident",
+      "items": {
+        "$ref": "#/$defs/detection-method-vocab"
+      },
+      "minItems": 1
+    },
+    "logs": {
+      "type": "array",
+      "description": "The type(s) of logs used by the detection team and/or method used to first detect the incident",
+      "items": {
+        "$ref": "#/$defs/detection-log-vocab"
+      },
+      "minItems": 1
+    },
+    "comment": {
+      "type": "string",
+      "description": "Clarifying comments about who, what, when, or how the incident was detected"
+    }
+  },
+  "required": ["id"],
+  "$defs": {
+    "detection-team-vocab": {
+      "anyOf": [
+        {
+          "const": "LE",
+          "title": "Law Enforcement",
+          "description": "Law enforcement discovered the insider's illegal activity (e.g., police noticed that the insider was gaining access to the company after hours)"
+        },
+        {
+          "const": "OR",
+          "title": "Organization",
+          "description": "The victim organization discovered the insider's activity (e.g., IT noticed that the insider had downloaded dozens of company trade secrets to their workstation)"
+        },
+        {
+          "const": "CU",
+          "title": "Customer",
+          "description": "A customer of the victim organization discovered the insider's activity"
+        },
+        {
+          "const": "CO",
+          "title": "Competitor",
+          "description": "An organization competing with the victim organization discovered the insider's activity (e.g., the insider approached a competing organization with company trade secrets, and the competitor alerted the victim organization)"
+        },
+        {
+          "const": "AU",
+          "title": "Auditor",
+          "description": "Internal or external auditor assigned to assess the organization's security, risk, or threat posture"
+        },
+        {
+          "const": "SR",
+          "title": "Self-Reported",
+          "description": "The insider reported their activity to their organization"
+        },
+        {
+          "const": "IR",
+          "title": "Incident Response Team",
+          "description": "The incident response team (IRT) discovered the insider's activity"
+        },
+        {
+          "const": "ST",
+          "title": "Security Team",
+          "description": "Technical or personnel security team discovered the insider's activity"
+        },
+        {
+          "const": "MG",
+          "title": "Management",
+          "description": "A member of the organization's management or the insider's management chain discovered the insider's activities"
+        },
+        {
+          "const": "II",
+          "title": "Internal Investigators",
+          "description": "Investigators internal to the victim organization"
+        },
+        {
+          "const": "RR",
+          "title": "Researcher",
+          "description": "Researcher external to the organization"
+        }
+      ]
+    },
+    "detection-method-vocab": {
+      "anyOf": [
+        {
+          "const": "1",
+          "title": "Audit",
+          "description": "The insider's activity was spotted during an internal or third-party auditing process"
+        },
+        {
+          "const": "2",
+          "title": "Technical Means",
+          "description": "The insider's activity was detected via analysis or anomalies in technical systems and software"
+        },
+        {
+          "const": "3",
+          "title": "Non-Technical Means",
+          "description": "The insider's activity was detected in a non-technical fashion (e.g., the insider had personal items purchased with a company credit card sent to the office by accident)"
+        },
+        {
+          "const": "4",
+          "title": "Security Software",
+          "description": "The insider's activity was detected by security software (e.g., the insider tried to download a document with trade secrets and an automatic alert detected the download)"
+        },
+        {
+          "const": "5",
+          "title": "System Failure",
+          "description": "The insider's activity resulted in a system going down within the organization, which led to the detection of the insider's activities"
+        }
+      ]
+    },
+    "detection-log-vocab": {
+      "anyOf": [
+        {
+          "const": "AC",
+          "title": "Access Logs",
+          "description": "File or system access logs"
+        },
+        {
+          "const": "AU",
+          "title": "Audit Logs",
+          "description": "Logs generated specifically for auditing purposes"
+        },
+        {
+          "const": "BR",
+          "title": "Bank Records",
+          "description": "Financial transaction or account records"
+        },
+        {
+          "const": "DB",
+          "title": "Database Logs",
+          "description": "Logs from traditional or non-traditional database servers or services"
+        },
+        {
+          "const": "EM",
+          "title": "Email Logs",
+          "description": "Logs from email servers or services"
+        },
+        {
+          "const": "FS",
+          "title": "Financial Statements",
+          "description": "Statements or records from an individual's financial account(s)"
+        },
+        {
+          "const": "IS",
+          "title": "ISP Logs",
+          "description": "Logs from internet service providers (ISPs)"
+        },
+        {
+          "const": "RA",
+          "title": "Remote Access Logs",
+          "description": "Logs from remote access servers or clients"
+        },
+        {
+          "const": "SF",
+          "title": "System File Logs",
+          "description": "File logs (create, delete, modify, etc.) from workstations, servers, and other systems"
+        },
+        {
+          "const": "VD",
+          "title": "Video Logs",
+          "description": "Video, security cam, webcam, screen capture recordings"
+        },
+        {
+          "const": "WB",
+          "title": "Web Logs",
+          "description": "Logs from web servers or web proxies"
+        }
+      ]
+    }
+  },
+  "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \"AS-IS\" with \"NO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\" and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT® is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
+}

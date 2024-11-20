@@ -1,0 +1,644 @@
+{
+  "$id": "iides/json/objects/ttp.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TTP",
+  "description": "TTP describes an action taken by the insider or colluding outsider(s) during the course of the incident, categorized into a tactic, technique, and procedure (TTP). An incident may have multiple TTPs. A TTP must be connected to an incident.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "A unique string that begins with \"ttp--\" and is appended with a UUIDv4",
+      "pattern": "^ttp--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "date": {
+      "type": "string",
+      "format": "datetime",
+      "description": "The date and time the action happened. If the action occurred over a range of time, use the start time of the action."
+    },
+    "sequence_num": {
+      "type": "integer",
+      "description": "The sequence number of this action in the overall timeline of actions. It is helpful if the sequence of events is known, but the dates are unknown."
+    },
+    "observed": {
+      "type": "boolean",
+      "description": "Whether the action was observed by the victim organization or investigative team at the time it happened."
+    },
+    "number_of_times": {
+      "type": "integer",
+      "description": "The number of times this particular action took place (e.g., subject issued \"5\" fraudulent checks over the course of three weeks)"
+    },
+    "ttp_vocab": {
+      "type": "string",
+      "default": "IIDES",
+      "description": "A reference to the TTP framework being used by this TTP. Common options are IIDES, ATT&CK, CAPEC, etc."
+    },
+    "tactic": {
+      "type": "string",
+      "description": "The high-level category or goal of the action",
+      "$ref": "#/$defs/tactic-vocab"
+    },
+    "technique": {
+      "type": "string",
+      "description": "The general action taken. If technique exists, `tactic` should as well.",
+      "$ref": "#/$defs/technique-vocab"
+    },
+    "location": {
+      "type": "array",
+      "description": "Whether the action was taken on site or remotely",
+      "items": {
+        "$ref": "#/$defs/attack-location-vocab"
+      },
+      "minItems": 1
+    },
+    "hours": {
+      "type": "array",
+      "description": "Whether the action was taken during work hours",
+      "items": {
+        "$ref": "#/$defs/attack-hours-vocab"
+      },
+      "minItems": 1
+    },
+    "device": {
+      "type": "array",
+      "description": "The device where this action either took place or a device that was affected by the action. A device where the action could be detected.",
+      "items": {
+        "$ref": "#/$defs/device-vocab"
+      },
+      "minItems": 1
+    },
+    "channel": {
+      "type": "array",
+      "description": "Methods used to transmit information outside or into the victim organization",
+      "items": {
+        "$ref": "#/$defs/channel-vocab"
+      },
+      "minItems": 1
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the action or procedure"
+    }
+  },
+  "required": ["id"],
+  "dependentRequired": {
+    "technique": ["tactic", "ttp_vocab"],
+    "tactic": ["ttp_vocab"]
+  },
+  "$defs": {
+    "tactic-vocab": {
+      "oneOf": [
+        {
+          "const": "1",
+          "title": "Access",
+          "description": "Insider uses an organizational account or access path to take an action related to the incident"
+        },
+        {
+          "const": "2",
+          "title": "Recruitment",
+          "description": "Insider recruits or is recruited by others"
+        },
+        {
+          "const": "3",
+          "title": "Financial Transaction",
+          "description": "Insider or colluding outsider makes a financial transaction related to the incident"
+        },
+        {
+          "const": "4",
+          "title": "Malware",
+          "description": "Malicious software is used"
+        },
+        {
+          "const": "5",
+          "title": "Malicous Action",
+          "description": "An intentionally malicious action not included in the other tactics"
+        },
+        {
+          "const": "6",
+          "title": "Concealment",
+          "description": "Insider or colluding outsider takes an action that conceals or attempts to conceal their activity"
+        },
+        {
+          "const": "7",
+          "title": "Data Exfiltration",
+          "description": "Data (or copies of data) is removed from the organization without permission or explicitly against permission to use in an unauthorized way"
+        },
+        {
+          "const": "8",
+          "title": "Data Impact",
+          "description": "Harmful action involving the organization's data which compromises the organization in some way"
+        },
+        {
+          "const": "9",
+          "title": "Safety Impact",
+          "description": "Harmful action involving the organization's personnel that compromises the safety of one or more individuals in the organization"
+        }
+      ]
+    },
+    "technique-vocab": {
+      "oneOf": [
+        {
+          "const": "1.1",
+          "title": "Own account",
+          "description": "Insider uses their granted access in order to commit their attack"
+        },
+        {
+          "const": "1.2",
+          "title": "Privileged Access Abuse",
+          "description": "Insider uses their granted privileged access in order to commit their attack"
+        },
+        {
+          "const": "1.3",
+          "title": "Shared Account",
+          "description": "Insider accesses an account they share with other employees"
+        },
+        {
+          "const": "1.4",
+          "title": "Dormant or Expired Account",
+          "description": "Insider uses a company account that was either dormant or expired"
+        },
+        {
+          "const": "1.5",
+          "title": "Unattended Workstation (Unsecured)",
+          "description": "Insider uses a workstation that was unassigned to an employee or uses a colleague's workstation when the colleague is not at their desk"
+        },
+        {
+          "const": "1.6",
+          "title": "Own Account After Termination/Resignation",
+          "description": "Insider gains access to their company account after their termination date"
+        },
+        {
+          "const": "1.7",
+          "title": "Compromised Account",
+          "description": "Insider uses the compromised account of another employee (e.g., the insider copied another employee's account and password prior to being terminated)"
+        },
+        {
+          "const": "1.8",
+          "title": "Unauthorized Access Path",
+          "description": "Insider accesses systems using a previously unknown access path that they created (e.g., the insider used a backdoor account in order to gain access to the organization's systems)"
+        },
+        {
+          "const": "1.9",
+          "title": "Authorized Third-Party Account",
+          "description": "Insider uses a third party account such as a vendor's account"
+        },
+        {
+          "const": "1.10",
+          "title": "Coworker's Account",
+          "description": "Insider uses a coworker's account"
+        },
+        {
+          "const": "1.11",
+          "title": "Customer's Account",
+          "description": "Insider uses a customer's account"
+        },
+        {
+          "const": "1.12",
+          "title": "Database Administrator Account",
+          "description": "Insider uses a database administrator's account"
+        },
+        {
+          "const": "1.13",
+          "title": "Supervisor's Account",
+          "description": "Insider uses their supervisor's account"
+        },
+        {
+          "const": "1.14",
+          "title": "System Administrator Account",
+          "description": "Insider uses a system administrator's account"
+        },
+        {
+          "const": "2.1",
+          "title": "Outsider Recruits Insider",
+          "description": "An outside entity that is not a competing organization encourages the insider to become an insider (e.g., the insider is contacted by known hacking specialist who asks the insider to divulge company secrets to the hacker)"
+        },
+        {
+          "const": "2.2",
+          "title": "Insider Recruited Outside Aid",
+          "description": "The insider recruites people outside of the organization to further their scheme (e.g., the insider recruits their unemployed friend into the scheme)"
+        },
+        {
+          "const": "2.3",
+          "title": "Insider Recruited Coworker(s)",
+          "description": "Insider recruits fellow employees to further their scheme"
+        },
+        {
+          "const": "2.4",
+          "title": "Insider Recruited by Coworker(s)",
+          "description": "Insider is recruited by fellow employees to further their scheme"
+        },
+        {
+          "const": "3.1",
+          "title": "Sells Information",
+          "description": "Insider or accomplice sells, or attempts to sell, organizational information, data, or property (e.g., the insider tried to sell company secrets on an online auction site)"
+        },
+        {
+          "const": "3.2",
+          "title": "Payoffs From Insider",
+          "description": "Insider promises or gives other individuals or entities some amount of monetary compensation for aiding their scheme (e.g., the insider promises to give a fellow employee $1,000 if they steal confidential information)"
+        },
+        {
+          "const": "3.3",
+          "title": "Payoffs to Insider",
+          "description": "Insider benefits financially or is promised compensation from an outside entity (e.g., a competing organization promises the insider $500 for every line of code stolen)"
+        },
+        {
+          "const": "3.4",
+          "title": "Received/Transferred Fraudulent Funds",
+          "description": "Insider or accomplice receives or transfers funds that were fraudulently obtained (e.g., the insider took out cashier's checks on behalf of customers and used them for personal gain)"
+        },
+        {
+          "const": "3.5",
+          "title": "Fraudulent Purchases",
+          "description": "Insider or accomplice uses fraudulently obtained funds to make purchases (e.g., the insider used general ledger funds from their organization to purchase cashier's checks in the amount of $10,000)"
+        },
+        {
+          "const": "3.6",
+          "title": "Filed Fraudulent Tax Return",
+          "description": "Insider or accomplice files a fraudulent tax return. Often, this is using the identity of another person (e.g., the insider submitted multiple purported U.S. individual tax returns in the name of multiple people)."
+        },
+        {
+          "const": "3.7",
+          "title": "Insider Created/Used Fraudulent Asset",
+          "description": "Insider creates an asset to use for future monetary gain (e.g., the insider defrauded the organization by providing false documentation claiming they wanted $250,000 to expand their business)"
+        },
+        {
+          "const": "4.1",
+          "title": "Backdoor",
+          "description": "A malicious program that allows an attacker to perform actions on a remote system, such as transferring files, acquiring passwords, or executing arbitrary commands"
+        },
+        {
+          "const": "4.2",
+          "title": "Bootkit",
+          "description": "A malicious program which targets the Master Boot Record of the target computer"
+        },
+        {
+          "const": "4.3",
+          "title": "Keylogger",
+          "description": "The insider used either a hardware or software keylogger as part of their scheme"
+        },
+        {
+          "const": "4.4",
+          "title": "Exploit Kit",
+          "description": "A software toolkit to target common vulnerabilities"
+        },
+        {
+          "const": "4.5",
+          "title": "Ransomware",
+          "description": "A type of malware that encrypts files on a victim's system, demanding payment of ransom in return for the access codes required to unlock files"
+        },
+        {
+          "const": "4.6",
+          "title": "Remote Access Trojan",
+          "description": "A remote access trojan program (or RAT) is a trojan horse capable of controlling a machine through commands issued by a remote attacker"
+        },
+        {
+          "const": "4.7",
+          "title": "Resource Exploitation Software",
+          "description": "A type of malware that steals a system's resources (e.g., CPU cycles) such as a malicious bitcoin miner"
+        },
+        {
+          "const": "4.8",
+          "title": "Rogue Security Software",
+          "description": "A fake security product that demands money to clean phony infections"
+        },
+        {
+          "const": "4.9",
+          "title": "Rootkit",
+          "description": "A type of malware that hides its files or processes from normal methods of monitoring in order to conceal its presence and activities"
+        },
+        {
+          "const": "4.10",
+          "title": "Screen Capture Software",
+          "description": "A type of malware used to capture images or video from the target systems screen, used for exfiltration and command and control"
+        },
+        {
+          "const": "4.11",
+          "title": "Spyware",
+          "description": "Software that gathers information on a user's system without their knowledge and sends it to another party. Spyware is generally used to track activities for the purpose of delivering advertising."
+        },
+        {
+          "const": "4.12",
+          "title": "Logic Bomb",
+          "description": "A piece of code intentionally inserted into a software system that will set off a malicious function when specified conditions are met (e.g., a programmer may hide a piece of code that starts deleting files should they ever be terminated from the company)"
+        },
+        {
+          "const": "4.13",
+          "title": "Wiper",
+          "description": "A piece of malware whose primary aim is to delete files or entire disks on a machine"
+        },
+        {
+          "const": "5.1",
+          "title": "Bypassed Physical Security of Organizational Facilities",
+          "description": "Gains unauthorized physical access to organizational facilities (e.g., the insider gained access to the company building late on a Sunday night)"
+        },
+        {
+          "const": "5.2",
+          "title": "Exploited Known Security Vulnerabilities",
+          "description": "Uses a security vulnerability known to the organization to further their scheme (e.g., the organization knew the insider didn't have a firewall on their computer but did nothing about it, and the insider was able to use this security vulnerability to compromise the system)"
+        },
+        {
+          "const": "5.3",
+          "title": "Social Engineering of Employees",
+          "description": "Uses a social engineering technique as part of the attack (e.g., the insider sent a phishing e-mail to co-workers)"
+        },
+        {
+          "const": "5.4",
+          "title": "Used/Executed Unauthorized Software",
+          "description": "Uses or executes any sort of unauthorized software on an organizational system (e.g., the insider used a credit card skimmer in order to obtain customer PII). This grouping includes installing or running unauthorized software."
+        },
+        {
+          "const": "6.1",
+          "title": "Falsified Information",
+          "description": "Insider or accomplice manipulates information or identity falsely to aid in their attack (e.g., the insider falsely signed a claim stating that they returned all organizational property upon resignation)"
+        },
+        {
+          "const": "6.2",
+          "title": "Omitted Information",
+          "description": "Insider or accomplice manipulates information or identity through omission to aid in their attack (e.g., the insider omits previous work for a competitor during a background check)"
+        },
+        {
+          "const": "6.3",
+          "title": "Modified/Deleted Logs/Activity",
+          "description": "Insider or accomplice deletes or modifies log files or other information that would connect them to the incident (e.g., the insider tried to conceal their communications with their accomplice by deleting files from their personal email account)"
+        },
+        {
+          "const": "6.4",
+          "title": "Physically Destroyed/Hid Evidence",
+          "description": "Insider or accomplice physically destroys or hides evidence that would connect them to the incident (e.g., the insider shredded papers containing employee PII that they had printed out to commit credit card fraud)"
+        },
+        {
+          "const": "6.5",
+          "title": "Fled or Attempted to Flee",
+          "description": "Insider or accomplice flees or attempts to flee their home state in order to avoid detection of their scheme (e.g., the insider fled the country)"
+        },
+        {
+          "const": "6.6",
+          "title": "Created/Used an Alias",
+          "description": "Insider or accomplice uses the identity of another person (e.g., the insider went under the alias \"John Doe\" when conducting business in their startup to cover their tracks)"
+        },
+        {
+          "const": "6.7",
+          "title": "Framed another Individual",
+          "description": "Insider or accomplice takes steps to plant evidence or otherwise falsely prove that someone else committed the insider's actions"
+        },
+        {
+          "const": "6.8",
+          "title": "False Statements/Denied Involvement",
+          "description": "Insider or accomplice makes any sort of statement that is false or denys their involvement in the incident (e.g., the insider lied to their supervisor, saying that they had not taken confidential information from them when they actually did)"
+        },
+        {
+          "const": "6.9",
+          "title": "Concealment of Current Illicit Activity - Other Technical",
+          "description": "Any other technical method used by the insider or accomplice in an attempt to hide malicious activities"
+        },
+        {
+          "const": "6.10",
+          "title": "Concealment of Current Illicit Activity - Other Non-Technical",
+          "description": "Any other non-technical method used by the insider or accomplice in an attempt to hide malicious activities"
+        },
+        {
+          "const": "7.1",
+          "title": "Paper",
+          "description": "Data exfiltration through printed or hand-written materials (e.g., the insider takes screenshots of important data, prints the screenshots, and walks out of work with them)"
+        },
+        {
+          "const": "7.2",
+          "title": "Removable Media",
+          "description": "Data exfiltration through digital equipment or media (e.g., the insider had trade secrets owned by the victim organization on a flash drive and sent the flash drive to the competitor to be copied)"
+        },
+        {
+          "const": "7.3",
+          "title": "Email",
+          "description": "Data exfiltration through electronic mail (e.g., the insider e-mailed confidential information to competitor)"
+        },
+        {
+          "const": "7.4",
+          "title": "Cloud Storage",
+          "description": "Data exfiltration to external cloud storage (e.g., the insider downloaded company PII and uploaded it to their personal Box account)"
+        },
+        {
+          "const": "7.5",
+          "title": "Web-Based",
+          "description": "Data exfiltration to any based with the World Wide Web (e.g., the insider posted the stolen employee PII to the Internet). The category includes data exfiltrated over various web protocols that are not covered more specifically by another grouping, such as exfiltration using the File Transfer Protocol (FTP) or exfiltration over a Virtual Private Network (VPN)."
+        },
+        {
+          "const": "7.6",
+          "title": "Verbal",
+          "description": "Data exfiltration by stating it verbally to someone else"
+        },
+        {
+          "const": "7.7",
+          "title": "Mobile Device",
+          "description": "Data exfiltration via mobile device"
+        },
+        {
+          "const": "7.8",
+          "title": "Laptop",
+          "description": "Data exfiltration by taking it out of the organization on a laptop"
+        },
+        {
+          "const": "7.9",
+          "title": "Other Technical/Digital",
+          "description": "Data exfiltration using other technical or digital means not listed in this vocabulary"
+        },
+        {
+          "const": "7.10",
+          "title": "Other Non-Technical",
+          "description": "Data exfiltration using other non-technical means not listed in this vocabulary"
+        },
+        {
+          "const": "8.1",
+          "title": "Physical Attack to Organizational Equipment",
+          "description": "Insider or accomplice physically harms any of the organization's physical equipment (e.g., the insider pours glue into USB ports in all desktops)"
+        },
+        {
+          "const": "8.2",
+          "title": "Modified Critical Data",
+          "description": "Insider or accomplice modifies data that is critical to the victim organization (e.g., the insider was able to remotely access the victim organization's systems to modify employee information and change passwords)"
+        },
+        {
+          "const": "8.3",
+          "title": "Deleted Critical Data",
+          "description": "Insider or accomplice deletes data that is critical to the victim organization (e.g., the insider was able to remotely access the victim organization's systems to delete files)"
+        },
+        {
+          "const": "8.4",
+          "title": "Used Data in Identity Theft",
+          "description": "Insider or accomplice uses data to pretend to be someone else (e.g., to submit false tax returns, open bank accounts, etc.)"
+        },
+        {
+          "const": "8.5",
+          "title": "Posted Data Publicly",
+          "description": "Posted internal, sensitive, or confidential data in a public forum"
+        },
+        {
+          "const": "8.6",
+          "title": "Sold or Gave Away Critical Data",
+          "description": "Sold or gave away internal data to an external individual or company"
+        },
+        {
+          "const": "9.1",
+          "title": "Doxxed Individuals",
+          "description": "Publicly posted information about individuals (customers or employees) online for purpose of instigating outside harassment"
+        },
+        {
+          "const": "9.2",
+          "title": "Threatened Violence",
+          "description": "Threatened violence or physical harm against other individuals in the organization"
+        },
+        {
+          "const": "9.3",
+          "title": "Threatened Suicide",
+          "description": "Threated physical harm to theirself"
+        },
+        {
+          "const": "9.4",
+          "title": "Attempted Violence",
+          "description": "Attempted violence or physical harm against other individuals in the organization (successful or unsuccesful)"
+        },
+        {
+          "const": "9.5",
+          "title": "Attempted Suicide",
+          "description": "Attempted physical harm to theirself (successful or unsuccessful)"
+        }
+      ]
+    },
+    "attack-location-vocab": {
+      "oneOf": [
+        {
+          "const": "1",
+          "title": "On-site",
+          "description": "Action taken while on site at an organizational facility"
+        },
+        {
+          "const": "2",
+          "title": "Remotely",
+          "description": "Action taken while remote (i.e., not at an organizational facility)"
+        },
+        {
+          "const": "3",
+          "title": "Remotely from home",
+          "description": "Action taken remotely while at the insider's or accomplice's home"
+        },
+        {
+          "const": "4",
+          "title": "Remotely while traveling",
+          "description": "Action remotely while traveling"
+        }
+      ]
+    },
+    "attack-hours-vocab": {
+      "oneOf": [
+        {
+          "const": "1",
+          "title": "During Work Hours",
+          "description": "Insider took the action during their normal working hours"
+        },
+        {
+          "const": "2",
+          "title": "Outside of Work Hours",
+          "description": "Insider took the action outside of their normal working hours"
+        }
+      ]
+    },
+    "device-vocab": {
+      "oneOf": [
+        {
+          "const": "1",
+          "title": "Company Desktop",
+          "description": "Organization owned desktop workstation"
+        },
+        {
+          "const": "2",
+          "title": "Company Laptop",
+          "description": "Organization owned laptop workstation"
+        },
+        {
+          "const": "3",
+          "title": "Company Mobile Device",
+          "description": "Organization owned mobile device"
+        },
+        {
+          "const": "4",
+          "title": "Database Server",
+          "description": "Database server"
+        },
+        {
+          "const": "5",
+          "title": "Email Server",
+          "description": "Email server"
+        },
+        {
+          "const": "6",
+          "title": "File Server",
+          "description": "File server"
+        },
+        {
+          "const": "7",
+          "title": "Personal Computer",
+          "description": "Personally owned computer"
+        },
+        {
+          "const": "8",
+          "title": "Personal Mobile Device",
+          "description": "Personally owned mobile device"
+        },
+        {
+          "const": "9",
+          "title": "Printer/Copier/Fax",
+          "description": "Printer, copier, or fax machine"
+        },
+        {
+          "const": "10",
+          "title": "Web Server",
+          "description": "Web server"
+        },
+        {
+          "const": "99",
+          "title": "Other",
+          "description": "Other device not in this vocabulary"
+        }
+      ]
+    },
+    "channel-vocab": {
+      "oneOf": [
+        {
+          "const": "1",
+          "title": "Company Email",
+          "description": "An email account the company controls"
+        },
+        {
+          "const": "2",
+          "title": "Company Phone",
+          "description": "A phone the company controls"
+        },
+        {
+          "const": "3",
+          "title": "Instant Messaging",
+          "description": "Direct, synchronous or asynchronous communication via app, software, or web"
+        },
+        {
+          "const": "4",
+          "title": "Online Forum",
+          "description": "Private or public forum accessed via the Internet"
+        },
+        {
+          "const": "5",
+          "title": "Personal Email",
+          "description": "An email account the organization does not control or monitor"
+        },
+        {
+          "const": "6",
+          "title": "Personal Phone",
+          "description": "A phone the organization does not control or monitor"
+        },
+        {
+          "const": "9",
+          "title": "Other",
+          "description": "Other type of channel not listed in this vocabulary"
+        }
+      ]
+    }
+  },
+  "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \"AS-IS\" with \"NO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\" and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT® is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
+}

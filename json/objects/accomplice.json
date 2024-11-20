@@ -1,0 +1,22 @@
+{
+  "$id": "iides/json/objects/accomplice.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Accomplice",
+  "description": "An accomplice is an outsider who conspired with the insider(s) to accomplish the objectives of the incident. An accomplice was not part of the victim organization at the time of the incident. An insider may have one or more accomplices. An accomplice may have one or more jobs (job history).",
+  "type": "object",
+  "$ref": "./person.json",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "A unique string that begins with \"accomplice--\" and is appended with a UUIDv4",
+      "pattern": "^accomplice--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "relationship_to_insider": {
+      "type": "string",
+      "description": "The type of relationship between this accomplice and the insider to whom they are connected",
+      "$ref": "../common/insider-relationship-vocab.json"
+    }
+  },
+  "required": ["id"],
+  "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \"AS-IS\" with \"NO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\" and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT® is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
+}

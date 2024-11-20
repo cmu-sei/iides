@@ -1,0 +1,270 @@
+@startuml IIDES
+package "IIDES" #fff {
+
+
+class Accomplice <<Person>> #b0d0ed {
+	* id : string 
+	+ relationship_to_insider : insider-relationship-vocab 
+}
+class Bundle #F5F5F5 {
+	* id : string 
+	* objects : string[1...*] 
+}
+class Charge #f9b8bd {
+	* id : string 
+	* title : string 
+	+ section : string 
+	+ nature_of_offense : string 
+	+ count : integer 
+	+ plea : charge-plea-vocab 
+	+ plea_bargain : boolean 
+	+ disposition : charge-disposition-vocab 
+}
+class CourtCase #f9b8bd {
+	* id : string 
+	+ case_number : string 
+	+ case_title : string 
+	+ court_country : country-vocab 
+	+ court_state : state-vocab 
+	+ court_district : string 
+	+ court_type : court-type-vocab 
+	+ case_type : case-type-vocab 
+	+ defendant : string[1...*] 
+	+ plaintiff : string[1...*] 
+	+ comment : string 
+}
+class Detection #FDB515 {
+	* id : string 
+	+ first_detected : string 
+	+ who_detected : detection-team-vocab[1...*] 
+	+ detected_method : detection-method-vocab[1...*] 
+	+ logs : detection-log-vocab[1...*] 
+	+ comment : string 
+}
+class Impact #D4EFDF {
+	* id : string 
+	* high : number 
+	+ low : number 
+	* metric : impact-metric-vocab 
+	* estimated : boolean 
+	+ comment : string 
+}
+class Incident #009647 {
+	* id : string 
+	+ cia_effect : cia-vocab[1...*] 
+	+ incident_type : incident-type-vocab[1...*] 
+	+ incident_subtype : incident-subtype-vocab[1...*] 
+	+ outcome : outcome-type-vocab[1...*] 
+	+ status : incident-status-vocab 
+	+ summary : string 
+	+ brief_summary : string 
+	+ comment : string 
+}
+class Insider <<Person>> #043673;text:white {
+	* id : string 
+	* incident_role : incident-role-vocab 
+	+ motive : motive-vocab[1...*] 
+	+ substance_use_during_incident : boolean 
+	+ psychological_issues : psych-issues-vocab[1...*] 
+	+ predispositions : string[2...*] 
+	+ concerning_behaviors : string[2...*] 
+}
+class Job #33c2C4 {
+	* id : string 
+	+ job_function : job-function-vocab 
+	+ occupation : occupation-vocab 
+	+ title : string 
+	+ position_technical : boolean 
+	+ access_authorization : access-auth-vocab 
+	+ employment_type : employment-type-vocab 
+	+ hire_date : string 
+	+ departure_date : string 
+	+ tenure : string 
+	+ comment : string 
+}
+class LegalResponse #f9b8bd {
+	* id : string 
+	+ law_enforcement_contacted : string 
+	+ insider_arrested : string 
+	+ insider_charged : string 
+	+ insider_pleads : string 
+	+ insider_judgment : string 
+	+ insider_sentenced : string 
+	+ insider_charges_dropped : string 
+	+ insider_charges_dismissed : string 
+	+ insider_settled : string 
+	+ comment : string 
+}
+class Note #D4EFDF {
+	* id : string 
+	* author : string 
+	* date : string 
+	* comment : string 
+}
+class Organization #007BC0 {
+	* id : string 
+	+ name : string 
+	+ city : string 
+	+ state : string 
+	+ country : string 
+	+ postal_code : integer 
+	+ small_business : boolean 
+	+ industry_sector : industry-sector-vocab 
+	+ industry_subsector : industry-subsector-vocab 
+	+ business : string 
+	+ parent_company : string 
+	* incident_role : org-role-vocab 
+}
+class Person #b0d0ed {
+	+ first_name : string 
+	+ middle_name : string 
+	+ last_name : string 
+	+ suffix : suffix-vocab 
+	+ alias : string[1...*] 
+	+ city : string 
+	+ state : string 
+	+ country : string 
+	+ postal_code : integer 
+	+ country_of_citizenship : string[1...*] 
+	+ nationality : string[1...*] 
+	+ residency : residency-vocab 
+	+ gender : gender-vocab 
+	+ age : integer 
+	+ education : education-vocab 
+	+ marital_status : marital-status-vocab 
+	+ number_of_children : integer 
+	+ comment : string 
+}
+class Response #EF3A47 {
+	* id : string 
+	+ technical_controls : string[2...*] 
+	+ behavioral_controls : string[2...*] 
+	+ investigated_by : investigator-vocab[1...*] 
+	+ investigation_events : string[2...*] 
+	+ comment : string 
+}
+class Sentence #f9b8bd {
+	* id : string 
+	* sentence_type : sentence-type-vocab 
+	+ quantity : integer 
+	+ metric : sentence-metric-vocab 
+	+ concurrency : boolean 
+}
+class Source #D4EFDF {
+	* id : string 
+	* title : string 
+	+ source_type : source-type-vocab 
+	+ file_type : source-file-type-vocab 
+	+ date : string 
+	+ public : boolean 
+	+ document : string 
+}
+class Sponsor #b0d0ed {
+	* id : string 
+	+ name : string 
+	+ sponsor_type : sponsor-type-vocab 
+}
+class Stressor #b0d0ed {
+	* id : string 
+	+ date : string 
+	+ category : stressor-category-vocab 
+	+ subcategory : stressor-subcategory-vocab 
+	+ comment : string 
+}
+class Target #D4EFDF {
+	* id : string 
+	* asset_type : target-asset-vocab 
+	* category : target-category-vocab 
+	* subcategory : target-subcategory-vocab 
+	* format : target-format-vocab 
+	* owner : target-owner-vocab 
+	* sensitivity : target-sensitivity-vocab[1...*] 
+	+ description : string 
+}
+class TTP #A456ED {
+	* id : string 
+	+ date : string 
+	+ sequence_num : integer 
+	+ observed : boolean 
+	+ number_of_times : integer 
+	+ ttp_vocab : string 
+	+ tactic : tactic-vocab 
+	+ technique : technique-vocab 
+	+ location : attack-location-vocab[1...*] 
+	+ hours : attack-hours-vocab[1...*] 
+	+ device : device-vocab[1...*] 
+	+ channel : channel-vocab[1...*] 
+	+ description : string 
+}
+class Collusion #F5F5F5 {
+	* id : string 
+	* insider1 : string 
+	* insider2 : string 
+	* relationship : insider-relationship-vocab 
+	+ recruitment : recruitment-vocab 
+}
+class OrgOwner #F5F5F5 {
+	* id : string 
+	* person : string 
+	* org : string 
+}
+class OrgRelationship #F5F5F5 {
+	* id : string 
+	* org1 : string 
+	* org2 : string 
+	* relationship : org-relationship-vocab 
+}
+class Relationship #F5F5F5 {
+	* id : string 
+	* object1 : string 
+	* object2 : string 
+}
+
+    Insider --o{ Accomplice
+    Incident --|{ Insider : commits <
+    Accomplice |o--o{ Job
+    Job }o--o| Organization : employs <
+    Insider |o--o{ Job
+    Organization }o--o| Incident
+    Organization }o-- OrgRelationship
+    OrgRelationship --o{ Organization
+    Insider }o--o| Sponsor
+    Accomplice }o--o| Sponsor
+    Insider }o..o{ Organization : OrgOwner >
+    Accomplice }o..o{ Organization : OrgOwner >
+    Insider -- Collusion
+    Collusion -- Insider
+    Incident --o{ Impact
+    Incident --o{ Target
+    Incident --o{ Source
+    Incident --o{ Note
+    CourtCase ||--o{ Charge
+    CourtCase ||--o{ Sentence
+    Incident --o| Detection
+    Incident --o| Response
+    Response ||--o| LegalResponse
+    LegalResponse ||--o{ CourtCase
+    Organization --o{ Stressor
+    Stressor }o-- Insider
+    Incident --o{ TTP
+note as N1
+<size:10>This file is a part of the Insider Incident Data Exchange Standard (IIDES)
+<size:10>- see https://github.com/cmu-sei/IIDES
+<size:5> 
+<size:10>Copyright 2024 Carnegie Mellon University.
+<size:5> 
+<size:10>[DISTRIBUTION STATEMENT A] This material has been approved for public release
+<size:10>and unlimited distribution.  Please see Copyright notice for non-US
+<size:10>Government use and distribution.
+<size:5> 
+<size:10>This work is provided "AS-IS" with "NO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED"
+<size:10>and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
+<size:5> 
+<size:10>Requests for permission for non-licensed uses should be directed to the
+<size:10>Software Engineering Institute at permission@sei.cmu.edu.
+<size:5> 
+<size:10>CERT® is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.
+<size:10>DM24-0776
+end note
+}
+@enduml

@@ -1,0 +1,407 @@
+@startuml Example1
+
+Class Charge #f9b8bd {
+* id : charge--2bc9e36b-53c3-44fa-8997-ccb5d8ac9418 
+* title : 18 U.S.C. 
++ section : 793(e) 
++ nature_of_offense : Illegal gathering and transmission of national defense information. 
++ count : 3
++ plea : 3 
++ plea_bargain : False
++ disposition : 2 
+---
+}
+Class Charge #f9b8bd {
+* id : charge--0572191b-beef-484c-841f-149a9f17fd8f 
+* title : 18 U.S.C. 
++ section : 641 
++ nature_of_offense : Theft of government property. 
++ count : 1
++ plea : 3 
++ plea_bargain : False
++ disposition : 2 
+---
+}
+Class Charge #f9b8bd {
+* id : charge--868f7fd1-b492-40a4-b21f-f5a31cd5e219 
+* title : 18 U.S.C. 
++ section : 1030(a)(1) 
++ nature_of_offense : Unauthorized access to a computer to obtain classified information. 
++ count : 1
++ plea : 3 
++ plea_bargain : False
++ disposition : 2 
+---
+}
+Class Charge #f9b8bd {
+* id : charge--d59dd57a-96b5-472f-a788-dcdb30ec5cb6 
+* title : 18 U.S.C. 
++ section : 1030(a)(2) 
++ nature_of_offense : Unauthorized access to a computer to obtain information from a department or agency of the 
+U.S. 
++ count : 1
++ plea : 3 
++ plea_bargain : False
++ disposition : 2 
+---
+}
+Class Charge #f9b8bd {
+* id : charge--cc6be1c8-5c76-4286-84a0-2b456a288c13 
+* title : 18 U.S.C. 
++ section : 1030(a)(5)(A) 
++ nature_of_offense : Causing transmission of harmful computer commands. 
++ count : 1
++ plea : 3 
++ plea_bargain : False
++ disposition : 2 
+---
+}
+Class Charge #f9b8bd {
+* id : charge--9259e182-5643-4a4d-b078-4bb251fe2595 
+* title : 18 U.S.C. 
++ section : 1519 
++ nature_of_offense : Obstruction of justice. 
++ count : 1
++ plea : 3 
++ plea_bargain : False
++ disposition : 2 
+---
+}
+Class CourtCase #f9b8bd {
+* id : court-case--0e430311-72ee-4776-be74-3c1969d141c0 
++ case_number : 1:22-cr-00123-JMF 
++ case_title : USA vs. Griffin 
++ court_country : United States 
++ court_state : New York 
++ court_district : Southern District of New York 
++ court_type : 1 
++ case_type : 2 
++ defendant : ['Oliver Griffin']
++ plaintiff : ['United States of America']
++ comment : This case involved multiple charges against Oliver Griffin, including unauthorized access to classified information, computer 
+hacking, unauthorized access to government computer systems, and causing transmission of harmful computer commands. 
+---
+}
+Class Detection #FDB515 {
+* id : detection--bd545866-663f-4d62-a39a-da3672842c9f 
++ first_detected : 2001-03-07T00:00:00Z 
++ who_detected : ['LE', 'ST']
++ detected_method : ['2', '4']
++ logs : ['AC', 'AU', 'DB', 'RA', 'SF']
++ comment : Griffin's unauthorized activities were detected by the government's security team and subsequently investigated by law 
+enforcement. Detection involved technical means such as monitoring access logs, audit logs, database logs, remote 
+access logs, and system file logs. 
+---
+}
+Class Impact #D4EFDF {
+* id : impact--2d4ed800-002d-4ce5-bbb0-c89acc1f4254 
++ high : 5
++ low : 5
++ metric : 7 
++ estimated : True
++ comment : The leak included approximately 5 highly sensitive documents. 
+---
+}
+Class Impact #D4EFDF {
+* id : impact--5f3ee38d-2d4c-4ea9-9857-41f9537477ea 
++ high : 1000000000
++ low : 100000000
++ metric : 5 
++ estimated : True
++ comment : The financial impact of the breach was substantial, with estimates ranging from hundreds of millions 
+to a billion dollars for damage control and security improvements. 
+---
+}
+Class Incident #009647 {
+* id : incident--ef88113a-27a0-4a56-8f70-e8a5fd4541e6 
++ cia_effect : ['C']
++ incident_type : ['E']
++ incident_subtype : ['E.2']
++ outcome : ['DD', 'ML', 'SI', 'DR', 'DS']
++ status : C 
++ summary : Oliver Griffin, a former software engineer at a government agency, leaked sensitive documents to an 
+unauthorized entity. These documents detailed the agency's secret tools and techniques, causing severe damage to 
+national security, exposing operations and personnel, and costing the agency substantial financial resources. Griffin was 
+charged with unauthorized access to computer systems, dissemination of classified information, and other related crimes. 
+He was convicted and sentenced to 35 years in prison. 
++ brief_summary : Oliver Griffin leaked sensitive documents to an unauthorized entity, detailing cybersecurity tools and techniques. This 
+caused severe national security damage and financial costs. Griffin was convicted of multiple charges and 
+sentenced to 35 years in prison. 
++ comment : The leak severely impacted the confidentiality and integrity of agency operations, exposing sensitive information. 
+---
+}
+Class Insider #043673;text:white {
+* id : insider--5460491c-eacd-4074-aef9-f6f584893a59 
++ incident_role : 1 
++ motive : ['8']
++ predispositions : [['1', '1.1'], ['2', '2.4'], ['3', '3.2']]
++ concerning_behaviors : [['2', '2.2'], ['3', '3.2']]
++ first_name : Oliver 
++ middle_name : James 
++ last_name : Griffin 
++ suffix : Jr 
++ alias : ['OGriffin', 'Silent Hawk', 'Shadow Walker', 'Dark Avenger']
++ city : New York 
++ state : NY 
++ country : US 
++ postal_code : 10001
++ country_of_citizenship : ['US']
++ nationality : ['US']
++ gender : M 
++ age : 35
++ education : 5 
++ marital_status : 1 
++ number_of_children : 0
++ comment : Oliver James Griffin had a history of social and mental health issues. He showed concerning 
+behaviors, such as repeated technical policy abuse and conflicts with his supervisor as well as 
+browsing dark web forums. The insider had multiple workplace incidents. 
+---
+}
+Class Job #33c2C4 {
+* id : job--e76248a2-82df-4c7d-b7a0-bf86eb85c570 
++ job_function : 15 
++ occupation : 15.1 
+* title : Software Engineer 
++ position_technical : True
++ access_authorization : 2 
++ employment_type : FLT 
++ hire_date : 2001-01-01 
++ departure_date : 2006-11-11 
++ tenure : P5Y10M10D 
++ comment : The insider was employed as a software engineer in a high-security governmental agency, where they 
+had access to sensitive and classified information. 
+---
+}
+Class LegalResponse #f9b8bd {
+* id : legal-response--b318c37b-2f76-421f-bf12-0833e836b00c 
++ law_enforcement_contacted : 2002-03-07 
++ insider_arrested : 2002-08-24 
++ insider_charged : 2003-06 
++ insider_pleads : 2003-06 
++ insider_judgment : 2004-07-13 
++ insider_sentenced : 2005-02-01 
++ comment : The insider was investigated and charged for multiple offenses, including unauthorized disclosure of classified information, 
+computer hacking, and possession of illicit digital content. The judgment date is in relation to 
+the charges specifically related to the dissemination of stolen classified files. 
+---
+}
+Class Note #D4EFDF {
+* id : note--b372b9ad-cb92-4db6-be28-1e3f62605858 
++ author : CMU Researcher 
++ date : 2024-05-17T00:00:00Z 
++ comment : The charges related to illicit digital content were included in the JSON because they are 
+relevant to the overall investigation of Oliver Griffin. Although they do not directly pertain to 
+the insider threat, they were pivotal in leading to his initial arrest and subsequent comprehensive 
+charges. 
+---
+}
+Class Organization #007BC0 {
+* id : organization--d1472454-0236-4b66-9013-65d0f916ee48 
++ name : Government Agency 
++ city : Washington 
++ state : DC 
++ country : US 
++ postal_code : 20500
++ small_business : False
++ industry_sector : 92 
++ industry_subsector : 92.811 
++ business : A government agency responsible for various administrative and regulatory functions within the federal government of 
+the United States. 
++ incident_role : V 
++ parent_company : United States Government 
+---
+}
+Class Organization #007BC0 {
+* id : organization--19f19fa9-d96e-4407-901e-06ecaefd71b5 
++ name : Global News Network 
++ small_business : False
++ industry_sector : 51 
++ industry_subsector : 51.9 
++ business : Global News Network is a nonprofit organization that publishes news and media content from various 
+sources. 
++ incident_role : B 
+---
+}
+Class Response #EF3A47 {
+* id : response--f42fc7ae-48a1-48f9-bf84-0d4b13f7a64c 
++ technical_controls : [['1', '2001-11-01'], ['2', '2001-11-01']]
++ behavioral_controls : [['9', '2001-11-01']]
++ investigated_by : ['2', '3']
++ investigation_events : [['3', '2002-03-07'], ['1', '2002-03-07'], ['2', '2003-06-18']]
++ comment : Griffin left the agency in November of 2001. Before departing from the agency, he planted 
+a service to still allow remote access to government files and databases, which he used 
+to access classified information post departure. 
+---
+}
+Class Sentence #f9b8bd {
+* id : sentence--21e74a96-ba47-46fe-8338-736ab19552ba 
++ sentence_type : 9 
++ quantity : 35
++ metric : 4 
++ concurrency : False
+---
+}
+Class Sentence #f9b8bd {
+* id : sentence--1141c372-543a-42f5-a640-c88b8ab16ae2 
++ sentence_type : 16 
++ quantity : 60
++ metric : 4 
++ concurrency : True
++ comment : Lifetime supervised release, to run concurrently. 
+---
+}
+Class Source #D4EFDF {
+* id : source--53455e706-d762-4b35-b54a-7e33b91cbec3 
+* title : Mock Case Description 
++ source_type : 2 
++ file_type : html 
++ date : 2024-07-18T00:00:00Z 
++ public : True
++ document : ./source/example1desc.md 
+---
+}
+Class Source #D4EFDF {
+* id : source--5565e706-d762-4b35-b54a-6f22a80badb2 
+* title : Oliver Griffin Charged with Unauthorized Disclosure of Classified Information and Other Offenses 
++ source_type : 2 
++ file_type : html 
++ date : 2003-06-18T00:00:00Z 
++ public : True
++ document : https://www.fakeurl.com/oliver-griffin-charged 
+---
+}
+Class Source #D4EFDF {
+* id : source--d6a29cb3-519f-4d62-a1f6-a86439bef53d 
+* title : Former Intelligence Officer Oliver Griffin Sentenced to 35 Years in Prison for Espionage 
++ source_type : 2 
++ file_type : html 
++ date : 2004-01-18T00:00:00Z 
++ public : True
++ document : https://www.fakeurl.com/oliver-griffin-sentenced 
+---
+}
+Class Source #D4EFDF {
+* id : source--7e3ef93e-31b0-4e17-a32a-98540326fd05 
+* title : Intelligence Engineer Convicted of Largest Theft of Classified Data in Agency's History 
++ source_type : 5 
++ file_type : html 
++ date : 2002-07-13T00:00:00Z 
++ public : True
++ document : https://www.fakeurl.com/intelligence-engineer-convicted 
+---
+}
+Class Source #D4EFDF {
+* id : source--d36603a3-2510-4617-87eb-10eea6ab672e 
+* title : USA v. Griffin Docket Information 
++ source_type : 1 
++ file_type : html 
++ date : 2002-07-13T00:00:00Z 
++ public : True
++ document : https://www.fakeurl.com/usa-v-griffin-docket 
+---
+}
+Class Stressor #b0d0ed {
+* id : stressor--28ecfbf3-5eb1-429f-8a55-c2e16f08ebcd 
++ date : 2002 
++ category : 2 
++ subcategory : 2.12 
++ comment : Oliver Griffin's internal disputes and a hostile work environment at the agency (self-imposed) contributed to 
+his decision to steal and leak classified information as revenge for mistreatment. 
+---
+}
+Class Target #D4EFDF {
+* id : target--2a6f542f-a3e6-43e9-b628-cc9c97765276 
++ asset_type : 2 
++ category : 2.3 
++ subcategory : 2.3.1 
++ format : 1 
++ owner : O 
++ sensitivity : ['4', '5', '6', '7']
++ description : Classified agency information related to hacking tools and techniques disclosed to an unauthorized entity. 
+---
+}
+Class TTP #A456ED {
+* id : ttp--a181e814-aa3a-411e-ae79-79ceba48e36a 
++ date : 2002-04-20T14:00:00Z 
++ sequence_num : 1
++ observed : True
++ number_of_times : 2
++ ttp_vocab : IIDES 
++ tactic : 7 
++ technique : 7.3 
++ location : 1 
++ hours : 1 
++ device : ['1']
++ channel : ['1', '4', '5']
++ description : Griffin used a personal email account to exfiltrate classified agency information from the organization's database 
+server to his personal computer. 
+---
+}
+Class TTP #A456ED {
+* id : ttp--a154e814-aa3a-411e-ae79-79ceba48e79b 
++ date : 2002-04-20T14:00:00Z 
++ sequence_num : 2
++ observed : True
++ number_of_times : 1
++ ttp_vocab : IIDES 
++ tactic : 7 
++ technique : 7.2 
++ location : 2 
++ hours : 2 
++ device : ['7']
++ channel : ['9']
++ description : Griffin then loaded the data on a removable media disk. 
+---
+}
+Class TTP #A456ED {
+* id : ttp--a154e814-aa3a-411e-ae79-79ceba48e77b 
++ date : 2002-04-20T14:00:00Z 
++ sequence_num : 2
++ observed : True
++ number_of_times : 2
++ ttp_vocab : IIDES 
++ tactic : 4 
++ technique : 4.1 
++ location : 1 
++ hours : 1 
++ device : ['1']
++ channel : ['9']
++ description : Before leaving the agency, Griffin planted a backdoor into the agency network. 
+---
+}
+Class TTP #A456ED {
+* id : ttp--a154e814-aa3a-411e-ae79-79ceba48e76b 
++ date : 2002-04-20T14:00:00Z 
++ sequence_num : 3
++ observed : True
++ number_of_times : 1
++ ttp_vocab : IIDES 
++ tactic : 7 
++ technique : 7.9 
++ location : 2 
++ hours : 2 
++ device : ['4']
++ channel : ['1', '5', '9']
++ description : After leaving the agency, Griffin hosted a server on the agency's network to continue accessing 
+and exfiltrating classified data. 
+---
+}
+Incident --|{ Insider : commits <
+Job }o--o| Organization : employs <
+Insider |o--o{ Job
+Organization }o--o| Incident
+Insider }o..o{ Organization
+Incident --o{ Impact
+Incident --o{ Target
+Incident --o{ Source
+Incident --o{ Note
+CourtCase ||--o{ Charge
+CourtCase ||--o{ Sentence
+Incident --o| Detection
+Incident --o| Response
+Response ||--o| LegalResponse
+LegalResponse ||--o{ CourtCase
+Organization --o{ Stressor
+Stressor }o-- Insider
+Incident --o{ TTP
+@enduml

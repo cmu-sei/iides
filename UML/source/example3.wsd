@@ -1,0 +1,269 @@
+@startuml Example3
+
+Class Accomplice #b0d0ed {
+* id : accomplice--3426b922-135a-42f9-869d-f8b30e0d483b 
++ relationship_to_insider : 2 
++ first_name : Chad 
++ last_name : Jones 
++ comment : Chad Jones was accused of conspiring with Zingerman, motivating him financially to start a company 
+using trade secrets from Alpha Innovations, which would then be bought by Tech Solutions. 
+---
+}
+Class Charge #f9b8bd {
+* id : charge--3fcbf985-f10e-45b7-aacb-e16c89da1105 
+* title : 18 U.S.C 
++ section : 1836 
++ nature_of_offense : Misappropriation of Trade Secrets 
++ count : 1
++ plea : 3 
++ plea_bargain : False
++ disposition : 2 
+---
+}
+Class CourtCase #f9b8bd {
+* id : court-case--3fcbf985-f10e-45b7-aacb-e16c89da1105 
++ case_number : 01-cv-00939 
++ case_title : Alpha Innovations LLC v. Tech Solutions Inc. 
++ court_country : United States 
++ court_state : New York 
++ court_district : United States District Court for the Southern District of New York 
++ court_type : 1 
++ case_type : 1 
++ defendant : ['Tech Solutions Inc.']
++ plaintiff : ['Alpha Innovations LLC']
+---
+}
+Class Detection #FDB515 {
+* id : detection--a181e814-aa3a-411e-ae79-79ceba48e36a 
++ first_detected : 2001-02-23 
++ who_detected : ['LE', 'OR']
++ detected_method : ['2', '4']
++ logs : ['AC', 'EM', 'VD']
+---
+}
+Class Impact #D4EFDF {
+* id : impact--d2eb25a4-1293-44ee-b8a6-a984714d8033 
++ high : 150000000
++ low : 150000000
++ metric : 5 
++ estimated : False
++ comment : Financial impact valued at approximately $150 million, which was the settlement amount Tech Solutions agreed 
+to give Alpha Innovations in equity. 
+---
+}
+Class Impact #D4EFDF {
+* id : impact--ea6f96c7-d4db-4021-b85b-057453ff2292 
++ high : 14000
++ metric : 7 
++ estimated : True
++ comment : Zingerman downloaded over 14,000 files before leaving the company to found his own startup, which 
+was then bought by Tech Solutions. 
+---
+}
+Class Incident #009647 {
+* id : incident--6e75f650-c1a5-4c71-8d2f-7e9d2bba0381 
++ cia_effect : ['C', 'I']
++ incident_type : ['E']
++ incident_subtype : ['E.1']
++ outcome : ['DS', 'ML']
++ status : C 
++ summary : The case involved Alpha Innovations, a software development company, accusing Tech Solutions, through its acquisition 
+of Zingerman's startup, of stealing trade secrets related to software algorithms. The lawsuit claimed that 
+Mark Zingerman, a former engineer at Alpha Innovations, downloaded thousands of files related to Alpha 
+Innovations' proprietary software before leaving to start his own company, which was soon acquired by 
+Tech Solutions. 
++ brief_summary : Alpha Innovations sued Tech Solutions for intellectual property theft, claiming that ex-engineer Mark Zingerman stole 
+software technology secrets before joining Tech Solutions. The case was settled with Tech Solutions agreeing 
+to not use Alpha Innovations' technology and paying equity worth approximately $150 million. 
++ comment : The case was settled out of court, and no formal determination of guilt was made 
+against Tech Solutions, but they agreed to a settlement to avoid the continuation of litigation. 
+
+---
+}
+Class Insider #043673;text:white {
+* id : insider--2fe80494-c7cf-4d75-85ef-736b55884664 
++ incident_role : 1 
++ motive : ['3', '5']
++ substance_use_during_incident : False
++ first_name : Mark 
++ last_name : Zingerman 
++ alias : ['Matt Zinger', 'John Doe']
++ city : New York 
++ state : NY 
++ country : US 
++ postal_code : 10001
++ country_of_citizenship : ['US']
++ nationality : ['US']
++ gender : M 
++ age : 35
++ education : 8 
++ marital_status : 2 
++ number_of_children : 2
++ concerning_behaviors : [['2', '2.4'], ['2', '2.3'], ['5', '5.1'], ['5', '5.2']]
++ comment : Mark Zingerman's actions of transferring confidential files from Alpha Innovations to his personal devices sparked 
+the lawsuit. No public evidence of substance use or psychological issues affecting his actions has 
+been documented. 
+---
+}
+Class Job #33c2C4 {
+* id : job--afc08477-7f6f-4130-a966-f7b1e2188587 
++ job_function : 17 
++ occupation : 17.2 
+* title : Lead Engineer for Software Development 
++ position_technical : False
++ access_authorization : 5 
++ employment_type : FLT 
++ hire_date : 1997-08-01 
++ departure_date : 2006-01-27 
++ tenure : P8Y5M26D 
++ comment : Mark Zingerman was involved in the development of proprietary software technologies at Alpha Innovations before 
+leaving to start his own company, which was later acquired by Tech Solutions. 
+---
+}
+Class LegalResponse #f9b8bd {
+* id : legal-response--4dbe427c-8f98-4621-afa6-a20902afb8d2 
++ insider_settled : 2003-02-09 
++ comment : The legal response was primarily civil. The case did not involve law enforcement as it 
+was not a criminal matter. The settlement resolved the dispute without a formal admission of 
+wrongdoing. 
+---
+}
+Class Note #D4EFDF {
+* id : note--afc08477-7f6f-4130-a966-f7b1e2188587 
++ author : CMU Researcher 
++ date : 2004-05-28 
++ comment : This was a civil case. The insider was formally charged through a third-party civil court 
+and later filed for bankruptcy. 
+---
+}
+Class Organization #007BC0 {
+* id : organization--8ed0c400-fa6a-4bd6-babe-4da40240442d 
++ name : Alpha Innovations LLC 
++ city : New York 
++ state : New York 
++ country : USA 
++ postal_code : 10001
++ small_business : False
++ industry_sector : 48 
++ industry_subsector : 48.5 
++ business : Alpha Innovations operates as a software development company primarily involved in developing proprietary software systems. 
+
++ parent_company : Tech Giant Inc. 
++ incident_role : V 
+---
+}
+Class Organization #007BC0 {
+* id : organization--e7fda876-f31b-45a5-a540-7bb514ccecee 
++ name : Tech Solutions Inc. 
++ city : San Francisco 
++ state : California 
++ country : USA 
++ postal_code : 94103
++ small_business : False
++ industry_sector : 48 
++ industry_subsector : 48.5 
++ business : Tech Solutions operates as a technology company offering various software and IT services globally, with 
+a division focused on developing proprietary software technology. 
++ incident_role : B 
+---
+}
+Class OrgRelationship #F5F5F5 {
+* id : org-relationship--83271b80-b5de-410e-b7ba-3c93ca5cba99 
++ org2 : organization--e7fda876-f31b-45a5-a540-7bb514ccecee 
++ org1 : organization--8ed0c400-fa6a-4bd6-babe-4da40240442d 
++ relationship : C 
+---
+}
+Class Response #EF3A47 {
+* id : response--9923bad0-25bb-474a-bff7-4b23bfb3e240 
++ investigated_by : ['99', '7']
++ investigation_events : [['1', '2001-11-00']]
++ comment : A third-party investigator was hired to look into the matter after an engineer at Alpha 
+Innovations found Tech Solutions' software algorithms drastically similar to those developed by Alpha Innovations. 
+---
+}
+Class Sentence #f9b8bd {
+* id : sentence--c67354c2-5619-4ebc-85d0-21ca230c8a1d 
++ sentence_type : 14 
++ quantity : 150000000
++ metric : 5 
++ concurrency : False
+---
+}
+Class Source #D4EFDF {
+* id : source--267d8772-b2e0-4bea-92a6-224f157e6924 
+* title : Settlement Agreement 
++ source_type : 1 
++ file_type : pdf 
++ date : 2002-09-13 
++ public : True
++ document : https://fakeurl.com/cases/federal-appellate-courts/02-2235/02-2235-2002-09-13.html 
+---
+}
+Class Stressor #b0d0ed {
+* id : stressor--3a9b7107-9d1c-4c9e-b5c2-e56b0bd408f0 
++ date : 2000-12-01 
++ category : 1 
++ subcategory : 1.9 
++ comment : Insider left Alpha Innovations to start his own company. 
+---
+}
+Class Target #D4EFDF {
+* id : target--831dfcd9-11c5-407b-955e-287d531702b7 
++ asset_type : 2 
++ category : 2.1 
++ subcategory : 2.1.1 
++ format : 1 
++ owner : O 
++ sensitivity : ['23']
+---
+}
+Class Target #D4EFDF {
+* id : target--a08d89e4-4b16-49e7-bdcc-0eea308a56e6 
++ asset_type : 5 
++ category : 5.2 
++ subcategory : 5.2.3 
++ format : 1 
++ owner : O 
++ sensitivity : ['23']
+---
+}
+Class TTP #A456ED {
+* id : ttp--adfa4038-3dec-4d49-9dad-8cc35d41a261 
++ date : 2000-12-11 
++ sequence_num : 1
++ observed : False
++ number_of_times : 1
++ ttp_vocab : IIDES 
++ tactic : 7 
++ technique : 7.8 
++ location : 2 
++ hours : 1 
++ device : ['2']
++ description : The insider locally downloaded files from the company cloud directories to their laptop. 
+---
+}
+Insider --o{ Accomplice
+Incident --|{ Insider : commits <
+Accomplice |o--o{ Job
+Job }o--o| Organization : employs <
+Insider |o--o{ Job
+Organization }o--o| Incident
+Organization }o-- OrgRelationship
+OrgRelationship --o{ Organization
+Insider }o..o{ Organization
+Accomplice }o..o{ Organization
+Incident --o{ Impact
+Incident --o{ Target
+Incident --o{ Source
+Incident --o{ Note
+CourtCase ||--o{ Charge
+CourtCase ||--o{ Sentence
+Incident --o| Detection
+Incident --o| Response
+Response ||--o| LegalResponse
+LegalResponse ||--o{ CourtCase
+Organization --o{ Stressor
+Stressor }o-- Insider
+Incident --o{ TTP
+@enduml

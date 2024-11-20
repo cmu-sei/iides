@@ -1,0 +1,304 @@
+{
+  "id": "bundle--b8f1a9a7-251b-4b1a-9500-01575aa1a72a",
+  "objects": [
+    {
+      "id": "charge--80e9f464-867a-4c2d-a0d5-da3303fef9f8",
+      "title": "18 U.S.C.",
+      "section": "794(c)",
+      "nature_of_offense": "Conspiracy to gather or deliver defense information to aid a foreign government.",
+      "count": 1,
+      "plea": "3",
+      "plea_bargain": false,
+      "disposition": "2"
+    },
+    {
+      "id": "charge--de9ef24e-dd8e-4c1b-b55f-7431c324e2ad",
+      "title": "18 U.S.C",
+      "section": "794(a)",
+      "nature_of_offense": "Delivery of defense information to aid a foreign government.",
+      "count": 1,
+      "plea": "3",
+      "plea_bargain": false,
+      "disposition": "2"
+    },
+    {
+      "id": "charge--b5f8ebff-7449-4919-8e83-712df4dbbd28",
+      "title": "18 U.S.C",
+      "section": "794(a)",
+      "nature_of_offense": "Attempted delivery of defense information to aid a foreign government.",
+      "count": 1,
+      "plea": "3",
+      "plea_bargain": false,
+      "disposition": "2"
+    },
+    {
+      "id": "charge--8f108155-293c-4c7b-b780-eba524e55c9c",
+      "title": "18 U.S.C",
+      "section": "1001(a)(2)",
+      "nature_of_offense": "Making material false statements.",
+      "count": 1,
+      "plea": "3",
+      "plea_bargain": false,
+      "disposition": "2"
+    },
+    {
+      "id": "court-case--4715b227-cee7-49b4-95a0-f418ceb31ae5",
+      "case_number": "1:03-cr-154",
+      "case_title": "United States v. Xin Xia",
+      "court_country": "United States of America",
+      "court_state": "NY",
+      "court_district": "Southern District of New York",
+      "court_type": "1",
+      "case_type": "2",
+      "defendant": ["United States of America"],
+      "plaintiff": ["Xin Xia"],
+      "comment": ""
+    },
+    {
+      "id": "detection--28ab62a7-ef29-478d-9fcd-b06bd11dfbc6",
+      "first_detected": "2003-01-15T08:30:00Z",
+      "who_detected": ["LE"],
+      "detected_method": ["3"],
+      "logs": ["EM"],
+      "comment": "The insider willingly contacted an acquaintance who worked in a government security agency to get in touch with security, indicating to the acquaintance that they had been approached by foreign intelligence agents. There were security agents present during the interview, and the insider was 'visibly surprised' when secure chat messages showing their espionage appeared on the screen. The agents then realized that something was astray and investigated the insider thoroughly."
+    },
+    {
+      "id": "impact--1d3ccef3-2975-4d62-84c9-d798ec888ae6",
+      "high": 12,
+      "low": 3,
+      "metric": "4",
+      "estimated": true
+    },
+    {
+      "id": "incident--843c85b1-6f2d-4a64-a959-d9880905114f",
+      "cia_effect": ["C"],
+      "incident_type": ["E"],
+      "incident_subtype": ["E.2"],
+      "outcome": ["DS", "DR"],
+      "status": "C",
+      "summary": "The insider was a former security officer. They were involved in an espionage case where they were convicted of providing classified U.S. defense information to foreign intelligence agents, which began in 2002. The insider was motivated by financial gain: the foreign officials would exchange top secret information for money. Once the security agency became aware, they investigated the insider and found evidence of espionage in their home. The insider was then tried and found guilty of several espionage charges and sentenced to 20 years of federal prison.",
+      "brief_summary": "The insider was a former security officer who began to communicate with foreign intelligence agents in 2002. They began communicating, and the insider would receive money for transmitting classified U.S. defense information to foreign intelligence agents. The insider was later investigated and brought to court, where they were convicted of multiple counts of espionage."
+    },
+    {
+      "id": "insider--80fea631-33e6-440b-b86d-2d49c8d7fcd2",
+      "incident_role": "1",
+      "motive": ["1"],
+      "substance_use_during_incident": false,
+      "predispositions": [["4", "4.3"]],
+      "concerning_behaviors": [["6", "6.1"]],
+      "first_name": "Xin",
+      "middle_name": "Jason",
+      "last_name": "Xia",
+      "alias": ["Jason Xia", "Xin J. Xia"],
+      "city": "New York",
+      "state": "NY",
+      "country": "US",
+      "postal_code": 10001,
+      "country_of_citizenship": ["US"],
+      "nationality": ["US"],
+      "gender": "M",
+      "age": 60,
+      "education": "5",
+      "marital_status": "2",
+      "number_of_children": 3
+    },
+    {
+      "id": "job--ca6321b3-c176-4c2a-af6f-c825c5e1a823",
+      "job_function": "33",
+      "occupation": "33.1",
+      "title": "Case Officer/Contractor",
+      "position_technical": false,
+      "access_authorization": "5",
+      "employment_type": "FLT",
+      "hire_date": "1992-01-01",
+      "departure_date": "2002-01-01",
+      "tenure": "87600:00:00"
+    },
+    {
+      "id": "job--79bce694-5bd1-4fb3-bcb1-258d09fca301",
+      "job_function": "99",
+      "occupation": "99.9",
+      "title": "Consultant",
+      "position_technical": false,
+      "access_authorization": "7",
+      "employment_type": "CTR",
+      "hire_date": "2002-01-01",
+      "departure_date": "2003-07-01",
+      "tenure": "48192:00:00"
+    },
+    {
+      "id": "legal-response--037be7c2-d741-4153-8c85-1483bc7b2e9d",
+      "law_enforcement_contacted": "2003-02-12",
+      "insider_arrested": "2003-03-22",
+      "insider_charged": "2003-04-27",
+      "insider_pleads": "2003-05-28",
+      "insider_judgment": "2004-06-08",
+      "insider_sentenced": "2005-05-17",
+      "insider_charges_dropped": "",
+      "insider_charges_dismissed": "",
+      "insider_settled": ""
+    },
+    {
+      "id": "organization--9b495e20-ae37-4df3-920e-88338b1298b5",
+      "name": "U.S. Security Agency",
+      "city": "Washington",
+      "state": "D.C.",
+      "country": "US",
+      "postal_code": 20505,
+      "small_business": false,
+      "industry_sector": "92",
+      "industry_subsector": "92.811",
+      "business": "The U.S. Security Agency is an independent U.S. government agency focused on national security. They collect information about other countries, analyze it, and deliver it to policymakers to help them make decisions.",
+      "parent_company": "U.S. Intelligence Community",
+      "incident_role": "V"
+    },
+    {
+      "id": "organization--df77b634-a57b-4654-8e1e-77fd5220fe81",
+      "name": "Chinese Intelligence Agency",
+      "country": "CN",
+      "small_business": false,
+      "industry_sector": "92",
+      "industry_subsector": "92.811",
+      "business": "The Chinese Intelligence Agency is a Chinese agency focused on foreign intelligence and national security. ",
+      "parent_company": "Chinese National Government",
+      "incident_role": "B"
+    },
+    {
+      "id": "response--eb4d3760-213c-4f3b-81c2-b7805376c369",
+      "technical_controls": [["2", "2002-01-01"]],
+      "investigated_by": ["5"],
+      "investigation_events": [
+        ["3", "2003-03-22"],
+        ["1", "2003-03-22"],
+        ["2", "2003-02-24"]
+      ]
+    },
+    {
+      "id": "sentence--7b9161b8-ee82-4e11-945a-31af4e284ddd",
+      "sentence_type": "9",
+      "quantity": 20,
+      "metric": "4",
+      "concurrency": false
+    },
+    {
+      "id": "source--370b7bf9-46a4-44f4-8229-dce1c0824b62",
+      "title": "Former Security Officer Sentenced to 20 Years After Spying for Foreign Government",
+      "source_type": "5",
+      "file_type": "html",
+      "date": "2005-05-17",
+      "public": true,
+      "document": "https://example.com/former-security-officer-sentenced"
+    },
+    {
+      "id": "source--43dfd29e-60c0-4aaa-933f-a96c2845887e",
+      "title": "US v. Xin Xia, No. 04-4385 (4th Cir. 2006)",
+      "source_type": "1",
+      "file_type": "pdf",
+      "date": "2006-07-11",
+      "public": true,
+      "document": "https://example.com/us-v-xin-xia-04-4385"
+    },
+    {
+      "id": "source--0ae6419b-66e3-4d9f-bcb6-531cc8a4e53a",
+      "title": "United States of America v. Xin Jason Xia",
+      "source_type": "1",
+      "file_type": "pdf",
+      "date": "2003-06-21",
+      "public": true,
+      "document": "https://example.com/us-v-xin-Jason-xia"
+    },
+    {
+      "id": "source--ada0e3cc-5048-4509-ad62-c06c7d34594f",
+      "title": "United States v. Xia (2004)",
+      "source_type": "1",
+      "file_type": "html",
+      "date": "2004-10-05",
+      "public": true,
+      "document": "https://example.com/us-v-xia-2004"
+    },
+    {
+      "id": "source--9fe4a90d-abf1-4db6-a4e1-a30e37b3ffe6",
+      "title": "United States v. Xia (2006)",
+      "source_type": "1",
+      "file_type": "html",
+      "date": "2006-07-11",
+      "public": true,
+      "document": "https://example.com/us-v-xia-2006"
+    },
+    {
+      "id": "source--265815a9-494f-4034-b2cf-2d28e01b1318",
+      "title": "United States v. Xia, Criminal No. 1:03-CR-154",
+      "source_type": "1",
+      "file_type": "html",
+      "date": "2004-10-15",
+      "public": true,
+      "document": "https://example.com/us-v-xia-03-cr-154"
+    },
+    {
+      "id": "stressor--40650474-f431-4ddb-9e3a-417bab254ac1",
+      "date": "2002-02-01",
+      "category": "3",
+      "subcategory": "3.1",
+      "comment": "Insider was behind on two mortgage payments and had debt they wished to pay."
+    },
+    {
+      "id": "sponsor--0378da70-22a9-4998-ab9f-3fdd9f690247",
+      "name": "Foreign Intelligence Agency",
+      "sponsor_type": "FN"
+    },
+    {
+      "id": "target--54d887da-7f59-47e1-ad5a-d611f78030da",
+      "asset_type": "2",
+      "category": "2.3",
+      "subcategory": "2.3.1",
+      "format": "1",
+      "owner": "O",
+      "sensitivity": ["6"]
+    },
+    {
+      "id": "ttp--c130b8ca-6d8f-4696-a835-4d35448e8607",
+      "date": "2002-02-21",
+      "sequence_num": 2,
+      "observed": false,
+      "number_of_times": 7,
+      "ttp_vocab": "IIDES",
+      "tactic": "7",
+      "technique": "1.6",
+      "location": "2",
+      "hours": "2",
+      "device": ["8"],
+      "channel": ["6"],
+      "description": "The insider communicated repeatedly with foreign intelligence officers to exchange Top Secret information for money."
+    },
+    {
+      "id": "ttp--def6dff4-cbf6-4cc5-adf6-a6880c9dc1c2",
+      "date": "2002-02-01",
+      "sequence_num": 1,
+      "observed": false,
+      "number_of_times": 1,
+      "ttp_vocab": "IIDES",
+      "tactic": "2",
+      "technique": "2.1",
+      "location": "2",
+      "hours": "2",
+      "device": ["7"],
+      "channel": ["4"],
+      "description": "The insider was initially recruited by a foreign intelligence agent reaching out on LinkedIn asking to meet in China."
+    },
+    {
+      "id": "ttp--820373f2-e55f-45bf-9a75-6a6b5e38cc3c",
+      "date": "2002-03-01",
+      "sequence_num": 1,
+      "observed": false,
+      "number_of_times": 1,
+      "ttp_vocab": "IIDES",
+      "tactic": "2",
+      "technique": "2.1",
+      "location": "2",
+      "hours": "2",
+      "device": ["7"],
+      "channel": ["4"],
+      "description": "The insider was initially recruited by a foreign intelligence agent reaching out on LinkedIn asking to meet in China."
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "$id": "iides/json/objects/court-case.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Court Case",
+  "description": "Court Case contains information about legal proceedings related to the incident, whether it is charges against the insider or their accomplice(s), a civil suit, or a suit against another entity involved in the incident. A legal response can have one or more court cases, and a court case MUST be tied to only one legal response. Each court case can have one or more charges and one or more sentences.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "A unique string that begins with \"court-case--\" and is appended with a UUIDv4",
+      "pattern": "^court-case--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "case_number": {
+      "type": "string",
+      "description": "A case number assigned by the court system in which the case is being tried"
+    },
+    "case_title": {
+      "type": "string",
+      "description": "Title provided by the court system (e.g., 'USA v. LastName' or 'USA v. LastName, et al.')"
+    },
+    "court_country": {
+      "type": "string",
+      "description": "Country where the case was tried",
+      "$ref": "../common/country-vocab.json"
+    },
+    "court_state": {
+      "type": "string",
+      "description": "State or region where the case was tried",
+      "$ref": "../common/state-vocab.json"
+    },
+    "court_district": {
+      "type": "string",
+      "description": "District where the case was tried, if applicable (e.g., \"CA Central District Court\")"
+    },
+    "court_type": {
+      "type": "string",
+      "description": "Type or level of the court where the case is tried",
+      "$ref": "#/$defs/court-type-vocab"
+    },
+    "case_type": {
+      "type": "string",
+      "description": "Type of case",
+      "$ref": "#/$defs/case-type-vocab"
+    },
+    "defendant": {
+      "type": "array",
+      "description": "The names of all the defendants (or respondents or appellees) in the case",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "plaintiff": {
+      "type": "array",
+      "description": "The names of all the plaintiffs (or petitioners or appellants) in the case",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "comment": {
+      "type": "string",
+      "description": "Clarifying comments about any of the court case details, or its associated charges and sentences, such as concurrent sentences, the structure of a plea deal, or the status of the case"
+    }
+  },
+  "required": ["id"],
+  "$defs": {
+    "court-type-vocab": {
+      "oneOf": [
+        {
+          "const": "1",
+          "title": "Federal",
+          "description": "Top level government court"
+        },
+        {
+          "const": "2",
+          "title": "International",
+          "description": "Intergovernmental level court"
+        },
+        {
+          "const": "3",
+          "title": "State",
+          "description": "State or regional level government court"
+        }
+      ]
+    },
+    "case-type-vocab": {
+      "oneOf": [
+        {
+          "const": "1",
+          "title": "Civil",
+          "description": "A case dealing with a dispute between two people or organizations"
+        },
+        {
+          "const": "2",
+          "title": "Criminal",
+          "description": "A case dealing with a violation of criminal law"
+        }
+      ]
+    }
+  },
+  "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \"AS-IS\" with \"NO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\" and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT® is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
+}

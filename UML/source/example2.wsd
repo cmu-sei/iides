@@ -1,0 +1,301 @@
+@startuml Example2
+
+Class Charge #f9b8bd {
+* id : charge--71ed72fb-9194-40af-8459-17aa881a70dc 
+* title : 18 U.S.C 
++ section : 793(e) 
++ nature_of_offense : Willful Retention and Transmission of National Defense Information 
++ count : 1
++ plea : 1 
++ plea_bargain : True
++ disposition : 2 
+---
+}
+Class CourtCase #f9b8bd {
+* id : court-case--85e8998f-080a-4764-8bab-f8e9fa3fc70d 
++ case_number : 1:03-cr-012 
++ case_title : UNITED STATES of America v. Emily CABELLO 
++ court_country : United States of America 
++ court_state : Texas 
++ court_district : Southern District Court of Texas 
++ court_type : 3 
++ case_type : 2 
++ defendant : ['Emily Cabello']
++ plaintiff : ['United States of America']
++ comment : 
+---
+}
+Class Detection #FDB515 {
+* id : detection--7f05c15a-84b2-489d-a3dc-0e3c78d9cbc8 
++ first_detected : 2003-04-23T18:25:43.511Z 
++ who_detected : ['LE']
++ detected_method : ['2']
++ logs : ['AC', 'EM']
++ comment : Emily Cabello was caught after the intelligence agency identified that a classified document published by 
+The Website had been printed, revealing traceable metadata. Investigators used printer tracking dots to determine 
+the document's print date and reviewed access logs, finding that only four individuals, including Cabello, 
+had accessed it. Further evidence included her email communication with The Journal and her confession 
+when confronted by the FBI. 
+---
+}
+Class Impact #D4EFDF {
+* id : impact--0e15aa3c-8d6c-4afd-bed4-c45f64c34463 
++ high : 1
++ low : 1
++ metric : 4 
++ estimated : False
+---
+}
+Class Incident #009647 {
+* id : incident--0e339a3d-37fa-455c-b818-7aae0e34a2a8 
++ cia_effect : ['C']
++ incident_type : ['E']
++ incident_subtype : ['E.2']
++ outcome : ['DR', 'DS']
++ status : C 
++ summary : The insider, a former military member, worked as a cybersecurity specialist for a government agency 
+in May 2003. During this time, she printed a report from her work computer that 
+detailed unauthorized access attempts by a foreign hacking group against municipal election systems and voter 
+databases. She then shared this Top Secret information with a tech blog. This report revealed 
+the techniques and tools used to gather the information contained in the report, which, if 
+disclosed, could be detrimental to the United States. A government agency investigated her and the 
+insider pleaded guilty in June 2004 to one felony count of unauthorized transmission of national 
+defense information and was convicted. 
++ brief_summary : The insider leaked Top Secret information to a website. The insider pleaded guilty to one 
+felony count of unauthorized transmission of national defense information in June 2004, and was convicted. 
+
+---
+}
+Class Insider #043673;text:white {
+* id : insider--04548271-8e9f-4e40-8bad-9cf77c858070 
++ incident_role : 1 
++ motive : ['6']
++ substance_use_during_incident : False
++ first_name : Emily 
++ middle_name : Marie 
++ last_name : Cabello 
++ alias : ['Sara Cabello', 'Jane Doe']
++ city : Houston 
++ state : TX 
++ country : US 
++ postal_code : 77001
++ country_of_citizenship : ['US']
++ nationality : ['US']
++ gender : F 
++ age : 25
++ education : 5 
++ marital_status : 1 
++ number_of_children : 0
++ comment : The insider previously had a very clean record and was an unlikely suspect. The insider 
+was known as a 'model employee' with no apparent history of misconduct or any disciplinary 
+proceedings during their military service. 
+---
+}
+Class Job #33c2C4 {
+* id : job--11492807-43a6-4e50-9480-b26ecaca983d 
++ job_function : 55 
++ occupation : 55.3 
+* title : Translator 
++ position_technical : False
++ access_authorization : 4 
++ employment_type : CTR 
++ hire_date : 2003-02-01 
++ departure_date : 2003-07-01 
++ tenure : 2904:00:00 
++ comment : The exact date of hire and departure is unknown, but the month and year are 
+correct. 
+---
+}
+Class LegalResponse #f9b8bd {
+* id : legal-response--87cc68cc-6e06-4131-8732-80995f5e3ca6 
++ law_enforcement_contacted : 2003-05-01 
++ insider_arrested : 2003-05-03 
++ insider_charged : 2003-05-07 
++ insider_pleads : 2003-05-21 
++ insider_judgment : 2004-08-07 
++ insider_sentenced : 2004-08-23 
+---
+}
+Class Organization #007BC0 {
+* id : organization--3d459486-b1b1-4886-9129-87b3458120b3 
++ name : Global Intelligence Agency 
++ city : 
++ state : Virginia 
++ country : United States of America 
++ postal_code : 0
++ small_business : False
++ industry_sector : 92 
++ industry_subsector : 92.811 
++ business : The Global Intelligence Agency (GIA) is a critical player in the U.S. intelligence community. Its 
+primary function is to gather and analyze foreign signals intelligence (SIGINT) to protect national security. 
+
++ parent_company : Government Agency 
++ incident_role : V 
+---
+}
+Class Organization #007BC0 {
+* id : organization--3d459486-b1b1-4886-9129-87b3458120b4 
++ name : Data Solutions Inc. 
++ city : Richmond 
++ state : Virginia 
++ country : United States of America 
++ postal_code : 23218
++ small_business : True
++ industry_sector : 54 
++ industry_subsector : 54.1 
++ business : Data Solutions Inc. is a defense and intelligence contractor providing analysis, intelligence, and security services 
+to various U.S. government agencies. 
++ incident_role : O 
+---
+}
+Class OrgRelationship #F5F5F5 {
+* id : org-relationship--83271b80-b5de-410e-b7ba-3c93ca5cba08 
++ org2 : organization--3d459486-b1b1-4886-9129-87b3458120b3 
++ org1 : organization--3d459486-b1b1-4886-9129-87b3458120b4 
++ relationship : V 
+---
+}
+Class Response #EF3A47 {
+* id : response--ab3c9833-1e6a-426a-9e48-6f74bcbc5778 
++ investigated_by : ['4']
++ investigation_events : [['1', '2003-05-17'], ['3', '2003-05-03']]
++ comment : 
+---
+}
+Class Sentence #f9b8bd {
+* id : sentence--73e8e020-5ce6-4acb-94ea-7ff3d6f1bcc5 
++ sentence_type : 9 
++ quantity : 63
++ metric : 3 
++ concurrency : False
+---
+}
+Class Sentence #f9b8bd {
+* id : sentence--73e8e020-5ce6-4acb-94ea-7ff3d6f1bcb6 
++ sentence_type : 16 
++ quantity : 3
++ metric : 4 
++ concurrency : False
+---
+}
+Class Source #D4EFDF {
+* id : source--c989a0c4-a559-491a-ac63-2f8b0eaba126 
+* title : United States v. Cabello 
++ source_type : 1 
++ file_type : html 
++ date : 2005-04-24 
++ public : True
++ document : https://fakeurl.com/case/united-states-v-cabello 
+---
+}
+Class Source #D4EFDF {
+* id : source--32c2aa75-685a-4af5-ba0f-36921b8d1c18 
+* title : Case Study of This Mock Case 
++ source_type : 5 
++ file_type : pdf 
++ date : 2005-01-15 
++ public : True
++ document : https://fakeurl.com/casestudy/unlawful-retention 
+---
+}
+Class Source #D4EFDF {
+* id : source--d7fba1ef-193d-4826-a551-ce6aa66150c3 
+* title : USA v. Emily Marie Cabello, No. 03-11692 (11th Cir. 2005) 
++ source_type : 1 
++ file_type : pdf 
++ date : 2005-12-07 
++ public : True
++ document : source/example2desc.md 
+---
+}
+Class Source #D4EFDF {
+* id : source--5e290802-9738-40a5-bb64-9544d8624995 
+* title : USA v. Emily Marie Cabello, No. 03-11692 (11th Cir. 2005) 
++ source_type : 2 
++ file_type : html 
++ date : 2004-08-23 
++ public : True
++ document : https://fakeurl.com/justice/03-11692 
+---
+}
+Class Source #D4EFDF {
+* id : source--1c8da449-30ed-4b7b-89f7-9c8f272207ab 
+* title : Emily Cabello, Cybersecurity Specialist Accused of Leak, Was Undone by Trail of Clues 
++ source_type : 5 
++ file_type : html 
++ date : 2003-05-06 
++ public : True
++ document : https://fakeurl.com/news/emily-cabello-leak 
+---
+}
+Class Source #D4EFDF {
+* id : source--497d1b03-8c71-482f-9156-542d21e99fdf 
+* title : Emily Cabello, Former NCA Specialist, Gets More Than 5 Years in Leak of Security Report 
+
++ source_type : 5 
++ file_type : html 
++ date : 2004-08-23 
++ public : True
++ document : https://fakeurl.com/news/emily-cabello-sentence 
+---
+}
+Class Target #D4EFDF {
+* id : target--c482c487-5bb4-4dee-abdf-2e0c207a81bd 
++ asset_type : 2 
++ category : 2.3 
++ subcategory : 2.3.1 
++ format : 2 
++ owner : O 
++ sensitivity : ['6']
+---
+}
+Class TTP #A456ED {
+* id : ttp--aabe47dc-fecb-43f9-bf77-361b06504789 
++ date : 2003-03-09T12:00:00.000Z 
++ sequence_num : 1
++ observed : False
++ number_of_times : 1
++ ttp_vocab : IIDES 
++ tactic : 7 
++ technique : 7.1 
++ location : 1 
++ hours : 1 
++ device : ['1', '9']
++ channel : ['9']
++ description : Cabello printed and improperly removed classified intelligence reporting. 
+---
+}
+Class TTP #A456ED {
+* id : ttp--aabe47dc-fecb-43f9-bf77-361b06504789 
++ date : 2003-03-09T12:00:00.000Z 
++ sequence_num : 2
++ observed : False
++ number_of_times : 1
++ ttp_vocab : IIDES 
++ tactic : 7 
++ technique : 7.3 
++ location : 1 
++ hours : 1 
++ device : ['1', '9']
++ channel : ['9']
++ description : Cabello printed and improperly removed classified intelligence reporting. 
+---
+}
+Incident --|{ Insider : commits <
+Job }o--o| Organization : employs <
+Insider |o--o{ Job
+Organization }o--o| Incident
+Organization }o-- OrgRelationship
+OrgRelationship --o{ Organization
+Insider }o..o{ Organization
+Incident --o{ Impact
+Incident --o{ Target
+Incident --o{ Source
+CourtCase ||--o{ Charge
+CourtCase ||--o{ Sentence
+Incident --o| Detection
+Incident --o| Response
+Response ||--o| LegalResponse
+LegalResponse ||--o{ CourtCase
+Incident --o{ TTP
+@enduml

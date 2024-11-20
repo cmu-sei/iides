@@ -1,0 +1,26 @@
+{
+  "$id": "iides/json/structs/org-owner.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Org Owner",
+  "description": "Org Owner describes the relationship for a person owning an organization. The person can be either an accomplice or an insider to the incident.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "A unique string that begins with \"org-owner--\" and is appended with a UUIDv4",
+      "pattern": "^org-owner--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "person": {
+      "type": "string",
+      "description": "The `id` of the insider or accomplice who owns the organization",
+      "pattern": "^(insider|accomplice)--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "org": {
+      "type": "string",
+      "description": "The `id` of the organization object that is owned by the insider or accomplice",
+      "pattern": "^organization--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    }
+  },
+  "required": ["id", "person", "org"],
+  "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \"AS-IS\" with \"NO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\" and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT® is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
+}

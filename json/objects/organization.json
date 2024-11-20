@@ -1,0 +1,695 @@
+{
+  "$id": "iides/json/objects/organization.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Organization",
+  "description": "This is the organization(s) involved in the incident. At least one organization, the victim organization, should be included as part of an incident bundle. There may be other organizations involved, such as a competitor organization that benefitted from stolen data or a pass-through organization that received kickbacks. The victim organization(s) include all organizations negatively impacted by the incident, not just the organization(s) that employed the insider.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "A unique string that begins with \"organization--\" and is appended with a UUIDv4",
+      "pattern": "^organization--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of the organization (e.g., \"Company XYZ, Inc.\")"
+    },
+    "city": {
+      "type": "string",
+      "description": "The city where the organization is located. Use the address of the headquarters if the whole organization was affected. Use the address of the local branch if only that local branch was affected."
+    },
+    "state": {
+      "type": "string",
+      "description": "The state where the organization is located. Use the address of the headquarters if the whole organization was affected. Use the address of the local branch if only that local branch was affected."
+    },
+    "country": {
+      "type": "string",
+      "description": "The country where the organization is located. Use the address of the headquarters if the whole organization was affected. Use the address of the local branch if only that local branch was affected. Public implementations should use the standard codes provided by ISO 3166-1 alpha-2."
+    },
+    "postal_code": {
+      "type": "integer",
+      "description": "The postal code of the organization. Use the address of the headquarters if the whole organization was affected. Use the address of the local branch if only that local branch was affected."
+    },
+    "small_business": {
+      "type": "boolean",
+      "description": "TRUE if the organization is a privately owned business with 500 or fewer employees"
+    },
+    "industry_sector": {
+      "type": "string",
+      "description": "Top-level category for the economic sector the organization belongs to. Note, sectors are derived from the North American Industry Classification System (NAICS) version 2022 published by the United States Office of Management and Budget.",
+      "$ref": "#/$defs/industry-sector-vocab"
+    },
+    "industry_subsector": {
+      "type": "string",
+      "description": "Second-level category for the economic sector the organization belongs to. This value MUST map back to industry_sector (e.g., if sector is \"9,\" subsector must be \"9.x\").",
+      "$ref": "#/$defs/industry-subsector-vocab"
+    },
+    "business": {
+      "type": "string",
+      "description": "Description of the organization's business"
+    },
+    "parent_company": {
+      "type": "string",
+      "description": "Name of the organization's parent company, if applicable"
+    },
+    "incident_role": {
+      "type": "string",
+      "description": "The organization's role in the incident",
+      "$ref": "#/$defs/org-role-vocab"
+    }
+  },
+  "required": ["id", "incident_role"],
+  "dependentRequired": {
+    "industry_subsector": ["industry_sector"]
+  },
+  "$defs": {
+    "industry-sector-vocab": {
+      "oneOf": [
+        {
+          "const": "11",
+          "title": "Agriculture and Mining",
+          "description": "Growing crops, raising animals, harvesting timber, or extraction of naturally occurring minerals."
+        },
+        {
+          "const": "21",
+          "title": "Mining, Quarrying, and Oil and Gas Extraction",
+          "description": "Establishments that extract naturally occurring mineral solids, liquid minerals, and gases, to include quarrying, well operations, beneficiating, and other preparation customarily performed at the mine site, or as a part of mining activity."
+        },
+        {
+          "const": "22",
+          "title": "Utilities",
+          "description": "Provisioning of services for the public (e.g., energy, water, and waste collection)."
+        },
+        {
+          "const": "23",
+          "title": "Construction",
+          "description": "Construction and engineering of buildings and associated support services or trades."
+        },
+        {
+          "const": "31",
+          "title": "Manufacturing",
+          "description": "Mechanical, Chemical, Physical changes to material."
+        },
+        {
+          "const": "42",
+          "title": "Wholesale Trade",
+          "description": "The exchange of goods and services."
+        },
+        {
+          "const": "44",
+          "title": "Retail Trade",
+          "description": "The exchange of goods and services."
+        },
+        {
+          "const": "48",
+          "title": "Transportation and Warehousing",
+          "description": "Services directly or indirectly involved in the movement of people."
+        },
+        {
+          "const": "51",
+          "title": "Information",
+          "description": "Hardware or software systems related to the processing, communications, and accessing of information."
+        },
+        {
+          "const": "52",
+          "title": "Finance and Insurance",
+          "description": "Financial services, payment processors, and insurance."
+        },
+        {
+          "const": "53",
+          "title": "Real Estate and Rental/Leasing",
+          "description": "Property sales and renting/leasing of assets."
+        },
+        {
+          "const": "54",
+          "title": "Professional Services, Scientific and Technical Services",
+          "description": "Services provided by trained professionals in specialized fields."
+        },
+        {
+          "const": "55",
+          "title": "Management of Companies and Enterprises",
+          "description": "Establishments that administer, oversee, and manage may hold the securities of the company or enterprise."
+        },
+        {
+          "const": "56",
+          "title": "Administrative and Support and Waste Management and Remediation Services",
+          "description": "Establishments performing routine support activities for the day-to-day operations of other organizations."
+        },
+        {
+          "const": "61",
+          "title": "Educational Services",
+          "description": "Instruction and training of individuals."
+        },
+        {
+          "const": "62",
+          "title": "Healthcare and Social Assistance",
+          "description": "Medical care and social advocacy/assistance."
+        },
+        {
+          "const": "71",
+          "title": "Arts, Entertainment, Recreation",
+          "description": "Industries that meet the entertainment needs of patrons."
+        },
+        {
+          "const": "72",
+          "title": "Accommodation and Food Services",
+          "description": "Establishments providing customers with lodging and/or preparing meals, snacks, and beverages for immediate consumption."
+        },
+        {
+          "const": "92",
+          "title": "Public Administration",
+          "description": "Federal/State/Local administration and the oversight of public programs."
+        },
+        {
+          "const": "81",
+          "title": "Other Services",
+          "description": "Other services defined in NAICS."
+        },
+        {
+          "const": "99",
+          "title": "Other",
+          "description": "Other sector not listed in this vocabulary."
+        }
+      ]
+    },
+    "industry-subsector-vocab": {
+      "oneOf": [
+        {
+          "const": "11.1",
+          "title": "Crop Production",
+          "description": "Industries in the Crop Production subsector grow crops mainly for food and fiber. The subsector comprises establishments, such as farms, orchards, groves, greenhouses, and nurseries, primarily engaged in growing crops, plants, vines, or trees and their seeds."
+        },
+        {
+          "const": "11.2",
+          "title": "Animal Production and Aquaculture",
+          "description": "Industries in the Animal Production and Aquaculture subsector raise or fatten animals for the sale of animals or animal products and/or raise aquatic plants and animals in controlled or selected aquatic environments for the sale of aquatic plants, animals, or their products. The subsector includes establishments, such as ranches, farms, and feedlots, primarily engaged in keeping, grazing, breeding, or feeding animals."
+        },
+        {
+          "const": "11.3",
+          "title": "Forestry and Logging",
+          "description": "Industries in the Forestry and Logging subsector grow and harvest timber on a long production cycle (i.e., of 10 years or more)."
+        },
+        {
+          "const": "11.4",
+          "title": "Fishing, Hunting and Trapping",
+          "description": "Industries in the Fishing, Hunting and Trapping subsector harvest fish and other wild animals from their natural habitats and are dependent upon a continued supply of the natural resource."
+        },
+        {
+          "const": "11.5",
+          "title": "Support Activities for Agriculture and Forestry",
+          "description": "Industries in the Support Activities for Agriculture and Forestry subsector provide support services that are an essential part of agricultural and forestry production. These support activities may be performed by the agriculture or forestry producing establishment or conducted independently as an alternative source of inputs required for the production process for a given crop, animal, or forestry industry."
+        },
+        {
+          "const": "21.1",
+          "title": "Oil and Gas Extraction",
+          "description": "Industries in the Oil and Gas Extraction subsector operate and/or develop oil and gas field properties. Such activities may include exploration for crude petroleum and natural gas; drilling, completing, and equipping wells; operating separators, emulsion breakers, desilting equipment, and field gathering lines for crude petroleum and natural gas; and all other activities in the preparation of oil and gas up to the point of shipment from the producing property."
+        },
+        {
+          "const": "21.2",
+          "title": "Mining (except Oil and Gas)",
+          "description": "Industries in the Mining (except Oil and Gas) subsector primarily engage in mining, mine site development, and beneficiating (i.e., preparing) metallic minerals and nonmetallic minerals, including coal."
+        },
+        {
+          "const": "21.3",
+          "title": "Support Activities for Mining",
+          "description": "Industries in the Support Activities for Mining subsector group establishments primarily providing support services, on a contract or fee basis (except geophysical surveying and mapping, mine site preparation, construction, and transportation activities), required for the mining and quarrying of minerals and for the extraction of oil and gas. Establishments performing exploration for minerals, on a contract or fee basis, are included in this subsector. Exploration services include traditional prospecting methods, such as taking core samples and making geological observations at prospective sites."
+        },
+        {
+          "const": "22.1",
+          "title": "Utilities",
+          "description": "Industries in the Utilities subsector provide electric power, natural gas, steam supply, water supply, and sewage removal through a permanent infrastructure of lines, mains, and meters."
+        },
+        {
+          "const": "23.6",
+          "title": "Construction of Buildings",
+          "description": "Industries primarily engaged in the construction of buildings. These establishments are responsible for the complete construction (i.e., new work, additions, alterations, maintenance, and repairs) of residential, farm, industrial, commercial, and other buildings."
+        },
+        {
+          "const": "23.7",
+          "title": "Heavy and Civil Engineering Construction",
+          "description": "This subsector comprises establishments whose primary activity is the construction of entire engineering projects (e.g., highways and dams) and specialty trade contractors whose primary activity is the production of a specific component for such projects."
+        },
+        {
+          "const": "23.8",
+          "title": "Specialty Trade Contractors",
+          "description": "This subsector comprises establishments whose primary activity is performing specific activities involved in building construction or other activities that are similar for all types of construction, but that are not responsible for the entire project."
+        },
+        {
+          "const": "31.1",
+          "title": "Food Manufacturing",
+          "description": "Industries primarily engaged in transforming livestock and agricultural products into products for intermediate or final consumption. The industry groups are distinguished by the raw materials (generally of animal or vegetable origin) processed into food products."
+        },
+        {
+          "const": "31.2",
+          "title": "Beverage and Tobacco Product Manufacturing",
+          "description": "Industries in the Beverage and Tobacco Product Manufacturing subsector manufacture beverages and tobacco products. The transformation of agricultural materials into beverages and tobacco products is an integrated operation."
+        },
+        {
+          "const": "31.3",
+          "title": "Textile Mills",
+          "description": "Industries in the Textile Mills subsector group establishments that transform a basic fiber (natural or synthetic) into a product, such as yarn or fabric that is further manufactured into usable items, such as apparel, sheets, towels, and textile bags for individual or industrial consumption."
+        },
+        {
+          "const": "31.4",
+          "title": "Textile Product Mills",
+          "description": "Industries in the Textile Product Mills subsector group establishments that make textile products (except apparel). With a few exceptions, processes used by these establishments are generally cut and sew (i.e., purchasing fabric and cutting and sewing to make nonapparel textile products, such as sheets and towels)."
+        },
+        {
+          "const": "31.5",
+          "title": "Apparel Manufacturing",
+          "description": "Industries in the Apparel Manufacturing subsector group establishments with two distinct manufacturing processes: (1) cut and sew (i.e., purchasing fabric and cutting and sewing to make a garment) and (2) the manufacture of garments in establishments that first knit fabric and then cut and sew the fabric into a garment."
+        },
+        {
+          "const": "31.6",
+          "title": "Leather and Allied Product Manufacturing",
+          "description": "Establishments in the Leather and Allied Product Manufacturing subsector transform hides into leather by tanning or curing and fabricating the leather into products for final consumption."
+        },
+        {
+          "const": "31.21",
+          "title": "Wood Product Manufacturing",
+          "description": "Industries in the Wood Product Manufacturing subsector manufacture wood products, such as lumber, plywood, veneers, wood containers, wood flooring, wood trusses, manufactured homes (mobile homes), and prefabricated wood buildings and components."
+        },
+        {
+          "const": "31.22",
+          "title": "Paper Manufacturing",
+          "description": "Industries in the Paper Manufacturing subsector make pulp, paper, or converted paper products. The manufacturing of these products is grouped together because they constitute a series of vertically connected processes."
+        },
+        {
+          "const": "31.23",
+          "title": "Printing and Related Support Activities",
+          "description": "Industries in the Printing and Related Support Activities subsector print products, such as newspapers, books, labels, business cards, stationery, business forms, and other materials, and perform support activities, such as data imaging, platemaking services, and bookbinding."
+        },
+        {
+          "const": "31.24",
+          "title": "Petroleum and Coal Products Manufacturing",
+          "description": "The Petroleum and Coal Products Manufacturing subsector is based on the transformation of crude petroleum and coal into usable products. The dominant process is petroleum refining that involves the separation of crude petroleum into component products through such techniques as cracking and distillation."
+        },
+        {
+          "const": "31.25",
+          "title": "Chemical Manufacturing",
+          "description": "The Chemical Manufacturing subsector is based on the transformation of organic and inorganic raw materials by a chemical process and the formulation of products. This subsector distinguishes the production of basic chemicals that comprise the first industry group from the production of intermediate and end products produced by further processing of basic chemicals."
+        },
+        {
+          "const": "31.26",
+          "title": "Plastics and Rubber Products Manufacturing",
+          "description": "Industries in the Plastics and Rubber Products Manufacturing subsector make goods by processing plastics materials and raw rubber. The core technology employed by establishments in this subsector is that of plastics or rubber product production."
+        },
+        {
+          "const": "31.27",
+          "title": "Nonmetallic Mineral Product Manufacturing",
+          "description": "The Nonmetallic Mineral Product Manufacturing subsector is based on the transformation of mined or quarried nonmetallic minerals, such as sand, gravel, stone, clay, and refractory materials, into products for intermediate or final consumption."
+        },
+        {
+          "const": "31.31",
+          "title": "Primary Metal Manufacturing",
+          "description": "Industries in the Primary Metal Manufacturing subsector smelt and/or refine ferrous and nonferrous metals from ore, pig, or scrap, using electrometallurgical and other process metallurgical techniques."
+        },
+        {
+          "const": "31.32",
+          "title": "Fabricated Metal Product Manufacturing",
+          "description": "Industries in the Fabricated Metal Product Manufacturing subsector are involved in the transformation of metals into intermediate or final products, other than machinery and equipment."
+        },
+        {
+          "const": "31.33",
+          "title": "Machinery Manufacturing",
+          "description": "Industries in the Machinery Manufacturing subsector create machines that apply mechanical force to perform work across a variety of applications."
+        },
+        {
+          "const": "31.34",
+          "title": "Computer and Electronic Product Manufacturing",
+          "description": "Industries in the Computer and Electronic Product Manufacturing subsector manufacture computers, computer peripherals, communications equipment, and similar electronic products."
+        },
+        {
+          "const": "31.35",
+          "title": "Electrical Equipment, Appliance, and Component Manufacturing",
+          "description": "Industries in this subsector manufacture products that generate, distribute, and use electrical power."
+        },
+        {
+          "const": "31.36",
+          "title": "Transportation Equipment Manufacturing",
+          "description": "Industries in the Transportation Equipment Manufacturing subsector produce equipment for transporting people and goods."
+        },
+        {
+          "const": "31.37",
+          "title": "Furniture and Related Product Manufacturing",
+          "description": "Industries in the Furniture and Related Product Manufacturing subsector make furniture and related articles, such as mattresses, window blinds, cabinets, and fixtures."
+        },
+        {
+          "const": "31.39",
+          "title": "Miscellaneous Manufacturing",
+          "description": "This subsector includes industries that make products not classified in other subsectors, including products made from materials like plastics and rubber."
+        },
+        {
+          "const": "42.3",
+          "title": "Merchant Wholesalers, Durable Goods",
+          "description": "Industries in this subsector sell capital or durable goods to other businesses."
+        },
+        {
+          "const": "42.4",
+          "title": "Merchant Wholesalers, Nondurable Goods",
+          "description": "Industries in the Merchant Wholesalers, Nondurable Goods subsector sell nondurable goods to other businesses."
+        },
+        {
+          "const": "42.5",
+          "title": "Wholesale Trade Agents and Brokers",
+          "description": "This subsector includes establishments that arrange for the purchase or sale of goods owned by others, typically on a commission basis."
+        },
+        {
+          "const": "44.1",
+          "title": "Motor Vehicle and Parts Dealers",
+          "description": "Industries in this subsector retail motor vehicles and parts, dealing with new and used vehicles, and providing maintenance services."
+        },
+        {
+          "const": "44.4",
+          "title": "Building Material and Garden Equipment and Supplies Dealers",
+          "description": "Industries in this subsector retail new building material and garden equipment and supplies from fixed point-of-sale locations."
+        },
+        {
+          "const": "44.5",
+          "title": "Food and Beverage Stores",
+          "description": "Establishments in this subsector usually retail food and beverages merchandised in fixed point-of-sale locations."
+        },
+        {
+          "const": "44.9",
+          "title": "Furniture, Home Furnishings, Electronics, and Appliance Stores",
+          "description": "Industries in this subsector retail new furniture, home furnishings, electronics, and appliances."
+        },
+        {
+          "const": "44.55",
+          "title": "General Merchandise Stores",
+          "description": "This subsector includes establishments primarily engaged in retailing a general line of merchandise, including department stores, warehouse clubs, and supercenters."
+        },
+        {
+          "const": "44.56",
+          "title": "Health and Personal Care Stores",
+          "description": "Industries in this subsector are engaged in retailing health and personal care merchandise from fixed point-of-sale locations."
+        },
+        {
+          "const": "44.57",
+          "title": "Gasoline Stations",
+          "description": "Establishments in this subsector are primarily engaged in retailing automotive fuels (e.g., gasoline, diesel) in combination with convenience store items."
+        },
+        {
+          "const": "44.58",
+          "title": "Clothing and Clothing Accessories Stores",
+          "description": "This subsector includes establishments engaged in retailing new clothing and clothing accessories, such as footwear, hats, gloves, and belts."
+        },
+        {
+          "const": "44.59",
+          "title": "Sporting Goods, Hobby, Musical Instrument, and Book Stores",
+          "description": "Establishments in this subsector retail new sporting goods, hobby items, musical instruments, books, and games."
+        },
+        {
+          "const": "48.1",
+          "title": "Air Transportation",
+          "description": "Industries in this subsector provide air transportation of passengers and/or goods using aircraft, such as airplanes and helicopters."
+        },
+        {
+          "const": "48.2",
+          "title": "Rail Transportation",
+          "description": "Industries in the Rail Transportation subsector provide passenger and/or freight transportation over tracks."
+        },
+        {
+          "const": "48.3",
+          "title": "Water Transportation",
+          "description": "Industries in this subsector provide water transportation of passengers and cargo using ships, boats, and barges."
+        },
+        {
+          "const": "48.4",
+          "title": "Truck Transportation",
+          "description": "Industries in this subsector provide over-the-road transportation of cargo using motor vehicles, such as trucks and tractor trailers."
+        },
+        {
+          "const": "48.5",
+          "title": "Transit and Ground Passenger Transportation",
+          "description": "This subsector includes industries providing passenger transportation, such as buses and taxis."
+        },
+        {
+          "const": "48.6",
+          "title": "Pipeline Transportation",
+          "description": "Industries in this subsector transport goods using pipelines, including transporting products such as natural gas and crude oil."
+        },
+        {
+          "const": "48.7",
+          "title": "Scenic and Sightseeing Transportation",
+          "description": "This industry comprises establishments primarily engaged in providing scenic and sightseeing transportation on land, such as sightseeing buses and trolleys, steam train excursions, and horse-drawn sightseeing rides. The services provided are usually local and involve same-day return to the place of origin."
+        },
+        {
+          "const": "48.8",
+          "title": "Support Activities for Transportation",
+          "description": "Industries in the Support Activities for Transportation subsector provide services which support transportation. These services may be provided to transportation carrier establishments or to the general public. This subsector includes a wide array of establishments, including air traffic control services, marine cargo handling, and motor vehicle towing."
+        },
+        {
+          "const": "48.91",
+          "title": "Postal Service",
+          "description": "The Postal Service subsector includes the activities of the National Post Office and its subcontractors operating under a universal service obligation to provide mail services, and using the infrastructure required to fulfill that obligation. These services include delivering letters and small parcels. These articles can be described as those that can be handled by one person without using special equipment."
+        },
+        {
+          "const": "48.92",
+          "title": "Couriers and Messengers",
+          "description": "Industries in the Couriers and Messengers subsector provide intercity, local, and/or international delivery of parcels and documents (including express delivery services) without operating under a universal service obligation. These articles may originate in the U.S. but be delivered to another country and can be described as those that may be handled by one person without using special equipment."
+        },
+        {
+          "const": "48.93",
+          "title": "Warehousing and Storage",
+          "description": "Industries in the Warehousing and Storage subsector are primarily engaged in operating warehousing and storage facilities for general merchandise, refrigerated goods, and other warehouse products. These establishments provide facilities to store goods. They do not sell the goods they handle. These establishments take responsibility for storing the goods and keeping them secure."
+        },
+        {
+          "const": "51.2",
+          "title": "Motion Picture and Sound Recording Industries",
+          "description": "This industry group comprises establishments primarily engaged in producing and distributing musical recordings, publishing music, or providing sound recording and related services."
+        },
+        {
+          "const": "51.3",
+          "title": "Publishing Industries",
+          "description": "Industries in the Publishing Industries subsector group establishments engaged in publishing newspapers, magazines, other periodicals, books, directories, and software. In general, establishments known as publishers issue copies of works for which they usually possess copyright."
+        },
+        {
+          "const": "51.6",
+          "title": "Broadcasting and Content Providers",
+          "description": "Industries in the Broadcasting and Content Providers subsector include establishments that create content or acquire the right to distribute content and subsequently broadcast or distribute that content. The industry groups are based on differences in the methods of communication and the nature of services provided."
+        },
+        {
+          "const": "51.7",
+          "title": "Telecommunications",
+          "description": "Industries in this subsector provide telecommunications services, such as transmitting voice, data, text, sound, and video. This includes establishments providing telephone, data transmission, cellular, cable, and other subscription programming services."
+        },
+        {
+          "const": "51.8",
+          "title": "Computing Infrastructure Providers, Data Processing, Web Hosting, and Related Services",
+          "description": "The Computing Infrastructure Providers, Data Processing, Web Hosting, and Related Services subsector groups establishments that provide computing infrastructure, data processing services, Web hosting services (except software publishing), and related services, including streaming support services (except streaming distribution services)."
+        },
+        {
+          "const": "51.9",
+          "title": "Web Search Portals, Libraries, Archives, and Other Information Services",
+          "description": "Industries in the Web Search Portals, Libraries, Archives, and Other Information Services subsector group establishments supplying information, storing and providing access to information, searching and retrieving information, and operating websites that use search engines to allow for searching information on the Internet. The main components of the subsector are libraries, archives, and web search portals."
+        },
+        {
+          "const": "52.1",
+          "title": "Monetary Authorities-Central Bank",
+          "description": "The Monetary Authorities-Central Bank subsector groups establishments that engage in performing central banking functions, such as issuing currency, managing the Nation's money supply and international reserves, holding deposits that represent the reserves of other banks and other central banks, and acting as a fiscal agent for the central government."
+        },
+        {
+          "const": "52.2",
+          "title": "Credit Intermediation and Related Activities",
+          "description": "Industries in the Credit Intermediation and Related Activities subsector group establishments that (1) lend funds raised from depositors; (2) lend funds raised from credit market borrowing; or (3) facilitate the lending of funds or issuance of credit by engaging in such activities as mortgage and loan brokerage, clearinghouse and reserve services, and check cashing services."
+        },
+        {
+          "const": "52.3",
+          "title": "Securities, Commodity Contracts, and Other Financial Investments and Related Activities",
+          "description": "Industries in the Securities, Commodity Contracts, and Other Financial Investments and Related Activities subsector group establishments that are primarily engaged in one of the following: (1) underwriting securities issues and/or making markets for securities and commodities; (2) acting as agents (i.e., brokers) between buyers and sellers of securities and commodities; (3) providing securities and commodity exchange services; and (4) providing other services, such as managing portfolios of assets; providing investment advice; and trust, fiduciary, and custody services."
+        },
+        {
+          "const": "52.4",
+          "title": "Insurance Carriers and Related Activities",
+          "description": "Industries in the Insurance Carriers and Related Activities subsector group establishments that are primarily engaged in one of the following: (1) underwriting (assuming the risk, assigning premiums, and so forth) annuities and insurance policies or (2) facilitating such underwriting by selling insurance policies and by providing other insurance and employee benefit related services."
+        },
+        {
+          "const": "52.5",
+          "title": "Funds, Trusts, and Other Financial Vehicles",
+          "description": "Industries in the Funds, Trusts, and Other Financial Vehicles subsector group legal entities (i.e., funds, plans, and/or programs) organized to pool securities or other assets on behalf of shareholders or beneficiaries of employee benefit or other trust funds. The portfolios are customized to achieve specific investment characteristics, such as diversification, risk, rate of return, and price volatility."
+        },
+        {
+          "const": "53.1",
+          "title": "Real Estate",
+          "description": "Industries in the Real Estate subsector lease real estate property, manage real estate property, sell, buy, or rent real estate property, provide real estate related services, or act as lessors of residential buildings and dwellings, including equity real estate investment trusts (REITs)."
+        },
+        {
+          "const": "53.2",
+          "title": "Rental and Leasing Services",
+          "description": "Industries in the Rental and Leasing Services subsector lease or rent a vast array of tangible goods, such as automobiles, consumer goods, and professional equipment. Establishments in this subsector generally provide a wide array of products and services to a variety of customers."
+        },
+        {
+          "const": "53.3",
+          "title": "Lessors of Nonfinancial Intangible Assets (except Copyrighted Works)",
+          "description": "Industries in the Lessors of Nonfinancial Intangible Assets (except Copyrighted Works) subsector include establishments primarily engaged in assigning rights to assets, such as patents, trademarks, brand names, and/or franchise agreements, for which a royalty payment or licensing fee is paid to the asset holder."
+        },
+        {
+          "const": "54.1",
+          "title": "Professional, Scientific, and Technical Services",
+          "description": "The Professional, Scientific, and Technical Services sector comprises establishments that specialize in performing professional, scientific, and technical activities for others. These activities require a high degree of expertise and training. The establishments in this sector specialize according to expertise and provide these services to clients in a variety of industries and, in some cases, to households."
+        },
+        {
+          "const": "55.1",
+          "title": "Management of Companies and Enterprises",
+          "description": "The Management of Companies and Enterprises sector comprises establishments that hold the securities of (or other equity interests in) companies and enterprises for the purpose of owning a controlling interest or influencing management decisions, or establishments (except government establishments) that administer, oversee, and manage establishments of the company or enterprise and normally undertake the strategic or organizational planning and decision-making role of the company or enterprise."
+        },
+        {
+          "const": "56.1",
+          "title": "Administrative and Support Services",
+          "description": "The Administrative and Support and Waste Management and Remediation Services sector comprises establishments performing routine support activities for the day-to-day operations of other organizations. These activities are often undertaken in-house by establishments in many sectors of the economy. The establishments in this sector specialize in one or more of these support activities and provide these services to clients in a variety of industries and, in some cases, to households."
+        },
+        {
+          "const": "56.2",
+          "title": "Waste Management and Remediation Services",
+          "description": "The Waste Management and Remediation Services subsector includes establishments engaged in the collection, treatment, and disposal of waste materials. This also includes local hauling of waste materials and operating materials recovery facilities."
+        },
+        {
+          "const": "61.1",
+          "title": "Educational Services",
+          "description": "The Educational Services sector comprises establishments that provide instruction and training in a wide variety of subjects. This instruction and training are provided by specialized establishments, such as schools, colleges, universities, and training centers. These establishments may be privately owned and operated for profit or not for profit, or they may be publicly owned and operated. They may also offer food and/or accommodation services to their students."
+        },
+        {
+          "const": "62.1",
+          "title": "Ambulatory Health Care Services",
+          "description": "Industries in the Ambulatory Health Care Services subsector provide health care services directly or indirectly to ambulatory patients and do not usually provide inpatient services. Health practitioners provide outpatient services with the facilities and equipment not usually being the most significant part of the production process."
+        },
+        {
+          "const": "62.2",
+          "title": "Hospitals",
+          "description": "This industry comprises establishments known and licensed as general medical and surgical hospitals primarily engaged in providing diagnostic and medical treatment (both surgical and nonsurgical) to inpatients with any of a wide variety of medical conditions."
+        },
+        {
+          "const": "62.3",
+          "title": "Nursing and Residential Care Facilities",
+          "description": "Industries in the Nursing and Residential Care Facilities subsector provide residential care combined with either nursing, supervisory, or other types of care as required by the residents."
+        },
+        {
+          "const": "62.4",
+          "title": "Social Assistance",
+          "description": "This industry comprises establishments primarily engaged in providing a wide variety of social assistance services directly to their clients. These services do not include residential or accommodation services, except on a short-term basis."
+        },
+        {
+          "const": "71.1",
+          "title": "Performing Arts, Spectator Sports, and Related Industries",
+          "description": "Industries in the Performing Arts, Spectator Sports, and Related Industries subsector group establishments that produce or organize and promote live presentations involving the performances of actors and actresses, singers, dancers, musical groups and artists, athletes, and other entertainers, including independent (i.e., freelance) entertainers and the establishments that manage their careers."
+        },
+        {
+          "const": "71.2",
+          "title": "Museums, Historical Sites, and Similar Institutions",
+          "description": "Industries in the Museums, Historical Sites, and Similar Institutions subsector engage in the preservation and exhibition of objects, sites, and natural wonders of historical, cultural, and/or educational value."
+        },
+        {
+          "const": "71.3",
+          "title": "Amusement, Gambling, and Recreation Industries",
+          "description": "Industries in the Amusement, Gambling, and Recreation Industries subsector operate facilities where patrons can primarily engage in sports, recreation, amusement, or gambling activities and/or provide other amusement and recreation services, such as supplying and servicing amusement devices in places of business operated by others; operating sports teams, clubs, or leagues engaged in playing games for recreational purposes; and guiding tours without using transportation equipment."
+        },
+        {
+          "const": "72.1",
+          "title": "Accommodation",
+          "description": "Industries in the Accommodation subsector provide lodging or short-term accommodations for travelers, vacationers, and others. There is a wide range of establishments in these industries. Some provide lodging only; others provide meals, laundry services, and recreational facilities, as well as lodging."
+        },
+        {
+          "const": "72.2",
+          "title": "Food Services and Drinking Places",
+          "description": "Industries in the Food Services and Drinking Places subsector prepare meals, snacks, and beverages to customer order for immediate on-premises and off-premises consumption. There is a wide range of establishments in these industries. Some provide food and drink only; others provide various types of entertainment as well."
+        },
+        {
+          "const": "81.1",
+          "title": "Repair and Maintenance",
+          "description": "Industries in the Repair and Maintenance subsector restore machinery, equipment, and other products to working order. These establishments also typically provide general or routine maintenance (i.e., servicing) on such products to ensure they work efficiently and to prevent breakdown and unnecessary repairs."
+        },
+        {
+          "const": "81.2",
+          "title": "Personal and Laundry Services",
+          "description": "Industries in the Personal and Laundry Services subsector provide personal and laundry services to individuals, households, and businesses. Services performed include: personal care services; death care services; laundry and drycleaning services; and a wide range of other personal services, such as pet care (except veterinary) services, photofinishing services, temporary parking services, and dating services."
+        },
+        {
+          "const": "81.3",
+          "title": "Religious, Grantmaking, Civic, Professional, and Similar Organizations",
+          "description": "This subsector comprises establishments that organize and promote religious activities; support various causes through grantmaking; advocate (promote or defend) causes; and provide other types of social, community, and professional services."
+        },
+        {
+          "const": "81.4",
+          "title": "Private Households",
+          "description": "This industry comprises private households primarily engaged in employing workers on or about the premises in activities primarily concerned with the operation of the household. These private households may employ individuals, such as cooks, maids, nannies, butlers, non-medical personal care aides, and outside workers, such as gardeners, caretakers, and other maintenance workers."
+        },
+        {
+          "const": "92.1",
+          "title": "Executive, Legislative, and Other General Government Support",
+          "description": "The Executive, Legislative, and Other General Government Support subsector groups offices of government executives, legislative bodies, public finance, and general government support. Offices within this subsector are charged with implementing government policies, administering government programs, overseeing the execution of laws and regulations, and other governmental functions."
+        },
+        {
+          "const": "92.2",
+          "title": "Justice, Public Order, and Safety Activities",
+          "description": "The Justice, Public Order, and Safety Activities subsector groups government establishments engaged in the administration of justice, public order, and safety programs."
+        },
+        {
+          "const": "92.3",
+          "title": "Administration of Human Resource Programs",
+          "description": "This industry comprises government establishments primarily engaged in the planning, administration, and coordination of programs for public assistance, social work, and welfare activities. The administration of Social Security, disability insurance, Medicare, unemployment insurance, and workers' compensation programs are included in this industry."
+        },
+        {
+          "const": "92.4",
+          "title": "Administration of Environmental Quality Programs",
+          "description": "The Administration of Environmental Quality Programs subsector groups government establishments primarily engaged in the administration of environmental quality, including the administration, regulation, and enforcement of air and water resource programs; the administration and regulation of solid waste management programs; and the administration and regulation of water and air pollution control and prevention programs."
+        },
+        {
+          "const": "92.5",
+          "title": "Administration of Housing Programs, Urban Planning, and Community Development",
+          "description": "The Administration of Housing Programs, Urban Planning, and Community Development subsector groups government establishments primarily engaged in the administration of housing, urban planning, and community development. This includes the administration and planning of housing programs and the administration and planning of the development of urban and rural areas."
+        },
+        {
+          "const": "92.6",
+          "title": "Administration of Economic Programs",
+          "description": "The Administration of Economic Programs subsector groups government establishments primarily engaged in the administration of economic programs that affect areas such as business, industry, and tourism. The subsector includes the development of general statistical data and analyses and the promotion of the general economic well-being of the governed area."
+        },
+        {
+          "const": "92.7",
+          "title": "Space Research and Technology",
+          "description": "The Space Research and Technology subsector comprises government establishments primarily engaged in the administration and operations of space flights, space research, and space exploration. This includes government establishments operating space flight centers."
+        },
+        {
+          "const": "92.811",
+          "title": "National Security",
+          "description": "This industry comprises government establishments of the Armed Forces, including the National Guard, primarily engaged in national security and related activities."
+        },
+        {
+          "const": "92.812",
+          "title": "International Affairs",
+          "description": "This industry comprises establishments of U.S. and foreign governments primarily engaged in international affairs and programs relating to other nations and peoples."
+        }
+      ]
+    },
+    "org-role-vocab": {
+      "oneOf": [
+        {
+          "const": "B",
+          "title": "Beneficiary",
+          "description": "The organization accepted trade secrets, customer lists, intellectual property, etc. that the insider obtained through the incident."
+        },
+        {
+          "const": "V",
+          "title": "Primary Victim",
+          "description": "The organization was the primary victim organization of the insider's actions."
+        },
+        {
+          "const": "S",
+          "title": "Secondary Victim",
+          "description": "The organization was a secondary victim to the incident. E.g., An organization that relied on the primary victim's services in order to conduct their business."
+        },
+        {
+          "const": "T",
+          "title": "Trusted Business Partner",
+          "description": "The organization has an alliance (contractually, bonded, etc.) with the victim organization."
+        },
+        {
+          "const": "O",
+          "title": "Other",
+          "description": "Other role not described by this vocabulary."
+        }
+      ]
+    }
+  },
+  "$comment": "This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES\n\nCopyright 2024 Carnegie Mellon University.\n\n[DISTRIBUTION STATEMENT A] This material has been approved for public release and unlimited distribution.  Please see Copyright notice for non-US Government use and distribution.\n\nThis work is provided \"AS-IS\" with \"NO WARRANTIES OF ANY KIND - EXPRESS OR IMPLIED\" and is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\n\nRequests for permission for non-licensed uses should be directed to the Software Engineering Institute at permission@sei.cmu.edu.\n\nCERT® is registered in the U.S. Patent and Trademark Office by Carnegie Mellon University.\n\nDM24-0776"
+}
