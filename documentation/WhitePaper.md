@@ -245,9 +245,9 @@ The authors gratefully acknowledge support for this project from the Department 
 
 The following individuals have made significant contributions to the development of IIDES. Thank you for your time and effort.
 
-Austin Whisnant
-Nathan Ammerman
-Gabriel Sha
+Austin Whisnant  
+Nathan Ammerman  
+Gabriel Sha  
 Marco Paes  
 Luke Osterritter
 
