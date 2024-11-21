@@ -177,7 +177,7 @@ Cybersecurity and Infrastructure Security Agency (CISA). Insider Threat Mitigati
 Cybersecurity and Infrastructure Security Agency (CISA). Defining Insider Threats. CISA Website. May 2024 [accessed]. https://www.cisa.gov/topics/physical-security/insider-threat-mitigation/defining-insider-threats
 
 [Common Vulnerabilities and Exposures 2024]  
-Common Vulnerabilities and Exposures (CVE). CVE Program. CVE Website. June 2024 [ac-cessed]. https://www.cve.org/
+Common Vulnerabilities and Exposures (CVE). CVE Program. CVE Website. June 2024 [accessed]. https://www.cve.org/
 
 [Costa 2016]  
 Costa, Daniel L.; Albrethsen, Michael J.; Collins, Matthew L.; Perl, Samuel J.; Silowash, George J.; & Spooner, Derrick L. An Insider Threat Indicator Ontology. CMU/SEI-2016-TR-007. Software Engineering Institute, Carnegie Mellon University. 2016. https://insights.sei.cmu.edu/documents/1260/2016_005_001_454627.pdf
@@ -245,9 +245,9 @@ The authors gratefully acknowledge support for this project from the Department 
 
 The following individuals have made significant contributions to the development of IIDES. Thank you for your time and effort.
 
-Austin Whisnant  
-Nathan Ammerman  
-Gaberiel Sha  
+Austin Whisnant
+Nathan Ammerman
+Gabriel Sha
 Marco Paes  
 Luke Osterritter
 
