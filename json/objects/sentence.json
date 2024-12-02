@@ -2,7 +2,7 @@
   "$id": "iides/json/objects/sentence.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Sentence",
-  "description": "Generally, sentence is the amount of punishment for an offense. It could refer to the term of imprisonment or probation, the amount of fines imposed on a convicted defendant for criminal wrongdoing, or the amount of damages imposed for civil cases. Generally, the amount of punishment for an offense. A sentence must be connected to only one court case. A court case may have one or more sentences.",
+  "description": "Generally, sentence is the amount of punishment for an offense. It could refer to the term of imprisonment or probation, the amount of fines imposed on a convicted defendant for criminal wrongdoing, or the amount of damages imposed for civil cases. A sentence must be connected to only one court case. A court case may have one or more sentences.",
   "type": "object",
   "properties": {
     "id": {

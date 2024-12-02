@@ -1,6 +1,6 @@
 # Sentence
 
-Generally, sentence is the amount of punishment for an offense. It could refer to the term of imprisonment or probation, the amount of fines imposed on a convicted defendant for criminal wrongdoing, or the amount of damages imposed for civil cases. Generally, the amount of punishment for an offense. A sentence must be connected to only one court case. A court case may have one or more sentences.
+Generally, sentence is the amount of punishment for an offense. It could refer to the term of imprisonment or probation, the amount of fines imposed on a convicted defendant for criminal wrongdoing, or the amount of damages imposed for civil cases. A sentence must be connected to only one court case. A court case may have one or more sentences.
 
 ## Properties
 

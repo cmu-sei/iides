@@ -1,6 +1,6 @@
 # Legal Response
 
-This is information about the legal response to the incident, particularly the dates of important milestones in the legal process. A response may have one legal response. A legal response may have multiple charges and may have multiple sentences.
+This is information about the legal response to the incident, particularly the dates of important milestones in the legal process. A response may have one legal response. A legal response may have multiple court cases.
 
 ## Properties
 

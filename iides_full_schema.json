@@ -1449,7 +1449,7 @@
         },
         "json/objects/legal-response": {
             "title": "Legal Response",
-            "description": "This is information about the legal response to the incident, particularly the dates of important milestones in the legal process. A response may have one legal response. A legal response may have multiple charges and may have multiple sentences.",
+            "description": "This is information about the legal response to the incident, particularly the dates of important milestones in the legal process. A response may have one legal response. A legal response may have multiple court cases.",
             "type": "object",
             "properties": {
                 "id": {
@@ -1870,7 +1870,7 @@
         },
         "json/objects/sentence": {
             "title": "Sentence",
-            "description": "Generally, sentence is the amount of punishment for an offense. It could refer to the term of imprisonment or probation, the amount of fines imposed on a convicted defendant for criminal wrongdoing, or the amount of damages imposed for civil cases. Generally, the amount of punishment for an offense. A sentence must be connected to only one court case. A court case may have one or more sentences.",
+            "description": "Generally, sentence is the amount of punishment for an offense. It could refer to the term of imprisonment or probation, the amount of fines imposed on a convicted defendant for criminal wrongdoing, or the amount of damages imposed for civil cases. A sentence must be connected to only one court case. A court case may have one or more sentences.",
             "type": "object",
             "properties": {
                 "id": {

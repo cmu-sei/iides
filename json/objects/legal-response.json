@@ -2,7 +2,7 @@
   "$id": "iides/json/objects/legal-response.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Legal Response",
-  "description": "This is information about the legal response to the incident, particularly the dates of important milestones in the legal process. A response may have one legal response. A legal response may have multiple charges and may have multiple sentences.",
+  "description": "This is information about the legal response to the incident, particularly the dates of important milestones in the legal process. A response may have one legal response. A legal response may have multiple court cases.",
   "type": "object",
   "properties": {
     "id": {
