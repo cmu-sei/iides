@@ -284,6 +284,11 @@
           "description": "Insider associates with or participates in darkweb groups or activities"
         },
         {
+          "const": "3.3",
+          "title": "Social Media Association",
+          "description": "Insider participates in social media groups or online forums with an inclination toward suspicious, concerning, or threatening behavior"
+        },
+        {
           "const": "4.1",
           "title": "Medical Problems",
           "description": "Health issues experienced by anyone involved in the event since the insider's hire date (e.g., the insider contracted lupus and was put on medication)"

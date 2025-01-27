@@ -72,7 +72,7 @@ Constants: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `99`
 | 5 | Law Enforcement - Local/State | State or local law enforcement entity|
 | 6 | Law Enforcement - Military/DoD | Law enforcement belonging to the military or Department of Defense such as military police or NCIS|
 | 7 | Management | Management internal to the organization|
-| 99 | Other | Other investigator not lised in this vocabulary|
+| 99 | Other | Other investigator not listed in this vocabulary|
 
 ## License
 This file is a part of the Insider Incident Data Exchange Standard (IIDES) - see https://github.com/cmu-sei/IIDES

@@ -619,8 +619,8 @@
         },
         {
           "const": "4",
-          "title": "Online Forum",
-          "description": "Private or public forum accessed via the Internet"
+          "title": "Discussion Forum",
+          "description": "Private or public forum accessed via the Internet for the purposes of discussing a particular topic or theme"
         },
         {
           "const": "5",
@@ -633,6 +633,11 @@
           "description": "A phone the organization does not control or monitor"
         },
         {
+          "const": "7",
+          "title": "Social Media",
+          "description": "Websites and applications that enable users to create and share content or to participate in social networking"
+        },
+        { 
           "const": "9",
           "title": "Other",
           "description": "Other type of channel not listed in this vocabulary"

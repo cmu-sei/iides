@@ -62,7 +62,7 @@ Constants: `BR`, `DC`, `DD`, `DM`, `DR`, `DS`, `MD`, `ML`, `MS`, `NN`, `OT`, `PD
 | NN | No net negative | Though an incident occurred, there were no negative consequences to the victim organization as a result|
 | OT | Other | Other type of outcome not listed in this vocabulary|
 | PD | Physical Damage | Physical damage to or destruction of property or other physical assets owned by the organization or located on the organization's property at the time of the incident|
-| RO | Restituion Ordered | The organizatiion was ordered by a court to pay restitution to additional victims of the incident|
+| RO | Restitution Ordered | The organizatiion was ordered by a court to pay restitution to additional victims of the incident|
 | SI | Safety Impact | There was an impact or potential for impact to safety as a result of the incident|
 | SD | System Downtime | System(s) or the network was fully or partially inoperatble for some length of time|
 | IT | Used in Identity Theft | Identity theft of one or more individuals resulted from the incident. E.g., The insider used stolen PII to file fraudulent tax returns|
