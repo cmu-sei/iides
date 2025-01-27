@@ -1,6 +1,6 @@
 # Change Log
 
-## Version 0.1 "beta"
+## Version 0.1.1 "beta"
 
 - add "Social Media" to TTP channel vocab
 - add "Social Media Association" to Insider predisposition subtype vocab
