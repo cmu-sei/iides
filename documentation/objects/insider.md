@@ -75,7 +75,7 @@ Constants: `1`, `2`, `3`, `4`
 
 ### predisposition-subtype-vocab
 
-Constants: `1.1`, `1.2`, `1.3`, `1.4`, `1.5`, `1.6`, `1.7`, `2.1`, `2.2`, `2.3`, `2.4`, `2.5`, `2.6`, `2.7`, `3.1`, `3.2`, `4.1`, `4.2`, `4.3`, `4.4`
+Constants: `1.1`, `1.2`, `1.3`, `1.4`, `1.5`, `1.6`, `1.7`, `2.1`, `2.2`, `2.3`, `2.4`, `2.5`, `2.6`, `2.7`, `3.1`, `3.2`, `3.3`, `4.1`, `4.2`, `4.3`, `4.4`
 
 | Const | Value | Description |
 | --- | --- | --- |
@@ -95,6 +95,7 @@ Constants: `1.1`, `1.2`, `1.3`, `1.4`, `1.5`, `1.6`, `1.7`, `2.1`, `2.2`, `2.3`,
 | 2.7 | Previous use of illegal substances | Known use of illegal narcotics or illegal use of prescribed medications|
 | 3.1 | Criminal Association | Insider associates with known criminals or criminal organizations|
 | 3.2 | Internet Underground Association | Insider associates with or participates in darkweb groups or activities|
+| 3.3 | Social Media Association | Insider participates in social media groups or online forums with an inclination toward suspicious, concerning, or threatening behavior|
 | 4.1 | Medical Problems | Health issues experienced by anyone involved in the event since the insider's hire date (e.g., the insider contracted lupus and was put on medication)|
 | 4.2 | Relationship Problems | A problem in one of the insider's relationships that affects the insider, including family and romantic relationships developed after the insider's hire date (e.g., the insider was going through a divorce)|
 | 4.3 | Emerging Financial Problems | Monetary issues experienced by or relevant to the insider (including medical bills for family members) known to have developed after the insider's hire date (e.g., the insider claimed they stole from the organization in order to pay for their child's education)|
