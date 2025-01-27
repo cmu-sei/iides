@@ -166,16 +166,17 @@ Constants: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `99`
 
 ### channel-vocab
 
-Constants: `1`, `2`, `3`, `4`, `5`, `6`, `9`
+Constants: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `9`
 
 | Const | Value | Description |
 | --- | --- | --- |
 | 1 | Company Email | An email account the company controls|
 | 2 | Company Phone | A phone the company controls|
 | 3 | Instant Messaging | Direct, synchronous or asynchronous communication via app, software, or web|
-| 4 | Online Forum | Private or public forum accessed via the Internet|
+| 4 | Discussion Forum | Private or public forum accessed via the Internet for the purposes of discussing a particular topic or theme|
 | 5 | Personal Email | An email account the organization does not control or monitor|
 | 6 | Personal Phone | A phone the organization does not control or monitor|
+| 7 | Social Media | Websites and applications that enable users to create and share content or to participate in social networking|
 | 9 | Other | Other type of channel not listed in this vocabulary|
 
 ## License
