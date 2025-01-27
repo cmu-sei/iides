@@ -4,7 +4,7 @@ File: generate_large_schema.py
 Summary:
 
 This file will generate a file containing all the schema in one
-large file. The schema file can them be used offline.
+large file. The schema file can then be used offline.
 
 *** COMMON REFERENCES ARE BROKEN ***
 ** MIGHT BE MISSING SOME REFERENCES...
