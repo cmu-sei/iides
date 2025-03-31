@@ -1,12 +1,16 @@
 # Change Log
 
-## Version 0.1.1 "beta"
+## Version 0.2.0 "beta"
+ - (Mar 2025) add "comment" field to Source component
 
+### Version 0.1.x
+
+**0.1.1**
 - add "Social Media" to TTP channel vocab
 - add "Social Media Association" to Insider predisposition subtype vocab
 - fix various typos in descriptions and titles
 
-### Version 0.1.0
+**0.1.0**
 - v0.1 -- Nov 2024: Version 0, Revision 1 (v0.1) of IIDES released as "beta" for feedback
 
 ## Licensing

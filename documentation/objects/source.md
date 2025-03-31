@@ -14,6 +14,7 @@ Source describes a document that provides information about one or more aspects 
 - **`date`** *(date-time)* : The date the document was created or most recently modified
 - **`public`** *(boolean)* : Whether the document is publicly available
 - **`document`** *(string)* : A pointer to the document itself, whether a file path, location, URL, or document object
+- **`comment`** *(string)* : Clarifying comments about the source
 
 ## Vocabularies
 
