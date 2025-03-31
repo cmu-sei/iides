@@ -1344,6 +1344,10 @@
                 "document": {
                     "type": "string",
                     "description": "A pointer to the document itself, whether a file path, location, URL, or document object"
+                },
+                "comment": {
+                    "type": "string",
+                    "description": "Clarifying comments about the source"
                 }
             },
             "required": [
