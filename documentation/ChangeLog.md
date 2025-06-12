@@ -1,5 +1,8 @@
 # Change Log
 
+## Version 1.0 released
+- (Jun 12) Version incremented
+
 ## Version 0.2.0 "beta"
  - (Mar 2025) add "comment" field to Source component
 
